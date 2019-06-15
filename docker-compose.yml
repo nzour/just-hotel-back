@@ -1,4 +1,4 @@
-version: '2'
+version: '3.4'
 services:
   core:
     container_name: core
@@ -6,9 +6,17 @@ services:
     build: ./docker/core
     tty: true
     ports:
-      - "5001:5001"
-      - "5000:5000"
+      - 5000:5000
+      - 5001:5001
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
     volumes:
-      - ./backend:/app 
+      - ./src:/app
+
+#  proxy:
+#    container_name: proxy
+#    image: nginx:latest
+#    volumes:
+#      - ./docker/proxy/:/etc/nginx/nginx.conf
+#    ports:
+#      - 80:80
