@@ -12,11 +12,3 @@ services:
       - ASPNETCORE_ENVIRONMENT=Development
     volumes:
       - ./src:/app
-
-#  proxy:
-#    container_name: proxy
-#    image: nginx:latest
-#    volumes:
-#      - ./docker/proxy/:/etc/nginx/nginx.conf
-#    ports:
-#      - 80:80
