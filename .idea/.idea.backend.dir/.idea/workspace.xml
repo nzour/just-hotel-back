@@ -2,19 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8919c16b-b5ba-4d5d-8933-195ff1d0b6f7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.backend.dir/.idea/contentModel.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.backend.dir/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.backend.dir/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.backend.dir/riderModule.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Modules/Dto/HelloWorldDto.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/obj/project.packagespec.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docker/mssql/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.backend.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.backend.dir/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controllers/HelloWorldController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controllers/HelloWorldController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controllers/ValuesController.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Modules/Dto/HelloWorldDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Modules/Dto/HelloWorldDto.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Startup.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/app.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/app.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/app.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/app.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/obj/Debug/netcoreapp2.2/app.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/src/obj/Debug/netcoreapp2.2/app.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/obj/Debug/netcoreapp2.2/app.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/obj/Debug/netcoreapp2.2/app.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/obj/Debug/netcoreapp2.2/app.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/src/obj/Debug/netcoreapp2.2/app.assets.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/obj/Debug/netcoreapp2.2/app.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/src/obj/Debug/netcoreapp2.2/app.csprojAssemblyReference.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/obj/Debug/netcoreapp2.2/app.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/obj/Debug/netcoreapp2.2/app.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/obj/Debug/netcoreapp2.2/app.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/src/obj/Debug/netcoreapp2.2/app.pdb" afterDir="false" />
@@ -26,61 +22,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/docker-compose.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="13" column="18" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Controllers/HelloWorldController.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="17" column="1" lean-forward="true" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
-              <folding>
-                <marker date="1560841213413" expanded="true" signature="6:54" ph="..." />
-                <marker date="1560841213413" expanded="true" signature="81:430" ph="{...}" />
-                <marker date="1560841213413" expanded="true" signature="173:428" ph="{...}" />
-                <marker date="1560841213413" expanded="true" signature="291:422" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Modules/Dto/HelloWorldDto.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="8" column="30" lean-forward="true" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="30" />
-              <folding>
-                <marker date="1560841152987" expanded="true" signature="25:200" ph="{...}" />
-                <marker date="1560841152987" expanded="true" signature="58:198" ph="{...}" />
-                <marker date="1560841152987" expanded="true" signature="141:192" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Program.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
-              <folding>
-                <marker date="1560613602350" expanded="false" signature="6:255" ph="..." />
-                <marker date="1560613602350" expanded="true" signature="270:597" ph="{...}" />
-                <marker date="1560613602350" expanded="true" signature="297:595" ph="{...}" />
-                <marker date="1560613602350" expanded="true" signature="350:424" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -97,7 +39,7 @@
     <setting file="file://$PROJECT_DIR$/src/Modules/Dto/HelloWorldDto.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/Controllers/HelloWorldController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/Program.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/Startup.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/Startup.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -105,12 +47,13 @@
         <option value="$PROJECT_DIR$/src/app.csproj" />
         <option value="$PROJECT_DIR$/docker/proxy/nginx.info" />
         <option value="$PROJECT_DIR$/docker/proxy/nginx.conf" />
-        <option value="$PROJECT_DIR$/src/Startup.cs" />
         <option value="$PROJECT_DIR$/src/Properties/launchSettings.json" />
         <option value="$PROJECT_DIR$/docker/core/Dockerfile" />
-        <option value="$PROJECT_DIR$/docker-compose.yml" />
         <option value="$PROJECT_DIR$/src/Controllers/ValuesController.cs" />
         <option value="$PROJECT_DIR$/src/Modules/Dto/HelloWorldDto.cs" />
+        <option value="$PROJECT_DIR$/docker/mssql/Dockerfile" />
+        <option value="$PROJECT_DIR$/docker-compose.yml" />
+        <option value="$PROJECT_DIR$/src/Startup.cs" />
         <option value="$PROJECT_DIR$/src/Controllers/HelloWorldController.cs" />
       </list>
     </option>
@@ -132,6 +75,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="AssemblyExplorer" />
       <pane id="FileSystemExplorer">
         <subPane>
           <expand>
@@ -144,17 +88,10 @@
               <item name="backend" type="34e6ba20:FileSystemExplorerNode" />
               <item name="src" type="34e6ba20:FileSystemExplorerNode" />
             </path>
-            <path>
-              <item name="" type="161ac34:FileSystemExplorerRootNode" />
-              <item name="backend" type="34e6ba20:FileSystemExplorerNode" />
-              <item name="src" type="34e6ba20:FileSystemExplorerNode" />
-              <item name="Modules" type="34e6ba20:FileSystemExplorerNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="AssemblyExplorer" />
       <pane id="SolutionExplorer">
         <option name="show-all-files" value="false" />
       </pane>
@@ -240,7 +177,8 @@
       <workItem from="1560761349123" duration="765000" />
       <workItem from="1560779878031" duration="2712000" />
       <workItem from="1560838619122" duration="778000" />
-      <workItem from="1560840245451" duration="1092000" />
+      <workItem from="1560840245451" duration="5898000" />
+      <workItem from="1560858306132" duration="307000" />
     </task>
     <task id="LOCAL-00001" summary="Наконец смог запустить приложение. Однако, дебажить его все еще не получается">
       <created>1560618202174</created>
@@ -263,11 +201,18 @@
       <option name="project" value="LOCAL" />
       <updated>1560783548169</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Удалил ValuesController, тестировал начальный функционал">
+      <created>1560841409633</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1560841409633</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11358000" />
+    <option name="totallyTimeSpent" value="16471000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -281,10 +226,9 @@
   <component name="ToolWindowManager">
     <frame x="67" y="27" width="1853" height="1053" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20033205" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20254566" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="REST Client" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -294,13 +238,14 @@
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3293348" />
       <window_info anchor="bottom" id="NuGet" order="7" weight="0.3293348" />
       <window_info anchor="bottom" id="Performance Profiler" order="8" />
-      <window_info active="true" anchor="bottom" id="Docker" order="9" sideWeight="0.4997233" visible="true" weight="0.36750272" />
+      <window_info anchor="bottom" id="Docker" order="9" sideWeight="0.4997233" weight="0.36750272" />
       <window_info anchor="bottom" id="Version Control" order="10" weight="0.3293348" />
       <window_info anchor="bottom" id="Database Changes" order="11" />
       <window_info anchor="bottom" id="Unit Tests" order="12" weight="0.3293348" />
-      <window_info anchor="bottom" id="Terminal" order="13" weight="0.33478734" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="13" visible="true" weight="0.33478734" />
       <window_info anchor="bottom" id="Event Log" order="14" sideWeight="0.5002767" side_tool="true" weight="0.35986915" />
       <window_info anchor="bottom" id="Build" order="15" weight="0.3293348" />
+      <window_info anchor="bottom" id="REST Client" order="16" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -318,7 +263,8 @@
     <MESSAGE value="Наконец смог запустить приложение. Однако, дебажить его все еще не получается" />
     <MESSAGE value="Добавил тестовый контроллер" />
     <MESSAGE value="Удалил нерабочий прокси сервер" />
-    <option name="LAST_COMMIT_MESSAGE" value="Удалил нерабочий прокси сервер" />
+    <MESSAGE value="Удалил ValuesController, тестировал начальный функционал" />
+    <option name="LAST_COMMIT_MESSAGE" value="Удалил ValuesController, тестировал начальный функционал" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -327,19 +273,6 @@
           <properties exception="System.Threading.ThreadAbortException" displayValue="System.Threading.ThreadAbortException" />
           <option name="timeStamp" value="1" />
         </breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/src/Controllers/HelloWorldController.cs</url>
-          <line>14</line>
-          <properties documentPath="$PROJECT_DIR$/src/Controllers/HelloWorldController.cs" initialLine="11">
-            <startOffsets>
-              <option value="372" />
-            </startOffsets>
-            <endOffsets>
-              <option value="412" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
@@ -357,23 +290,6 @@
         <state relative-caret-position="-540" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Startup.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="37" column="17" lean-forward="true" selection-start-line="37" selection-start-column="17" selection-end-line="37" selection-end-column="17" />
-          <folding>
-            <marker date="1560614881850" expanded="false" signature="6:402" ph="..." />
-            <marker date="1560614881850" expanded="true" signature="417:1515" ph="{...}" />
-            <marker date="1560614881850" expanded="true" signature="444:1513" ph="{...}" />
-            <marker date="1560614881850" expanded="true" signature="503:566" ph="{...}" />
-            <marker date="1560614881850" expanded="true" signature="789:898" ph="{...}" />
-            <marker date="1560614881850" expanded="true" signature="1086:1507" ph="{...}" />
-            <marker date="1560614881850" expanded="true" signature="1133:1210" ph="{...}" />
-            <marker date="1560614881850" expanded="true" signature="1228:1431" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Properties/launchSettings.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="342">
@@ -388,35 +304,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/docker-compose.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="13" column="18" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controllers/ValuesController.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="9" column="22" lean-forward="true" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controllers/ValuesController.cs" />
     <entry file="file://$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/app.runtimeconfig.dev.json">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Program.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
-          <folding>
-            <marker date="1560613602350" expanded="false" signature="6:255" ph="..." />
-            <marker date="1560613602350" expanded="true" signature="270:597" ph="{...}" />
-            <marker date="1560613602350" expanded="true" signature="297:595" ph="{...}" />
-            <marker date="1560613602350" expanded="true" signature="350:424" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/src/CQS/.gitignore">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Modules/Entities/.gitignore">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Modules/Dto/HelloWorldDto.cs">
       <provider selected="true" editor-type-id="text-editor">
@@ -430,16 +326,63 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/docker-compose.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="522">
+          <caret line="29" column="35" selection-start-line="29" selection-start-column="35" selection-end-line="29" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Program.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="16" column="53" selection-start-line="16" selection-start-column="53" selection-end-line="16" selection-end-column="53" />
+          <folding>
+            <marker date="1560613602350" expanded="false" signature="6:255" ph="..." />
+            <marker date="1560613602350" expanded="true" signature="270:597" ph="{...}" />
+            <marker date="1560613602350" expanded="true" signature="297:595" ph="{...}" />
+            <marker date="1560613602350" expanded="true" signature="350:424" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Startup.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="241">
+          <caret line="48" column="51" lean-forward="true" selection-start-line="48" selection-start-column="51" selection-end-line="48" selection-end-column="51" />
+          <folding>
+            <marker date="1560858599645" expanded="false" signature="6:431" ph="..." />
+            <marker date="1560858599645" expanded="true" signature="446:1766" ph="{...}" />
+            <marker date="1560858599645" expanded="true" signature="473:1764" ph="{...}" />
+            <marker date="1560858599645" expanded="true" signature="532:595" ph="{...}" />
+            <marker date="1560858599645" expanded="true" signature="818:927" ph="{...}" />
+            <marker date="1560858599645" expanded="true" signature="1115:1536" ph="{...}" />
+            <marker date="1560858599645" expanded="true" signature="1162:1239" ph="{...}" />
+            <marker date="1560858599645" expanded="true" signature="1257:1460" ph="{...}" />
+            <marker date="1560858599645" expanded="true" signature="1589:1758" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Controllers/HelloWorldController.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="17" column="1" lean-forward="true" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
+        <state relative-caret-position="216">
+          <caret line="17" column="13" lean-forward="true" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
           <folding>
-            <marker date="1560841213413" expanded="true" signature="6:54" ph="..." />
-            <marker date="1560841213413" expanded="true" signature="81:430" ph="{...}" />
-            <marker date="1560841213413" expanded="true" signature="173:428" ph="{...}" />
-            <marker date="1560841213413" expanded="true" signature="291:422" ph="{...}" />
+            <marker date="1560858600861" expanded="false" signature="6:97" ph="..." />
+            <marker date="1560858600861" expanded="true" signature="124:658" ph="{...}" />
+            <marker date="1560858600861" expanded="true" signature="216:656" ph="{...}" />
+            <marker date="1560858600861" expanded="true" signature="334:650" ph="{...}" />
+            <marker date="1560858600861" expanded="true" signature="421:496" ph="{...}" />
+            <marker date="1560858600861" expanded="true" signature="529:604" ph="{...}" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docker/mssql/Dockerfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
         </state>
       </provider>
     </entry>

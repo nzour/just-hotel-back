@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
@@ -43,6 +44,12 @@ namespace app
 
             app.UseHttpsRedirection();
             app.UseMvc();
+        }
+
+        public SqlConnection ProvideSqlConnection()
+        {
+            string connectionString = @"Server=mssql;Database=master;User=sa;Password=1234";
+            return new SqlConnection(connectionString);
         }
     }
 }
