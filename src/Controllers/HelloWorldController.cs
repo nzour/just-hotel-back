@@ -1,18 +1,18 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using app.Modules.Dto;
 using Microsoft.AspNetCore.Mvc;
 
-namespace DefaultNamespace
+namespace app.Controllers
 {
-    [ApiController][Route("api")]
-    public class HelloWorldController : ControllerBase
+    [ApiController]
+    [Route("api")]
+    public class HelloWorldController : Controller
     {
-        [HttpGet("hello-world")]
-        public ActionResult<string> HelloWorld()
+        [HttpGet("hello-world/{name}")]
+        public ActionResult<string> HelloWorld([FromRoute] string name)
         {
-            return "Hello world!";
+            string message = $"Hello {name}! It works!";
+
+            return Json(new HelloWorldDto(message));
         }
     }
 }
