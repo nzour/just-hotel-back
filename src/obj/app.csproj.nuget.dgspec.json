@@ -55,6 +55,14 @@
               "target": "Package",
               "version": "[2.2.0, )",
               "autoReferenced": true
+            },
+            "NHibernate": {
+              "target": "Package",
+              "version": "[5.2.5, )"
+            },
+            "SqlServerCompact": {
+              "target": "Package",
+              "version": "[4.0.8854.1, )"
             }
           },
           "imports": [

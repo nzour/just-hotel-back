@@ -10,18 +10,10 @@ namespace app.Controllers
     public class HelloWorldController : Controller
     {
         [HttpGet("hello-world/{name}")]
-        public ActionResult<string> HelloWorld([FromRoute] string name)
+        public JsonResult HelloWorld([FromRoute] string name)
         {
             var response = new HelloWorldDto();
-            
-            try
-            {
-                response.Message = "Success!";
-            }
-            catch (Exception ex)
-            {
-                response.Message = ex.Message;
-            }
+            response.Message = $"Hello {name}";
 
             return Json(response);
         }

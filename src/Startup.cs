@@ -1,8 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
+using System.IO;
 using System.Linq;
+using System.Net.Mime;
 using System.Threading.Tasks;
+using app.CQS.User.Command;
+using app.CQS.User.Query;
+using app.Modules.ORM.Repositories.Implementations;
+using app.Modules.ORM.Repositories.Interfaces;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -26,6 +32,8 @@ namespace app
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            InjectServices(services);
+
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
 
@@ -36,7 +44,7 @@ namespace app
             {
                 app.UseDeveloperExceptionPage();
             }
-            else 
+            else
             {
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
@@ -45,11 +53,14 @@ namespace app
             app.UseHttpsRedirection();
             app.UseMvc();
         }
-
-        public SqlConnection ProvideSqlConnection()
+        
+        private void InjectServices(IServiceCollection services)
         {
-            string connectionString = @"Server=mssql;Database=master;User=sa;Password=1234";
-            return new SqlConnection(connectionString);
+            services.AddTransient<CreateUserCommand>();
+            services.AddTransient<GetUserQuery>();
+            
+            services.AddSingleton<IUserRepository>(provider =>
+                new UserRepository(NHibernateHelper.OpenSession()));
         }
     }
 }
