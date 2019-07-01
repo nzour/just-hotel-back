@@ -9,6 +9,7 @@
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
     <PackageReference Include="NHibernate" Version="5.2.5" />
+    <PackageReference Include="Npgsql" Version="4.0.7" />
     <PackageReference Include="SqlServerCompact" Version="4.0.8854.1" />
   </ItemGroup>
 
@@ -22,5 +23,5 @@
     <Folder Include="Modules\ORM\Fixtures" />
     <Folder Include="Tests" />
   </ItemGroup>
-
+  
 </Project>

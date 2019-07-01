@@ -50,6 +50,10 @@
           "target": "Package",
           "version": "[5.2.5, )"
         },
+        "Npgsql": {
+          "target": "Package",
+          "version": "[4.0.7, )"
+        },
         "SqlServerCompact": {
           "target": "Package",
           "version": "[4.0.8854.1, )"

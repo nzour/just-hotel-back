@@ -41,7 +41,6 @@
             <e p="Mappings" t="Include">
               <e p="User.hbm.xml" t="Include" />
             </e>
-            <e p="NHibernate.cfg.xml" t="Include" />
             <e p="Repositories" t="Include">
               <e p="Implementations" t="Include">
                 <e p="UserRepository.cs" t="Include" />
