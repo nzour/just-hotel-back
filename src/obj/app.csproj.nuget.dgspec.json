@@ -63,10 +63,6 @@
             "Npgsql": {
               "target": "Package",
               "version": "[4.0.7, )"
-            },
-            "SqlServerCompact": {
-              "target": "Package",
-              "version": "[4.0.8854.1, )"
             }
           },
           "imports": [

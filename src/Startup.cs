@@ -61,6 +61,7 @@ namespace app
             
             services.AddSingleton<IUserRepository>(provider =>
                 new UserRepository(NHibernateHelper.OpenSession()));
+            services.AddSingleton<IDemoRepository, DemoRepository>();
         }
     }
 }

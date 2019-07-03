@@ -2,6 +2,7 @@ using System;
 using app.CQS.User.Command;
 using app.CQS.User.Input;
 using app.CQS.User.Query;
+using app.Modules.ORM.Repositories.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
 namespace app.Controllers
@@ -28,6 +29,13 @@ namespace app.Controllers
         public JsonResult GetUser([FromRoute] Guid userId, [FromServices] GetUserQuery query)
         {
             return Json(query.Execute(userId));
+        }
+
+        [HttpGet]
+        [Route("demo")]
+        public JsonResult GetDemo([FromServices] IDemoRepository demoRepository)
+        {
+            return Json(demoRepository.Provide());
         }
     }
 }

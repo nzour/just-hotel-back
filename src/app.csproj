@@ -10,7 +10,6 @@
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
     <PackageReference Include="NHibernate" Version="5.2.5" />
     <PackageReference Include="Npgsql" Version="4.0.7" />
-    <PackageReference Include="SqlServerCompact" Version="4.0.8854.1" />
   </ItemGroup>
 
   <ItemGroup>
@@ -20,6 +19,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Infrastructure\Attributes" />
+    <Folder Include="Infrastructure\Interceptors" />
     <Folder Include="Modules\ORM\Fixtures" />
     <Folder Include="Tests" />
   </ItemGroup>
