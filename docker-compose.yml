@@ -16,10 +16,11 @@ services:
   postgres:
     container_name: postgres
     image: postgres:latest
+    tty: true
     ports:
       - 5432:5432
     environment:
       POSTGRES_USER: zobor
       POSTGRES_PASSWORD: 1234
     volumes:
-      -  ./database:/var/lib/postgresql/data
+      -  ./database:/var/lib/postgresql/database
