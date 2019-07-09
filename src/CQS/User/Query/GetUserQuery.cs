@@ -5,7 +5,7 @@ using app.Modules.ORM.Repositories.Interfaces;
 
 namespace app.CQS.User.Query
 {
-    public class GetUserQuery
+    public class GetUserQuery : IExecutable
     {
         private IUserRepository UserRepository { get; }
 

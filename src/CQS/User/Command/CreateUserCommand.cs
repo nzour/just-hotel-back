@@ -3,7 +3,7 @@ using app.Modules.ORM.Repositories.Interfaces;
 
 namespace app.CQS.User.Command
 {
-    public class CreateUserCommand
+    public class CreateUserCommand : IExecutable
     {
         private IUserRepository UserRepository { get; }
 

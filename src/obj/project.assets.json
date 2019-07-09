@@ -4572,7 +4572,7 @@
   },
   "libraries": {
     "Antlr3.Runtime/3.5.1": {
-      "sha512": "ZwCEpLCLZXkjzf1lYEixp9hgVlYYk33ACHn6xjFyVhGRi2BpoYQez0qtatbetdylASWYTG+cGz0CGR4z66JM4w==",
+      "sha512": "NUWAZRcC8WQgYKp07b2HA0zdOrFG2bzcHEQ/tihcpROFZT6VdWtmGxH+Z+WQxOUWCzMcGY1bgV6qx9bO47DChg==",
       "type": "package",
       "path": "antlr3.runtime/3.5.1",
       "files": [
@@ -4581,14 +4581,17 @@
         "antlr3.runtime.3.5.1.nupkg.sha512",
         "antlr3.runtime.nuspec",
         "lib/net20/Antlr3.Runtime.dll",
+        "lib/net20/Antlr3.Runtime.xml",
         "lib/net40-client/Antlr3.Runtime.dll",
+        "lib/net40-client/Antlr3.Runtime.xml",
         "lib/netstandard1.1/Antlr3.Runtime.dll",
+        "lib/netstandard1.1/Antlr3.Runtime.xml",
         "lib/portable-net4+sl5+netcore45+wpa81+wp8+MonoAndroid1+MonoTouch1/Antlr3.Runtime.dll",
         "lib/portable-net4+sl5+netcore45+wpa81+wp8+MonoAndroid1+MonoTouch1/Antlr3.Runtime.xml"
       ]
     },
     "Iesi.Collections/4.0.4": {
-      "sha512": "jlebSjv2a7amYfKXEUsPDSf2Yi9r0/FkvvT6Dy7ehl7z8du+dTGqKDu+fYbnE+WuIz/v3prYm1jpBljMrY1p+Q==",
+      "sha512": "WFdKVtiaOflBNNC2GCzjSjliwKWvENROVzJEOaLsTCdlKK6Z6u/6oGcJs/ssYN7/27ebuTeeElvc/hL54kv7Cg==",
       "type": "package",
       "path": "iesi.collections/4.0.4",
       "files": [
@@ -4597,9 +4600,13 @@
         "iesi.collections.4.0.4.nupkg.sha512",
         "iesi.collections.nuspec",
         "lib/net40/Iesi.Collections.dll",
+        "lib/net40/Iesi.Collections.xml",
         "lib/net461/Iesi.Collections.dll",
+        "lib/net461/Iesi.Collections.xml",
         "lib/netstandard1.0/Iesi.Collections.dll",
-        "lib/netstandard1.3/Iesi.Collections.dll"
+        "lib/netstandard1.0/Iesi.Collections.xml",
+        "lib/netstandard1.3/Iesi.Collections.dll",
+        "lib/netstandard1.3/Iesi.Collections.xml"
       ]
     },
     "Microsoft.AspNet.WebApi.Client/5.2.6": {
@@ -7328,7 +7335,7 @@
       ]
     },
     "Microsoft.SqlServer.Compact/4.0.8854.1": {
-      "sha512": "Lv3xL4PFzgDAXq09GBtf6kf8K5eW/arPNBQCLnPWWdEIcZqe0i/OpMIAc/fC88SKnU3gHxK208MV7BtDXRkMTA==",
+      "sha512": "RXV4gNpSONte4EZbLfpeRNHv4J37yGHKso9ETq8Y958LuwwECkRGG3td2RFyvPBSHRPzu+LIrHkqrobRcOo3bw==",
       "type": "package",
       "path": "microsoft.sqlserver.compact/4.0.8854.1",
       "hasTools": true,
@@ -7579,7 +7586,7 @@
       ]
     },
     "NHibernate/5.2.5": {
-      "sha512": "WBCNDRS9LFz6Vo0uz5x7uJWjjW6XkNJYlAhyemLN85cajSDdDe83A5lp0DsWt5tSC0iE0rVnbHAzg/I6X1DVLg==",
+      "sha512": "3R9Nf/nI5WYFL9520Xu66wqU8YbnRZGVDA/xvE5wMgqCtIX9df6NOFEfhkEhZIb11UeeU45gqGlkebiqNP8DMw==",
       "type": "package",
       "path": "nhibernate/5.2.5",
       "files": [
@@ -7601,8 +7608,11 @@
         "NHibernate.readme.md",
         "NHibernate.releasenotes.txt",
         "lib/net461/NHibernate.dll",
+        "lib/net461/NHibernate.xml",
         "lib/netcoreapp2.0/NHibernate.dll",
+        "lib/netcoreapp2.0/NHibernate.xml",
         "lib/netstandard2.0/NHibernate.dll",
+        "lib/netstandard2.0/NHibernate.xml",
         "nhibernate-configuration.xsd",
         "nhibernate-mapping.xsd",
         "nhibernate.5.2.5.nupkg.sha512",
@@ -7610,7 +7620,7 @@
       ]
     },
     "Npgsql/4.0.7": {
-      "sha512": "MtKdc1CjuS0BnHti51Skw5A1cbk0JmUxgRIepqq8zkgZ3kYpBOQJcrTGH+305I7kqQBtGs9Y/kpJjv/GBExulw==",
+      "sha512": "wSZOdLAWMhlncV4o43PX1b9uuE++xrSaPFgyap8vzhZFANYV0wlcSI8UqqZqTPdocF17hbS5eOAo2PQVaHZLuQ==",
       "type": "package",
       "path": "npgsql/4.0.7",
       "files": [
@@ -7618,10 +7628,13 @@
         ".signature.p7s",
         "lib/net45/Npgsql.dll",
         "lib/net45/Npgsql.pdb",
+        "lib/net45/Npgsql.xml",
         "lib/net451/Npgsql.dll",
         "lib/net451/Npgsql.pdb",
+        "lib/net451/Npgsql.xml",
         "lib/netstandard2.0/Npgsql.dll",
         "lib/netstandard2.0/Npgsql.pdb",
+        "lib/netstandard2.0/Npgsql.xml",
         "npgsql.4.0.7.nupkg.sha512",
         "npgsql.nuspec"
       ]
@@ -7648,7 +7661,7 @@
       ]
     },
     "Remotion.Linq.EagerFetching/2.2.0": {
-      "sha512": "d6bkH5kROJPFsdvDy4yQved9I4ickamytPByPyuQcH9dk1ef4jciajo50vTQhheyOHeWOgLh97UvkiHV8QSgeQ==",
+      "sha512": "gDL86d4V84XC7e4ab0goGhLL1UfN11VkRdtHcHFU5LNmBteuCyl/auBuHF8MDftpZJaQY8gzy30oyJ/jc8+WsA==",
       "type": "package",
       "path": "remotion.linq.eagerfetching/2.2.0",
       "files": [
@@ -7661,6 +7674,7 @@
         "lib/net45/Remotion.Linq.EagerFetching.XML",
         "lib/net45/Remotion.Linq.EagerFetching.dll",
         "lib/netstandard1.0/Remotion.Linq.EagerFetching.dll",
+        "lib/netstandard1.0/Remotion.Linq.EagerFetching.xml",
         "lib/portable-net45+win+wpa81+wp80/Remotion.Linq.EagerFetching.dll",
         "lib/portable-net45+win+wpa81+wp80/Remotion.Linq.EagerFetching.xml",
         "remotion.linq.eagerfetching.2.2.0.nupkg.sha512",
@@ -7936,7 +7950,7 @@
       ]
     },
     "SqlServerCompact/4.0.8854.1": {
-      "sha512": "l51DpZ78LAXO1yCeEQANlu+EvhAeFgeREwuzcTXk4HewCLgNxlZ2rA/SAOLmBL/XYCDNZvXNePV6rxGfBzNkQw==",
+      "sha512": "ePV1HU4FHBHU05hpWEWjPgIt9vcmVtMQ9a8kn2qslmz/ZQp8MtH+Ed2xL+JlpZVBxQv8wlnm0tXBPWS2Sg2EHg==",
       "type": "package",
       "path": "sqlservercompact/4.0.8854.1",
       "files": [
@@ -8352,7 +8366,7 @@
       ]
     },
     "System.Configuration.ConfigurationManager/4.4.1": {
-      "sha512": "jz3TWKMAeuDEyrPCK5Jyt4bzQcmzUIMcY9Ud6PkElFxTfnsihV+9N/UCqvxe1z5gc7jMYAnj7V1COMS9QKIuHQ==",
+      "sha512": "LoSjM/kLDpyLyoGsmwS5oVMRzHf/0XHkRpr3QZu/HuAv6Sfk919usTMLqD9N9VK3S4Q2+bd3tKJ0ko4MYFfq4Q==",
       "type": "package",
       "path": "system.configuration.configurationmanager/4.4.1",
       "files": [
@@ -8363,7 +8377,9 @@
         "lib/net461/System.Configuration.ConfigurationManager.dll",
         "lib/netstandard2.0/System.Configuration.ConfigurationManager.dll",
         "ref/net461/System.Configuration.ConfigurationManager.dll",
+        "ref/net461/System.Configuration.ConfigurationManager.xml",
         "ref/netstandard2.0/System.Configuration.ConfigurationManager.dll",
+        "ref/netstandard2.0/System.Configuration.ConfigurationManager.xml",
         "system.configuration.configurationmanager.4.4.1.nupkg.sha512",
         "system.configuration.configurationmanager.nuspec",
         "useSharedDesignerContext.txt",
@@ -9578,7 +9594,7 @@
       ]
     },
     "System.Memory/4.5.3": {
-      "sha512": "3oDzvc/zzetpTKWMShs1AADwZjQ/36HnsufHRPcOjyRAAMLDlu2iD33MBI2opxnezcVUtXyqDXXjoFMOU9c7SA==",
+      "sha512": "cPzhWlLMdqrLrgXI6J4uOY0dMpA/Y/ZAp91KPldH8seoh9S/0i8qLkAnSQbPkWSN/RaXNPt8dOubT3JhQITh2w==",
       "type": "package",
       "path": "system.memory/4.5.3",
       "files": [
@@ -9588,7 +9604,9 @@
         "THIRD-PARTY-NOTICES.TXT",
         "lib/netcoreapp2.1/_._",
         "lib/netstandard1.1/System.Memory.dll",
+        "lib/netstandard1.1/System.Memory.xml",
         "lib/netstandard2.0/System.Memory.dll",
+        "lib/netstandard2.0/System.Memory.xml",
         "ref/netcoreapp2.1/_._",
         "system.memory.4.5.3.nupkg.sha512",
         "system.memory.nuspec",
@@ -10442,7 +10460,7 @@
       ]
     },
     "System.Runtime.CompilerServices.Unsafe/4.5.2": {
-      "sha512": "wprSFgext8cwqymChhrBLu62LMg/1u92bU+VOwyfBimSPVFXtsNqEWC92Pf9ofzJFlk4IHmJA75EDJn1b2goAQ==",
+      "sha512": "hMkdWxksypQlFXB7JamQegDscxEAQO4FHd/lw/zlSZU9dZgAij65xjCrXer183wvoNAzJic5zzjj2oc9/dloWg==",
       "type": "package",
       "path": "system.runtime.compilerservices.unsafe/4.5.2",
       "files": [
@@ -10451,10 +10469,15 @@
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
         "lib/netcoreapp2.0/System.Runtime.CompilerServices.Unsafe.dll",
+        "lib/netcoreapp2.0/System.Runtime.CompilerServices.Unsafe.xml",
         "lib/netstandard1.0/System.Runtime.CompilerServices.Unsafe.dll",
+        "lib/netstandard1.0/System.Runtime.CompilerServices.Unsafe.xml",
         "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll",
+        "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.xml",
         "ref/netstandard1.0/System.Runtime.CompilerServices.Unsafe.dll",
+        "ref/netstandard1.0/System.Runtime.CompilerServices.Unsafe.xml",
         "ref/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll",
+        "ref/netstandard2.0/System.Runtime.CompilerServices.Unsafe.xml",
         "system.runtime.compilerservices.unsafe.4.5.2.nupkg.sha512",
         "system.runtime.compilerservices.unsafe.nuspec",
         "useSharedDesignerContext.txt",
@@ -11262,7 +11285,7 @@
       ]
     },
     "System.Security.Cryptography.ProtectedData/4.4.0": {
-      "sha512": "cJV7ScGW7EhatRsjehfvvYVBvtiSMKgN8bOVI0bQhnF5bU7vnHVIsH49Kva7i7GWaWYvmEzkYVk1TC+gZYBEog==",
+      "sha512": "WwEexvBd+17yfY7fcS+fBGl+HADEfCJuKeDJqBT7D6j6vKwYvfLyGuq2y/MmrKORC6mbYwth7kjinO1mPhTL3g==",
       "type": "package",
       "path": "system.security.cryptography.protecteddata/4.4.0",
       "files": [
@@ -11284,8 +11307,10 @@
         "ref/MonoTouch10/_._",
         "ref/net46/System.Security.Cryptography.ProtectedData.dll",
         "ref/net461/System.Security.Cryptography.ProtectedData.dll",
+        "ref/net461/System.Security.Cryptography.ProtectedData.xml",
         "ref/netstandard1.3/System.Security.Cryptography.ProtectedData.dll",
         "ref/netstandard2.0/System.Security.Cryptography.ProtectedData.dll",
+        "ref/netstandard2.0/System.Security.Cryptography.ProtectedData.xml",
         "ref/xamarinios10/_._",
         "ref/xamarinmac20/_._",
         "ref/xamarintvos10/_._",
@@ -11941,7 +11966,7 @@
       ]
     },
     "System.Threading.Tasks.Extensions/4.5.2": {
-      "sha512": "BG/TNxDFv0svAzx8OiMXDlsHfGw623BZ8tCXw4YLhDFDvDhNUEV58jKYMGRnkbJNm7c3JNNJDiN7JBMzxRBR2w==",
+      "sha512": "5HCu8V3QB+gouMZmGrA666weZ0UQRt+OTD16rSE3Hyhu4Qhlvxkf4nTPI0GLy52s0rxgi7C8t2ayFAzw7UK1og==",
       "type": "package",
       "path": "system.threading.tasks.extensions/4.5.2",
       "files": [
@@ -11953,7 +11978,9 @@
         "lib/MonoTouch10/_._",
         "lib/netcoreapp2.1/_._",
         "lib/netstandard1.0/System.Threading.Tasks.Extensions.dll",
+        "lib/netstandard1.0/System.Threading.Tasks.Extensions.xml",
         "lib/netstandard2.0/System.Threading.Tasks.Extensions.dll",
+        "lib/netstandard2.0/System.Threading.Tasks.Extensions.xml",
         "lib/portable-net45+win8+wp8+wpa81/System.Threading.Tasks.Extensions.dll",
         "lib/portable-net45+win8+wp8+wpa81/System.Threading.Tasks.Extensions.xml",
         "lib/xamarinios10/_._",
@@ -12448,23 +12475,23 @@
     ]
   },
   "packageFolders": {
-    "/root/.nuget/packages/": {},
+    "/home/zaur/.nuget/packages/": {},
     "/usr/share/dotnet/sdk/NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/app/app.csproj",
+      "projectUniqueName": "/home/zaur/coding/zobor/backend/src/app.csproj",
       "projectName": "app",
-      "projectPath": "/app/app.csproj",
-      "packagesPath": "/root/.nuget/packages/",
-      "outputPath": "/app/obj/",
+      "projectPath": "/home/zaur/coding/zobor/backend/src/app.csproj",
+      "packagesPath": "/home/zaur/.nuget/packages/",
+      "outputPath": "/home/zaur/coding/zobor/backend/src/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/share/dotnet/sdk/NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "/root/.nuget/NuGet/NuGet.Config"
+        "/home/zaur/.config/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.2"

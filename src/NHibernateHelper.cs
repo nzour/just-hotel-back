@@ -12,7 +12,7 @@ namespace app
         {
             get
             {
-                if(_sessionFactory == null)
+                if (_sessionFactory == null)
                 {
                     var configuration = new Configuration();
                     configuration.Configure();

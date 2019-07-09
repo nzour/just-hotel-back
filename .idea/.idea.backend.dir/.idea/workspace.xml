@@ -1,7 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8919c16b-b5ba-4d5d-8933-195ff1d0b6f7" name="Default Changelist" comment="" />
+    <list default="true" id="8919c16b-b5ba-4d5d-8933-195ff1d0b6f7" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/CQS/IExecutable.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.backend.dir/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.backend.dir/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.backend.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.backend.dir/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker/core/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/docker/core/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CQS/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CQS/User/Command/CreateUserCommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/CQS/User/Command/CreateUserCommand.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CQS/User/Query/GetUserQuery.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/CQS/User/Query/GetUserQuery.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controllers/HelloWorldController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controllers/HelloWorldController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/NHibernateHelper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/NHibernateHelper.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Startup.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/app.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/app.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/app.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/app.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/obj/Debug/netcoreapp2.2/app.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/src/obj/Debug/netcoreapp2.2/app.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/obj/Debug/netcoreapp2.2/app.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/src/obj/Debug/netcoreapp2.2/app.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/obj/Debug/netcoreapp2.2/app.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/src/obj/Debug/netcoreapp2.2/app.csprojAssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/obj/Debug/netcoreapp2.2/app.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/obj/Debug/netcoreapp2.2/app.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/obj/Debug/netcoreapp2.2/app.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/src/obj/Debug/netcoreapp2.2/app.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/obj/app.csproj.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/src/obj/app.csproj.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/obj/app.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/src/obj/app.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/obj/project.assets.json" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,90 +47,18 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Modules/ORM/Entities/AbstractEntity.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="208">
-              <caret line="15" column="32" selection-start-line="15" selection-start-column="32" selection-end-line="15" selection-end-column="32" />
-              <folding>
-                <marker date="1561201994302" expanded="true" signature="49:394" ph="{...}" />
-                <marker date="1561201994302" expanded="true" signature="92:392" ph="{...}" />
-                <marker date="1561201994302" expanded="true" signature="222:291" ph="{...}" />
-                <marker date="1561201994302" expanded="true" signature="333:386" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Modules/ORM/Mappings/User.hbm.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="9" column="20" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/NHibernateHelper.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+            <state relative-caret-position="90">
+              <caret line="8" column="26" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
               <folding>
-                <marker date="1561201559928" expanded="true" signature="6:71" ph="..." />
-                <marker date="1561201559928" expanded="true" signature="86:818" ph="{...}" />
-                <marker date="1561201559928" expanded="true" signature="122:816" ph="{...}" />
-                <marker date="1561201559928" expanded="true" signature="240:694" ph="{...}" />
-                <marker date="1561201559928" expanded="true" signature="266:684" ph="{...}" />
-                <marker date="1561201559928" expanded="true" signature="324:613" ph="{...}" />
-                <marker date="1561201559928" expanded="true" signature="741:810" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/docker-compose.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="384">
-              <caret line="24" column="44" selection-start-line="24" selection-start-column="44" selection-end-line="24" selection-end-column="44" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/hibernate.cfg.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="224">
-              <caret line="14" column="19" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/app.runtimeconfig.dev.json">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/docker/core/Dockerfile">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="32">
-              <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Modules/ORM/Entities/User.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="96">
-              <caret line="10" selection-start-line="10" selection-end-line="10" />
-              <folding>
-                <marker date="1561201994282" expanded="true" signature="34:512" ph="{...}" />
-                <marker date="1561201994282" expanded="true" signature="75:510" ph="{...}" />
-                <marker date="1561201994282" expanded="true" signature="223:246" ph="{...}" />
-                <marker date="1561201994282" expanded="true" signature="301:373" ph="{...}" />
-                <marker date="1561201994282" expanded="true" signature="434:504" ph="{...}" />
+                <marker date="1562683680477" expanded="true" signature="6:71" ph="..." />
+                <marker date="1562683680477" expanded="true" signature="86:819" ph="{...}" />
+                <marker date="1562683680477" expanded="true" signature="122:817" ph="{...}" />
+                <marker date="1562683680477" expanded="true" signature="240:695" ph="{...}" />
+                <marker date="1562683680477" expanded="true" signature="266:685" ph="{...}" />
+                <marker date="1562683680477" expanded="true" signature="325:614" ph="{...}" />
+                <marker date="1562683680477" expanded="true" signature="742:811" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -117,28 +67,54 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Startup.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="592">
-              <caret line="58" column="55" selection-start-line="58" selection-start-column="55" selection-end-line="58" selection-end-column="55" />
+            <state relative-caret-position="504">
+              <caret line="45" column="12" selection-start-line="45" selection-start-column="12" selection-end-line="45" selection-end-column="12" />
               <folding>
-                <marker date="1561197047295" expanded="false" signature="6:624" ph="..." />
-                <marker date="1561197047295" expanded="true" signature="639:2121" ph="{...}" />
-                <marker date="1561197047295" expanded="true" signature="666:2119" ph="{...}" />
-                <marker date="1561197047295" expanded="true" signature="725:788" ph="{...}" />
-                <marker date="1561197047295" expanded="true" signature="1011:1159" ph="{...}" />
-                <marker date="1561197047295" expanded="true" signature="1347:1767" ph="{...}" />
-                <marker date="1561197047295" expanded="true" signature="1394:1471" ph="{...}" />
-                <marker date="1561197047295" expanded="true" signature="1488:1691" ph="{...}" />
-                <marker date="1561197047295" expanded="true" signature="1841:2113" ph="{...}" />
+                <marker date="1562689087768" expanded="true" signature="6:414" ph="..." />
+                <marker date="1562689087768" expanded="true" signature="429:2269" ph="{...}" />
+                <marker date="1562689087768" expanded="true" signature="456:2267" ph="{...}" />
+                <marker date="1562689087768" expanded="true" signature="515:578" ph="{...}" />
+                <marker date="1562689087768" expanded="true" signature="700:880" ph="{...}" />
+                <marker date="1562689087768" expanded="true" signature="961:1548" ph="{...}" />
+                <marker date="1562689087768" expanded="true" signature="1008:1171" ph="{...}" />
+                <marker date="1562689087768" expanded="true" signature="1188:1391" ph="{...}" />
+                <marker date="1562689087768" expanded="true" signature="1614:1842" ph="{...}" />
+                <marker date="1562689087768" expanded="true" signature="1930:2261" ph="{...}" />
+                <marker date="1562689087768" expanded="true" signature="2168:2251" ph="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/app.csproj">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Controllers/HelloWorldController.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="320">
-              <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+            <state relative-caret-position="324">
+              <caret line="18" column="1" lean-forward="true" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
+              <folding>
+                <marker date="1562689184569" expanded="true" signature="6:54" ph="..." />
+                <marker date="1562689184569" expanded="true" signature="81:441" ph="{...}" />
+                <marker date="1562689184569" expanded="true" signature="173:439" ph="{...}" />
+                <marker date="1562689184569" expanded="true" signature="281:433" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/docker-compose.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="54">
+              <caret line="3" column="25" lean-forward="true" selection-start-line="3" selection-start-column="25" selection-end-line="3" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/docker/core/Dockerfile">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="198">
+              <caret line="11" column="21" lean-forward="true" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -175,16 +151,17 @@
     <setting file="file://$PROJECT_DIR$/src/Modules/Dto/HelloWorldDto.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/Controllers/HelloWorldController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/Modules/ORM/Repositories/Implementations/UserRepository.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/CQS/IExecutable.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/NHibernateHelper.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/Program.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/Startup.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/.idea/.idea.backend.dir/.idea/dataSources/ca03b409-c49c-4c8a-8c3a-6bd0f87073d9/storage_v2/_src_/database/postgres.edMnLQ/schema/public.abK9xQ.meta" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/docker/proxy/nginx.info" />
         <option value="$PROJECT_DIR$/docker/proxy/nginx.conf" />
-        <option value="$PROJECT_DIR$/src/Properties/launchSettings.json" />
         <option value="$PROJECT_DIR$/src/Controllers/ValuesController.cs" />
         <option value="$PROJECT_DIR$/src/Modules/Dto/HelloWorldDto.cs" />
         <option value="$PROJECT_DIR$/docker/mssql/Dockerfile" />
@@ -202,19 +179,26 @@
         <option value="$PROJECT_DIR$/src/Modules/ORM/Repositories/Implementations/UserRepository.cs" />
         <option value="$PROJECT_DIR$/src/CQS/User/Output/GetUserQuery.cs" />
         <option value="$PROJECT_DIR$/src/CQS/User/Output/UserOutput.cs" />
-        <option value="$PROJECT_DIR$/src/Controllers/HelloWorldController.cs" />
         <option value="$PROJECT_DIR$/src/Controllers/UserController.cs" />
-        <option value="$PROJECT_DIR$/src/CQS/User/Query/GetUserQuery.cs" />
-        <option value="$PROJECT_DIR$/src/Startup.cs" />
-        <option value="$PROJECT_DIR$/src/NHibernateHelper.cs" />
         <option value="$PROJECT_DIR$/src/Modules/ORM/Mappings/User.hbm.xml" />
         <option value="$PROJECT_DIR$/src/Modules/ORM/Entities/AbstractEntity.cs" />
         <option value="$PROJECT_DIR$/src/Modules/ORM/Entities/User.cs" />
-        <option value="$PROJECT_DIR$/src/CQS/User/Command/CreateUserCommand.cs" />
-        <option value="$PROJECT_DIR$/docker/core/Dockerfile" />
-        <option value="$PROJECT_DIR$/docker-compose.yml" />
         <option value="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/hibernate.cfg.xml" />
         <option value="$PROJECT_DIR$/src/app.csproj" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/src/NHibernateHelper.cs" />
+        <option value="$PROJECT_DIR$/src/CQS/ICommand.cs" />
+        <option value="$PROJECT_DIR$/src/CQS/AbstractCommand.cs" />
+        <option value="$PROJECT_DIR$/src/CQS/AbstractExecutable.cs" />
+        <option value="$PROJECT_DIR$/src/Properties/launchSettings.json" />
+        <option value="$PROJECT_DIR$/src/CQS/IExecutable.cs" />
+        <option value="$PROJECT_DIR$/src/CQS/User/TestQuery.cs" />
+        <option value="$PROJECT_DIR$/src/CQS/User/Command/CreateUserCommand.cs" />
+        <option value="$PROJECT_DIR$/src/CQS/User/Query/GetUserQuery.cs" />
+        <option value="$PROJECT_DIR$/src/Startup.cs" />
+        <option value="$PROJECT_DIR$/src/Controllers/HelloWorldController.cs" />
+        <option value="$PROJECT_DIR$/docker-compose.yml" />
+        <option value="$PROJECT_DIR$/docker/core/Dockerfile" />
       </list>
     </option>
   </component>
@@ -264,11 +248,14 @@
     <property name="Rider.DefaultBreakpoints.AreToggled" value="true" />
     <property name="Rider.ProjectViewActivator.IsNotFirstRun" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/docker-compose.yml" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/docker/core" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="Inspections-C#" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -282,7 +269,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Docker.Docker-Compose">
+  <component name="RunManager" selected="Docker.Dockerfile">
     <configuration name="Docker-Compose" type="docker-deploy" factoryName="docker-compose.yml" server-name="Docker">
       <deployment type="docker-compose.yml">
         <settings>
@@ -303,7 +290,7 @@
         <settings>
           <option name="buildCliOptions" value="" />
           <option name="command" value="" />
-          <option name="containerName" value="core_auto" />
+          <option name="containerName" value="core" />
           <option name="entrypoint" value="" />
           <option name="imageTag" value="" />
           <option name="portBindings">
@@ -357,6 +344,12 @@
       <workItem from="1561198411877" duration="936000" />
       <workItem from="1561199381370" duration="2699000" />
       <workItem from="1561202122951" duration="2011000" />
+      <workItem from="1562602832313" duration="172000" />
+      <workItem from="1562683510504" duration="1815000" />
+      <workItem from="1562685364397" duration="1048000" />
+      <workItem from="1562687029213" duration="469000" />
+      <workItem from="1562687530449" duration="1579000" />
+      <workItem from="1562689159134" duration="663000" />
     </task>
     <task id="LOCAL-00001" summary="Наконец смог запустить приложение. Однако, дебажить его все еще не получается">
       <created>1560618202174</created>
@@ -407,11 +400,18 @@
       <option name="project" value="LOCAL" />
       <updated>1561986848344</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Добавил gitignore для директории с БД">
+      <created>1561987173647</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1561987173647</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="44779000" />
+    <option name="totallyTimeSpent" value="50835000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -426,11 +426,11 @@
     <frame x="67" y="27" width="1853" height="1053" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19424461" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13669065" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info active="true" anchor="bottom" id="Find" order="1" visible="true" weight="0.32969433" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -438,14 +438,15 @@
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3293348" />
       <window_info anchor="bottom" id="NuGet" order="7" weight="0.46673936" />
       <window_info anchor="bottom" id="Performance Profiler" order="8" />
-      <window_info anchor="bottom" id="Docker" order="9" sideWeight="0.4997233" weight="0.7524536" />
+      <window_info active="true" anchor="bottom" id="Docker" order="9" sideWeight="0.4997233" visible="true" weight="0.49017468" />
       <window_info anchor="bottom" id="Version Control" order="10" weight="0.3293348" />
       <window_info anchor="bottom" id="Database Changes" order="11" />
       <window_info anchor="bottom" id="Unit Tests" order="12" weight="0.3293348" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="13" sideWeight="0.4991699" visible="true" weight="0.2857143" />
-      <window_info anchor="bottom" id="Event Log" order="14" sideWeight="0.5008301" side_tool="true" weight="0.2857143" />
+      <window_info anchor="bottom" id="Terminal" order="13" sideWeight="0.4986165" weight="0.25873363" />
+      <window_info anchor="bottom" id="Event Log" order="14" sideWeight="0.5013835" side_tool="true" weight="0.26310045" />
       <window_info anchor="bottom" id="Build" order="15" weight="0.3293348" />
       <window_info anchor="bottom" id="REST Client" order="16" />
+      <window_info anchor="bottom" id="Messages" order="17" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -477,7 +478,8 @@
     <MESSAGE value="Добавил MSSQL сервер. Протестировал подключение" />
     <MESSAGE value="Добавил NHibernate" />
     <MESSAGE value="Заменил MSSQL на PostgreSQL" />
-    <option name="LAST_COMMIT_MESSAGE" value="Заменил MSSQL на PostgreSQL" />
+    <MESSAGE value="Добавил gitignore для директории с БД" />
+    <option name="LAST_COMMIT_MESSAGE" value="Добавил gitignore для директории с БД" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -496,30 +498,10 @@
         <state relative-caret-position="-540" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Properties/launchSettings.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="19" column="12" lean-forward="true" selection-start-line="19" selection-start-column="12" selection-end-line="19" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Controllers/ValuesController.cs" />
-    <entry file="file://$PROJECT_DIR$/src/CQS/.gitignore">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docker/mssql/Dockerfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/data/log/errorlog">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/data/log/errorlog.1">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/docker/mssql/Dockerfile" />
+    <entry file="file://$PROJECT_DIR$/database/data/log/errorlog" />
+    <entry file="file://$PROJECT_DIR$/database/data/log/errorlog.1" />
     <entry file="file://$PROJECT_DIR$/src/Modules/ORM/Entities/.gitignore" />
     <entry file="file://$PROJECT_DIR$/src/Modules/ORM/Entities/User/User.hbm.xml" />
     <entry file="file://$PROJECT_DIR$/src/app.config" />
@@ -535,19 +517,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/CQS/User/Output/GetUserQuery.cs" />
-    <entry file="file://$PROJECT_DIR$/src/Program.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="16" column="53" selection-start-line="16" selection-start-column="53" selection-end-line="16" selection-end-column="53" />
-          <folding>
-            <marker date="1560613602350" expanded="false" signature="6:255" ph="..." />
-            <marker date="1560613602350" expanded="true" signature="270:597" ph="{...}" />
-            <marker date="1560613602350" expanded="true" signature="297:595" ph="{...}" />
-            <marker date="1560613602350" expanded="true" signature="350:424" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Modules/ORM/Repositories/Interfaces/IUserRepository.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
@@ -585,50 +554,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/CQS/User/Query/GetUserQuery.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="21" column="1" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
-          <folding>
-            <marker date="1561197137831" expanded="false" signature="6:139" ph="..." />
-            <marker date="1561197137831" expanded="true" signature="169:533" ph="{...}" />
-            <marker date="1561197137831" expanded="true" signature="201:531" ph="{...}" />
-            <marker date="1561197137831" expanded="true" signature="324:389" ph="{...}" />
-            <marker date="1561197137831" expanded="true" signature="437:525" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Modules/Dto/HelloWorldDto.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="6" column="1" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
-          <folding>
-            <marker date="1560858043336" expanded="true" signature="58:114" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CQS/User/Command/CreateUserCommand.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="12" column="9" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="9" />
-          <folding>
-            <marker date="1561202187061" expanded="true" signature="6:72" ph="..." />
-            <marker date="1561202187061" expanded="true" signature="141:504" ph="{...}" />
-            <marker date="1561202187061" expanded="true" signature="269:334" ph="{...}" />
-            <marker date="1561202187061" expanded="true" signature="380:498" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/appsettings.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Modules/ORM/Repositories/Implementations/UserRepository.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="231">
@@ -644,43 +569,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controllers/HelloWorldController.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="9" column="38" selection-start-line="9" selection-start-column="38" selection-end-line="9" selection-end-column="38" />
-          <folding>
-            <marker date="1561194737537" expanded="false" signature="6:97" ph="..." />
-            <marker date="1561194737537" expanded="true" signature="216:482" ph="{...}" />
-            <marker date="1561194737537" expanded="true" signature="324:476" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Modules/ORM/Mappings/Zobor.hbm.xml" />
-    <entry file="file://$PROJECT_DIR$/src/obj/project.assets.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="15" column="8" lean-forward="true" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="16">
-          <caret line="1" column="11" lean-forward="true" selection-start-line="1" selection-start-column="11" selection-end-line="1" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/database/.gitignore" />
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/ca03b409-c49c-4c8a-8c3a-6bd0f87073d9/console.sql">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Modules/ORM/NHibernate.cfg.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="16" column="25" lean-forward="true" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Modules/ORM/NHibernate.cfg.xml" />
     <entry file="file://$PROJECT_DIR$/src/Modules/ORM/Entities/AbstractEntity.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="208">
@@ -694,56 +588,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Modules/ORM/Mappings/User.hbm.xml">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="9" column="20" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/NHibernateHelper.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-          <folding>
-            <marker date="1561201559928" expanded="true" signature="6:71" ph="..." />
-            <marker date="1561201559928" expanded="true" signature="86:818" ph="{...}" />
-            <marker date="1561201559928" expanded="true" signature="122:816" ph="{...}" />
-            <marker date="1561201559928" expanded="true" signature="240:694" ph="{...}" />
-            <marker date="1561201559928" expanded="true" signature="266:684" ph="{...}" />
-            <marker date="1561201559928" expanded="true" signature="324:613" ph="{...}" />
-            <marker date="1561201559928" expanded="true" signature="741:810" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docker-compose.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="24" column="44" selection-start-line="24" selection-start-column="44" selection-end-line="24" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/hibernate.cfg.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="14" column="19" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/app.runtimeconfig.dev.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docker/core/Dockerfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="32">
-          <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
+        <state>
+          <caret column="11" lean-forward="true" selection-start-column="11" selection-end-column="11" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Modules/ORM/Entities/User.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
+        <state relative-caret-position="180">
           <caret line="10" selection-start-line="10" selection-end-line="10" />
           <folding>
             <marker date="1561201994282" expanded="true" signature="34:512" ph="{...}" />
@@ -755,28 +609,189 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Startup.cs">
+    <entry file="file://$PROJECT_DIR$/src/Modules/ORM/Mappings/User.hbm.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="592">
-          <caret line="58" column="55" selection-start-line="58" selection-start-column="55" selection-end-line="58" selection-end-column="55" />
+        <state relative-caret-position="126">
+          <caret line="7" column="12" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CQS/ICommand.cs" />
+    <entry file="file://$PROJECT_DIR$/src/CQS/.gitignore" />
+    <entry file="file://$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/app.runtimeconfig.dev.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Program.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="16" column="53" selection-start-line="16" selection-start-column="53" selection-end-line="16" selection-end-column="53" />
           <folding>
-            <marker date="1561197047295" expanded="false" signature="6:624" ph="..." />
-            <marker date="1561197047295" expanded="true" signature="639:2121" ph="{...}" />
-            <marker date="1561197047295" expanded="true" signature="666:2119" ph="{...}" />
-            <marker date="1561197047295" expanded="true" signature="725:788" ph="{...}" />
-            <marker date="1561197047295" expanded="true" signature="1011:1159" ph="{...}" />
-            <marker date="1561197047295" expanded="true" signature="1347:1767" ph="{...}" />
-            <marker date="1561197047295" expanded="true" signature="1394:1471" ph="{...}" />
-            <marker date="1561197047295" expanded="true" signature="1488:1691" ph="{...}" />
-            <marker date="1561197047295" expanded="true" signature="1841:2113" ph="{...}" />
+            <marker date="1560613602350" expanded="false" signature="6:255" ph="..." />
+            <marker date="1560613602350" expanded="true" signature="270:597" ph="{...}" />
+            <marker date="1560613602350" expanded="true" signature="297:595" ph="{...}" />
+            <marker date="1560613602350" expanded="true" signature="350:424" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/appsettings.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/appsettings.Development.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/app.csproj">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+        <state relative-caret-position="486">
+          <caret line="27" selection-start-line="27" selection-end-line="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/.gitignore">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Properties/launchSettings.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="23" column="51" lean-forward="true" selection-start-line="23" selection-start-column="51" selection-end-line="23" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/obj/project.assets.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1080">
+          <caret line="15" column="8" lean-forward="true" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Modules/Dto/HelloWorldDto.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="6" column="1" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
+          <folding>
+            <marker date="1560858043336" expanded="true" signature="25:116" ph="{...}" />
+            <marker date="1560858043336" expanded="true" signature="58:114" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/.idea.backend/.idea/vcs.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/.idea.backend.dir/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/hibernate.cfg.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="9" column="44" selection-start-line="9" selection-start-column="44" selection-end-line="9" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CQS/User/Command/CreateUserCommand.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="7" column="55" lean-forward="true" selection-start-line="7" selection-start-column="55" selection-end-line="7" selection-end-column="55" />
+          <folding>
+            <marker date="1562688937014" expanded="true" signature="6:72" ph="..." />
+            <marker date="1562688937014" expanded="true" signature="104:520" ph="{...}" />
+            <marker date="1562688937014" expanded="true" signature="155:518" ph="{...}" />
+            <marker date="1562688937014" expanded="true" signature="283:348" ph="{...}" />
+            <marker date="1562688937014" expanded="true" signature="394:512" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CQS/User/Query/GetUserQuery.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="11" column="28" lean-forward="true" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
+          <folding>
+            <marker date="1562688944578" expanded="false" signature="6:139" ph="..." />
+            <marker date="1562688944578" expanded="true" signature="169:547" ph="{...}" />
+            <marker date="1562688944578" expanded="true" signature="215:545" ph="{...}" />
+            <marker date="1562688944578" expanded="true" signature="338:403" ph="{...}" />
+            <marker date="1562688944578" expanded="true" signature="451:539" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CQS/User/TestQuery.cs" />
+    <entry file="file://$PROJECT_DIR$/src/CQS/IExecutable.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="3" column="5" selection-start-line="3" selection-start-column="5" selection-end-line="3" selection-end-column="5" />
+          <folding>
+            <marker date="1562688864499" expanded="true" signature="17:66" ph="{...}" />
+            <marker date="1562688864499" expanded="true" signature="52:64" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/NHibernateHelper.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="8" column="26" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
+          <folding>
+            <marker date="1562683680477" expanded="true" signature="6:71" ph="..." />
+            <marker date="1562683680477" expanded="true" signature="86:819" ph="{...}" />
+            <marker date="1562683680477" expanded="true" signature="122:817" ph="{...}" />
+            <marker date="1562683680477" expanded="true" signature="240:695" ph="{...}" />
+            <marker date="1562683680477" expanded="true" signature="266:685" ph="{...}" />
+            <marker date="1562683680477" expanded="true" signature="325:614" ph="{...}" />
+            <marker date="1562683680477" expanded="true" signature="742:811" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Startup.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="45" column="12" selection-start-line="45" selection-start-column="12" selection-end-line="45" selection-end-column="12" />
+          <folding>
+            <marker date="1562689087768" expanded="true" signature="6:414" ph="..." />
+            <marker date="1562689087768" expanded="true" signature="429:2269" ph="{...}" />
+            <marker date="1562689087768" expanded="true" signature="456:2267" ph="{...}" />
+            <marker date="1562689087768" expanded="true" signature="515:578" ph="{...}" />
+            <marker date="1562689087768" expanded="true" signature="700:880" ph="{...}" />
+            <marker date="1562689087768" expanded="true" signature="961:1548" ph="{...}" />
+            <marker date="1562689087768" expanded="true" signature="1008:1171" ph="{...}" />
+            <marker date="1562689087768" expanded="true" signature="1188:1391" ph="{...}" />
+            <marker date="1562689087768" expanded="true" signature="1614:1842" ph="{...}" />
+            <marker date="1562689087768" expanded="true" signature="1930:2261" ph="{...}" />
+            <marker date="1562689087768" expanded="true" signature="2168:2251" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controllers/HelloWorldController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="18" column="1" lean-forward="true" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
+          <folding>
+            <marker date="1562689184569" expanded="true" signature="6:54" ph="..." />
+            <marker date="1562689184569" expanded="true" signature="81:441" ph="{...}" />
+            <marker date="1562689184569" expanded="true" signature="173:439" ph="{...}" />
+            <marker date="1562689184569" expanded="true" signature="281:433" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docker-compose.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="3" column="25" lean-forward="true" selection-start-line="3" selection-start-column="25" selection-end-line="3" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docker/core/Dockerfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="11" column="21" lean-forward="true" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
         </state>
       </provider>
     </entry>
