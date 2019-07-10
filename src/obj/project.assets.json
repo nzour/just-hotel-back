@@ -2711,17 +2711,6 @@
           "lib/netstandard1.0/_._": {}
         }
       },
-      "Microsoft.SqlServer.Compact/4.0.8854.1": {
-        "type": "package",
-        "compile": {
-          "lib/net40/System.Data.SqlServerCe.Entity.dll": {},
-          "lib/net40/System.Data.SqlServerCe.dll": {}
-        },
-        "runtime": {
-          "lib/net40/System.Data.SqlServerCe.Entity.dll": {},
-          "lib/net40/System.Data.SqlServerCe.dll": {}
-        }
-      },
       "Microsoft.Win32.Registry/4.5.0": {
         "type": "package",
         "dependencies": {
@@ -3057,12 +3046,6 @@
             "assetType": "native",
             "rid": "win-x86"
           }
-        }
-      },
-      "SqlServerCompact/4.0.8854.1": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.SqlServer.Compact": "4.0.8854.1"
         }
       },
       "System.AppContext/4.3.0": {
@@ -7334,44 +7317,6 @@
         "version.txt"
       ]
     },
-    "Microsoft.SqlServer.Compact/4.0.8854.1": {
-      "sha512": "RXV4gNpSONte4EZbLfpeRNHv4J37yGHKso9ETq8Y958LuwwECkRGG3td2RFyvPBSHRPzu+LIrHkqrobRcOo3bw==",
-      "type": "package",
-      "path": "microsoft.sqlserver.compact/4.0.8854.1",
-      "hasTools": true,
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "Content/web.config.transform",
-        "NativeBinaries/amd64/Microsoft.VC90.CRT/Microsoft.VC90.CRT.manifest",
-        "NativeBinaries/amd64/Microsoft.VC90.CRT/README_ENU.txt",
-        "NativeBinaries/amd64/Microsoft.VC90.CRT/msvcr90.dll",
-        "NativeBinaries/amd64/sqlceca40.dll",
-        "NativeBinaries/amd64/sqlcecompact40.dll",
-        "NativeBinaries/amd64/sqlceer40EN.dll",
-        "NativeBinaries/amd64/sqlceme40.dll",
-        "NativeBinaries/amd64/sqlceqp40.dll",
-        "NativeBinaries/amd64/sqlcese40.dll",
-        "NativeBinaries/x86/Microsoft.VC90.CRT/Microsoft.VC90.CRT.manifest",
-        "NativeBinaries/x86/Microsoft.VC90.CRT/README_ENU.txt",
-        "NativeBinaries/x86/Microsoft.VC90.CRT/msvcr90.dll",
-        "NativeBinaries/x86/sqlceca40.dll",
-        "NativeBinaries/x86/sqlcecompact40.dll",
-        "NativeBinaries/x86/sqlceer40EN.dll",
-        "NativeBinaries/x86/sqlceme40.dll",
-        "NativeBinaries/x86/sqlceqp40.dll",
-        "NativeBinaries/x86/sqlcese40.dll",
-        "SQLCE_EULA_ENU.rtf",
-        "lib/net40/System.Data.SqlServerCe.Entity.dll",
-        "lib/net40/System.Data.SqlServerCe.dll",
-        "microsoft.sqlserver.compact.4.0.8854.1.nupkg.sha512",
-        "microsoft.sqlserver.compact.nuspec",
-        "tools/Install.ps1",
-        "tools/Uninstall.ps1",
-        "tools/VS.psd1",
-        "tools/VS.psm1"
-      ]
-    },
     "Microsoft.Win32.Registry/4.5.0": {
       "sha512": "+FWlwd//+Tt56316p00hVePBCouXyEzT86Jb3+AuRotTND0IYn0OO3obs1gnQEs/txEnt+rF2JBGLItTG+Be6A==",
       "type": "package",
@@ -7947,17 +7892,6 @@
         "runtimes/win-x86/native/sni.dll",
         "useSharedDesignerContext.txt",
         "version.txt"
-      ]
-    },
-    "SqlServerCompact/4.0.8854.1": {
-      "sha512": "ePV1HU4FHBHU05hpWEWjPgIt9vcmVtMQ9a8kn2qslmz/ZQp8MtH+Ed2xL+JlpZVBxQv8wlnm0tXBPWS2Sg2EHg==",
-      "type": "package",
-      "path": "sqlservercompact/4.0.8854.1",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "sqlservercompact.4.0.8854.1.nupkg.sha512",
-        "sqlservercompact.nuspec"
       ]
     },
     "System.AppContext/4.3.0": {
@@ -12470,8 +12404,7 @@
       "Microsoft.AspNetCore.Razor.Design >= 2.2.0",
       "Microsoft.NETCore.App >= 2.2.0",
       "NHibernate >= 5.2.5",
-      "Npgsql >= 4.0.7",
-      "SqlServerCompact >= 4.0.8854.1"
+      "Npgsql >= 4.0.7"
     ]
   },
   "packageFolders": {
@@ -12537,10 +12470,6 @@
           "Npgsql": {
             "target": "Package",
             "version": "[4.0.7, )"
-          },
-          "SqlServerCompact": {
-            "target": "Package",
-            "version": "[4.0.8854.1, )"
           }
         },
         "imports": [
@@ -12550,17 +12479,5 @@
         "warn": true
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU1701",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Package 'Microsoft.SqlServer.Compact 4.0.8854.1' was restored using '.NETFramework,Version=v4.6.1' instead of the project target framework '.NETCoreApp,Version=v2.2'. This package may not be fully compatible with your project.",
-      "libraryId": "Microsoft.SqlServer.Compact",
-      "targetGraphs": [
-        ".NETCoreApp,Version=v2.2"
-      ]
-    }
-  ]
+  }
 }

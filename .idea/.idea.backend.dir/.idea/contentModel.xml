@@ -29,8 +29,14 @@
           <e p="HelloWorldController.cs" t="Include" />
           <e p="UserController.cs" t="Include" />
         </e>
+        <e p="Dockerfile" t="Include" />
+        <e p="Infrastructure" t="Include">
+          <e p="Attributes" t="Include" />
+          <e p="Interceptors" t="Include" />
+        </e>
         <e p="Modules" t="Include">
           <e p="Dto" t="Include">
+            <e p="DemoDto.cs" t="Include" />
             <e p="HelloWorldDto.cs" t="Include" />
           </e>
           <e p="ORM" t="Include">
@@ -44,9 +50,11 @@
             </e>
             <e p="Repositories" t="Include">
               <e p="Implementations" t="Include">
+                <e p="DemoRepository.cs" t="Include" />
                 <e p="UserRepository.cs" t="Include" />
               </e>
               <e p="Interfaces" t="Include">
+                <e p="IDemoRepository.cs" t="Include" />
                 <e p="IUserRepository.cs" t="Include" />
               </e>
             </e>
