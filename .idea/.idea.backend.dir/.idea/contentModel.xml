@@ -79,6 +79,7 @@
             </e>
           </e>
         </e>
+        <e p="supervisord.conf" t="Include" />
       </e>
     </e>
   </component>
