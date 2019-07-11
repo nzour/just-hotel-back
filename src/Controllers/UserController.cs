@@ -19,7 +19,7 @@ namespace app.Controllers
         }
 
         [HttpPost]
-        public void User(UserInput input, [FromServices] CreateUserCommand command)
+        public void CreateUser(UserInput input, [FromServices] CreateUserCommand command)
         {
             command.Execute(input);
         }

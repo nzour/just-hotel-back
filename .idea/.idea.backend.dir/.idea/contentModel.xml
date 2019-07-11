@@ -3,6 +3,7 @@
   <component name="ContentModelStore">
     <e p="$APPLICATION_CONFIG_DIR$/consoles/db" t="IncludeRecursive" />
     <e p="$APPLICATION_CONFIG_DIR$/extensions" t="IncludeRecursive" />
+    <e p="$APPLICATION_CONFIG_DIR$/scratches" t="IncludeRecursive" />
     <e p="$USER_HOME$/.Rider2019.1/system/extResources" t="IncludeRecursive" />
     <e p="$USER_HOME$/.Rider2019.1/system/resharper-host/local/Transient/ReSharperHost/v191/SolutionCaches/_.19.00" t="ExcludeRecursive" />
     <e p="$PROJECT_DIR$" t="IncludeFlat">
@@ -30,7 +31,6 @@
           <e p="HelloWorldController.cs" t="Include" />
           <e p="UserController.cs" t="Include" />
         </e>
-        <e p="Dockerfile" t="Include" />
         <e p="Infrastructure" t="Include">
           <e p="Attributes" t="Include" />
           <e p="Interceptors" t="Include" />

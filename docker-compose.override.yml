@@ -1,0 +1,15 @@
+# Запустит все сервисы + приложение
+version: '3.4'
+services:
+  core:
+    container_name: core
+    image: custom_core
+    build: ./docker/core
+    tty: true
+    ports:
+      - 5000:5000
+      - 5001:5001
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    volumes:
+      - ./src:/app
