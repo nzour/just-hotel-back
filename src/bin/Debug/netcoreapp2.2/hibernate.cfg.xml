@@ -8,7 +8,7 @@
             NHibernate.Driver.NpgsqlDriver
         </property>
         <property name="connection.connection_string">
-            Server=postgres;Port=5432;Database=zobor_db;User Id=zobor;Password=1234;
+            Server=postgres;Port=5432;Database=zobor;User Id=root;Password=root;
         </property>
         <property name="dialect">
             NHibernate.Dialect.PostgreSQLDialect

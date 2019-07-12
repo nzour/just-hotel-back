@@ -1,0 +1,30 @@
+# Запустит все сервисы отдельно от приложения
+version: '3.4'
+services: 
+  postgres:
+    container_name: postgres
+    image: postgres:11
+    tty: true
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_DB: zobor
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: root
+    volumes:
+      - postgres_volume:/var/lib/postgresql/database
+
+  pgadmin:
+    container_name: pgadmin
+    image: dpage/pgadmin4
+    environment:
+      PGADMIN_DEFAULT_EMAIL: pgadmin@mail.db
+      PGADMIN_DEFAULT_PASSWORD: 1234
+    volumes:
+      - pgadmin_volume:/var/lib/pgadmin
+    ports:
+      - 8080:80
+        
+volumes:
+  postgres_volume:
+  pgadmin_volume:
