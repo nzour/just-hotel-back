@@ -1,11 +1,7 @@
 ﻿using System;
 using System.Linq;
-using app.CQS;
-using app.CQS.User;
-using app.CQS.User.Command;
-using app.CQS.User.Query;
-using app.Modules.ORM.Repositories.Implementations;
-using app.Modules.ORM.Repositories.Interfaces;
+using System.Reflection;
+using app.DependencyInjection.ServiceRecorder;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
@@ -25,8 +21,7 @@ namespace app
 
         public void ConfigureServices(IServiceCollection services)
         {
-            InjectServices(services);
-
+            RecordServices(services, typeof(Startup).Assembly);
             services.AddCors();
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
@@ -43,29 +38,22 @@ namespace app
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
-            
+
             app.UseDefaultFiles()
                 .UseStaticFiles()
                 .UseHttpsRedirection()
                 .UseMvc();
         }
 
-        private void InjectServices(IServiceCollection services)
+        private void RecordServices(IServiceCollection services, Assembly assembly)
         {
-            RegisterForService(services, typeof(IExecutable));
-            
-            services.AddSingleton<IUserRepository>(provider =>
-                new UserRepository(NHibernateHelper.OpenSession()));
-            services.AddSingleton<IDemoRepository, DemoRepository>();
-        }
+            var recorders = assembly.DefinedTypes
+                .Where(type => type.GetInterfaces().Contains(typeof(IServiceRecorder)));
 
-        private void RegisterForService(IServiceCollection services, Type serviceType)
-        {
-            var assembly = typeof(Startup).Assembly;
-            var implementations = assembly.DefinedTypes.Where(type => type.GetInterfaces().Contains(serviceType));
-            foreach (var implementation in implementations)
+            foreach (var recorder in recorders)
             {
-                services.AddTransient(implementation);
+                var instance = Activator.CreateInstance(recorder);
+                recorder.GetDeclaredMethod("Process").Invoke(instance, new object[] {services});
             }
         }
     }

@@ -10,58 +10,52 @@
       <e p="packages" t="ExcludeRecursive" />
       <e p="src" t="IncludeRecursive">
         <e p=".gitignore" t="Include" />
-        <e p="CQS" t="Include">
-          <e p="IExecutable.cs" t="Include" />
-          <e p="User" t="Include">
-            <e p="Command" t="Include">
-              <e p="CreateUserCommand.cs" t="Include" />
-            </e>
-            <e p="Input" t="Include">
-              <e p="UserInput.cs" t="Include" />
-            </e>
-            <e p="Output" t="Include">
-              <e p="UserOutput.cs" t="Include" />
-            </e>
-            <e p="Query" t="Include">
-              <e p="GetUserQuery.cs" t="Include" />
+        <e p="Application" t="Include">
+          <e p="CQS" t="Include" />
+          <e p="Http" t="Include">
+            <e p="Token" t="Include">
+              <e p="TokenController.cs" t="Include" />
             </e>
           </e>
         </e>
-        <e p="Controllers" t="Include">
-          <e p="HelloWorldController.cs" t="Include" />
-          <e p="UserController.cs" t="Include" />
+        <e p="Aspect" t="Include" />
+        <e p="Common" t="Include">
+          <e p="Annotation" t="Include">
+            <e p="ScopedAttribute.cs" t="Include" />
+            <e p="SingletonAttribute.cs" t="Include" />
+            <e p="TransientAttribute.cs" t="Include" />
+          </e>
+        </e>
+        <e p="DependencyInjection" t="Include">
+          <e p="ServiceRecorder" t="Include">
+            <e p="AbstractAssemblyAware.cs" t="Include" />
+            <e p="CommandQueryRecorder" t="Include">
+              <e p="CommandQueryRecorder.cs" t="Include" />
+            </e>
+            <e p="IServiceRecorder.cs" t="Include" />
+            <e p="RepositoryRecorder" t="Include">
+              <e p="RepositoryRecorder.cs" t="Include" />
+              <e p="RepositoryRecorderException.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Domain" t="Include">
+          <e p="Entity" t="Include">
+            <e p="AbstractEntity.cs" t="Include" />
+            <e p="Token" t="Include">
+              <e p="Token.cs" t="Include" />
+            </e>
+          </e>
+          <e p="Mapping" t="Include" />
         </e>
         <e p="Infrastructure" t="Include">
           <e p="Attributes" t="Include" />
           <e p="Interceptors" t="Include" />
-        </e>
-        <e p="Modules" t="Include">
-          <e p="Dto" t="Include">
-            <e p="DemoDto.cs" t="Include" />
-            <e p="HelloWorldDto.cs" t="Include" />
-          </e>
-          <e p="ORM" t="Include">
-            <e p="Entities" t="Include">
-              <e p="AbstractEntity.cs" t="Include" />
-              <e p="User.cs" t="Include" />
-            </e>
-            <e p="Fixtures" t="Include" />
-            <e p="Mappings" t="Include">
-              <e p="User.hbm.xml" t="Include" />
-            </e>
-            <e p="Repositories" t="Include">
-              <e p="Implementations" t="Include">
-                <e p="DemoRepository.cs" t="Include" />
-                <e p="UserRepository.cs" t="Include" />
-              </e>
-              <e p="Interfaces" t="Include">
-                <e p="IDemoRepository.cs" t="Include" />
-                <e p="IUserRepository.cs" t="Include" />
-              </e>
-            </e>
+          <e p="NHibernate" t="Include">
+            <e p="NHibernateHelper.cs" t="Include" />
+            <e p="Repository" t="Include" />
           </e>
         </e>
-        <e p="NHibernateHelper.cs" t="Include" />
         <e p="Program.cs" t="Include" />
         <e p="Properties" t="Include">
           <e p="launchSettings.json" t="Include" />

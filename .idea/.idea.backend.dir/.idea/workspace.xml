@@ -2,22 +2,48 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8919c16b-b5ba-4d5d-8933-195ff1d0b6f7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.backend.dir/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker-compose.override.yml.dist" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker-compose.yml.dist" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Application/Http/Token/TokenController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Common/Annotation/ScopedAttribute.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Common/Annotation/SingletonAttribute.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Common/Annotation/TransientAttribute.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/DependencyInjection/ServiceRecorder/AbstractAssemblyAware.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/DependencyInjection/ServiceRecorder/CommandQueryRecorder/CommandQueryRecorder.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/DependencyInjection/ServiceRecorder/IServiceRecorder.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/DependencyInjection/ServiceRecorder/RepositoryRecorder/RepositoryRecorder.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/DependencyInjection/ServiceRecorder/RepositoryRecorder/RepositoryRecorderException.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/Entity/AbstractEntity.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/Entity/Token/Token.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Infrastructure/NHibernate/NHibernateHelper.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.backend.dir/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.backend.dir/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.backend.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.backend.dir/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.MD" beforeDir="false" afterPath="$PROJECT_DIR$/README.MD" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.override.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CQS/IExecutable.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CQS/User/Command/CreateUserCommand.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CQS/User/Input/UserInput.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CQS/User/Output/UserOutput.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CQS/User/Query/GetUserQuery.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controllers/HelloWorldController.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controllers/UserController.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Modules/Dto/DemoDto.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Modules/Dto/HelloWorldDto.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Modules/ORM/Entities/AbstractEntity.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Modules/ORM/Entities/User.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Modules/ORM/Mappings/User.hbm.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Modules/ORM/Repositories/Implementations/DemoRepository.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Modules/ORM/Repositories/Implementations/UserRepository.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Modules/ORM/Repositories/Interfaces/IDemoRepository.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Modules/ORM/Repositories/Interfaces/IUserRepository.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/NHibernateHelper.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Startup.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/hibernate.cfg.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/hibernate.cfg.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/obj/Debug/netcoreapp2.2/app.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/src/obj/Debug/netcoreapp2.2/app.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/app.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/app.deps.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/app.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/app.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/app.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/app.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/app.runtimeconfig.dev.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/app.runtimeconfig.dev.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/obj/Debug/netcoreapp2.2/app.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/src/obj/Debug/netcoreapp2.2/app.csproj.CoreCompileInputs.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/obj/Debug/netcoreapp2.2/app.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/src/obj/Debug/netcoreapp2.2/app.csprojAssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/obj/app.csproj.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/src/obj/app.csproj.nuget.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/obj/Debug/netcoreapp2.2/app.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/obj/Debug/netcoreapp2.2/app.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/obj/Debug/netcoreapp2.2/app.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/src/obj/Debug/netcoreapp2.2/app.pdb" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.idea/httpRequests/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -42,20 +68,78 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/docker-compose.yml">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Application/Http/Token/TokenController.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="320">
-              <caret line="16" column="10" lean-forward="true" selection-start-line="16" selection-start-column="10" selection-end-line="16" selection-end-column="10" />
+            <state relative-caret-position="180">
+              <caret line="9" column="1" lean-forward="true" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
+              <folding>
+                <marker date="1562973129712" expanded="true" signature="69:172" ph="{...}" />
+                <marker date="1562973129712" expanded="true" signature="158:170" ph="{...}" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/README.MD">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/DependencyInjection/ServiceRecorder/RepositoryRecorder/RepositoryRecorder.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="9" column="33" lean-forward="true" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="33" />
+            <state relative-caret-position="280">
+              <caret line="56" column="9" lean-forward="true" selection-start-line="56" selection-start-column="9" selection-end-line="56" selection-end-column="9" />
+              <folding>
+                <marker date="1562973115820" expanded="true" signature="6:212" ph="..." />
+                <marker date="1562973115820" expanded="true" signature="282:2028" ph="{...}" />
+                <marker date="1562973115820" expanded="true" signature="362:2026" ph="{...}" />
+                <marker date="1562973115820" expanded="true" signature="519:593" ph="/// Регистрирует репозитории. ... " />
+                <marker date="1562973115820" expanded="true" signature="650:1162" ph="{...}" />
+                <marker date="1562973115820" expanded="true" signature="759:1152" ph="{...}" />
+                <marker date="1562973115820" expanded="true" signature="1218:1473" ph="{...}" />
+                <marker date="1562973115820" expanded="true" signature="1539:2020" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Infrastructure/NHibernate/NHibernateHelper.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret line="8" column="37" selection-start-line="8" selection-start-column="37" selection-end-line="8" selection-end-column="37" />
+              <folding>
+                <marker date="1562972137735" expanded="false" signature="6:97" ph="..." />
+                <marker date="1562972137735" expanded="true" signature="138:1855" ph="{...}" />
+                <marker date="1562972137735" expanded="true" signature="178:1853" ph="{...}" />
+                <marker date="1562972137735" expanded="true" signature="296:850" ph="{...}" />
+                <marker date="1562972137735" expanded="true" signature="322:840" ph="{...}" />
+                <marker date="1562972137735" expanded="true" signature="381:769" ph="{...}" />
+                <marker date="1562972137735" expanded="true" signature="897:966" ph="{...}" />
+                <marker date="1562972137735" expanded="true" signature="976:1243" ph="/// Добавит всех наследников абстракного класса в конфигурацию Nhibernate (рекурсивно) ... " />
+                <marker date="1562972137735" expanded="true" signature="1341:1847" ph="{...}" />
+                <marker date="1562972137735" expanded="true" signature="1541:1837" ph="{...}" />
+                <marker date="1562972137735" expanded="true" signature="1594:1702" ph="{...}" />
+                <marker date="1562972137735" expanded="true" signature="1723:1823" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Startup.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="80">
+              <caret line="23" column="12" selection-start-line="23" selection-start-column="12" selection-end-line="23" selection-end-column="12" />
+              <folding>
+                <marker date="1562972430316" expanded="true" signature="6:298" ph="..." />
+                <marker date="1562972430316" expanded="true" signature="313:1938" ph="{...}" />
+                <marker date="1562972430316" expanded="true" signature="340:1936" ph="{...}" />
+                <marker date="1562972430316" expanded="true" signature="399:462" ph="{...}" />
+                <marker date="1562972430316" expanded="true" signature="584:789" ph="{...}" />
+                <marker date="1562972430316" expanded="true" signature="870:1445" ph="{...}" />
+                <marker date="1562972430316" expanded="true" signature="917:1080" ph="{...}" />
+                <marker date="1562972430316" expanded="true" signature="1097:1300" ph="{...}" />
+                <marker date="1562972430316" expanded="true" signature="1530:1930" ph="{...}" />
+                <marker date="1562972430316" expanded="true" signature="1728:1920" ph="{...}" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -83,38 +167,28 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/src/obj/Debug/netcoreapp2.2/app.AssemblyInfo.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/Controllers/UserController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/Controllers/HelloWorldController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/NHibernateHelper.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/Modules/Dto/HelloWorldDto.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/Modules/ORM/Repositories/Implementations/DemoRepository.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/Modules/ORM/Repositories/Interfaces/IDemoRepository.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/Common/Annotation/ScopedAttribute.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/Common/Annotation/TransientAttribute.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/Application/Http/Token/TokenController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/DependencyInjection/ServiceRecorder/IServiceRecorder.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/127E718A-C42E-4542-A71B-54CEC3EF156B/18/1e86c897/WebHostBuilder.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/Infrastructure/NHibernate/NHibernateHelper.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/DependencyInjection/ServiceRecorder/CommandQueryRecorder/CommandQueryRecorder.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/Domain/Entity/AbstractEntity.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/DependencyInjection/ServiceRecorder/RepositoryRecorder/RepositoryRecorderException.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/Startup.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/Program.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/57010887-BA3F-46F4-8547-B67751974C6D/f2/f32362c4/Exception.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/DependencyInjection/ServiceRecorder/RepositoryRecorder/RepositoryRecorder.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/DependencyInjection/ServiceRecorder/AbstractAssemblyAware.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/Common/Annotation/SingletonAttribute.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/Domain/Entity/Token/Token.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/docker/proxy/nginx.conf" />
-        <option value="$PROJECT_DIR$/src/Properties/launchSettings.json" />
-        <option value="$PROJECT_DIR$/src/Controllers/ValuesController.cs" />
-        <option value="$PROJECT_DIR$/docker/mssql/Dockerfile" />
-        <option value="$PROJECT_DIR$/database/.gitignore" />
-        <option value="$PROJECT_DIR$/src/Modules/ORM/Entities/Entity.cs" />
-        <option value="$PROJECT_DIR$/src/Modules/ORM/Entities/User/User.cs" />
-        <option value="$PROJECT_DIR$/src/Modules/ORM/Entities/User/User.hbm.xml" />
-        <option value="$PROJECT_DIR$/src/Modules/ORM/Repositories/IUserRepository.cs" />
-        <option value="$PROJECT_DIR$/src/Modules/ORM/Repositories/Implementations/IUserRepository.cs" />
-        <option value="$PROJECT_DIR$/src/app.config" />
-        <option value="$PROJECT_DIR$/src/Modules/ORM/NHibernate.cfg.xml" />
-        <option value="$PROJECT_DIR$/src/Controllers/UserControlelr.cs" />
-        <option value="$PROJECT_DIR$/src/CQS/User/Input/UserInput.cs" />
-        <option value="$PROJECT_DIR$/src/CQS/User/Output/GetUserQuery.cs" />
-        <option value="$PROJECT_DIR$/src/CQS/User/Output/UserOutput.cs" />
-        <option value="$PROJECT_DIR$/src/NHibernateHelper.cs" />
-        <option value="$PROJECT_DIR$/src/Modules/ORM/Mappings/User.hbm.xml" />
-        <option value="$PROJECT_DIR$/src/Modules/ORM/Entities/AbstractEntity.cs" />
-        <option value="$PROJECT_DIR$/src/Modules/ORM/Entities/User.cs" />
-        <option value="$PROJECT_DIR$/src/CQS/User/Command/CreateUserCommand.cs" />
-        <option value="$PROJECT_DIR$/src/app.csproj" />
         <option value="$PROJECT_DIR$/src/Modules/ORM/Repositories/Interfaces/IUserRepository.cs" />
         <option value="$PROJECT_DIR$/src/Modules/Dto/Demo.cs" />
         <option value="$PROJECT_DIR$/src/Modules/Dto/DemoDto.cs" />
@@ -122,9 +196,7 @@
         <option value="$PROJECT_DIR$/src/Modules/ORM/Repositories/Implementations/DemoRepository.cs" />
         <option value="$PROJECT_DIR$/src/Modules/ORM/Repositories/Implementations/UserRepository.cs" />
         <option value="$PROJECT_DIR$/src/Infrastructure/Attributes/ZoborAttribute.cs" />
-        <option value="$PROJECT_DIR$/src/Program.cs" />
         <option value="$PROJECT_DIR$/src/Infrastructure/Interceptors/ZoborInterceptor.cs" />
-        <option value="$PROJECT_DIR$/src/Startup.cs" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/ca03b409-c49c-4c8a-8c3a-6bd0f87073d9/console.sql" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/b10a9cda-c4c8-40a9-afd3-6da8473f9cd0/console.sql" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/1b1d95f7-d3f5-4540-b7d9-c63e87ed3c2b/console.sql" />
@@ -144,6 +216,30 @@
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/docker-compose.yml" />
         <option value="$PROJECT_DIR$/README.MD" />
+        <option value="$PROJECT_DIR$/src/App/Application/Http/Token/TokenController.cs" />
+        <option value="$PROJECT_DIR$/src/Infrastucture/NHibernate/NHibernateHelper.cs" />
+        <option value="$PROJECT_DIR$/src/DependencyInjection/ServiceRecorder/CommandRecorder.cs" />
+        <option value="$PROJECT_DIR$/src/Common/Annotation/Transient.cs" />
+        <option value="$PROJECT_DIR$/src/Common/Annotation/TransientAttribute.cs" />
+        <option value="$PROJECT_DIR$/src/Common/Annotation/ScopedAttribute.cs" />
+        <option value="$PROJECT_DIR$/src/Common/Annotation/SingletoneAttribute.cs" />
+        <option value="$PROJECT_DIR$/src/Common/Annotation/SingletonAttribute.cs" />
+        <option value="$PROJECT_DIR$/src/DependencyInjection/ServiceRecorder/CommandQueryRecorder.cs" />
+        <option value="$PROJECT_DIR$/src/DependencyInjection/ServiceRecorder/RepositoryRecorder.cs" />
+        <option value="$PROJECT_DIR$/src/DependencyInjection/ServiceRecorder/RepositoryRecorder/RepositoryRecorderException.cs" />
+        <option value="$PROJECT_DIR$/src/DependencyInjection/ServiceRecorder/AbstractAssemblyAware.cs" />
+        <option value="$PROJECT_DIR$/src/DependencyInjection/ServiceRecorder/IServiceRecorder.cs" />
+        <option value="$PROJECT_DIR$/src/DependencyInjection/ServiceRecorder/CommandQueryRecorder/CommandQueryRecorder.cs" />
+        <option value="$PROJECT_DIR$/src/Domain/Entity/AbstractEntity.cs" />
+        <option value="$PROJECT_DIR$/src/Domain/Entity/Token/Token.cs" />
+        <option value="$PROJECT_DIR$/src/Application/CQS/TestQuery.cs" />
+        <option value="$PROJECT_DIR$/src/Domain/Entity/Token/ITokenRepository.cs" />
+        <option value="$PROJECT_DIR$/src/Infrastructure/NHibernate/NHibernateHelper.cs" />
+        <option value="$PROJECT_DIR$/src/Infrastructure/NHibernate/Repository/TokenRepository.cs" />
+        <option value="$PROJECT_DIR$/src/Startup.cs" />
+        <option value="$PROJECT_DIR$/src/Program.cs" />
+        <option value="$PROJECT_DIR$/src/DependencyInjection/ServiceRecorder/RepositoryRecorder/RepositoryRecorder.cs" />
+        <option value="$PROJECT_DIR$/src/Application/Http/Token/TokenController.cs" />
       </list>
     </option>
   </component>
@@ -164,13 +260,36 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AssemblyExplorer" />
       <pane id="FileSystemExplorer">
         <subPane>
           <expand>
             <path>
               <item name="" type="161ac34:FileSystemExplorerRootNode" />
               <item name="backend" type="34e6ba20:FileSystemExplorerNode" />
+            </path>
+            <path>
+              <item name="" type="161ac34:FileSystemExplorerRootNode" />
+              <item name="backend" type="34e6ba20:FileSystemExplorerNode" />
+              <item name="src" type="34e6ba20:FileSystemExplorerNode" />
+            </path>
+            <path>
+              <item name="" type="161ac34:FileSystemExplorerRootNode" />
+              <item name="backend" type="34e6ba20:FileSystemExplorerNode" />
+              <item name="src" type="34e6ba20:FileSystemExplorerNode" />
+              <item name="Domain" type="34e6ba20:FileSystemExplorerNode" />
+            </path>
+            <path>
+              <item name="" type="161ac34:FileSystemExplorerRootNode" />
+              <item name="backend" type="34e6ba20:FileSystemExplorerNode" />
+              <item name="src" type="34e6ba20:FileSystemExplorerNode" />
+              <item name="Infrastructure" type="34e6ba20:FileSystemExplorerNode" />
+            </path>
+            <path>
+              <item name="" type="161ac34:FileSystemExplorerRootNode" />
+              <item name="backend" type="34e6ba20:FileSystemExplorerNode" />
+              <item name="src" type="34e6ba20:FileSystemExplorerNode" />
+              <item name="Infrastructure" type="34e6ba20:FileSystemExplorerNode" />
+              <item name="NHibernate" type="34e6ba20:FileSystemExplorerNode" />
             </path>
           </expand>
           <select />
@@ -179,6 +298,7 @@
       <pane id="SolutionExplorer">
         <option name="show-all-files" value="false" />
       </pane>
+      <pane id="AssemblyExplorer" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -196,7 +316,7 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="Inspections-C#" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RestClientSettings">
     <option name="REQUEST_HISTORY">
@@ -293,7 +413,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Docker.Run Other Services">
+  <component name="RunManager" selected=".NET Project.Run ASPNET LOCAL (With Debug)">
     <configuration name="rest-api#1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/rest-api.http">
       <method v="2" />
     </configuration>
@@ -352,7 +472,9 @@
       <workItem from="1562822312120" duration="2979000" />
       <workItem from="1562825763872" duration="1340000" />
       <workItem from="1562951751277" duration="1833000" />
-      <workItem from="1562953797994" duration="5297000" />
+      <workItem from="1562953797994" duration="8811000" />
+      <workItem from="1562963220511" duration="1218000" />
+      <workItem from="1562965212023" duration="7801000" />
     </task>
     <task id="LOCAL-00001" summary="Наконец смог запустить приложение. Однако, дебажить его все еще не получается">
       <created>1560618202174</created>
@@ -424,11 +546,18 @@
       <option name="project" value="LOCAL" />
       <updated>1562826384812</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Установил NHibernateFluent. Изменил docker-compose.">
+      <created>1562959227824</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1562959227982</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="70593000" />
+    <option name="totallyTimeSpent" value="83126000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -441,13 +570,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="31" width="1853" height="1049" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19134775" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1957848" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32962137" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.422049" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.4997227" weight="0.37305123" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -458,9 +588,9 @@
       <window_info anchor="bottom" id="Version Control" order="10" weight="0.32850778" />
       <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
       <window_info anchor="bottom" id="Unit Tests" order="12" weight="0.3293348" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="13" sideWeight="0.4986165" visible="true" weight="0.26391983" />
+      <window_info anchor="bottom" id="Terminal" order="13" sideWeight="0.4986165" weight="0.26391983" />
       <window_info anchor="bottom" id="Event Log" order="14" sideWeight="0.5013866" side_tool="true" weight="0.38752785" />
-      <window_info anchor="bottom" id="Build" order="15" weight="0.32850778" />
+      <window_info anchor="bottom" id="Build" order="15" weight="0.53340757" />
       <window_info anchor="bottom" id="REST Client" order="16" weight="0.42761692" />
       <window_info anchor="bottom" id="Database Console" order="17" weight="0.3293348" />
       <window_info anchor="bottom" id="Messages" order="18" />
@@ -498,7 +628,8 @@
     <MESSAGE value="Почти настроил Postgres. todo: настроить хранение данных" />
     <MESSAGE value="Очередная попытка (безуспешная) настроить Remote Debug" />
     <MESSAGE value="Finally! Настроил конфигурацию для запуска приложения локально (с дебагом) и на докер контейнере (без дебага)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Finally! Настроил конфигурацию для запуска приложения локально (с дебагом) и на докер контейнере (без дебага)" />
+    <MESSAGE value="Установил NHibernateFluent. Изменил docker-compose." />
+    <option name="LAST_COMMIT_MESSAGE" value="Установил NHibernateFluent. Изменил docker-compose." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -510,197 +641,31 @@
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/src/Controllers/HelloWorldController.cs</url>
           <line>13</line>
-          <properties documentPath="$PROJECT_DIR$/src/Controllers/HelloWorldController.cs" initialLine="13">
-            <startOffsets>
-              <option value="352" />
-            </startOffsets>
-            <endOffsets>
-              <option value="387" />
-            </endOffsets>
-          </properties>
+          <properties documentPath="$PROJECT_DIR$/src/Controllers/HelloWorldController.cs" initialLine="13" />
           <option name="timeStamp" value="7" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
+  <component name="debuggerHistoryManager">
+    <expressions id="evaluateExpression">
+      <expression>
+        <expression-string>implementations.</expression-string>
+        <language-id>C#</language-id>
+        <custom-info>RiderImportsList:</custom-info>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>implementations.Count()</expression-string>
+        <language-id>C#</language-id>
+        <custom-info>RiderImportsList:</custom-info>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/app.config" />
-    <entry file="file://$PROJECT_DIR$/src/CQS/User/Input/UserInput.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="14" column="9" lean-forward="true" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="9" />
-          <folding>
-            <marker date="1561018769191" expanded="true" signature="81:317" ph="{...}" />
-            <marker date="1561018769191" expanded="true" signature="239:311" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CQS/User/Output/GetUserQuery.cs" />
-    <entry file="file://$PROJECT_DIR$/src/CQS/User/Output/UserOutput.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="6" column="31" selection-start-line="6" selection-start-column="31" selection-end-line="6" selection-end-column="31" />
-          <folding>
-            <marker date="1561129984526" expanded="true" signature="44:360" ph="{...}" />
-            <marker date="1561129984526" expanded="true" signature="74:358" ph="{...}" />
-            <marker date="1561129984526" expanded="true" signature="244:352" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CQS/User/Command/CreateUserCommand.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="12" column="9" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="9" />
-          <folding>
-            <marker date="1561202187061" expanded="true" signature="6:72" ph="..." />
-            <marker date="1561202187061" expanded="true" signature="141:504" ph="{...}" />
-            <marker date="1561202187061" expanded="true" signature="269:334" ph="{...}" />
-            <marker date="1561202187061" expanded="true" signature="380:498" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/appsettings.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Modules/ORM/Mappings/Zobor.hbm.xml" />
-    <entry file="file://$PROJECT_DIR$/src/Modules/ORM/NHibernate.cfg.xml" />
-    <entry file="file://$PROJECT_DIR$/src/Modules/ORM/Entities/AbstractEntity.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="15" column="32" selection-start-line="15" selection-start-column="32" selection-end-line="15" selection-end-column="32" />
-          <folding>
-            <marker date="1562179657425" expanded="true" signature="49:394" ph="{...}" />
-            <marker date="1562179657425" expanded="true" signature="92:392" ph="{...}" />
-            <marker date="1562179657425" expanded="true" signature="222:291" ph="{...}" />
-            <marker date="1562179657425" expanded="true" signature="333:386" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Modules/ORM/Mappings/User.hbm.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="9" column="20" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Modules/ORM/Entities/User.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
-          <folding>
-            <marker date="1562179657425" expanded="true" signature="34:512" ph="{...}" />
-            <marker date="1562179657425" expanded="true" signature="75:510" ph="{...}" />
-            <marker date="1562179657425" expanded="true" signature="223:246" ph="{...}" />
-            <marker date="1562179657425" expanded="true" signature="301:373" ph="{...}" />
-            <marker date="1562179657425" expanded="true" signature="434:504" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app.csproj">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="485">
-          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Program.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="22" column="5" lean-forward="true" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
-          <folding>
-            <marker date="1562179657425" expanded="false" signature="6:255" ph="..." />
-            <marker date="1562179657425" expanded="true" signature="270:597" ph="{...}" />
-            <marker date="1562179657425" expanded="true" signature="297:595" ph="{...}" />
-            <marker date="1562179657425" expanded="true" signature="350:424" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Infrastructure/Interceptors/ZoborInterceptor.cs" />
-    <entry file="file://$PROJECT_DIR$/src/Infrastructure/Attributes/ZoborAttribute.cs" />
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/ca03b409-c49c-4c8a-8c3a-6bd0f87073d9/console.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="21" selection-start-column="21" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/b10a9cda-c4c8-40a9-afd3-6da8473f9cd0/console.sql">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/1b1d95f7-d3f5-4540-b7d9-c63e87ed3c2b/console.sql">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Modules/ORM/Repositories/Implementations/UserRepository.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="143">
-          <caret line="22" column="34" lean-forward="true" selection-start-line="22" selection-start-column="34" selection-end-line="22" selection-end-column="34" />
-          <folding>
-            <marker date="1562181991828" expanded="false" signature="6:144" ph="..." />
-            <marker date="1562181991828" expanded="true" signature="200:850" ph="{...}" />
-            <marker date="1562181991828" expanded="true" signature="252:848" ph="{...}" />
-            <marker date="1562181991828" expanded="true" signature="385:493" ph="{...}" />
-            <marker date="1562181991828" expanded="true" signature="541:629" ph="{...}" />
-            <marker date="1562181991828" expanded="true" signature="668:731" ph="{...}" />
-            <marker date="1562181991828" expanded="true" signature="773:842" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Modules/ORM/Repositories/Interfaces/IUserRepository.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="10" column="29" selection-start-line="10" selection-start-column="29" selection-end-line="10" selection-end-column="29" />
-          <folding>
-            <marker date="1562179657425" expanded="false" signature="6:79" ph="..." />
-            <marker date="1562179657425" expanded="true" signature="130:283" ph="{...}" />
-            <marker date="1562179657425" expanded="true" signature="169:281" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="9" lean-forward="true" selection-start-column="9" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Modules/Dto/DemoDto.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="13" column="9" selection-start-line="13" selection-start-column="9" selection-end-line="13" selection-end-column="9" />
-          <folding>
-            <marker date="1562181917996" expanded="true" signature="40:274" ph="{...}" />
-            <marker date="1562181917996" expanded="true" signature="67:272" ph="{...}" />
-            <marker date="1562181917996" expanded="true" signature="188:266" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/CQS/User/Query/GetUserQuery.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="12" column="9" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Startup.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-24">
-          <caret line="22" column="24" selection-start-line="22" selection-start-column="24" selection-end-line="22" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Modules/Dto/DemoDto.cs" />
+    <entry file="file://$PROJECT_DIR$/src/CQS/User/Query/GetUserQuery.cs" />
     <entry file="file://$PROJECT_DIR$/database/data/.system/instance_id" />
     <entry file="file://$PROJECT_DIR$/.idea/.idea.backend/.idea/vcs.xml">
       <provider selected="true" editor-type-id="text-editor">
@@ -765,70 +730,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/NHibernateHelper.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="24" selection-start-line="24" selection-end-line="25" selection-end-column="1" />
-          <folding>
-            <marker date="1562783614798" expanded="false" signature="6:71" ph="..." />
-            <marker date="1562783614798" expanded="true" signature="86:819" ph="{...}" />
-            <marker date="1562783614798" expanded="true" signature="122:817" ph="{...}" />
-            <marker date="1562783614798" expanded="true" signature="240:695" ph="{...}" />
-            <marker date="1562783614798" expanded="true" signature="266:685" ph="{...}" />
-            <marker date="1562783614798" expanded="true" signature="325:614" ph="{...}" />
-            <marker date="1562783614798" expanded="true" signature="742:811" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Modules/ORM/Repositories/Implementations/DemoRepository.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="7" column="23" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
-          <folding>
-            <marker date="1562783614798" expanded="false" signature="6:69" ph="..." />
-            <marker date="1562783614798" expanded="true" signature="125:285" ph="{...}" />
-            <marker date="1562783614798" expanded="true" signature="177:283" ph="{...}" />
-            <marker date="1562783614798" expanded="true" signature="216:277" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Modules/ORM/Repositories/Interfaces/IDemoRepository.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="8" column="1" lean-forward="true" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
-          <folding>
-            <marker date="1562783614798" expanded="true" signature="73:153" ph="{...}" />
-            <marker date="1562783614798" expanded="true" signature="112:151" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Modules/Dto/HelloWorldDto.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="6" column="1" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
-          <folding>
-            <marker date="1562783614798" expanded="true" signature="25:116" ph="{...}" />
-            <marker date="1562783614798" expanded="true" signature="58:114" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controllers/HelloWorldController.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="15" column="12" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="12" />
-          <folding>
-            <marker date="1562789284859" expanded="false" signature="6:54" ph="..." />
-            <marker date="1562789284859" expanded="true" signature="81:441" ph="{...}" />
-            <marker date="1562789284859" expanded="true" signature="173:439" ph="{...}" />
-            <marker date="1562789284859" expanded="true" signature="281:433" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Modules/ORM/Repositories/Implementations/DemoRepository.cs" />
+    <entry file="file://$PROJECT_DIR$/src/Modules/ORM/Repositories/Interfaces/IDemoRepository.cs" />
+    <entry file="file://$PROJECT_DIR$/src/Modules/Dto/HelloWorldDto.cs" />
+    <entry file="file://$PROJECT_DIR$/src/Controllers/HelloWorldController.cs" />
     <entry file="file://$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/hibernate.cfg.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="320">
@@ -836,12 +741,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/database/.gitignore">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/docker-compose.yml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/database/.gitignore" />
+    <entry file="file://$PROJECT_DIR$/src/docker-compose.yml" />
     <entry file="file://$PROJECT_DIR$/docker-compose.yml.dist">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="440">
@@ -870,19 +771,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controllers/UserController.cs">
+    <entry file="file://$PROJECT_DIR$/src/Controllers/UserController.cs" />
+    <entry file="file://$PROJECT_DIR$/README.MD">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="24" column="9" lean-forward="true" selection-start-line="24" selection-start-column="9" selection-end-line="24" selection-end-column="9" />
-          <folding>
-            <marker date="1562824819127" expanded="false" signature="6:172" ph="..." />
-            <marker date="1562824819127" expanded="true" signature="199:1010" ph="{...}" />
-            <marker date="1562824819127" expanded="true" signature="290:1008" ph="{...}" />
-            <marker date="1562824819127" expanded="true" signature="373:431" ph="{...}" />
-            <marker date="1562824819127" expanded="true" signature="541:597" ph="{...}" />
-            <marker date="1562824819127" expanded="true" signature="739:807" ph="{...}" />
-            <marker date="1562824819127" expanded="true" signature="931:1002" ph="{...}" />
-          </folding>
+        <state relative-caret-position="31">
+          <caret line="6" column="21" lean-forward="true" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
         </state>
       </provider>
     </entry>
@@ -893,10 +786,262 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.MD">
+    <entry file="file://$PROJECT_DIR$/src/app.csproj">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="29" selection-start-line="29" selection-end-line="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/NHibernateHelper.cs" />
+    <entry file="file://$PROJECT_DIR$/src/Common/Annotation/TransientAttribute.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="4" column="47" lean-forward="true" selection-start-line="4" selection-start-column="47" selection-end-line="4" selection-end-column="47" />
+          <folding>
+            <marker date="1562967464373" expanded="true" signature="46:110" ph="{...}" />
+            <marker date="1562967464373" expanded="true" signature="96:108" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Common/Annotation/SingletonAttribute.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="6" column="5" lean-forward="true" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="5" />
+          <folding>
+            <marker date="1562967694607" expanded="true" signature="46:109" ph="{...}" />
+            <marker date="1562967694607" expanded="true" signature="95:107" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DependencyInjection/ServiceRecorder/RepositoryRecorder.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="7" column="35" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DependencyInjection/ServiceRecorder/CommandQueryRecorder.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="123">
+          <caret line="9" column="37" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/57010887-BA3F-46F4-8547-B67751974C6D/f2/f32362c4/Exception.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="500">
+          <caret line="61" column="5" lean-forward="true" selection-start-line="61" selection-start-column="5" selection-end-line="61" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Common/Annotation/ScopedAttribute.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="6" column="5" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="5" />
+          <folding>
+            <marker date="1562967483421" expanded="true" signature="46:107" ph="{...}" />
+            <marker date="1562967483421" expanded="true" signature="93:105" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DependencyInjection/ServiceRecorder/RepositoryRecorder/RepositoryRecorderException.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="12" column="9" lean-forward="true" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="9" />
+          <folding>
+            <marker date="1562970190651" expanded="true" signature="83:475" ph="{...}" />
+            <marker date="1562970190651" expanded="true" signature="142:473" ph="{...}" />
+            <marker date="1562970190651" expanded="true" signature="223:256" ph="{...}" />
+            <marker date="1562970190651" expanded="true" signature="333:467" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DependencyInjection/ServiceRecorder/AbstractAssemblyAware.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="11" column="1" lean-forward="true" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
+          <folding>
+            <marker date="1562970231579" expanded="true" signature="75:236" ph="{...}" />
+            <marker date="1562970231579" expanded="true" signature="116:234" ph="{...}" />
+            <marker date="1562970231579" expanded="true" signature="163:228" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DependencyInjection/ServiceRecorder/CommandQueryRecorder/CommandQueryRecorder.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="12" column="52" lean-forward="true" selection-start-line="12" selection-start-column="52" selection-end-line="12" selection-end-column="52" />
+          <folding>
+            <marker date="1562970558821" expanded="false" signature="6:168" ph="..." />
+            <marker date="1562970558821" expanded="true" signature="240:2797" ph="{...}" />
+            <marker date="1562970558821" expanded="true" signature="322:2795" ph="{...}" />
+            <marker date="1562970558821" expanded="true" signature="527:604" ph="/// Регистрирует Command и Query ... " />
+            <marker date="1562970558821" expanded="true" signature="661:1062" ph="{...}" />
+            <marker date="1562970558821" expanded="true" signature="752:1052" ph="{...}" />
+            <marker date="1562970558821" expanded="true" signature="814:935" ph="{...}" />
+            <marker date="1562970558821" expanded="true" signature="1072:1233" ph="/// В зависимости от того, каким аттрибутом помечена команда, ... " />
+            <marker date="1562970558821" expanded="true" signature="1312:1756" ph="{...}" />
+            <marker date="1562970558821" expanded="true" signature="1452:1549" ph="{...}" />
+            <marker date="1562970558821" expanded="true" signature="1610:1704" ph="{...}" />
+            <marker date="1562970558821" expanded="true" signature="1766:1968" ph="/// Команды и запросы можно помечать одним из аттрибутов Transient, Scoped или Singleton. ... " />
+            <marker date="1562970558821" expanded="true" signature="2021:2306" ph="{...}" />
+            <marker date="1562970558821" expanded="true" signature="2360:2789" ph="{...}" />
+            <marker date="1562970558821" expanded="true" signature="2481:2777" ph="{...}" />
+            <marker date="1562970558821" expanded="true" signature="2550:2632" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Domain/Entity/Token/Token.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
-          <caret line="9" column="33" lean-forward="true" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="33" />
+          <caret line="9" column="1" lean-forward="true" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
+          <folding>
+            <marker date="1562971055900" expanded="true" signature="33:145" ph="{...}" />
+            <marker date="1562971055900" expanded="true" signature="75:143" ph="{...}" />
+            <marker date="1562971055900" expanded="true" signature="104:137" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DependencyInjection/ServiceRecorder/IServiceRecorder.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="11" column="5" lean-forward="true" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
+          <folding>
+            <marker date="1562970620198" expanded="true" signature="98:355" ph="{...}" />
+            <marker date="1562970620198" expanded="true" signature="138:353" ph="{...}" />
+            <marker date="1562970620198" expanded="true" signature="153:296" ph="/// Регистрирует необходимые сервисы ... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Domain/Entity/AbstractEntity.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="8" column="10" lean-forward="true" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="10" />
+          <folding>
+            <marker date="1562971055856" expanded="true" signature="42:384" ph="{...}" />
+            <marker date="1562971055856" expanded="true" signature="76:382" ph="{...}" />
+            <marker date="1562971055856" expanded="true" signature="158:211" ph="{...}" />
+            <marker date="1562971055856" expanded="true" signature="240:283" ph="{...}" />
+            <marker date="1562971055856" expanded="true" signature="322:376" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Application/CQS/TestQuery.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="6" column="32" lean-forward="true" selection-start-line="6" selection-start-column="32" selection-end-line="6" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Infrastructure/NHibernate/NHibernateHelper.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="8" column="37" selection-start-line="8" selection-start-column="37" selection-end-line="8" selection-end-column="37" />
+          <folding>
+            <marker date="1562972137735" expanded="false" signature="6:97" ph="..." />
+            <marker date="1562972137735" expanded="true" signature="138:1855" ph="{...}" />
+            <marker date="1562972137735" expanded="true" signature="178:1853" ph="{...}" />
+            <marker date="1562972137735" expanded="true" signature="296:850" ph="{...}" />
+            <marker date="1562972137735" expanded="true" signature="322:840" ph="{...}" />
+            <marker date="1562972137735" expanded="true" signature="381:769" ph="{...}" />
+            <marker date="1562972137735" expanded="true" signature="897:966" ph="{...}" />
+            <marker date="1562972137735" expanded="true" signature="976:1243" ph="/// Добавит всех наследников абстракного класса в конфигурацию Nhibernate (рекурсивно) ... " />
+            <marker date="1562972137735" expanded="true" signature="1341:1847" ph="{...}" />
+            <marker date="1562972137735" expanded="true" signature="1541:1837" ph="{...}" />
+            <marker date="1562972137735" expanded="true" signature="1594:1702" ph="{...}" />
+            <marker date="1562972137735" expanded="true" signature="1723:1823" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Startup.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="23" column="12" selection-start-line="23" selection-start-column="12" selection-end-line="23" selection-end-column="12" />
+          <folding>
+            <marker date="1562972430316" expanded="true" signature="6:298" ph="..." />
+            <marker date="1562972430316" expanded="true" signature="313:1938" ph="{...}" />
+            <marker date="1562972430316" expanded="true" signature="340:1936" ph="{...}" />
+            <marker date="1562972430316" expanded="true" signature="399:462" ph="{...}" />
+            <marker date="1562972430316" expanded="true" signature="584:789" ph="{...}" />
+            <marker date="1562972430316" expanded="true" signature="870:1445" ph="{...}" />
+            <marker date="1562972430316" expanded="true" signature="917:1080" ph="{...}" />
+            <marker date="1562972430316" expanded="true" signature="1097:1300" ph="{...}" />
+            <marker date="1562972430316" expanded="true" signature="1530:1930" ph="{...}" />
+            <marker date="1562972430316" expanded="true" signature="1728:1920" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Infrastructure/NHibernate/Repository/TokenRepository.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="10" column="5" lean-forward="true" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/127E718A-C42E-4542-A71B-54CEC3EF156B/18/1e86c897/WebHostBuilder.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="165" column="65" selection-start-line="165" selection-start-column="65" selection-end-line="165" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Program.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="7" column="46" lean-forward="true" selection-start-line="7" selection-start-column="46" selection-end-line="7" selection-end-column="46" />
+          <folding>
+            <marker date="1562973050868" expanded="true" signature="6:63" ph="..." />
+            <marker date="1562973050868" expanded="true" signature="78:405" ph="{...}" />
+            <marker date="1562973050868" expanded="true" signature="105:403" ph="{...}" />
+            <marker date="1562973050868" expanded="true" signature="158:232" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DependencyInjection/ServiceRecorder/RepositoryRecorder/RepositoryRecorder.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="56" column="9" lean-forward="true" selection-start-line="56" selection-start-column="9" selection-end-line="56" selection-end-column="9" />
+          <folding>
+            <marker date="1562973115820" expanded="true" signature="6:212" ph="..." />
+            <marker date="1562973115820" expanded="true" signature="282:2028" ph="{...}" />
+            <marker date="1562973115820" expanded="true" signature="362:2026" ph="{...}" />
+            <marker date="1562973115820" expanded="true" signature="519:593" ph="/// Регистрирует репозитории. ... " />
+            <marker date="1562973115820" expanded="true" signature="650:1162" ph="{...}" />
+            <marker date="1562973115820" expanded="true" signature="759:1152" ph="{...}" />
+            <marker date="1562973115820" expanded="true" signature="1218:1473" ph="{...}" />
+            <marker date="1562973115820" expanded="true" signature="1539:2020" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Domain/Entity/Token/ITokenRepository.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="6" column="1" lean-forward="true" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Application/Http/Token/TokenController.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="9" column="1" lean-forward="true" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
+          <folding>
+            <marker date="1562973129712" expanded="true" signature="69:172" ph="{...}" />
+            <marker date="1562973129712" expanded="true" signature="158:170" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
