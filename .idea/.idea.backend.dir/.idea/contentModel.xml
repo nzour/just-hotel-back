@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ContentModelStore">
     <e p="$APPLICATION_CONFIG_DIR$/consoles/db" t="IncludeRecursive" />
-    <e p="$APPLICATION_CONFIG_DIR$/extensions" t="IncludeRecursive" />
-    <e p="$APPLICATION_CONFIG_DIR$/scratches" t="IncludeRecursive" />
     <e p="$USER_HOME$/.Rider2019.1/system/extResources" t="IncludeRecursive" />
     <e p="$USER_HOME$/.Rider2019.1/system/resharper-host/local/Transient/ReSharperHost/v191/SolutionCaches/_.19.00" t="ExcludeRecursive" />
     <e p="$PROJECT_DIR$" t="IncludeFlat">
@@ -11,7 +9,10 @@
       <e p="src" t="IncludeRecursive">
         <e p=".gitignore" t="Include" />
         <e p="Application" t="Include">
-          <e p="CQS" t="Include" />
+          <e p="CQS" t="Include">
+            <e p="Token" t="Include" />
+            <e p="User" t="Include" />
+          </e>
           <e p="Http" t="Include">
             <e p="Token" t="Include">
               <e p="TokenController.cs" t="Include" />
@@ -21,14 +22,15 @@
         <e p="Aspect" t="Include" />
         <e p="Common" t="Include">
           <e p="Annotation" t="Include">
+            <e p="InjectedAttribute.cs" t="Include" />
             <e p="ScopedAttribute.cs" t="Include" />
             <e p="SingletonAttribute.cs" t="Include" />
             <e p="TransientAttribute.cs" t="Include" />
           </e>
         </e>
         <e p="DependencyInjection" t="Include">
+          <e p="AbstractAssemblyAware.cs" t="Include" />
           <e p="ServiceRecorder" t="Include">
-            <e p="AbstractAssemblyAware.cs" t="Include" />
             <e p="CommandQueryRecorder" t="Include">
               <e p="CommandQueryRecorder.cs" t="Include" />
             </e>
@@ -43,7 +45,12 @@
           <e p="Entity" t="Include">
             <e p="AbstractEntity.cs" t="Include" />
             <e p="Token" t="Include">
+              <e p="ITokenRepository.cs" t="Include" />
               <e p="Token.cs" t="Include" />
+            </e>
+            <e p="User" t="Include">
+              <e p="IUserRepository.cs" t="Include" />
+              <e p="User.cs" t="Include" />
             </e>
           </e>
           <e p="Mapping" t="Include" />
@@ -53,7 +60,11 @@
           <e p="Interceptors" t="Include" />
           <e p="NHibernate" t="Include">
             <e p="NHibernateHelper.cs" t="Include" />
-            <e p="Repository" t="Include" />
+            <e p="Repository" t="Include">
+              <e p="AbstractSessionAware.cs" t="Include" />
+              <e p="TokenRepository.cs" t="Include" />
+              <e p="UserRepository.cs" t="Include" />
+            </e>
           </e>
         </e>
         <e p="Program.cs" t="Include" />

@@ -2,9 +2,11 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
+using app.Common.Annotation;
 using app.Infrastructure.NHibernate;
 using FluentNHibernate.Conventions;
 using Microsoft.Extensions.DependencyInjection;
+using NHibernate.Linq.Functions;
 
 namespace app.DependencyInjection.ServiceRecorder.RepositoryRecorder
 {
@@ -23,16 +25,15 @@ namespace app.DependencyInjection.ServiceRecorder.RepositoryRecorder
             foreach (var @interface in interfaces)
             {
                 var implementation = FindImplementation(@interface);
+                var instance = Handle(Activator.CreateInstance(implementation));
                 // Регистрируем реализацию репозитория
-                services.AddSingleton(
-                    @interface,
-                    provider => Activator.CreateInstance(
-                        implementation, NHibernateHelper.OpenSession()
-                    )
-                );
+                services.AddSingleton(@interface, instance);
             }
         }
 
+        /// <summary>
+        /// Поиск интерфейсов I*Repository
+        /// </summary>
         private IEnumerable<TypeInfo> FindInterfaces()
         {
             return GetAssembly().DefinedTypes.Where(type =>
@@ -42,6 +43,10 @@ namespace app.DependencyInjection.ServiceRecorder.RepositoryRecorder
             );
         }
 
+        /// <summary>
+        /// Поиск первой попавшейся реализации.
+        /// Если реализации нет, выбросит исключение.
+        /// </summary>
         private TypeInfo FindImplementation(TypeInfo @interface)
         {
             var implementations = GetAssembly()
@@ -54,6 +59,29 @@ namespace app.DependencyInjection.ServiceRecorder.RepositoryRecorder
             return implementations.IsNotEmpty()
                 ? implementations.First()
                 : throw RepositoryRecorderException.NotFound(@interface);
+        }
+
+        /// <summary>
+        /// Внедрение сесси в репозитории в виде свойства. 
+        /// </summary>
+        private object Handle(object instance)
+        {
+            var properties = instance
+                .GetType()
+                .GetRuntimeProperties()
+                .Where(property => property.GetCustomAttributes().Contains(new InjectedAttribute()));
+
+
+            foreach (var property in properties)
+            {
+                if (property.Name.Contains("session") || property.Name.Contains("Session"))
+                {
+                    // todo: сначала нужно настроить соединение с БД.
+                    //property.SetValue(instance, NHibernateHelper.OpenSession());
+                }
+            }
+
+            return instance;
         }
     }
 }

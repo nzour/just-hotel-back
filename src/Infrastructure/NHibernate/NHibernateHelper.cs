@@ -1,12 +1,13 @@
 using System;
 using System.Linq;
+using app.DependencyInjection;
 using app.Domain.Entity;
 using NHibernate;
 using NHibernate.Cfg;
 
 namespace app.Infrastructure.NHibernate
 {
-    public class NHibernateHelper    
+    public class NHibernateHelper : AbstractAssemblyAware
     {
         private static ISessionFactory _sessionFactory;
  
@@ -35,12 +36,13 @@ namespace app.Infrastructure.NHibernate
         /// <summary>
         /// Добавит всех наследников абстракного класса в конфигурацию Nhibernate (рекурсивно)
         /// </summary>
-        /// <param name="configuration">Конфигурация Nhibernate</param>>
+        /// <param name="configuration">Конфигурация Nhibernate</param>
         /// <param name="class">Тип абстракного класса</param>
         private static void RegisterEntitiesRecursively(Configuration configuration, Type @class)
         {
-            var assembly = typeof(Startup).Assembly;
-            var entities = assembly.DefinedTypes.Where(type => type.IsSubclassOf(@class));
+            var entities = GetAssembly()
+                .DefinedTypes
+                .Where(type => type.IsSubclassOf(@class));
 
             foreach (var entity in entities)
             {

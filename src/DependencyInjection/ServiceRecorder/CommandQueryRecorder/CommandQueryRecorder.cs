@@ -22,20 +22,15 @@ namespace app.DependencyInjection.ServiceRecorder.CommandQueryRecorder
 
             foreach (var type in types)
             {
-                if (MustResolveAttribute(type))
-                {
-                    ResolveAttributes(services, type);
-                    continue;
-                }
-
-                // Если Доп аттрибутов нет, то Transient
-                services.AddTransient(type);
+                ResolveAttributes(services, type);
             }
         }
 
         /// <summary>
+        /// Команды и запросы можно помечать одним из аттрибутов Transient, Scoped или Singleton.
         /// В зависимости от того, каким аттрибутом помечена команда,
         /// Зарегистрирует её в соответственном стиле.
+        /// Если ни один из атрибутов не найден, то зарегистрирует как Transient.
         /// </summary>
         private void ResolveAttributes(IServiceCollection services, Type type)
         {
@@ -53,19 +48,13 @@ namespace app.DependencyInjection.ServiceRecorder.CommandQueryRecorder
                 return;
             }
 
-            services.AddSingleton(type);
-        }
+            if (attributes.Contains(new SingletonAttribute()))
+            {
+                services.AddSingleton(type);
+                return;
+            }
 
-        /// <summary>
-        /// Команды и запросы можно помечать одним из аттрибутов Transient, Scoped или Singleton.
-        /// Если бы найден хоть один из аттрибутов, то вернет true.
-        /// </summary>
-        private bool MustResolveAttribute(Type type)
-        {
-            var attributes = Attribute.GetCustomAttributes(type);
-            return attributes.Contains(new TransientAttribute()) ||
-                   attributes.Contains(new ScopedAttribute()) ||
-                   attributes.Contains(new SingletonAttribute());
+            services.AddTransient(type);
         }
 
         private IEnumerable<TypeInfo> FindServices()
@@ -79,8 +68,7 @@ namespace app.DependencyInjection.ServiceRecorder.CommandQueryRecorder
                         return false;
                     }
 
-                    return type.Name.EndsWith(QueryPattern) ||
-                           type.Name.EndsWith(CommandPattern);
+                    return type.Name.EndsWith(QueryPattern) || type.Name.EndsWith(CommandPattern);
                 });
         }
     }

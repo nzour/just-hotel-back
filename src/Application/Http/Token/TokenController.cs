@@ -6,5 +6,10 @@ namespace app.Application.Http.Token
     [Route("token")]
     public class TokenController : Controller
     {
+        [Route("index")]
+        public JsonResult Index()
+        {
+            return Json("Hello world!");
+        }
     }
 }
