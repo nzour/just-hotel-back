@@ -2,27 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8919c16b-b5ba-4d5d-8933-195ff1d0b6f7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Application/CQS/User/Output/UserOutput.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Application/CQS/User/Query/GetUserQuery.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Application/Http/User/UserController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Domain/Mapping/User/UserMap.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Infrastructure/NHibernate/Transactional.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.backend.dir/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.backend.dir/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.backend.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.backend.dir/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DependencyInjection/ServiceRecorder/RepositoryRecorder/RepositoryRecorder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/DependencyInjection/ServiceRecorder/RepositoryRecorder/RepositoryRecorder.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Domain/Entity/AbstractEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/Entity/AbstractEntity.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Domain/Entity/User/IUserRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/Entity/User/IUserRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Domain/Entity/User/User.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/Entity/User/User.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Infrastructure/NHibernate/NHibernateHelper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Infrastructure/NHibernate/NHibernateHelper.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Infrastructure/NHibernate/Repository/UserRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Infrastructure/NHibernate/Repository/UserRepository.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/app.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/app.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/app.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/app.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/hibernate.cfg.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/obj/Debug/netcoreapp2.2/app.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/src/obj/Debug/netcoreapp2.2/app.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/obj/Debug/netcoreapp2.2/app.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/src/obj/Debug/netcoreapp2.2/app.assets.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/obj/Debug/netcoreapp2.2/app.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/src/obj/Debug/netcoreapp2.2/app.csprojAssemblyReference.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/obj/Debug/netcoreapp2.2/app.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/obj/Debug/netcoreapp2.2/app.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/obj/Debug/netcoreapp2.2/app.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/src/obj/Debug/netcoreapp2.2/app.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/obj/app.csproj.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/src/obj/app.csproj.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/obj/app.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/src/obj/app.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/obj/project.packagespec.json" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.idea/httpRequests/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -46,7 +32,17 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/app.csproj">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="24" column="56" lean-forward="true" selection-start-line="24" selection-start-column="56" selection-end-line="24" selection-end-column="56" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -194,25 +190,6 @@
               <item name="" type="161ac34:FileSystemExplorerRootNode" />
               <item name="backend" type="34e6ba20:FileSystemExplorerNode" />
               <item name="src" type="34e6ba20:FileSystemExplorerNode" />
-            </path>
-            <path>
-              <item name="" type="161ac34:FileSystemExplorerRootNode" />
-              <item name="backend" type="34e6ba20:FileSystemExplorerNode" />
-              <item name="src" type="34e6ba20:FileSystemExplorerNode" />
-              <item name="Application" type="34e6ba20:FileSystemExplorerNode" />
-            </path>
-            <path>
-              <item name="" type="161ac34:FileSystemExplorerRootNode" />
-              <item name="backend" type="34e6ba20:FileSystemExplorerNode" />
-              <item name="src" type="34e6ba20:FileSystemExplorerNode" />
-              <item name="Infrastructure" type="34e6ba20:FileSystemExplorerNode" />
-            </path>
-            <path>
-              <item name="" type="161ac34:FileSystemExplorerRootNode" />
-              <item name="backend" type="34e6ba20:FileSystemExplorerNode" />
-              <item name="src" type="34e6ba20:FileSystemExplorerNode" />
-              <item name="Infrastructure" type="34e6ba20:FileSystemExplorerNode" />
-              <item name="NHibernate" type="34e6ba20:FileSystemExplorerNode" />
             </path>
           </expand>
           <select />
@@ -400,7 +377,7 @@
       <workItem from="1562963220511" duration="1218000" />
       <workItem from="1562965212023" duration="7801000" />
       <workItem from="1563009816484" duration="7553000" />
-      <workItem from="1563047227496" duration="8946000" />
+      <workItem from="1563047227496" duration="10272000" />
     </task>
     <task id="LOCAL-00001" summary="Наконец смог запустить приложение. Однако, дебажить его все еще не получается">
       <created>1560618202174</created>
@@ -479,11 +456,18 @@
       <option name="project" value="LOCAL" />
       <updated>1562959227982</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Настроил соединение с Postgres">
+      <created>1563056304337</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1563056304337</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="100092000" />
+    <option name="totallyTimeSpent" value="101418000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -497,7 +481,7 @@
   <component name="ToolWindowManager">
     <frame x="67" y="31" width="1853" height="1049" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.20022185" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20022185" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -513,7 +497,7 @@
       <window_info anchor="bottom" id="Version Control" order="10" weight="0.32850778" />
       <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
       <window_info anchor="bottom" id="Unit Tests" order="12" weight="0.3293348" />
-      <window_info anchor="bottom" id="Terminal" order="13" sideWeight="0.4986165" weight="0.3585746" />
+      <window_info anchor="bottom" id="Terminal" order="13" sideWeight="0.4986165" visible="true" weight="0.3585746" />
       <window_info anchor="bottom" id="Event Log" order="14" sideWeight="0.5013866" side_tool="true" weight="0.38752785" />
       <window_info anchor="bottom" id="Build" order="15" weight="0.42650333" />
       <window_info anchor="bottom" id="REST Client" order="16" weight="0.42761692" />
@@ -584,7 +568,8 @@
     <MESSAGE value="Очередная попытка (безуспешная) настроить Remote Debug" />
     <MESSAGE value="Finally! Настроил конфигурацию для запуска приложения локально (с дебагом) и на докер контейнере (без дебага)" />
     <MESSAGE value="Установил NHibernateFluent. Изменил docker-compose." />
-    <option name="LAST_COMMIT_MESSAGE" value="Установил NHibernateFluent. Изменил docker-compose." />
+    <MESSAGE value="Настроил соединение с Postgres" />
+    <option name="LAST_COMMIT_MESSAGE" value="Настроил соединение с Postgres" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -675,13 +660,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Controllers/UserController.cs" />
     <entry file="file://$PROJECT_DIR$/README.MD" />
-    <entry file="file://$PROJECT_DIR$/src/app.csproj">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="29" selection-start-line="29" selection-end-line="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/NHibernateHelper.cs" />
     <entry file="file://$PROJECT_DIR$/src/Common/Annotation/TransientAttribute.cs" />
     <entry file="file://$PROJECT_DIR$/src/Common/Annotation/SingletonAttribute.cs" />
@@ -1092,6 +1070,13 @@
             <marker date="1563056226560" expanded="true" signature="379:399" ph="{...}" />
             <marker date="1563056226560" expanded="true" signature="472:577" ph="{...}" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app.csproj">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="24" column="56" lean-forward="true" selection-start-line="24" selection-start-column="56" selection-end-line="24" selection-end-column="56" />
         </state>
       </provider>
     </entry>
