@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ContentModelStore">
     <e p="$APPLICATION_CONFIG_DIR$/consoles/db" t="IncludeRecursive" />
+    <e p="$APPLICATION_CONFIG_DIR$/extensions" t="IncludeRecursive" />
+    <e p="$APPLICATION_CONFIG_DIR$/scratches" t="IncludeRecursive" />
     <e p="$USER_HOME$/.Rider2019.1/system/extResources" t="IncludeRecursive" />
     <e p="$USER_HOME$/.Rider2019.1/system/resharper-host/local/Transient/ReSharperHost/v191/SolutionCaches/_.19.00" t="ExcludeRecursive" />
     <e p="$PROJECT_DIR$" t="IncludeFlat">
@@ -11,11 +13,21 @@
         <e p="Application" t="Include">
           <e p="CQS" t="Include">
             <e p="Token" t="Include" />
-            <e p="User" t="Include" />
+            <e p="User" t="Include">
+              <e p="Output" t="Include">
+                <e p="UserOutput.cs" t="Include" />
+              </e>
+              <e p="Query" t="Include">
+                <e p="GetUserQuery.cs" t="Include" />
+              </e>
+            </e>
           </e>
           <e p="Http" t="Include">
             <e p="Token" t="Include">
               <e p="TokenController.cs" t="Include" />
+            </e>
+            <e p="User" t="Include">
+              <e p="UserController.cs" t="Include" />
             </e>
           </e>
         </e>
@@ -53,7 +65,11 @@
               <e p="User.cs" t="Include" />
             </e>
           </e>
-          <e p="Mapping" t="Include" />
+          <e p="Mapping" t="Include">
+            <e p="User" t="Include">
+              <e p="UserMap.cs" t="Include" />
+            </e>
+          </e>
         </e>
         <e p="Infrastructure" t="Include">
           <e p="Attributes" t="Include" />
@@ -65,6 +81,7 @@
               <e p="TokenRepository.cs" t="Include" />
               <e p="UserRepository.cs" t="Include" />
             </e>
+            <e p="Transactional.cs" t="Include" />
           </e>
         </e>
         <e p="Program.cs" t="Include" />

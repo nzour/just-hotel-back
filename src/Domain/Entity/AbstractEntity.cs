@@ -2,21 +2,21 @@ using System;
 
 namespace app.Domain.Entity
 {
-    public class AbstractEntity
+    public abstract class AbstractEntity
     {
-        protected Guid Id { get; set; }
+        public  virtual Guid Id { get; set; }
 
         protected AbstractEntity()
         {
             Id = Guid.NewGuid();
         }
 
-        public Guid GetId()
+        public virtual Guid GetId()
         {
             return Id;
         }
 
-        public string GetIdAsString()
+        public virtual string GetIdAsString()
         {
             return Id.ToString();
         }

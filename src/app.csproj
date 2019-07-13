@@ -21,9 +21,7 @@
 
   <ItemGroup>
     <Folder Include="Application\CQS\Token" />
-    <Folder Include="Application\CQS\User" />
     <Folder Include="Aspect" />
-    <Folder Include="Domain\Mapping" />
     <Folder Include="Infrastructure\Attributes" />
     <Folder Include="Infrastructure\Interceptors" />
     <Folder Include="Tests" />

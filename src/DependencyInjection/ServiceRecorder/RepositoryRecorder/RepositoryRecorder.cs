@@ -77,7 +77,7 @@ namespace app.DependencyInjection.ServiceRecorder.RepositoryRecorder
                 if (property.Name.Contains("session") || property.Name.Contains("Session"))
                 {
                     // todo: сначала нужно настроить соединение с БД.
-                    //property.SetValue(instance, NHibernateHelper.OpenSession());
+                    property.SetValue(instance, NHibernateHelper.OpenSession());
                 }
             }
 

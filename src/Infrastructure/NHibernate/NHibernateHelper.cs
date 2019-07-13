@@ -2,32 +2,48 @@ using System;
 using System.Linq;
 using app.DependencyInjection;
 using app.Domain.Entity;
+using FluentNHibernate.Cfg;
+using FluentNHibernate.Cfg.Db;
 using NHibernate;
-using NHibernate.Cfg;
+using NHibernate.Criterion;
+using NHibernate.Tool.hbm2ddl;
 
 namespace app.Infrastructure.NHibernate
 {
     public class NHibernateHelper : AbstractAssemblyAware
     {
         private static ISessionFactory _sessionFactory;
- 
+
         private static ISessionFactory SessionFactory
         {
             get
             {
-                if (_sessionFactory == null)
+                lock (new object())
                 {
-                    var configuration = new Configuration();
-                    configuration.Configure();
-                    // Регистрируем всех наследников AbstractEntity в Nhibernate
-                    RegisterEntitiesRecursively(configuration, typeof(AbstractEntity));
-                    _sessionFactory = configuration.BuildSessionFactory();
+                    if (_sessionFactory == null)
+                    {
+                        var fluentConfiguration = Fluently
+                            .Configure()
+                            .Database(PostgreSQLConfiguration
+                                .PostgreSQL82
+                                //Понятия не имею что это и для чего. Но без этого не работает ¯\_(ツ)_/¯
+                                .Raw("hbm2ddl.keywords", "none")
+                                .ConnectionString(
+                                    "Server=localhost;Port=5432;Database=zobor;User Id=root;Password=root;"));
+
+                        RegisterEntitiesRecursively(fluentConfiguration, typeof(AbstractEntity));
+
+                        _sessionFactory = fluentConfiguration
+                            .ExposeConfiguration(cfg => new SchemaUpdate(cfg)
+                                .Execute(false, true))
+                            .BuildSessionFactory();
+                    }
                 }
-                
+
                 return _sessionFactory;
             }
         }
- 
+
         public static ISession OpenSession()
         {
             return SessionFactory.OpenSession();
@@ -36,9 +52,9 @@ namespace app.Infrastructure.NHibernate
         /// <summary>
         /// Добавит всех наследников абстракного класса в конфигурацию Nhibernate (рекурсивно)
         /// </summary>
-        /// <param name="configuration">Конфигурация Nhibernate</param>
+        /// <param name="configuration">Конфигурация Fluent NHibernate</param>
         /// <param name="class">Тип абстракного класса</param>
-        private static void RegisterEntitiesRecursively(Configuration configuration, Type @class)
+        private static void RegisterEntitiesRecursively(FluentConfiguration configuration, Type @class)
         {
             var entities = GetAssembly()
                 .DefinedTypes
@@ -52,7 +68,7 @@ namespace app.Infrastructure.NHibernate
                 }
                 else
                 {
-                    configuration.AddAssembly(entity.Assembly);
+                    configuration.Mappings(cfg => cfg.FluentMappings.AddFromAssembly(entity.Assembly));
                 }
             }
         }
