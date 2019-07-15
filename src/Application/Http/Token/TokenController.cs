@@ -9,7 +9,9 @@ namespace app.Application.Http.Token
         [Route("index")]
         public JsonResult Index()
         {
-            return Json("Hello world!");
+            var foo = new Foo();
+
+            return Json("Ok!");
         }
     }
 }

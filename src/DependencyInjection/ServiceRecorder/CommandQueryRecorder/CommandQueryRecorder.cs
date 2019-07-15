@@ -7,16 +7,13 @@ using Microsoft.Extensions.DependencyInjection;
 
 namespace app.DependencyInjection.ServiceRecorder.CommandQueryRecorder
 {
-    public class CommandQueryRecorder : AbstractAssemblyAware, IServiceRecorder
+    public class CommandQueryRecorder : AbstractServiceRecorder
     {
         private const string NamespacePattern = "app.Application.CQS";
         private const string QueryPattern = "Query";
         private const string CommandPattern = "Command";
         
-        /// <summary>
-        /// Регистрирует Command и Query
-        /// </summary>
-        public void Process(IServiceCollection services)
+        protected override void Execute(IServiceCollection services)
         {
             var types = FindServices();
 

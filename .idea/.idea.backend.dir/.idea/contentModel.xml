@@ -24,6 +24,7 @@
           </e>
           <e p="Http" t="Include">
             <e p="Token" t="Include">
+              <e p="Foo.cs" t="Include" />
               <e p="TokenController.cs" t="Include" />
             </e>
             <e p="User" t="Include">
@@ -42,11 +43,15 @@
         </e>
         <e p="DependencyInjection" t="Include">
           <e p="AbstractAssemblyAware.cs" t="Include" />
+          <e p="Kernel.cs" t="Include" />
           <e p="ServiceRecorder" t="Include">
+            <e p="AbstractServiceRecorder.cs" t="Include" />
             <e p="CommandQueryRecorder" t="Include">
               <e p="CommandQueryRecorder.cs" t="Include" />
             </e>
-            <e p="IServiceRecorder.cs" t="Include" />
+            <e p="InjectedAttributeRecorder" t="Include">
+              <e p="InjectedAttributeRecorder.cs" t="Include" />
+            </e>
             <e p="RepositoryRecorder" t="Include">
               <e p="RepositoryRecorder.cs" t="Include" />
               <e p="RepositoryRecorderException.cs" t="Include" />
@@ -77,7 +82,6 @@
           <e p="NHibernate" t="Include">
             <e p="NHibernateHelper.cs" t="Include" />
             <e p="Repository" t="Include">
-              <e p="AbstractSessionAware.cs" t="Include" />
               <e p="TokenRepository.cs" t="Include" />
               <e p="UserRepository.cs" t="Include" />
             </e>

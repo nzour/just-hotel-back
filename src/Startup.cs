@@ -1,8 +1,4 @@
-﻿using System;
-using System.Linq;
-using System.Reflection;
-using app.DependencyInjection;
-using app.DependencyInjection.ServiceRecorder;
+﻿using app.DependencyInjection;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
@@ -13,7 +9,6 @@ namespace app
 {
     public class Startup : AbstractAssemblyAware
     {
-        private const string RecorderMethod = "Process";
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -23,7 +18,8 @@ namespace app
 
         public void ConfigureServices(IServiceCollection services)
         {
-            RecordServices(services);
+            Kernel.Boot(services);
+
             services.AddCors();
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
@@ -45,21 +41,6 @@ namespace app
                 .UseStaticFiles()
                 .UseHttpsRedirection()
                 .UseMvc();
-        }
-
-        /// <summary>
-        /// Запустит все реализации интерфейса IServiceRecorder
-        /// </summary>
-        private void RecordServices(IServiceCollection services)
-        {
-            var recorders = GetAssembly()
-                .DefinedTypes
-                .Where(type => type.GetInterfaces().Contains(typeof(IServiceRecorder)));
-            
-            foreach (var recorder in recorders)
-            {
-                recorder.GetMethod(RecorderMethod).Invoke(Activator.CreateInstance(recorder), new object[] {services});
-            }
         }
     }
 }

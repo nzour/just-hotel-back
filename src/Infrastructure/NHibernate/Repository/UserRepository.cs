@@ -3,7 +3,7 @@ using Npgsql;
 
 namespace app.Infrastructure.NHibernate.Repository
 {
-    public class UserRepository : AbstractSessionAware, IUserRepository
+    public class UserRepository : IUserRepository
     {
         public User GetUser()
         {
