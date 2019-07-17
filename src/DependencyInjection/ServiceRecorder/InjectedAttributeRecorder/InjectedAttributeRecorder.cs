@@ -1,14 +1,10 @@
 using System;
 using System.Collections.Generic;
-using System.Configuration;
 using System.Linq;
 using System.Reflection;
 using app.Common.Annotation;
-using app.Infrastructure.NHibernate.Repository;
 using FluentNHibernate.Conventions;
-using Microsoft.EntityFrameworkCore.Internal;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.IdentityModel.Tokens.Saml;
 
 namespace app.DependencyInjection.ServiceRecorder.InjectedAttributeRecorder
 {
@@ -23,7 +19,7 @@ namespace app.DependencyInjection.ServiceRecorder.InjectedAttributeRecorder
         {
             return GetAssembly()
                 .DefinedTypes
-                .Where(type => { return !type.IsInterface && GetFieldsWithInjected(type).IsNotEmpty(); });
+                .Where(type => !type.IsInterface && GetPropertiesWithInjectedAttribute(type).IsNotEmpty());
         }
 
         /// <summary>
@@ -34,7 +30,7 @@ namespace app.DependencyInjection.ServiceRecorder.InjectedAttributeRecorder
         {
             foreach (var @class in classes)
             {
-                var properties = GetFieldsWithInjected(@class);
+                var properties = GetPropertiesWithInjectedAttribute(@class);
 
                 foreach (var property in properties)
                 {
@@ -54,9 +50,9 @@ namespace app.DependencyInjection.ServiceRecorder.InjectedAttributeRecorder
             try
             {
                 var propertyType = property.PropertyType;
-                var service = provider.GetService(propertyType) ?? Activator.CreateInstance(propertyType);
-//                It doesn't work. Idk
-//                property.SetValue(@class, service);
+                //var service = provider.GetService(propertyType) ?? Activator.CreateInstance(propertyType);
+                // todo: Not working. Fix in future.
+                //  property.SetValue(@class, service);
             }
             catch (Exception e)
             {
@@ -71,10 +67,10 @@ namespace app.DependencyInjection.ServiceRecorder.InjectedAttributeRecorder
         /// </summary>
         /// <param name="type"></param>
         /// <returns></returns>
-        private IEnumerable<PropertyInfo> GetFieldsWithInjected(TypeInfo type)
+        private IEnumerable<PropertyInfo> GetPropertiesWithInjectedAttribute(TypeInfo type)
         {
             return type.GetRuntimeProperties()
-                .Where(field => field.GetCustomAttributes().Contains(new InjectedAttribute()));
+                .Where(prop => prop.GetCustomAttributes().Contains(new InjectedAttribute()));
         }
 
         protected override IEnumerable<AbstractServiceRecorder> GetDependencies()

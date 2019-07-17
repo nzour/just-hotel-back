@@ -6,12 +6,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="FluentMigrator" Version="3.2.1" />
     <PackageReference Include="FluentMigrator.Console" Version="3.2.1" />
     <PackageReference Include="FluentMigrator.Generator" Version="1.0.5" />
     <PackageReference Include="FluentMigrator.Runner" Version="3.2.1" />
     <PackageReference Include="FluentMigrator.Runner.Core" Version="3.2.1" />
     <PackageReference Include="FluentMigrator.Runner.Postgres" Version="3.2.1" />
-    <PackageReference Include="FluentMigrator.Tools" Version="3.2.1" />
     <PackageReference Include="FluentNHibernate" Version="2.1.2" />
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />

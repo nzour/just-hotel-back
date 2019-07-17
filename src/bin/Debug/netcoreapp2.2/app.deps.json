@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.2",
-    "signature": "ae7c2cd254d45d86da10df44ece48b4b82c411e7"
+    "signature": "965cccb0f4eaf6579b8894c2090c598e8042a864"
   },
   "compilationOptions": {
     "defines": [
@@ -24,12 +24,12 @@
     ".NETCoreApp,Version=v2.2": {
       "app/1.0.0": {
         "dependencies": {
+          "FluentMigrator": "3.2.1",
           "FluentMigrator.Console": "3.2.1",
           "FluentMigrator.Generator": "1.0.5",
           "FluentMigrator.Runner": "3.2.1",
           "FluentMigrator.Runner.Core": "3.2.1",
           "FluentMigrator.Runner.Postgres": "3.2.1",
-          "FluentMigrator.Tools": "3.2.1",
           "FluentNHibernate": "2.1.2",
           "Microsoft.AspNetCore.App": "2.2.0",
           "Microsoft.AspNetCore.Razor.Design": "2.2.0",
@@ -354,7 +354,6 @@
           "lib/netstandard2.0/System.Data.SqlServerCe.dll": {}
         }
       },
-      "FluentMigrator.Tools/3.2.1": {},
       "FluentNHibernate/2.1.2": {
         "dependencies": {
           "NHibernate": "5.2.5"
@@ -3819,13 +3818,6 @@
       "sha512": "sha512-b5PXsIwocRW2oGXXqm8xkQx4gkqA33BMIGlq9pqNlbiKGTycXxDSepmqO8uQFo+RMa4HcxKLzGlixSVgNGwF8w==",
       "path": "fluentmigrator.runner.sqlserverce/3.2.1",
       "hashPath": "fluentmigrator.runner.sqlserverce.3.2.1.nupkg.sha512"
-    },
-    "FluentMigrator.Tools/3.2.1": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-UKbhx7uhGFRrt1BBIKTkMVbKlGjEkoufCwpbeP2Pe9LjTYW3olKtaIriGUhZ4K0IGiGZsWIdUwneNiJ+6gzvZQ==",
-      "path": "fluentmigrator.tools/3.2.1",
-      "hashPath": "fluentmigrator.tools.3.2.1.nupkg.sha512"
     },
     "FluentNHibernate/2.1.2": {
       "type": "package",

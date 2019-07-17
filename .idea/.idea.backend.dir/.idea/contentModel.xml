@@ -80,6 +80,7 @@
           <e p="Attributes" t="Include" />
           <e p="Interceptors" t="Include" />
           <e p="NHibernate" t="Include">
+            <e p="DbAccessor.cs" t="Include" />
             <e p="NHibernateHelper.cs" t="Include" />
             <e p="Repository" t="Include">
               <e p="TokenRepository.cs" t="Include" />
@@ -98,6 +99,7 @@
         <e p="appsettings.Development.json" t="Include" />
         <e p="appsettings.json" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
+        <e p="environment.json" t="Include" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
             <e p="netcoreapp2.2" t="Include">

@@ -29,6 +29,10 @@
   "frameworks": {
     "netcoreapp2.2": {
       "dependencies": {
+        "FluentMigrator": {
+          "target": "Package",
+          "version": "[3.2.1, )"
+        },
         "FluentMigrator.Console": {
           "target": "Package",
           "version": "[3.2.1, )"
@@ -46,10 +50,6 @@
           "version": "[3.2.1, )"
         },
         "FluentMigrator.Runner.Postgres": {
-          "target": "Package",
-          "version": "[3.2.1, )"
-        },
-        "FluentMigrator.Tools": {
           "target": "Package",
           "version": "[3.2.1, )"
         },

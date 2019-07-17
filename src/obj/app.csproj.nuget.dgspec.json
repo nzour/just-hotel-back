@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "/app/app.csproj": {}
+    "/home/zaur/coding/zobor/backend/src/app.csproj": {}
   },
   "projects": {
-    "/app/app.csproj": {
+    "/home/zaur/coding/zobor/backend/src/app.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/app/app.csproj",
+        "projectUniqueName": "/home/zaur/coding/zobor/backend/src/app.csproj",
         "projectName": "app",
-        "projectPath": "/app/app.csproj",
-        "packagesPath": "/root/.nuget/packages/",
-        "outputPath": "/app/obj/",
+        "projectPath": "/home/zaur/coding/zobor/backend/src/app.csproj",
+        "packagesPath": "/home/zaur/.nuget/packages/",
+        "outputPath": "/home/zaur/coding/zobor/backend/src/obj/",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "/usr/share/dotnet/sdk/NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "/root/.nuget/NuGet/NuGet.Config"
+          "/home/zaur/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp2.2"
@@ -39,6 +39,34 @@
       "frameworks": {
         "netcoreapp2.2": {
           "dependencies": {
+            "FluentMigrator": {
+              "target": "Package",
+              "version": "[3.2.1, )"
+            },
+            "FluentMigrator.Console": {
+              "target": "Package",
+              "version": "[3.2.1, )"
+            },
+            "FluentMigrator.Generator": {
+              "target": "Package",
+              "version": "[1.0.5, )"
+            },
+            "FluentMigrator.Runner": {
+              "target": "Package",
+              "version": "[3.2.1, )"
+            },
+            "FluentMigrator.Runner.Core": {
+              "target": "Package",
+              "version": "[3.2.1, )"
+            },
+            "FluentMigrator.Runner.Postgres": {
+              "target": "Package",
+              "version": "[3.2.1, )"
+            },
+            "FluentNHibernate": {
+              "target": "Package",
+              "version": "[2.1.2, )"
+            },
             "Microsoft.AspNetCore.App": {
               "suppressParent": "All",
               "target": "Package",

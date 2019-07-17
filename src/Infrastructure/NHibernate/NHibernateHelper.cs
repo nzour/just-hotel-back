@@ -5,8 +5,6 @@ using app.Domain.Entity;
 using FluentNHibernate.Cfg;
 using FluentNHibernate.Cfg.Db;
 using NHibernate;
-using NHibernate.Criterion;
-using NHibernate.Tool.hbm2ddl;
 
 namespace app.Infrastructure.NHibernate
 {
@@ -28,14 +26,13 @@ namespace app.Infrastructure.NHibernate
                                 .PostgreSQL82
                                 //Понятия не имею что это и для чего. Но без этого не работает ¯\_(ツ)_/¯
                                 .Raw("hbm2ddl.keywords", "none")
-                                .ConnectionString(
-                                    "Server=localhost;Port=5432;Database=zobor;User Id=root;Password=root;"));
+                                .ConnectionString(DbAccessor.ConnectionString));
 
                         RegisterEntitiesRecursively(fluentConfiguration, typeof(AbstractEntity));
 
                         _sessionFactory = fluentConfiguration
-                            .ExposeConfiguration(cfg => new SchemaUpdate(cfg)
-                                .Execute(false, true))
+//                            .ExposeConfiguration(cfg => new SchemaUpdate(cfg)
+//                                .Execute(false, true))
                             .BuildSessionFactory();
                     }
                 }
