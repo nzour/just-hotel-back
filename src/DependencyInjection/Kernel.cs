@@ -4,7 +4,6 @@ using System.IO;
 using System.Linq;
 using app.DependencyInjection.ServiceRecorder;
 using app.Infrastructure.NHibernate;
-using FluentMigrator.Runner;
 using Microsoft.Extensions.DependencyInjection;
 using Newtonsoft.Json;
 
@@ -24,7 +23,7 @@ namespace app.DependencyInjection
         {
             RegisterEnvironment();
             RecordServices(services);
-            RegisterMigrations(services);
+            NHibernateHelper.Boot();
         }
 
         /// <summary>
@@ -57,16 +56,6 @@ namespace app.DependencyInjection
                     Environment.SetEnvironmentVariable(key, value);
                 }
             }
-        }
-
-        private static void RegisterMigrations(IServiceCollection services)
-        {
-            services.AddFluentMigratorCore()
-                .ConfigureRunner(runner => runner
-                    .AddPostgres()
-                    .WithGlobalConnectionString(DbAccessor.ConnectionString)
-                    .ScanIn(GetAssembly()).For.Migrations())
-                .AddLogging(logBuilder => logBuilder.AddFluentMigratorConsole());
         }
     }
 }

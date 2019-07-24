@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.2",
-    "signature": "965cccb0f4eaf6579b8894c2090c598e8042a864"
+    "signature": "bc771b172e330038e49b1496939bc999b88ccdae"
   },
   "compilationOptions": {
     "defines": [
@@ -24,13 +24,8 @@
     ".NETCoreApp,Version=v2.2": {
       "app/1.0.0": {
         "dependencies": {
-          "FluentMigrator": "3.2.1",
-          "FluentMigrator.Console": "3.2.1",
-          "FluentMigrator.Generator": "1.0.5",
-          "FluentMigrator.Runner": "3.2.1",
-          "FluentMigrator.Runner.Core": "3.2.1",
-          "FluentMigrator.Runner.Postgres": "3.2.1",
           "FluentNHibernate": "2.1.2",
+          "JWT": "5.2.2",
           "Microsoft.AspNetCore.App": "2.2.0",
           "Microsoft.AspNetCore.Razor.Design": "2.2.0",
           "Microsoft.NETCore.App": "2.2.0",
@@ -57,301 +52,6 @@
         },
         "compile": {
           "lib/netstandard1.1/Antlr3.Runtime.dll": {}
-        }
-      },
-      "FluentMigrator/3.2.1": {
-        "dependencies": {
-          "FluentMigrator.Abstractions": "3.2.1",
-          "Microsoft.Extensions.DependencyInjection": "2.2.0",
-          "Microsoft.Extensions.Options": "2.2.0"
-        },
-        "runtime": {
-          "lib/netstandard2.0/FluentMigrator.dll": {
-            "assemblyVersion": "3.2.1.0",
-            "fileVersion": "3.2.1.0"
-          }
-        },
-        "compile": {
-          "lib/netstandard2.0/FluentMigrator.dll": {}
-        }
-      },
-      "FluentMigrator.Abstractions/3.2.1": {
-        "dependencies": {
-          "System.ComponentModel.Annotations": "4.5.0",
-          "System.ValueTuple": "4.5.0"
-        },
-        "runtime": {
-          "lib/netstandard2.0/FluentMigrator.Abstractions.dll": {
-            "assemblyVersion": "3.2.1.0",
-            "fileVersion": "3.2.1.0"
-          }
-        },
-        "resources": {
-          "lib/netstandard2.0/de-DE/FluentMigrator.Abstractions.resources.dll": {
-            "locale": "de-DE"
-          }
-        },
-        "compile": {
-          "lib/netstandard2.0/FluentMigrator.Abstractions.dll": {}
-        }
-      },
-      "FluentMigrator.Console/3.2.1": {},
-      "FluentMigrator.Extensions.Oracle/3.2.1": {
-        "dependencies": {
-          "FluentMigrator.Abstractions": "3.2.1"
-        },
-        "runtime": {
-          "lib/netstandard2.0/FluentMigrator.Extensions.Oracle.dll": {
-            "assemblyVersion": "3.2.1.0",
-            "fileVersion": "3.2.1.0"
-          }
-        },
-        "compile": {
-          "lib/netstandard2.0/FluentMigrator.Extensions.Oracle.dll": {}
-        }
-      },
-      "FluentMigrator.Extensions.SqlAnywhere/3.2.1": {
-        "dependencies": {
-          "FluentMigrator.Abstractions": "3.2.1"
-        },
-        "runtime": {
-          "lib/netstandard2.0/FluentMigrator.Extensions.SqlAnywhere.dll": {
-            "assemblyVersion": "3.2.1.0",
-            "fileVersion": "3.2.1.0"
-          }
-        },
-        "compile": {
-          "lib/netstandard2.0/FluentMigrator.Extensions.SqlAnywhere.dll": {}
-        }
-      },
-      "FluentMigrator.Extensions.SqlServer/3.2.1": {
-        "dependencies": {
-          "FluentMigrator.Abstractions": "3.2.1"
-        },
-        "runtime": {
-          "lib/netstandard2.0/FluentMigrator.Extensions.SqlServer.dll": {
-            "assemblyVersion": "3.2.1.0",
-            "fileVersion": "3.2.1.0"
-          }
-        },
-        "compile": {
-          "lib/netstandard2.0/FluentMigrator.Extensions.SqlServer.dll": {}
-        }
-      },
-      "FluentMigrator.Generator/1.0.5": {
-        "dependencies": {
-          "FluentMigrator": "3.2.1"
-        }
-      },
-      "FluentMigrator.Runner/3.2.1": {
-        "dependencies": {
-          "FluentMigrator": "3.2.1",
-          "FluentMigrator.Runner.Core": "3.2.1",
-          "FluentMigrator.Runner.Db2": "3.2.1",
-          "FluentMigrator.Runner.Firebird": "3.2.1",
-          "FluentMigrator.Runner.Hana": "3.2.1",
-          "FluentMigrator.Runner.MySql": "3.2.1",
-          "FluentMigrator.Runner.Oracle": "3.2.1",
-          "FluentMigrator.Runner.Postgres": "3.2.1",
-          "FluentMigrator.Runner.Redshift": "3.2.1",
-          "FluentMigrator.Runner.SQLite": "3.2.1",
-          "FluentMigrator.Runner.SqlAnywhere": "3.2.1",
-          "FluentMigrator.Runner.SqlServer": "3.2.1",
-          "FluentMigrator.Runner.SqlServerCe": "3.2.1",
-          "Microsoft.Extensions.Configuration.Abstractions": "2.2.0",
-          "Microsoft.Extensions.Logging": "2.2.0"
-        },
-        "runtime": {
-          "lib/netstandard2.0/FluentMigrator.Runner.dll": {
-            "assemblyVersion": "3.2.1.0",
-            "fileVersion": "3.2.1.0"
-          }
-        },
-        "compile": {
-          "lib/netstandard2.0/FluentMigrator.Runner.dll": {}
-        }
-      },
-      "FluentMigrator.Runner.Core/3.2.1": {
-        "dependencies": {
-          "FluentMigrator.Abstractions": "3.2.1",
-          "Microsoft.Extensions.Configuration.Abstractions": "2.2.0",
-          "Microsoft.Extensions.DependencyInjection": "2.2.0",
-          "Microsoft.Extensions.Logging.Abstractions": "2.2.0",
-          "Microsoft.Extensions.Options": "2.2.0"
-        },
-        "runtime": {
-          "lib/netstandard2.0/FluentMigrator.Runner.Core.dll": {
-            "assemblyVersion": "3.2.1.0",
-            "fileVersion": "3.2.1.0"
-          }
-        },
-        "compile": {
-          "lib/netstandard2.0/FluentMigrator.Runner.Core.dll": {}
-        }
-      },
-      "FluentMigrator.Runner.Db2/3.2.1": {
-        "dependencies": {
-          "FluentMigrator.Runner.Core": "3.2.1"
-        },
-        "runtime": {
-          "lib/netstandard2.0/FluentMigrator.Runner.Db2.dll": {
-            "assemblyVersion": "3.2.1.0",
-            "fileVersion": "3.2.1.0"
-          }
-        },
-        "compile": {
-          "lib/netstandard2.0/FluentMigrator.Runner.Db2.dll": {}
-        }
-      },
-      "FluentMigrator.Runner.Firebird/3.2.1": {
-        "dependencies": {
-          "FluentMigrator.Runner.Core": "3.2.1",
-          "Microsoft.Extensions.Options": "2.2.0"
-        },
-        "runtime": {
-          "lib/netstandard2.0/FluentMigrator.Runner.Firebird.dll": {
-            "assemblyVersion": "3.2.1.0",
-            "fileVersion": "3.2.1.0"
-          }
-        },
-        "compile": {
-          "lib/netstandard2.0/FluentMigrator.Runner.Firebird.dll": {}
-        }
-      },
-      "FluentMigrator.Runner.Hana/3.2.1": {
-        "dependencies": {
-          "FluentMigrator.Runner.Core": "3.2.1"
-        },
-        "runtime": {
-          "lib/netstandard2.0/FluentMigrator.Runner.Hana.dll": {
-            "assemblyVersion": "3.2.1.0",
-            "fileVersion": "3.2.1.0"
-          }
-        },
-        "compile": {
-          "lib/netstandard2.0/FluentMigrator.Runner.Hana.dll": {}
-        }
-      },
-      "FluentMigrator.Runner.MySql/3.2.1": {
-        "dependencies": {
-          "FluentMigrator.Runner.Core": "3.2.1"
-        },
-        "runtime": {
-          "lib/netstandard2.0/FluentMigrator.Runner.MySql.dll": {
-            "assemblyVersion": "3.2.1.0",
-            "fileVersion": "3.2.1.0"
-          }
-        },
-        "compile": {
-          "lib/netstandard2.0/FluentMigrator.Runner.MySql.dll": {}
-        }
-      },
-      "FluentMigrator.Runner.Oracle/3.2.1": {
-        "dependencies": {
-          "FluentMigrator.Extensions.Oracle": "3.2.1",
-          "FluentMigrator.Runner.Core": "3.2.1"
-        },
-        "runtime": {
-          "lib/netstandard2.0/FluentMigrator.Runner.Oracle.dll": {
-            "assemblyVersion": "3.2.1.0",
-            "fileVersion": "3.2.1.0"
-          }
-        },
-        "compile": {
-          "lib/netstandard2.0/FluentMigrator.Runner.Oracle.dll": {}
-        }
-      },
-      "FluentMigrator.Runner.Postgres/3.2.1": {
-        "dependencies": {
-          "FluentMigrator.Runner.Core": "3.2.1"
-        },
-        "runtime": {
-          "lib/netstandard2.0/FluentMigrator.Runner.Postgres.dll": {
-            "assemblyVersion": "3.2.1.0",
-            "fileVersion": "3.2.1.0"
-          }
-        },
-        "compile": {
-          "lib/netstandard2.0/FluentMigrator.Runner.Postgres.dll": {}
-        }
-      },
-      "FluentMigrator.Runner.Redshift/3.2.1": {
-        "dependencies": {
-          "FluentMigrator.Runner.Core": "3.2.1"
-        },
-        "runtime": {
-          "lib/netstandard2.0/FluentMigrator.Runner.Redshift.dll": {
-            "assemblyVersion": "3.2.1.0",
-            "fileVersion": "3.2.1.0"
-          }
-        },
-        "compile": {
-          "lib/netstandard2.0/FluentMigrator.Runner.Redshift.dll": {}
-        }
-      },
-      "FluentMigrator.Runner.SqlAnywhere/3.2.1": {
-        "dependencies": {
-          "FluentMigrator.Extensions.SqlAnywhere": "3.2.1",
-          "FluentMigrator.Runner.Core": "3.2.1"
-        },
-        "runtime": {
-          "lib/netstandard2.0/FluentMigrator.Runner.SqlAnywhere.dll": {
-            "assemblyVersion": "3.2.1.0",
-            "fileVersion": "3.2.1.0"
-          }
-        },
-        "compile": {
-          "lib/netstandard2.0/FluentMigrator.Runner.SqlAnywhere.dll": {}
-        }
-      },
-      "FluentMigrator.Runner.SQLite/3.2.1": {
-        "dependencies": {
-          "FluentMigrator.Runner.Core": "3.2.1"
-        },
-        "runtime": {
-          "lib/netstandard2.0/FluentMigrator.Runner.SQLite.dll": {
-            "assemblyVersion": "3.2.1.0",
-            "fileVersion": "3.2.1.0"
-          }
-        },
-        "compile": {
-          "lib/netstandard2.0/FluentMigrator.Runner.SQLite.dll": {}
-        }
-      },
-      "FluentMigrator.Runner.SqlServer/3.2.1": {
-        "dependencies": {
-          "FluentMigrator.Extensions.SqlServer": "3.2.1",
-          "FluentMigrator.Runner.Core": "3.2.1",
-          "System.Data.SqlClient": "4.6.0"
-        },
-        "runtime": {
-          "lib/netstandard2.0/FluentMigrator.Runner.SqlServer.dll": {
-            "assemblyVersion": "3.2.1.0",
-            "fileVersion": "3.2.1.0"
-          }
-        },
-        "compile": {
-          "lib/netstandard2.0/FluentMigrator.Runner.SqlServer.dll": {}
-        }
-      },
-      "FluentMigrator.Runner.SqlServerCe/3.2.1": {
-        "dependencies": {
-          "FluentMigrator.Runner.SqlServer": "3.2.1",
-          "System.Security.Permissions": "4.5.0"
-        },
-        "runtime": {
-          "lib/netstandard2.0/FluentMigrator.Runner.SqlServerCe.dll": {
-            "assemblyVersion": "3.2.1.0",
-            "fileVersion": "3.2.1.0"
-          },
-          "lib/netstandard2.0/System.Data.SqlServerCe.dll": {
-            "assemblyVersion": "4.0.0.0",
-            "fileVersion": "4.0.8876.1"
-          }
-        },
-        "compile": {
-          "lib/netstandard2.0/FluentMigrator.Runner.SqlServerCe.dll": {},
-          "lib/netstandard2.0/System.Data.SqlServerCe.dll": {}
         }
       },
       "FluentNHibernate/2.1.2": {
@@ -381,6 +81,23 @@
         },
         "compile": {
           "lib/netstandard1.3/Iesi.Collections.dll": {}
+        }
+      },
+      "JWT/5.2.2": {
+        "dependencies": {
+          "Newtonsoft.Json": "11.0.2",
+          "System.ComponentModel.Primitives": "4.3.0",
+          "System.Reflection.TypeExtensions": "4.5.1",
+          "System.Security.Cryptography.Csp": "4.3.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/JWT.dll": {
+            "assemblyVersion": "5.0.0.0",
+            "fileVersion": "5.0.0.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/JWT.dll": {}
         }
       },
       "NHibernate/5.2.5": {
@@ -438,6 +155,18 @@
           "lib/netstandard1.0/Remotion.Linq.EagerFetching.dll": {}
         }
       },
+      "System.ComponentModel/4.3.0": {
+        "dependencies": {
+          "System.Runtime": "4.3.1"
+        }
+      },
+      "System.ComponentModel.Primitives/4.3.0": {
+        "dependencies": {
+          "System.ComponentModel": "4.3.0",
+          "System.Resources.ResourceManager": "4.3.0",
+          "System.Runtime": "4.3.1"
+        }
+      },
       "System.Configuration.ConfigurationManager/4.4.1": {
         "dependencies": {
           "System.Security.Cryptography.ProtectedData": "4.4.0"
@@ -453,6 +182,7 @@
         }
       },
       "System.Memory/4.5.3": {},
+      "System.Reflection.TypeExtensions/4.5.1": {},
       "System.Runtime/4.3.1": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "2.2.0",
@@ -1823,7 +1553,7 @@
           "System.Collections": "4.3.0",
           "System.IO": "4.3.0",
           "System.IO.FileSystem": "4.3.0",
-          "System.Reflection.TypeExtensions": "4.3.0",
+          "System.Reflection.TypeExtensions": "4.5.1",
           "System.Runtime.Extensions": "4.3.0",
           "System.Runtime.InteropServices": "4.3.0",
           "System.Runtime.InteropServices.RuntimeInformation": "4.3.0"
@@ -2922,7 +2652,7 @@
           "System.Reflection.Emit": "4.3.0",
           "System.Reflection.Emit.ILGeneration": "4.3.0",
           "System.Reflection.Primitives": "4.3.0",
-          "System.Reflection.TypeExtensions": "4.3.0",
+          "System.Reflection.TypeExtensions": "4.5.1",
           "System.Resources.ResourceManager": "4.3.0",
           "System.Runtime": "4.3.1",
           "System.Runtime.Extensions": "4.3.0",
@@ -3054,7 +2784,7 @@
           "System.Reflection.Emit.Lightweight": "4.3.0",
           "System.Reflection.Extensions": "4.3.0",
           "System.Reflection.Primitives": "4.3.0",
-          "System.Reflection.TypeExtensions": "4.3.0",
+          "System.Reflection.TypeExtensions": "4.5.1",
           "System.Resources.ResourceManager": "4.3.0",
           "System.Runtime": "4.3.1",
           "System.Runtime.Extensions": "4.3.0",
@@ -3147,7 +2877,7 @@
           "System.Reflection.Emit.Lightweight": "4.3.0",
           "System.Reflection.Extensions": "4.3.0",
           "System.Reflection.Primitives": "4.3.0",
-          "System.Reflection.TypeExtensions": "4.3.0",
+          "System.Reflection.TypeExtensions": "4.5.1",
           "System.Resources.ResourceManager": "4.3.0",
           "System.Runtime": "4.3.1",
           "System.Runtime.Extensions": "4.3.0",
@@ -3217,13 +2947,6 @@
         "dependencies": {
           "Microsoft.NETCore.Platforms": "2.2.0",
           "Microsoft.NETCore.Targets": "2.0.0",
-          "System.Runtime": "4.3.1"
-        },
-        "compileOnly": true
-      },
-      "System.Reflection.TypeExtensions/4.3.0": {
-        "dependencies": {
-          "System.Reflection": "4.3.0",
           "System.Runtime": "4.3.1"
         },
         "compileOnly": true
@@ -3625,7 +3348,7 @@
           "System.Reflection.Emit.ILGeneration": "4.3.0",
           "System.Reflection.Extensions": "4.3.0",
           "System.Reflection.Primitives": "4.3.0",
-          "System.Reflection.TypeExtensions": "4.3.0",
+          "System.Reflection.TypeExtensions": "4.5.1",
           "System.Resources.ResourceManager": "4.3.0",
           "System.Runtime": "4.3.1",
           "System.Runtime.Extensions": "4.3.0",
@@ -3679,146 +3402,6 @@
       "path": "antlr3.runtime/3.5.1",
       "hashPath": "antlr3.runtime.3.5.1.nupkg.sha512"
     },
-    "FluentMigrator/3.2.1": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-3XiMExA1cLDW5yXY7C7cgUQr7I6h/EfSkSRelo0kBf6551KGPVVtYDZuPWj/SrttYEmQoQYD4MORp3fiz1pSCg==",
-      "path": "fluentmigrator/3.2.1",
-      "hashPath": "fluentmigrator.3.2.1.nupkg.sha512"
-    },
-    "FluentMigrator.Abstractions/3.2.1": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-gmnesihuz9bFiODRtQw9Msf6jrgbElWB4MEBOR5LNGB+gKBSXYF34i/aIUQexmJhcnVE5VkRHMECMpqNM0PSng==",
-      "path": "fluentmigrator.abstractions/3.2.1",
-      "hashPath": "fluentmigrator.abstractions.3.2.1.nupkg.sha512"
-    },
-    "FluentMigrator.Console/3.2.1": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-Jwtjwb5eZXp0AXah7ivd3zjA5kG+0LNBVJatO3IXe8NfM3A0L/TiBacJnlayl0XaYwxiMAwnzjfFMBrbGwINHQ==",
-      "path": "fluentmigrator.console/3.2.1",
-      "hashPath": "fluentmigrator.console.3.2.1.nupkg.sha512"
-    },
-    "FluentMigrator.Extensions.Oracle/3.2.1": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-coNrtHWToflHHnBcrsaJK8t7hrv6DQb4eRR7Gg2CxWrPf+0Zyjr7FAVR1AMKf0YvbrJDXq1Q12vpVjuy24aILg==",
-      "path": "fluentmigrator.extensions.oracle/3.2.1",
-      "hashPath": "fluentmigrator.extensions.oracle.3.2.1.nupkg.sha512"
-    },
-    "FluentMigrator.Extensions.SqlAnywhere/3.2.1": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-MZhP22sRjrISf9cET05Xl7n71hljurihsmCGu3U4hdIlcClkpk33k5ghx4YCant1FoEcrX79f6+kHGi4+W4Drw==",
-      "path": "fluentmigrator.extensions.sqlanywhere/3.2.1",
-      "hashPath": "fluentmigrator.extensions.sqlanywhere.3.2.1.nupkg.sha512"
-    },
-    "FluentMigrator.Extensions.SqlServer/3.2.1": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-RRztfTxOq6JxOH//687XpL5J7EtSU0qGm1AUQsn5Hl/lv0N9Xk+F4L1OWreHHahF6V0QroGB4gjjZuUkvYs2uw==",
-      "path": "fluentmigrator.extensions.sqlserver/3.2.1",
-      "hashPath": "fluentmigrator.extensions.sqlserver.3.2.1.nupkg.sha512"
-    },
-    "FluentMigrator.Generator/1.0.5": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-sYoz+kvdfWAhFzmlJa4AQkpzi2oWYF7MthCeZoagFtHenj4q25EZbmkgFHC2zg44Dgpjui3DJ5jzg9pdkDB08w==",
-      "path": "fluentmigrator.generator/1.0.5",
-      "hashPath": "fluentmigrator.generator.1.0.5.nupkg.sha512"
-    },
-    "FluentMigrator.Runner/3.2.1": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-chjQPiVujJodDCIdMTRPYRunGL2eof1miIMj5FSIwdNYijGjZ2K9fmPIb1eI6QNUc7Zojtx5IgbpF3aOFHJOgA==",
-      "path": "fluentmigrator.runner/3.2.1",
-      "hashPath": "fluentmigrator.runner.3.2.1.nupkg.sha512"
-    },
-    "FluentMigrator.Runner.Core/3.2.1": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-XnmttdMQBGP5ET/rCkyE2coP0VBPs3s4Ia0/vEVkYiUYx7IqXVEVL+aEH4IJA7vmktxoCGnWmumQuoI/yv6V/w==",
-      "path": "fluentmigrator.runner.core/3.2.1",
-      "hashPath": "fluentmigrator.runner.core.3.2.1.nupkg.sha512"
-    },
-    "FluentMigrator.Runner.Db2/3.2.1": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-Hw3qHJF2Hd5MfFCP/fMfIHpILf89bH8FjMNSFAdI+yASq3/o5cebT7YVvGOdSnuhsedwR7X6+ppiHALdBzixHA==",
-      "path": "fluentmigrator.runner.db2/3.2.1",
-      "hashPath": "fluentmigrator.runner.db2.3.2.1.nupkg.sha512"
-    },
-    "FluentMigrator.Runner.Firebird/3.2.1": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-uSse5o0rsyHsSmEM5QsilvPVynSWLGOTf7lJS7RFwYYap0Y93Xn1ixQIo27OuQWVq9uA3SEwackRFeB/5XSegQ==",
-      "path": "fluentmigrator.runner.firebird/3.2.1",
-      "hashPath": "fluentmigrator.runner.firebird.3.2.1.nupkg.sha512"
-    },
-    "FluentMigrator.Runner.Hana/3.2.1": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-SPyeYgwbARNhsLTVIY2f0n1BD6JExwTX0h/dygWBuyQ4pL85MFs94Ja98Mz1n6b2XoqPWSwwZJuNlVOhqByjuA==",
-      "path": "fluentmigrator.runner.hana/3.2.1",
-      "hashPath": "fluentmigrator.runner.hana.3.2.1.nupkg.sha512"
-    },
-    "FluentMigrator.Runner.MySql/3.2.1": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-6bvVLHe2xdaDn59v9EKzUtAeBTRDH9qPqEMU4+WsHlvc2PGejW4x6Ci2FCurtlgqc+4cXn7ZqXMtaRyMzMpPfg==",
-      "path": "fluentmigrator.runner.mysql/3.2.1",
-      "hashPath": "fluentmigrator.runner.mysql.3.2.1.nupkg.sha512"
-    },
-    "FluentMigrator.Runner.Oracle/3.2.1": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-CQKIN8/3YzZbzbFxiAG1EQJ8Smk7mMPwJzi2XPzor+Ex+ghxuruq0o9N8Vij/7uphKdgAbYWQJveZtAjMH2aBQ==",
-      "path": "fluentmigrator.runner.oracle/3.2.1",
-      "hashPath": "fluentmigrator.runner.oracle.3.2.1.nupkg.sha512"
-    },
-    "FluentMigrator.Runner.Postgres/3.2.1": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-dI3s/pWKI65DtdHQlt++Ccg+nXqGihUVceWibiUjNPQ1mpxzTsgmO2GvLQ3Q5qj8Kyx7RoBk7SYzZCC6cf4X5A==",
-      "path": "fluentmigrator.runner.postgres/3.2.1",
-      "hashPath": "fluentmigrator.runner.postgres.3.2.1.nupkg.sha512"
-    },
-    "FluentMigrator.Runner.Redshift/3.2.1": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-1Bmfa9S3sTEV9hXjOhcin8h+H0QvvXx5y+aw1PZRxz9t+FUL4b3sP8L3gokT54mGxea+sN13d8wmFoHU4NejbA==",
-      "path": "fluentmigrator.runner.redshift/3.2.1",
-      "hashPath": "fluentmigrator.runner.redshift.3.2.1.nupkg.sha512"
-    },
-    "FluentMigrator.Runner.SqlAnywhere/3.2.1": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-C7qH8evk6aS1EfiYUK+SkKtj1Lkt/ZGhMI1Ht/Is+fidD5ySdOd2gUec6R93qzzyasdRzOwwnw7FjyMR6SJogg==",
-      "path": "fluentmigrator.runner.sqlanywhere/3.2.1",
-      "hashPath": "fluentmigrator.runner.sqlanywhere.3.2.1.nupkg.sha512"
-    },
-    "FluentMigrator.Runner.SQLite/3.2.1": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-SMjKVOTMO3225rF18X8+TVRfOhChGQqGY+E2Hd6TaGGw8wbQrSWzgU07wV4XGvW6JPPhbgKTz/Phz6+SUxGt3Q==",
-      "path": "fluentmigrator.runner.sqlite/3.2.1",
-      "hashPath": "fluentmigrator.runner.sqlite.3.2.1.nupkg.sha512"
-    },
-    "FluentMigrator.Runner.SqlServer/3.2.1": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-XcKiR+sT+8Xq6PVelM6GG8t8P0QgnX4XuAhnRhyPn/QHob6X5wENmC5q/TnqI3jGSPhv39BGy+Is1MNGADWLBw==",
-      "path": "fluentmigrator.runner.sqlserver/3.2.1",
-      "hashPath": "fluentmigrator.runner.sqlserver.3.2.1.nupkg.sha512"
-    },
-    "FluentMigrator.Runner.SqlServerCe/3.2.1": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-b5PXsIwocRW2oGXXqm8xkQx4gkqA33BMIGlq9pqNlbiKGTycXxDSepmqO8uQFo+RMa4HcxKLzGlixSVgNGwF8w==",
-      "path": "fluentmigrator.runner.sqlserverce/3.2.1",
-      "hashPath": "fluentmigrator.runner.sqlserverce.3.2.1.nupkg.sha512"
-    },
     "FluentNHibernate/2.1.2": {
       "type": "package",
       "serviceable": true,
@@ -3832,6 +3415,13 @@
       "sha512": "sha512-WFdKVtiaOflBNNC2GCzjSjliwKWvENROVzJEOaLsTCdlKK6Z6u/6oGcJs/ssYN7/27ebuTeeElvc/hL54kv7Cg==",
       "path": "iesi.collections/4.0.4",
       "hashPath": "iesi.collections.4.0.4.nupkg.sha512"
+    },
+    "JWT/5.2.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-tNrUdYqBCji7WLeY9H9Qb5WwOs4o9z5WXh7QU11Z7JaMw/43seVUGY5/0oh0+zwN22sKiblHiJ0j+2nP1z+toA==",
+      "path": "jwt/5.2.2",
+      "hashPath": "jwt.5.2.2.nupkg.sha512"
     },
     "NHibernate/5.2.5": {
       "type": "package",
@@ -3854,6 +3444,20 @@
       "path": "remotion.linq.eagerfetching/2.2.0",
       "hashPath": "remotion.linq.eagerfetching.2.2.0.nupkg.sha512"
     },
+    "System.ComponentModel/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-VyGn1jGRZVfxnh8EdvDCi71v3bMXrsu8aYJOwoV7SNDLVhiEqwP86pPMyRGsDsxhXAm2b3o9OIqeETfN5qfezw==",
+      "path": "system.componentmodel/4.3.0",
+      "hashPath": "system.componentmodel.4.3.0.nupkg.sha512"
+    },
+    "System.ComponentModel.Primitives/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-j8GUkCpM8V4d4vhLIIoBLGey2Z5bCkMVNjEZseyAlm4n5arcsJOeI3zkUP+zvZgzsbLTYh4lYeP/ZD/gdIAPrw==",
+      "path": "system.componentmodel.primitives/4.3.0",
+      "hashPath": "system.componentmodel.primitives.4.3.0.nupkg.sha512"
+    },
     "System.Configuration.ConfigurationManager/4.4.1": {
       "type": "package",
       "serviceable": true,
@@ -3867,6 +3471,13 @@
       "sha512": "sha512-cPzhWlLMdqrLrgXI6J4uOY0dMpA/Y/ZAp91KPldH8seoh9S/0i8qLkAnSQbPkWSN/RaXNPt8dOubT3JhQITh2w==",
       "path": "system.memory/4.5.3",
       "hashPath": "system.memory.4.5.3.nupkg.sha512"
+    },
+    "System.Reflection.TypeExtensions/4.5.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-oRC4IBj4y7gcY9UXxTcIvBLhRJuntL6CfPWazTmtY4dXoXpRS6pI2Y+tu07+p2bUn5abyd5wf5LvpnyrDZdTsQ==",
+      "path": "system.reflection.typeextensions/4.5.1",
+      "hashPath": "system.reflection.typeextensions.4.5.1.nupkg.sha512"
     },
     "System.Runtime/4.3.1": {
       "type": "package",
@@ -5582,13 +5193,6 @@
       "sha512": "sha512-5RXItQz5As4xN2/YUDxdpsEkMhvw3e6aNveFXUn4Hl/udNTCNhnKp8lT9fnc3MhvGKh1baak5CovpuQUXHAlIA==",
       "path": "system.reflection.primitives/4.3.0",
       "hashPath": "system.reflection.primitives.4.3.0.nupkg.sha512"
-    },
-    "System.Reflection.TypeExtensions/4.3.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-7u6ulLcZbyxB5Gq0nMkQttcdBTx57ibzw+4IOXEfR+sXYQoHvjW5LTLyNr8O22UIMrqYbchJQJnos4eooYzYJA==",
-      "path": "system.reflection.typeextensions/4.3.0",
-      "hashPath": "system.reflection.typeextensions.4.3.0.nupkg.sha512"
     },
     "System.Resources.ResourceManager/4.3.0": {
       "type": "package",

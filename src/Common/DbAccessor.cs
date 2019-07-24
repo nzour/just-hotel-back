@@ -1,12 +1,12 @@
 using System;
 
-namespace app.Infrastructure.NHibernate
+namespace app.Common
 {
     /// <summary>
     /// Класс, знающий о данных для подключения к БД.
     /// Данные задаются в файле environment.json (по умолчанию)
     /// </summary>
-    public static class DbAccessor
+    public struct DbAccessor
     {
         // Хост базы данных
         public static string Host { get; } = Environment.GetEnvironmentVariable("DB_HOST");

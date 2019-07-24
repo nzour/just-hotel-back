@@ -6,13 +6,15 @@ namespace app.Domain.Entity.User
         public virtual string Login { get; protected internal set; }
         public virtual string Password { get; protected internal set; }
 
-        // Nhibernate требует наличие безаргументного констурктора.
-        public User()
+        // Nhibernate требует наличие безаргументного конструктора.
+        protected User()
         {
         }
-        
+
         public User(string name, string login, string password)
         {
+            Identify();
+
             Name = name;
             Login = login;
             Password = password;

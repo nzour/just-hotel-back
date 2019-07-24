@@ -1,10 +1,12 @@
 using System;
 using System.Linq;
+using app.Common;
 using app.DependencyInjection;
 using app.Domain.Entity;
 using FluentNHibernate.Cfg;
 using FluentNHibernate.Cfg.Db;
 using NHibernate;
+using NHibernate.Tool.hbm2ddl;
 
 namespace app.Infrastructure.NHibernate
 {
@@ -20,25 +22,35 @@ namespace app.Infrastructure.NHibernate
                 {
                     if (_sessionFactory == null)
                     {
-                        var fluentConfiguration = Fluently
-                            .Configure()
-                            .Database(PostgreSQLConfiguration
-                                .PostgreSQL82
-                                //Понятия не имею что это и для чего. Но без этого не работает ¯\_(ツ)_/¯
-                                .Raw("hbm2ddl.keywords", "none")
-                                .ConnectionString(DbAccessor.ConnectionString));
-
-                        RegisterEntitiesRecursively(fluentConfiguration, typeof(AbstractEntity));
-
-                        _sessionFactory = fluentConfiguration
-//                            .ExposeConfiguration(cfg => new SchemaUpdate(cfg)
-//                                .Execute(false, true))
-                            .BuildSessionFactory();
+                        CompileSessionFactory();
                     }
                 }
 
                 return _sessionFactory;
             }
+        }
+
+        public static void Boot()
+        {
+            CompileSessionFactory();
+        }
+
+        private static void CompileSessionFactory()
+        {
+            var fluentConfiguration = Fluently
+                .Configure()
+                .Database(PostgreSQLConfiguration
+                    .PostgreSQL82
+                    //Понятия не имею что это и для чего. Но без этого не работает ¯\_(ツ)_/¯
+                    .Raw("hbm2ddl.keywords", "none")
+                    .ConnectionString(DbAccessor.ConnectionString));
+
+            RegisterEntitiesRecursively(fluentConfiguration, typeof(AbstractEntity));
+
+            _sessionFactory = fluentConfiguration
+                .ExposeConfiguration(cfg => new SchemaUpdate(cfg)
+                    .Execute(false, true))
+                .BuildSessionFactory();
         }
 
         public static ISession OpenSession()

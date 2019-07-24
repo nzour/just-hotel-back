@@ -1,4 +1,3 @@
-using app.Infrastructure.NHibernate;
 using Microsoft.AspNetCore.Mvc;
 
 namespace app.Application.Http.Token
@@ -10,8 +9,7 @@ namespace app.Application.Http.Token
         [Route("index")]
         public JsonResult Index()
         {
-            var foo = new Foo();
-            return Json(DbAccessor.ConnectionString);
+            return Json("OK");
         }
     }
 }

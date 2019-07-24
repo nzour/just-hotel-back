@@ -29,33 +29,13 @@
   "frameworks": {
     "netcoreapp2.2": {
       "dependencies": {
-        "FluentMigrator": {
-          "target": "Package",
-          "version": "[3.2.1, )"
-        },
-        "FluentMigrator.Console": {
-          "target": "Package",
-          "version": "[3.2.1, )"
-        },
-        "FluentMigrator.Generator": {
-          "target": "Package",
-          "version": "[1.0.5, )"
-        },
-        "FluentMigrator.Runner": {
-          "target": "Package",
-          "version": "[3.2.1, )"
-        },
-        "FluentMigrator.Runner.Core": {
-          "target": "Package",
-          "version": "[3.2.1, )"
-        },
-        "FluentMigrator.Runner.Postgres": {
-          "target": "Package",
-          "version": "[3.2.1, )"
-        },
         "FluentNHibernate": {
           "target": "Package",
           "version": "[2.1.2, )"
+        },
+        "JWT": {
+          "target": "Package",
+          "version": "[5.2.2, )"
         },
         "Microsoft.AspNetCore.App": {
           "suppressParent": "All",

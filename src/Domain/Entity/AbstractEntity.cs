@@ -4,21 +4,11 @@ namespace app.Domain.Entity
 {
     public abstract class AbstractEntity
     {
-        public  virtual Guid Id { get; set; }
+        public virtual Guid Id { get; private set; }
 
-        protected AbstractEntity()
+        protected void Identify()
         {
             Id = Guid.NewGuid();
-        }
-
-        public virtual Guid GetId()
-        {
-            return Id;
-        }
-
-        public virtual string GetIdAsString()
-        {
-            return Id.ToString();
         }
     }
 }

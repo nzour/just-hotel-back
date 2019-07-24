@@ -10,7 +10,7 @@ namespace app.Application.CQS.User.Output
 
         public UserOutput(Domain.Entity.User.User user)
         {
-            Id = user.GetId();
+            Id = user.Id;
             Name = user.Name;
             Login = user.Login;
         }
