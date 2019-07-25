@@ -17,7 +17,6 @@
 /home/zaur/coding/zobor/backend/src/bin/Debug/netcoreapp2.2/app.runtimeconfig.dev.json
 /home/zaur/coding/zobor/backend/src/bin/Debug/netcoreapp2.2/app.dll
 /home/zaur/coding/zobor/backend/src/bin/Debug/netcoreapp2.2/app.pdb
-/home/zaur/coding/zobor/backend/src/obj/Debug/netcoreapp2.2/app.csprojAssemblyReference.cache
 /home/zaur/coding/zobor/backend/src/obj/Debug/netcoreapp2.2/app.csproj.CoreCompileInputs.cache
 /home/zaur/coding/zobor/backend/src/obj/Debug/netcoreapp2.2/app.RazorAssemblyInfo.cache
 /home/zaur/coding/zobor/backend/src/obj/Debug/netcoreapp2.2/app.RazorAssemblyInfo.cs
@@ -26,3 +25,7 @@
 /home/zaur/coding/zobor/backend/src/obj/Debug/netcoreapp2.2/app.RazorTargetAssemblyInfo.cache
 /home/zaur/coding/zobor/backend/src/obj/Debug/netcoreapp2.2/app.dll
 /home/zaur/coding/zobor/backend/src/obj/Debug/netcoreapp2.2/app.pdb
+/home/zaur/coding/zobor/backend/src/bin/Debug/netcoreapp2.2/NUnit3.TestAdapter.dll
+/home/zaur/coding/zobor/backend/src/bin/Debug/netcoreapp2.2/NUnit3.TestAdapter.pdb
+/home/zaur/coding/zobor/backend/src/bin/Debug/netcoreapp2.2/nunit.engine.netstandard.dll
+/home/zaur/coding/zobor/backend/src/obj/Debug/netcoreapp2.2/app.csprojAssemblyReference.cache

@@ -2,32 +2,144 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8919c16b-b5ba-4d5d-8933-195ff1d0b6f7" name="Default Changelist" comment="Вынес переменные для подключения к БД в environment.json. Сделал подгрузку этих переменных на старте приложения. Попытка установить dotnet-fm и накатывать миграции (пока неудачно)">
-      <change afterPath="$PROJECT_DIR$/src/Common/EncodeHandler.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Domain/Mapping/TokenMap.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Migration/InitMigration.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Test/FirstTest.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/NUnit3.TestAdapter.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/NUnit3.TestAdapter.pdb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/nunit.engine.netstandard.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/nunit_random_seed.tmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/CodeCoverage/CodeCoverage.config" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/CodeCoverage/CodeCoverage.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/CodeCoverage/amd64/covrun64.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/CodeCoverage/amd64/msdia140.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/CodeCoverage/codecoveragemessages.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/CodeCoverage/covrun32.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/CodeCoverage/msdia140.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/FluentMigrator.NHibernate.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/FluentMigrator.NHibernateGenerator.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/JWT.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/Microsoft.CodeCoverage.props" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/Microsoft.CodeCoverage.targets" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/Microsoft.DotNet.InternalAbstractions.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/Microsoft.TestPlatform.CommunicationUtilities.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/Microsoft.TestPlatform.CoreUtilities.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/Microsoft.TestPlatform.CrossPlatEngine.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/Microsoft.TestPlatform.PlatformAbstractions.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/Microsoft.TestPlatform.Utilities.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/Microsoft.VisualStudio.CodeCoverage.Shim.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/Microsoft.VisualStudio.TestPlatform.Common.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/Microsoft.VisualStudio.TestPlatform.ObjectModel.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/Microsoft.VisualStudio.TraceDataCollector.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/NUnit3.TestAdapter.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/NUnit3.TestAdapter.pdb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/System.Xml.XPath.XmlDocument.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/cs/Microsoft.TestPlatform.CommunicationUtilities.resources.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/cs/Microsoft.TestPlatform.CoreUtilities.resources.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/cs/Microsoft.TestPlatform.CrossPlatEngine.resources.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/cs/Microsoft.VisualStudio.TestPlatform.Common.resources.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/cs/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/cs/Microsoft.VisualStudio.TraceDataCollector.resources.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/de/Microsoft.TestPlatform.CommunicationUtilities.resources.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/de/Microsoft.TestPlatform.CoreUtilities.resources.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/de/Microsoft.TestPlatform.CrossPlatEngine.resources.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/de/Microsoft.VisualStudio.TestPlatform.Common.resources.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/de/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/de/Microsoft.VisualStudio.TraceDataCollector.resources.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/es/Microsoft.TestPlatform.CommunicationUtilities.resources.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/es/Microsoft.TestPlatform.CoreUtilities.resources.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/es/Microsoft.TestPlatform.CrossPlatEngine.resources.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/es/Microsoft.VisualStudio.TestPlatform.Common.resources.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/es/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/es/Microsoft.VisualStudio.TraceDataCollector.resources.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/fr/Microsoft.TestPlatform.CommunicationUtilities.resources.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/fr/Microsoft.TestPlatform.CoreUtilities.resources.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/fr/Microsoft.TestPlatform.CrossPlatEngine.resources.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/fr/Microsoft.VisualStudio.TestPlatform.Common.resources.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/fr/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/fr/Microsoft.VisualStudio.TraceDataCollector.resources.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/it/Microsoft.TestPlatform.CommunicationUtilities.resources.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/it/Microsoft.TestPlatform.CoreUtilities.resources.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/it/Microsoft.TestPlatform.CrossPlatEngine.resources.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/it/Microsoft.VisualStudio.TestPlatform.Common.resources.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/it/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/it/Microsoft.VisualStudio.TraceDataCollector.resources.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/ja/Microsoft.TestPlatform.CommunicationUtilities.resources.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/ja/Microsoft.TestPlatform.CoreUtilities.resources.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/ja/Microsoft.TestPlatform.CrossPlatEngine.resources.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/ja/Microsoft.VisualStudio.TestPlatform.Common.resources.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/ja/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/ja/Microsoft.VisualStudio.TraceDataCollector.resources.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/ko/Microsoft.TestPlatform.CommunicationUtilities.resources.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/ko/Microsoft.TestPlatform.CoreUtilities.resources.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/ko/Microsoft.TestPlatform.CrossPlatEngine.resources.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/ko/Microsoft.VisualStudio.TestPlatform.Common.resources.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/ko/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/ko/Microsoft.VisualStudio.TraceDataCollector.resources.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/nunit.engine.netstandard.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/nunit.framework.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/pl/Microsoft.TestPlatform.CommunicationUtilities.resources.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/pl/Microsoft.TestPlatform.CoreUtilities.resources.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/pl/Microsoft.TestPlatform.CrossPlatEngine.resources.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/pl/Microsoft.VisualStudio.TestPlatform.Common.resources.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/pl/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/pl/Microsoft.VisualStudio.TraceDataCollector.resources.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/pt-BR/Microsoft.TestPlatform.CommunicationUtilities.resources.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/pt-BR/Microsoft.TestPlatform.CoreUtilities.resources.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/pt-BR/Microsoft.TestPlatform.CrossPlatEngine.resources.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/pt-BR/Microsoft.VisualStudio.TestPlatform.Common.resources.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/pt-BR/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/pt-BR/Microsoft.VisualStudio.TraceDataCollector.resources.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/ru/Microsoft.TestPlatform.CommunicationUtilities.resources.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/ru/Microsoft.TestPlatform.CoreUtilities.resources.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/ru/Microsoft.TestPlatform.CrossPlatEngine.resources.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/ru/Microsoft.VisualStudio.TestPlatform.Common.resources.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/ru/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/ru/Microsoft.VisualStudio.TraceDataCollector.resources.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/testhost.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/tr/Microsoft.TestPlatform.CommunicationUtilities.resources.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/tr/Microsoft.TestPlatform.CoreUtilities.resources.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/tr/Microsoft.TestPlatform.CrossPlatEngine.resources.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/tr/Microsoft.VisualStudio.TestPlatform.Common.resources.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/tr/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/tr/Microsoft.VisualStudio.TraceDataCollector.resources.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/zh-Hans/Microsoft.TestPlatform.CommunicationUtilities.resources.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/zh-Hans/Microsoft.TestPlatform.CoreUtilities.resources.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/zh-Hans/Microsoft.TestPlatform.CrossPlatEngine.resources.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/zh-Hans/Microsoft.VisualStudio.TestPlatform.Common.resources.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/zh-Hans/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/zh-Hans/Microsoft.VisualStudio.TraceDataCollector.resources.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/zh-Hant/Microsoft.TestPlatform.CommunicationUtilities.resources.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/zh-Hant/Microsoft.TestPlatform.CoreUtilities.resources.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/zh-Hant/Microsoft.TestPlatform.CrossPlatEngine.resources.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/zh-Hant/Microsoft.VisualStudio.TestPlatform.Common.resources.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/zh-Hant/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/zh-Hant/Microsoft.VisualStudio.TraceDataCollector.resources.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/obj/app.csproj.EntityFrameworkCore.targets" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.backend.dir/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.backend.dir/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.backend.dir/.idea/dataSources/1b1d95f7-d3f5-4540-b7d9-c63e87ed3c2b.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.backend.dir/.idea/dataSources/1b1d95f7-d3f5-4540-b7d9-c63e87ed3c2b.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.backend.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.backend.dir/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker/core/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/docker/core/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Application/CQS/User/Output/UserOutput.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Application/CQS/User/Output/UserOutput.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Application/Http/Token/Foo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Application/Http/Token/Foo.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Application/Http/Token/TokenController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Application/Http/Token/TokenController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.backend.dir/riderModule.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.backend.dir/riderModule.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Application/Http/Token/Foo.cs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/DependencyInjection/Kernel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/DependencyInjection/Kernel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Domain/Entity/AbstractEntity.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/Entity/AbstractEntity.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Domain/Entity/Token/Token.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/Entity/Token/Token.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Domain/Entity/User/User.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/Entity/User/User.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Infrastructure/NHibernate/DbAccessor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Common/DbAccessor.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Infrastructure/NHibernate/NHibernateHelper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Infrastructure/NHibernate/NHibernateHelper.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/app.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/app.deps.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/app.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/app.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/app.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/app.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/environment.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/environment.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/app.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/app.deps.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/app.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/app.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/app.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/app.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/environment.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/environment.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/obj/Debug/netcoreapp2.2/app.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/src/obj/Debug/netcoreapp2.2/app.assets.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/obj/Debug/netcoreapp2.2/app.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/src/obj/Debug/netcoreapp2.2/app.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/obj/Debug/netcoreapp2.2/app.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/obj/Debug/netcoreapp2.2/app.csproj.FileListAbsolute.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/obj/Debug/netcoreapp2.2/app.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/src/obj/Debug/netcoreapp2.2/app.csprojAssemblyReference.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/obj/Debug/netcoreapp2.2/app.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/obj/Debug/netcoreapp2.2/app.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/obj/Debug/netcoreapp2.2/app.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/src/obj/Debug/netcoreapp2.2/app.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/obj/app.csproj.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/src/obj/app.csproj.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/obj/app.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/obj/app.csproj.nuget.dgspec.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/obj/app.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/src/obj/app.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/obj/app.csproj.nuget.g.targets" beforeDir="false" afterPath="$PROJECT_DIR$/src/obj/app.csproj.nuget.g.targets" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/obj/project.assets.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/obj/project.packagespec.json" afterDir="false" />
     </list>
@@ -54,154 +166,91 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/DependencyInjection/Kernel.cs">
           <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="280">
+              <caret line="14" column="10" lean-forward="true" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="10" />
+              <folding>
+                <marker date="1564089815862" expanded="true" signature="6:285" ph="..." />
+                <marker date="1564089815862" expanded="true" signature="320:3051" ph="{...}" />
+                <marker date="1564089815862" expanded="true" signature="327:486" ph="///  Core класс приложения, через него описываются все зависимости, которые необходимо выставить перед стартом пр ... " />
+                <marker date="1564089815862" expanded="true" signature="534:3049" ph="{...}" />
+                <marker date="1564089815862" expanded="true" signature="549:639" ph="/// По дефолту, файл с переменными окружения. ... " />
+                <marker date="1564089815862" expanded="true" signature="760:927" ph="{...}" />
+                <marker date="1564089815862" expanded="true" signature="937:1058" ph="/// Запустит все AbstractServiceRecorder'ы, которые регистрируют сервисы DI. ... " />
+                <marker date="1564089815862" expanded="true" signature="1130:1569" ph="{...}" />
+                <marker date="1564089815862" expanded="true" signature="1365:1559" ph="{...}" />
+                <marker date="1564089815862" expanded="true" signature="1579:1706" ph="/// Регистрирует все перменные окружения из файла environment.json (по-умолчанию). ... " />
+                <marker date="1564089815862" expanded="true" signature="1756:2125" ph="{...}" />
+                <marker date="1564089815862" expanded="true" signature="1838:2115" ph="{...}" />
+                <marker date="1564089815862" expanded="true" signature="1997:2101" ph="{...}" />
+                <marker date="1564089815862" expanded="true" signature="2202:2572" ph="{...}" />
+                <marker date="1564089815862" expanded="true" signature="2644:3043" ph="{...}" />
+                <marker date="1564089815862" expanded="true" signature="2861:3033" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Test/FirstTest.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="280">
+              <caret line="14" column="1" lean-forward="true" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
+              <folding>
+                <marker date="1564087967753" expanded="true" signature="42:245" ph="{...}" />
+                <marker date="1564087967753" expanded="true" signature="89:243" ph="{...}" />
+                <marker date="1564087967753" expanded="true" signature="138:237" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Program.cs">
+          <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="300">
-              <caret line="28" column="21" lean-forward="true" selection-start-line="28" selection-start-column="21" selection-end-line="28" selection-end-column="21" />
+              <caret line="16" column="1" lean-forward="true" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
               <folding>
-                <marker date="1564001071945" expanded="true" signature="6:238" ph="..." />
-                <marker date="1564001071945" expanded="true" signature="273:2049" ph="{...}" />
-                <marker date="1564001071945" expanded="true" signature="280:439" ph="///  Core класс приложения, через него описываются все зависимости, которые необходимо выставить перед стартом пр ... " />
-                <marker date="1564001071945" expanded="true" signature="487:2047" ph="{...}" />
-                <marker date="1564001071945" expanded="true" signature="502:592" ph="/// По дефолту, файл с переменными окружения. ... " />
-                <marker date="1564001071945" expanded="true" signature="713:843" ph="{...}" />
-                <marker date="1564001071945" expanded="true" signature="853:974" ph="/// Запустит все AbstractServiceRecorder'ы, которые регистрируют сервисы DI. ... " />
-                <marker date="1564001071945" expanded="true" signature="1046:1485" ph="{...}" />
-                <marker date="1564001071945" expanded="true" signature="1281:1475" ph="{...}" />
-                <marker date="1564001071945" expanded="true" signature="1495:1622" ph="/// Регистрирует все перменные окружения из файла environment.json (по-умолчанию). ... " />
-                <marker date="1564001071945" expanded="true" signature="1672:2041" ph="{...}" />
-                <marker date="1564001071945" expanded="true" signature="1754:2031" ph="{...}" />
-                <marker date="1564001071945" expanded="true" signature="1913:2017" ph="{...}" />
+                <marker date="1562973050868" expanded="false" signature="6:63" ph="..." />
+                <marker date="1562973050868" expanded="true" signature="78:405" ph="{...}" />
+                <marker date="1562973050868" expanded="true" signature="105:403" ph="{...}" />
+                <marker date="1562973050868" expanded="true" signature="158:232" ph="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Domain/Entity/User/User.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="3" column="5" lean-forward="true" selection-start-line="3" selection-start-column="5" selection-end-line="3" selection-end-column="5" />
-              <folding>
-                <marker date="1564001332407" expanded="true" signature="32:605" ph="{...}" />
-                <marker date="1564001332407" expanded="true" signature="73:603" ph="{...}" />
-                <marker date="1564001332407" expanded="true" signature="382:402" ph="{...}" />
-                <marker date="1564001332407" expanded="true" signature="467:597" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Common/EncodeHandler.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="15" column="57" selection-start-line="15" selection-start-column="57" selection-end-line="15" selection-end-column="57" />
-              <folding>
-                <marker date="1564001025409" expanded="true" signature="6:54" ph="..." />
-                <marker date="1564001025409" expanded="true" signature="76:808" ph="{...}" />
-                <marker date="1564001025409" expanded="true" signature="116:806" ph="{...}" />
-                <marker date="1564001025409" expanded="true" signature="389:649" ph="{...}" />
-                <marker date="1564001025409" expanded="true" signature="689:722" ph="{...}" />
-                <marker date="1564001025409" expanded="true" signature="767:800" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Infrastructure/NHibernate/NHibernateHelper.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="365">
-              <caret line="40" column="28" lean-forward="true" selection-start-line="40" selection-start-column="28" selection-end-line="40" selection-end-column="28" />
-              <folding>
-                <marker date="1564001025481" expanded="true" signature="6:214" ph="..." />
-                <marker date="1564001025481" expanded="true" signature="255:2620" ph="{...}" />
-                <marker date="1564001025481" expanded="true" signature="315:2618" ph="{...}" />
-                <marker date="1564001025481" expanded="true" signature="432:751" ph="{...}" />
-                <marker date="1564001025481" expanded="true" signature="458:741" ph="{...}" />
-                <marker date="1564001025481" expanded="true" signature="575:668" ph="{...}" />
-                <marker date="1564001025481" expanded="true" signature="786:843" ph="{...}" />
-                <marker date="1564001025481" expanded="true" signature="896:1578" ph="{...}" />
-                <marker date="1564001025481" expanded="true" signature="1624:1693" ph="{...}" />
-                <marker date="1564001025481" expanded="true" signature="1703:1976" ph="/// Добавит всех наследников абстракного класса в конфигурацию Nhibernate (рекурсивно) ... " />
-                <marker date="1564001025481" expanded="true" signature="2080:2612" ph="{...}" />
-                <marker date="1564001025481" expanded="true" signature="2266:2602" ph="{...}" />
-                <marker date="1564001025481" expanded="true" signature="2319:2427" ph="{...}" />
-                <marker date="1564001025481" expanded="true" signature="2448:2588" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Application/Http/Token/TokenController.cs">
+        <entry file="file://$PROJECT_DIR$/src/Migration/InitMigration.cs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="200">
-              <caret line="10" column="9" lean-forward="true" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
+              <caret line="10" column="33" lean-forward="true" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="33" />
               <folding>
-                <marker date="1564001025337" expanded="true" signature="69:282" ph="{...}" />
-                <marker date="1564001025337" expanded="true" signature="158:280" ph="{...}" />
-                <marker date="1564001025337" expanded="true" signature="223:274" ph="{...}" />
+                <marker date="1564089751645" expanded="true" signature="46:419" ph="{...}" />
+                <marker date="1564089751645" expanded="true" signature="135:417" ph="{...}" />
+                <marker date="1564089751645" expanded="true" signature="175:320" ph="{...}" />
+                <marker date="1564089751645" expanded="true" signature="357:411" ph="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Domain/Entity/AbstractEntity.cs">
+        <entry file="file://$PROJECT_DIR$/src/Startup.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
-              <caret line="8" column="33" lean-forward="true" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="33" />
+            <state relative-caret-position="180">
+              <caret line="17" selection-start-line="17" selection-end-line="17" />
               <folding>
-                <marker date="1563995531959" expanded="true" signature="42:240" ph="{...}" />
-                <marker date="1563995531959" expanded="true" signature="85:238" ph="{...}" />
-                <marker date="1563995531959" expanded="true" signature="179:232" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Domain/Mapping/User/UserMap.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="280">
-              <caret line="14" column="1" lean-forward="true" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
-              <folding>
-                <marker date="1563996232923" expanded="true" signature="66:303" ph="{...}" />
-                <marker date="1563996232923" expanded="true" signature="122:301" ph="{...}" />
-                <marker date="1563996232923" expanded="true" signature="153:295" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Domain/Mapping/TokenMap.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="280">
-              <caret line="14" column="1" lean-forward="true" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
-              <folding>
-                <marker date="1564001403223" expanded="true" signature="6:62" ph="..." />
-                <marker date="1564001403223" expanded="true" signature="92:322" ph="{...}" />
-                <marker date="1564001403223" expanded="true" signature="138:320" ph="{...}" />
-                <marker date="1564001403223" expanded="true" signature="170:314" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Domain/Entity/Token/Token.cs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
-              <caret line="8" column="12" lean-forward="true" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="12" />
-              <folding>
-                <marker date="1564001251322" expanded="true" signature="33:460" ph="{...}" />
-                <marker date="1564001251322" expanded="true" signature="75:458" ph="{...}" />
-                <marker date="1564001251322" expanded="true" signature="262:285" ph="{...}" />
-                <marker date="1564001251322" expanded="true" signature="343:452" ph="{...}" />
+                <marker date="1563396644951" expanded="true" signature="6:224" ph="..." />
+                <marker date="1563396644951" expanded="true" signature="239:1375" ph="{...}" />
+                <marker date="1563396644951" expanded="true" signature="290:1373" ph="{...}" />
+                <marker date="1563396644951" expanded="true" signature="349:412" ph="{...}" />
+                <marker date="1563396644951" expanded="true" signature="534:711" ph="{...}" />
+                <marker date="1563396644951" expanded="true" signature="792:1367" ph="{...}" />
+                <marker date="1563396644951" expanded="true" signature="839:1002" ph="{...}" />
+                <marker date="1563396644951" expanded="true" signature="1019:1222" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -232,6 +281,7 @@
     <setting file="file://$PROJECT_DIR$/src/obj/Debug/netcoreapp2.2/app.AssemblyInfo.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/Application/Http/Token/TokenController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/Domain/Mapping/User/UserMap.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/web.config" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/Application/Http/User/UserController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/DependencyInjection/Kernel.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/Infrastructure/NHibernate/NHibernateHelper.cs" root0="FORCE_HIGHLIGHTING" />
@@ -247,7 +297,6 @@
     <setting file="file://$PROJECT_DIR$/src/Infrastructure/NHibernate/Transactional.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/196D5F9C-FF8C-4EAC-A925-A90B26982D76/5/MigrationBase.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/Common/DbAccessor.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/Application/Http/Token/Foo.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/DependencyInjection/ServiceRecorder/RepositoryRecorder/RepositoryRecorder.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/57010887-BA3F-46F4-8547-B67751974C6D/f2/f32362c4/Exception.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/57010887-BA3F-46F4-8547-B67751974C6D/49/80141287/ISerializable.cs" root0="SKIP_HIGHLIGHTING" />
@@ -259,23 +308,24 @@
     <setting file="file://$PROJECT_DIR$/src/Common/Annotation/TransientAttribute.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/7C90DDE6-751E-47D2-8C8A-9FCC0C551645/e4/f4df5647/ISessionFactory.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/DependencyInjection/AbstractAssemblyAware.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/Test/FirstTest.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/Common/Annotation/InjectedAttribute.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/DependencyInjection/ServiceRecorder/AbstractServiceRecorder.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/127E718A-C42E-4542-A71B-54CEC3EF156B/18/1e86c897/WebHostBuilder.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/Domain/Entity/Token/ITokenRepository.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/Migration/InitMigration.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/Infrastructure/NHibernate/Repository/UserRepository.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/Domain/Mapping/TokenMap.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/Infrastructure/NHibernate/Repository/TokenRepository.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/F4FB576E-29CF-4DE9-8ED6-26033D10B1FE/AE/IMigrationContext.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/Program.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/Domain/Entity/User/User.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/Domain/Entity/User/IUserRepository.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/obj/Debug/netcoreapp2.2/app.RazorAssemblyInfo.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/Common/Annotation/SingletonAttribute.cs" />
-        <option value="$PROJECT_DIR$/src/DependencyInjection/ServiceRecorder/CommandQueryRecorder.cs" />
-        <option value="$PROJECT_DIR$/src/DependencyInjection/ServiceRecorder/RepositoryRecorder.cs" />
         <option value="$PROJECT_DIR$/src/DependencyInjection/ServiceRecorder/RepositoryRecorder/RepositoryRecorderException.cs" />
         <option value="$PROJECT_DIR$/src/DependencyInjection/ServiceRecorder/AbstractAssemblyAware.cs" />
         <option value="$PROJECT_DIR$/src/Application/CQS/TestQuery.cs" />
@@ -296,7 +346,6 @@
         <option value="$PROJECT_DIR$/src/Domain/Entity/User/IUserRepository.cs" />
         <option value="$PROJECT_DIR$/src/Application/CQS/User/Query/GetUserQuery.cs" />
         <option value="$PROJECT_DIR$/src/Application/Http/User/UserController.cs" />
-        <option value="$PROJECT_DIR$/src/app.csproj" />
         <option value="$PROJECT_DIR$/src/Infrastructure/NHibernate/Transactional.cs" />
         <option value="$PROJECT_DIR$/src/DependencyInjection/ServiceRecorder/IServiceRecorder.cs" />
         <option value="$PROJECT_DIR$/src/Infrastructure/NHibernate/Repository/TokenRepository.cs" />
@@ -308,22 +357,26 @@
         <option value="$PROJECT_DIR$/src/DependencyInjection/ServiceRecorder/InjectedAttributeRecorder/InjectedAttributeRecorder.cs" />
         <option value="$PROJECT_DIR$/src/appsettings.json" />
         <option value="$PROJECT_DIR$/src/Properties/launchSettings.json" />
-        <option value="$PROJECT_DIR$/src/Startup.cs" />
         <option value="$PROJECT_DIR$/src/Domain/Entity/AbstractEntity.cs" />
         <option value="$PROJECT_DIR$/src/Domain/Mapping/User/UserMap.cs" />
         <option value="$PROJECT_DIR$/src/Infrastructure/NHibernate/DbAccessor.cs" />
         <option value="$PROJECT_DIR$/docker/core/Dockerfile" />
-        <option value="$PROJECT_DIR$/src/environment.json" />
         <option value="$PROJECT_DIR$/src/Common/TokenHandler.cs" />
         <option value="$PROJECT_DIR$/src/Common/Factory/MainControllerFactory.cs" />
         <option value="$PROJECT_DIR$/src/Application/CQS/User/Output/UserOutput.cs" />
         <option value="$PROJECT_DIR$/src/Application/Http/Token/TokenController.cs" />
         <option value="$PROJECT_DIR$/src/Common/EncodeHandler.cs" />
-        <option value="$PROJECT_DIR$/src/Infrastructure/NHibernate/NHibernateHelper.cs" />
-        <option value="$PROJECT_DIR$/src/DependencyInjection/Kernel.cs" />
         <option value="$PROJECT_DIR$/src/Domain/Entity/Token/Token.cs" />
         <option value="$PROJECT_DIR$/src/Domain/Entity/User/User.cs" />
         <option value="$PROJECT_DIR$/src/Domain/Mapping/TokenMap.cs" />
+        <option value="$PROJECT_DIR$/src/Infrastructure/NHibernate/NHibernateHelper.cs" />
+        <option value="$PROJECT_DIR$/src/app.csproj" />
+        <option value="$PROJECT_DIR$/src/Test/FirstTest.cs" />
+        <option value="$PROJECT_DIR$/src/Migration/AbstractMigration.cs" />
+        <option value="$PROJECT_DIR$/src/environment.json" />
+        <option value="$PROJECT_DIR$/src/DependencyInjection/Kernel.cs" />
+        <option value="$PROJECT_DIR$/src/Migration/InitMigration.cs" />
+        <option value="$PROJECT_DIR$/src/Startup.cs" />
       </list>
     </option>
   </component>
@@ -341,10 +394,14 @@
   </component>
   <component name="ProjectView">
     <navigator currentView="FileSystemExplorer" proportions="" version="1">
+      <autoscrollToSource FileSystemExplorer="false" />
+      <autoscrollFromSource FileSystemExplorer="false" />
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AssemblyExplorer" />
+      <pane id="SolutionExplorer">
+        <option name="show-all-files" value="false" />
+      </pane>
       <pane id="FileSystemExplorer">
         <subPane>
           <expand>
@@ -352,67 +409,11 @@
               <item name="" type="161ac34:FileSystemExplorerRootNode" />
               <item name="backend" type="34e6ba20:FileSystemExplorerNode" />
             </path>
-            <path>
-              <item name="" type="161ac34:FileSystemExplorerRootNode" />
-              <item name="backend" type="34e6ba20:FileSystemExplorerNode" />
-              <item name="src" type="34e6ba20:FileSystemExplorerNode" />
-            </path>
-            <path>
-              <item name="" type="161ac34:FileSystemExplorerRootNode" />
-              <item name="backend" type="34e6ba20:FileSystemExplorerNode" />
-              <item name="src" type="34e6ba20:FileSystemExplorerNode" />
-              <item name="Application" type="34e6ba20:FileSystemExplorerNode" />
-            </path>
-            <path>
-              <item name="" type="161ac34:FileSystemExplorerRootNode" />
-              <item name="backend" type="34e6ba20:FileSystemExplorerNode" />
-              <item name="src" type="34e6ba20:FileSystemExplorerNode" />
-              <item name="Application" type="34e6ba20:FileSystemExplorerNode" />
-              <item name="CQS" type="34e6ba20:FileSystemExplorerNode" />
-            </path>
-            <path>
-              <item name="" type="161ac34:FileSystemExplorerRootNode" />
-              <item name="backend" type="34e6ba20:FileSystemExplorerNode" />
-              <item name="src" type="34e6ba20:FileSystemExplorerNode" />
-              <item name="Application" type="34e6ba20:FileSystemExplorerNode" />
-              <item name="CQS" type="34e6ba20:FileSystemExplorerNode" />
-              <item name="User" type="34e6ba20:FileSystemExplorerNode" />
-            </path>
-            <path>
-              <item name="" type="161ac34:FileSystemExplorerRootNode" />
-              <item name="backend" type="34e6ba20:FileSystemExplorerNode" />
-              <item name="src" type="34e6ba20:FileSystemExplorerNode" />
-              <item name="Application" type="34e6ba20:FileSystemExplorerNode" />
-              <item name="CQS" type="34e6ba20:FileSystemExplorerNode" />
-              <item name="User" type="34e6ba20:FileSystemExplorerNode" />
-              <item name="Query" type="34e6ba20:FileSystemExplorerNode" />
-            </path>
-            <path>
-              <item name="" type="161ac34:FileSystemExplorerRootNode" />
-              <item name="backend" type="34e6ba20:FileSystemExplorerNode" />
-              <item name="src" type="34e6ba20:FileSystemExplorerNode" />
-              <item name="Common" type="34e6ba20:FileSystemExplorerNode" />
-            </path>
-            <path>
-              <item name="" type="161ac34:FileSystemExplorerRootNode" />
-              <item name="backend" type="34e6ba20:FileSystemExplorerNode" />
-              <item name="src" type="34e6ba20:FileSystemExplorerNode" />
-              <item name="Domain" type="34e6ba20:FileSystemExplorerNode" />
-            </path>
-            <path>
-              <item name="" type="161ac34:FileSystemExplorerRootNode" />
-              <item name="backend" type="34e6ba20:FileSystemExplorerNode" />
-              <item name="src" type="34e6ba20:FileSystemExplorerNode" />
-              <item name="Domain" type="34e6ba20:FileSystemExplorerNode" />
-              <item name="Mapping" type="34e6ba20:FileSystemExplorerNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="SolutionExplorer">
-        <option name="show-all-files" value="false" />
-      </pane>
+      <pane id="AssemblyExplorer" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -434,7 +435,7 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.C#" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.folding" />
   </component>
   <component name="RestClientSettings">
     <option name="REQUEST_HISTORY">
@@ -599,6 +600,9 @@
       <workItem from="1563300913461" duration="2294000" />
       <workItem from="1563390904256" duration="7720000" />
       <workItem from="1563994270577" duration="7578000" />
+      <workItem from="1564002204299" duration="229000" />
+      <workItem from="1564084211407" duration="8092000" />
+      <workItem from="1564092643705" duration="326000" />
     </task>
     <task id="LOCAL-00001" summary="Наконец смог запустить приложение. Однако, дебажить его все еще не получается">
       <created>1560618202174</created>
@@ -712,13 +716,20 @@
       <option name="project" value="LOCAL" />
       <updated>1563398523659</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Удалил FluentMigrator. Добавил либу для JWT">
+      <created>1564002407149</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1564002407150</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="131327000" />
+    <option name="totallyTimeSpent" value="139974000" />
   </component>
-  <component name="TodoView" selected-index="4">
+  <component name="TodoView">
     <todo-panel id="selected-file">
       <is-autoscroll-to-source value="true" />
     </todo-panel>
@@ -731,25 +742,25 @@
     <frame x="67" y="31" width="1853" height="1049" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23627287" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19689406" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.2505568" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.4997227" weight="0.37305123" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.4997227" visible="true" weight="0.37305123" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32850778" />
-      <window_info anchor="bottom" id="NuGet" order="7" weight="0.29175946" />
-      <window_info anchor="bottom" id="Performance Profiler" order="8" />
-      <window_info anchor="bottom" id="Docker" order="9" sideWeight="0.49861342" weight="0.28285077" />
-      <window_info anchor="bottom" id="Version Control" order="10" weight="0.32850778" />
+      <window_info anchor="bottom" id="NuGet" order="7" sideWeight="0.49861342" weight="0.29175946" />
+      <window_info anchor="bottom" id="Performance Profiler" order="8" weight="0.32962137" />
+      <window_info anchor="bottom" id="Docker" order="9" sideWeight="0.49861342" weight="0.29064587" />
+      <window_info anchor="bottom" id="Version Control" order="10" weight="0.20824054" />
       <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Unit Tests" order="12" weight="0.3293348" />
-      <window_info anchor="bottom" id="Terminal" order="13" sideWeight="0.4986165" weight="0.22048998" />
-      <window_info anchor="bottom" id="Event Log" order="14" sideWeight="0.5013866" side_tool="true" weight="0.38752785" />
-      <window_info anchor="bottom" id="Build" order="15" weight="0.31514478" />
+      <window_info anchor="bottom" id="Unit Tests" order="12" weight="0.32850778" />
+      <window_info anchor="bottom" id="Terminal" order="13" sideWeight="0.4980588" weight="0.18930958" />
+      <window_info anchor="bottom" id="Event Log" order="14" sideWeight="0.5019412" side_tool="true" weight="0.2494432" />
+      <window_info anchor="bottom" id="Build" order="15" weight="0.32628062" />
       <window_info anchor="bottom" id="REST Client" order="16" weight="0.42761692" />
       <window_info anchor="bottom" id="Database Console" order="17" weight="0.3293348" />
       <window_info anchor="bottom" id="Messages" order="18" />
@@ -823,7 +834,8 @@
     <MESSAGE value="Небольшие правки Transactional" />
     <MESSAGE value="Рефакторниг ServiceRecorder'ов" />
     <MESSAGE value="Вынес переменные для подключения к БД в environment.json. Сделал подгрузку этих переменных на старте приложения. Попытка установить dotnet-fm и накатывать миграции (пока неудачно)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Вынес переменные для подключения к БД в environment.json. Сделал подгрузку этих переменных на старте приложения. Попытка установить dotnet-fm и накатывать миграции (пока неудачно)" />
+    <MESSAGE value="Удалил FluentMigrator. Добавил либу для JWT" />
+    <option name="LAST_COMMIT_MESSAGE" value="Удалил FluentMigrator. Добавил либу для JWT" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -843,6 +855,36 @@
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateExpression">
+      <expression>
+        <expression-string>typeof(Startup).Assembly.DefinedTypes[22]</expression-string>
+        <language-id>C#</language-id>
+        <custom-info>RiderImportsList:</custom-info>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>typeof(Startup).Assembly.DefinedTypes</expression-string>
+        <language-id>C#</language-id>
+        <custom-info>RiderImportsList:</custom-info>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>typeof(Startup).Assembly.DefinedTypes.GetType()</expression-string>
+        <language-id>C#</language-id>
+        <custom-info>RiderImportsList:</custom-info>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>typeof(Startup).Assembly</expression-string>
+        <language-id>C#</language-id>
+        <custom-info>RiderImportsList:</custom-info>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>typeof(Startup)</expression-string>
+        <language-id>C#</language-id>
+        <custom-info>RiderImportsList:</custom-info>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
       <expression>
         <expression-string>DbAccessor.ConnectionString</expression-string>
         <language-id>C#</language-id>
@@ -867,99 +909,9 @@
         <custom-info>RiderImportsList:</custom-info>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
-      <expression>
-        <expression-string>Environment.GetEnvironmentVariable(&quot;ZOBOR&quot;)</expression-string>
-        <language-id>C#</language-id>
-        <custom-info>RiderImportsList:</custom-info>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>Environment.GetEnvironmentVariables()</expression-string>
-        <language-id>C#</language-id>
-        <custom-info>RiderImportsList:</custom-info>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>Environment.GetEnvironmentVariable(&quot;TEST&quot;)</expression-string>
-        <language-id>C#</language-id>
-        <custom-info>RiderImportsList:System;System</custom-info>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>Environment.GetEnvironmentVariables()</expression-string>
-        <language-id>C#</language-id>
-        <custom-info>RiderImportsList:System;System</custom-info>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>Environment.GetEnvironmentVariable(&quot;AllowedHosts&quot;)</expression-string>
-        <language-id>C#</language-id>
-        <custom-info>RiderImportsList:System;System;System;System</custom-info>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>Environment.GetEnvironmentVariable()</expression-string>
-        <language-id>C#</language-id>
-        <custom-info>RiderImportsList:System;System;System;System</custom-info>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/DependencyInjection/ServiceRecorder/AbstractAssemblyAware.cs" />
-    <entry file="file://$PROJECT_DIR$/src/Domain/Entity/Token/ITokenRepository.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="6" column="1" lean-forward="true" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
-          <folding>
-            <marker date="1563012915330" expanded="true" signature="33:96" ph="{...}" />
-            <marker date="1563012915330" expanded="true" signature="73:94" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Program.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="16" column="1" lean-forward="true" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
-          <folding>
-            <marker date="1563009664401" expanded="false" signature="6:63" ph="..." />
-            <marker date="1563009664401" expanded="true" signature="78:405" ph="{...}" />
-            <marker date="1563009664401" expanded="true" signature="105:403" ph="{...}" />
-            <marker date="1563009664401" expanded="true" signature="158:232" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch.cginc" />
-    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch.cs" />
-    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/45D20605-9EC8-44F8-8A47-1D6E18421912/b7/f0141abb/LogLevel.cs" />
-    <entry file="file://$PROJECT_DIR$/src/DependencyInjection/AbstractAssemblyAware.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="7" column="47" lean-forward="true" selection-start-line="7" selection-start-column="47" selection-end-line="7" selection-end-column="47" />
-          <folding>
-            <marker date="1563018720172" expanded="true" signature="59:467" ph="{...}" />
-            <marker date="1563018720172" expanded="true" signature="66:181" ph="/// Знает о текущей сборке, а также может вернуть сборку передаваемого класса. ... " />
-            <marker date="1563018720172" expanded="true" signature="229:465" ph="{...}" />
-            <marker date="1563018720172" expanded="true" signature="283:348" ph="{...}" />
-            <marker date="1563018720172" expanded="true" signature="400:459" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Common/Annotation/InjectedAttribute.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="5" column="76" lean-forward="true" selection-start-line="5" selection-start-column="76" selection-end-line="5" selection-end-column="76" />
-          <folding>
-            <marker date="1563012089074" expanded="true" signature="46:223" ph="{...}" />
-            <marker date="1563012089074" expanded="true" signature="53:162" ph="/// Помечаются свойства класса, которые необходимо внедрить из сервисов. ... " />
-            <marker date="1563012089074" expanded="true" signature="209:221" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/hibernate.cfg.xml" />
     <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/57010887-BA3F-46F4-8547-B67751974C6D/49/80141287/ISerializable.cs">
       <provider selected="true" editor-type-id="text-editor">
@@ -1020,7 +972,6 @@
           <caret line="37" selection-start-line="37" selection-end-line="37" />
           <folding>
             <marker date="1563217359833" expanded="true" signature="6:31" ph="..." />
-            <marker date="1563217359833" expanded="true" signature="72:1356" ph="{...}" />
             <marker date="1563217359833" expanded="true" signature="79:158" ph="/// Умеет оборачивать делегат в транзакцию ... " />
             <marker date="1563217359833" expanded="true" signature="196:1354" ph="{...}" />
             <marker date="1563217359833" expanded="true" signature="299:389" ph="{...}" />
@@ -1041,7 +992,6 @@
           <caret line="20" column="12" selection-start-line="20" selection-start-column="12" selection-end-line="20" selection-end-column="12" />
           <folding>
             <marker date="1563221164608" expanded="true" signature="6:241" ph="..." />
-            <marker date="1563221164608" expanded="true" signature="311:2151" ph="{...}" />
             <marker date="1563221164608" expanded="true" signature="375:2149" ph="{...}" />
             <marker date="1563221164608" expanded="true" signature="581:986" ph="{...}" />
             <marker date="1563221164608" expanded="true" signature="690:976" ph="{...}" />
@@ -1053,25 +1003,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Application/Http/Token/Foo.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="10" column="1" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
-          <folding>
-            <marker date="1563226281241" expanded="true" signature="6:58" ph="..." />
-            <marker date="1563226281241" expanded="true" signature="96:218" ph="{...}" />
-            <marker date="1563226281241" expanded="true" signature="119:216" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Application/Http/Token/Foo.cs" />
     <entry file="file://$PROJECT_DIR$/src/DependencyInjection/ServiceRecorder/CommandQueryRecorder/CommandQueryRecorder.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="320">
           <caret line="23" column="9" selection-start-line="23" selection-start-column="9" selection-end-line="23" selection-end-column="9" />
           <folding>
             <marker date="1563221492598" expanded="false" signature="6:168" ph="..." />
-            <marker date="1563221492598" expanded="true" signature="240:2250" ph="{...}" />
             <marker date="1563221492598" expanded="true" signature="306:2248" ph="{...}" />
             <marker date="1563221492598" expanded="true" signature="571:751" ph="{...}" />
             <marker date="1563221492598" expanded="true" signature="662:741" ph="{...}" />
@@ -1117,7 +1055,6 @@
           <caret line="70" column="9" lean-forward="true" selection-start-line="70" selection-start-column="9" selection-end-line="70" selection-end-column="9" />
           <folding>
             <marker date="1563391323914" expanded="true" signature="6:204" ph="..." />
-            <marker date="1563391323914" expanded="true" signature="281:3003" ph="{...}" />
             <marker date="1563391323914" expanded="true" signature="352:3001" ph="{...}" />
             <marker date="1563391323914" expanded="true" signature="427:526" ph="{...}" />
             <marker date="1563391323914" expanded="true" signature="579:770" ph="{...}" />
@@ -1169,57 +1106,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/196D5F9C-FF8C-4EAC-A925-A90B26982D76/5/MigrationBase.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-240">
-          <caret line="33" column="26" selection-start-line="33" selection-start-column="26" selection-end-line="33" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/196D5F9C-FF8C-4EAC-A925-A90B26982D76/4/Migration.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="27" column="44" lean-forward="true" selection-start-line="27" selection-start-column="44" selection-end-line="27" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Startup.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="26" column="48" lean-forward="true" selection-start-line="26" selection-start-column="48" selection-end-line="26" selection-end-column="48" />
-          <folding>
-            <marker date="1563396644951" expanded="true" signature="6:224" ph="..." />
-            <marker date="1563396644951" expanded="true" signature="239:1375" ph="{...}" />
-            <marker date="1563396644951" expanded="true" signature="290:1373" ph="{...}" />
-            <marker date="1563396644951" expanded="true" signature="349:412" ph="{...}" />
-            <marker date="1563396644951" expanded="true" signature="534:711" ph="{...}" />
-            <marker date="1563396644951" expanded="true" signature="792:1367" ph="{...}" />
-            <marker date="1563396644951" expanded="true" signature="839:1002" ph="{...}" />
-            <marker date="1563396644951" expanded="true" signature="1019:1222" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/app.csproj">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="5" column="18" lean-forward="true" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Infrastructure/NHibernate/DbAccessor.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="8" column="24" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Infrastructure/NHibernate/DbAccessor.cs" />
     <entry file="file://$PROJECT_DIR$/src/Common/DbAccessor.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="480">
           <caret line="24" column="5" selection-start-line="24" selection-start-column="4" selection-end-line="24" selection-end-column="5" />
           <folding>
-            <marker date="1563996942036" expanded="true" signature="35:925" ph="{...}" />
             <marker date="1563996942036" expanded="true" signature="42:192" ph="/// Класс, знающий о данных для подключения к БД. ... " />
             <marker date="1563996942036" expanded="true" signature="221:923" ph="{...}" />
           </folding>
@@ -1240,20 +1132,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/environment.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="6" column="12" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Common/Factory/MainControllerFactory.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="9" column="12" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Common/Factory/MainControllerFactory.cs" />
     <entry file="file://$PROJECT_DIR$/src/Infrastructure/NHibernate/Repository/UserRepository.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="260">
@@ -1341,7 +1220,6 @@
         <state relative-caret-position="160">
           <caret line="8" column="41" lean-forward="true" selection-start-line="8" selection-start-column="41" selection-end-line="8" selection-end-column="41" />
           <folding>
-            <marker date="1564000407499" expanded="true" signature="56:385" ph="{...}" />
             <marker date="1564000407499" expanded="true" signature="86:383" ph="{...}" />
             <marker date="1564000407499" expanded="true" signature="269:377" ph="{...}" />
           </folding>
@@ -1350,12 +1228,50 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Application/Http/Token/TokenController.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="10" column="9" lean-forward="true" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
+        <state relative-caret-position="160">
+          <caret line="10" column="9" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
           <folding>
             <marker date="1564001025337" expanded="true" signature="69:282" ph="{...}" />
             <marker date="1564001025337" expanded="true" signature="158:280" ph="{...}" />
             <marker date="1564001025337" expanded="true" signature="223:274" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Domain/Entity/AbstractEntity.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="8" column="33" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="33" />
+          <folding>
+            <marker date="1563995531959" expanded="true" signature="42:240" ph="{...}" />
+            <marker date="1563995531959" expanded="true" signature="85:238" ph="{...}" />
+            <marker date="1563995531959" expanded="true" signature="179:232" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Domain/Entity/Token/Token.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="8" column="12" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="12" />
+          <folding>
+            <marker date="1564001251322" expanded="true" signature="33:460" ph="{...}" />
+            <marker date="1564001251322" expanded="true" signature="75:458" ph="{...}" />
+            <marker date="1564001251322" expanded="true" signature="262:285" ph="{...}" />
+            <marker date="1564001251322" expanded="true" signature="343:452" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Domain/Mapping/TokenMap.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="12" column="9" lean-forward="true" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="9" />
+          <folding>
+            <marker date="1564001403223" expanded="true" signature="6:62" ph="..." />
+            <marker date="1564001403223" expanded="true" signature="92:322" ph="{...}" />
+            <marker date="1564001403223" expanded="true" signature="138:320" ph="{...}" />
+            <marker date="1564001403223" expanded="true" signature="170:314" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -1375,32 +1291,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/DependencyInjection/Kernel.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="28" column="21" lean-forward="true" selection-start-line="28" selection-start-column="21" selection-end-line="28" selection-end-column="21" />
-          <folding>
-            <marker date="1564001071945" expanded="true" signature="6:238" ph="..." />
-            <marker date="1564001071945" expanded="true" signature="273:2049" ph="{...}" />
-            <marker date="1564001071945" expanded="true" signature="280:439" ph="///  Core класс приложения, через него описываются все зависимости, которые необходимо выставить перед стартом пр ... " />
-            <marker date="1564001071945" expanded="true" signature="487:2047" ph="{...}" />
-            <marker date="1564001071945" expanded="true" signature="502:592" ph="/// По дефолту, файл с переменными окружения. ... " />
-            <marker date="1564001071945" expanded="true" signature="713:843" ph="{...}" />
-            <marker date="1564001071945" expanded="true" signature="853:974" ph="/// Запустит все AbstractServiceRecorder'ы, которые регистрируют сервисы DI. ... " />
-            <marker date="1564001071945" expanded="true" signature="1046:1485" ph="{...}" />
-            <marker date="1564001071945" expanded="true" signature="1281:1475" ph="{...}" />
-            <marker date="1564001071945" expanded="true" signature="1495:1622" ph="/// Регистрирует все перменные окружения из файла environment.json (по-умолчанию). ... " />
-            <marker date="1564001071945" expanded="true" signature="1672:2041" ph="{...}" />
-            <marker date="1564001071945" expanded="true" signature="1754:2031" ph="{...}" />
-            <marker date="1564001071945" expanded="true" signature="1913:2017" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Domain/Entity/User/User.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
-          <caret line="3" column="5" lean-forward="true" selection-start-line="3" selection-start-column="5" selection-end-line="3" selection-end-column="5" />
+          <caret line="3" column="5" selection-start-line="3" selection-start-column="5" selection-end-line="3" selection-end-column="5" />
           <folding>
             <marker date="1564001332407" expanded="true" signature="32:605" ph="{...}" />
             <marker date="1564001332407" expanded="true" signature="73:603" ph="{...}" />
@@ -1412,43 +1306,64 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Infrastructure/NHibernate/NHibernateHelper.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="365">
-          <caret line="40" column="28" lean-forward="true" selection-start-line="40" selection-start-column="28" selection-end-line="40" selection-end-column="28" />
+        <state relative-caret-position="222">
+          <caret line="66" column="9" lean-forward="true" selection-start-line="66" selection-start-column="9" selection-end-line="66" selection-end-column="9" />
           <folding>
-            <marker date="1564001025481" expanded="true" signature="6:214" ph="..." />
-            <marker date="1564001025481" expanded="true" signature="255:2620" ph="{...}" />
-            <marker date="1564001025481" expanded="true" signature="315:2618" ph="{...}" />
-            <marker date="1564001025481" expanded="true" signature="432:751" ph="{...}" />
-            <marker date="1564001025481" expanded="true" signature="458:741" ph="{...}" />
-            <marker date="1564001025481" expanded="true" signature="575:668" ph="{...}" />
-            <marker date="1564001025481" expanded="true" signature="786:843" ph="{...}" />
-            <marker date="1564001025481" expanded="true" signature="896:1578" ph="{...}" />
-            <marker date="1564001025481" expanded="true" signature="1624:1693" ph="{...}" />
-            <marker date="1564001025481" expanded="true" signature="1703:1976" ph="/// Добавит всех наследников абстракного класса в конфигурацию Nhibernate (рекурсивно) ... " />
-            <marker date="1564001025481" expanded="true" signature="2080:2612" ph="{...}" />
-            <marker date="1564001025481" expanded="true" signature="2266:2602" ph="{...}" />
-            <marker date="1564001025481" expanded="true" signature="2319:2427" ph="{...}" />
-            <marker date="1564001025481" expanded="true" signature="2448:2588" ph="{...}" />
+            <marker date="1564084372279" expanded="true" signature="6:214" ph="..." />
+            <marker date="1564084372279" expanded="true" signature="255:2624" ph="{...}" />
+            <marker date="1564084372279" expanded="true" signature="315:2622" ph="{...}" />
+            <marker date="1564084372279" expanded="true" signature="432:751" ph="{...}" />
+            <marker date="1564084372279" expanded="true" signature="458:741" ph="{...}" />
+            <marker date="1564084372279" expanded="true" signature="575:668" ph="{...}" />
+            <marker date="1564084372279" expanded="true" signature="786:843" ph="{...}" />
+            <marker date="1564084372279" expanded="true" signature="896:1582" ph="{...}" />
+            <marker date="1564084372279" expanded="true" signature="1420:1532" ph="/* .ExposeConfiguration(cfg =&gt; new SchemaUpdate(cfg) ... */" />
+            <marker date="1564084372279" expanded="true" signature="1628:1697" ph="{...}" />
+            <marker date="1564084372279" expanded="true" signature="1707:1980" ph="/// Добавит всех наследников абстракного класса в конфигурацию Nhibernate (рекурсивно) ... " />
+            <marker date="1564084372279" expanded="true" signature="2084:2616" ph="{...}" />
+            <marker date="1564084372279" expanded="true" signature="2270:2606" ph="{...}" />
+            <marker date="1564084372279" expanded="true" signature="2323:2431" ph="{...}" />
+            <marker date="1564084372279" expanded="true" signature="2452:2592" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Domain/Entity/AbstractEntity.cs">
+    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/F4FB576E-29CF-4DE9-8ED6-26033D10B1FE/AE/IMigrationContext.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="8" column="33" lean-forward="true" selection-start-line="8" selection-start-column="33" selection-end-line="8" selection-end-column="33" />
-          <folding>
-            <marker date="1563995531959" expanded="true" signature="42:240" ph="{...}" />
-            <marker date="1563995531959" expanded="true" signature="85:238" ph="{...}" />
-            <marker date="1563995531959" expanded="true" signature="179:232" ph="{...}" />
-          </folding>
+        <state relative-caret-position="605">
+          <caret line="52" column="19" lean-forward="true" selection-start-line="52" selection-start-column="19" selection-end-line="52" selection-end-column="19" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/196D5F9C-FF8C-4EAC-A925-A90B26982D76/5/MigrationBase.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="69" column="54" selection-start-line="69" selection-start-column="54" selection-end-line="69" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/196D5F9C-FF8C-4EAC-A925-A90B26982D76/4/Migration.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="305">
+          <caret line="27" column="49" selection-start-line="27" selection-start-column="49" selection-end-line="27" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Migration/AbstractMigration.cs" />
+    <entry file="file://$PROJECT_DIR$/src/environment.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="7" column="1" lean-forward="true" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/environment.json">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Domain/Mapping/User/UserMap.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="14" column="1" lean-forward="true" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
+        <state relative-caret-position="240">
+          <caret line="12" column="9" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="9" />
           <folding>
             <marker date="1563996232923" expanded="true" signature="66:303" ph="{...}" />
             <marker date="1563996232923" expanded="true" signature="122:301" ph="{...}" />
@@ -1457,28 +1372,101 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Domain/Entity/Token/Token.cs">
+    <entry file="file://$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/app.deps.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="8" column="12" lean-forward="true" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="12" />
+        <state relative-caret-position="-300" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app.csproj">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="21" column="59" lean-forward="true" selection-start-line="21" selection-start-column="59" selection-end-line="21" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/web.config">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="10" column="16" lean-forward="true" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Startup.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
           <folding>
-            <marker date="1564001251322" expanded="true" signature="33:460" ph="{...}" />
-            <marker date="1564001251322" expanded="true" signature="75:458" ph="{...}" />
-            <marker date="1564001251322" expanded="true" signature="262:285" ph="{...}" />
-            <marker date="1564001251322" expanded="true" signature="343:452" ph="{...}" />
+            <marker date="1563396644951" expanded="true" signature="6:224" ph="..." />
+            <marker date="1563396644951" expanded="true" signature="239:1375" ph="{...}" />
+            <marker date="1563396644951" expanded="true" signature="290:1373" ph="{...}" />
+            <marker date="1563396644951" expanded="true" signature="349:412" ph="{...}" />
+            <marker date="1563396644951" expanded="true" signature="534:711" ph="{...}" />
+            <marker date="1563396644951" expanded="true" signature="792:1367" ph="{...}" />
+            <marker date="1563396644951" expanded="true" signature="839:1002" ph="{...}" />
+            <marker date="1563396644951" expanded="true" signature="1019:1222" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Domain/Mapping/TokenMap.cs">
+    <entry file="file://$PROJECT_DIR$/src/Program.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="16" column="1" lean-forward="true" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
+          <folding>
+            <marker date="1562973050868" expanded="false" signature="6:63" ph="..." />
+            <marker date="1562973050868" expanded="true" signature="78:405" ph="{...}" />
+            <marker date="1562973050868" expanded="true" signature="105:403" ph="{...}" />
+            <marker date="1562973050868" expanded="true" signature="158:232" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Migration/InitMigration.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="10" column="33" lean-forward="true" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="33" />
+          <folding>
+            <marker date="1564089751645" expanded="true" signature="46:419" ph="{...}" />
+            <marker date="1564089751645" expanded="true" signature="135:417" ph="{...}" />
+            <marker date="1564089751645" expanded="true" signature="175:320" ph="{...}" />
+            <marker date="1564089751645" expanded="true" signature="357:411" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Test/FirstTest.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="280">
           <caret line="14" column="1" lean-forward="true" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
           <folding>
-            <marker date="1564001403223" expanded="true" signature="6:62" ph="..." />
-            <marker date="1564001403223" expanded="true" signature="92:322" ph="{...}" />
-            <marker date="1564001403223" expanded="true" signature="138:320" ph="{...}" />
-            <marker date="1564001403223" expanded="true" signature="170:314" ph="{...}" />
+            <marker date="1564087967753" expanded="true" signature="42:245" ph="{...}" />
+            <marker date="1564087967753" expanded="true" signature="89:243" ph="{...}" />
+            <marker date="1564087967753" expanded="true" signature="138:237" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DependencyInjection/Kernel.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="14" column="10" lean-forward="true" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="10" />
+          <folding>
+            <marker date="1564089815862" expanded="true" signature="6:285" ph="..." />
+            <marker date="1564089815862" expanded="true" signature="320:3051" ph="{...}" />
+            <marker date="1564089815862" expanded="true" signature="327:486" ph="///  Core класс приложения, через него описываются все зависимости, которые необходимо выставить перед стартом пр ... " />
+            <marker date="1564089815862" expanded="true" signature="534:3049" ph="{...}" />
+            <marker date="1564089815862" expanded="true" signature="549:639" ph="/// По дефолту, файл с переменными окружения. ... " />
+            <marker date="1564089815862" expanded="true" signature="760:927" ph="{...}" />
+            <marker date="1564089815862" expanded="true" signature="937:1058" ph="/// Запустит все AbstractServiceRecorder'ы, которые регистрируют сервисы DI. ... " />
+            <marker date="1564089815862" expanded="true" signature="1130:1569" ph="{...}" />
+            <marker date="1564089815862" expanded="true" signature="1365:1559" ph="{...}" />
+            <marker date="1564089815862" expanded="true" signature="1579:1706" ph="/// Регистрирует все перменные окружения из файла environment.json (по-умолчанию). ... " />
+            <marker date="1564089815862" expanded="true" signature="1756:2125" ph="{...}" />
+            <marker date="1564089815862" expanded="true" signature="1838:2115" ph="{...}" />
+            <marker date="1564089815862" expanded="true" signature="1997:2101" ph="{...}" />
+            <marker date="1564089815862" expanded="true" signature="2202:2572" ph="{...}" />
+            <marker date="1564089815862" expanded="true" signature="2644:3043" ph="{...}" />
+            <marker date="1564089815862" expanded="true" signature="2861:3033" ph="{...}" />
           </folding>
         </state>
       </provider>

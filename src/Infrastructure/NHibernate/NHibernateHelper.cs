@@ -48,8 +48,8 @@ namespace app.Infrastructure.NHibernate
             RegisterEntitiesRecursively(fluentConfiguration, typeof(AbstractEntity));
 
             _sessionFactory = fluentConfiguration
-                .ExposeConfiguration(cfg => new SchemaUpdate(cfg)
-                    .Execute(false, true))
+//                .ExposeConfiguration(cfg => new SchemaUpdate(cfg)
+//                    .Execute(false, true))
                 .BuildSessionFactory();
         }
 

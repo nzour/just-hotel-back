@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.2",
-    "signature": "bc771b172e330038e49b1496939bc999b88ccdae"
+    "signature": "a88ab3d38350a7b856a5ef35960dfd2469149333"
   },
   "compilationOptions": {
     "defines": [
@@ -24,12 +24,22 @@
     ".NETCoreApp,Version=v2.2": {
       "app/1.0.0": {
         "dependencies": {
+          "FluentMigrator": "3.2.1",
+          "FluentMigrator.Console": "3.2.1",
+          "FluentMigrator.Generator": "1.0.5",
+          "FluentMigrator.NHibernate": "1.0.0.17",
+          "FluentMigrator.Runner": "3.2.1",
+          "FluentMigrator.Runner.Postgres": "3.2.1",
+          "FluentMigratorNHibernateGenerator": "1.1.0",
           "FluentNHibernate": "2.1.2",
           "JWT": "5.2.2",
           "Microsoft.AspNetCore.App": "2.2.0",
           "Microsoft.AspNetCore.Razor.Design": "2.2.0",
+          "Microsoft.NET.Test.Sdk": "16.2.0",
           "Microsoft.NETCore.App": "2.2.0",
           "NHibernate": "5.2.5",
+          "NUnit": "3.12.0",
+          "NUnit3TestAdapter": "3.13.0",
           "Npgsql": "4.0.7",
           "System.Runtime": "4.3.1"
         },
@@ -52,6 +62,327 @@
         },
         "compile": {
           "lib/netstandard1.1/Antlr3.Runtime.dll": {}
+        }
+      },
+      "FluentMigrator/3.2.1": {
+        "dependencies": {
+          "FluentMigrator.Abstractions": "3.2.1",
+          "Microsoft.Extensions.DependencyInjection": "2.2.0",
+          "Microsoft.Extensions.Options": "2.2.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/FluentMigrator.dll": {
+            "assemblyVersion": "3.2.1.0",
+            "fileVersion": "3.2.1.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/FluentMigrator.dll": {}
+        }
+      },
+      "FluentMigrator.Abstractions/3.2.1": {
+        "dependencies": {
+          "System.ComponentModel.Annotations": "4.5.0",
+          "System.ValueTuple": "4.5.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/FluentMigrator.Abstractions.dll": {
+            "assemblyVersion": "3.2.1.0",
+            "fileVersion": "3.2.1.0"
+          }
+        },
+        "resources": {
+          "lib/netstandard2.0/de-DE/FluentMigrator.Abstractions.resources.dll": {
+            "locale": "de-DE"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/FluentMigrator.Abstractions.dll": {}
+        }
+      },
+      "FluentMigrator.Console/3.2.1": {},
+      "FluentMigrator.Extensions.Oracle/3.2.1": {
+        "dependencies": {
+          "FluentMigrator.Abstractions": "3.2.1"
+        },
+        "runtime": {
+          "lib/netstandard2.0/FluentMigrator.Extensions.Oracle.dll": {
+            "assemblyVersion": "3.2.1.0",
+            "fileVersion": "3.2.1.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/FluentMigrator.Extensions.Oracle.dll": {}
+        }
+      },
+      "FluentMigrator.Extensions.SqlAnywhere/3.2.1": {
+        "dependencies": {
+          "FluentMigrator.Abstractions": "3.2.1"
+        },
+        "runtime": {
+          "lib/netstandard2.0/FluentMigrator.Extensions.SqlAnywhere.dll": {
+            "assemblyVersion": "3.2.1.0",
+            "fileVersion": "3.2.1.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/FluentMigrator.Extensions.SqlAnywhere.dll": {}
+        }
+      },
+      "FluentMigrator.Extensions.SqlServer/3.2.1": {
+        "dependencies": {
+          "FluentMigrator.Abstractions": "3.2.1"
+        },
+        "runtime": {
+          "lib/netstandard2.0/FluentMigrator.Extensions.SqlServer.dll": {
+            "assemblyVersion": "3.2.1.0",
+            "fileVersion": "3.2.1.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/FluentMigrator.Extensions.SqlServer.dll": {}
+        }
+      },
+      "FluentMigrator.Generator/1.0.5": {
+        "dependencies": {
+          "FluentMigrator": "3.2.1"
+        }
+      },
+      "FluentMigrator.NHibernate/1.0.0.17": {
+        "runtime": {
+          "lib/net461/FluentMigrator.NHibernate.dll": {
+            "assemblyVersion": "1.0.0.16",
+            "fileVersion": "1.0.0.16"
+          }
+        },
+        "compile": {
+          "lib/net461/FluentMigrator.NHibernate.dll": {}
+        }
+      },
+      "FluentMigrator.Runner/3.2.1": {
+        "dependencies": {
+          "FluentMigrator": "3.2.1",
+          "FluentMigrator.Runner.Core": "3.2.1",
+          "FluentMigrator.Runner.Db2": "3.2.1",
+          "FluentMigrator.Runner.Firebird": "3.2.1",
+          "FluentMigrator.Runner.Hana": "3.2.1",
+          "FluentMigrator.Runner.MySql": "3.2.1",
+          "FluentMigrator.Runner.Oracle": "3.2.1",
+          "FluentMigrator.Runner.Postgres": "3.2.1",
+          "FluentMigrator.Runner.Redshift": "3.2.1",
+          "FluentMigrator.Runner.SQLite": "3.2.1",
+          "FluentMigrator.Runner.SqlAnywhere": "3.2.1",
+          "FluentMigrator.Runner.SqlServer": "3.2.1",
+          "FluentMigrator.Runner.SqlServerCe": "3.2.1",
+          "Microsoft.Extensions.Configuration.Abstractions": "2.2.0",
+          "Microsoft.Extensions.Logging": "2.2.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/FluentMigrator.Runner.dll": {
+            "assemblyVersion": "3.2.1.0",
+            "fileVersion": "3.2.1.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/FluentMigrator.Runner.dll": {}
+        }
+      },
+      "FluentMigrator.Runner.Core/3.2.1": {
+        "dependencies": {
+          "FluentMigrator.Abstractions": "3.2.1",
+          "Microsoft.Extensions.Configuration.Abstractions": "2.2.0",
+          "Microsoft.Extensions.DependencyInjection": "2.2.0",
+          "Microsoft.Extensions.Logging.Abstractions": "2.2.0",
+          "Microsoft.Extensions.Options": "2.2.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/FluentMigrator.Runner.Core.dll": {
+            "assemblyVersion": "3.2.1.0",
+            "fileVersion": "3.2.1.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/FluentMigrator.Runner.Core.dll": {}
+        }
+      },
+      "FluentMigrator.Runner.Db2/3.2.1": {
+        "dependencies": {
+          "FluentMigrator.Runner.Core": "3.2.1"
+        },
+        "runtime": {
+          "lib/netstandard2.0/FluentMigrator.Runner.Db2.dll": {
+            "assemblyVersion": "3.2.1.0",
+            "fileVersion": "3.2.1.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/FluentMigrator.Runner.Db2.dll": {}
+        }
+      },
+      "FluentMigrator.Runner.Firebird/3.2.1": {
+        "dependencies": {
+          "FluentMigrator.Runner.Core": "3.2.1",
+          "Microsoft.Extensions.Options": "2.2.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/FluentMigrator.Runner.Firebird.dll": {
+            "assemblyVersion": "3.2.1.0",
+            "fileVersion": "3.2.1.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/FluentMigrator.Runner.Firebird.dll": {}
+        }
+      },
+      "FluentMigrator.Runner.Hana/3.2.1": {
+        "dependencies": {
+          "FluentMigrator.Runner.Core": "3.2.1"
+        },
+        "runtime": {
+          "lib/netstandard2.0/FluentMigrator.Runner.Hana.dll": {
+            "assemblyVersion": "3.2.1.0",
+            "fileVersion": "3.2.1.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/FluentMigrator.Runner.Hana.dll": {}
+        }
+      },
+      "FluentMigrator.Runner.MySql/3.2.1": {
+        "dependencies": {
+          "FluentMigrator.Runner.Core": "3.2.1"
+        },
+        "runtime": {
+          "lib/netstandard2.0/FluentMigrator.Runner.MySql.dll": {
+            "assemblyVersion": "3.2.1.0",
+            "fileVersion": "3.2.1.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/FluentMigrator.Runner.MySql.dll": {}
+        }
+      },
+      "FluentMigrator.Runner.Oracle/3.2.1": {
+        "dependencies": {
+          "FluentMigrator.Extensions.Oracle": "3.2.1",
+          "FluentMigrator.Runner.Core": "3.2.1"
+        },
+        "runtime": {
+          "lib/netstandard2.0/FluentMigrator.Runner.Oracle.dll": {
+            "assemblyVersion": "3.2.1.0",
+            "fileVersion": "3.2.1.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/FluentMigrator.Runner.Oracle.dll": {}
+        }
+      },
+      "FluentMigrator.Runner.Postgres/3.2.1": {
+        "dependencies": {
+          "FluentMigrator.Runner.Core": "3.2.1"
+        },
+        "runtime": {
+          "lib/netstandard2.0/FluentMigrator.Runner.Postgres.dll": {
+            "assemblyVersion": "3.2.1.0",
+            "fileVersion": "3.2.1.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/FluentMigrator.Runner.Postgres.dll": {}
+        }
+      },
+      "FluentMigrator.Runner.Redshift/3.2.1": {
+        "dependencies": {
+          "FluentMigrator.Runner.Core": "3.2.1"
+        },
+        "runtime": {
+          "lib/netstandard2.0/FluentMigrator.Runner.Redshift.dll": {
+            "assemblyVersion": "3.2.1.0",
+            "fileVersion": "3.2.1.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/FluentMigrator.Runner.Redshift.dll": {}
+        }
+      },
+      "FluentMigrator.Runner.SqlAnywhere/3.2.1": {
+        "dependencies": {
+          "FluentMigrator.Extensions.SqlAnywhere": "3.2.1",
+          "FluentMigrator.Runner.Core": "3.2.1"
+        },
+        "runtime": {
+          "lib/netstandard2.0/FluentMigrator.Runner.SqlAnywhere.dll": {
+            "assemblyVersion": "3.2.1.0",
+            "fileVersion": "3.2.1.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/FluentMigrator.Runner.SqlAnywhere.dll": {}
+        }
+      },
+      "FluentMigrator.Runner.SQLite/3.2.1": {
+        "dependencies": {
+          "FluentMigrator.Runner.Core": "3.2.1"
+        },
+        "runtime": {
+          "lib/netstandard2.0/FluentMigrator.Runner.SQLite.dll": {
+            "assemblyVersion": "3.2.1.0",
+            "fileVersion": "3.2.1.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/FluentMigrator.Runner.SQLite.dll": {}
+        }
+      },
+      "FluentMigrator.Runner.SqlServer/3.2.1": {
+        "dependencies": {
+          "FluentMigrator.Extensions.SqlServer": "3.2.1",
+          "FluentMigrator.Runner.Core": "3.2.1",
+          "System.Data.SqlClient": "4.6.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/FluentMigrator.Runner.SqlServer.dll": {
+            "assemblyVersion": "3.2.1.0",
+            "fileVersion": "3.2.1.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/FluentMigrator.Runner.SqlServer.dll": {}
+        }
+      },
+      "FluentMigrator.Runner.SqlServerCe/3.2.1": {
+        "dependencies": {
+          "FluentMigrator.Runner.SqlServer": "3.2.1",
+          "System.Security.Permissions": "4.5.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/FluentMigrator.Runner.SqlServerCe.dll": {
+            "assemblyVersion": "3.2.1.0",
+            "fileVersion": "3.2.1.0"
+          },
+          "lib/netstandard2.0/System.Data.SqlServerCe.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.0.8876.1"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/FluentMigrator.Runner.SqlServerCe.dll": {},
+          "lib/netstandard2.0/System.Data.SqlServerCe.dll": {}
+        }
+      },
+      "FluentMigratorNHibernateGenerator/1.1.0": {
+        "dependencies": {
+          "FluentMigrator": "3.2.1",
+          "NHibernate": "5.2.5"
+        },
+        "runtime": {
+          "lib/FluentMigrator.NHibernateGenerator.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        },
+        "compile": {
+          "lib/FluentMigrator.NHibernateGenerator.dll": {}
         }
       },
       "FluentNHibernate/2.1.2": {
@@ -100,6 +431,322 @@
           "lib/netstandard2.0/JWT.dll": {}
         }
       },
+      "Microsoft.CodeCoverage/16.2.0": {
+        "runtime": {
+          "lib/netcoreapp1.0/Microsoft.VisualStudio.CodeCoverage.Shim.dll": {
+            "assemblyVersion": "15.0.0.0",
+            "fileVersion": "16.0.28223.3002"
+          }
+        },
+        "compile": {
+          "lib/netcoreapp1.0/Microsoft.VisualStudio.CodeCoverage.Shim.dll": {}
+        }
+      },
+      "Microsoft.DotNet.InternalAbstractions/1.0.0": {
+        "dependencies": {
+          "System.AppContext": "4.3.0",
+          "System.Collections": "4.3.0",
+          "System.IO": "4.3.0",
+          "System.IO.FileSystem": "4.3.0",
+          "System.Reflection.TypeExtensions": "4.5.1",
+          "System.Runtime.Extensions": "4.3.0",
+          "System.Runtime.InteropServices": "4.3.0",
+          "System.Runtime.InteropServices.RuntimeInformation": "4.3.0"
+        },
+        "runtime": {
+          "lib/netstandard1.3/Microsoft.DotNet.InternalAbstractions.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard1.3/Microsoft.DotNet.InternalAbstractions.dll": {}
+        }
+      },
+      "Microsoft.NET.Test.Sdk/16.2.0": {
+        "dependencies": {
+          "Microsoft.CodeCoverage": "16.2.0",
+          "Microsoft.TestPlatform.TestHost": "16.2.0"
+        }
+      },
+      "Microsoft.TestPlatform.ObjectModel/16.2.0": {
+        "dependencies": {
+          "NETStandard.Library": "2.0.3",
+          "System.ComponentModel.EventBasedAsync": "4.3.0",
+          "System.ComponentModel.TypeConverter": "4.3.0",
+          "System.Diagnostics.Process": "4.3.0",
+          "System.Diagnostics.TextWriterTraceListener": "4.0.0",
+          "System.Diagnostics.TraceSource": "4.0.0",
+          "System.Reflection.Metadata": "1.6.0",
+          "System.Reflection.TypeExtensions": "4.5.1",
+          "System.Runtime.InteropServices.RuntimeInformation": "4.3.0",
+          "System.Runtime.Loader": "4.0.0",
+          "System.Runtime.Serialization.Json": "4.0.2",
+          "System.Runtime.Serialization.Primitives": "4.3.0",
+          "System.Threading.Thread": "4.3.0",
+          "System.Xml.XPath.XmlDocument": "4.3.0"
+        },
+        "runtime": {
+          "lib/netstandard1.5/Microsoft.TestPlatform.CoreUtilities.dll": {
+            "assemblyVersion": "15.0.0.0",
+            "fileVersion": "15.0.0.0"
+          },
+          "lib/netstandard1.5/Microsoft.TestPlatform.PlatformAbstractions.dll": {
+            "assemblyVersion": "15.0.0.0",
+            "fileVersion": "15.0.0.0"
+          },
+          "lib/netstandard1.5/Microsoft.VisualStudio.TestPlatform.ObjectModel.dll": {
+            "assemblyVersion": "15.0.0.0",
+            "fileVersion": "15.0.0.0"
+          }
+        },
+        "resources": {
+          "lib/netstandard1.5/cs/Microsoft.TestPlatform.CoreUtilities.resources.dll": {
+            "locale": "cs"
+          },
+          "lib/netstandard1.5/cs/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll": {
+            "locale": "cs"
+          },
+          "lib/netstandard1.5/de/Microsoft.TestPlatform.CoreUtilities.resources.dll": {
+            "locale": "de"
+          },
+          "lib/netstandard1.5/de/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll": {
+            "locale": "de"
+          },
+          "lib/netstandard1.5/es/Microsoft.TestPlatform.CoreUtilities.resources.dll": {
+            "locale": "es"
+          },
+          "lib/netstandard1.5/es/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll": {
+            "locale": "es"
+          },
+          "lib/netstandard1.5/fr/Microsoft.TestPlatform.CoreUtilities.resources.dll": {
+            "locale": "fr"
+          },
+          "lib/netstandard1.5/fr/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll": {
+            "locale": "fr"
+          },
+          "lib/netstandard1.5/it/Microsoft.TestPlatform.CoreUtilities.resources.dll": {
+            "locale": "it"
+          },
+          "lib/netstandard1.5/it/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll": {
+            "locale": "it"
+          },
+          "lib/netstandard1.5/ja/Microsoft.TestPlatform.CoreUtilities.resources.dll": {
+            "locale": "ja"
+          },
+          "lib/netstandard1.5/ja/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll": {
+            "locale": "ja"
+          },
+          "lib/netstandard1.5/ko/Microsoft.TestPlatform.CoreUtilities.resources.dll": {
+            "locale": "ko"
+          },
+          "lib/netstandard1.5/ko/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll": {
+            "locale": "ko"
+          },
+          "lib/netstandard1.5/pl/Microsoft.TestPlatform.CoreUtilities.resources.dll": {
+            "locale": "pl"
+          },
+          "lib/netstandard1.5/pl/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll": {
+            "locale": "pl"
+          },
+          "lib/netstandard1.5/pt-BR/Microsoft.TestPlatform.CoreUtilities.resources.dll": {
+            "locale": "pt-BR"
+          },
+          "lib/netstandard1.5/pt-BR/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll": {
+            "locale": "pt-BR"
+          },
+          "lib/netstandard1.5/ru/Microsoft.TestPlatform.CoreUtilities.resources.dll": {
+            "locale": "ru"
+          },
+          "lib/netstandard1.5/ru/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll": {
+            "locale": "ru"
+          },
+          "lib/netstandard1.5/tr/Microsoft.TestPlatform.CoreUtilities.resources.dll": {
+            "locale": "tr"
+          },
+          "lib/netstandard1.5/tr/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll": {
+            "locale": "tr"
+          },
+          "lib/netstandard1.5/zh-Hans/Microsoft.TestPlatform.CoreUtilities.resources.dll": {
+            "locale": "zh-Hans"
+          },
+          "lib/netstandard1.5/zh-Hans/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll": {
+            "locale": "zh-Hans"
+          },
+          "lib/netstandard1.5/zh-Hant/Microsoft.TestPlatform.CoreUtilities.resources.dll": {
+            "locale": "zh-Hant"
+          },
+          "lib/netstandard1.5/zh-Hant/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll": {
+            "locale": "zh-Hant"
+          }
+        },
+        "compile": {
+          "lib/netstandard1.5/Microsoft.TestPlatform.CoreUtilities.dll": {},
+          "lib/netstandard1.5/Microsoft.TestPlatform.PlatformAbstractions.dll": {},
+          "lib/netstandard1.5/Microsoft.VisualStudio.TestPlatform.ObjectModel.dll": {}
+        }
+      },
+      "Microsoft.TestPlatform.TestHost/16.2.0": {
+        "dependencies": {
+          "Microsoft.TestPlatform.ObjectModel": "16.2.0",
+          "Newtonsoft.Json": "11.0.2"
+        },
+        "runtime": {
+          "lib/netstandard1.5/Microsoft.TestPlatform.CommunicationUtilities.dll": {
+            "assemblyVersion": "15.0.0.0",
+            "fileVersion": "15.0.0.0"
+          },
+          "lib/netstandard1.5/Microsoft.TestPlatform.CrossPlatEngine.dll": {
+            "assemblyVersion": "15.0.0.0",
+            "fileVersion": "15.0.0.0"
+          },
+          "lib/netstandard1.5/Microsoft.TestPlatform.Utilities.dll": {
+            "assemblyVersion": "15.0.0.0",
+            "fileVersion": "15.0.0.0"
+          },
+          "lib/netstandard1.5/Microsoft.VisualStudio.TestPlatform.Common.dll": {
+            "assemblyVersion": "15.0.0.0",
+            "fileVersion": "15.0.0.0"
+          },
+          "lib/netstandard1.5/testhost.dll": {
+            "assemblyVersion": "15.0.0.0",
+            "fileVersion": "15.0.0.0"
+          }
+        },
+        "resources": {
+          "lib/netstandard1.5/cs/Microsoft.TestPlatform.CommunicationUtilities.resources.dll": {
+            "locale": "cs"
+          },
+          "lib/netstandard1.5/cs/Microsoft.TestPlatform.CrossPlatEngine.resources.dll": {
+            "locale": "cs"
+          },
+          "lib/netstandard1.5/cs/Microsoft.VisualStudio.TestPlatform.Common.resources.dll": {
+            "locale": "cs"
+          },
+          "lib/netstandard1.5/de/Microsoft.TestPlatform.CommunicationUtilities.resources.dll": {
+            "locale": "de"
+          },
+          "lib/netstandard1.5/de/Microsoft.TestPlatform.CrossPlatEngine.resources.dll": {
+            "locale": "de"
+          },
+          "lib/netstandard1.5/de/Microsoft.VisualStudio.TestPlatform.Common.resources.dll": {
+            "locale": "de"
+          },
+          "lib/netstandard1.5/es/Microsoft.TestPlatform.CommunicationUtilities.resources.dll": {
+            "locale": "es"
+          },
+          "lib/netstandard1.5/es/Microsoft.TestPlatform.CrossPlatEngine.resources.dll": {
+            "locale": "es"
+          },
+          "lib/netstandard1.5/es/Microsoft.VisualStudio.TestPlatform.Common.resources.dll": {
+            "locale": "es"
+          },
+          "lib/netstandard1.5/fr/Microsoft.TestPlatform.CommunicationUtilities.resources.dll": {
+            "locale": "fr"
+          },
+          "lib/netstandard1.5/fr/Microsoft.TestPlatform.CrossPlatEngine.resources.dll": {
+            "locale": "fr"
+          },
+          "lib/netstandard1.5/fr/Microsoft.VisualStudio.TestPlatform.Common.resources.dll": {
+            "locale": "fr"
+          },
+          "lib/netstandard1.5/it/Microsoft.TestPlatform.CommunicationUtilities.resources.dll": {
+            "locale": "it"
+          },
+          "lib/netstandard1.5/it/Microsoft.TestPlatform.CrossPlatEngine.resources.dll": {
+            "locale": "it"
+          },
+          "lib/netstandard1.5/it/Microsoft.VisualStudio.TestPlatform.Common.resources.dll": {
+            "locale": "it"
+          },
+          "lib/netstandard1.5/ja/Microsoft.TestPlatform.CommunicationUtilities.resources.dll": {
+            "locale": "ja"
+          },
+          "lib/netstandard1.5/ja/Microsoft.TestPlatform.CrossPlatEngine.resources.dll": {
+            "locale": "ja"
+          },
+          "lib/netstandard1.5/ja/Microsoft.VisualStudio.TestPlatform.Common.resources.dll": {
+            "locale": "ja"
+          },
+          "lib/netstandard1.5/ko/Microsoft.TestPlatform.CommunicationUtilities.resources.dll": {
+            "locale": "ko"
+          },
+          "lib/netstandard1.5/ko/Microsoft.TestPlatform.CrossPlatEngine.resources.dll": {
+            "locale": "ko"
+          },
+          "lib/netstandard1.5/ko/Microsoft.VisualStudio.TestPlatform.Common.resources.dll": {
+            "locale": "ko"
+          },
+          "lib/netstandard1.5/pl/Microsoft.TestPlatform.CommunicationUtilities.resources.dll": {
+            "locale": "pl"
+          },
+          "lib/netstandard1.5/pl/Microsoft.TestPlatform.CrossPlatEngine.resources.dll": {
+            "locale": "pl"
+          },
+          "lib/netstandard1.5/pl/Microsoft.VisualStudio.TestPlatform.Common.resources.dll": {
+            "locale": "pl"
+          },
+          "lib/netstandard1.5/pt-BR/Microsoft.TestPlatform.CommunicationUtilities.resources.dll": {
+            "locale": "pt-BR"
+          },
+          "lib/netstandard1.5/pt-BR/Microsoft.TestPlatform.CrossPlatEngine.resources.dll": {
+            "locale": "pt-BR"
+          },
+          "lib/netstandard1.5/pt-BR/Microsoft.VisualStudio.TestPlatform.Common.resources.dll": {
+            "locale": "pt-BR"
+          },
+          "lib/netstandard1.5/ru/Microsoft.TestPlatform.CommunicationUtilities.resources.dll": {
+            "locale": "ru"
+          },
+          "lib/netstandard1.5/ru/Microsoft.TestPlatform.CrossPlatEngine.resources.dll": {
+            "locale": "ru"
+          },
+          "lib/netstandard1.5/ru/Microsoft.VisualStudio.TestPlatform.Common.resources.dll": {
+            "locale": "ru"
+          },
+          "lib/netstandard1.5/tr/Microsoft.TestPlatform.CommunicationUtilities.resources.dll": {
+            "locale": "tr"
+          },
+          "lib/netstandard1.5/tr/Microsoft.TestPlatform.CrossPlatEngine.resources.dll": {
+            "locale": "tr"
+          },
+          "lib/netstandard1.5/tr/Microsoft.VisualStudio.TestPlatform.Common.resources.dll": {
+            "locale": "tr"
+          },
+          "lib/netstandard1.5/zh-Hans/Microsoft.TestPlatform.CommunicationUtilities.resources.dll": {
+            "locale": "zh-Hans"
+          },
+          "lib/netstandard1.5/zh-Hans/Microsoft.TestPlatform.CrossPlatEngine.resources.dll": {
+            "locale": "zh-Hans"
+          },
+          "lib/netstandard1.5/zh-Hans/Microsoft.VisualStudio.TestPlatform.Common.resources.dll": {
+            "locale": "zh-Hans"
+          },
+          "lib/netstandard1.5/zh-Hant/Microsoft.TestPlatform.CommunicationUtilities.resources.dll": {
+            "locale": "zh-Hant"
+          },
+          "lib/netstandard1.5/zh-Hant/Microsoft.TestPlatform.CrossPlatEngine.resources.dll": {
+            "locale": "zh-Hant"
+          },
+          "lib/netstandard1.5/zh-Hant/Microsoft.VisualStudio.TestPlatform.Common.resources.dll": {
+            "locale": "zh-Hant"
+          }
+        },
+        "compile": {
+          "lib/netstandard1.5/Microsoft.TestPlatform.CommunicationUtilities.dll": {},
+          "lib/netstandard1.5/Microsoft.TestPlatform.CrossPlatEngine.dll": {},
+          "lib/netstandard1.5/Microsoft.TestPlatform.Utilities.dll": {},
+          "lib/netstandard1.5/Microsoft.VisualStudio.TestPlatform.Common.dll": {},
+          "lib/netstandard1.5/testhost.dll": {}
+        }
+      },
+      "Microsoft.Win32.Primitives/4.3.0": {
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "2.2.0",
+          "Microsoft.NETCore.Targets": "2.0.0",
+          "System.Runtime": "4.3.1"
+        }
+      },
       "NHibernate/5.2.5": {
         "dependencies": {
           "Antlr3.Runtime": "3.5.1",
@@ -135,6 +782,33 @@
           "lib/netstandard2.0/Npgsql.dll": {}
         }
       },
+      "NUnit/3.12.0": {
+        "dependencies": {
+          "NETStandard.Library": "2.0.3"
+        },
+        "runtime": {
+          "lib/netstandard2.0/nunit.framework.dll": {
+            "assemblyVersion": "3.12.0.0",
+            "fileVersion": "3.12.0.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/nunit.framework.dll": {}
+        }
+      },
+      "NUnit3TestAdapter/3.13.0": {
+        "dependencies": {
+          "Microsoft.DotNet.InternalAbstractions": "1.0.0",
+          "System.ComponentModel.EventBasedAsync": "4.3.0",
+          "System.ComponentModel.TypeConverter": "4.3.0",
+          "System.Diagnostics.Process": "4.3.0",
+          "System.Reflection": "4.3.0",
+          "System.Runtime.InteropServices.RuntimeInformation": "4.3.0",
+          "System.Threading.Thread": "4.3.0",
+          "System.Xml.XPath.XmlDocument": "4.3.0",
+          "System.Xml.XmlDocument": "4.3.0"
+        }
+      },
       "Remotion.Linq.EagerFetching/2.2.0": {
         "dependencies": {
           "Remotion.Linq": "2.2.0",
@@ -160,11 +834,38 @@
           "System.Runtime": "4.3.1"
         }
       },
+      "System.ComponentModel.EventBasedAsync/4.3.0": {
+        "dependencies": {
+          "System.Resources.ResourceManager": "4.3.0",
+          "System.Runtime": "4.3.1",
+          "System.Threading": "4.3.0",
+          "System.Threading.Tasks": "4.3.0"
+        }
+      },
       "System.ComponentModel.Primitives/4.3.0": {
         "dependencies": {
           "System.ComponentModel": "4.3.0",
           "System.Resources.ResourceManager": "4.3.0",
           "System.Runtime": "4.3.1"
+        }
+      },
+      "System.ComponentModel.TypeConverter/4.3.0": {
+        "dependencies": {
+          "System.Collections": "4.3.0",
+          "System.Collections.NonGeneric": "4.3.0",
+          "System.Collections.Specialized": "4.3.0",
+          "System.ComponentModel": "4.3.0",
+          "System.ComponentModel.Primitives": "4.3.0",
+          "System.Globalization": "4.3.0",
+          "System.Linq": "4.3.0",
+          "System.Reflection": "4.3.0",
+          "System.Reflection.Extensions": "4.3.0",
+          "System.Reflection.Primitives": "4.3.0",
+          "System.Reflection.TypeExtensions": "4.5.1",
+          "System.Resources.ResourceManager": "4.3.0",
+          "System.Runtime": "4.3.1",
+          "System.Runtime.Extensions": "4.3.0",
+          "System.Threading": "4.3.0"
         }
       },
       "System.Configuration.ConfigurationManager/4.4.1": {
@@ -179,6 +880,78 @@
         },
         "compile": {
           "ref/netstandard2.0/System.Configuration.ConfigurationManager.dll": {}
+        }
+      },
+      "System.Diagnostics.Process/4.3.0": {
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "2.2.0",
+          "Microsoft.Win32.Primitives": "4.3.0",
+          "Microsoft.Win32.Registry": "4.5.0",
+          "System.Collections": "4.3.0",
+          "System.Diagnostics.Debug": "4.3.0",
+          "System.Globalization": "4.3.0",
+          "System.IO": "4.3.0",
+          "System.IO.FileSystem": "4.3.0",
+          "System.IO.FileSystem.Primitives": "4.3.0",
+          "System.Resources.ResourceManager": "4.3.0",
+          "System.Runtime": "4.3.1",
+          "System.Runtime.Extensions": "4.3.0",
+          "System.Runtime.Handles": "4.3.0",
+          "System.Runtime.InteropServices": "4.3.0",
+          "System.Text.Encoding": "4.3.0",
+          "System.Text.Encoding.Extensions": "4.3.0",
+          "System.Threading": "4.3.0",
+          "System.Threading.Tasks": "4.3.0",
+          "System.Threading.Thread": "4.3.0",
+          "System.Threading.ThreadPool": "4.3.0",
+          "runtime.native.System": "4.3.0"
+        },
+        "runtimeTargets": {
+          "runtime/linux/lib/_._": {
+            "rid": "linux",
+            "assetType": "runtime"
+          },
+          "runtime/osx/lib/_._": {
+            "rid": "osx",
+            "assetType": "runtime"
+          },
+          "runtime/win/lib/_._": {
+            "rid": "win",
+            "assetType": "runtime"
+          }
+        }
+      },
+      "System.Diagnostics.TextWriterTraceListener/4.0.0": {
+        "dependencies": {
+          "System.Diagnostics.TraceSource": "4.0.0",
+          "System.Globalization": "4.3.0",
+          "System.IO": "4.3.0",
+          "System.Resources.ResourceManager": "4.3.0",
+          "System.Runtime": "4.3.1",
+          "System.Threading": "4.3.0"
+        }
+      },
+      "System.Diagnostics.TraceSource/4.0.0": {
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "2.2.0",
+          "System.Collections": "4.3.0",
+          "System.Diagnostics.Debug": "4.3.0",
+          "System.Globalization": "4.3.0",
+          "System.Resources.ResourceManager": "4.3.0",
+          "System.Runtime": "4.3.1",
+          "System.Runtime.Extensions": "4.3.0",
+          "System.Threading": "4.3.0",
+          "runtime.native.System": "4.3.0"
+        },
+        "runtimeTargets": {
+          "runtime/unix/lib/_._": {
+            "rid": "unix",
+            "assetType": "runtime"
+          },
+          "runtime/win/lib/_._": {
+            "rid": "win",
+            "assetType": "runtime"
+          }
         }
       },
       "System.Memory/4.5.3": {},
@@ -200,6 +973,13 @@
           "ref/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll": {}
         }
       },
+      "System.Runtime.Loader/4.0.0": {
+        "dependencies": {
+          "System.IO": "4.3.0",
+          "System.Reflection": "4.3.0",
+          "System.Runtime": "4.3.1"
+        }
+      },
       "System.Runtime.Serialization.Formatters/4.3.0": {
         "dependencies": {
           "System.Collections": "4.3.0",
@@ -207,6 +987,13 @@
           "System.Resources.ResourceManager": "4.3.0",
           "System.Runtime": "4.3.1",
           "System.Runtime.Serialization.Primitives": "4.3.0"
+        }
+      },
+      "System.Runtime.Serialization.Json/4.0.2": {
+        "dependencies": {
+          "System.IO": "4.3.0",
+          "System.Private.DataContractSerialization": "4.3.0",
+          "System.Runtime": "4.3.1"
         }
       },
       "System.Security.Cryptography.ProtectedData/4.4.0": {
@@ -226,7 +1013,36 @@
         }
       },
       "System.Threading.Tasks.Extensions/4.5.2": {},
+      "System.Threading.ThreadPool/4.3.0": {
+        "dependencies": {
+          "System.Runtime": "4.3.1",
+          "System.Runtime.Handles": "4.3.0"
+        }
+      },
       "System.ValueTuple/4.5.0": {},
+      "System.Xml.XPath.XmlDocument/4.3.0": {
+        "dependencies": {
+          "System.Collections": "4.3.0",
+          "System.Globalization": "4.3.0",
+          "System.IO": "4.3.0",
+          "System.Resources.ResourceManager": "4.3.0",
+          "System.Runtime": "4.3.1",
+          "System.Runtime.Extensions": "4.3.0",
+          "System.Threading": "4.3.0",
+          "System.Xml.ReaderWriter": "4.3.0",
+          "System.Xml.XPath": "4.3.0",
+          "System.Xml.XmlDocument": "4.3.0"
+        },
+        "runtime": {
+          "lib/netstandard1.3/System.Xml.XPath.XmlDocument.dll": {
+            "assemblyVersion": "4.0.2.0",
+            "fileVersion": "4.6.24705.1"
+          }
+        },
+        "compile": {
+          "ref/netstandard1.3/System.Xml.XPath.XmlDocument.dll": {}
+        }
+      },
       "Microsoft.AspNet.WebApi.Client/5.2.6": {
         "dependencies": {
           "Newtonsoft.Json": "11.0.2",
@@ -3402,6 +4218,160 @@
       "path": "antlr3.runtime/3.5.1",
       "hashPath": "antlr3.runtime.3.5.1.nupkg.sha512"
     },
+    "FluentMigrator/3.2.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-3XiMExA1cLDW5yXY7C7cgUQr7I6h/EfSkSRelo0kBf6551KGPVVtYDZuPWj/SrttYEmQoQYD4MORp3fiz1pSCg==",
+      "path": "fluentmigrator/3.2.1",
+      "hashPath": "fluentmigrator.3.2.1.nupkg.sha512"
+    },
+    "FluentMigrator.Abstractions/3.2.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-gmnesihuz9bFiODRtQw9Msf6jrgbElWB4MEBOR5LNGB+gKBSXYF34i/aIUQexmJhcnVE5VkRHMECMpqNM0PSng==",
+      "path": "fluentmigrator.abstractions/3.2.1",
+      "hashPath": "fluentmigrator.abstractions.3.2.1.nupkg.sha512"
+    },
+    "FluentMigrator.Console/3.2.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Jwtjwb5eZXp0AXah7ivd3zjA5kG+0LNBVJatO3IXe8NfM3A0L/TiBacJnlayl0XaYwxiMAwnzjfFMBrbGwINHQ==",
+      "path": "fluentmigrator.console/3.2.1",
+      "hashPath": "fluentmigrator.console.3.2.1.nupkg.sha512"
+    },
+    "FluentMigrator.Extensions.Oracle/3.2.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-coNrtHWToflHHnBcrsaJK8t7hrv6DQb4eRR7Gg2CxWrPf+0Zyjr7FAVR1AMKf0YvbrJDXq1Q12vpVjuy24aILg==",
+      "path": "fluentmigrator.extensions.oracle/3.2.1",
+      "hashPath": "fluentmigrator.extensions.oracle.3.2.1.nupkg.sha512"
+    },
+    "FluentMigrator.Extensions.SqlAnywhere/3.2.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-MZhP22sRjrISf9cET05Xl7n71hljurihsmCGu3U4hdIlcClkpk33k5ghx4YCant1FoEcrX79f6+kHGi4+W4Drw==",
+      "path": "fluentmigrator.extensions.sqlanywhere/3.2.1",
+      "hashPath": "fluentmigrator.extensions.sqlanywhere.3.2.1.nupkg.sha512"
+    },
+    "FluentMigrator.Extensions.SqlServer/3.2.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-RRztfTxOq6JxOH//687XpL5J7EtSU0qGm1AUQsn5Hl/lv0N9Xk+F4L1OWreHHahF6V0QroGB4gjjZuUkvYs2uw==",
+      "path": "fluentmigrator.extensions.sqlserver/3.2.1",
+      "hashPath": "fluentmigrator.extensions.sqlserver.3.2.1.nupkg.sha512"
+    },
+    "FluentMigrator.Generator/1.0.5": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-sYoz+kvdfWAhFzmlJa4AQkpzi2oWYF7MthCeZoagFtHenj4q25EZbmkgFHC2zg44Dgpjui3DJ5jzg9pdkDB08w==",
+      "path": "fluentmigrator.generator/1.0.5",
+      "hashPath": "fluentmigrator.generator.1.0.5.nupkg.sha512"
+    },
+    "FluentMigrator.NHibernate/1.0.0.17": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-4DMcPYUOVS2XpbgB/d9ZjCnNepNHWsjdqVTtCCy8xHmA1rmf0fvElHg1b1vlUjONTxWvuCmp6nBrfYGsWFzYZw==",
+      "path": "fluentmigrator.nhibernate/1.0.0.17",
+      "hashPath": "fluentmigrator.nhibernate.1.0.0.17.nupkg.sha512"
+    },
+    "FluentMigrator.Runner/3.2.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-chjQPiVujJodDCIdMTRPYRunGL2eof1miIMj5FSIwdNYijGjZ2K9fmPIb1eI6QNUc7Zojtx5IgbpF3aOFHJOgA==",
+      "path": "fluentmigrator.runner/3.2.1",
+      "hashPath": "fluentmigrator.runner.3.2.1.nupkg.sha512"
+    },
+    "FluentMigrator.Runner.Core/3.2.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-XnmttdMQBGP5ET/rCkyE2coP0VBPs3s4Ia0/vEVkYiUYx7IqXVEVL+aEH4IJA7vmktxoCGnWmumQuoI/yv6V/w==",
+      "path": "fluentmigrator.runner.core/3.2.1",
+      "hashPath": "fluentmigrator.runner.core.3.2.1.nupkg.sha512"
+    },
+    "FluentMigrator.Runner.Db2/3.2.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Hw3qHJF2Hd5MfFCP/fMfIHpILf89bH8FjMNSFAdI+yASq3/o5cebT7YVvGOdSnuhsedwR7X6+ppiHALdBzixHA==",
+      "path": "fluentmigrator.runner.db2/3.2.1",
+      "hashPath": "fluentmigrator.runner.db2.3.2.1.nupkg.sha512"
+    },
+    "FluentMigrator.Runner.Firebird/3.2.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-uSse5o0rsyHsSmEM5QsilvPVynSWLGOTf7lJS7RFwYYap0Y93Xn1ixQIo27OuQWVq9uA3SEwackRFeB/5XSegQ==",
+      "path": "fluentmigrator.runner.firebird/3.2.1",
+      "hashPath": "fluentmigrator.runner.firebird.3.2.1.nupkg.sha512"
+    },
+    "FluentMigrator.Runner.Hana/3.2.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-SPyeYgwbARNhsLTVIY2f0n1BD6JExwTX0h/dygWBuyQ4pL85MFs94Ja98Mz1n6b2XoqPWSwwZJuNlVOhqByjuA==",
+      "path": "fluentmigrator.runner.hana/3.2.1",
+      "hashPath": "fluentmigrator.runner.hana.3.2.1.nupkg.sha512"
+    },
+    "FluentMigrator.Runner.MySql/3.2.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-6bvVLHe2xdaDn59v9EKzUtAeBTRDH9qPqEMU4+WsHlvc2PGejW4x6Ci2FCurtlgqc+4cXn7ZqXMtaRyMzMpPfg==",
+      "path": "fluentmigrator.runner.mysql/3.2.1",
+      "hashPath": "fluentmigrator.runner.mysql.3.2.1.nupkg.sha512"
+    },
+    "FluentMigrator.Runner.Oracle/3.2.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-CQKIN8/3YzZbzbFxiAG1EQJ8Smk7mMPwJzi2XPzor+Ex+ghxuruq0o9N8Vij/7uphKdgAbYWQJveZtAjMH2aBQ==",
+      "path": "fluentmigrator.runner.oracle/3.2.1",
+      "hashPath": "fluentmigrator.runner.oracle.3.2.1.nupkg.sha512"
+    },
+    "FluentMigrator.Runner.Postgres/3.2.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-dI3s/pWKI65DtdHQlt++Ccg+nXqGihUVceWibiUjNPQ1mpxzTsgmO2GvLQ3Q5qj8Kyx7RoBk7SYzZCC6cf4X5A==",
+      "path": "fluentmigrator.runner.postgres/3.2.1",
+      "hashPath": "fluentmigrator.runner.postgres.3.2.1.nupkg.sha512"
+    },
+    "FluentMigrator.Runner.Redshift/3.2.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-1Bmfa9S3sTEV9hXjOhcin8h+H0QvvXx5y+aw1PZRxz9t+FUL4b3sP8L3gokT54mGxea+sN13d8wmFoHU4NejbA==",
+      "path": "fluentmigrator.runner.redshift/3.2.1",
+      "hashPath": "fluentmigrator.runner.redshift.3.2.1.nupkg.sha512"
+    },
+    "FluentMigrator.Runner.SqlAnywhere/3.2.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-C7qH8evk6aS1EfiYUK+SkKtj1Lkt/ZGhMI1Ht/Is+fidD5ySdOd2gUec6R93qzzyasdRzOwwnw7FjyMR6SJogg==",
+      "path": "fluentmigrator.runner.sqlanywhere/3.2.1",
+      "hashPath": "fluentmigrator.runner.sqlanywhere.3.2.1.nupkg.sha512"
+    },
+    "FluentMigrator.Runner.SQLite/3.2.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-SMjKVOTMO3225rF18X8+TVRfOhChGQqGY+E2Hd6TaGGw8wbQrSWzgU07wV4XGvW6JPPhbgKTz/Phz6+SUxGt3Q==",
+      "path": "fluentmigrator.runner.sqlite/3.2.1",
+      "hashPath": "fluentmigrator.runner.sqlite.3.2.1.nupkg.sha512"
+    },
+    "FluentMigrator.Runner.SqlServer/3.2.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-XcKiR+sT+8Xq6PVelM6GG8t8P0QgnX4XuAhnRhyPn/QHob6X5wENmC5q/TnqI3jGSPhv39BGy+Is1MNGADWLBw==",
+      "path": "fluentmigrator.runner.sqlserver/3.2.1",
+      "hashPath": "fluentmigrator.runner.sqlserver.3.2.1.nupkg.sha512"
+    },
+    "FluentMigrator.Runner.SqlServerCe/3.2.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-b5PXsIwocRW2oGXXqm8xkQx4gkqA33BMIGlq9pqNlbiKGTycXxDSepmqO8uQFo+RMa4HcxKLzGlixSVgNGwF8w==",
+      "path": "fluentmigrator.runner.sqlserverce/3.2.1",
+      "hashPath": "fluentmigrator.runner.sqlserverce.3.2.1.nupkg.sha512"
+    },
+    "FluentMigratorNHibernateGenerator/1.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-NbYTnDHyZYq8+tQHu3djtp6GwUKuYBKsIxnKYRxz8EKWw62J6lRbPrTONPGkwO4lmyVBAVtIrzkqgW5HxtidEQ==",
+      "path": "fluentmigratornhibernategenerator/1.1.0",
+      "hashPath": "fluentmigratornhibernategenerator.1.1.0.nupkg.sha512"
+    },
     "FluentNHibernate/2.1.2": {
       "type": "package",
       "serviceable": true,
@@ -3423,6 +4393,48 @@
       "path": "jwt/5.2.2",
       "hashPath": "jwt.5.2.2.nupkg.sha512"
     },
+    "Microsoft.CodeCoverage/16.2.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-kfHUP8A4og9TZ9mqtmkQXcdRTfvnSSYLUnicCadavMa9wADuDH9DIjHUzAnpm/W4Y91iidgTNC902drSOmUWJQ==",
+      "path": "microsoft.codecoverage/16.2.0",
+      "hashPath": "microsoft.codecoverage.16.2.0.nupkg.sha512"
+    },
+    "Microsoft.DotNet.InternalAbstractions/1.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-S8f3mnSN4yNYafvMEuZKz3VSSv49BQahI6Ibmx9ryuc+7EQ3QsTt4rSvrazwoX2qcLhkPpDV/wLW7yDK6nyuFA==",
+      "path": "microsoft.dotnet.internalabstractions/1.0.0",
+      "hashPath": "microsoft.dotnet.internalabstractions.1.0.0.nupkg.sha512"
+    },
+    "Microsoft.NET.Test.Sdk/16.2.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-4eLVyBLaFX+5huQXiZMj0EEiYshvS4H3iQ4s8eRGx6G1jtXWbKw+3NFhpWNokdopVObQnBnoZQid0acSBmtdJA==",
+      "path": "microsoft.net.test.sdk/16.2.0",
+      "hashPath": "microsoft.net.test.sdk.16.2.0.nupkg.sha512"
+    },
+    "Microsoft.TestPlatform.ObjectModel/16.2.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-dUP0/57sU4J0IePL1su3+g6J0+rHm0Uv97tFOT9DoEYSlE3qP4ZWNVNXaWis29eiZnfGdVVeiSnhs9TiA4fvHw==",
+      "path": "microsoft.testplatform.objectmodel/16.2.0",
+      "hashPath": "microsoft.testplatform.objectmodel.16.2.0.nupkg.sha512"
+    },
+    "Microsoft.TestPlatform.TestHost/16.2.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ItivpSuOkWdM0RYibCnS4ERD67bRsxyZXH+MUohGvFAa9mogzS0et6rThZlXOAkIUN3EPMw4Zx7aQn4n28pkng==",
+      "path": "microsoft.testplatform.testhost/16.2.0",
+      "hashPath": "microsoft.testplatform.testhost.16.2.0.nupkg.sha512"
+    },
+    "Microsoft.Win32.Primitives/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-9ZQKCWxH7Ijp9BfahvL2Zyf1cJIk8XYLF6Yjzr2yi0b2cOut/HQ31qf1ThHAgCc3WiZMdnWcfJCgN82/0UunxA==",
+      "path": "microsoft.win32.primitives/4.3.0",
+      "hashPath": "microsoft.win32.primitives.4.3.0.nupkg.sha512"
+    },
     "NHibernate/5.2.5": {
       "type": "package",
       "serviceable": true,
@@ -3436,6 +4448,20 @@
       "sha512": "sha512-wSZOdLAWMhlncV4o43PX1b9uuE++xrSaPFgyap8vzhZFANYV0wlcSI8UqqZqTPdocF17hbS5eOAo2PQVaHZLuQ==",
       "path": "npgsql/4.0.7",
       "hashPath": "npgsql.4.0.7.nupkg.sha512"
+    },
+    "NUnit/3.12.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-HAhwFxr+Z+PJf8hXzc747NecvsDwEZ+3X8SA5+GIRM43GAy1Ap+TQPMHsWCnisfes5vPZ1/a2md/91u+shoTsQ==",
+      "path": "nunit/3.12.0",
+      "hashPath": "nunit.3.12.0.nupkg.sha512"
+    },
+    "NUnit3TestAdapter/3.13.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-A3L418IOAk9KrBQKPcgiDAPuriNB6wiZnGRmms1B8BQufPg7J9V4Mmu/G53cmcg3B2K4wWhkLbOB6TtBLd/7jw==",
+      "path": "nunit3testadapter/3.13.0",
+      "hashPath": "nunit3testadapter.3.13.0.nupkg.sha512"
     },
     "Remotion.Linq.EagerFetching/2.2.0": {
       "type": "package",
@@ -3451,6 +4477,13 @@
       "path": "system.componentmodel/4.3.0",
       "hashPath": "system.componentmodel.4.3.0.nupkg.sha512"
     },
+    "System.ComponentModel.EventBasedAsync/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-SXx4bOoSfWE1TIq7RyY7GhIL8W1ueW+xHQApV7bkWs42eDZUwfPgct5tv3jZkWRkvQ8JjWF1ab1d1lFwqYPE+Q==",
+      "path": "system.componentmodel.eventbasedasync/4.3.0",
+      "hashPath": "system.componentmodel.eventbasedasync.4.3.0.nupkg.sha512"
+    },
     "System.ComponentModel.Primitives/4.3.0": {
       "type": "package",
       "serviceable": true,
@@ -3458,12 +4491,40 @@
       "path": "system.componentmodel.primitives/4.3.0",
       "hashPath": "system.componentmodel.primitives.4.3.0.nupkg.sha512"
     },
+    "System.ComponentModel.TypeConverter/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-16pQ6P+EdhcXzPiEK4kbA953Fu0MNG2ovxTZU81/qsCd1zPRsKc3uif5NgvllCY598k6bI0KUyKW8fanlfaDQg==",
+      "path": "system.componentmodel.typeconverter/4.3.0",
+      "hashPath": "system.componentmodel.typeconverter.4.3.0.nupkg.sha512"
+    },
     "System.Configuration.ConfigurationManager/4.4.1": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-LoSjM/kLDpyLyoGsmwS5oVMRzHf/0XHkRpr3QZu/HuAv6Sfk919usTMLqD9N9VK3S4Q2+bd3tKJ0ko4MYFfq4Q==",
       "path": "system.configuration.configurationmanager/4.4.1",
       "hashPath": "system.configuration.configurationmanager.4.4.1.nupkg.sha512"
+    },
+    "System.Diagnostics.Process/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-J0wOX07+QASQblsfxmIMFc9Iq7KTXYL3zs2G/Xc704Ylv3NpuVdo6gij6V3PGiptTxqsK0K7CdXenRvKUnkA2g==",
+      "path": "system.diagnostics.process/4.3.0",
+      "hashPath": "system.diagnostics.process.4.3.0.nupkg.sha512"
+    },
+    "System.Diagnostics.TextWriterTraceListener/4.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-oRsXCz76GDDMrwjMjH6keR9erFIofhGaIMc2d4NykI4rdBEuUP5ZswYA30LGPdyCK7DV4bMBEJL3nJFyAJoS/g==",
+      "path": "system.diagnostics.textwritertracelistener/4.0.0",
+      "hashPath": "system.diagnostics.textwritertracelistener.4.0.0.nupkg.sha512"
+    },
+    "System.Diagnostics.TraceSource/4.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-q5bGzzvXVi+dIMiPWRhXZV7r+Os3TEOuRW5LHsAUDGpqJHol8XiLokVpsgAfPqHHNkyx1bbv5lRZqRkRrGZKxQ==",
+      "path": "system.diagnostics.tracesource/4.0.0",
+      "hashPath": "system.diagnostics.tracesource.4.0.0.nupkg.sha512"
     },
     "System.Memory/4.5.3": {
       "type": "package",
@@ -3493,12 +4554,26 @@
       "path": "system.runtime.compilerservices.unsafe/4.5.2",
       "hashPath": "system.runtime.compilerservices.unsafe.4.5.2.nupkg.sha512"
     },
+    "System.Runtime.Loader/4.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-AGWrywLI2B15/dnLuFnlHWFjXmq1Tl0kjWaKTHbaJ8T9kIxiQ8YGTtiMQc8rUr49l2JjfZa7QY0KKqlyzA7NNg==",
+      "path": "system.runtime.loader/4.0.0",
+      "hashPath": "system.runtime.loader.4.0.0.nupkg.sha512"
+    },
     "System.Runtime.Serialization.Formatters/4.3.0": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-KT591AkTNFOTbhZlaeMVvfax3RqhH1EJlcwF50Wm7sfnBLuHiOeZRRKrr1ns3NESkM20KPZ5Ol/ueMq5vg4QoQ==",
       "path": "system.runtime.serialization.formatters/4.3.0",
       "hashPath": "system.runtime.serialization.formatters.4.3.0.nupkg.sha512"
+    },
+    "System.Runtime.Serialization.Json/4.0.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-+7DIJhnKYgCzUgcLbVTtRQb2l1M0FP549XFlFkQM5lmNiUBl44AfNbx4bz61xA8PzLtlYwfmif4JJJW7MPPnjg==",
+      "path": "system.runtime.serialization.json/4.0.2",
+      "hashPath": "system.runtime.serialization.json.4.0.2.nupkg.sha512"
     },
     "System.Security.Cryptography.ProtectedData/4.4.0": {
       "type": "package",
@@ -3514,12 +4589,26 @@
       "path": "system.threading.tasks.extensions/4.5.2",
       "hashPath": "system.threading.tasks.extensions.4.5.2.nupkg.sha512"
     },
+    "System.Threading.ThreadPool/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-k/+g4b7vjdd4aix83sTgC9VG6oXYKAktSfNIJUNGxPEj7ryEOfzHHhfnmsZvjxawwcD9HyWXKCXmPjX8U4zeSw==",
+      "path": "system.threading.threadpool/4.3.0",
+      "hashPath": "system.threading.threadpool.4.3.0.nupkg.sha512"
+    },
     "System.ValueTuple/4.5.0": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-okurQJO6NRE/apDIP23ajJ0hpiNmJ+f0BwOlB/cSqTLQlw5upkf+5+96+iG2Jw40G1fCVCyPz/FhIABUjMR+RQ==",
       "path": "system.valuetuple/4.5.0",
       "hashPath": "system.valuetuple.4.5.0.nupkg.sha512"
+    },
+    "System.Xml.XPath.XmlDocument/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-91tvfHWHSrYFPolCwWYqbpo1YaoBUCQ3uNZ/O/zr0ev5BnkoATJoie16ywlMVUaXZtfSfNELxhtG3aqpTfwR4w==",
+      "path": "system.xml.xpath.xmldocument/4.3.0",
+      "hashPath": "system.xml.xpath.xmldocument.4.3.0.nupkg.sha512"
     },
     "Microsoft.AspNet.WebApi.Client/5.2.6": {
       "type": "package",

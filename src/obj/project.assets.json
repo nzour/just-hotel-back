@@ -14,6 +14,290 @@
           "lib/netstandard1.1/Antlr3.Runtime.dll": {}
         }
       },
+      "FluentMigrator/3.2.1": {
+        "type": "package",
+        "dependencies": {
+          "FluentMigrator.Abstractions": "3.2.1",
+          "Microsoft.Extensions.DependencyInjection": "2.0.0",
+          "Microsoft.Extensions.Options": "2.0.1"
+        },
+        "compile": {
+          "lib/netstandard2.0/FluentMigrator.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/FluentMigrator.dll": {}
+        }
+      },
+      "FluentMigrator.Abstractions/3.2.1": {
+        "type": "package",
+        "dependencies": {
+          "System.ComponentModel.Annotations": "4.4.1",
+          "System.ValueTuple": "4.4.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/FluentMigrator.Abstractions.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/FluentMigrator.Abstractions.dll": {}
+        },
+        "resource": {
+          "lib/netstandard2.0/de-DE/FluentMigrator.Abstractions.resources.dll": {
+            "locale": "de-DE"
+          }
+        }
+      },
+      "FluentMigrator.Console/3.2.1": {
+        "type": "package"
+      },
+      "FluentMigrator.Extensions.Oracle/3.2.1": {
+        "type": "package",
+        "dependencies": {
+          "FluentMigrator.Abstractions": "3.2.1"
+        },
+        "compile": {
+          "lib/netstandard2.0/FluentMigrator.Extensions.Oracle.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/FluentMigrator.Extensions.Oracle.dll": {}
+        }
+      },
+      "FluentMigrator.Extensions.SqlAnywhere/3.2.1": {
+        "type": "package",
+        "dependencies": {
+          "FluentMigrator.Abstractions": "3.2.1"
+        },
+        "compile": {
+          "lib/netstandard2.0/FluentMigrator.Extensions.SqlAnywhere.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/FluentMigrator.Extensions.SqlAnywhere.dll": {}
+        }
+      },
+      "FluentMigrator.Extensions.SqlServer/3.2.1": {
+        "type": "package",
+        "dependencies": {
+          "FluentMigrator.Abstractions": "3.2.1"
+        },
+        "compile": {
+          "lib/netstandard2.0/FluentMigrator.Extensions.SqlServer.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/FluentMigrator.Extensions.SqlServer.dll": {}
+        }
+      },
+      "FluentMigrator.Generator/1.0.5": {
+        "type": "package",
+        "dependencies": {
+          "FluentMigrator": "[1.0.0, 4.0.0)"
+        }
+      },
+      "FluentMigrator.NHibernate/1.0.0.17": {
+        "type": "package",
+        "compile": {
+          "lib/net461/FluentMigrator.NHibernate.dll": {}
+        },
+        "runtime": {
+          "lib/net461/FluentMigrator.NHibernate.dll": {}
+        }
+      },
+      "FluentMigrator.Runner/3.2.1": {
+        "type": "package",
+        "dependencies": {
+          "FluentMigrator": "3.2.1",
+          "FluentMigrator.Runner.Core": "3.2.1",
+          "FluentMigrator.Runner.Db2": "3.2.1",
+          "FluentMigrator.Runner.Firebird": "3.2.1",
+          "FluentMigrator.Runner.Hana": "3.2.1",
+          "FluentMigrator.Runner.MySql": "3.2.1",
+          "FluentMigrator.Runner.Oracle": "3.2.1",
+          "FluentMigrator.Runner.Postgres": "3.2.1",
+          "FluentMigrator.Runner.Redshift": "3.2.1",
+          "FluentMigrator.Runner.SQLite": "3.2.1",
+          "FluentMigrator.Runner.SqlAnywhere": "3.2.1",
+          "FluentMigrator.Runner.SqlServer": "3.2.1",
+          "FluentMigrator.Runner.SqlServerCe": "3.2.1",
+          "Microsoft.Extensions.Configuration.Abstractions": "2.0.1",
+          "Microsoft.Extensions.Logging": "2.0.1"
+        },
+        "compile": {
+          "lib/netstandard2.0/FluentMigrator.Runner.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/FluentMigrator.Runner.dll": {}
+        }
+      },
+      "FluentMigrator.Runner.Core/3.2.1": {
+        "type": "package",
+        "dependencies": {
+          "FluentMigrator.Abstractions": "3.2.1",
+          "Microsoft.Extensions.Configuration.Abstractions": "2.0.1",
+          "Microsoft.Extensions.DependencyInjection": "2.0.0",
+          "Microsoft.Extensions.Logging.Abstractions": "2.0.1",
+          "Microsoft.Extensions.Options": "2.0.1"
+        },
+        "compile": {
+          "lib/netstandard2.0/FluentMigrator.Runner.Core.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/FluentMigrator.Runner.Core.dll": {}
+        }
+      },
+      "FluentMigrator.Runner.Db2/3.2.1": {
+        "type": "package",
+        "dependencies": {
+          "FluentMigrator.Runner.Core": "3.2.1"
+        },
+        "compile": {
+          "lib/netstandard2.0/FluentMigrator.Runner.Db2.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/FluentMigrator.Runner.Db2.dll": {}
+        }
+      },
+      "FluentMigrator.Runner.Firebird/3.2.1": {
+        "type": "package",
+        "dependencies": {
+          "FluentMigrator.Runner.Core": "3.2.1",
+          "Microsoft.Extensions.Options": "2.0.1"
+        },
+        "compile": {
+          "lib/netstandard2.0/FluentMigrator.Runner.Firebird.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/FluentMigrator.Runner.Firebird.dll": {}
+        }
+      },
+      "FluentMigrator.Runner.Hana/3.2.1": {
+        "type": "package",
+        "dependencies": {
+          "FluentMigrator.Runner.Core": "3.2.1"
+        },
+        "compile": {
+          "lib/netstandard2.0/FluentMigrator.Runner.Hana.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/FluentMigrator.Runner.Hana.dll": {}
+        }
+      },
+      "FluentMigrator.Runner.MySql/3.2.1": {
+        "type": "package",
+        "dependencies": {
+          "FluentMigrator.Runner.Core": "3.2.1"
+        },
+        "compile": {
+          "lib/netstandard2.0/FluentMigrator.Runner.MySql.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/FluentMigrator.Runner.MySql.dll": {}
+        }
+      },
+      "FluentMigrator.Runner.Oracle/3.2.1": {
+        "type": "package",
+        "dependencies": {
+          "FluentMigrator.Extensions.Oracle": "3.2.1",
+          "FluentMigrator.Runner.Core": "3.2.1"
+        },
+        "compile": {
+          "lib/netstandard2.0/FluentMigrator.Runner.Oracle.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/FluentMigrator.Runner.Oracle.dll": {}
+        }
+      },
+      "FluentMigrator.Runner.Postgres/3.2.1": {
+        "type": "package",
+        "dependencies": {
+          "FluentMigrator.Runner.Core": "3.2.1"
+        },
+        "compile": {
+          "lib/netstandard2.0/FluentMigrator.Runner.Postgres.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/FluentMigrator.Runner.Postgres.dll": {}
+        }
+      },
+      "FluentMigrator.Runner.Redshift/3.2.1": {
+        "type": "package",
+        "dependencies": {
+          "FluentMigrator.Runner.Core": "3.2.1"
+        },
+        "compile": {
+          "lib/netstandard2.0/FluentMigrator.Runner.Redshift.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/FluentMigrator.Runner.Redshift.dll": {}
+        }
+      },
+      "FluentMigrator.Runner.SqlAnywhere/3.2.1": {
+        "type": "package",
+        "dependencies": {
+          "FluentMigrator.Extensions.SqlAnywhere": "3.2.1",
+          "FluentMigrator.Runner.Core": "3.2.1"
+        },
+        "compile": {
+          "lib/netstandard2.0/FluentMigrator.Runner.SqlAnywhere.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/FluentMigrator.Runner.SqlAnywhere.dll": {}
+        }
+      },
+      "FluentMigrator.Runner.SQLite/3.2.1": {
+        "type": "package",
+        "dependencies": {
+          "FluentMigrator.Runner.Core": "3.2.1"
+        },
+        "compile": {
+          "lib/netstandard2.0/FluentMigrator.Runner.SQLite.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/FluentMigrator.Runner.SQLite.dll": {}
+        }
+      },
+      "FluentMigrator.Runner.SqlServer/3.2.1": {
+        "type": "package",
+        "dependencies": {
+          "FluentMigrator.Extensions.SqlServer": "3.2.1",
+          "FluentMigrator.Runner.Core": "3.2.1",
+          "System.Data.SqlClient": "4.4.3"
+        },
+        "compile": {
+          "lib/netstandard2.0/FluentMigrator.Runner.SqlServer.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/FluentMigrator.Runner.SqlServer.dll": {}
+        }
+      },
+      "FluentMigrator.Runner.SqlServerCe/3.2.1": {
+        "type": "package",
+        "dependencies": {
+          "FluentMigrator.Runner.SqlServer": "3.2.1",
+          "System.Security.Permissions": "4.4.1"
+        },
+        "compile": {
+          "lib/netstandard2.0/FluentMigrator.Runner.SqlServerCe.dll": {},
+          "lib/netstandard2.0/System.Data.SqlServerCe.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/FluentMigrator.Runner.SqlServerCe.dll": {},
+          "lib/netstandard2.0/System.Data.SqlServerCe.dll": {}
+        },
+        "build": {
+          "build/netstandard2.0/_._": {}
+        }
+      },
+      "FluentMigratorNHibernateGenerator/1.1.0": {
+        "type": "package",
+        "dependencies": {
+          "FluentMigrator": "3.2.1",
+          "NHibernate": "5.2.5"
+        },
+        "compile": {
+          "lib/FluentMigrator.NHibernateGenerator.dll": {}
+        },
+        "runtime": {
+          "lib/FluentMigrator.NHibernateGenerator.dll": {}
+        }
+      },
       "FluentNHibernate/2.1.2": {
         "type": "package",
         "dependencies": {
@@ -1697,6 +1981,19 @@
           "lib/netstandard2.0/Microsoft.CodeAnalysis.Razor.dll": {}
         }
       },
+      "Microsoft.CodeCoverage/16.2.0": {
+        "type": "package",
+        "compile": {
+          "lib/netcoreapp1.0/Microsoft.VisualStudio.CodeCoverage.Shim.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp1.0/Microsoft.VisualStudio.CodeCoverage.Shim.dll": {}
+        },
+        "build": {
+          "build/netstandard1.0/Microsoft.CodeCoverage.props": {},
+          "build/netstandard1.0/Microsoft.CodeCoverage.targets": {}
+        }
+      },
       "Microsoft.CSharp/4.5.0": {
         "type": "package",
         "compile": {
@@ -1704,6 +2001,25 @@
         },
         "runtime": {
           "lib/netcoreapp2.0/_._": {}
+        }
+      },
+      "Microsoft.DotNet.InternalAbstractions/1.0.0": {
+        "type": "package",
+        "dependencies": {
+          "System.AppContext": "4.1.0",
+          "System.Collections": "4.0.11",
+          "System.IO": "4.1.0",
+          "System.IO.FileSystem": "4.0.1",
+          "System.Reflection.TypeExtensions": "4.1.0",
+          "System.Runtime.Extensions": "4.1.0",
+          "System.Runtime.InteropServices": "4.1.0",
+          "System.Runtime.InteropServices.RuntimeInformation": "4.0.0"
+        },
+        "compile": {
+          "lib/netstandard1.3/Microsoft.DotNet.InternalAbstractions.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/Microsoft.DotNet.InternalAbstractions.dll": {}
         }
       },
       "Microsoft.DotNet.PlatformAbstractions/2.1.0": {
@@ -2547,6 +2863,20 @@
           "lib/netstandard2.0/Microsoft.Net.Http.Headers.dll": {}
         }
       },
+      "Microsoft.NET.Test.Sdk/16.2.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.CodeCoverage": "16.2.0",
+          "Microsoft.TestPlatform.TestHost": "16.2.0"
+        },
+        "build": {
+          "build/netcoreapp1.0/Microsoft.NET.Test.Sdk.props": {},
+          "build/netcoreapp1.0/Microsoft.NET.Test.Sdk.targets": {}
+        },
+        "buildMultiTargeting": {
+          "buildMultiTargeting/Microsoft.NET.Test.Sdk.props": {}
+        }
+      },
       "Microsoft.NETCore.App/2.2.0": {
         "type": "package",
         "dependencies": {
@@ -2738,6 +3068,266 @@
           "lib/netstandard1.0/_._": {}
         }
       },
+      "Microsoft.TestPlatform.ObjectModel/16.2.0": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.6.0",
+          "System.ComponentModel.EventBasedAsync": "4.0.11",
+          "System.ComponentModel.TypeConverter": "4.1.0",
+          "System.Diagnostics.Process": "4.1.0",
+          "System.Diagnostics.TextWriterTraceListener": "4.0.0",
+          "System.Diagnostics.TraceSource": "4.0.0",
+          "System.Reflection.Metadata": "1.3.0",
+          "System.Reflection.TypeExtensions": "4.1.0",
+          "System.Runtime.InteropServices.RuntimeInformation": "4.0.0",
+          "System.Runtime.Loader": "4.0.0",
+          "System.Runtime.Serialization.Json": "4.0.2",
+          "System.Runtime.Serialization.Primitives": "4.1.1",
+          "System.Threading.Thread": "4.0.0",
+          "System.Xml.XPath.XmlDocument": "4.0.1"
+        },
+        "compile": {
+          "lib/netstandard1.5/Microsoft.TestPlatform.CoreUtilities.dll": {},
+          "lib/netstandard1.5/Microsoft.TestPlatform.PlatformAbstractions.dll": {},
+          "lib/netstandard1.5/Microsoft.VisualStudio.TestPlatform.ObjectModel.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.5/Microsoft.TestPlatform.CoreUtilities.dll": {},
+          "lib/netstandard1.5/Microsoft.TestPlatform.PlatformAbstractions.dll": {},
+          "lib/netstandard1.5/Microsoft.VisualStudio.TestPlatform.ObjectModel.dll": {}
+        },
+        "resource": {
+          "lib/netstandard1.5/cs/Microsoft.TestPlatform.CoreUtilities.resources.dll": {
+            "locale": "cs"
+          },
+          "lib/netstandard1.5/cs/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll": {
+            "locale": "cs"
+          },
+          "lib/netstandard1.5/de/Microsoft.TestPlatform.CoreUtilities.resources.dll": {
+            "locale": "de"
+          },
+          "lib/netstandard1.5/de/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll": {
+            "locale": "de"
+          },
+          "lib/netstandard1.5/es/Microsoft.TestPlatform.CoreUtilities.resources.dll": {
+            "locale": "es"
+          },
+          "lib/netstandard1.5/es/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll": {
+            "locale": "es"
+          },
+          "lib/netstandard1.5/fr/Microsoft.TestPlatform.CoreUtilities.resources.dll": {
+            "locale": "fr"
+          },
+          "lib/netstandard1.5/fr/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll": {
+            "locale": "fr"
+          },
+          "lib/netstandard1.5/it/Microsoft.TestPlatform.CoreUtilities.resources.dll": {
+            "locale": "it"
+          },
+          "lib/netstandard1.5/it/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll": {
+            "locale": "it"
+          },
+          "lib/netstandard1.5/ja/Microsoft.TestPlatform.CoreUtilities.resources.dll": {
+            "locale": "ja"
+          },
+          "lib/netstandard1.5/ja/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll": {
+            "locale": "ja"
+          },
+          "lib/netstandard1.5/ko/Microsoft.TestPlatform.CoreUtilities.resources.dll": {
+            "locale": "ko"
+          },
+          "lib/netstandard1.5/ko/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll": {
+            "locale": "ko"
+          },
+          "lib/netstandard1.5/pl/Microsoft.TestPlatform.CoreUtilities.resources.dll": {
+            "locale": "pl"
+          },
+          "lib/netstandard1.5/pl/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll": {
+            "locale": "pl"
+          },
+          "lib/netstandard1.5/pt-BR/Microsoft.TestPlatform.CoreUtilities.resources.dll": {
+            "locale": "pt-BR"
+          },
+          "lib/netstandard1.5/pt-BR/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll": {
+            "locale": "pt-BR"
+          },
+          "lib/netstandard1.5/ru/Microsoft.TestPlatform.CoreUtilities.resources.dll": {
+            "locale": "ru"
+          },
+          "lib/netstandard1.5/ru/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll": {
+            "locale": "ru"
+          },
+          "lib/netstandard1.5/tr/Microsoft.TestPlatform.CoreUtilities.resources.dll": {
+            "locale": "tr"
+          },
+          "lib/netstandard1.5/tr/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll": {
+            "locale": "tr"
+          },
+          "lib/netstandard1.5/zh-Hans/Microsoft.TestPlatform.CoreUtilities.resources.dll": {
+            "locale": "zh-Hans"
+          },
+          "lib/netstandard1.5/zh-Hans/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll": {
+            "locale": "zh-Hans"
+          },
+          "lib/netstandard1.5/zh-Hant/Microsoft.TestPlatform.CoreUtilities.resources.dll": {
+            "locale": "zh-Hant"
+          },
+          "lib/netstandard1.5/zh-Hant/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll": {
+            "locale": "zh-Hant"
+          }
+        }
+      },
+      "Microsoft.TestPlatform.TestHost/16.2.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.TestPlatform.ObjectModel": "16.2.0",
+          "Newtonsoft.Json": "9.0.1"
+        },
+        "compile": {
+          "lib/netstandard1.5/Microsoft.TestPlatform.CommunicationUtilities.dll": {},
+          "lib/netstandard1.5/Microsoft.TestPlatform.CrossPlatEngine.dll": {},
+          "lib/netstandard1.5/Microsoft.TestPlatform.Utilities.dll": {},
+          "lib/netstandard1.5/Microsoft.VisualStudio.TestPlatform.Common.dll": {},
+          "lib/netstandard1.5/testhost.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.5/Microsoft.TestPlatform.CommunicationUtilities.dll": {},
+          "lib/netstandard1.5/Microsoft.TestPlatform.CrossPlatEngine.dll": {},
+          "lib/netstandard1.5/Microsoft.TestPlatform.Utilities.dll": {},
+          "lib/netstandard1.5/Microsoft.VisualStudio.TestPlatform.Common.dll": {},
+          "lib/netstandard1.5/testhost.dll": {}
+        },
+        "resource": {
+          "lib/netstandard1.5/cs/Microsoft.TestPlatform.CommunicationUtilities.resources.dll": {
+            "locale": "cs"
+          },
+          "lib/netstandard1.5/cs/Microsoft.TestPlatform.CrossPlatEngine.resources.dll": {
+            "locale": "cs"
+          },
+          "lib/netstandard1.5/cs/Microsoft.VisualStudio.TestPlatform.Common.resources.dll": {
+            "locale": "cs"
+          },
+          "lib/netstandard1.5/de/Microsoft.TestPlatform.CommunicationUtilities.resources.dll": {
+            "locale": "de"
+          },
+          "lib/netstandard1.5/de/Microsoft.TestPlatform.CrossPlatEngine.resources.dll": {
+            "locale": "de"
+          },
+          "lib/netstandard1.5/de/Microsoft.VisualStudio.TestPlatform.Common.resources.dll": {
+            "locale": "de"
+          },
+          "lib/netstandard1.5/es/Microsoft.TestPlatform.CommunicationUtilities.resources.dll": {
+            "locale": "es"
+          },
+          "lib/netstandard1.5/es/Microsoft.TestPlatform.CrossPlatEngine.resources.dll": {
+            "locale": "es"
+          },
+          "lib/netstandard1.5/es/Microsoft.VisualStudio.TestPlatform.Common.resources.dll": {
+            "locale": "es"
+          },
+          "lib/netstandard1.5/fr/Microsoft.TestPlatform.CommunicationUtilities.resources.dll": {
+            "locale": "fr"
+          },
+          "lib/netstandard1.5/fr/Microsoft.TestPlatform.CrossPlatEngine.resources.dll": {
+            "locale": "fr"
+          },
+          "lib/netstandard1.5/fr/Microsoft.VisualStudio.TestPlatform.Common.resources.dll": {
+            "locale": "fr"
+          },
+          "lib/netstandard1.5/it/Microsoft.TestPlatform.CommunicationUtilities.resources.dll": {
+            "locale": "it"
+          },
+          "lib/netstandard1.5/it/Microsoft.TestPlatform.CrossPlatEngine.resources.dll": {
+            "locale": "it"
+          },
+          "lib/netstandard1.5/it/Microsoft.VisualStudio.TestPlatform.Common.resources.dll": {
+            "locale": "it"
+          },
+          "lib/netstandard1.5/ja/Microsoft.TestPlatform.CommunicationUtilities.resources.dll": {
+            "locale": "ja"
+          },
+          "lib/netstandard1.5/ja/Microsoft.TestPlatform.CrossPlatEngine.resources.dll": {
+            "locale": "ja"
+          },
+          "lib/netstandard1.5/ja/Microsoft.VisualStudio.TestPlatform.Common.resources.dll": {
+            "locale": "ja"
+          },
+          "lib/netstandard1.5/ko/Microsoft.TestPlatform.CommunicationUtilities.resources.dll": {
+            "locale": "ko"
+          },
+          "lib/netstandard1.5/ko/Microsoft.TestPlatform.CrossPlatEngine.resources.dll": {
+            "locale": "ko"
+          },
+          "lib/netstandard1.5/ko/Microsoft.VisualStudio.TestPlatform.Common.resources.dll": {
+            "locale": "ko"
+          },
+          "lib/netstandard1.5/pl/Microsoft.TestPlatform.CommunicationUtilities.resources.dll": {
+            "locale": "pl"
+          },
+          "lib/netstandard1.5/pl/Microsoft.TestPlatform.CrossPlatEngine.resources.dll": {
+            "locale": "pl"
+          },
+          "lib/netstandard1.5/pl/Microsoft.VisualStudio.TestPlatform.Common.resources.dll": {
+            "locale": "pl"
+          },
+          "lib/netstandard1.5/pt-BR/Microsoft.TestPlatform.CommunicationUtilities.resources.dll": {
+            "locale": "pt-BR"
+          },
+          "lib/netstandard1.5/pt-BR/Microsoft.TestPlatform.CrossPlatEngine.resources.dll": {
+            "locale": "pt-BR"
+          },
+          "lib/netstandard1.5/pt-BR/Microsoft.VisualStudio.TestPlatform.Common.resources.dll": {
+            "locale": "pt-BR"
+          },
+          "lib/netstandard1.5/ru/Microsoft.TestPlatform.CommunicationUtilities.resources.dll": {
+            "locale": "ru"
+          },
+          "lib/netstandard1.5/ru/Microsoft.TestPlatform.CrossPlatEngine.resources.dll": {
+            "locale": "ru"
+          },
+          "lib/netstandard1.5/ru/Microsoft.VisualStudio.TestPlatform.Common.resources.dll": {
+            "locale": "ru"
+          },
+          "lib/netstandard1.5/tr/Microsoft.TestPlatform.CommunicationUtilities.resources.dll": {
+            "locale": "tr"
+          },
+          "lib/netstandard1.5/tr/Microsoft.TestPlatform.CrossPlatEngine.resources.dll": {
+            "locale": "tr"
+          },
+          "lib/netstandard1.5/tr/Microsoft.VisualStudio.TestPlatform.Common.resources.dll": {
+            "locale": "tr"
+          },
+          "lib/netstandard1.5/zh-Hans/Microsoft.TestPlatform.CommunicationUtilities.resources.dll": {
+            "locale": "zh-Hans"
+          },
+          "lib/netstandard1.5/zh-Hans/Microsoft.TestPlatform.CrossPlatEngine.resources.dll": {
+            "locale": "zh-Hans"
+          },
+          "lib/netstandard1.5/zh-Hans/Microsoft.VisualStudio.TestPlatform.Common.resources.dll": {
+            "locale": "zh-Hans"
+          },
+          "lib/netstandard1.5/zh-Hant/Microsoft.TestPlatform.CommunicationUtilities.resources.dll": {
+            "locale": "zh-Hant"
+          },
+          "lib/netstandard1.5/zh-Hant/Microsoft.TestPlatform.CrossPlatEngine.resources.dll": {
+            "locale": "zh-Hant"
+          },
+          "lib/netstandard1.5/zh-Hant/Microsoft.VisualStudio.TestPlatform.Common.resources.dll": {
+            "locale": "zh-Hant"
+          }
+        }
+      },
+      "Microsoft.Win32.Primitives/4.3.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.1.0",
+          "Microsoft.NETCore.Targets": "1.1.0",
+          "System.Runtime": "4.3.0"
+        },
+        "compile": {
+          "ref/netstandard1.3/_._": {}
+        }
+      },
       "Microsoft.Win32.Registry/4.5.0": {
         "type": "package",
         "dependencies": {
@@ -2827,6 +3417,38 @@
         },
         "runtime": {
           "lib/netstandard2.0/Npgsql.dll": {}
+        }
+      },
+      "NUnit/3.12.0": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "2.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/nunit.framework.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/nunit.framework.dll": {}
+        },
+        "build": {
+          "build/NUnit.props": {}
+        }
+      },
+      "NUnit3TestAdapter/3.13.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.DotNet.InternalAbstractions": "1.0.0",
+          "System.ComponentModel.EventBasedAsync": "4.3.0",
+          "System.ComponentModel.TypeConverter": "4.3.0",
+          "System.Diagnostics.Process": "4.3.0",
+          "System.Reflection": "4.3.0",
+          "System.Runtime.InteropServices.RuntimeInformation": "4.3.0",
+          "System.Threading.Thread": "4.3.0",
+          "System.Xml.XPath.XmlDocument": "4.3.0",
+          "System.Xml.XmlDocument": "4.3.0"
+        },
+        "build": {
+          "build/netcoreapp1.0/NUnit3TestAdapter.props": {}
         }
       },
       "Remotion.Linq/2.2.0": {
@@ -3148,7 +3770,7 @@
           "System.Threading": "4.3.0"
         },
         "compile": {
-          "ref/netstandard1.3/_._": {}
+          "ref/netstandard1.3/System.Collections.NonGeneric.dll": {}
         },
         "runtime": {
           "lib/netstandard1.3/System.Collections.NonGeneric.dll": {}
@@ -3193,6 +3815,21 @@
           "lib/netcoreapp2.0/_._": {}
         }
       },
+      "System.ComponentModel.EventBasedAsync/4.3.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Resources.ResourceManager": "4.3.0",
+          "System.Runtime": "4.3.0",
+          "System.Threading": "4.3.0",
+          "System.Threading.Tasks": "4.3.0"
+        },
+        "compile": {
+          "ref/netstandard1.3/System.ComponentModel.EventBasedAsync.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/System.ComponentModel.EventBasedAsync.dll": {}
+        }
+      },
       "System.ComponentModel.Primitives/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -3205,6 +3842,32 @@
         },
         "runtime": {
           "lib/netstandard1.0/System.ComponentModel.Primitives.dll": {}
+        }
+      },
+      "System.ComponentModel.TypeConverter/4.3.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Collections": "4.3.0",
+          "System.Collections.NonGeneric": "4.3.0",
+          "System.Collections.Specialized": "4.3.0",
+          "System.ComponentModel": "4.3.0",
+          "System.ComponentModel.Primitives": "4.3.0",
+          "System.Globalization": "4.3.0",
+          "System.Linq": "4.3.0",
+          "System.Reflection": "4.3.0",
+          "System.Reflection.Extensions": "4.3.0",
+          "System.Reflection.Primitives": "4.3.0",
+          "System.Reflection.TypeExtensions": "4.3.0",
+          "System.Resources.ResourceManager": "4.3.0",
+          "System.Runtime": "4.3.0",
+          "System.Runtime.Extensions": "4.3.0",
+          "System.Threading": "4.3.0"
+        },
+        "compile": {
+          "ref/netstandard1.5/System.ComponentModel.TypeConverter.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.5/System.ComponentModel.TypeConverter.dll": {}
         }
       },
       "System.Configuration.ConfigurationManager/4.4.1": {
@@ -3316,6 +3979,49 @@
           }
         }
       },
+      "System.Diagnostics.Process/4.3.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.1.0",
+          "Microsoft.Win32.Primitives": "4.3.0",
+          "Microsoft.Win32.Registry": "4.3.0",
+          "System.Collections": "4.3.0",
+          "System.Diagnostics.Debug": "4.3.0",
+          "System.Globalization": "4.3.0",
+          "System.IO": "4.3.0",
+          "System.IO.FileSystem": "4.3.0",
+          "System.IO.FileSystem.Primitives": "4.3.0",
+          "System.Resources.ResourceManager": "4.3.0",
+          "System.Runtime": "4.3.0",
+          "System.Runtime.Extensions": "4.3.0",
+          "System.Runtime.Handles": "4.3.0",
+          "System.Runtime.InteropServices": "4.3.0",
+          "System.Text.Encoding": "4.3.0",
+          "System.Text.Encoding.Extensions": "4.3.0",
+          "System.Threading": "4.3.0",
+          "System.Threading.Tasks": "4.3.0",
+          "System.Threading.Thread": "4.3.0",
+          "System.Threading.ThreadPool": "4.3.0",
+          "runtime.native.System": "4.3.0"
+        },
+        "compile": {
+          "ref/netstandard1.4/System.Diagnostics.Process.dll": {}
+        },
+        "runtimeTargets": {
+          "runtimes/linux/lib/netstandard1.4/System.Diagnostics.Process.dll": {
+            "assetType": "runtime",
+            "rid": "linux"
+          },
+          "runtimes/osx/lib/netstandard1.4/System.Diagnostics.Process.dll": {
+            "assetType": "runtime",
+            "rid": "osx"
+          },
+          "runtimes/win/lib/netstandard1.4/System.Diagnostics.Process.dll": {
+            "assetType": "runtime",
+            "rid": "win"
+          }
+        }
+      },
       "System.Diagnostics.StackTrace/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -3331,6 +4037,23 @@
           "lib/netstandard1.3/System.Diagnostics.StackTrace.dll": {}
         }
       },
+      "System.Diagnostics.TextWriterTraceListener/4.0.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Diagnostics.TraceSource": "4.0.0",
+          "System.Globalization": "4.0.11",
+          "System.IO": "4.1.0",
+          "System.Resources.ResourceManager": "4.0.1",
+          "System.Runtime": "4.1.0",
+          "System.Threading": "4.0.11"
+        },
+        "compile": {
+          "ref/netstandard1.3/System.Diagnostics.TextWriterTraceListener.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/System.Diagnostics.TextWriterTraceListener.dll": {}
+        }
+      },
       "System.Diagnostics.Tools/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -3340,6 +4063,33 @@
         },
         "compile": {
           "ref/netstandard1.0/System.Diagnostics.Tools.dll": {}
+        }
+      },
+      "System.Diagnostics.TraceSource/4.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.NETCore.Platforms": "1.0.1",
+          "System.Collections": "4.0.11",
+          "System.Diagnostics.Debug": "4.0.11",
+          "System.Globalization": "4.0.11",
+          "System.Resources.ResourceManager": "4.0.1",
+          "System.Runtime": "4.1.0",
+          "System.Runtime.Extensions": "4.1.0",
+          "System.Threading": "4.0.11",
+          "runtime.native.System": "4.0.0"
+        },
+        "compile": {
+          "ref/netstandard1.3/System.Diagnostics.TraceSource.dll": {}
+        },
+        "runtimeTargets": {
+          "runtimes/unix/lib/netstandard1.3/System.Diagnostics.TraceSource.dll": {
+            "assetType": "runtime",
+            "rid": "unix"
+          },
+          "runtimes/win/lib/netstandard1.3/System.Diagnostics.TraceSource.dll": {
+            "assetType": "runtime",
+            "rid": "win"
+          }
         }
       },
       "System.Diagnostics.Tracing/4.3.0": {
@@ -3924,6 +4674,20 @@
           }
         }
       },
+      "System.Runtime.Loader/4.0.0": {
+        "type": "package",
+        "dependencies": {
+          "System.IO": "4.1.0",
+          "System.Reflection": "4.1.0",
+          "System.Runtime": "4.1.0"
+        },
+        "compile": {
+          "ref/netstandard1.5/System.Runtime.Loader.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.5/System.Runtime.Loader.dll": {}
+        }
+      },
       "System.Runtime.Numerics/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -3953,6 +4717,20 @@
         },
         "runtime": {
           "lib/netstandard1.4/System.Runtime.Serialization.Formatters.dll": {}
+        }
+      },
+      "System.Runtime.Serialization.Json/4.0.2": {
+        "type": "package",
+        "dependencies": {
+          "System.IO": "4.1.0",
+          "System.Private.DataContractSerialization": "4.1.1",
+          "System.Runtime": "4.1.0"
+        },
+        "compile": {
+          "ref/netstandard1.0/System.Runtime.Serialization.Json.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/System.Runtime.Serialization.Json.dll": {}
         }
       },
       "System.Runtime.Serialization.Primitives/4.3.0": {
@@ -4447,10 +5225,23 @@
           "System.Runtime": "4.3.0"
         },
         "compile": {
-          "ref/netstandard1.3/_._": {}
+          "ref/netstandard1.3/System.Threading.Thread.dll": {}
         },
         "runtime": {
           "lib/netstandard1.3/System.Threading.Thread.dll": {}
+        }
+      },
+      "System.Threading.ThreadPool/4.3.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Runtime": "4.3.0",
+          "System.Runtime.Handles": "4.3.0"
+        },
+        "compile": {
+          "ref/netstandard1.3/_._": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/System.Threading.ThreadPool.dll": {}
         }
       },
       "System.ValueTuple/4.5.0": {
@@ -4574,7 +5365,7 @@
           "System.Xml.ReaderWriter": "4.3.0"
         },
         "compile": {
-          "ref/netstandard1.3/_._": {}
+          "ref/netstandard1.3/System.Xml.XPath.dll": {}
         },
         "runtime": {
           "lib/netstandard1.3/System.Xml.XPath.dll": {}
@@ -4599,6 +5390,27 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XPath.XDocument.dll": {}
         }
+      },
+      "System.Xml.XPath.XmlDocument/4.3.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Collections": "4.3.0",
+          "System.Globalization": "4.3.0",
+          "System.IO": "4.3.0",
+          "System.Resources.ResourceManager": "4.3.0",
+          "System.Runtime": "4.3.0",
+          "System.Runtime.Extensions": "4.3.0",
+          "System.Threading": "4.3.0",
+          "System.Xml.ReaderWriter": "4.3.0",
+          "System.Xml.XPath": "4.3.0",
+          "System.Xml.XmlDocument": "4.3.0"
+        },
+        "compile": {
+          "ref/netstandard1.3/System.Xml.XPath.XmlDocument.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/System.Xml.XPath.XmlDocument.dll": {}
+        }
       }
     }
   },
@@ -4620,6 +5432,1040 @@
         "lib/netstandard1.1/Antlr3.Runtime.xml",
         "lib/portable-net4+sl5+netcore45+wpa81+wp8+MonoAndroid1+MonoTouch1/Antlr3.Runtime.dll",
         "lib/portable-net4+sl5+netcore45+wpa81+wp8+MonoAndroid1+MonoTouch1/Antlr3.Runtime.xml"
+      ]
+    },
+    "FluentMigrator/3.2.1": {
+      "sha512": "3XiMExA1cLDW5yXY7C7cgUQr7I6h/EfSkSRelo0kBf6551KGPVVtYDZuPWj/SrttYEmQoQYD4MORp3fiz1pSCg==",
+      "type": "package",
+      "path": "fluentmigrator/3.2.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "fluentmigrator.3.2.1.nupkg.sha512",
+        "fluentmigrator.nuspec",
+        "lib/net461/FluentMigrator.dll",
+        "lib/net461/FluentMigrator.pdb",
+        "lib/net461/FluentMigrator.xml",
+        "lib/netstandard2.0/FluentMigrator.dll",
+        "lib/netstandard2.0/FluentMigrator.pdb",
+        "lib/netstandard2.0/FluentMigrator.xml"
+      ]
+    },
+    "FluentMigrator.Abstractions/3.2.1": {
+      "sha512": "gmnesihuz9bFiODRtQw9Msf6jrgbElWB4MEBOR5LNGB+gKBSXYF34i/aIUQexmJhcnVE5VkRHMECMpqNM0PSng==",
+      "type": "package",
+      "path": "fluentmigrator.abstractions/3.2.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "fluentmigrator.abstractions.3.2.1.nupkg.sha512",
+        "fluentmigrator.abstractions.nuspec",
+        "lib/net461/FluentMigrator.Abstractions.dll",
+        "lib/net461/FluentMigrator.Abstractions.pdb",
+        "lib/net461/FluentMigrator.Abstractions.xml",
+        "lib/net461/de-DE/FluentMigrator.Abstractions.resources.dll",
+        "lib/netstandard2.0/FluentMigrator.Abstractions.dll",
+        "lib/netstandard2.0/FluentMigrator.Abstractions.pdb",
+        "lib/netstandard2.0/FluentMigrator.Abstractions.xml",
+        "lib/netstandard2.0/de-DE/FluentMigrator.Abstractions.resources.dll"
+      ]
+    },
+    "FluentMigrator.Console/3.2.1": {
+      "sha512": "Jwtjwb5eZXp0AXah7ivd3zjA5kG+0LNBVJatO3IXe8NfM3A0L/TiBacJnlayl0XaYwxiMAwnzjfFMBrbGwINHQ==",
+      "type": "package",
+      "path": "fluentmigrator.console/3.2.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "content/_._",
+        "fluentmigrator.console.3.2.1.nupkg.sha512",
+        "fluentmigrator.console.nuspec",
+        "net461/any/FSharp.Core.dll",
+        "net461/any/FirebirdSql.Data.FirebirdClient.dll",
+        "net461/any/FluentMigrator.Abstractions.dll",
+        "net461/any/FluentMigrator.Abstractions.pdb",
+        "net461/any/FluentMigrator.Abstractions.xml",
+        "net461/any/FluentMigrator.Extensions.Oracle.dll",
+        "net461/any/FluentMigrator.Extensions.Oracle.pdb",
+        "net461/any/FluentMigrator.Extensions.Oracle.xml",
+        "net461/any/FluentMigrator.Extensions.SqlAnywhere.dll",
+        "net461/any/FluentMigrator.Extensions.SqlAnywhere.pdb",
+        "net461/any/FluentMigrator.Extensions.SqlAnywhere.xml",
+        "net461/any/FluentMigrator.Extensions.SqlServer.dll",
+        "net461/any/FluentMigrator.Extensions.SqlServer.pdb",
+        "net461/any/FluentMigrator.Extensions.SqlServer.xml",
+        "net461/any/FluentMigrator.Runner.Core.dll",
+        "net461/any/FluentMigrator.Runner.Core.pdb",
+        "net461/any/FluentMigrator.Runner.Core.xml",
+        "net461/any/FluentMigrator.Runner.Db2.dll",
+        "net461/any/FluentMigrator.Runner.Db2.pdb",
+        "net461/any/FluentMigrator.Runner.Db2.xml",
+        "net461/any/FluentMigrator.Runner.Firebird.dll",
+        "net461/any/FluentMigrator.Runner.Firebird.pdb",
+        "net461/any/FluentMigrator.Runner.Firebird.xml",
+        "net461/any/FluentMigrator.Runner.Hana.dll",
+        "net461/any/FluentMigrator.Runner.Hana.pdb",
+        "net461/any/FluentMigrator.Runner.Hana.xml",
+        "net461/any/FluentMigrator.Runner.Jet.dll",
+        "net461/any/FluentMigrator.Runner.Jet.pdb",
+        "net461/any/FluentMigrator.Runner.Jet.xml",
+        "net461/any/FluentMigrator.Runner.MySql.dll",
+        "net461/any/FluentMigrator.Runner.MySql.pdb",
+        "net461/any/FluentMigrator.Runner.MySql.xml",
+        "net461/any/FluentMigrator.Runner.Oracle.dll",
+        "net461/any/FluentMigrator.Runner.Oracle.pdb",
+        "net461/any/FluentMigrator.Runner.Oracle.xml",
+        "net461/any/FluentMigrator.Runner.Postgres.dll",
+        "net461/any/FluentMigrator.Runner.Postgres.pdb",
+        "net461/any/FluentMigrator.Runner.Postgres.xml",
+        "net461/any/FluentMigrator.Runner.Redshift.dll",
+        "net461/any/FluentMigrator.Runner.Redshift.pdb",
+        "net461/any/FluentMigrator.Runner.Redshift.xml",
+        "net461/any/FluentMigrator.Runner.SQLite.dll",
+        "net461/any/FluentMigrator.Runner.SQLite.pdb",
+        "net461/any/FluentMigrator.Runner.SQLite.xml",
+        "net461/any/FluentMigrator.Runner.SqlAnywhere.dll",
+        "net461/any/FluentMigrator.Runner.SqlAnywhere.pdb",
+        "net461/any/FluentMigrator.Runner.SqlAnywhere.xml",
+        "net461/any/FluentMigrator.Runner.SqlServer.dll",
+        "net461/any/FluentMigrator.Runner.SqlServer.pdb",
+        "net461/any/FluentMigrator.Runner.SqlServer.xml",
+        "net461/any/FluentMigrator.Runner.SqlServerCe.dll",
+        "net461/any/FluentMigrator.Runner.SqlServerCe.pdb",
+        "net461/any/FluentMigrator.Runner.SqlServerCe.xml",
+        "net461/any/FluentMigrator.Runner.dll",
+        "net461/any/FluentMigrator.Runner.pdb",
+        "net461/any/FluentMigrator.Runner.xml",
+        "net461/any/FluentMigrator.dll",
+        "net461/any/FluentMigrator.pdb",
+        "net461/any/FluentMigrator.xml",
+        "net461/any/Google.Protobuf.dll",
+        "net461/any/JetBrains.Annotations.dll",
+        "net461/any/Microsoft.Data.Sqlite.dll",
+        "net461/any/Microsoft.Extensions.Configuration.Abstractions.dll",
+        "net461/any/Microsoft.Extensions.DependencyInjection.Abstractions.dll",
+        "net461/any/Microsoft.Extensions.DependencyInjection.dll",
+        "net461/any/Microsoft.Extensions.Logging.Abstractions.dll",
+        "net461/any/Microsoft.Extensions.Logging.dll",
+        "net461/any/Microsoft.Extensions.Options.dll",
+        "net461/any/Microsoft.Extensions.Primitives.dll",
+        "net461/any/Microsoft.Win32.Primitives.dll",
+        "net461/any/Migrate.exe",
+        "net461/any/Migrate.exe.config",
+        "net461/any/Migrate.pdb",
+        "net461/any/MySql.Data.dll",
+        "net461/any/Npgsql.dll",
+        "net461/any/Oracle.ManagedDataAccess.dll",
+        "net461/any/SQLitePCLRaw.batteries_green.dll",
+        "net461/any/SQLitePCLRaw.batteries_v2.dll",
+        "net461/any/SQLitePCLRaw.core.dll",
+        "net461/any/SQLitePCLRaw.provider.e_sqlite3.dll",
+        "net461/any/System.AppContext.dll",
+        "net461/any/System.Collections.Concurrent.dll",
+        "net461/any/System.Collections.NonGeneric.dll",
+        "net461/any/System.Collections.Specialized.dll",
+        "net461/any/System.Collections.dll",
+        "net461/any/System.ComponentModel.Annotations.dll",
+        "net461/any/System.ComponentModel.EventBasedAsync.dll",
+        "net461/any/System.ComponentModel.Primitives.dll",
+        "net461/any/System.ComponentModel.TypeConverter.dll",
+        "net461/any/System.ComponentModel.dll",
+        "net461/any/System.Console.dll",
+        "net461/any/System.Data.Common.dll",
+        "net461/any/System.Diagnostics.Contracts.dll",
+        "net461/any/System.Diagnostics.Debug.dll",
+        "net461/any/System.Diagnostics.FileVersionInfo.dll",
+        "net461/any/System.Diagnostics.Process.dll",
+        "net461/any/System.Diagnostics.StackTrace.dll",
+        "net461/any/System.Diagnostics.TextWriterTraceListener.dll",
+        "net461/any/System.Diagnostics.Tools.dll",
+        "net461/any/System.Diagnostics.TraceSource.dll",
+        "net461/any/System.Diagnostics.Tracing.dll",
+        "net461/any/System.Drawing.Primitives.dll",
+        "net461/any/System.Dynamic.Runtime.dll",
+        "net461/any/System.Globalization.Calendars.dll",
+        "net461/any/System.Globalization.Extensions.dll",
+        "net461/any/System.Globalization.dll",
+        "net461/any/System.IO.Compression.ZipFile.dll",
+        "net461/any/System.IO.Compression.dll",
+        "net461/any/System.IO.FileSystem.DriveInfo.dll",
+        "net461/any/System.IO.FileSystem.Primitives.dll",
+        "net461/any/System.IO.FileSystem.Watcher.dll",
+        "net461/any/System.IO.FileSystem.dll",
+        "net461/any/System.IO.IsolatedStorage.dll",
+        "net461/any/System.IO.MemoryMappedFiles.dll",
+        "net461/any/System.IO.Pipes.dll",
+        "net461/any/System.IO.UnmanagedMemoryStream.dll",
+        "net461/any/System.IO.dll",
+        "net461/any/System.Linq.Expressions.dll",
+        "net461/any/System.Linq.Parallel.dll",
+        "net461/any/System.Linq.Queryable.dll",
+        "net461/any/System.Linq.dll",
+        "net461/any/System.Net.Http.dll",
+        "net461/any/System.Net.NameResolution.dll",
+        "net461/any/System.Net.NetworkInformation.dll",
+        "net461/any/System.Net.Ping.dll",
+        "net461/any/System.Net.Primitives.dll",
+        "net461/any/System.Net.Requests.dll",
+        "net461/any/System.Net.Security.dll",
+        "net461/any/System.Net.Sockets.dll",
+        "net461/any/System.Net.WebHeaderCollection.dll",
+        "net461/any/System.Net.WebSockets.Client.dll",
+        "net461/any/System.Net.WebSockets.dll",
+        "net461/any/System.ObjectModel.dll",
+        "net461/any/System.Reflection.Extensions.dll",
+        "net461/any/System.Reflection.Primitives.dll",
+        "net461/any/System.Reflection.dll",
+        "net461/any/System.Resources.Reader.dll",
+        "net461/any/System.Resources.ResourceManager.dll",
+        "net461/any/System.Resources.Writer.dll",
+        "net461/any/System.Runtime.CompilerServices.Unsafe.dll",
+        "net461/any/System.Runtime.CompilerServices.VisualC.dll",
+        "net461/any/System.Runtime.Extensions.dll",
+        "net461/any/System.Runtime.Handles.dll",
+        "net461/any/System.Runtime.InteropServices.RuntimeInformation.dll",
+        "net461/any/System.Runtime.InteropServices.dll",
+        "net461/any/System.Runtime.Numerics.dll",
+        "net461/any/System.Runtime.Serialization.Formatters.dll",
+        "net461/any/System.Runtime.Serialization.Json.dll",
+        "net461/any/System.Runtime.Serialization.Primitives.dll",
+        "net461/any/System.Runtime.Serialization.Xml.dll",
+        "net461/any/System.Runtime.dll",
+        "net461/any/System.Security.Claims.dll",
+        "net461/any/System.Security.Cryptography.Algorithms.dll",
+        "net461/any/System.Security.Cryptography.Csp.dll",
+        "net461/any/System.Security.Cryptography.Encoding.dll",
+        "net461/any/System.Security.Cryptography.Primitives.dll",
+        "net461/any/System.Security.Cryptography.X509Certificates.dll",
+        "net461/any/System.Security.Principal.dll",
+        "net461/any/System.Security.SecureString.dll",
+        "net461/any/System.Text.Encoding.Extensions.dll",
+        "net461/any/System.Text.Encoding.dll",
+        "net461/any/System.Text.RegularExpressions.dll",
+        "net461/any/System.Threading.Overlapped.dll",
+        "net461/any/System.Threading.Tasks.Extensions.dll",
+        "net461/any/System.Threading.Tasks.Parallel.dll",
+        "net461/any/System.Threading.Tasks.dll",
+        "net461/any/System.Threading.Thread.dll",
+        "net461/any/System.Threading.ThreadPool.dll",
+        "net461/any/System.Threading.Timer.dll",
+        "net461/any/System.Threading.dll",
+        "net461/any/System.ValueTuple.dll",
+        "net461/any/System.Xml.ReaderWriter.dll",
+        "net461/any/System.Xml.XDocument.dll",
+        "net461/any/System.Xml.XPath.XDocument.dll",
+        "net461/any/System.Xml.XPath.dll",
+        "net461/any/System.Xml.XmlDocument.dll",
+        "net461/any/System.Xml.XmlSerializer.dll",
+        "net461/any/amd64/Microsoft.VC90.CRT/Microsoft.VC90.CRT.manifest",
+        "net461/any/amd64/Microsoft.VC90.CRT/README_ENU.txt",
+        "net461/any/amd64/Microsoft.VC90.CRT/msvcr90.dll",
+        "net461/any/amd64/sqlceca40.dll",
+        "net461/any/amd64/sqlcecompact40.dll",
+        "net461/any/amd64/sqlceer40EN.dll",
+        "net461/any/amd64/sqlceme40.dll",
+        "net461/any/amd64/sqlceqp40.dll",
+        "net461/any/amd64/sqlcese40.dll",
+        "net461/any/cs/FSharp.Core.resources.dll",
+        "net461/any/de-DE/FluentMigrator.Abstractions.resources.dll",
+        "net461/any/de/FSharp.Core.resources.dll",
+        "net461/any/en/FSharp.Core.resources.dll",
+        "net461/any/es/FSharp.Core.resources.dll",
+        "net461/any/fr/FSharp.Core.resources.dll",
+        "net461/any/it/FSharp.Core.resources.dll",
+        "net461/any/ja/FSharp.Core.resources.dll",
+        "net461/any/ko/FSharp.Core.resources.dll",
+        "net461/any/libe_sqlite3.so",
+        "net461/any/netstandard.dll",
+        "net461/any/pl/FSharp.Core.resources.dll",
+        "net461/any/pt-BR/FSharp.Core.resources.dll",
+        "net461/any/ru/FSharp.Core.resources.dll",
+        "net461/any/tr/FSharp.Core.resources.dll",
+        "net461/any/x86/Microsoft.VC90.CRT/Microsoft.VC90.CRT.manifest",
+        "net461/any/x86/Microsoft.VC90.CRT/README_ENU.txt",
+        "net461/any/x86/Microsoft.VC90.CRT/msvcr90.dll",
+        "net461/any/x86/sqlceca40.dll",
+        "net461/any/x86/sqlcecompact40.dll",
+        "net461/any/x86/sqlceer40EN.dll",
+        "net461/any/x86/sqlceme40.dll",
+        "net461/any/x86/sqlceqp40.dll",
+        "net461/any/x86/sqlcese40.dll",
+        "net461/any/zh-Hans/FSharp.Core.resources.dll",
+        "net461/any/zh-Hant/FSharp.Core.resources.dll",
+        "net461/x64/FSharp.Core.dll",
+        "net461/x64/FirebirdSql.Data.FirebirdClient.dll",
+        "net461/x64/FluentMigrator.Abstractions.dll",
+        "net461/x64/FluentMigrator.Abstractions.pdb",
+        "net461/x64/FluentMigrator.Abstractions.xml",
+        "net461/x64/FluentMigrator.Extensions.Oracle.dll",
+        "net461/x64/FluentMigrator.Extensions.Oracle.pdb",
+        "net461/x64/FluentMigrator.Extensions.Oracle.xml",
+        "net461/x64/FluentMigrator.Extensions.SqlAnywhere.dll",
+        "net461/x64/FluentMigrator.Extensions.SqlAnywhere.pdb",
+        "net461/x64/FluentMigrator.Extensions.SqlAnywhere.xml",
+        "net461/x64/FluentMigrator.Extensions.SqlServer.dll",
+        "net461/x64/FluentMigrator.Extensions.SqlServer.pdb",
+        "net461/x64/FluentMigrator.Extensions.SqlServer.xml",
+        "net461/x64/FluentMigrator.Runner.Core.dll",
+        "net461/x64/FluentMigrator.Runner.Core.pdb",
+        "net461/x64/FluentMigrator.Runner.Core.xml",
+        "net461/x64/FluentMigrator.Runner.Db2.dll",
+        "net461/x64/FluentMigrator.Runner.Db2.pdb",
+        "net461/x64/FluentMigrator.Runner.Db2.xml",
+        "net461/x64/FluentMigrator.Runner.Firebird.dll",
+        "net461/x64/FluentMigrator.Runner.Firebird.pdb",
+        "net461/x64/FluentMigrator.Runner.Firebird.xml",
+        "net461/x64/FluentMigrator.Runner.Hana.dll",
+        "net461/x64/FluentMigrator.Runner.Hana.pdb",
+        "net461/x64/FluentMigrator.Runner.Hana.xml",
+        "net461/x64/FluentMigrator.Runner.Jet.dll",
+        "net461/x64/FluentMigrator.Runner.Jet.pdb",
+        "net461/x64/FluentMigrator.Runner.Jet.xml",
+        "net461/x64/FluentMigrator.Runner.MySql.dll",
+        "net461/x64/FluentMigrator.Runner.MySql.pdb",
+        "net461/x64/FluentMigrator.Runner.MySql.xml",
+        "net461/x64/FluentMigrator.Runner.Oracle.dll",
+        "net461/x64/FluentMigrator.Runner.Oracle.pdb",
+        "net461/x64/FluentMigrator.Runner.Oracle.xml",
+        "net461/x64/FluentMigrator.Runner.Postgres.dll",
+        "net461/x64/FluentMigrator.Runner.Postgres.pdb",
+        "net461/x64/FluentMigrator.Runner.Postgres.xml",
+        "net461/x64/FluentMigrator.Runner.Redshift.dll",
+        "net461/x64/FluentMigrator.Runner.Redshift.pdb",
+        "net461/x64/FluentMigrator.Runner.Redshift.xml",
+        "net461/x64/FluentMigrator.Runner.SQLite.dll",
+        "net461/x64/FluentMigrator.Runner.SQLite.pdb",
+        "net461/x64/FluentMigrator.Runner.SQLite.xml",
+        "net461/x64/FluentMigrator.Runner.SqlAnywhere.dll",
+        "net461/x64/FluentMigrator.Runner.SqlAnywhere.pdb",
+        "net461/x64/FluentMigrator.Runner.SqlAnywhere.xml",
+        "net461/x64/FluentMigrator.Runner.SqlServer.dll",
+        "net461/x64/FluentMigrator.Runner.SqlServer.pdb",
+        "net461/x64/FluentMigrator.Runner.SqlServer.xml",
+        "net461/x64/FluentMigrator.Runner.SqlServerCe.dll",
+        "net461/x64/FluentMigrator.Runner.SqlServerCe.pdb",
+        "net461/x64/FluentMigrator.Runner.SqlServerCe.xml",
+        "net461/x64/FluentMigrator.Runner.dll",
+        "net461/x64/FluentMigrator.Runner.pdb",
+        "net461/x64/FluentMigrator.Runner.xml",
+        "net461/x64/FluentMigrator.dll",
+        "net461/x64/FluentMigrator.pdb",
+        "net461/x64/FluentMigrator.xml",
+        "net461/x64/Google.Protobuf.dll",
+        "net461/x64/JetBrains.Annotations.dll",
+        "net461/x64/Microsoft.Data.Sqlite.dll",
+        "net461/x64/Microsoft.Extensions.Configuration.Abstractions.dll",
+        "net461/x64/Microsoft.Extensions.DependencyInjection.Abstractions.dll",
+        "net461/x64/Microsoft.Extensions.DependencyInjection.dll",
+        "net461/x64/Microsoft.Extensions.Logging.Abstractions.dll",
+        "net461/x64/Microsoft.Extensions.Logging.dll",
+        "net461/x64/Microsoft.Extensions.Options.dll",
+        "net461/x64/Microsoft.Extensions.Primitives.dll",
+        "net461/x64/Microsoft.Win32.Primitives.dll",
+        "net461/x64/Migrate.exe",
+        "net461/x64/Migrate.exe.config",
+        "net461/x64/Migrate.pdb",
+        "net461/x64/MySql.Data.dll",
+        "net461/x64/Npgsql.dll",
+        "net461/x64/Oracle.ManagedDataAccess.dll",
+        "net461/x64/SQLitePCLRaw.batteries_green.dll",
+        "net461/x64/SQLitePCLRaw.batteries_v2.dll",
+        "net461/x64/SQLitePCLRaw.core.dll",
+        "net461/x64/SQLitePCLRaw.provider.e_sqlite3.dll",
+        "net461/x64/Sap.Data.Hana.v4.5.dll",
+        "net461/x64/Sap.Data.Hana.v4.5.dll.config",
+        "net461/x64/Sap.Data.Hana.v4.5.xml",
+        "net461/x64/System.AppContext.dll",
+        "net461/x64/System.Collections.Concurrent.dll",
+        "net461/x64/System.Collections.NonGeneric.dll",
+        "net461/x64/System.Collections.Specialized.dll",
+        "net461/x64/System.Collections.dll",
+        "net461/x64/System.ComponentModel.Annotations.dll",
+        "net461/x64/System.ComponentModel.EventBasedAsync.dll",
+        "net461/x64/System.ComponentModel.Primitives.dll",
+        "net461/x64/System.ComponentModel.TypeConverter.dll",
+        "net461/x64/System.ComponentModel.dll",
+        "net461/x64/System.Console.dll",
+        "net461/x64/System.Data.Common.dll",
+        "net461/x64/System.Diagnostics.Contracts.dll",
+        "net461/x64/System.Diagnostics.Debug.dll",
+        "net461/x64/System.Diagnostics.FileVersionInfo.dll",
+        "net461/x64/System.Diagnostics.Process.dll",
+        "net461/x64/System.Diagnostics.StackTrace.dll",
+        "net461/x64/System.Diagnostics.TextWriterTraceListener.dll",
+        "net461/x64/System.Diagnostics.Tools.dll",
+        "net461/x64/System.Diagnostics.TraceSource.dll",
+        "net461/x64/System.Diagnostics.Tracing.dll",
+        "net461/x64/System.Drawing.Primitives.dll",
+        "net461/x64/System.Dynamic.Runtime.dll",
+        "net461/x64/System.Globalization.Calendars.dll",
+        "net461/x64/System.Globalization.Extensions.dll",
+        "net461/x64/System.Globalization.dll",
+        "net461/x64/System.IO.Compression.ZipFile.dll",
+        "net461/x64/System.IO.Compression.dll",
+        "net461/x64/System.IO.FileSystem.DriveInfo.dll",
+        "net461/x64/System.IO.FileSystem.Primitives.dll",
+        "net461/x64/System.IO.FileSystem.Watcher.dll",
+        "net461/x64/System.IO.FileSystem.dll",
+        "net461/x64/System.IO.IsolatedStorage.dll",
+        "net461/x64/System.IO.MemoryMappedFiles.dll",
+        "net461/x64/System.IO.Pipes.dll",
+        "net461/x64/System.IO.UnmanagedMemoryStream.dll",
+        "net461/x64/System.IO.dll",
+        "net461/x64/System.Linq.Expressions.dll",
+        "net461/x64/System.Linq.Parallel.dll",
+        "net461/x64/System.Linq.Queryable.dll",
+        "net461/x64/System.Linq.dll",
+        "net461/x64/System.Net.Http.dll",
+        "net461/x64/System.Net.NameResolution.dll",
+        "net461/x64/System.Net.NetworkInformation.dll",
+        "net461/x64/System.Net.Ping.dll",
+        "net461/x64/System.Net.Primitives.dll",
+        "net461/x64/System.Net.Requests.dll",
+        "net461/x64/System.Net.Security.dll",
+        "net461/x64/System.Net.Sockets.dll",
+        "net461/x64/System.Net.WebHeaderCollection.dll",
+        "net461/x64/System.Net.WebSockets.Client.dll",
+        "net461/x64/System.Net.WebSockets.dll",
+        "net461/x64/System.ObjectModel.dll",
+        "net461/x64/System.Reflection.Extensions.dll",
+        "net461/x64/System.Reflection.Primitives.dll",
+        "net461/x64/System.Reflection.dll",
+        "net461/x64/System.Resources.Reader.dll",
+        "net461/x64/System.Resources.ResourceManager.dll",
+        "net461/x64/System.Resources.Writer.dll",
+        "net461/x64/System.Runtime.CompilerServices.Unsafe.dll",
+        "net461/x64/System.Runtime.CompilerServices.VisualC.dll",
+        "net461/x64/System.Runtime.Extensions.dll",
+        "net461/x64/System.Runtime.Handles.dll",
+        "net461/x64/System.Runtime.InteropServices.RuntimeInformation.dll",
+        "net461/x64/System.Runtime.InteropServices.dll",
+        "net461/x64/System.Runtime.Numerics.dll",
+        "net461/x64/System.Runtime.Serialization.Formatters.dll",
+        "net461/x64/System.Runtime.Serialization.Json.dll",
+        "net461/x64/System.Runtime.Serialization.Primitives.dll",
+        "net461/x64/System.Runtime.Serialization.Xml.dll",
+        "net461/x64/System.Runtime.dll",
+        "net461/x64/System.Security.Claims.dll",
+        "net461/x64/System.Security.Cryptography.Algorithms.dll",
+        "net461/x64/System.Security.Cryptography.Csp.dll",
+        "net461/x64/System.Security.Cryptography.Encoding.dll",
+        "net461/x64/System.Security.Cryptography.Primitives.dll",
+        "net461/x64/System.Security.Cryptography.X509Certificates.dll",
+        "net461/x64/System.Security.Principal.dll",
+        "net461/x64/System.Security.SecureString.dll",
+        "net461/x64/System.Text.Encoding.Extensions.dll",
+        "net461/x64/System.Text.Encoding.dll",
+        "net461/x64/System.Text.RegularExpressions.dll",
+        "net461/x64/System.Threading.Overlapped.dll",
+        "net461/x64/System.Threading.Tasks.Extensions.dll",
+        "net461/x64/System.Threading.Tasks.Parallel.dll",
+        "net461/x64/System.Threading.Tasks.dll",
+        "net461/x64/System.Threading.Thread.dll",
+        "net461/x64/System.Threading.ThreadPool.dll",
+        "net461/x64/System.Threading.Timer.dll",
+        "net461/x64/System.Threading.dll",
+        "net461/x64/System.ValueTuple.dll",
+        "net461/x64/System.Xml.ReaderWriter.dll",
+        "net461/x64/System.Xml.XDocument.dll",
+        "net461/x64/System.Xml.XPath.XDocument.dll",
+        "net461/x64/System.Xml.XPath.dll",
+        "net461/x64/System.Xml.XmlDocument.dll",
+        "net461/x64/System.Xml.XmlSerializer.dll",
+        "net461/x64/amd64/Microsoft.VC90.CRT/Microsoft.VC90.CRT.manifest",
+        "net461/x64/amd64/Microsoft.VC90.CRT/README_ENU.txt",
+        "net461/x64/amd64/Microsoft.VC90.CRT/msvcr90.dll",
+        "net461/x64/amd64/sqlceca40.dll",
+        "net461/x64/amd64/sqlcecompact40.dll",
+        "net461/x64/amd64/sqlceer40EN.dll",
+        "net461/x64/amd64/sqlceme40.dll",
+        "net461/x64/amd64/sqlceqp40.dll",
+        "net461/x64/amd64/sqlcese40.dll",
+        "net461/x64/cs/FSharp.Core.resources.dll",
+        "net461/x64/de-DE/FluentMigrator.Abstractions.resources.dll",
+        "net461/x64/de/FSharp.Core.resources.dll",
+        "net461/x64/e_sqlite3.dll",
+        "net461/x64/en/FSharp.Core.resources.dll",
+        "net461/x64/es/FSharp.Core.resources.dll",
+        "net461/x64/fr/FSharp.Core.resources.dll",
+        "net461/x64/it/FSharp.Core.resources.dll",
+        "net461/x64/ja/FSharp.Core.resources.dll",
+        "net461/x64/ko/FSharp.Core.resources.dll",
+        "net461/x64/libSQLDBCHDB.dll",
+        "net461/x64/libSQLDBCHDB.pdb",
+        "net461/x64/libadonetHDB.dll",
+        "net461/x64/libadonetHDB.pdb",
+        "net461/x64/libdbcapiHDB.dll",
+        "net461/x64/libdbcapiHDB.pdb",
+        "net461/x64/libe_sqlite3.so",
+        "net461/x64/libodbcHDB.dll",
+        "net461/x64/libodbcHDB.lib",
+        "net461/x64/libodbcHDB.pdb",
+        "net461/x64/netstandard.dll",
+        "net461/x64/pl/FSharp.Core.resources.dll",
+        "net461/x64/pt-BR/FSharp.Core.resources.dll",
+        "net461/x64/ru/FSharp.Core.resources.dll",
+        "net461/x64/tr/FSharp.Core.resources.dll",
+        "net461/x64/x86/Microsoft.VC90.CRT/Microsoft.VC90.CRT.manifest",
+        "net461/x64/x86/Microsoft.VC90.CRT/README_ENU.txt",
+        "net461/x64/x86/Microsoft.VC90.CRT/msvcr90.dll",
+        "net461/x64/x86/sqlceca40.dll",
+        "net461/x64/x86/sqlcecompact40.dll",
+        "net461/x64/x86/sqlceer40EN.dll",
+        "net461/x64/x86/sqlceme40.dll",
+        "net461/x64/x86/sqlceqp40.dll",
+        "net461/x64/x86/sqlcese40.dll",
+        "net461/x64/zh-Hans/FSharp.Core.resources.dll",
+        "net461/x64/zh-Hant/FSharp.Core.resources.dll",
+        "net461/x86/FSharp.Core.dll",
+        "net461/x86/FirebirdSql.Data.FirebirdClient.dll",
+        "net461/x86/FluentMigrator.Abstractions.dll",
+        "net461/x86/FluentMigrator.Abstractions.pdb",
+        "net461/x86/FluentMigrator.Abstractions.xml",
+        "net461/x86/FluentMigrator.Extensions.Oracle.dll",
+        "net461/x86/FluentMigrator.Extensions.Oracle.pdb",
+        "net461/x86/FluentMigrator.Extensions.Oracle.xml",
+        "net461/x86/FluentMigrator.Extensions.SqlAnywhere.dll",
+        "net461/x86/FluentMigrator.Extensions.SqlAnywhere.pdb",
+        "net461/x86/FluentMigrator.Extensions.SqlAnywhere.xml",
+        "net461/x86/FluentMigrator.Extensions.SqlServer.dll",
+        "net461/x86/FluentMigrator.Extensions.SqlServer.pdb",
+        "net461/x86/FluentMigrator.Extensions.SqlServer.xml",
+        "net461/x86/FluentMigrator.Runner.Core.dll",
+        "net461/x86/FluentMigrator.Runner.Core.pdb",
+        "net461/x86/FluentMigrator.Runner.Core.xml",
+        "net461/x86/FluentMigrator.Runner.Db2.dll",
+        "net461/x86/FluentMigrator.Runner.Db2.pdb",
+        "net461/x86/FluentMigrator.Runner.Db2.xml",
+        "net461/x86/FluentMigrator.Runner.Firebird.dll",
+        "net461/x86/FluentMigrator.Runner.Firebird.pdb",
+        "net461/x86/FluentMigrator.Runner.Firebird.xml",
+        "net461/x86/FluentMigrator.Runner.Hana.dll",
+        "net461/x86/FluentMigrator.Runner.Hana.pdb",
+        "net461/x86/FluentMigrator.Runner.Hana.xml",
+        "net461/x86/FluentMigrator.Runner.Jet.dll",
+        "net461/x86/FluentMigrator.Runner.Jet.pdb",
+        "net461/x86/FluentMigrator.Runner.Jet.xml",
+        "net461/x86/FluentMigrator.Runner.MySql.dll",
+        "net461/x86/FluentMigrator.Runner.MySql.pdb",
+        "net461/x86/FluentMigrator.Runner.MySql.xml",
+        "net461/x86/FluentMigrator.Runner.Oracle.dll",
+        "net461/x86/FluentMigrator.Runner.Oracle.pdb",
+        "net461/x86/FluentMigrator.Runner.Oracle.xml",
+        "net461/x86/FluentMigrator.Runner.Postgres.dll",
+        "net461/x86/FluentMigrator.Runner.Postgres.pdb",
+        "net461/x86/FluentMigrator.Runner.Postgres.xml",
+        "net461/x86/FluentMigrator.Runner.Redshift.dll",
+        "net461/x86/FluentMigrator.Runner.Redshift.pdb",
+        "net461/x86/FluentMigrator.Runner.Redshift.xml",
+        "net461/x86/FluentMigrator.Runner.SQLite.dll",
+        "net461/x86/FluentMigrator.Runner.SQLite.pdb",
+        "net461/x86/FluentMigrator.Runner.SQLite.xml",
+        "net461/x86/FluentMigrator.Runner.SqlAnywhere.dll",
+        "net461/x86/FluentMigrator.Runner.SqlAnywhere.pdb",
+        "net461/x86/FluentMigrator.Runner.SqlAnywhere.xml",
+        "net461/x86/FluentMigrator.Runner.SqlServer.dll",
+        "net461/x86/FluentMigrator.Runner.SqlServer.pdb",
+        "net461/x86/FluentMigrator.Runner.SqlServer.xml",
+        "net461/x86/FluentMigrator.Runner.SqlServerCe.dll",
+        "net461/x86/FluentMigrator.Runner.SqlServerCe.pdb",
+        "net461/x86/FluentMigrator.Runner.SqlServerCe.xml",
+        "net461/x86/FluentMigrator.Runner.dll",
+        "net461/x86/FluentMigrator.Runner.pdb",
+        "net461/x86/FluentMigrator.Runner.xml",
+        "net461/x86/FluentMigrator.dll",
+        "net461/x86/FluentMigrator.pdb",
+        "net461/x86/FluentMigrator.xml",
+        "net461/x86/Google.Protobuf.dll",
+        "net461/x86/JetBrains.Annotations.dll",
+        "net461/x86/Microsoft.Data.Sqlite.dll",
+        "net461/x86/Microsoft.Extensions.Configuration.Abstractions.dll",
+        "net461/x86/Microsoft.Extensions.DependencyInjection.Abstractions.dll",
+        "net461/x86/Microsoft.Extensions.DependencyInjection.dll",
+        "net461/x86/Microsoft.Extensions.Logging.Abstractions.dll",
+        "net461/x86/Microsoft.Extensions.Logging.dll",
+        "net461/x86/Microsoft.Extensions.Options.dll",
+        "net461/x86/Microsoft.Extensions.Primitives.dll",
+        "net461/x86/Microsoft.Win32.Primitives.dll",
+        "net461/x86/Migrate.exe",
+        "net461/x86/Migrate.exe.config",
+        "net461/x86/Migrate.pdb",
+        "net461/x86/MySql.Data.dll",
+        "net461/x86/Npgsql.dll",
+        "net461/x86/Oracle.DataAccess.dll",
+        "net461/x86/Oracle.ManagedDataAccess.dll",
+        "net461/x86/SQLitePCLRaw.batteries_green.dll",
+        "net461/x86/SQLitePCLRaw.batteries_v2.dll",
+        "net461/x86/SQLitePCLRaw.core.dll",
+        "net461/x86/SQLitePCLRaw.provider.e_sqlite3.dll",
+        "net461/x86/System.AppContext.dll",
+        "net461/x86/System.Collections.Concurrent.dll",
+        "net461/x86/System.Collections.NonGeneric.dll",
+        "net461/x86/System.Collections.Specialized.dll",
+        "net461/x86/System.Collections.dll",
+        "net461/x86/System.ComponentModel.Annotations.dll",
+        "net461/x86/System.ComponentModel.EventBasedAsync.dll",
+        "net461/x86/System.ComponentModel.Primitives.dll",
+        "net461/x86/System.ComponentModel.TypeConverter.dll",
+        "net461/x86/System.ComponentModel.dll",
+        "net461/x86/System.Console.dll",
+        "net461/x86/System.Data.Common.dll",
+        "net461/x86/System.Diagnostics.Contracts.dll",
+        "net461/x86/System.Diagnostics.Debug.dll",
+        "net461/x86/System.Diagnostics.FileVersionInfo.dll",
+        "net461/x86/System.Diagnostics.Process.dll",
+        "net461/x86/System.Diagnostics.StackTrace.dll",
+        "net461/x86/System.Diagnostics.TextWriterTraceListener.dll",
+        "net461/x86/System.Diagnostics.Tools.dll",
+        "net461/x86/System.Diagnostics.TraceSource.dll",
+        "net461/x86/System.Diagnostics.Tracing.dll",
+        "net461/x86/System.Drawing.Primitives.dll",
+        "net461/x86/System.Dynamic.Runtime.dll",
+        "net461/x86/System.Globalization.Calendars.dll",
+        "net461/x86/System.Globalization.Extensions.dll",
+        "net461/x86/System.Globalization.dll",
+        "net461/x86/System.IO.Compression.ZipFile.dll",
+        "net461/x86/System.IO.Compression.dll",
+        "net461/x86/System.IO.FileSystem.DriveInfo.dll",
+        "net461/x86/System.IO.FileSystem.Primitives.dll",
+        "net461/x86/System.IO.FileSystem.Watcher.dll",
+        "net461/x86/System.IO.FileSystem.dll",
+        "net461/x86/System.IO.IsolatedStorage.dll",
+        "net461/x86/System.IO.MemoryMappedFiles.dll",
+        "net461/x86/System.IO.Pipes.dll",
+        "net461/x86/System.IO.UnmanagedMemoryStream.dll",
+        "net461/x86/System.IO.dll",
+        "net461/x86/System.Linq.Expressions.dll",
+        "net461/x86/System.Linq.Parallel.dll",
+        "net461/x86/System.Linq.Queryable.dll",
+        "net461/x86/System.Linq.dll",
+        "net461/x86/System.Net.Http.dll",
+        "net461/x86/System.Net.NameResolution.dll",
+        "net461/x86/System.Net.NetworkInformation.dll",
+        "net461/x86/System.Net.Ping.dll",
+        "net461/x86/System.Net.Primitives.dll",
+        "net461/x86/System.Net.Requests.dll",
+        "net461/x86/System.Net.Security.dll",
+        "net461/x86/System.Net.Sockets.dll",
+        "net461/x86/System.Net.WebHeaderCollection.dll",
+        "net461/x86/System.Net.WebSockets.Client.dll",
+        "net461/x86/System.Net.WebSockets.dll",
+        "net461/x86/System.ObjectModel.dll",
+        "net461/x86/System.Reflection.Extensions.dll",
+        "net461/x86/System.Reflection.Primitives.dll",
+        "net461/x86/System.Reflection.dll",
+        "net461/x86/System.Resources.Reader.dll",
+        "net461/x86/System.Resources.ResourceManager.dll",
+        "net461/x86/System.Resources.Writer.dll",
+        "net461/x86/System.Runtime.CompilerServices.Unsafe.dll",
+        "net461/x86/System.Runtime.CompilerServices.VisualC.dll",
+        "net461/x86/System.Runtime.Extensions.dll",
+        "net461/x86/System.Runtime.Handles.dll",
+        "net461/x86/System.Runtime.InteropServices.RuntimeInformation.dll",
+        "net461/x86/System.Runtime.InteropServices.dll",
+        "net461/x86/System.Runtime.Numerics.dll",
+        "net461/x86/System.Runtime.Serialization.Formatters.dll",
+        "net461/x86/System.Runtime.Serialization.Json.dll",
+        "net461/x86/System.Runtime.Serialization.Primitives.dll",
+        "net461/x86/System.Runtime.Serialization.Xml.dll",
+        "net461/x86/System.Runtime.dll",
+        "net461/x86/System.Security.Claims.dll",
+        "net461/x86/System.Security.Cryptography.Algorithms.dll",
+        "net461/x86/System.Security.Cryptography.Csp.dll",
+        "net461/x86/System.Security.Cryptography.Encoding.dll",
+        "net461/x86/System.Security.Cryptography.Primitives.dll",
+        "net461/x86/System.Security.Cryptography.X509Certificates.dll",
+        "net461/x86/System.Security.Principal.dll",
+        "net461/x86/System.Security.SecureString.dll",
+        "net461/x86/System.Text.Encoding.Extensions.dll",
+        "net461/x86/System.Text.Encoding.dll",
+        "net461/x86/System.Text.RegularExpressions.dll",
+        "net461/x86/System.Threading.Overlapped.dll",
+        "net461/x86/System.Threading.Tasks.Extensions.dll",
+        "net461/x86/System.Threading.Tasks.Parallel.dll",
+        "net461/x86/System.Threading.Tasks.dll",
+        "net461/x86/System.Threading.Thread.dll",
+        "net461/x86/System.Threading.ThreadPool.dll",
+        "net461/x86/System.Threading.Timer.dll",
+        "net461/x86/System.Threading.dll",
+        "net461/x86/System.ValueTuple.dll",
+        "net461/x86/System.Xml.ReaderWriter.dll",
+        "net461/x86/System.Xml.XDocument.dll",
+        "net461/x86/System.Xml.XPath.XDocument.dll",
+        "net461/x86/System.Xml.XPath.dll",
+        "net461/x86/System.Xml.XmlDocument.dll",
+        "net461/x86/System.Xml.XmlSerializer.dll",
+        "net461/x86/amd64/Microsoft.VC90.CRT/Microsoft.VC90.CRT.manifest",
+        "net461/x86/amd64/Microsoft.VC90.CRT/README_ENU.txt",
+        "net461/x86/amd64/Microsoft.VC90.CRT/msvcr90.dll",
+        "net461/x86/amd64/sqlceca40.dll",
+        "net461/x86/amd64/sqlcecompact40.dll",
+        "net461/x86/amd64/sqlceer40EN.dll",
+        "net461/x86/amd64/sqlceme40.dll",
+        "net461/x86/amd64/sqlceqp40.dll",
+        "net461/x86/amd64/sqlcese40.dll",
+        "net461/x86/cs/FSharp.Core.resources.dll",
+        "net461/x86/de-DE/FluentMigrator.Abstractions.resources.dll",
+        "net461/x86/de/FSharp.Core.resources.dll",
+        "net461/x86/e_sqlite3.dll",
+        "net461/x86/en/FSharp.Core.resources.dll",
+        "net461/x86/es/FSharp.Core.resources.dll",
+        "net461/x86/fr/FSharp.Core.resources.dll",
+        "net461/x86/it/FSharp.Core.resources.dll",
+        "net461/x86/ja/FSharp.Core.resources.dll",
+        "net461/x86/ko/FSharp.Core.resources.dll",
+        "net461/x86/libe_sqlite3.so",
+        "net461/x86/netstandard.dll",
+        "net461/x86/pl/FSharp.Core.resources.dll",
+        "net461/x86/pt-BR/FSharp.Core.resources.dll",
+        "net461/x86/ru/FSharp.Core.resources.dll",
+        "net461/x86/tr/FSharp.Core.resources.dll",
+        "net461/x86/x86/Microsoft.VC90.CRT/Microsoft.VC90.CRT.manifest",
+        "net461/x86/x86/Microsoft.VC90.CRT/README_ENU.txt",
+        "net461/x86/x86/Microsoft.VC90.CRT/msvcr90.dll",
+        "net461/x86/x86/sqlceca40.dll",
+        "net461/x86/x86/sqlcecompact40.dll",
+        "net461/x86/x86/sqlceer40EN.dll",
+        "net461/x86/x86/sqlceme40.dll",
+        "net461/x86/x86/sqlceqp40.dll",
+        "net461/x86/x86/sqlcese40.dll",
+        "net461/x86/zh-Hans/FSharp.Core.resources.dll",
+        "net461/x86/zh-Hant/FSharp.Core.resources.dll"
+      ]
+    },
+    "FluentMigrator.Extensions.Oracle/3.2.1": {
+      "sha512": "coNrtHWToflHHnBcrsaJK8t7hrv6DQb4eRR7Gg2CxWrPf+0Zyjr7FAVR1AMKf0YvbrJDXq1Q12vpVjuy24aILg==",
+      "type": "package",
+      "path": "fluentmigrator.extensions.oracle/3.2.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "fluentmigrator.extensions.oracle.3.2.1.nupkg.sha512",
+        "fluentmigrator.extensions.oracle.nuspec",
+        "lib/net461/FluentMigrator.Extensions.Oracle.dll",
+        "lib/net461/FluentMigrator.Extensions.Oracle.pdb",
+        "lib/net461/FluentMigrator.Extensions.Oracle.xml",
+        "lib/netstandard2.0/FluentMigrator.Extensions.Oracle.dll",
+        "lib/netstandard2.0/FluentMigrator.Extensions.Oracle.pdb",
+        "lib/netstandard2.0/FluentMigrator.Extensions.Oracle.xml"
+      ]
+    },
+    "FluentMigrator.Extensions.SqlAnywhere/3.2.1": {
+      "sha512": "MZhP22sRjrISf9cET05Xl7n71hljurihsmCGu3U4hdIlcClkpk33k5ghx4YCant1FoEcrX79f6+kHGi4+W4Drw==",
+      "type": "package",
+      "path": "fluentmigrator.extensions.sqlanywhere/3.2.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "fluentmigrator.extensions.sqlanywhere.3.2.1.nupkg.sha512",
+        "fluentmigrator.extensions.sqlanywhere.nuspec",
+        "lib/net461/FluentMigrator.Extensions.SqlAnywhere.dll",
+        "lib/net461/FluentMigrator.Extensions.SqlAnywhere.pdb",
+        "lib/net461/FluentMigrator.Extensions.SqlAnywhere.xml",
+        "lib/netstandard2.0/FluentMigrator.Extensions.SqlAnywhere.dll",
+        "lib/netstandard2.0/FluentMigrator.Extensions.SqlAnywhere.pdb",
+        "lib/netstandard2.0/FluentMigrator.Extensions.SqlAnywhere.xml"
+      ]
+    },
+    "FluentMigrator.Extensions.SqlServer/3.2.1": {
+      "sha512": "RRztfTxOq6JxOH//687XpL5J7EtSU0qGm1AUQsn5Hl/lv0N9Xk+F4L1OWreHHahF6V0QroGB4gjjZuUkvYs2uw==",
+      "type": "package",
+      "path": "fluentmigrator.extensions.sqlserver/3.2.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "fluentmigrator.extensions.sqlserver.3.2.1.nupkg.sha512",
+        "fluentmigrator.extensions.sqlserver.nuspec",
+        "lib/net461/FluentMigrator.Extensions.SqlServer.dll",
+        "lib/net461/FluentMigrator.Extensions.SqlServer.pdb",
+        "lib/net461/FluentMigrator.Extensions.SqlServer.xml",
+        "lib/netstandard2.0/FluentMigrator.Extensions.SqlServer.dll",
+        "lib/netstandard2.0/FluentMigrator.Extensions.SqlServer.pdb",
+        "lib/netstandard2.0/FluentMigrator.Extensions.SqlServer.xml"
+      ]
+    },
+    "FluentMigrator.Generator/1.0.5": {
+      "sha512": "sYoz+kvdfWAhFzmlJa4AQkpzi2oWYF7MthCeZoagFtHenj4q25EZbmkgFHC2zg44Dgpjui3DJ5jzg9pdkDB08w==",
+      "type": "package",
+      "path": "fluentmigrator.generator/1.0.5",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "fluentmigrator.generator.1.0.5.nupkg.sha512",
+        "fluentmigrator.generator.nuspec",
+        "tools/FluentMigrator.psd1",
+        "tools/FluentMigrator.psm1",
+        "tools/init.ps1"
+      ]
+    },
+    "FluentMigrator.NHibernate/1.0.0.17": {
+      "sha512": "4DMcPYUOVS2XpbgB/d9ZjCnNepNHWsjdqVTtCCy8xHmA1rmf0fvElHg1b1vlUjONTxWvuCmp6nBrfYGsWFzYZw==",
+      "type": "package",
+      "path": "fluentmigrator.nhibernate/1.0.0.17",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "fluentmigrator.nhibernate.1.0.0.17.nupkg.sha512",
+        "fluentmigrator.nhibernate.nuspec",
+        "lib/net461/FluentMigrator.NHibernate.dll"
+      ]
+    },
+    "FluentMigrator.Runner/3.2.1": {
+      "sha512": "chjQPiVujJodDCIdMTRPYRunGL2eof1miIMj5FSIwdNYijGjZ2K9fmPIb1eI6QNUc7Zojtx5IgbpF3aOFHJOgA==",
+      "type": "package",
+      "path": "fluentmigrator.runner/3.2.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "fluentmigrator.runner.3.2.1.nupkg.sha512",
+        "fluentmigrator.runner.nuspec",
+        "lib/net461/FluentMigrator.Runner.dll",
+        "lib/net461/FluentMigrator.Runner.pdb",
+        "lib/net461/FluentMigrator.Runner.xml",
+        "lib/netstandard2.0/FluentMigrator.Runner.dll",
+        "lib/netstandard2.0/FluentMigrator.Runner.pdb",
+        "lib/netstandard2.0/FluentMigrator.Runner.xml"
+      ]
+    },
+    "FluentMigrator.Runner.Core/3.2.1": {
+      "sha512": "XnmttdMQBGP5ET/rCkyE2coP0VBPs3s4Ia0/vEVkYiUYx7IqXVEVL+aEH4IJA7vmktxoCGnWmumQuoI/yv6V/w==",
+      "type": "package",
+      "path": "fluentmigrator.runner.core/3.2.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "fluentmigrator.runner.core.3.2.1.nupkg.sha512",
+        "fluentmigrator.runner.core.nuspec",
+        "lib/net461/FluentMigrator.Runner.Core.dll",
+        "lib/net461/FluentMigrator.Runner.Core.pdb",
+        "lib/net461/FluentMigrator.Runner.Core.xml",
+        "lib/netstandard2.0/FluentMigrator.Runner.Core.dll",
+        "lib/netstandard2.0/FluentMigrator.Runner.Core.pdb",
+        "lib/netstandard2.0/FluentMigrator.Runner.Core.xml"
+      ]
+    },
+    "FluentMigrator.Runner.Db2/3.2.1": {
+      "sha512": "Hw3qHJF2Hd5MfFCP/fMfIHpILf89bH8FjMNSFAdI+yASq3/o5cebT7YVvGOdSnuhsedwR7X6+ppiHALdBzixHA==",
+      "type": "package",
+      "path": "fluentmigrator.runner.db2/3.2.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "fluentmigrator.runner.db2.3.2.1.nupkg.sha512",
+        "fluentmigrator.runner.db2.nuspec",
+        "lib/net461/FluentMigrator.Runner.Db2.dll",
+        "lib/net461/FluentMigrator.Runner.Db2.pdb",
+        "lib/net461/FluentMigrator.Runner.Db2.xml",
+        "lib/netstandard2.0/FluentMigrator.Runner.Db2.dll",
+        "lib/netstandard2.0/FluentMigrator.Runner.Db2.pdb",
+        "lib/netstandard2.0/FluentMigrator.Runner.Db2.xml"
+      ]
+    },
+    "FluentMigrator.Runner.Firebird/3.2.1": {
+      "sha512": "uSse5o0rsyHsSmEM5QsilvPVynSWLGOTf7lJS7RFwYYap0Y93Xn1ixQIo27OuQWVq9uA3SEwackRFeB/5XSegQ==",
+      "type": "package",
+      "path": "fluentmigrator.runner.firebird/3.2.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "fluentmigrator.runner.firebird.3.2.1.nupkg.sha512",
+        "fluentmigrator.runner.firebird.nuspec",
+        "lib/net461/FluentMigrator.Runner.Firebird.dll",
+        "lib/net461/FluentMigrator.Runner.Firebird.pdb",
+        "lib/net461/FluentMigrator.Runner.Firebird.xml",
+        "lib/netstandard2.0/FluentMigrator.Runner.Firebird.dll",
+        "lib/netstandard2.0/FluentMigrator.Runner.Firebird.pdb",
+        "lib/netstandard2.0/FluentMigrator.Runner.Firebird.xml"
+      ]
+    },
+    "FluentMigrator.Runner.Hana/3.2.1": {
+      "sha512": "SPyeYgwbARNhsLTVIY2f0n1BD6JExwTX0h/dygWBuyQ4pL85MFs94Ja98Mz1n6b2XoqPWSwwZJuNlVOhqByjuA==",
+      "type": "package",
+      "path": "fluentmigrator.runner.hana/3.2.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "fluentmigrator.runner.hana.3.2.1.nupkg.sha512",
+        "fluentmigrator.runner.hana.nuspec",
+        "lib/net461/FluentMigrator.Runner.Hana.dll",
+        "lib/net461/FluentMigrator.Runner.Hana.pdb",
+        "lib/net461/FluentMigrator.Runner.Hana.xml",
+        "lib/netstandard2.0/FluentMigrator.Runner.Hana.dll",
+        "lib/netstandard2.0/FluentMigrator.Runner.Hana.pdb",
+        "lib/netstandard2.0/FluentMigrator.Runner.Hana.xml"
+      ]
+    },
+    "FluentMigrator.Runner.MySql/3.2.1": {
+      "sha512": "6bvVLHe2xdaDn59v9EKzUtAeBTRDH9qPqEMU4+WsHlvc2PGejW4x6Ci2FCurtlgqc+4cXn7ZqXMtaRyMzMpPfg==",
+      "type": "package",
+      "path": "fluentmigrator.runner.mysql/3.2.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "fluentmigrator.runner.mysql.3.2.1.nupkg.sha512",
+        "fluentmigrator.runner.mysql.nuspec",
+        "lib/net461/FluentMigrator.Runner.MySql.dll",
+        "lib/net461/FluentMigrator.Runner.MySql.pdb",
+        "lib/net461/FluentMigrator.Runner.MySql.xml",
+        "lib/netstandard2.0/FluentMigrator.Runner.MySql.dll",
+        "lib/netstandard2.0/FluentMigrator.Runner.MySql.pdb",
+        "lib/netstandard2.0/FluentMigrator.Runner.MySql.xml"
+      ]
+    },
+    "FluentMigrator.Runner.Oracle/3.2.1": {
+      "sha512": "CQKIN8/3YzZbzbFxiAG1EQJ8Smk7mMPwJzi2XPzor+Ex+ghxuruq0o9N8Vij/7uphKdgAbYWQJveZtAjMH2aBQ==",
+      "type": "package",
+      "path": "fluentmigrator.runner.oracle/3.2.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "fluentmigrator.runner.oracle.3.2.1.nupkg.sha512",
+        "fluentmigrator.runner.oracle.nuspec",
+        "lib/net461/FluentMigrator.Runner.Oracle.dll",
+        "lib/net461/FluentMigrator.Runner.Oracle.pdb",
+        "lib/net461/FluentMigrator.Runner.Oracle.xml",
+        "lib/netstandard2.0/FluentMigrator.Runner.Oracle.dll",
+        "lib/netstandard2.0/FluentMigrator.Runner.Oracle.pdb",
+        "lib/netstandard2.0/FluentMigrator.Runner.Oracle.xml"
+      ]
+    },
+    "FluentMigrator.Runner.Postgres/3.2.1": {
+      "sha512": "dI3s/pWKI65DtdHQlt++Ccg+nXqGihUVceWibiUjNPQ1mpxzTsgmO2GvLQ3Q5qj8Kyx7RoBk7SYzZCC6cf4X5A==",
+      "type": "package",
+      "path": "fluentmigrator.runner.postgres/3.2.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "fluentmigrator.runner.postgres.3.2.1.nupkg.sha512",
+        "fluentmigrator.runner.postgres.nuspec",
+        "lib/net461/FluentMigrator.Runner.Postgres.dll",
+        "lib/net461/FluentMigrator.Runner.Postgres.pdb",
+        "lib/net461/FluentMigrator.Runner.Postgres.xml",
+        "lib/netstandard2.0/FluentMigrator.Runner.Postgres.dll",
+        "lib/netstandard2.0/FluentMigrator.Runner.Postgres.pdb",
+        "lib/netstandard2.0/FluentMigrator.Runner.Postgres.xml"
+      ]
+    },
+    "FluentMigrator.Runner.Redshift/3.2.1": {
+      "sha512": "1Bmfa9S3sTEV9hXjOhcin8h+H0QvvXx5y+aw1PZRxz9t+FUL4b3sP8L3gokT54mGxea+sN13d8wmFoHU4NejbA==",
+      "type": "package",
+      "path": "fluentmigrator.runner.redshift/3.2.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "fluentmigrator.runner.redshift.3.2.1.nupkg.sha512",
+        "fluentmigrator.runner.redshift.nuspec",
+        "lib/net461/FluentMigrator.Runner.Redshift.dll",
+        "lib/net461/FluentMigrator.Runner.Redshift.pdb",
+        "lib/net461/FluentMigrator.Runner.Redshift.xml",
+        "lib/netstandard2.0/FluentMigrator.Runner.Redshift.dll",
+        "lib/netstandard2.0/FluentMigrator.Runner.Redshift.pdb",
+        "lib/netstandard2.0/FluentMigrator.Runner.Redshift.xml"
+      ]
+    },
+    "FluentMigrator.Runner.SqlAnywhere/3.2.1": {
+      "sha512": "C7qH8evk6aS1EfiYUK+SkKtj1Lkt/ZGhMI1Ht/Is+fidD5ySdOd2gUec6R93qzzyasdRzOwwnw7FjyMR6SJogg==",
+      "type": "package",
+      "path": "fluentmigrator.runner.sqlanywhere/3.2.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "fluentmigrator.runner.sqlanywhere.3.2.1.nupkg.sha512",
+        "fluentmigrator.runner.sqlanywhere.nuspec",
+        "lib/net461/FluentMigrator.Runner.SqlAnywhere.dll",
+        "lib/net461/FluentMigrator.Runner.SqlAnywhere.pdb",
+        "lib/net461/FluentMigrator.Runner.SqlAnywhere.xml",
+        "lib/netstandard2.0/FluentMigrator.Runner.SqlAnywhere.dll",
+        "lib/netstandard2.0/FluentMigrator.Runner.SqlAnywhere.pdb",
+        "lib/netstandard2.0/FluentMigrator.Runner.SqlAnywhere.xml"
+      ]
+    },
+    "FluentMigrator.Runner.SQLite/3.2.1": {
+      "sha512": "SMjKVOTMO3225rF18X8+TVRfOhChGQqGY+E2Hd6TaGGw8wbQrSWzgU07wV4XGvW6JPPhbgKTz/Phz6+SUxGt3Q==",
+      "type": "package",
+      "path": "fluentmigrator.runner.sqlite/3.2.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "fluentmigrator.runner.sqlite.3.2.1.nupkg.sha512",
+        "fluentmigrator.runner.sqlite.nuspec",
+        "lib/net461/FluentMigrator.Runner.SQLite.dll",
+        "lib/net461/FluentMigrator.Runner.SQLite.pdb",
+        "lib/net461/FluentMigrator.Runner.SQLite.xml",
+        "lib/netstandard2.0/FluentMigrator.Runner.SQLite.dll",
+        "lib/netstandard2.0/FluentMigrator.Runner.SQLite.pdb",
+        "lib/netstandard2.0/FluentMigrator.Runner.SQLite.xml"
+      ]
+    },
+    "FluentMigrator.Runner.SqlServer/3.2.1": {
+      "sha512": "XcKiR+sT+8Xq6PVelM6GG8t8P0QgnX4XuAhnRhyPn/QHob6X5wENmC5q/TnqI3jGSPhv39BGy+Is1MNGADWLBw==",
+      "type": "package",
+      "path": "fluentmigrator.runner.sqlserver/3.2.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "fluentmigrator.runner.sqlserver.3.2.1.nupkg.sha512",
+        "fluentmigrator.runner.sqlserver.nuspec",
+        "lib/net461/FluentMigrator.Runner.SqlServer.dll",
+        "lib/net461/FluentMigrator.Runner.SqlServer.pdb",
+        "lib/net461/FluentMigrator.Runner.SqlServer.xml",
+        "lib/netstandard2.0/FluentMigrator.Runner.SqlServer.dll",
+        "lib/netstandard2.0/FluentMigrator.Runner.SqlServer.pdb",
+        "lib/netstandard2.0/FluentMigrator.Runner.SqlServer.xml"
+      ]
+    },
+    "FluentMigrator.Runner.SqlServerCe/3.2.1": {
+      "sha512": "b5PXsIwocRW2oGXXqm8xkQx4gkqA33BMIGlq9pqNlbiKGTycXxDSepmqO8uQFo+RMa4HcxKLzGlixSVgNGwF8w==",
+      "type": "package",
+      "path": "fluentmigrator.runner.sqlserverce/3.2.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "build/netstandard2.0/FluentMigrator.Runner.SqlServerCe.targets",
+        "fluentmigrator.runner.sqlserverce.3.2.1.nupkg.sha512",
+        "fluentmigrator.runner.sqlserverce.nuspec",
+        "lib/net461/FluentMigrator.Runner.SqlServerCe.dll",
+        "lib/net461/FluentMigrator.Runner.SqlServerCe.pdb",
+        "lib/net461/FluentMigrator.Runner.SqlServerCe.xml",
+        "lib/netstandard2.0/FluentMigrator.Runner.SqlServerCe.dll",
+        "lib/netstandard2.0/FluentMigrator.Runner.SqlServerCe.pdb",
+        "lib/netstandard2.0/FluentMigrator.Runner.SqlServerCe.xml",
+        "lib/netstandard2.0/System.Data.SqlServerCe.dll",
+        "runtimes/win-x64/Microsoft.VC90.CRT/Microsoft.VC90.CRT.manifest",
+        "runtimes/win-x64/Microsoft.VC90.CRT/README_ENU.txt",
+        "runtimes/win-x64/Microsoft.VC90.CRT/msvcr90.dll",
+        "runtimes/win-x64/sqlceca40.dll",
+        "runtimes/win-x64/sqlcecompact40.dll",
+        "runtimes/win-x64/sqlceer40EN.dll",
+        "runtimes/win-x64/sqlceme40.dll",
+        "runtimes/win-x64/sqlceqp40.dll",
+        "runtimes/win-x64/sqlcese40.dll",
+        "runtimes/win-x86/Microsoft.VC90.CRT/Microsoft.VC90.CRT.manifest",
+        "runtimes/win-x86/Microsoft.VC90.CRT/README_ENU.txt",
+        "runtimes/win-x86/Microsoft.VC90.CRT/msvcr90.dll",
+        "runtimes/win-x86/sqlceca40.dll",
+        "runtimes/win-x86/sqlcecompact40.dll",
+        "runtimes/win-x86/sqlceer40EN.dll",
+        "runtimes/win-x86/sqlceme40.dll",
+        "runtimes/win-x86/sqlceqp40.dll",
+        "runtimes/win-x86/sqlcese40.dll"
+      ]
+    },
+    "FluentMigratorNHibernateGenerator/1.1.0": {
+      "sha512": "NbYTnDHyZYq8+tQHu3djtp6GwUKuYBKsIxnKYRxz8EKWw62J6lRbPrTONPGkwO4lmyVBAVtIrzkqgW5HxtidEQ==",
+      "type": "package",
+      "path": "fluentmigratornhibernategenerator/1.1.0",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "fluentmigratornhibernategenerator.1.1.0.nupkg.sha512",
+        "fluentmigratornhibernategenerator.nuspec",
+        "lib/FluentMigrator.NHibernateGenerator.dll",
+        "tools/FluentMigratorNHibernateGenerator.psd1",
+        "tools/FluentMigratorNHibernateGenerator.psm1",
+        "tools/init.ps1"
       ]
     },
     "FluentNHibernate/2.1.2": {
@@ -6036,6 +7882,42 @@
         "microsoft.codeanalysis.razor.nuspec"
       ]
     },
+    "Microsoft.CodeCoverage/16.2.0": {
+      "sha512": "kfHUP8A4og9TZ9mqtmkQXcdRTfvnSSYLUnicCadavMa9wADuDH9DIjHUzAnpm/W4Y91iidgTNC902drSOmUWJQ==",
+      "type": "package",
+      "path": "microsoft.codecoverage/16.2.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "build/netstandard1.0/CodeCoverage/CodeCoverage.config",
+        "build/netstandard1.0/CodeCoverage/CodeCoverage.exe",
+        "build/netstandard1.0/CodeCoverage/amd64/covrun64.dll",
+        "build/netstandard1.0/CodeCoverage/amd64/msdia140.dll",
+        "build/netstandard1.0/CodeCoverage/codecoveragemessages.dll",
+        "build/netstandard1.0/CodeCoverage/covrun32.dll",
+        "build/netstandard1.0/CodeCoverage/msdia140.dll",
+        "build/netstandard1.0/Microsoft.CodeCoverage.props",
+        "build/netstandard1.0/Microsoft.CodeCoverage.targets",
+        "build/netstandard1.0/Microsoft.VisualStudio.TraceDataCollector.dll",
+        "build/netstandard1.0/cs/Microsoft.VisualStudio.TraceDataCollector.resources.dll",
+        "build/netstandard1.0/de/Microsoft.VisualStudio.TraceDataCollector.resources.dll",
+        "build/netstandard1.0/es/Microsoft.VisualStudio.TraceDataCollector.resources.dll",
+        "build/netstandard1.0/fr/Microsoft.VisualStudio.TraceDataCollector.resources.dll",
+        "build/netstandard1.0/it/Microsoft.VisualStudio.TraceDataCollector.resources.dll",
+        "build/netstandard1.0/ja/Microsoft.VisualStudio.TraceDataCollector.resources.dll",
+        "build/netstandard1.0/ko/Microsoft.VisualStudio.TraceDataCollector.resources.dll",
+        "build/netstandard1.0/pl/Microsoft.VisualStudio.TraceDataCollector.resources.dll",
+        "build/netstandard1.0/pt-BR/Microsoft.VisualStudio.TraceDataCollector.resources.dll",
+        "build/netstandard1.0/ru/Microsoft.VisualStudio.TraceDataCollector.resources.dll",
+        "build/netstandard1.0/tr/Microsoft.VisualStudio.TraceDataCollector.resources.dll",
+        "build/netstandard1.0/zh-Hans/Microsoft.VisualStudio.TraceDataCollector.resources.dll",
+        "build/netstandard1.0/zh-Hant/Microsoft.VisualStudio.TraceDataCollector.resources.dll",
+        "lib/net45/Microsoft.VisualStudio.CodeCoverage.Shim.dll",
+        "lib/netcoreapp1.0/Microsoft.VisualStudio.CodeCoverage.Shim.dll",
+        "microsoft.codecoverage.16.2.0.nupkg.sha512",
+        "microsoft.codecoverage.nuspec"
+      ]
+    },
     "Microsoft.CSharp/4.5.0": {
       "sha512": "kaj6Wb4qoMuH3HySFJhxwQfe8R/sJsNJnANrvv8WdFPMoNbKY5htfNscv+LHCu5ipz+49m2e+WQXpLXr9XYemQ==",
       "type": "package",
@@ -6102,6 +7984,19 @@
         "ref/xamarinwatchos10/_._",
         "useSharedDesignerContext.txt",
         "version.txt"
+      ]
+    },
+    "Microsoft.DotNet.InternalAbstractions/1.0.0": {
+      "sha512": "S8f3mnSN4yNYafvMEuZKz3VSSv49BQahI6Ibmx9ryuc+7EQ3QsTt4rSvrazwoX2qcLhkPpDV/wLW7yDK6nyuFA==",
+      "type": "package",
+      "path": "microsoft.dotnet.internalabstractions/1.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net451/Microsoft.DotNet.InternalAbstractions.dll",
+        "lib/netstandard1.3/Microsoft.DotNet.InternalAbstractions.dll",
+        "microsoft.dotnet.internalabstractions.1.0.0.nupkg.sha512",
+        "microsoft.dotnet.internalabstractions.nuspec"
       ]
     },
     "Microsoft.DotNet.PlatformAbstractions/2.1.0": {
@@ -7062,6 +8957,26 @@
         "microsoft.net.http.headers.nuspec"
       ]
     },
+    "Microsoft.NET.Test.Sdk/16.2.0": {
+      "sha512": "4eLVyBLaFX+5huQXiZMj0EEiYshvS4H3iQ4s8eRGx6G1jtXWbKw+3NFhpWNokdopVObQnBnoZQid0acSBmtdJA==",
+      "type": "package",
+      "path": "microsoft.net.test.sdk/16.2.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "build/net40/Microsoft.NET.Test.Sdk.props",
+        "build/net40/Microsoft.NET.Test.Sdk.targets",
+        "build/netcoreapp1.0/Microsoft.NET.Test.Sdk.Program.cs",
+        "build/netcoreapp1.0/Microsoft.NET.Test.Sdk.Program.fs",
+        "build/netcoreapp1.0/Microsoft.NET.Test.Sdk.Program.vb",
+        "build/netcoreapp1.0/Microsoft.NET.Test.Sdk.props",
+        "build/netcoreapp1.0/Microsoft.NET.Test.Sdk.targets",
+        "build/uap10.0/Microsoft.NET.Test.Sdk.props",
+        "buildMultiTargeting/Microsoft.NET.Test.Sdk.props",
+        "microsoft.net.test.sdk.16.2.0.nupkg.sha512",
+        "microsoft.net.test.sdk.nuspec"
+      ]
+    },
     "Microsoft.NETCore.App/2.2.0": {
       "sha512": "7z5l8Jp324S8bU8+yyWeYHXUFYvKyiI5lqS1dXgTzOx1H69Qbf6df12kCKlNX45LpMfCMd4U3M6p7Rl5Zk7SLA==",
       "type": "package",
@@ -7402,6 +9317,262 @@
         "version.txt"
       ]
     },
+    "Microsoft.TestPlatform.ObjectModel/16.2.0": {
+      "sha512": "dUP0/57sU4J0IePL1su3+g6J0+rHm0Uv97tFOT9DoEYSlE3qP4ZWNVNXaWis29eiZnfGdVVeiSnhs9TiA4fvHw==",
+      "type": "package",
+      "path": "microsoft.testplatform.objectmodel/16.2.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net451/Microsoft.TestPlatform.CoreUtilities.dll",
+        "lib/net451/Microsoft.TestPlatform.PlatformAbstractions.dll",
+        "lib/net451/Microsoft.VisualStudio.TestPlatform.ObjectModel.dll",
+        "lib/net451/cs/Microsoft.TestPlatform.CoreUtilities.resources.dll",
+        "lib/net451/cs/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll",
+        "lib/net451/de/Microsoft.TestPlatform.CoreUtilities.resources.dll",
+        "lib/net451/de/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll",
+        "lib/net451/es/Microsoft.TestPlatform.CoreUtilities.resources.dll",
+        "lib/net451/es/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll",
+        "lib/net451/fr/Microsoft.TestPlatform.CoreUtilities.resources.dll",
+        "lib/net451/fr/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll",
+        "lib/net451/it/Microsoft.TestPlatform.CoreUtilities.resources.dll",
+        "lib/net451/it/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll",
+        "lib/net451/ja/Microsoft.TestPlatform.CoreUtilities.resources.dll",
+        "lib/net451/ja/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll",
+        "lib/net451/ko/Microsoft.TestPlatform.CoreUtilities.resources.dll",
+        "lib/net451/ko/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll",
+        "lib/net451/pl/Microsoft.TestPlatform.CoreUtilities.resources.dll",
+        "lib/net451/pl/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll",
+        "lib/net451/pt-BR/Microsoft.TestPlatform.CoreUtilities.resources.dll",
+        "lib/net451/pt-BR/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll",
+        "lib/net451/ru/Microsoft.TestPlatform.CoreUtilities.resources.dll",
+        "lib/net451/ru/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll",
+        "lib/net451/tr/Microsoft.TestPlatform.CoreUtilities.resources.dll",
+        "lib/net451/tr/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll",
+        "lib/net451/zh-Hans/Microsoft.TestPlatform.CoreUtilities.resources.dll",
+        "lib/net451/zh-Hans/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll",
+        "lib/net451/zh-Hant/Microsoft.TestPlatform.CoreUtilities.resources.dll",
+        "lib/net451/zh-Hant/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll",
+        "lib/netstandard1.4/Microsoft.TestPlatform.CoreUtilities.dll",
+        "lib/netstandard1.4/Microsoft.TestPlatform.PlatformAbstractions.dll",
+        "lib/netstandard1.4/Microsoft.VisualStudio.TestPlatform.ObjectModel.dll",
+        "lib/netstandard1.5/Microsoft.TestPlatform.CoreUtilities.dll",
+        "lib/netstandard1.5/Microsoft.TestPlatform.PlatformAbstractions.dll",
+        "lib/netstandard1.5/Microsoft.VisualStudio.TestPlatform.ObjectModel.dll",
+        "lib/netstandard1.5/cs/Microsoft.TestPlatform.CoreUtilities.resources.dll",
+        "lib/netstandard1.5/cs/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll",
+        "lib/netstandard1.5/de/Microsoft.TestPlatform.CoreUtilities.resources.dll",
+        "lib/netstandard1.5/de/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll",
+        "lib/netstandard1.5/es/Microsoft.TestPlatform.CoreUtilities.resources.dll",
+        "lib/netstandard1.5/es/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll",
+        "lib/netstandard1.5/fr/Microsoft.TestPlatform.CoreUtilities.resources.dll",
+        "lib/netstandard1.5/fr/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll",
+        "lib/netstandard1.5/it/Microsoft.TestPlatform.CoreUtilities.resources.dll",
+        "lib/netstandard1.5/it/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll",
+        "lib/netstandard1.5/ja/Microsoft.TestPlatform.CoreUtilities.resources.dll",
+        "lib/netstandard1.5/ja/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll",
+        "lib/netstandard1.5/ko/Microsoft.TestPlatform.CoreUtilities.resources.dll",
+        "lib/netstandard1.5/ko/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll",
+        "lib/netstandard1.5/pl/Microsoft.TestPlatform.CoreUtilities.resources.dll",
+        "lib/netstandard1.5/pl/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll",
+        "lib/netstandard1.5/pt-BR/Microsoft.TestPlatform.CoreUtilities.resources.dll",
+        "lib/netstandard1.5/pt-BR/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll",
+        "lib/netstandard1.5/ru/Microsoft.TestPlatform.CoreUtilities.resources.dll",
+        "lib/netstandard1.5/ru/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll",
+        "lib/netstandard1.5/tr/Microsoft.TestPlatform.CoreUtilities.resources.dll",
+        "lib/netstandard1.5/tr/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll",
+        "lib/netstandard1.5/zh-Hans/Microsoft.TestPlatform.CoreUtilities.resources.dll",
+        "lib/netstandard1.5/zh-Hans/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll",
+        "lib/netstandard1.5/zh-Hant/Microsoft.TestPlatform.CoreUtilities.resources.dll",
+        "lib/netstandard1.5/zh-Hant/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll",
+        "microsoft.testplatform.objectmodel.16.2.0.nupkg.sha512",
+        "microsoft.testplatform.objectmodel.nuspec"
+      ]
+    },
+    "Microsoft.TestPlatform.TestHost/16.2.0": {
+      "sha512": "ItivpSuOkWdM0RYibCnS4ERD67bRsxyZXH+MUohGvFAa9mogzS0et6rThZlXOAkIUN3EPMw4Zx7aQn4n28pkng==",
+      "type": "package",
+      "path": "microsoft.testplatform.testhost/16.2.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "ThirdPartyNotices.txt",
+        "build/uap10.0/Microsoft.TestPlatform.TestHost.props",
+        "build/uap10.0/Microsoft.TestPlatform.TestHost.targets",
+        "build/uap10.0/cs/Microsoft.TestPlatform.CommunicationUtilities.resources.dll",
+        "build/uap10.0/cs/Microsoft.TestPlatform.CoreUtilities.resources.dll",
+        "build/uap10.0/cs/Microsoft.TestPlatform.CrossPlatEngine.resources.dll",
+        "build/uap10.0/cs/Microsoft.TestPlatform.Utilities.resources.dll",
+        "build/uap10.0/cs/Microsoft.VisualStudio.TestPlatform.Common.resources.dll",
+        "build/uap10.0/cs/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll",
+        "build/uap10.0/de/Microsoft.TestPlatform.CommunicationUtilities.resources.dll",
+        "build/uap10.0/de/Microsoft.TestPlatform.CoreUtilities.resources.dll",
+        "build/uap10.0/de/Microsoft.TestPlatform.CrossPlatEngine.resources.dll",
+        "build/uap10.0/de/Microsoft.TestPlatform.Utilities.resources.dll",
+        "build/uap10.0/de/Microsoft.VisualStudio.TestPlatform.Common.resources.dll",
+        "build/uap10.0/de/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll",
+        "build/uap10.0/es/Microsoft.TestPlatform.CommunicationUtilities.resources.dll",
+        "build/uap10.0/es/Microsoft.TestPlatform.CoreUtilities.resources.dll",
+        "build/uap10.0/es/Microsoft.TestPlatform.CrossPlatEngine.resources.dll",
+        "build/uap10.0/es/Microsoft.TestPlatform.Utilities.resources.dll",
+        "build/uap10.0/es/Microsoft.VisualStudio.TestPlatform.Common.resources.dll",
+        "build/uap10.0/es/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll",
+        "build/uap10.0/fr/Microsoft.TestPlatform.CommunicationUtilities.resources.dll",
+        "build/uap10.0/fr/Microsoft.TestPlatform.CoreUtilities.resources.dll",
+        "build/uap10.0/fr/Microsoft.TestPlatform.CrossPlatEngine.resources.dll",
+        "build/uap10.0/fr/Microsoft.TestPlatform.Utilities.resources.dll",
+        "build/uap10.0/fr/Microsoft.VisualStudio.TestPlatform.Common.resources.dll",
+        "build/uap10.0/fr/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll",
+        "build/uap10.0/it/Microsoft.TestPlatform.CommunicationUtilities.resources.dll",
+        "build/uap10.0/it/Microsoft.TestPlatform.CoreUtilities.resources.dll",
+        "build/uap10.0/it/Microsoft.TestPlatform.CrossPlatEngine.resources.dll",
+        "build/uap10.0/it/Microsoft.TestPlatform.Utilities.resources.dll",
+        "build/uap10.0/it/Microsoft.VisualStudio.TestPlatform.Common.resources.dll",
+        "build/uap10.0/it/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll",
+        "build/uap10.0/ja/Microsoft.TestPlatform.CommunicationUtilities.resources.dll",
+        "build/uap10.0/ja/Microsoft.TestPlatform.CoreUtilities.resources.dll",
+        "build/uap10.0/ja/Microsoft.TestPlatform.CrossPlatEngine.resources.dll",
+        "build/uap10.0/ja/Microsoft.TestPlatform.Utilities.resources.dll",
+        "build/uap10.0/ja/Microsoft.VisualStudio.TestPlatform.Common.resources.dll",
+        "build/uap10.0/ja/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll",
+        "build/uap10.0/ko/Microsoft.TestPlatform.CommunicationUtilities.resources.dll",
+        "build/uap10.0/ko/Microsoft.TestPlatform.CoreUtilities.resources.dll",
+        "build/uap10.0/ko/Microsoft.TestPlatform.CrossPlatEngine.resources.dll",
+        "build/uap10.0/ko/Microsoft.TestPlatform.Utilities.resources.dll",
+        "build/uap10.0/ko/Microsoft.VisualStudio.TestPlatform.Common.resources.dll",
+        "build/uap10.0/ko/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll",
+        "build/uap10.0/pl/Microsoft.TestPlatform.CommunicationUtilities.resources.dll",
+        "build/uap10.0/pl/Microsoft.TestPlatform.CoreUtilities.resources.dll",
+        "build/uap10.0/pl/Microsoft.TestPlatform.CrossPlatEngine.resources.dll",
+        "build/uap10.0/pl/Microsoft.TestPlatform.Utilities.resources.dll",
+        "build/uap10.0/pl/Microsoft.VisualStudio.TestPlatform.Common.resources.dll",
+        "build/uap10.0/pl/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll",
+        "build/uap10.0/pt-BR/Microsoft.TestPlatform.CommunicationUtilities.resources.dll",
+        "build/uap10.0/pt-BR/Microsoft.TestPlatform.CoreUtilities.resources.dll",
+        "build/uap10.0/pt-BR/Microsoft.TestPlatform.CrossPlatEngine.resources.dll",
+        "build/uap10.0/pt-BR/Microsoft.TestPlatform.Utilities.resources.dll",
+        "build/uap10.0/pt-BR/Microsoft.VisualStudio.TestPlatform.Common.resources.dll",
+        "build/uap10.0/pt-BR/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll",
+        "build/uap10.0/ru/Microsoft.TestPlatform.CommunicationUtilities.resources.dll",
+        "build/uap10.0/ru/Microsoft.TestPlatform.CoreUtilities.resources.dll",
+        "build/uap10.0/ru/Microsoft.TestPlatform.CrossPlatEngine.resources.dll",
+        "build/uap10.0/ru/Microsoft.TestPlatform.Utilities.resources.dll",
+        "build/uap10.0/ru/Microsoft.VisualStudio.TestPlatform.Common.resources.dll",
+        "build/uap10.0/ru/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll",
+        "build/uap10.0/tr/Microsoft.TestPlatform.CommunicationUtilities.resources.dll",
+        "build/uap10.0/tr/Microsoft.TestPlatform.CoreUtilities.resources.dll",
+        "build/uap10.0/tr/Microsoft.TestPlatform.CrossPlatEngine.resources.dll",
+        "build/uap10.0/tr/Microsoft.TestPlatform.Utilities.resources.dll",
+        "build/uap10.0/tr/Microsoft.VisualStudio.TestPlatform.Common.resources.dll",
+        "build/uap10.0/tr/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll",
+        "build/uap10.0/x64/msdia140.dll",
+        "build/uap10.0/x86/msdia140.dll",
+        "build/uap10.0/zh-Hans/Microsoft.TestPlatform.CommunicationUtilities.resources.dll",
+        "build/uap10.0/zh-Hans/Microsoft.TestPlatform.CoreUtilities.resources.dll",
+        "build/uap10.0/zh-Hans/Microsoft.TestPlatform.CrossPlatEngine.resources.dll",
+        "build/uap10.0/zh-Hans/Microsoft.TestPlatform.Utilities.resources.dll",
+        "build/uap10.0/zh-Hans/Microsoft.VisualStudio.TestPlatform.Common.resources.dll",
+        "build/uap10.0/zh-Hans/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll",
+        "build/uap10.0/zh-Hant/Microsoft.TestPlatform.CommunicationUtilities.resources.dll",
+        "build/uap10.0/zh-Hant/Microsoft.TestPlatform.CoreUtilities.resources.dll",
+        "build/uap10.0/zh-Hant/Microsoft.TestPlatform.CrossPlatEngine.resources.dll",
+        "build/uap10.0/zh-Hant/Microsoft.TestPlatform.Utilities.resources.dll",
+        "build/uap10.0/zh-Hant/Microsoft.VisualStudio.TestPlatform.Common.resources.dll",
+        "build/uap10.0/zh-Hant/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll",
+        "lib/net45/_._",
+        "lib/netstandard1.5/Microsoft.TestPlatform.CommunicationUtilities.dll",
+        "lib/netstandard1.5/Microsoft.TestPlatform.CrossPlatEngine.dll",
+        "lib/netstandard1.5/Microsoft.TestPlatform.Utilities.dll",
+        "lib/netstandard1.5/Microsoft.VisualStudio.TestPlatform.Common.dll",
+        "lib/netstandard1.5/cs/Microsoft.TestPlatform.CommunicationUtilities.resources.dll",
+        "lib/netstandard1.5/cs/Microsoft.TestPlatform.CrossPlatEngine.resources.dll",
+        "lib/netstandard1.5/cs/Microsoft.VisualStudio.TestPlatform.Common.resources.dll",
+        "lib/netstandard1.5/de/Microsoft.TestPlatform.CommunicationUtilities.resources.dll",
+        "lib/netstandard1.5/de/Microsoft.TestPlatform.CrossPlatEngine.resources.dll",
+        "lib/netstandard1.5/de/Microsoft.VisualStudio.TestPlatform.Common.resources.dll",
+        "lib/netstandard1.5/es/Microsoft.TestPlatform.CommunicationUtilities.resources.dll",
+        "lib/netstandard1.5/es/Microsoft.TestPlatform.CrossPlatEngine.resources.dll",
+        "lib/netstandard1.5/es/Microsoft.VisualStudio.TestPlatform.Common.resources.dll",
+        "lib/netstandard1.5/fr/Microsoft.TestPlatform.CommunicationUtilities.resources.dll",
+        "lib/netstandard1.5/fr/Microsoft.TestPlatform.CrossPlatEngine.resources.dll",
+        "lib/netstandard1.5/fr/Microsoft.VisualStudio.TestPlatform.Common.resources.dll",
+        "lib/netstandard1.5/it/Microsoft.TestPlatform.CommunicationUtilities.resources.dll",
+        "lib/netstandard1.5/it/Microsoft.TestPlatform.CrossPlatEngine.resources.dll",
+        "lib/netstandard1.5/it/Microsoft.VisualStudio.TestPlatform.Common.resources.dll",
+        "lib/netstandard1.5/ja/Microsoft.TestPlatform.CommunicationUtilities.resources.dll",
+        "lib/netstandard1.5/ja/Microsoft.TestPlatform.CrossPlatEngine.resources.dll",
+        "lib/netstandard1.5/ja/Microsoft.VisualStudio.TestPlatform.Common.resources.dll",
+        "lib/netstandard1.5/ko/Microsoft.TestPlatform.CommunicationUtilities.resources.dll",
+        "lib/netstandard1.5/ko/Microsoft.TestPlatform.CrossPlatEngine.resources.dll",
+        "lib/netstandard1.5/ko/Microsoft.VisualStudio.TestPlatform.Common.resources.dll",
+        "lib/netstandard1.5/pl/Microsoft.TestPlatform.CommunicationUtilities.resources.dll",
+        "lib/netstandard1.5/pl/Microsoft.TestPlatform.CrossPlatEngine.resources.dll",
+        "lib/netstandard1.5/pl/Microsoft.VisualStudio.TestPlatform.Common.resources.dll",
+        "lib/netstandard1.5/pt-BR/Microsoft.TestPlatform.CommunicationUtilities.resources.dll",
+        "lib/netstandard1.5/pt-BR/Microsoft.TestPlatform.CrossPlatEngine.resources.dll",
+        "lib/netstandard1.5/pt-BR/Microsoft.VisualStudio.TestPlatform.Common.resources.dll",
+        "lib/netstandard1.5/ru/Microsoft.TestPlatform.CommunicationUtilities.resources.dll",
+        "lib/netstandard1.5/ru/Microsoft.TestPlatform.CrossPlatEngine.resources.dll",
+        "lib/netstandard1.5/ru/Microsoft.VisualStudio.TestPlatform.Common.resources.dll",
+        "lib/netstandard1.5/testhost.deps.json",
+        "lib/netstandard1.5/testhost.dll",
+        "lib/netstandard1.5/tr/Microsoft.TestPlatform.CommunicationUtilities.resources.dll",
+        "lib/netstandard1.5/tr/Microsoft.TestPlatform.CrossPlatEngine.resources.dll",
+        "lib/netstandard1.5/tr/Microsoft.VisualStudio.TestPlatform.Common.resources.dll",
+        "lib/netstandard1.5/x64/msdia140.dll",
+        "lib/netstandard1.5/x86/msdia140.dll",
+        "lib/netstandard1.5/zh-Hans/Microsoft.TestPlatform.CommunicationUtilities.resources.dll",
+        "lib/netstandard1.5/zh-Hans/Microsoft.TestPlatform.CrossPlatEngine.resources.dll",
+        "lib/netstandard1.5/zh-Hans/Microsoft.VisualStudio.TestPlatform.Common.resources.dll",
+        "lib/netstandard1.5/zh-Hant/Microsoft.TestPlatform.CommunicationUtilities.resources.dll",
+        "lib/netstandard1.5/zh-Hant/Microsoft.TestPlatform.CrossPlatEngine.resources.dll",
+        "lib/netstandard1.5/zh-Hant/Microsoft.VisualStudio.TestPlatform.Common.resources.dll",
+        "lib/uap10.0/Microsoft.TestPlatform.CommunicationUtilities.dll",
+        "lib/uap10.0/Microsoft.TestPlatform.CrossPlatEngine.dll",
+        "lib/uap10.0/Microsoft.TestPlatform.Utilities.dll",
+        "lib/uap10.0/Microsoft.VisualStudio.TestPlatform.Common.dll",
+        "lib/uap10.0/testhost.dll",
+        "microsoft.testplatform.testhost.16.2.0.nupkg.sha512",
+        "microsoft.testplatform.testhost.nuspec"
+      ]
+    },
+    "Microsoft.Win32.Primitives/4.3.0": {
+      "sha512": "9ZQKCWxH7Ijp9BfahvL2Zyf1cJIk8XYLF6Yjzr2yi0b2cOut/HQ31qf1ThHAgCc3WiZMdnWcfJCgN82/0UunxA==",
+      "type": "package",
+      "path": "microsoft.win32.primitives/4.3.0",
+      "files": [
+        ".nupkg.metadata",
+        "ThirdPartyNotices.txt",
+        "dotnet_library_license.txt",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net46/Microsoft.Win32.Primitives.dll",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "microsoft.win32.primitives.4.3.0.nupkg.sha512",
+        "microsoft.win32.primitives.nuspec",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/net46/Microsoft.Win32.Primitives.dll",
+        "ref/netstandard1.3/Microsoft.Win32.Primitives.dll",
+        "ref/netstandard1.3/Microsoft.Win32.Primitives.xml",
+        "ref/netstandard1.3/de/Microsoft.Win32.Primitives.xml",
+        "ref/netstandard1.3/es/Microsoft.Win32.Primitives.xml",
+        "ref/netstandard1.3/fr/Microsoft.Win32.Primitives.xml",
+        "ref/netstandard1.3/it/Microsoft.Win32.Primitives.xml",
+        "ref/netstandard1.3/ja/Microsoft.Win32.Primitives.xml",
+        "ref/netstandard1.3/ko/Microsoft.Win32.Primitives.xml",
+        "ref/netstandard1.3/ru/Microsoft.Win32.Primitives.xml",
+        "ref/netstandard1.3/zh-hans/Microsoft.Win32.Primitives.xml",
+        "ref/netstandard1.3/zh-hant/Microsoft.Win32.Primitives.xml",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._"
+      ]
+    },
     "Microsoft.Win32.Registry/4.5.0": {
       "sha512": "+FWlwd//+Tt56316p00hVePBCouXyEzT86Jb3+AuRotTND0IYn0OO3obs1gnQEs/txEnt+rF2JBGLItTG+Be6A==",
       "type": "package",
@@ -7667,6 +9838,57 @@
         "lib/netstandard2.0/Npgsql.xml",
         "npgsql.4.0.7.nupkg.sha512",
         "npgsql.nuspec"
+      ]
+    },
+    "NUnit/3.12.0": {
+      "sha512": "HAhwFxr+Z+PJf8hXzc747NecvsDwEZ+3X8SA5+GIRM43GAy1Ap+TQPMHsWCnisfes5vPZ1/a2md/91u+shoTsQ==",
+      "type": "package",
+      "path": "nunit/3.12.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "CHANGES.md",
+        "LICENSE.txt",
+        "NOTICES.txt",
+        "build/NUnit.props",
+        "lib/net35/nunit.framework.dll",
+        "lib/net35/nunit.framework.pdb",
+        "lib/net35/nunit.framework.xml",
+        "lib/net40/nunit.framework.dll",
+        "lib/net40/nunit.framework.pdb",
+        "lib/net40/nunit.framework.xml",
+        "lib/net45/nunit.framework.dll",
+        "lib/net45/nunit.framework.pdb",
+        "lib/net45/nunit.framework.xml",
+        "lib/netstandard1.4/nunit.framework.dll",
+        "lib/netstandard1.4/nunit.framework.pdb",
+        "lib/netstandard1.4/nunit.framework.xml",
+        "lib/netstandard2.0/nunit.framework.dll",
+        "lib/netstandard2.0/nunit.framework.pdb",
+        "lib/netstandard2.0/nunit.framework.xml",
+        "nunit.3.12.0.nupkg.sha512",
+        "nunit.nuspec"
+      ]
+    },
+    "NUnit3TestAdapter/3.13.0": {
+      "sha512": "A3L418IOAk9KrBQKPcgiDAPuriNB6wiZnGRmms1B8BQufPg7J9V4Mmu/G53cmcg3B2K4wWhkLbOB6TtBLd/7jw==",
+      "type": "package",
+      "path": "nunit3testadapter/3.13.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "build/net35/NUnit3.TestAdapter.dll",
+        "build/net35/NUnit3.TestAdapter.pdb",
+        "build/net35/NUnit3TestAdapter.props",
+        "build/net35/nunit.engine.api.dll",
+        "build/net35/nunit.engine.dll",
+        "build/netcoreapp1.0/NUnit3.TestAdapter.dll",
+        "build/netcoreapp1.0/NUnit3.TestAdapter.pdb",
+        "build/netcoreapp1.0/NUnit3TestAdapter.props",
+        "build/netcoreapp1.0/nunit.engine.netstandard.dll",
+        "nunit3testadapter.3.13.0.nupkg.sha512",
+        "nunit3testadapter.nuspec"
       ]
     },
     "Remotion.Linq/2.2.0": {
@@ -8442,6 +10664,76 @@
         "version.txt"
       ]
     },
+    "System.ComponentModel.EventBasedAsync/4.3.0": {
+      "sha512": "SXx4bOoSfWE1TIq7RyY7GhIL8W1ueW+xHQApV7bkWs42eDZUwfPgct5tv3jZkWRkvQ8JjWF1ab1d1lFwqYPE+Q==",
+      "type": "package",
+      "path": "system.componentmodel.eventbasedasync/4.3.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "ThirdPartyNotices.txt",
+        "dotnet_library_license.txt",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net45/_._",
+        "lib/netcore50/System.ComponentModel.EventBasedAsync.dll",
+        "lib/netstandard1.3/System.ComponentModel.EventBasedAsync.dll",
+        "lib/portable-net45+win8+wp8+wpa81/_._",
+        "lib/win8/_._",
+        "lib/wp80/_._",
+        "lib/wpa81/_._",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/net45/_._",
+        "ref/netcore50/System.ComponentModel.EventBasedAsync.dll",
+        "ref/netcore50/System.ComponentModel.EventBasedAsync.xml",
+        "ref/netcore50/de/System.ComponentModel.EventBasedAsync.xml",
+        "ref/netcore50/es/System.ComponentModel.EventBasedAsync.xml",
+        "ref/netcore50/fr/System.ComponentModel.EventBasedAsync.xml",
+        "ref/netcore50/it/System.ComponentModel.EventBasedAsync.xml",
+        "ref/netcore50/ja/System.ComponentModel.EventBasedAsync.xml",
+        "ref/netcore50/ko/System.ComponentModel.EventBasedAsync.xml",
+        "ref/netcore50/ru/System.ComponentModel.EventBasedAsync.xml",
+        "ref/netcore50/zh-hans/System.ComponentModel.EventBasedAsync.xml",
+        "ref/netcore50/zh-hant/System.ComponentModel.EventBasedAsync.xml",
+        "ref/netstandard1.0/System.ComponentModel.EventBasedAsync.dll",
+        "ref/netstandard1.0/System.ComponentModel.EventBasedAsync.xml",
+        "ref/netstandard1.0/de/System.ComponentModel.EventBasedAsync.xml",
+        "ref/netstandard1.0/es/System.ComponentModel.EventBasedAsync.xml",
+        "ref/netstandard1.0/fr/System.ComponentModel.EventBasedAsync.xml",
+        "ref/netstandard1.0/it/System.ComponentModel.EventBasedAsync.xml",
+        "ref/netstandard1.0/ja/System.ComponentModel.EventBasedAsync.xml",
+        "ref/netstandard1.0/ko/System.ComponentModel.EventBasedAsync.xml",
+        "ref/netstandard1.0/ru/System.ComponentModel.EventBasedAsync.xml",
+        "ref/netstandard1.0/zh-hans/System.ComponentModel.EventBasedAsync.xml",
+        "ref/netstandard1.0/zh-hant/System.ComponentModel.EventBasedAsync.xml",
+        "ref/netstandard1.3/System.ComponentModel.EventBasedAsync.dll",
+        "ref/netstandard1.3/System.ComponentModel.EventBasedAsync.xml",
+        "ref/netstandard1.3/de/System.ComponentModel.EventBasedAsync.xml",
+        "ref/netstandard1.3/es/System.ComponentModel.EventBasedAsync.xml",
+        "ref/netstandard1.3/fr/System.ComponentModel.EventBasedAsync.xml",
+        "ref/netstandard1.3/it/System.ComponentModel.EventBasedAsync.xml",
+        "ref/netstandard1.3/ja/System.ComponentModel.EventBasedAsync.xml",
+        "ref/netstandard1.3/ko/System.ComponentModel.EventBasedAsync.xml",
+        "ref/netstandard1.3/ru/System.ComponentModel.EventBasedAsync.xml",
+        "ref/netstandard1.3/zh-hans/System.ComponentModel.EventBasedAsync.xml",
+        "ref/netstandard1.3/zh-hant/System.ComponentModel.EventBasedAsync.xml",
+        "ref/portable-net45+win8+wp8+wpa81/_._",
+        "ref/win8/_._",
+        "ref/wp80/_._",
+        "ref/wpa81/_._",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "system.componentmodel.eventbasedasync.4.3.0.nupkg.sha512",
+        "system.componentmodel.eventbasedasync.nuspec"
+      ]
+    },
     "System.ComponentModel.Primitives/4.3.0": {
       "sha512": "j8GUkCpM8V4d4vhLIIoBLGey2Z5bCkMVNjEZseyAlm4n5arcsJOeI3zkUP+zvZgzsbLTYh4lYeP/ZD/gdIAPrw==",
       "type": "package",
@@ -8478,6 +10770,58 @@
         "ref/xamarinwatchos10/_._",
         "system.componentmodel.primitives.4.3.0.nupkg.sha512",
         "system.componentmodel.primitives.nuspec"
+      ]
+    },
+    "System.ComponentModel.TypeConverter/4.3.0": {
+      "sha512": "16pQ6P+EdhcXzPiEK4kbA953Fu0MNG2ovxTZU81/qsCd1zPRsKc3uif5NgvllCY598k6bI0KUyKW8fanlfaDQg==",
+      "type": "package",
+      "path": "system.componentmodel.typeconverter/4.3.0",
+      "files": [
+        ".nupkg.metadata",
+        "ThirdPartyNotices.txt",
+        "dotnet_library_license.txt",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net45/System.ComponentModel.TypeConverter.dll",
+        "lib/net462/System.ComponentModel.TypeConverter.dll",
+        "lib/netstandard1.0/System.ComponentModel.TypeConverter.dll",
+        "lib/netstandard1.5/System.ComponentModel.TypeConverter.dll",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/net45/System.ComponentModel.TypeConverter.dll",
+        "ref/net462/System.ComponentModel.TypeConverter.dll",
+        "ref/netstandard1.0/System.ComponentModel.TypeConverter.dll",
+        "ref/netstandard1.0/System.ComponentModel.TypeConverter.xml",
+        "ref/netstandard1.0/de/System.ComponentModel.TypeConverter.xml",
+        "ref/netstandard1.0/es/System.ComponentModel.TypeConverter.xml",
+        "ref/netstandard1.0/fr/System.ComponentModel.TypeConverter.xml",
+        "ref/netstandard1.0/it/System.ComponentModel.TypeConverter.xml",
+        "ref/netstandard1.0/ja/System.ComponentModel.TypeConverter.xml",
+        "ref/netstandard1.0/ko/System.ComponentModel.TypeConverter.xml",
+        "ref/netstandard1.0/ru/System.ComponentModel.TypeConverter.xml",
+        "ref/netstandard1.0/zh-hans/System.ComponentModel.TypeConverter.xml",
+        "ref/netstandard1.0/zh-hant/System.ComponentModel.TypeConverter.xml",
+        "ref/netstandard1.5/System.ComponentModel.TypeConverter.dll",
+        "ref/netstandard1.5/System.ComponentModel.TypeConverter.xml",
+        "ref/netstandard1.5/de/System.ComponentModel.TypeConverter.xml",
+        "ref/netstandard1.5/es/System.ComponentModel.TypeConverter.xml",
+        "ref/netstandard1.5/fr/System.ComponentModel.TypeConverter.xml",
+        "ref/netstandard1.5/it/System.ComponentModel.TypeConverter.xml",
+        "ref/netstandard1.5/ja/System.ComponentModel.TypeConverter.xml",
+        "ref/netstandard1.5/ko/System.ComponentModel.TypeConverter.xml",
+        "ref/netstandard1.5/ru/System.ComponentModel.TypeConverter.xml",
+        "ref/netstandard1.5/zh-hans/System.ComponentModel.TypeConverter.xml",
+        "ref/netstandard1.5/zh-hant/System.ComponentModel.TypeConverter.xml",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "system.componentmodel.typeconverter.4.3.0.nupkg.sha512",
+        "system.componentmodel.typeconverter.nuspec"
       ]
     },
     "System.Configuration.ConfigurationManager/4.4.1": {
@@ -8804,6 +11148,62 @@
         "system.diagnostics.fileversioninfo.nuspec"
       ]
     },
+    "System.Diagnostics.Process/4.3.0": {
+      "sha512": "J0wOX07+QASQblsfxmIMFc9Iq7KTXYL3zs2G/Xc704Ylv3NpuVdo6gij6V3PGiptTxqsK0K7CdXenRvKUnkA2g==",
+      "type": "package",
+      "path": "system.diagnostics.process/4.3.0",
+      "files": [
+        ".nupkg.metadata",
+        "ThirdPartyNotices.txt",
+        "dotnet_library_license.txt",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net46/System.Diagnostics.Process.dll",
+        "lib/net461/System.Diagnostics.Process.dll",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/net46/System.Diagnostics.Process.dll",
+        "ref/net461/System.Diagnostics.Process.dll",
+        "ref/netstandard1.3/System.Diagnostics.Process.dll",
+        "ref/netstandard1.3/System.Diagnostics.Process.xml",
+        "ref/netstandard1.3/de/System.Diagnostics.Process.xml",
+        "ref/netstandard1.3/es/System.Diagnostics.Process.xml",
+        "ref/netstandard1.3/fr/System.Diagnostics.Process.xml",
+        "ref/netstandard1.3/it/System.Diagnostics.Process.xml",
+        "ref/netstandard1.3/ja/System.Diagnostics.Process.xml",
+        "ref/netstandard1.3/ko/System.Diagnostics.Process.xml",
+        "ref/netstandard1.3/ru/System.Diagnostics.Process.xml",
+        "ref/netstandard1.3/zh-hans/System.Diagnostics.Process.xml",
+        "ref/netstandard1.3/zh-hant/System.Diagnostics.Process.xml",
+        "ref/netstandard1.4/System.Diagnostics.Process.dll",
+        "ref/netstandard1.4/System.Diagnostics.Process.xml",
+        "ref/netstandard1.4/de/System.Diagnostics.Process.xml",
+        "ref/netstandard1.4/es/System.Diagnostics.Process.xml",
+        "ref/netstandard1.4/fr/System.Diagnostics.Process.xml",
+        "ref/netstandard1.4/it/System.Diagnostics.Process.xml",
+        "ref/netstandard1.4/ja/System.Diagnostics.Process.xml",
+        "ref/netstandard1.4/ko/System.Diagnostics.Process.xml",
+        "ref/netstandard1.4/ru/System.Diagnostics.Process.xml",
+        "ref/netstandard1.4/zh-hans/System.Diagnostics.Process.xml",
+        "ref/netstandard1.4/zh-hant/System.Diagnostics.Process.xml",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "runtimes/linux/lib/netstandard1.4/System.Diagnostics.Process.dll",
+        "runtimes/osx/lib/netstandard1.4/System.Diagnostics.Process.dll",
+        "runtimes/win/lib/net46/System.Diagnostics.Process.dll",
+        "runtimes/win/lib/net461/System.Diagnostics.Process.dll",
+        "runtimes/win/lib/netstandard1.4/System.Diagnostics.Process.dll",
+        "runtimes/win7/lib/netcore50/_._",
+        "system.diagnostics.process.4.3.0.nupkg.sha512",
+        "system.diagnostics.process.nuspec"
+      ]
+    },
     "System.Diagnostics.StackTrace/4.3.0": {
       "sha512": "BiHg0vgtd35/DM9jvtaC1eKRpWZxr0gcQd643ABG7GnvSlf5pOkY2uyd42mMOJoOmKvnpNj0F4tuoS1pacTwYw==",
       "type": "package",
@@ -8841,6 +11241,45 @@
         "runtimes/aot/lib/netcore50/System.Diagnostics.StackTrace.dll",
         "system.diagnostics.stacktrace.4.3.0.nupkg.sha512",
         "system.diagnostics.stacktrace.nuspec"
+      ]
+    },
+    "System.Diagnostics.TextWriterTraceListener/4.0.0": {
+      "sha512": "oRsXCz76GDDMrwjMjH6keR9erFIofhGaIMc2d4NykI4rdBEuUP5ZswYA30LGPdyCK7DV4bMBEJL3nJFyAJoS/g==",
+      "type": "package",
+      "path": "system.diagnostics.textwritertracelistener/4.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "ThirdPartyNotices.txt",
+        "dotnet_library_license.txt",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net46/System.Diagnostics.TextWriterTraceListener.dll",
+        "lib/netstandard1.3/System.Diagnostics.TextWriterTraceListener.dll",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/net46/System.Diagnostics.TextWriterTraceListener.dll",
+        "ref/netstandard1.3/System.Diagnostics.TextWriterTraceListener.dll",
+        "ref/netstandard1.3/System.Diagnostics.TextWriterTraceListener.xml",
+        "ref/netstandard1.3/de/System.Diagnostics.TextWriterTraceListener.xml",
+        "ref/netstandard1.3/es/System.Diagnostics.TextWriterTraceListener.xml",
+        "ref/netstandard1.3/fr/System.Diagnostics.TextWriterTraceListener.xml",
+        "ref/netstandard1.3/it/System.Diagnostics.TextWriterTraceListener.xml",
+        "ref/netstandard1.3/ja/System.Diagnostics.TextWriterTraceListener.xml",
+        "ref/netstandard1.3/ko/System.Diagnostics.TextWriterTraceListener.xml",
+        "ref/netstandard1.3/ru/System.Diagnostics.TextWriterTraceListener.xml",
+        "ref/netstandard1.3/zh-hans/System.Diagnostics.TextWriterTraceListener.xml",
+        "ref/netstandard1.3/zh-hant/System.Diagnostics.TextWriterTraceListener.xml",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "system.diagnostics.textwritertracelistener.4.0.0.nupkg.sha512",
+        "system.diagnostics.textwritertracelistener.nuspec"
       ]
     },
     "System.Diagnostics.Tools/4.3.0": {
@@ -8897,6 +11336,47 @@
         "ref/xamarinwatchos10/_._",
         "system.diagnostics.tools.4.3.0.nupkg.sha512",
         "system.diagnostics.tools.nuspec"
+      ]
+    },
+    "System.Diagnostics.TraceSource/4.0.0": {
+      "sha512": "q5bGzzvXVi+dIMiPWRhXZV7r+Os3TEOuRW5LHsAUDGpqJHol8XiLokVpsgAfPqHHNkyx1bbv5lRZqRkRrGZKxQ==",
+      "type": "package",
+      "path": "system.diagnostics.tracesource/4.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "ThirdPartyNotices.txt",
+        "dotnet_library_license.txt",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net46/System.Diagnostics.TraceSource.dll",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/net46/System.Diagnostics.TraceSource.dll",
+        "ref/netstandard1.3/System.Diagnostics.TraceSource.dll",
+        "ref/netstandard1.3/System.Diagnostics.TraceSource.xml",
+        "ref/netstandard1.3/de/System.Diagnostics.TraceSource.xml",
+        "ref/netstandard1.3/es/System.Diagnostics.TraceSource.xml",
+        "ref/netstandard1.3/fr/System.Diagnostics.TraceSource.xml",
+        "ref/netstandard1.3/it/System.Diagnostics.TraceSource.xml",
+        "ref/netstandard1.3/ja/System.Diagnostics.TraceSource.xml",
+        "ref/netstandard1.3/ko/System.Diagnostics.TraceSource.xml",
+        "ref/netstandard1.3/ru/System.Diagnostics.TraceSource.xml",
+        "ref/netstandard1.3/zh-hans/System.Diagnostics.TraceSource.xml",
+        "ref/netstandard1.3/zh-hant/System.Diagnostics.TraceSource.xml",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "runtimes/unix/lib/netstandard1.3/System.Diagnostics.TraceSource.dll",
+        "runtimes/win/lib/net46/System.Diagnostics.TraceSource.dll",
+        "runtimes/win/lib/netstandard1.3/System.Diagnostics.TraceSource.dll",
+        "system.diagnostics.tracesource.4.0.0.nupkg.sha512",
+        "system.diagnostics.tracesource.nuspec"
       ]
     },
     "System.Diagnostics.Tracing/4.3.0": {
@@ -10857,6 +13337,32 @@
         "system.runtime.interopservices.runtimeinformation.nuspec"
       ]
     },
+    "System.Runtime.Loader/4.0.0": {
+      "sha512": "AGWrywLI2B15/dnLuFnlHWFjXmq1Tl0kjWaKTHbaJ8T9kIxiQ8YGTtiMQc8rUr49l2JjfZa7QY0KKqlyzA7NNg==",
+      "type": "package",
+      "path": "system.runtime.loader/4.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "ThirdPartyNotices.txt",
+        "dotnet_library_license.txt",
+        "lib/net462/_._",
+        "lib/netstandard1.5/System.Runtime.Loader.dll",
+        "ref/netstandard1.5/System.Runtime.Loader.dll",
+        "ref/netstandard1.5/System.Runtime.Loader.xml",
+        "ref/netstandard1.5/de/System.Runtime.Loader.xml",
+        "ref/netstandard1.5/es/System.Runtime.Loader.xml",
+        "ref/netstandard1.5/fr/System.Runtime.Loader.xml",
+        "ref/netstandard1.5/it/System.Runtime.Loader.xml",
+        "ref/netstandard1.5/ja/System.Runtime.Loader.xml",
+        "ref/netstandard1.5/ko/System.Runtime.Loader.xml",
+        "ref/netstandard1.5/ru/System.Runtime.Loader.xml",
+        "ref/netstandard1.5/zh-hans/System.Runtime.Loader.xml",
+        "ref/netstandard1.5/zh-hant/System.Runtime.Loader.xml",
+        "system.runtime.loader.4.0.0.nupkg.sha512",
+        "system.runtime.loader.nuspec"
+      ]
+    },
     "System.Runtime.Numerics/4.3.0": {
       "sha512": "yMH+MfdzHjy17l2KESnPiF2dwq7T+xLnSJar7slyimAkUh/gTrS9/UQOtv7xarskJ2/XDSNvfLGOBQPjL7PaHQ==",
       "type": "package",
@@ -10939,6 +13445,64 @@
         "ref/xamarinwatchos10/_._",
         "system.runtime.serialization.formatters.4.3.0.nupkg.sha512",
         "system.runtime.serialization.formatters.nuspec"
+      ]
+    },
+    "System.Runtime.Serialization.Json/4.0.2": {
+      "sha512": "+7DIJhnKYgCzUgcLbVTtRQb2l1M0FP549XFlFkQM5lmNiUBl44AfNbx4bz61xA8PzLtlYwfmif4JJJW7MPPnjg==",
+      "type": "package",
+      "path": "system.runtime.serialization.json/4.0.2",
+      "files": [
+        ".nupkg.metadata",
+        "ThirdPartyNotices.txt",
+        "dotnet_library_license.txt",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net45/_._",
+        "lib/netcore50/System.Runtime.Serialization.Json.dll",
+        "lib/netstandard1.3/System.Runtime.Serialization.Json.dll",
+        "lib/portable-net45+win8+wp8+wpa81/_._",
+        "lib/win8/_._",
+        "lib/wp80/_._",
+        "lib/wpa81/_._",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/net45/_._",
+        "ref/netcore50/System.Runtime.Serialization.Json.dll",
+        "ref/netcore50/System.Runtime.Serialization.Json.xml",
+        "ref/netcore50/de/System.Runtime.Serialization.Json.xml",
+        "ref/netcore50/es/System.Runtime.Serialization.Json.xml",
+        "ref/netcore50/fr/System.Runtime.Serialization.Json.xml",
+        "ref/netcore50/it/System.Runtime.Serialization.Json.xml",
+        "ref/netcore50/ja/System.Runtime.Serialization.Json.xml",
+        "ref/netcore50/ko/System.Runtime.Serialization.Json.xml",
+        "ref/netcore50/ru/System.Runtime.Serialization.Json.xml",
+        "ref/netcore50/zh-hans/System.Runtime.Serialization.Json.xml",
+        "ref/netcore50/zh-hant/System.Runtime.Serialization.Json.xml",
+        "ref/netstandard1.0/System.Runtime.Serialization.Json.dll",
+        "ref/netstandard1.0/System.Runtime.Serialization.Json.xml",
+        "ref/netstandard1.0/de/System.Runtime.Serialization.Json.xml",
+        "ref/netstandard1.0/es/System.Runtime.Serialization.Json.xml",
+        "ref/netstandard1.0/fr/System.Runtime.Serialization.Json.xml",
+        "ref/netstandard1.0/it/System.Runtime.Serialization.Json.xml",
+        "ref/netstandard1.0/ja/System.Runtime.Serialization.Json.xml",
+        "ref/netstandard1.0/ko/System.Runtime.Serialization.Json.xml",
+        "ref/netstandard1.0/ru/System.Runtime.Serialization.Json.xml",
+        "ref/netstandard1.0/zh-hans/System.Runtime.Serialization.Json.xml",
+        "ref/netstandard1.0/zh-hant/System.Runtime.Serialization.Json.xml",
+        "ref/portable-net45+win8+wp8+wpa81/_._",
+        "ref/win8/_._",
+        "ref/wp80/_._",
+        "ref/wpa81/_._",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "system.runtime.serialization.json.4.0.2.nupkg.sha512",
+        "system.runtime.serialization.json.nuspec"
       ]
     },
     "System.Runtime.Serialization.Primitives/4.3.0": {
@@ -12225,6 +14789,45 @@
         "system.threading.thread.nuspec"
       ]
     },
+    "System.Threading.ThreadPool/4.3.0": {
+      "sha512": "k/+g4b7vjdd4aix83sTgC9VG6oXYKAktSfNIJUNGxPEj7ryEOfzHHhfnmsZvjxawwcD9HyWXKCXmPjX8U4zeSw==",
+      "type": "package",
+      "path": "system.threading.threadpool/4.3.0",
+      "files": [
+        ".nupkg.metadata",
+        "ThirdPartyNotices.txt",
+        "dotnet_library_license.txt",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net46/System.Threading.ThreadPool.dll",
+        "lib/netcore50/_._",
+        "lib/netstandard1.3/System.Threading.ThreadPool.dll",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/net46/System.Threading.ThreadPool.dll",
+        "ref/netstandard1.3/System.Threading.ThreadPool.dll",
+        "ref/netstandard1.3/System.Threading.ThreadPool.xml",
+        "ref/netstandard1.3/de/System.Threading.ThreadPool.xml",
+        "ref/netstandard1.3/es/System.Threading.ThreadPool.xml",
+        "ref/netstandard1.3/fr/System.Threading.ThreadPool.xml",
+        "ref/netstandard1.3/it/System.Threading.ThreadPool.xml",
+        "ref/netstandard1.3/ja/System.Threading.ThreadPool.xml",
+        "ref/netstandard1.3/ko/System.Threading.ThreadPool.xml",
+        "ref/netstandard1.3/ru/System.Threading.ThreadPool.xml",
+        "ref/netstandard1.3/zh-hans/System.Threading.ThreadPool.xml",
+        "ref/netstandard1.3/zh-hant/System.Threading.ThreadPool.xml",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "system.threading.threadpool.4.3.0.nupkg.sha512",
+        "system.threading.threadpool.nuspec"
+      ]
+    },
     "System.ValueTuple/4.5.0": {
       "sha512": "okurQJO6NRE/apDIP23ajJ0hpiNmJ+f0BwOlB/cSqTLQlw5upkf+5+96+iG2Jw40G1fCVCyPz/FhIABUjMR+RQ==",
       "type": "package",
@@ -12592,16 +15195,64 @@
         "system.xml.xpath.xdocument.4.3.0.nupkg.sha512",
         "system.xml.xpath.xdocument.nuspec"
       ]
+    },
+    "System.Xml.XPath.XmlDocument/4.3.0": {
+      "sha512": "91tvfHWHSrYFPolCwWYqbpo1YaoBUCQ3uNZ/O/zr0ev5BnkoATJoie16ywlMVUaXZtfSfNELxhtG3aqpTfwR4w==",
+      "type": "package",
+      "path": "system.xml.xpath.xmldocument/4.3.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "ThirdPartyNotices.txt",
+        "dotnet_library_license.txt",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net46/System.Xml.XPath.XmlDocument.dll",
+        "lib/netstandard1.3/System.Xml.XPath.XmlDocument.dll",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/netstandard1.3/System.Xml.XPath.XmlDocument.dll",
+        "ref/netstandard1.3/System.Xml.XPath.XmlDocument.xml",
+        "ref/netstandard1.3/de/System.Xml.XPath.XmlDocument.xml",
+        "ref/netstandard1.3/es/System.Xml.XPath.XmlDocument.xml",
+        "ref/netstandard1.3/fr/System.Xml.XPath.XmlDocument.xml",
+        "ref/netstandard1.3/it/System.Xml.XPath.XmlDocument.xml",
+        "ref/netstandard1.3/ja/System.Xml.XPath.XmlDocument.xml",
+        "ref/netstandard1.3/ko/System.Xml.XPath.XmlDocument.xml",
+        "ref/netstandard1.3/ru/System.Xml.XPath.XmlDocument.xml",
+        "ref/netstandard1.3/zh-hans/System.Xml.XPath.XmlDocument.xml",
+        "ref/netstandard1.3/zh-hant/System.Xml.XPath.XmlDocument.xml",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "system.xml.xpath.xmldocument.4.3.0.nupkg.sha512",
+        "system.xml.xpath.xmldocument.nuspec"
+      ]
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.2": [
+      "FluentMigrator >= 3.2.1",
+      "FluentMigrator.Console >= 3.2.1",
+      "FluentMigrator.Generator >= 1.0.5",
+      "FluentMigrator.NHibernate >= 1.0.0.17",
+      "FluentMigrator.Runner >= 3.2.1",
+      "FluentMigrator.Runner.Postgres >= 3.2.1",
+      "FluentMigratorNHibernateGenerator >= 1.1.0",
       "FluentNHibernate >= 2.1.2",
       "JWT >= 5.2.2",
       "Microsoft.AspNetCore.App >= 2.2.0",
       "Microsoft.AspNetCore.Razor.Design >= 2.2.0",
+      "Microsoft.NET.Test.Sdk >= 16.2.0",
       "Microsoft.NETCore.App >= 2.2.0",
       "NHibernate >= 5.2.5",
+      "NUnit >= 3.12.0",
+      "NUnit3TestAdapter >= 3.13.0",
       "Npgsql >= 4.0.7",
       "System.Runtime >= 4.3.1"
     ]
@@ -12645,6 +15296,36 @@
     "frameworks": {
       "netcoreapp2.2": {
         "dependencies": {
+          "FluentMigrator": {
+            "target": "Package",
+            "version": "[3.2.1, )"
+          },
+          "FluentMigrator.Console": {
+            "target": "Package",
+            "version": "[3.2.1, )"
+          },
+          "FluentMigrator.Generator": {
+            "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+            "suppressParent": "All",
+            "target": "Package",
+            "version": "[1.0.5, )"
+          },
+          "FluentMigrator.NHibernate": {
+            "target": "Package",
+            "version": "[1.0.0.17, )"
+          },
+          "FluentMigrator.Runner": {
+            "target": "Package",
+            "version": "[3.2.1, )"
+          },
+          "FluentMigrator.Runner.Postgres": {
+            "target": "Package",
+            "version": "[3.2.1, )"
+          },
+          "FluentMigratorNHibernateGenerator": {
+            "target": "Package",
+            "version": "[1.1.0, )"
+          },
           "FluentNHibernate": {
             "target": "Package",
             "version": "[2.1.2, )"
@@ -12664,6 +15345,10 @@
             "target": "Package",
             "version": "[2.2.0, )"
           },
+          "Microsoft.NET.Test.Sdk": {
+            "target": "Package",
+            "version": "[16.2.0, )"
+          },
           "Microsoft.NETCore.App": {
             "suppressParent": "All",
             "target": "Package",
@@ -12673,6 +15358,14 @@
           "NHibernate": {
             "target": "Package",
             "version": "[5.2.5, )"
+          },
+          "NUnit": {
+            "target": "Package",
+            "version": "[3.12.0, )"
+          },
+          "NUnit3TestAdapter": {
+            "target": "Package",
+            "version": "[3.13.0, )"
           },
           "Npgsql": {
             "target": "Package",
@@ -12690,5 +15383,27 @@
         "warn": true
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'FluentMigrator.NHibernate 1.0.0.17' was restored using '.NETFramework,Version=v4.6.1' instead of the project target framework '.NETCoreApp,Version=v2.2'. This package may not be fully compatible with your project.",
+      "libraryId": "FluentMigrator.NHibernate",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v2.2"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'FluentMigratorNHibernateGenerator 1.1.0' was restored using '.NETFramework,Version=v4.6.1' instead of the project target framework '.NETCoreApp,Version=v2.2'. This package may not be fully compatible with your project.",
+      "libraryId": "FluentMigratorNHibernateGenerator",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v2.2"
+      ]
+    }
+  ]
 }
