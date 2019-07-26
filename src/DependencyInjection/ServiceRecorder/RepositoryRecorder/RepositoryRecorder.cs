@@ -2,8 +2,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
-using app.Common.Annotation;
-using app.Infrastructure.NHibernate;
 using FluentNHibernate.Conventions;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -56,7 +54,7 @@ namespace app.DependencyInjection.ServiceRecorder.RepositoryRecorder
             // todo: Сообщение выводится некорректно. Добавить нормальное логирование.
             return implementations.IsNotEmpty()
                 ? implementations.First()
-                : throw RepositoryRecorderException.NotFound(@interface);
+                : throw RepositoryRecorderException.NotFoundImplementation(@interface);
         }
     }
 }

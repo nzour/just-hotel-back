@@ -9,7 +9,7 @@ namespace app.DependencyInjection.ServiceRecorder.RepositoryRecorder
             
         }
 
-        public static RepositoryRecorderException NotFound(Type @interface)
+        public static RepositoryRecorderException NotFoundImplementation(Type @interface)
         {
             return new RepositoryRecorderException($"Repository {@interface.Name} has no implementation class.");
         }

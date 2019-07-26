@@ -6,7 +6,6 @@ using app.Domain.Entity;
 using FluentNHibernate.Cfg;
 using FluentNHibernate.Cfg.Db;
 using NHibernate;
-using NHibernate.Tool.hbm2ddl;
 
 namespace app.Infrastructure.NHibernate
 {
@@ -39,8 +38,7 @@ namespace app.Infrastructure.NHibernate
         {
             var fluentConfiguration = Fluently
                 .Configure()
-                .Database(PostgreSQLConfiguration
-                    .PostgreSQL82
+                .Database(PostgreSQLConfiguration.PostgreSQL82
                     //Понятия не имею что это и для чего. Но без этого не работает ¯\_(ツ)_/¯
                     .Raw("hbm2ddl.keywords", "none")
                     .ConnectionString(DbAccessor.ConnectionString));
@@ -59,10 +57,10 @@ namespace app.Infrastructure.NHibernate
         }
 
         /// <summary>
-        /// Добавит всех наследников абстракного класса в конфигурацию Nhibernate (рекурсивно)
+        /// Добавит сборки всех наследников класса или интерфейса в конфигурацию маппингов Nhibernate (рекурсивно)
         /// </summary>
         /// <param name="configuration">Конфигурация Fluent NHibernate</param>
-        /// <param name="class">Тип абстракного класса</param>
+        /// <param name="class">Тип класса</param>
         private static void RegisterEntitiesRecursively(FluentConfiguration configuration, Type @class)
         {
             var entities = GetAssembly()
@@ -71,13 +69,15 @@ namespace app.Infrastructure.NHibernate
 
             foreach (var entity in entities)
             {
-                if (entity.IsAbstract)
+                if (entity.IsAbstract || entity.IsInterface)
                 {
                     RegisterEntitiesRecursively(configuration, entity);
                 }
                 else
                 {
                     configuration.Mappings(cfg => cfg.FluentMappings.AddFromAssembly(entity.Assembly));
+                    
+                    RegisterEntitiesRecursively(configuration, entity);
                 }
             }
         }

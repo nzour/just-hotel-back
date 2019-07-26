@@ -83,7 +83,7 @@ namespace app.DependencyInjection
             {
                 var runner = scope.ServiceProvider.GetRequiredService<IMigrationRunner>();
                 
-                runner.MigrateDown(20190726001);
+                runner.MigrateUp();
             }
         }
     }
