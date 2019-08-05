@@ -85,12 +85,6 @@
           "lib/netstandard2.0/FluentMigrator.Extensions.SqlServer.dll": {}
         }
       },
-      "FluentMigrator.Generator/1.0.5": {
-        "type": "package",
-        "dependencies": {
-          "FluentMigrator": "[1.0.0, 4.0.0)"
-        }
-      },
       "FluentMigrator.NHibernate/1.0.0.17": {
         "type": "package",
         "compile": {
@@ -283,19 +277,6 @@
         },
         "build": {
           "build/netstandard2.0/_._": {}
-        }
-      },
-      "FluentMigratorNHibernateGenerator/1.1.0": {
-        "type": "package",
-        "dependencies": {
-          "FluentMigrator": "3.2.1",
-          "NHibernate": "5.2.5"
-        },
-        "compile": {
-          "lib/FluentMigrator.NHibernateGenerator.dll": {}
-        },
-        "runtime": {
-          "lib/FluentMigrator.NHibernateGenerator.dll": {}
         }
       },
       "FluentNHibernate/2.1.2": {
@@ -3404,6 +3385,19 @@
           "lib/netcoreapp2.0/NHibernate.dll": {}
         }
       },
+      "Ninject/3.3.4": {
+        "type": "package",
+        "dependencies": {
+          "System.Reflection.Emit.ILGeneration": "4.3.0",
+          "System.Reflection.Emit.Lightweight": "4.3.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Ninject.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Ninject.dll": {}
+        }
+      },
       "Npgsql/4.0.7": {
         "type": "package",
         "dependencies": {
@@ -4531,7 +4525,7 @@
           "System.Runtime": "4.3.0"
         },
         "compile": {
-          "ref/netstandard1.0/_._": {}
+          "ref/netstandard1.0/System.Reflection.Emit.Lightweight.dll": {}
         },
         "runtime": {
           "lib/netstandard1.3/System.Reflection.Emit.Lightweight.dll": {}
@@ -6184,21 +6178,6 @@
         "lib/netstandard2.0/FluentMigrator.Extensions.SqlServer.xml"
       ]
     },
-    "FluentMigrator.Generator/1.0.5": {
-      "sha512": "sYoz+kvdfWAhFzmlJa4AQkpzi2oWYF7MthCeZoagFtHenj4q25EZbmkgFHC2zg44Dgpjui3DJ5jzg9pdkDB08w==",
-      "type": "package",
-      "path": "fluentmigrator.generator/1.0.5",
-      "hasTools": true,
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "fluentmigrator.generator.1.0.5.nupkg.sha512",
-        "fluentmigrator.generator.nuspec",
-        "tools/FluentMigrator.psd1",
-        "tools/FluentMigrator.psm1",
-        "tools/init.ps1"
-      ]
-    },
     "FluentMigrator.NHibernate/1.0.0.17": {
       "sha512": "4DMcPYUOVS2XpbgB/d9ZjCnNepNHWsjdqVTtCCy8xHmA1rmf0fvElHg1b1vlUjONTxWvuCmp6nBrfYGsWFzYZw==",
       "type": "package",
@@ -6450,22 +6429,6 @@
         "runtimes/win-x86/sqlceme40.dll",
         "runtimes/win-x86/sqlceqp40.dll",
         "runtimes/win-x86/sqlcese40.dll"
-      ]
-    },
-    "FluentMigratorNHibernateGenerator/1.1.0": {
-      "sha512": "NbYTnDHyZYq8+tQHu3djtp6GwUKuYBKsIxnKYRxz8EKWw62J6lRbPrTONPGkwO4lmyVBAVtIrzkqgW5HxtidEQ==",
-      "type": "package",
-      "path": "fluentmigratornhibernategenerator/1.1.0",
-      "hasTools": true,
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "fluentmigratornhibernategenerator.1.1.0.nupkg.sha512",
-        "fluentmigratornhibernategenerator.nuspec",
-        "lib/FluentMigrator.NHibernateGenerator.dll",
-        "tools/FluentMigratorNHibernateGenerator.psd1",
-        "tools/FluentMigratorNHibernateGenerator.psm1",
-        "tools/init.ps1"
       ]
     },
     "FluentNHibernate/2.1.2": {
@@ -9818,6 +9781,21 @@
         "nhibernate-mapping.xsd",
         "nhibernate.5.2.5.nupkg.sha512",
         "nhibernate.nuspec"
+      ]
+    },
+    "Ninject/3.3.4": {
+      "sha512": "pfBwjaYJ306C3KaFa5WToDJUCgMYefnoLKpSevj+EPidcNEUhvveCmNeWtPl6N6DfPTJJv7vRVcbRIofO0U/QA==",
+      "type": "package",
+      "path": "ninject/3.3.4",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net45/Ninject.dll",
+        "lib/net45/Ninject.xml",
+        "lib/netstandard2.0/Ninject.dll",
+        "lib/netstandard2.0/Ninject.xml",
+        "ninject.3.3.4.nupkg.sha512",
+        "ninject.nuspec"
       ]
     },
     "Npgsql/4.0.7": {
@@ -15239,11 +15217,9 @@
     ".NETCoreApp,Version=v2.2": [
       "FluentMigrator >= 3.2.1",
       "FluentMigrator.Console >= 3.2.1",
-      "FluentMigrator.Generator >= 1.0.5",
       "FluentMigrator.NHibernate >= 1.0.0.17",
       "FluentMigrator.Runner >= 3.2.1",
       "FluentMigrator.Runner.Postgres >= 3.2.1",
-      "FluentMigratorNHibernateGenerator >= 1.1.0",
       "FluentNHibernate >= 2.1.2",
       "JWT >= 5.2.2",
       "Microsoft.AspNetCore.App >= 2.2.0",
@@ -15253,6 +15229,7 @@
       "NHibernate >= 5.2.5",
       "NUnit >= 3.12.0",
       "NUnit3TestAdapter >= 3.13.0",
+      "Ninject >= 3.3.4",
       "Npgsql >= 4.0.7",
       "System.Runtime >= 4.3.1"
     ]
@@ -15304,12 +15281,6 @@
             "target": "Package",
             "version": "[3.2.1, )"
           },
-          "FluentMigrator.Generator": {
-            "include": "Runtime, Build, Native, ContentFiles, Analyzers",
-            "suppressParent": "All",
-            "target": "Package",
-            "version": "[1.0.5, )"
-          },
           "FluentMigrator.NHibernate": {
             "target": "Package",
             "version": "[1.0.0.17, )"
@@ -15321,10 +15292,6 @@
           "FluentMigrator.Runner.Postgres": {
             "target": "Package",
             "version": "[3.2.1, )"
-          },
-          "FluentMigratorNHibernateGenerator": {
-            "target": "Package",
-            "version": "[1.1.0, )"
           },
           "FluentNHibernate": {
             "target": "Package",
@@ -15367,6 +15334,10 @@
             "target": "Package",
             "version": "[3.13.0, )"
           },
+          "Ninject": {
+            "target": "Package",
+            "version": "[3.3.4, )"
+          },
           "Npgsql": {
             "target": "Package",
             "version": "[4.0.7, )"
@@ -15391,16 +15362,6 @@
       "warningLevel": 1,
       "message": "Package 'FluentMigrator.NHibernate 1.0.0.17' was restored using '.NETFramework,Version=v4.6.1' instead of the project target framework '.NETCoreApp,Version=v2.2'. This package may not be fully compatible with your project.",
       "libraryId": "FluentMigrator.NHibernate",
-      "targetGraphs": [
-        ".NETCoreApp,Version=v2.2"
-      ]
-    },
-    {
-      "code": "NU1701",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Package 'FluentMigratorNHibernateGenerator 1.1.0' was restored using '.NETFramework,Version=v4.6.1' instead of the project target framework '.NETCoreApp,Version=v2.2'. This package may not be fully compatible with your project.",
-      "libraryId": "FluentMigratorNHibernateGenerator",
       "targetGraphs": [
         ".NETCoreApp,Version=v2.2"
       ]

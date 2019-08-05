@@ -12,7 +12,7 @@ services:
       POSTGRES_USER: root
       POSTGRES_PASSWORD: root
     volumes:
-      - postgres_volume:/var/lib/postgresql/database
+      - zobor_postgres_volume:/var/lib/postgresql/data
 
   pgadmin:
     container_name: pgadmin
@@ -21,10 +21,10 @@ services:
       PGADMIN_DEFAULT_EMAIL: pgadmin@mail.db
       PGADMIN_DEFAULT_PASSWORD: 1234
     volumes:
-      - pgadmin_volume:/var/lib/pgadmin
+      - zobor_pgadmin_volume:/var/lib/pgadmin
     ports:
       - 8080:80
         
 volumes:
-  postgres_volume:
-  pgadmin_volume:
+  zobor_postgres_volume:
+  zobor_pgadmin_volume:

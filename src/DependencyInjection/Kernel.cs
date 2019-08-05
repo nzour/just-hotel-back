@@ -2,7 +2,9 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Net;
 using app.Common;
+using app.Common.Services.Migrator;
 using app.DependencyInjection.ServiceRecorder;
 using app.Infrastructure.NHibernate;
 using FluentMigrator.Runner;
@@ -26,7 +28,7 @@ namespace app.DependencyInjection
             RegisterEnvironment();
             RecordServices(services);
             NHibernateHelper.Boot();
-            RunMigrations(services);
+            new Migrator(services).Execute();
         }
 
         /// <summary>
@@ -50,40 +52,25 @@ namespace app.DependencyInjection
         /// </summary>
         private static void RegisterEnvironment()
         {
-            using (var reader = new StreamReader(EnvFile))
+            StreamReader reader;
+            
+            try
+            {
+                reader = new StreamReader(EnvFile);
+            }
+            catch
+            {
+                reader = new StreamReader("publish/" + EnvFile);
+            }
+
+            using (reader)
             {
                 var json = JsonConvert.DeserializeObject<Dictionary<string, string>>(reader.ReadToEnd());
 
                 foreach (var (key, value) in json)
                 {
                     Environment.SetEnvironmentVariable(key, value);
-                }
-            }
-        }
-
-        private static void RegisterMigrations(IServiceCollection services)
-        {
-            services.AddFluentMigratorCore()
-                .ConfigureRunner(runner => runner
-                    .AddPostgres()
-                    .WithGlobalConnectionString(DbAccessor.ConnectionString)
-                    .ScanIn(GetAssembly()).For.Migrations())
-                .AddLogging(logBuilder => logBuilder.AddFluentMigratorConsole());
-        }
-
-        private static void RunMigrations(IServiceCollection services)
-        {
-            RegisterMigrations(services);
-
-            return;
-            
-            var container = services.BuildServiceProvider();
-
-            using (var scope = container.CreateScope())
-            {
-                var runner = scope.ServiceProvider.GetRequiredService<IMigrationRunner>();
-                
-                runner.MigrateUp();
+                }                
             }
         }
     }

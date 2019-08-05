@@ -36,6 +36,11 @@ namespace app.Infrastructure.NHibernate
 
         private static void CompileSessionFactory()
         {
+            if (null != _sessionFactory)
+            {
+                return;
+            }
+            
             var fluentConfiguration = Fluently
                 .Configure()
                 .Database(PostgreSQLConfiguration.PostgreSQL82

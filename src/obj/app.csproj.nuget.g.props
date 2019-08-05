@@ -29,7 +29,5 @@
     <PkgMicrosoft_EntityFrameworkCore_Tools Condition=" '$(PkgMicrosoft_EntityFrameworkCore_Tools)' == '' ">/usr/share/dotnet/sdk/NuGetFallbackFolder/microsoft.entityframeworkcore.tools/2.2.0</PkgMicrosoft_EntityFrameworkCore_Tools>
     <PkgMicrosoft_CodeAnalysis_Analyzers Condition=" '$(PkgMicrosoft_CodeAnalysis_Analyzers)' == '' ">/usr/share/dotnet/sdk/NuGetFallbackFolder/microsoft.codeanalysis.analyzers/1.1.0</PkgMicrosoft_CodeAnalysis_Analyzers>
     <PkgMicrosoft_AspNetCore_Razor_Design Condition=" '$(PkgMicrosoft_AspNetCore_Razor_Design)' == '' ">/usr/share/dotnet/sdk/NuGetFallbackFolder/microsoft.aspnetcore.razor.design/2.2.0</PkgMicrosoft_AspNetCore_Razor_Design>
-    <PkgFluentMigratorNHibernateGenerator Condition=" '$(PkgFluentMigratorNHibernateGenerator)' == '' ">/home/zaur/.nuget/packages/fluentmigratornhibernategenerator/1.1.0</PkgFluentMigratorNHibernateGenerator>
-    <PkgFluentMigrator_Generator Condition=" '$(PkgFluentMigrator_Generator)' == '' ">/home/zaur/.nuget/packages/fluentmigrator.generator/1.0.5</PkgFluentMigrator_Generator>
   </PropertyGroup>
 </Project>

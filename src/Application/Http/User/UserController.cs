@@ -1,5 +1,6 @@
 using app.Application.CQS.User.Query;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Internal;
 
 namespace app.Application.Http.User
 {

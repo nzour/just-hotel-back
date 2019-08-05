@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.2",
-    "signature": "a88ab3d38350a7b856a5ef35960dfd2469149333"
+    "signature": "ed54345197e9747525f6f6157679a58ec78c7b9c"
   },
   "compilationOptions": {
     "defines": [
@@ -26,11 +26,9 @@
         "dependencies": {
           "FluentMigrator": "3.2.1",
           "FluentMigrator.Console": "3.2.1",
-          "FluentMigrator.Generator": "1.0.5",
           "FluentMigrator.NHibernate": "1.0.0.17",
           "FluentMigrator.Runner": "3.2.1",
           "FluentMigrator.Runner.Postgres": "3.2.1",
-          "FluentMigratorNHibernateGenerator": "1.1.0",
           "FluentNHibernate": "2.1.2",
           "JWT": "5.2.2",
           "Microsoft.AspNetCore.App": "2.2.0",
@@ -40,6 +38,7 @@
           "NHibernate": "5.2.5",
           "NUnit": "3.12.0",
           "NUnit3TestAdapter": "3.13.0",
+          "Ninject": "3.3.4",
           "Npgsql": "4.0.7",
           "System.Runtime": "4.3.1"
         },
@@ -141,11 +140,6 @@
         },
         "compile": {
           "lib/netstandard2.0/FluentMigrator.Extensions.SqlServer.dll": {}
-        }
-      },
-      "FluentMigrator.Generator/1.0.5": {
-        "dependencies": {
-          "FluentMigrator": "3.2.1"
         }
       },
       "FluentMigrator.NHibernate/1.0.0.17": {
@@ -368,21 +362,6 @@
         "compile": {
           "lib/netstandard2.0/FluentMigrator.Runner.SqlServerCe.dll": {},
           "lib/netstandard2.0/System.Data.SqlServerCe.dll": {}
-        }
-      },
-      "FluentMigratorNHibernateGenerator/1.1.0": {
-        "dependencies": {
-          "FluentMigrator": "3.2.1",
-          "NHibernate": "5.2.5"
-        },
-        "runtime": {
-          "lib/FluentMigrator.NHibernateGenerator.dll": {
-            "assemblyVersion": "1.0.0.0",
-            "fileVersion": "1.0.0.0"
-          }
-        },
-        "compile": {
-          "lib/FluentMigrator.NHibernateGenerator.dll": {}
         }
       },
       "FluentNHibernate/2.1.2": {
@@ -763,6 +742,21 @@
         },
         "compile": {
           "lib/netcoreapp2.0/NHibernate.dll": {}
+        }
+      },
+      "Ninject/3.3.4": {
+        "dependencies": {
+          "System.Reflection.Emit.ILGeneration": "4.3.0",
+          "System.Reflection.Emit.Lightweight": "4.3.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Ninject.dll": {
+            "assemblyVersion": "3.3.4.0",
+            "fileVersion": "3.3.4.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/Ninject.dll": {}
         }
       },
       "Npgsql/4.0.7": {
@@ -4260,13 +4254,6 @@
       "path": "fluentmigrator.extensions.sqlserver/3.2.1",
       "hashPath": "fluentmigrator.extensions.sqlserver.3.2.1.nupkg.sha512"
     },
-    "FluentMigrator.Generator/1.0.5": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-sYoz+kvdfWAhFzmlJa4AQkpzi2oWYF7MthCeZoagFtHenj4q25EZbmkgFHC2zg44Dgpjui3DJ5jzg9pdkDB08w==",
-      "path": "fluentmigrator.generator/1.0.5",
-      "hashPath": "fluentmigrator.generator.1.0.5.nupkg.sha512"
-    },
     "FluentMigrator.NHibernate/1.0.0.17": {
       "type": "package",
       "serviceable": true,
@@ -4365,13 +4352,6 @@
       "path": "fluentmigrator.runner.sqlserverce/3.2.1",
       "hashPath": "fluentmigrator.runner.sqlserverce.3.2.1.nupkg.sha512"
     },
-    "FluentMigratorNHibernateGenerator/1.1.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-NbYTnDHyZYq8+tQHu3djtp6GwUKuYBKsIxnKYRxz8EKWw62J6lRbPrTONPGkwO4lmyVBAVtIrzkqgW5HxtidEQ==",
-      "path": "fluentmigratornhibernategenerator/1.1.0",
-      "hashPath": "fluentmigratornhibernategenerator.1.1.0.nupkg.sha512"
-    },
     "FluentNHibernate/2.1.2": {
       "type": "package",
       "serviceable": true,
@@ -4441,6 +4421,13 @@
       "sha512": "sha512-3R9Nf/nI5WYFL9520Xu66wqU8YbnRZGVDA/xvE5wMgqCtIX9df6NOFEfhkEhZIb11UeeU45gqGlkebiqNP8DMw==",
       "path": "nhibernate/5.2.5",
       "hashPath": "nhibernate.5.2.5.nupkg.sha512"
+    },
+    "Ninject/3.3.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-pfBwjaYJ306C3KaFa5WToDJUCgMYefnoLKpSevj+EPidcNEUhvveCmNeWtPl6N6DfPTJJv7vRVcbRIofO0U/QA==",
+      "path": "ninject/3.3.4",
+      "hashPath": "ninject.3.3.4.nupkg.sha512"
     },
     "Npgsql/4.0.7": {
       "type": "package",

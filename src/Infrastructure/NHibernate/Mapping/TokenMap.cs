@@ -1,7 +1,7 @@
 using app.Domain.Entity.Token;
 using FluentNHibernate.Mapping;
 
-namespace app.Domain.Mapping
+namespace app.Infrastructure.NHibernate.Mapping
 {
     public class TokenMap : ClassMap<Token>
     {
