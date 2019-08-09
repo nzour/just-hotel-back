@@ -2,23 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8919c16b-b5ba-4d5d-8933-195ff1d0b6f7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.backend.dir/.idea/projectSettingsUpdater.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Application/ErrorResponse.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Aspect/TestMiddleware.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Domain/Entity/Token/TokenException.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.backend.dir/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.backend.dir/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.backend.dir/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.backend.dir/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.backend.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.backend.dir/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Application/Http/Token/TokenController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Application/Http/Token/TokenController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DependencyInjection/Kernel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/DependencyInjection/Kernel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Startup.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/app.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/app.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/app.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/app.pdb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/nunit_random_seed.tmp" beforeDir="false" afterPath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/nunit_random_seed.tmp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/obj/Debug/netcoreapp2.2/app.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/src/obj/Debug/netcoreapp2.2/app.csproj.CoreCompileInputs.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/obj/Debug/netcoreapp2.2/app.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/obj/Debug/netcoreapp2.2/app.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/obj/Debug/netcoreapp2.2/app.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/src/obj/Debug/netcoreapp2.2/app.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Aspect/TestMiddleware.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Aspect/TestMiddleware.cs" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -414,7 +398,7 @@
       <workItem from="1565026131272" duration="10528000" />
       <workItem from="1565036967202" duration="2227000" />
       <workItem from="1565380146811" duration="6995000" />
-      <workItem from="1565387394174" duration="6041000" />
+      <workItem from="1565387394174" duration="6353000" />
     </task>
     <task id="LOCAL-00001" summary="Наконец смог запустить приложение. Однако, дебажить его все еще не получается">
       <created>1560618202174</created>
@@ -549,7 +533,14 @@
       <option name="project" value="LOCAL" />
       <updated>1565039203180</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Добавил обработку ошибок из контроллеров миддваром. Todo: добавить нуявную сериализацию результатов контроллеров в json строку">
+      <created>1565393607403</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1565393607403</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -601,7 +592,8 @@
     <MESSAGE value="Удалил FluentMigrator. Добавил либу для JWT" />
     <MESSAGE value="Вернул FluentMigrator, ибо без миграций жизнь - боль. Установил NUnit" />
     <MESSAGE value="Сделал кастрацкую систему миграций. Подтянул либу Ninject" />
-    <option name="LAST_COMMIT_MESSAGE" value="Сделал кастрацкую систему миграций. Подтянул либу Ninject" />
+    <MESSAGE value="Добавил обработку ошибок из контроллеров миддваром. Todo: добавить нуявную сериализацию результатов контроллеров в json строку" />
+    <option name="LAST_COMMIT_MESSAGE" value="Добавил обработку ошибок из контроллеров миддваром. Todo: добавить нуявную сериализацию результатов контроллеров в json строку" />
   </component>
   <component name="WindowStateProjectService">
     <state x="1018" y="375" key="#xdebugger.evaluate" />
@@ -650,6 +642,8 @@
     <state width="1803" height="260" key="GridCell.Tab.4.right/1920.1080" />
     <state x="355" y="118" key="SettingsEditor" />
     <state x="355" y="118" key="SettingsEditor/1920.1080" />
+    <state x="592" y="232" key="Vcs.Push.Dialog" />
+    <state x="592" y="232" key="Vcs.Push.Dialog/1920.1080" />
     <state width="926" height="524" key="XDebugger.FullValuePopup" />
     <state width="926" height="524" key="XDebugger.FullValuePopup/1920.1080" />
     <state x="573" y="249" key="run.anything.popup" />
@@ -685,29 +679,16 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/src/Aspect/TestMiddleware.cs</url>
-          <line>33</line>
+          <line>31</line>
           <properties documentPath="$PROJECT_DIR$/src/Aspect/TestMiddleware.cs" initialLine="21">
             <startOffsets>
-              <option value="846" />
+              <option value="795" />
             </startOffsets>
             <endOffsets>
-              <option value="846" />
+              <option value="795" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="25" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/src/Aspect/TestMiddleware.cs</url>
-          <line>17</line>
-          <properties documentPath="$PROJECT_DIR$/src/Aspect/TestMiddleware.cs" initialLine="19">
-            <startOffsets>
-              <option value="425" />
-            </startOffsets>
-            <endOffsets>
-              <option value="437" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="29" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
