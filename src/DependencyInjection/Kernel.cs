@@ -2,12 +2,9 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Net;
-using app.Common;
 using app.Common.Services.Migrator;
 using app.DependencyInjection.ServiceRecorder;
 using app.Infrastructure.NHibernate;
-using FluentMigrator.Runner;
 using Microsoft.Extensions.DependencyInjection;
 using Newtonsoft.Json;
 
@@ -53,7 +50,7 @@ namespace app.DependencyInjection
         private static void RegisterEnvironment()
         {
             StreamReader reader;
-            
+
             try
             {
                 reader = new StreamReader(EnvFile);
@@ -70,7 +67,7 @@ namespace app.DependencyInjection
                 foreach (var (key, value) in json)
                 {
                     Environment.SetEnvironmentVariable(key, value);
-                }                
+                }
             }
         }
     }

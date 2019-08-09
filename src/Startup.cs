@@ -1,10 +1,12 @@
-﻿using app.DependencyInjection;
+﻿using System;
+using app.Aspect;
+using app.DependencyInjection;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Ninject.Components;
 
 namespace app
 {
@@ -13,7 +15,7 @@ namespace app
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
-        }
+        }    
 
         public IConfiguration Configuration { get; }
 
@@ -21,6 +23,8 @@ namespace app
         {
             Kernel.Boot(services);
 
+            services.AddTransient<TestMiddleware>();
+            
             services.AddCors();
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
@@ -29,7 +33,6 @@ namespace app
         {
             if (env.IsDevelopment())
             {
-                app.UseDeveloperExceptionPage();
                 app.UseCors(builder => builder.WithOrigins("http://localhost:4200"));
             }
             else
@@ -38,6 +41,8 @@ namespace app
                 app.UseHsts();
             }
 
+            app.UseMiddleware<TestMiddleware>();
+            
             app.UseDefaultFiles()
                 .UseStaticFiles()
                 .UseHttpsRedirection()

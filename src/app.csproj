@@ -27,7 +27,6 @@
 
   <ItemGroup>
     <Folder Include="Application\CQS\Token" />
-    <Folder Include="Aspect" />
     <Folder Include="Infrastructure\Attributes" />
     <Folder Include="Infrastructure\Interceptors" />
     <Folder Include="Tests" />
