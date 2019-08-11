@@ -9,9 +9,11 @@ namespace app.Infrastructure.NHibernate.Repository
             Transactional.Action(() => Session.Save(token));
         }
 
-        public bool IsExpired(string accessToken)
+        public Token FindToken(string accessToken)
         {
-            return true;
+            return Session.QueryOver<Token>()
+                .Where(token => token.AccessToken.Equals(accessToken))
+                .SingleOrDefault();
         }
     }
 }

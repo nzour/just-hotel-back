@@ -4,6 +4,6 @@ namespace app.Domain.Entity.Token
     {
         void Create(Token token);
 
-        bool IsExpired(string accessToken);
+        Token FindToken(string accessToken);
     }
 }

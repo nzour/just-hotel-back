@@ -10,26 +10,26 @@ namespace app.Migration
     {
         public override void Up()
         {
-            Create.Table("User")
-                .WithColumn("Id").AsGuid().PrimaryKey()
-                .WithColumn("Name").AsString().NotNullable().Unique()
-                .WithColumn("Login").AsString().NotNullable().Unique()
-                .WithColumn("Password").AsString().NotNullable();
+            Create.Table("users")
+                .WithColumn("id").AsGuid().PrimaryKey()
+                .WithColumn("name").AsString().NotNullable().Unique()
+                .WithColumn("login").AsString().NotNullable().Unique()
+                .WithColumn("password").AsString().NotNullable();
 
-            Create.Table("Token")
-                .WithColumn("Id").AsGuid().PrimaryKey()
-                .WithColumn("AccessToken").AsString().Nullable()
-                .WithColumn("ExpiredAt").AsDateTime().Nullable()
-                .WithColumn("UserId").AsGuid().NotNullable();
+            Create.Table("tokens")
+                .WithColumn("id").AsGuid().PrimaryKey()
+                .WithColumn("access_token").AsString().Nullable()
+                .WithColumn("expired_at").AsDateTime().Nullable()
+                .WithColumn("user_id").AsGuid().NotNullable();
 
-            Create.ForeignKey().FromTable("Token").ForeignColumn("UserId")
-                .ToTable("User").PrimaryColumn("Id");
+            Create.ForeignKey().FromTable("tokens").ForeignColumn("user_id")
+                .ToTable("users").PrimaryColumn("id");
         }
 
         public override void Down()
         {
-            Delete.Table("Token");
-            Delete.Table("User");
+            Delete.Table("tokens");
+            Delete.Table("users");
         }
     }
 }

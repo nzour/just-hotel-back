@@ -52,9 +52,11 @@
   <ItemGroup>
     <_ResolveComReferenceCache Remove="obj\Debug\netcoreapp2.2\app.csproj.ResolveComReference.cache" />
     <_ResolveComReferenceCache Remove="obj\Debug\netcoreapp2.2\app.csproj.ResolveComReference.cache" />
+    <_ResolveComReferenceCache Remove="obj\Debug\netcoreapp2.2\app.csproj.ResolveComReference.cache" />
   </ItemGroup>
 
   <ItemGroup>
+    <IntermediateAssembly Remove="obj\Debug\netcoreapp2.2\app.dll" />
     <IntermediateAssembly Remove="obj\Debug\netcoreapp2.2\app.dll" />
     <IntermediateAssembly Remove="obj\Debug\netcoreapp2.2\app.dll" />
   </ItemGroup>
@@ -62,9 +64,11 @@
   <ItemGroup>
     <_DebugSymbolsIntermediatePath Remove="obj\Debug\netcoreapp2.2\app.pdb" />
     <_DebugSymbolsIntermediatePath Remove="obj\Debug\netcoreapp2.2\app.pdb" />
+    <_DebugSymbolsIntermediatePath Remove="obj\Debug\netcoreapp2.2\app.pdb" />
   </ItemGroup>
 
   <ItemGroup>
+    <_DeploymentManifestEntryPoint Remove="obj\Debug\netcoreapp2.2\app.dll" />
     <_DeploymentManifestEntryPoint Remove="obj\Debug\netcoreapp2.2\app.dll" />
     <_DeploymentManifestEntryPoint Remove="obj\Debug\netcoreapp2.2\app.dll" />
   </ItemGroup>
@@ -72,9 +76,11 @@
   <ItemGroup>
     <ApplicationManifest Remove="obj\Debug\netcoreapp2.2\app.dll.manifest" />
     <ApplicationManifest Remove="obj\Debug\netcoreapp2.2\app.dll.manifest" />
+    <ApplicationManifest Remove="obj\Debug\netcoreapp2.2\app.dll.manifest" />
   </ItemGroup>
 
   <ItemGroup>
+    <DeployManifest Remove="obj\Debug\netcoreapp2.2\app.application" />
     <DeployManifest Remove="obj\Debug\netcoreapp2.2\app.application" />
     <DeployManifest Remove="obj\Debug\netcoreapp2.2\app.application" />
   </ItemGroup>
@@ -82,11 +88,13 @@
   <ItemGroup>
     <RazorIntermediateAssembly Remove="obj\Debug\netcoreapp2.2\app.Views.dll" />
     <RazorIntermediateAssembly Remove="obj\Debug\netcoreapp2.2\app.Views.dll" />
+    <RazorIntermediateAssembly Remove="obj\Debug\netcoreapp2.2\app.Razor.dll" />
   </ItemGroup>
 
   <ItemGroup>
     <_RazorDebugSymbolsIntermediatePath Remove="obj\Debug\netcoreapp2.2\app.Views.pdb" />
     <_RazorDebugSymbolsIntermediatePath Remove="obj\Debug\netcoreapp2.2\app.Views.pdb" />
+    <_RazorDebugSymbolsIntermediatePath Remove="obj\Debug\netcoreapp2.2\app.Razor.pdb" />
   </ItemGroup>
   
 </Project>

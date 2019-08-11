@@ -3,9 +3,11 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using app.Aspect.FilterAttribute;
+using app.Common.Services.Jwt;
 using app.Common.Services.Migrator;
 using app.DependencyInjection.ServiceRecorder;
 using app.Infrastructure.NHibernate;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.DependencyInjection;
 using Newtonsoft.Json;
@@ -27,6 +29,8 @@ namespace app.DependencyInjection
             RegisterEnvironment();
             ProcessServiceRecorders(services);
             NHibernateHelper.Boot();
+            services.AddTransient<JwtTokenManager>();
+            services.AddTransient<IHttpContextAccessor, HttpContextAccessor>();
             new Migrator(services).Execute();
         }
 

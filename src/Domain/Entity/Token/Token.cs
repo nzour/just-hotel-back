@@ -20,5 +20,10 @@ namespace app.Domain.Entity.Token
             AccessToken = accessToken;
             ExpiredAt = expiredAt;
         }
+
+        public virtual bool IsExpired()
+        {
+            return ExpiredAt > DateTime.Now;
+        }
     }
 }
