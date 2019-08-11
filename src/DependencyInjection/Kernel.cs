@@ -2,9 +2,11 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using app.Aspect.FilterAttribute;
 using app.Common.Services.Migrator;
 using app.DependencyInjection.ServiceRecorder;
 using app.Infrastructure.NHibernate;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.DependencyInjection;
 using Newtonsoft.Json;
 
@@ -20,18 +22,24 @@ namespace app.DependencyInjection
         /// </summary>
         private const string EnvFile = "environment.json";
 
-        public static void Boot(IServiceCollection services)
+        public static void ProcessServices(IServiceCollection services)
         {
             RegisterEnvironment();
-            RecordServices(services);
+            ProcessServiceRecorders(services);
             NHibernateHelper.Boot();
             new Migrator(services).Execute();
+        }
+
+        public static void ProcessMvc(IServiceCollection services)
+        {
+            var mvcBuilder = services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+            RegisterGlobalFilters(mvcBuilder);
         }
 
         /// <summary>
         /// Запустит все AbstractServiceRecorder'ы, которые регистрируют сервисы DI.
         /// </summary>
-        private static void RecordServices(IServiceCollection services)
+        private static void ProcessServiceRecorders(IServiceCollection services)
         {
             var recorders = GetAssembly()
                 .DefinedTypes
@@ -40,7 +48,7 @@ namespace app.DependencyInjection
             foreach (var recorder in recorders)
             {
                 recorder.GetMethod(AbstractServiceRecorder.ProcessMethod)
-                    .Invoke(Activator.CreateInstance(recorder), new object[] { services });
+                    ?.Invoke(Activator.CreateInstance(recorder), new object[] {services});
             }
         }
 
@@ -68,6 +76,20 @@ namespace app.DependencyInjection
                 {
                     Environment.SetEnvironmentVariable(key, value);
                 }
+            }
+        }
+
+        /// <summary>
+        /// Добавит глобальные фильтры для контроллеров
+        /// </summary>
+        private static void RegisterGlobalFilters(IMvcBuilder mvcBuilder)
+        {
+            var globalFilters = FindTypes(t =>
+                t.ImplementedInterfaces.Contains(typeof(IGlobalFilter)));
+
+            foreach (var globalFilter in globalFilters)
+            {
+                mvcBuilder.AddMvcOptions(options => { options.Filters.Add(globalFilter); });
             }
         }
     }

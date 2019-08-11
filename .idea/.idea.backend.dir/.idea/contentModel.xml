@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ContentModelStore">
     <e p="$APPLICATION_CONFIG_DIR$/consoles/db" t="IncludeRecursive" />
-    <e p="$APPLICATION_CONFIG_DIR$/extensions" t="IncludeRecursive" />
     <e p="$APPLICATION_CONFIG_DIR$/scratches" t="IncludeRecursive" />
     <e p="$USER_HOME$/.Rider2019.2/system/extResources" t="IncludeRecursive" />
     <e p="$USER_HOME$/.Rider2019.2/system/resharper-host/local/Transient/ReSharperHost/v192/SolutionCaches/_.19.00" t="ExcludeRecursive" />
@@ -15,7 +14,17 @@
         <e p=".gitignore" t="Include" />
         <e p="Application" t="Include">
           <e p="CQS" t="Include">
-            <e p="Token" t="Include" />
+            <e p="Token" t="Include">
+              <e p="Command" t="Include">
+                <e p="ReceiveTokenCommand.cs" t="Include" />
+              </e>
+              <e p="Input" t="Include">
+                <e p="TokenInput.cs" t="Include" />
+              </e>
+              <e p="Output" t="Include">
+                <e p="TokenOutput.cs" t="Include" />
+              </e>
+            </e>
             <e p="User" t="Include">
               <e p="Output" t="Include">
                 <e p="UserOutput.cs" t="Include" />
@@ -36,10 +45,14 @@
           </e>
         </e>
         <e p="Aspect" t="Include">
-          <e p="TestMiddleware.cs" t="Include" />
+          <e p="FilterAttribute" t="Include">
+            <e p="HandleExceptionFilterAttribute.cs" t="Include" />
+            <e p="IGlobalFilter.cs" t="Include" />
+            <e p="JsonResultFilterAttribute.cs" t="Include" />
+          </e>
         </e>
         <e p="Common" t="Include">
-          <e p="Annotation" t="Include">
+          <e p="Attribute" t="Include">
             <e p="InjectedAttribute.cs" t="Include" />
             <e p="ScopedAttribute.cs" t="Include" />
             <e p="SingletonAttribute.cs" t="Include" />
@@ -80,6 +93,7 @@
         <e p="Domain" t="Include">
           <e p="Entity" t="Include">
             <e p="AbstractEntity.cs" t="Include" />
+            <e p="AbstractException.cs" t="Include" />
             <e p="Token" t="Include">
               <e p="ITokenRepository.cs" t="Include" />
               <e p="Token.cs" t="Include" />
@@ -88,6 +102,7 @@
             <e p="User" t="Include">
               <e p="IUserRepository.cs" t="Include" />
               <e p="User.cs" t="Include" />
+              <e p="UserException.cs" t="Include" />
             </e>
           </e>
         </e>
@@ -99,8 +114,10 @@
               <e p="TokenMap.cs" t="Include" />
               <e p="UserMap.cs" t="Include" />
             </e>
+            <e p="MappingConversationListener.cs" t="Include" />
             <e p="NHibernateHelper.cs" t="Include" />
             <e p="Repository" t="Include">
+              <e p="AbstractRepository.cs" t="Include" />
               <e p="TokenRepository.cs" t="Include" />
               <e p="UserRepository.cs" t="Include" />
             </e>
@@ -108,7 +125,6 @@
           </e>
         </e>
         <e p="Migration" t="Include">
-          <e p="CreateTokenMigrations.cs" t="Include" />
           <e p="InitMigration.cs" t="Include" />
         </e>
         <e p="Program.cs" t="Include" />
@@ -125,6 +141,7 @@
         <e p="appsettings.json" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
         <e p="environment.json" t="Include" />
+        <e p="environment.json.dist" t="Include" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
             <e p="netcoreapp2.2" t="Include">

@@ -7,10 +7,10 @@ namespace app.Infrastructure.NHibernate.Mapping
     {
         public UserMap()
         {
-            Id(x => x.Id);
-            Map(x => x.Name);
-            Map(x => x.Login);
-            Map(x => x.Password);
+            Id(x => x.Id).Column("Id");
+            Map(x => x.Name).Unique().Column("Name");
+            Map(x => x.Login).Unique().Column("Login");
+            Map(x => x.Password).Column("Password");
         }
     }
 }

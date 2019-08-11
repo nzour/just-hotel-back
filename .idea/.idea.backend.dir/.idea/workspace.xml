@@ -2,7 +2,215 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8919c16b-b5ba-4d5d-8933-195ff1d0b6f7" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/Aspect/TestMiddleware.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Aspect/TestMiddleware.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Folder.DotSettings.user" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Application/CQS/Token/Command/ReceiveTokenCommand.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Application/CQS/Token/Input/TokenInput.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Application/CQS/Token/Output/TokenOutput.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Aspect/FilterAttribute/HandleExceptionFilterAttribute.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Aspect/FilterAttribute/IGlobalFilter.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Aspect/FilterAttribute/JsonResultFilterAttribute.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/Entity/AbstractException.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Domain/Entity/User/UserException.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Infrastructure/NHibernate/MappingConversationListener.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Infrastructure/NHibernate/Repository/AbstractRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.backend.dir/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.backend.dir/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.backend.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.backend.dir/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/src/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Application/CQS/User/Query/GetUserQuery.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Application/CQS/User/Query/GetUserQuery.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Application/Http/Token/TokenController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Application/Http/Token/TokenController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Application/Http/User/UserController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Application/Http/User/UserController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Aspect/TestMiddleware.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Common/Annotation/InjectedAttribute.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Common/Attribute/InjectedAttribute.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Common/Annotation/ScopedAttribute.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Common/Attribute/ScopedAttribute.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Common/Annotation/SingletonAttribute.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Common/Attribute/SingletonAttribute.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Common/Annotation/TransientAttribute.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Common/Attribute/TransientAttribute.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Common/Extensions/NullAwareExtension.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Common/Extensions/NullAwareExtension.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DependencyInjection/AbstractAssemblyAware.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/DependencyInjection/AbstractAssemblyAware.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DependencyInjection/Kernel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/DependencyInjection/Kernel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DependencyInjection/ServiceRecorder/RepositoryRecorder/RepositoryRecorder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/DependencyInjection/ServiceRecorder/RepositoryRecorder/RepositoryRecorder.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Domain/Entity/Token/ITokenRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/Entity/Token/ITokenRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Domain/Entity/Token/Token.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/Entity/Token/Token.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Domain/Entity/User/IUserRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Domain/Entity/User/IUserRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Infrastructure/NHibernate/Mapping/TokenMap.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Infrastructure/NHibernate/Mapping/TokenMap.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Infrastructure/NHibernate/Mapping/UserMap.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Infrastructure/NHibernate/Mapping/UserMap.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Infrastructure/NHibernate/Repository/TokenRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Infrastructure/NHibernate/Repository/TokenRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Infrastructure/NHibernate/Repository/UserRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Infrastructure/NHibernate/Repository/UserRepository.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Infrastructure/NHibernate/Transactional.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Infrastructure/NHibernate/Transactional.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Migration/CreateTokenMigrations.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Migration/InitMigration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Migration/InitMigration.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/src/Startup.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bin/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/NUnit3.TestAdapter.pdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/app.deps.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/app.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/app.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/app.pdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/app.runtimeconfig.dev.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/app.runtimeconfig.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/nunit_random_seed.tmp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/Antlr3.Runtime.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/CodeCoverage/CodeCoverage.config" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/CodeCoverage/CodeCoverage.exe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/CodeCoverage/amd64/covrun64.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/CodeCoverage/amd64/msdia140.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/CodeCoverage/codecoveragemessages.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/CodeCoverage/covrun32.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/CodeCoverage/msdia140.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/FluentMigrator.Abstractions.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/FluentMigrator.Extensions.Oracle.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/FluentMigrator.Extensions.SqlAnywhere.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/FluentMigrator.Extensions.SqlServer.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/FluentMigrator.NHibernate.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/FluentMigrator.NHibernateGenerator.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/FluentMigrator.Runner.Core.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/FluentMigrator.Runner.Db2.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/FluentMigrator.Runner.Firebird.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/FluentMigrator.Runner.Hana.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/FluentMigrator.Runner.MySql.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/FluentMigrator.Runner.Oracle.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/FluentMigrator.Runner.Postgres.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/FluentMigrator.Runner.Redshift.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/FluentMigrator.Runner.SQLite.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/FluentMigrator.Runner.SqlAnywhere.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/FluentMigrator.Runner.SqlServer.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/FluentMigrator.Runner.SqlServerCe.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/FluentMigrator.Runner.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/FluentMigrator.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/FluentNHibernate.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/Iesi.Collections.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/JWT.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/Microsoft.CodeCoverage.props" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/Microsoft.CodeCoverage.targets" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/Microsoft.DotNet.InternalAbstractions.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/Microsoft.TestPlatform.CommunicationUtilities.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/Microsoft.TestPlatform.CoreUtilities.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/Microsoft.TestPlatform.CrossPlatEngine.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/Microsoft.TestPlatform.PlatformAbstractions.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/Microsoft.TestPlatform.Utilities.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/Microsoft.VisualStudio.CodeCoverage.Shim.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/Microsoft.VisualStudio.TestPlatform.Common.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/Microsoft.VisualStudio.TestPlatform.ObjectModel.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/Microsoft.VisualStudio.TraceDataCollector.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/NHibernate.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/NUnit3.TestAdapter.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/NUnit3.TestAdapter.pdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/Npgsql.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/Remotion.Linq.EagerFetching.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/System.Configuration.ConfigurationManager.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/System.Data.SqlServerCe.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/System.Runtime.CompilerServices.Unsafe.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/System.Security.Cryptography.ProtectedData.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/System.Xml.XPath.XmlDocument.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/app.deps.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/app.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/app.pdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/app.runtimeconfig.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/appsettings.Development.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/appsettings.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/cs/Microsoft.TestPlatform.CommunicationUtilities.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/cs/Microsoft.TestPlatform.CoreUtilities.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/cs/Microsoft.TestPlatform.CrossPlatEngine.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/cs/Microsoft.VisualStudio.TestPlatform.Common.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/cs/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/cs/Microsoft.VisualStudio.TraceDataCollector.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/de-DE/FluentMigrator.Abstractions.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/de/Microsoft.TestPlatform.CommunicationUtilities.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/de/Microsoft.TestPlatform.CoreUtilities.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/de/Microsoft.TestPlatform.CrossPlatEngine.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/de/Microsoft.VisualStudio.TestPlatform.Common.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/de/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/de/Microsoft.VisualStudio.TraceDataCollector.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/environment.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/environment.json.dist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/es/Microsoft.TestPlatform.CommunicationUtilities.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/es/Microsoft.TestPlatform.CoreUtilities.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/es/Microsoft.TestPlatform.CrossPlatEngine.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/es/Microsoft.VisualStudio.TestPlatform.Common.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/es/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/es/Microsoft.VisualStudio.TraceDataCollector.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/fr/Microsoft.TestPlatform.CommunicationUtilities.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/fr/Microsoft.TestPlatform.CoreUtilities.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/fr/Microsoft.TestPlatform.CrossPlatEngine.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/fr/Microsoft.VisualStudio.TestPlatform.Common.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/fr/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/fr/Microsoft.VisualStudio.TraceDataCollector.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/it/Microsoft.TestPlatform.CommunicationUtilities.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/it/Microsoft.TestPlatform.CoreUtilities.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/it/Microsoft.TestPlatform.CrossPlatEngine.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/it/Microsoft.VisualStudio.TestPlatform.Common.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/it/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/it/Microsoft.VisualStudio.TraceDataCollector.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/ja/Microsoft.TestPlatform.CommunicationUtilities.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/ja/Microsoft.TestPlatform.CoreUtilities.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/ja/Microsoft.TestPlatform.CrossPlatEngine.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/ja/Microsoft.VisualStudio.TestPlatform.Common.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/ja/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/ja/Microsoft.VisualStudio.TraceDataCollector.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/ko/Microsoft.TestPlatform.CommunicationUtilities.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/ko/Microsoft.TestPlatform.CoreUtilities.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/ko/Microsoft.TestPlatform.CrossPlatEngine.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/ko/Microsoft.VisualStudio.TestPlatform.Common.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/ko/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/ko/Microsoft.VisualStudio.TraceDataCollector.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/nunit.engine.netstandard.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/nunit.framework.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/pl/Microsoft.TestPlatform.CommunicationUtilities.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/pl/Microsoft.TestPlatform.CoreUtilities.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/pl/Microsoft.TestPlatform.CrossPlatEngine.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/pl/Microsoft.VisualStudio.TestPlatform.Common.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/pl/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/pl/Microsoft.VisualStudio.TraceDataCollector.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/pt-BR/Microsoft.TestPlatform.CommunicationUtilities.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/pt-BR/Microsoft.TestPlatform.CoreUtilities.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/pt-BR/Microsoft.TestPlatform.CrossPlatEngine.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/pt-BR/Microsoft.VisualStudio.TestPlatform.Common.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/pt-BR/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/pt-BR/Microsoft.VisualStudio.TraceDataCollector.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/ru/Microsoft.TestPlatform.CommunicationUtilities.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/ru/Microsoft.TestPlatform.CoreUtilities.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/ru/Microsoft.TestPlatform.CrossPlatEngine.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/ru/Microsoft.VisualStudio.TestPlatform.Common.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/ru/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/ru/Microsoft.VisualStudio.TraceDataCollector.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/runtimes/win/lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/testhost.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/tr/Microsoft.TestPlatform.CommunicationUtilities.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/tr/Microsoft.TestPlatform.CoreUtilities.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/tr/Microsoft.TestPlatform.CrossPlatEngine.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/tr/Microsoft.VisualStudio.TestPlatform.Common.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/tr/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/tr/Microsoft.VisualStudio.TraceDataCollector.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/web.config" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/zh-Hans/Microsoft.TestPlatform.CommunicationUtilities.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/zh-Hans/Microsoft.TestPlatform.CoreUtilities.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/zh-Hans/Microsoft.TestPlatform.CrossPlatEngine.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/zh-Hans/Microsoft.VisualStudio.TestPlatform.Common.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/zh-Hans/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/zh-Hans/Microsoft.VisualStudio.TraceDataCollector.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/zh-Hant/Microsoft.TestPlatform.CommunicationUtilities.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/zh-Hant/Microsoft.TestPlatform.CoreUtilities.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/zh-Hant/Microsoft.TestPlatform.CrossPlatEngine.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/zh-Hant/Microsoft.VisualStudio.TestPlatform.Common.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/zh-Hant/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/zh-Hant/Microsoft.VisualStudio.TraceDataCollector.resources.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/environment.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/obj/Debug/netcoreapp2.2/app.AssemblyInfo.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/obj/Debug/netcoreapp2.2/app.AssemblyInfoInputs.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/obj/Debug/netcoreapp2.2/app.RazorAssemblyInfo.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/obj/Debug/netcoreapp2.2/app.RazorAssemblyInfo.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/obj/Debug/netcoreapp2.2/app.RazorTargetAssemblyInfo.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/obj/Debug/netcoreapp2.2/app.assets.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/obj/Debug/netcoreapp2.2/app.csproj.CoreCompileInputs.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/obj/Debug/netcoreapp2.2/app.csproj.FileListAbsolute.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/obj/Debug/netcoreapp2.2/app.csprojAssemblyReference.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/obj/Debug/netcoreapp2.2/app.dll" beforeDir="false" afterPath="$PROJECT_DIR$/src/obj/Debug/netcoreapp2.2/app.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/obj/Debug/netcoreapp2.2/app.pdb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/obj/app.csproj.EntityFrameworkCore.targets" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/obj/app.csproj.nuget.cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/obj/app.csproj.nuget.dgspec.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/obj/app.csproj.nuget.g.props" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/obj/app.csproj.nuget.g.targets" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/obj/project.assets.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/obj/project.packagespec.json" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -44,137 +252,133 @@
     </option>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/src/Startup.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/DependencyInjection/Kernel.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/B4EF600F-4A59-4FE2-865A-8F97F915FB9D/5c/73baaab0/ActionResult.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/DependencyInjection/ServiceRecorder/AbstractServiceRecorder.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/DependencyInjection/ServiceRecorder/RepositoryRecorder/RepositoryRecorderException.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/DependencyInjection/ServiceRecorder/RepositoryRecorder/RepositoryRecorder.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/35302C35-81DB-438A-91F3-8FEFA7A01676/49/f6ca7851/ExceptionHandlerOptions.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/DependencyInjection/ServiceRecorder/CommandQueryRecorder/CommandQueryRecorder.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/DependencyInjection/ServiceRecorder/InjectedAttributeRecorder/InjectedAttributeRecorder.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/Program.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/Aspect/TestMiddleware.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/FB856EAB-CE2F-4FAD-84B0-3EC2F25B8805/bf/e1d2432c/JsonResult.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/57010887-BA3F-46F4-8547-B67751974C6D/49/80141287/ISerializable.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/35302C35-81DB-438A-91F3-8FEFA7A01676/24/b4528897/DeveloperExceptionPageOptions.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/57010887-BA3F-46F4-8547-B67751974C6D/f2/f32362c4/Exception.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/publish/web.config" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/CD244751-0325-4121-9FE0-724DAFC7E191/26/5d8d429e/ControllerActionInvoker.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/7C90DDE6-751E-47D2-8C8A-9FCC0C551645/e4/f4df5647/ISessionFactory.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/3A9BDA93-2BA3-4EF5-8DB0-CA6E9FFE5671/b1/d5aba328/IServiceProvider.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/F352E566-ABF6-421E-87EA-FBCF57A0B237/4e/7fba949f/DefaultFilesMiddleware.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/196D5F9C-FF8C-4EAC-A925-A90B26982D76/5/MigrationBase.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/196D5F9C-FF8C-4EAC-A925-A90B26982D76/4/Migration.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/F352E566-ABF6-421E-87EA-FBCF57A0B237/43/d3e644c9/StaticFileMiddleware.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/60390DDE-D713-46E2-875F-654FCB4AB9C0/e5/8da349ea/IToken.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/35302C35-81DB-438A-91F3-8FEFA7A01676/e7/4be2ec07/DeveloperExceptionPageExtensions.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/127E718A-C42E-4542-A71B-54CEC3EF156B/18/1e86c897/WebHostBuilder.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6BF71446-6FEB-451A-AD21-DE19C6C5E33E/50/96b5dcd4/HttpsRedirectionMiddleware.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/35302C35-81DB-438A-91F3-8FEFA7A01676/fe/2f800d0e/DeveloperExceptionPageMiddleware.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/Domain/Entity/Token/TokenException.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/57010887-BA3F-46F4-8547-B67751974C6D/84/d68a5bdd/ExecutionContext.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/57010887-BA3F-46F4-8547-B67751974C6D/0a/e0eb8ff0/UnhandledExceptionEventHandler.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/DD7BBB1E-B6CB-4178-A82C-D5136B2606B8/ba/0ca3cf9d/RequestDelegate.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/obj/Debug/netcoreapp2.2/app.AssemblyInfo.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/57010887-BA3F-46F4-8547-B67751974C6D/d6/ac8d48dc/AsyncTaskMethodBuilder`1.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/obj/Debug/netcoreapp2.2/app.RazorAssemblyInfo.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/57010887-BA3F-46F4-8547-B67751974C6D/c9/e0b1c07b/UnhandledExceptionEventArgs.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/F0E94C77-1034-4038-A253-68FFB4247542/c4/c24b47ab/MiddlewareFactory.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/57010887-BA3F-46F4-8547-B67751974C6D/fc/69abc04f/ValueTaskAwaiter.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/57010887-BA3F-46F4-8547-B67751974C6D/1c/f1f39ff7/EventArgs.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/Common/DbAccessor.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/DD7BBB1E-B6CB-4178-A82C-D5136B2606B8/7f/e61fce4c/IMiddleware.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/Common/EncodeHandler.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/57010887-BA3F-46F4-8547-B67751974C6D/f6/4480b96a/QueueUserWorkItemCallback`1.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/Common/Annotation/TransientAttribute.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/57010887-BA3F-46F4-8547-B67751974C6D/de/fba2d5bc/EventHandler.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/Common/Annotation/SingletonAttribute.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/Common/Annotation/ScopedAttribute.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/Common/Annotation/InjectedAttribute.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/DD7BBB1E-B6CB-4178-A82C-D5136B2606B8/c4/414723ac/UseMiddlewareExtensions.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/87E8CE02-3EE4-404D-9082-6C8A5038171A/46/89f79914/IActionResult.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/57010887-BA3F-46F4-8547-B67751974C6D/e0/a09c7e66/ThreadPoolWorkQueue.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/DependencyInjection/ServiceRecorder/InjectedAttributeRecorder/InjectedAttributeRecorder.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/Startup.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/Program.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/87E8CE02-3EE4-404D-9082-6C8A5038171A/80/ccf545b8/ActionContext.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/FB856EAB-CE2F-4FAD-84B0-3EC2F25B8805/bf/e1d2432c/JsonResult.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/B4EF600F-4A59-4FE2-865A-8F97F915FB9D/e4/860ee96a/ResultFilterAttribute.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/45D20605-9EC8-44F8-8A47-1D6E18421912/b7/f0141abb/LogLevel.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/Aspect/FilterAttribute/IGlobalFilter.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/127E718A-C42E-4542-A71B-54CEC3EF156B/18/1e86c897/WebHostBuilder.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/57010887-BA3F-46F4-8547-B67751974C6D/dd/db6b6c9d/CustomAttributeData.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/Common/Services/Migrator/MigratorConfig.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/Common/Services/Migrator/Migrator.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/Common/Extensions/NullAwareExtension.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/Application/ErrorResponse.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/Aspect/FilterAttribute/HandleExceptionFilterAttribute.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/Application/CQS/Token/Output/TokenOutput.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/35D1D668-9205-4C08-8AC0-8401C2EDB00B/1d/d4211a1f/Controller.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/Infrastructure/NHibernate/Mapping/TokenMap.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/Infrastructure/NHibernate/Mapping/UserMap.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/Domain/Entity/Token/TokenException.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/Aspect/FilterAttribute/JsonResultFilterAttribute.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/B4EF600F-4A59-4FE2-865A-8F97F915FB9D/e7/ec41a768/ExceptionFilterAttribute.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/Application/CQS/Token/Input/TokenInput.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/B4EF600F-4A59-4FE2-865A-8F97F915FB9D/59/9402943a/CompatibilityVersion.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/Application/CQS/Token/Command/ReceiveTokenCommand.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/7C90DDE6-751E-47D2-8C8A-9FCC0C551645/55/65e93b08/ISession.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/Infrastructure/NHibernate/MappingConversationListener.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/Test/FirstTest.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/Common/EncodeHandler.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/Common/DbAccessor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/57010887-BA3F-46F4-8547-B67751974C6D/69/ff10992d/Func`1.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/Common/Attribute/TransientAttribute.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/Common/Attribute/SingletonAttribute.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/Common/Attribute/ScopedAttribute.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/Infrastructure/NHibernate/Repository/AbstractRepository.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/Common/Attribute/InjectedAttribute.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/EA0F7286-DD97-4781-8DBA-04B6963C416B/c8/46eea2e9/HttpProtocol.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/B784A89F-319B-4D2E-9DD8-E549735FB72A/af/9dde8dc1/IQueryBuilder`2.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/Domain/Entity/AbstractEntity.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/Domain/Entity/User/IUserRepository.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/57010887-BA3F-46F4-8547-B67751974C6D/25/46943edb/_ThreadPoolWaitCallback.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/Domain/Entity/User/User.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/Domain/Entity/User/IUserRepository.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/B784A89F-319B-4D2E-9DD8-E549735FB72A/5f/408998e3/QueryBuilder`2.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/Domain/Entity/Token/ITokenRepository.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/DF9027B1-6D7E-4C66-BCDF-189722468482/32/1aef7c6c/EventDescriptor.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/DD7BBB1E-B6CB-4178-A82C-D5136B2606B8/c4/414723ac/UseMiddlewareExtensions.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/Domain/Entity/Token/Token.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/DF9027B1-6D7E-4C66-BCDF-189722468482/2d/d292819d/HandledEventHandler.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/57010887-BA3F-46F4-8547-B67751974C6D/19/f91b6cbc/EventBuilder.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/B784A89F-319B-4D2E-9DD8-E549735FB72A/a2/b80d1dac/Query`2.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/57010887-BA3F-46F4-8547-B67751974C6D/d6/ac8d48dc/AsyncTaskMethodBuilder`1.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/Migration/InitMigration.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/Domain/Entity/AbstractException.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/EA0F7286-DD97-4781-8DBA-04B6963C416B/10/3717d0a8/HttpConnection.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/Domain/Entity/User/UserException.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/Application/CQS/User/Query/GetUserQuery.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/Application/CQS/User/Output/UserOutput.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/57010887-BA3F-46F4-8547-B67751974C6D/21/8eed728e/AsyncTaskMethodBuilder.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/Application/Http/User/UserController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/CD244751-0325-4121-9FE0-724DAFC7E191/26/5d8d429e/ControllerActionInvoker.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/Application/Http/Token/TokenController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5F0F6780-E51E-4328-AD44-B1DAE69B5271/a6/b833805c/TestRunEventsHandler.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/Infrastructure/NHibernate/Transactional.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/57010887-BA3F-46F4-8547-B67751974C6D/7a/7c42e1f2/AsyncMethodBuilderCore.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/Infrastructure/NHibernate/NHibernateHelper.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/Infrastructure/NHibernate/Repository/UserRepository.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/57010887-BA3F-46F4-8547-B67751974C6D/b9/7a835fa7/IDisposable.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/02623B1C-40A0-44F8-AAEC-4D8809C32F99/72/435511a8/ConstraintAttribute.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/Infrastructure/NHibernate/Repository/TokenRepository.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/DependencyInjection/AbstractAssemblyAware.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/DependencyInjection/Kernel.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/57010887-BA3F-46F4-8547-B67751974C6D/61/284fab80/Stream.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/DependencyInjection/ServiceRecorder/AbstractServiceRecorder.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/Infrastructure/NHibernate/Mapping/TokenMap.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/appsettings.json" />
-        <option value="$PROJECT_DIR$/src/Properties/launchSettings.json" />
-        <option value="$PROJECT_DIR$/src/Domain/Entity/AbstractEntity.cs" />
-        <option value="$PROJECT_DIR$/src/Domain/Mapping/User/UserMap.cs" />
-        <option value="$PROJECT_DIR$/src/Infrastructure/NHibernate/DbAccessor.cs" />
-        <option value="$PROJECT_DIR$/docker/core/Dockerfile" />
-        <option value="$PROJECT_DIR$/src/Common/TokenHandler.cs" />
-        <option value="$PROJECT_DIR$/src/Common/Factory/MainControllerFactory.cs" />
-        <option value="$PROJECT_DIR$/src/Application/CQS/User/Output/UserOutput.cs" />
-        <option value="$PROJECT_DIR$/src/Domain/Entity/Token/Token.cs" />
-        <option value="$PROJECT_DIR$/src/Domain/Entity/User/User.cs" />
-        <option value="$PROJECT_DIR$/src/Domain/Mapping/TokenMap.cs" />
-        <option value="$PROJECT_DIR$/src/app.csproj" />
-        <option value="$PROJECT_DIR$/src/Migration/AbstractMigration.cs" />
-        <option value="$PROJECT_DIR$/src/environment.json" />
-        <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch.cs" />
-        <option value="$PROJECT_DIR$/docker-compose.yml" />
-        <option value="$PROJECT_DIR$/docker-compose.yml.dist" />
-        <option value="$PROJECT_DIR$/src/Test/FirstTest.cs" />
-        <option value="$PROJECT_DIR$/src/Common/Migrator.cs" />
-        <option value="$PROJECT_DIR$/src/Common/Services/Migrator/Config.cs" />
-        <option value="$PROJECT_DIR$/src/Migration/InitMigration.cs" />
-        <option value="$PROJECT_DIR$/src/Migration/CreateTokenMigrations.cs" />
-        <option value="$PROJECT_DIR$/src/In/TokenMap.cs" />
-        <option value="$PROJECT_DIR$/src/Infrastructure/NHibernate/Mapping/TokenMap.cs" />
-        <option value="$PROJECT_DIR$/src/Infrastructure/NHibernate/PreUpdateEventListener.cs" />
-        <option value="$PROJECT_DIR$/src/Infrastructure/NHibernate/NHibernateHelper.cs" />
-        <option value="$PROJECT_DIR$/src/Common/EncodeHandler.cs" />
-        <option value="$PROJECT_DIR$/src/Common/Extension/NullAwareExtension.cs" />
-        <option value="$PROJECT_DIR$/src/Common/Extensions/NullAwareExtension.cs" />
-        <option value="$PROJECT_DIR$/src/Common/DbAccessor.cs" />
-        <option value="$PROJECT_DIR$/src/Common/Services/Migrator/MigratorConfig.cs" />
-        <option value="$PROJECT_DIR$/src/Common/Services/Migrator/migrations.json" />
-        <option value="$PROJECT_DIR$/src/Common/Services/Migrator/Migrator.cs" />
-        <option value="$PROJECT_DIR$/src/Common/Services/Migrator/.gitignore" />
         <option value="$PROJECT_DIR$/src/Common/Services/Migrator/migrations.json.dist" />
-        <option value="$PROJECT_DIR$/src/Application/CQS/User/Query/GetUserQuery.cs" />
         <option value="$PROJECT_DIR$/src/Common/Factory/ControllerFactory.cs" />
         <option value="$PROJECT_DIR$/src/Aspect/CustomControllerActionInvoker.cs" />
-        <option value="$PROJECT_DIR$/src/Application/Http/User/UserController.cs" />
         <option value="$PROJECT_DIR$/src/Aspect/Middleware/ExceptionHandlerMiddleWare.cs" />
         <option value="$PROJECT_DIR$/src/Aspect/Middleware/ResponseToJsonMiddleware.cs" />
-        <option value="$PROJECT_DIR$/src/Aspect/Middleware/ExceptionHandlerMiddleware.cs" />
         <option value="$PROJECT_DIR$/src/Aspect/EventHandler/UnhandledExceptinEventHandler.cs" />
         <option value="$PROJECT_DIR$/src/Aspect/EventHandler/UnhandledExceptionEventHandler.cs" />
-        <option value="$PROJECT_DIR$/src/DependencyInjection/Kernel.cs" />
-        <option value="$PROJECT_DIR$/src/Startup.cs" />
         <option value="$PROJECT_DIR$/src/Application/ErrorResponse.cs" />
         <option value="$PROJECT_DIR$/src/Domain/Entity/Token/TokenException.cs" />
-        <option value="$PROJECT_DIR$/src/Application/Http/Token/TokenController.cs" />
         <option value="$PROJECT_DIR$/src/Aspect/TestMiddleware.cs" />
+        <option value="$PROJECT_DIR$/src/Migration/CreateTokenMigrations.cs" />
+        <option value="$PROJECT_DIR$/src/Infrastructure/NHibernate/NHibernateHelper.cs" />
+        <option value="$PROJECT_DIR$/docker-compose.yml" />
+        <option value="$PROJECT_DIR$/src/.gitignore" />
+        <option value="$PROJECT_DIR$/src/DependencyInjection/ServiceRecorder/MiddlewareRecorder/MiddlewareRecorder.cs" />
+        <option value="$PROJECT_DIR$/src/Aspect/Middleware/ExceptionHandlerMiddleware.cs" />
+        <option value="$PROJECT_DIR$/src/Aspect/Middleware/TestFilter.cs" />
+        <option value="$PROJECT_DIR$/src/Aspect/Middleware/JsonResultFilterAttribute.cs" />
+        <option value="$PROJECT_DIR$/src/Aspect/Middleware/HandleExceptionFilterAttribyt.cs" />
+        <option value="$PROJECT_DIR$/src/Aspect/Middleware/HandleExceptionFilterAttribute.cs" />
+        <option value="$PROJECT_DIR$/src/DependencyInjection/AbstractAssemblyAware.cs" />
+        <option value="$PROJECT_DIR$/src/environment.json" />
+        <option value="$PROJECT_DIR$/src/environment.json.dist" />
+        <option value="$PROJECT_DIR$/src/Aspect/FilterAttribute/IGlobalFilter.cs" />
+        <option value="$PROJECT_DIR$/src/DependencyInjection/Kernel.cs" />
+        <option value="$PROJECT_DIR$/src/Startup.cs" />
+        <option value="$PROJECT_DIR$/src/Domain/Entity/Token/Token.cs" />
+        <option value="$PROJECT_DIR$/src/Application/Http/User/UserController.cs" />
+        <option value="$PROJECT_DIR$/src/Application/CQS/User/Query/GetUserQuery.cs" />
+        <option value="$PROJECT_DIR$/src/Domain/Entity/AbstractException.cs" />
+        <option value="$PROJECT_DIR$/src/Domain/Entity/User/UserException.cs" />
+        <option value="$PROJECT_DIR$/src/Infrastructure/NHibernate/Mapping/TokenMap.cs" />
+        <option value="$PROJECT_DIR$/src/Domain/Entity/User/IUserRepository.cs" />
+        <option value="$PROJECT_DIR$/src/Infrastructure/NHibernate/Transactional.cs" />
+        <option value="$PROJECT_DIR$/src/Infrastructure/NHibernate/Mapping/UserMap.cs" />
+        <option value="$PROJECT_DIR$/src/Migration/CreateTokenMigration.cs" />
+        <option value="$PROJECT_DIR$/src/Common/Extensions/NullAwareExtension.cs" />
+        <option value="$PROJECT_DIR$/src/DependencyInjection/ServiceRecorder/RepositoryRecorder/RepositoryRecorder.cs" />
+        <option value="$PROJECT_DIR$/src/Common/Services/Migrator/migrations.json" />
+        <option value="$PROJECT_DIR$/src/Migration/InitMigration.cs" />
+        <option value="$PROJECT_DIR$/src/Infrastructure/NHibernate/Repository/AbstractRepository.cs" />
+        <option value="$PROJECT_DIR$/src/Infrastructure/NHibernate/MappingConversationListener.cs" />
+        <option value="$PROJECT_DIR$/src/Infrastructure/NHibernate/Repository/UserRepository.cs" />
+        <option value="$PROJECT_DIR$/src/Domain/Entity/Token/ITokenRepository.cs" />
+        <option value="$PROJECT_DIR$/src/Infrastructure/NHibernate/Repository/TokenRepository.cs" />
+        <option value="$PROJECT_DIR$/src/Application/CQS/Token/Output/TokenOutput.cs" />
+        <option value="$PROJECT_DIR$/src/Application/CQS/Token/Command/ReceiveTokenCommand.cs" />
+        <option value="$PROJECT_DIR$/src/Aspect/FilterAttribute/JsonResultFilterAttribute.cs" />
+        <option value="$PROJECT_DIR$/src/Application/CQS/Token/Input/TokenInput.cs" />
+        <option value="$PROJECT_DIR$/src/Application/Http/Token/TokenController.cs" />
+        <option value="$PROJECT_DIR$/src/Aspect/FilterAttribute/HandleExceptionFilterAttribute.cs" />
       </list>
     </option>
   </component>
@@ -210,7 +414,7 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Color Scheme Font" />
+    <property name="settings.editor.selected.configurable" value="CodeLensConfigurable" />
   </component>
   <component name="RestClientSettings">
     <option name="REQUEST_HISTORY">
@@ -330,7 +534,7 @@
           <expand>
             <path>
               <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@13a09d05" type="9fbbdea:ServiceModel$ServiceNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@153bc53f" type="9fbbdea:ServiceModel$ServiceNode" />
             </path>
           </expand>
           <select />
@@ -399,6 +603,11 @@
       <workItem from="1565036967202" duration="2227000" />
       <workItem from="1565380146811" duration="6995000" />
       <workItem from="1565387394174" duration="6353000" />
+      <workItem from="1565444876081" duration="42000" />
+      <workItem from="1565444952632" duration="146000" />
+      <workItem from="1565445131802" duration="1883000" />
+      <workItem from="1565520749857" duration="16402000" />
+      <workItem from="1565537202538" duration="1550000" />
     </task>
     <task id="LOCAL-00001" summary="Наконец смог запустить приложение. Однако, дебажить его все еще не получается">
       <created>1560618202174</created>
@@ -593,63 +802,94 @@
     <MESSAGE value="Вернул FluentMigrator, ибо без миграций жизнь - боль. Установил NUnit" />
     <MESSAGE value="Сделал кастрацкую систему миграций. Подтянул либу Ninject" />
     <MESSAGE value="Добавил обработку ошибок из контроллеров миддваром. Todo: добавить нуявную сериализацию результатов контроллеров в json строку" />
-    <option name="LAST_COMMIT_MESSAGE" value="Добавил обработку ошибок из контроллеров миддваром. Todo: добавить нуявную сериализацию результатов контроллеров в json строку" />
+    <MESSAGE value="Заменил TestMiddleWare на его нормальную реализацию. todo: перестало работать" />
+    <option name="LAST_COMMIT_MESSAGE" value="Заменил TestMiddleWare на его нормальную реализацию. todo: перестало работать" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="1018" y="375" key="#xdebugger.evaluate" />
+    <state x="688" y="358" key="#com.intellij.fileTypes.FileTypeChooser" />
+    <state x="688" y="358" key="#com.intellij.fileTypes.FileTypeChooser/1920.1080/1920.1080" />
+    <state x="710" y="355" key="#xdebugger.evaluate" />
     <state x="1018" y="375" key="#xdebugger.evaluate/1920.1080" />
+    <state x="710" y="355" key="#xdebugger.evaluate/1920.1080/1920.1080" />
     <state x="720" y="254" key="FileChooserDialogImpl" />
     <state x="720" y="254" key="FileChooserDialogImpl/1920.1080" />
-    <state width="1803" height="260" key="GridCell.Tab.0.bottom" />
+    <state width="1807" height="224" key="GridCell.Tab.0.bottom" />
     <state width="1803" height="260" key="GridCell.Tab.0.bottom/1920.1080" />
-    <state width="1803" height="260" key="GridCell.Tab.0.center" />
+    <state width="1807" height="224" key="GridCell.Tab.0.bottom/1920.1080/1920.1080" />
+    <state width="1807" height="224" key="GridCell.Tab.0.center" />
     <state width="1803" height="260" key="GridCell.Tab.0.center/1920.1080" />
-    <state width="1803" height="260" key="GridCell.Tab.0.left" />
+    <state width="1807" height="224" key="GridCell.Tab.0.center/1920.1080/1920.1080" />
+    <state width="1807" height="224" key="GridCell.Tab.0.left" />
     <state width="1803" height="260" key="GridCell.Tab.0.left/1920.1080" />
-    <state width="1803" height="260" key="GridCell.Tab.0.right" />
+    <state width="1807" height="224" key="GridCell.Tab.0.left/1920.1080/1920.1080" />
+    <state width="1807" height="224" key="GridCell.Tab.0.right" />
     <state width="1803" height="260" key="GridCell.Tab.0.right/1920.1080" />
-    <state width="1803" height="260" key="GridCell.Tab.1.bottom" />
+    <state width="1807" height="224" key="GridCell.Tab.0.right/1920.1080/1920.1080" />
+    <state width="1807" height="224" key="GridCell.Tab.1.bottom" />
     <state width="1803" height="260" key="GridCell.Tab.1.bottom/1920.1080" />
-    <state width="1803" height="260" key="GridCell.Tab.1.center" />
+    <state width="1807" height="224" key="GridCell.Tab.1.bottom/1920.1080/1920.1080" />
+    <state width="1807" height="224" key="GridCell.Tab.1.center" />
     <state width="1803" height="260" key="GridCell.Tab.1.center/1920.1080" />
-    <state width="1803" height="260" key="GridCell.Tab.1.left" />
+    <state width="1807" height="224" key="GridCell.Tab.1.center/1920.1080/1920.1080" />
+    <state width="1807" height="224" key="GridCell.Tab.1.left" />
     <state width="1803" height="260" key="GridCell.Tab.1.left/1920.1080" />
-    <state width="1803" height="260" key="GridCell.Tab.1.right" />
+    <state width="1807" height="224" key="GridCell.Tab.1.left/1920.1080/1920.1080" />
+    <state width="1807" height="224" key="GridCell.Tab.1.right" />
     <state width="1803" height="260" key="GridCell.Tab.1.right/1920.1080" />
-    <state width="1803" height="260" key="GridCell.Tab.2.bottom" />
+    <state width="1807" height="224" key="GridCell.Tab.1.right/1920.1080/1920.1080" />
+    <state width="1807" height="224" key="GridCell.Tab.2.bottom" />
     <state width="1803" height="260" key="GridCell.Tab.2.bottom/1920.1080" />
-    <state width="1803" height="260" key="GridCell.Tab.2.center" />
+    <state width="1807" height="224" key="GridCell.Tab.2.bottom/1920.1080/1920.1080" />
+    <state width="1807" height="224" key="GridCell.Tab.2.center" />
     <state width="1803" height="260" key="GridCell.Tab.2.center/1920.1080" />
-    <state width="1803" height="260" key="GridCell.Tab.2.left" />
+    <state width="1807" height="224" key="GridCell.Tab.2.center/1920.1080/1920.1080" />
+    <state width="1807" height="224" key="GridCell.Tab.2.left" />
     <state width="1803" height="260" key="GridCell.Tab.2.left/1920.1080" />
-    <state width="1803" height="260" key="GridCell.Tab.2.right" />
+    <state width="1807" height="224" key="GridCell.Tab.2.left/1920.1080/1920.1080" />
+    <state width="1807" height="224" key="GridCell.Tab.2.right" />
     <state width="1803" height="260" key="GridCell.Tab.2.right/1920.1080" />
-    <state width="1803" height="260" key="GridCell.Tab.3.bottom" />
+    <state width="1807" height="224" key="GridCell.Tab.2.right/1920.1080/1920.1080" />
+    <state width="1807" height="224" key="GridCell.Tab.3.bottom" />
     <state width="1803" height="260" key="GridCell.Tab.3.bottom/1920.1080" />
-    <state width="1803" height="260" key="GridCell.Tab.3.center" />
+    <state width="1807" height="224" key="GridCell.Tab.3.bottom/1920.1080/1920.1080" />
+    <state width="1807" height="224" key="GridCell.Tab.3.center" />
     <state width="1803" height="260" key="GridCell.Tab.3.center/1920.1080" />
-    <state width="1803" height="260" key="GridCell.Tab.3.left" />
+    <state width="1807" height="224" key="GridCell.Tab.3.center/1920.1080/1920.1080" />
+    <state width="1807" height="224" key="GridCell.Tab.3.left" />
     <state width="1803" height="260" key="GridCell.Tab.3.left/1920.1080" />
-    <state width="1803" height="260" key="GridCell.Tab.3.right" />
+    <state width="1807" height="224" key="GridCell.Tab.3.left/1920.1080/1920.1080" />
+    <state width="1807" height="224" key="GridCell.Tab.3.right" />
     <state width="1803" height="260" key="GridCell.Tab.3.right/1920.1080" />
-    <state width="1803" height="260" key="GridCell.Tab.4.bottom" />
+    <state width="1807" height="224" key="GridCell.Tab.3.right/1920.1080/1920.1080" />
+    <state width="1807" height="224" key="GridCell.Tab.4.bottom" />
     <state width="1803" height="260" key="GridCell.Tab.4.bottom/1920.1080" />
-    <state width="1803" height="260" key="GridCell.Tab.4.center" />
+    <state width="1807" height="224" key="GridCell.Tab.4.bottom/1920.1080/1920.1080" />
+    <state width="1807" height="224" key="GridCell.Tab.4.center" />
     <state width="1803" height="260" key="GridCell.Tab.4.center/1920.1080" />
-    <state width="1803" height="260" key="GridCell.Tab.4.left" />
+    <state width="1807" height="224" key="GridCell.Tab.4.center/1920.1080/1920.1080" />
+    <state width="1807" height="224" key="GridCell.Tab.4.left" />
     <state width="1803" height="260" key="GridCell.Tab.4.left/1920.1080" />
-    <state width="1803" height="260" key="GridCell.Tab.4.right" />
+    <state width="1807" height="224" key="GridCell.Tab.4.left/1920.1080/1920.1080" />
+    <state width="1807" height="224" key="GridCell.Tab.4.right" />
     <state width="1803" height="260" key="GridCell.Tab.4.right/1920.1080" />
+    <state width="1807" height="224" key="GridCell.Tab.4.right/1920.1080/1920.1080" />
+    <state x="789" y="235" key="RiderGenerateDialog" />
+    <state x="789" y="235" key="RiderGenerateDialog/1920.1080/1920.1080" />
     <state x="355" y="118" key="SettingsEditor" />
     <state x="355" y="118" key="SettingsEditor/1920.1080" />
+    <state x="355" y="118" key="SettingsEditor/1920.1080/1920.1080" />
     <state x="592" y="232" key="Vcs.Push.Dialog" />
     <state x="592" y="232" key="Vcs.Push.Dialog/1920.1080" />
     <state width="926" height="524" key="XDebugger.FullValuePopup" />
     <state width="926" height="524" key="XDebugger.FullValuePopup/1920.1080" />
-    <state x="573" y="249" key="run.anything.popup" />
+    <state x="569" y="202" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" />
+    <state x="569" y="202" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/1920.1080/1920.1080" />
+    <state x="573" y="249" width="672" height="677" key="run.anything.popup" />
     <state x="573" y="249" key="run.anything.popup/1920.1080" />
+    <state x="573" y="249" width="672" height="677" key="run.anything.popup/1920.1080/1920.1080" />
     <state x="552" y="233" width="840" height="620" key="search.everywhere.popup" />
     <state x="552" y="233" width="840" height="620" key="search.everywhere.popup/1920.1080" />
+    <state x="552" y="233" width="840" height="620" key="search.everywhere.popup/1920.1080/1920.1080" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -666,7 +906,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/src/Application/Http/User/UserController.cs</url>
-          <line>14</line>
+          <line>16</line>
           <properties documentPath="$PROJECT_DIR$/src/Application/Http/User/UserController.cs" initialLine="13">
             <startOffsets>
               <option value="-1" />
@@ -678,17 +918,56 @@
           <option name="timeStamp" value="11" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/src/Aspect/TestMiddleware.cs</url>
-          <line>31</line>
-          <properties documentPath="$PROJECT_DIR$/src/Aspect/TestMiddleware.cs" initialLine="21">
+          <url>file://$PROJECT_DIR$/src/Aspect/FilterAttribute/JsonResultFilterAttribute.cs</url>
+          <line>42</line>
+          <properties documentPath="$PROJECT_DIR$/src/Aspect/FilterAttribute/JsonResultFilterAttribute.cs" initialLine="35">
             <startOffsets>
-              <option value="795" />
+              <option value="1329" />
             </startOffsets>
             <endOffsets>
-              <option value="795" />
+              <option value="1330" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="25" />
+          <option name="timeStamp" value="31" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/src/Infrastructure/NHibernate/MappingConversationListener.cs</url>
+          <line>15</line>
+          <properties documentPath="$PROJECT_DIR$/src/Infrastructure/NHibernate/MappingConversationListener.cs" initialLine="15">
+            <startOffsets>
+              <option value="439" />
+            </startOffsets>
+            <endOffsets>
+              <option value="482" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="32" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/src/Infrastructure/NHibernate/MappingConversationListener.cs</url>
+          <line>10</line>
+          <properties documentPath="$PROJECT_DIR$/src/Infrastructure/NHibernate/MappingConversationListener.cs" initialLine="10">
+            <startOffsets>
+              <option value="311" />
+            </startOffsets>
+            <endOffsets>
+              <option value="354" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="33" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/src/Application/CQS/Token/Command/ReceiveTokenCommand.cs</url>
+          <line>23</line>
+          <properties documentPath="$PROJECT_DIR$/src/Application/CQS/Token/Command/ReceiveTokenCommand.cs" initialLine="23">
+            <startOffsets>
+              <option value="722" />
+            </startOffsets>
+            <endOffsets>
+              <option value="779" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="39" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

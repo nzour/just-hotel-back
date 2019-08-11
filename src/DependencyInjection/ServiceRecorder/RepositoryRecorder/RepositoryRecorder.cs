@@ -19,9 +19,9 @@ namespace app.DependencyInjection.ServiceRecorder.RepositoryRecorder
             foreach (var @interface in interfaces)
             {
                 var implementation = FindImplementation(@interface);
-                var instance = Activator.CreateInstance(implementation);
+                
                 // Регистрируем реализацию репозитория
-                services.AddSingleton(@interface, instance);
+                services.AddScoped(@interface, implementation);
             }
         }
 
@@ -34,7 +34,7 @@ namespace app.DependencyInjection.ServiceRecorder.RepositoryRecorder
                 .DefinedTypes
                 .Where(type =>
                     type.IsInterface &&
-                    type.Namespace.Contains(NamespacePattern) &&
+                    (bool) type.Namespace?.Contains(NamespacePattern) &&
                     type.Name.EndsWith(EndsWithPattern)
                 );
         }

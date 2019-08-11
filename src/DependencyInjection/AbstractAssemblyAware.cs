@@ -1,3 +1,6 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Reflection;
 
 namespace app.DependencyInjection
@@ -15,6 +18,11 @@ namespace app.DependencyInjection
         protected static Assembly GetAssembly<T>()
         {
             return typeof(T).Assembly;
+        }
+
+        protected static IEnumerable<Type> FindTypes(Func<TypeInfo, bool> callback)
+        {
+            return GetAssembly().DefinedTypes.Where(callback.Invoke);
         }
     }
 }

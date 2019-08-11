@@ -1,3 +1,4 @@
+using System;
 using app.Application.CQS.User.Output;
 using app.Domain.Entity.User;
 
@@ -12,10 +13,9 @@ namespace app.Application.CQS.User.Query
             UserRepository = userRepository;
         }
 
-        public UserOutput Execute()
+        public UserOutput Execute(Guid userId)
         {
-            var user =  UserRepository.GetUser();
-            return new UserOutput(user);
+            return new UserOutput(UserRepository.GetUser(userId));
         }
     }
 }

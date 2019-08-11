@@ -1,10 +1,6 @@
-﻿using System;
-using app.Aspect;
-using app.DependencyInjection;
+﻿using app.DependencyInjection;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -15,18 +11,16 @@ namespace app
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
-        }    
+        }
 
         public IConfiguration Configuration { get; }
 
         public void ConfigureServices(IServiceCollection services)
         {
-            Kernel.Boot(services);
-
-            services.AddTransient<TestMiddleware>();
+            Kernel.ProcessServices(services);
+            Kernel.ProcessMvc(services);
             
             services.AddCors();
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
 
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
@@ -41,10 +35,7 @@ namespace app
                 app.UseHsts();
             }
 
-            app.UseMiddleware<TestMiddleware>();
-            
             app.UseDefaultFiles()
-                .UseStaticFiles()
                 .UseHttpsRedirection()
                 .UseMvc();
         }

@@ -1,18 +1,17 @@
-using System;
-using System.Threading.Tasks;
-using app.Domain.Entity.Token;
+using app.Application.CQS.Token.Command;
+using app.Application.CQS.Token.Input;
+using app.Application.CQS.Token.Output;
 using Microsoft.AspNetCore.Mvc;
 
 namespace app.Application.Http.Token
 {
-    [ApiController]
     [Route("token")]
     public class TokenController : Controller
     {
-        public async Task<string> Index()
+        [HttpPost]
+        public TokenOutput Receive([FromBody] TokenInput input, [FromServices] ReceiveTokenCommand command)
         {
-//            throw new TokenException("Something went wrong");
-            return await Task.Run(() => "Ok");
+            return command.Execute(input);
         }
     }
 }

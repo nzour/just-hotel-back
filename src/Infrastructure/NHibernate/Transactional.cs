@@ -8,11 +8,13 @@ namespace app.Infrastructure.NHibernate
     /// </summary>
     public static class Transactional
     {
+        private static ISession Session { get; }
         private static ITransaction Transaction { get; }
         
         static Transactional()
         {
-            Transaction = NHibernateHelper.OpenSession().Transaction;
+            Session = NHibernateHelper.OpenSession();
+            Transaction = Session.Transaction;
         }
 
         /// <summary>
@@ -20,34 +22,79 @@ namespace app.Infrastructure.NHibernate
         /// </summary>
         /// <param name="function">Делегат, который произойдет внутри транзакции</param>
         /// <typeparam name="T">Тип, который вернет делегат</typeparam>
-        public static T Action<T>(Func<T> function)
+        public static TResult Action<TResult>(Func<TResult> function)
         {
             try
             {
-                if (!Transaction.IsActive)
-                {
-                    Transaction.Begin();
-                }
+                Begin();
 
-                var result =  function.Invoke();
+                var result = function.Invoke();
 
-                if (!Transaction.WasCommitted)
-                {
-                    Transaction.Commit();
-                }
+                Commit();
 
                 return result;
             }
-            catch (Exception)
+            catch
             {
-                if (!Transaction.WasRolledBack)
-                {
-                    Transaction.Rollback();
-                }
-                
+                RollBack();
                 throw;
             }
+            finally
+            {
+                
+                Transaction.Dispose();
+            }
+        }
 
+        /// <summary>
+        /// Обернет VoidResult-делегат в транзакцию.
+        /// </summary>
+        /// <param name="function"></param>
+        public static void Action(Action function)
+        {
+            try
+            {
+                Begin();
+                
+                function.Invoke();
+                
+                Commit();
+            }
+            catch
+            {
+                RollBack();
+                throw;
+            }
+            finally
+            {
+                Transaction.Dispose();
+            }
+        }
+
+        private static void Begin()
+        {
+            if (!Transaction.IsActive)
+            {
+                Transaction.Begin();
+            }
+        }
+
+        private static void Commit()
+        {
+            Session.Flush();
+            
+            if (!Transaction.WasCommitted)
+            {
+                Transaction.Commit();
+            }
+        }
+
+        private static void RollBack()
+        {
+            if (!Transaction.WasRolledBack)
+            {
+                Transaction.Rollback();
+            }
         }
     }
 }
