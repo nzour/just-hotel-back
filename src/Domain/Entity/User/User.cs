@@ -1,3 +1,5 @@
+using Newtonsoft.Json;
+
 namespace app.Domain.Entity.User
 {
     public class User : AbstractEntity
@@ -18,6 +20,25 @@ namespace app.Domain.Entity.User
             Name = name;
             Login = login;
             Password = password;
+        }
+
+        public static implicit operator string(User user)
+        {
+            return JsonConvert.SerializeObject(new UserPayload(user));
+        }
+    }
+
+    internal class UserPayload
+    {
+        public string Id { get; }
+        public string Name { get; }
+        public string Login { get; }
+        
+        public UserPayload(User user)
+        {
+            Id = user.Id.ToString();
+            Name = user.Name;
+            Login = user.Login;
         }
     }
 }

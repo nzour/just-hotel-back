@@ -1,8 +1,6 @@
-using System;
-
-namespace app.Common.Annotation
+namespace app.Common.Attribute
 {
-    public class ScopedAttribute : Attribute
+    public class ScopedAttribute : System.Attribute
     {
     }
 }

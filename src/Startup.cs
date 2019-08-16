@@ -1,4 +1,5 @@
 ﻿using System.Security.Cryptography;
+using app.Aspect;
 using app.DependencyInjection;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -37,6 +38,8 @@ namespace app
                 app.UseHsts();
             }
 
+            app.UseMiddleware<HandledExceptionMiddleware>();
+            
             app.UseDefaultFiles()
                 .UseHttpsRedirection()
                 .UseMvc();

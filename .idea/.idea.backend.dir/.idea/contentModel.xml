@@ -15,6 +15,7 @@
         <e p=".gitignore" t="Include" />
         <e p="Application" t="Include">
           <e p="CQS" t="Include">
+            <e p="AbstractUserAware.cs" t="Include" />
             <e p="Token" t="Include">
               <e p="Command" t="Include">
                 <e p="ReceiveTokenCommand.cs" t="Include" />
@@ -47,13 +48,15 @@
         </e>
         <e p="Aspect" t="Include">
           <e p="FilterAttribute" t="Include">
-            <e p="HandleExceptionFilterAttribute.cs" t="Include" />
+            <e p="AuthorizationFilter.cs" t="Include" />
             <e p="IGlobalFilter.cs" t="Include" />
             <e p="JsonResultFilterAttribute.cs" t="Include" />
           </e>
+          <e p="HandledExceptionMiddleware.cs" t="Include" />
         </e>
         <e p="Common" t="Include">
           <e p="Attribute" t="Include">
+            <e p="AnonymousAttribute.cs" t="Include" />
             <e p="InjectedAttribute.cs" t="Include" />
             <e p="ScopedAttribute.cs" t="Include" />
             <e p="SingletonAttribute.cs" t="Include" />
@@ -85,6 +88,9 @@
             <e p="AbstractServiceRecorder.cs" t="Include" />
             <e p="CommandQueryRecorder" t="Include">
               <e p="CommandQueryRecorder.cs" t="Include" />
+            </e>
+            <e p="CommonServiceRecorder" t="Include">
+              <e p="CommonServiceRecorder.cs" t="Include" />
             </e>
             <e p="InjectedAttributeRecorder" t="Include">
               <e p="InjectedAttributeRecorder.cs" t="Include" />

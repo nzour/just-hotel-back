@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
-using app.Common.Annotation;
+using app.Common.Attribute;
 using FluentNHibernate.Conventions;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -54,11 +54,11 @@ namespace app.DependencyInjection.ServiceRecorder.InjectedAttributeRecorder
                 // todo: Not working. Fix in future.
                 //  property.SetValue(@class, service);
             }
-            catch (Exception e)
+            catch
             {
                 // todo: Log here
                 // I know, this is useless, but Rider warnings this place.
-                throw new Exception(e.Message);
+                throw;
             }
         }
 

@@ -1,8 +1,6 @@
-using System;
-
-namespace app.Common.Annotation
+namespace app.Common.Attribute
 {
-    public class TransientAttribute : Attribute
+    public class TransientAttribute : System.Attribute
     {
     }
 }

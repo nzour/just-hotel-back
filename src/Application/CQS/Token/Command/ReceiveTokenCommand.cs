@@ -1,37 +1,34 @@
-using System;
 using app.Application.CQS.Token.Input;
 using app.Application.CQS.Token.Output;
+using app.Common;
 using app.Common.Extensions;
-using app.Domain.Entity.Token;
-using MyToken = app.Domain.Entity.Token.Token;
+using app.Common.Services.Jwt;
 using app.Domain.Entity.User;
+using MyToken = app.Domain.Entity.Token.Token;
 
 namespace app.Application.CQS.Token.Command
 {
     public class ReceiveTokenCommand
     {
         public IUserRepository UserRepository { get; }
-        public ITokenRepository TokenRepository { get; }
+        public JwtTokenManager TokenManager { get; }
 
-        public ReceiveTokenCommand(IUserRepository userRepository, ITokenRepository tokenRepository)
+        public ReceiveTokenCommand(IUserRepository userRepository, JwtTokenManager tokenManager)
         {
             UserRepository = userRepository;
-            TokenRepository = tokenRepository;
+            TokenManager = tokenManager;
         }
 
         public TokenOutput Execute(TokenInput input)
         {
             var user = UserRepository.FindUserWithLogin(input.Login);
 
-            if (user.IsNull() || input.Password != user.Password)
+            if (user.IsNull() || EncodeHandler.EncodePassword(input.Password) != user.Password)
             {
-                throw UserException.NotFound(user.Login);
+                throw UserException.NotFound(input.Login);
             }
 
-            var token = new MyToken(user, "JopaToken", DateTime.Now);
-            TokenRepository.Create(token);
-
-            return new TokenOutput(token);
+            return new TokenOutput(TokenManager.CreateAccessTokenForUser(user));
         }
     }
 }

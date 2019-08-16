@@ -1,5 +1,6 @@
 using System;
-using app.Common.Extensions;
+using System.Security.Cryptography;
+using System.Text.RegularExpressions;
 using app.Domain.Entity.Token;
 using app.Domain.Entity.User;
 using Microsoft.AspNetCore.Http;
@@ -10,29 +11,26 @@ namespace app.Common.Services.Jwt
     public class JwtTokenManager
     {
         private const string AuthorizationHeader = "Authorization";
+        private const string TokenPattern = @"Bearer\s(?<token>.*)\s?";
+        private static readonly string TokenTtl = Environment.GetEnvironmentVariable("TOKEN_TTL");
+        private static readonly string TokenSecret = Environment.GetEnvironmentVariable("TOKEN_SECRET_KEY");
 
         private ITokenRepository TokenRepository { get; }
-        private IUserRepository UserRepository { get; }
         private IHttpContextAccessor ContextAccessor { get; }
+        private Regex Regex { get; }
 
-        public JwtTokenManager(ITokenRepository tokenRepository, IUserRepository userRepository,
-            IHttpContextAccessor contextAccessor)
+        public JwtTokenManager(ITokenRepository tokenRepository, IHttpContextAccessor contextAccessor)
         {
             TokenRepository = tokenRepository;
-            UserRepository = userRepository;
             ContextAccessor = contextAccessor;
-        }
-
-        public void ValidateToken()
-        {
-
+            Regex = new Regex(TokenPattern);
         }
 
         public User GetCurrentUser()
         {
             var token = TokenRepository.FindToken(GetHeaderToken());
 
-            return token.IsNotNull() && !token.IsExpired()
+            return false == token?.IsExpired()
                 ? token.User
                 : throw JwtTokenException.Expired();
         }
@@ -55,14 +53,25 @@ namespace app.Common.Services.Jwt
                 throw JwtTokenException.Unauthorized();
             }
 
-            // handle with regex
-            return value.ToString();
+            var match = Regex.Match(value.ToString());
+
+            return match.Success
+                ? match.Groups["token"].Value
+                : throw JwtTokenException.Unauthorized();
         }
 
-        public void CreateTokenForUser(User user)
+        public Token CreateAccessTokenForUser(User user)
         {
-            var secret = Environment.GetEnvironmentVariable("TOKEN_SECRET_KEY");
-            var ttl = Convert.ToInt32(Environment.GetEnvironmentVariable("TOKEN_TTL"));
+            var payload = EncodeHandler.Base64Encode(user);
+            var signature = SHA256.Create(TokenSecret + DateTime.Now).ToString();
+
+            var token = new Token(
+                user, $"{payload}.{signature}", DateTime.Now.AddSeconds(Convert.ToDouble(TokenTtl))
+            );
+            
+            TokenRepository.Create(token);
+
+            return token;
         }
     }
 }

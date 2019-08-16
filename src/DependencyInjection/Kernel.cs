@@ -3,11 +3,10 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using app.Aspect.FilterAttribute;
-using app.Common.Services.Jwt;
 using app.Common.Services.Migrator;
 using app.DependencyInjection.ServiceRecorder;
 using app.Infrastructure.NHibernate;
-using Microsoft.AspNetCore.Http;
+using FluentNHibernate.Utils;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.DependencyInjection;
 using Newtonsoft.Json;
@@ -29,8 +28,7 @@ namespace app.DependencyInjection
             RegisterEnvironment();
             ProcessServiceRecorders(services);
             NHibernateHelper.Boot();
-            services.AddTransient<JwtTokenManager>();
-            services.AddTransient<IHttpContextAccessor, HttpContextAccessor>();
+            services.AddHttpContextAccessor();
             new Migrator(services).Execute();
         }
 
@@ -45,15 +43,9 @@ namespace app.DependencyInjection
         /// </summary>
         private static void ProcessServiceRecorders(IServiceCollection services)
         {
-            var recorders = GetAssembly()
-                .DefinedTypes
-                .Where(type => type.IsSubclassOf(typeof(AbstractServiceRecorder)) && !type.IsAbstract);
-
-            foreach (var recorder in recorders)
-            {
-                recorder.GetMethod(AbstractServiceRecorder.ProcessMethod)
-                    ?.Invoke(Activator.CreateInstance(recorder), new object[] {services});
-            }
+            FindTypes(t => t.IsSubclassOf(typeof(AbstractServiceRecorder)) && !t.IsAbstract)
+                .Select(t => Activator.CreateInstance(t) as AbstractServiceRecorder)
+                .Each(recorder => recorder.Process(services));
         }
 
         /// <summary>

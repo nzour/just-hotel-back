@@ -1,12 +1,11 @@
 using System.Collections.Generic;
+using FluentNHibernate.Utils;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace app.DependencyInjection.ServiceRecorder
 {
     public abstract class AbstractServiceRecorder : AbstractAssemblyAware
     {
-        public const string ProcessMethod = "Process";
-        
         protected bool IsExecuted { get; private set; }
 
         public void Process(IServiceCollection services)
@@ -16,22 +15,13 @@ namespace app.DependencyInjection.ServiceRecorder
                 return;
             }
             
-            ExecuteDependencies(services);
+            // Сначала запускаем все service recorder'ы, от которые зависит текущий
+            GetDependencies().Each(dependency => dependency.Process(services));
             Execute(services);
 
             IsExecuted = true;
         }
 
-        /// <summary>
-        /// Выполнение других Recorder'ов, от которых зависит текущий.
-        /// </summary>
-        private void ExecuteDependencies(IServiceCollection services)
-        {
-            foreach (var dependency in GetDependencies())
-            {
-                dependency.Process(services);
-            }
-        }
 
         /// <summary>
         /// Массив зависимых Recorder'ов, от которых зависит текущий.

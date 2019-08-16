@@ -1,32 +1,25 @@
 using System;
-using JWT.Algorithms;
-using JWT.Builder;
+using System.Text;
 
 namespace app.Common
 {
     public static class EncodeHandler
     {
-        private static readonly string TokenSecretKey = Environment.GetEnvironmentVariable("TOKEN_SECRET_KEY");
-        private static readonly int TokenTtl = Convert.ToInt32(Environment.GetEnvironmentVariable("TOKEN_TTL"));
-
-        public static string EncodeJwt()
+        public static string Base64Encode(string toEncode)
         {
-            // todo: refactoring
-            return new JwtBuilder()
-                .WithAlgorithm(new HMACSHA256Algorithm())
-                .WithSecret(TokenSecretKey)
-                .WithVerifySignature(true)
-                .Build();
+            var bytes = Encoding.UTF8.GetBytes(toEncode);
+            return Convert.ToBase64String(bytes);
         }
 
-        public static void DecodeJwt()
+        public static string Base64Decode(string toDecode)
         {
-            
+            var bytes = Convert.FromBase64String(toDecode);
+            return Encoding.UTF8.GetString(bytes);
         }
 
-        public static void EncodePassword()
+        public static string EncodePassword(string password)
         {
-            
+            return password;
         }
     }
 }
