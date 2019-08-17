@@ -1,19 +1,9 @@
 using System;
 
-namespace app.Common.Extensions
+namespace common.Extensions
 {
     public static class NullAwareExtension
     {
-        public static bool IsNull(this object @object)
-        {
-            return null == @object;
-        }
-        
-        public static bool IsNotNull(this object @object)
-        {
-            return null != @object;
-        }
-
         /// <summary>
         /// Если object null, то выполнит void-action, и пойдет дальше. В action можно бросать исключения.
         /// </summary>
@@ -35,7 +25,7 @@ namespace app.Common.Extensions
                 action.Invoke();
             }
         }
-
+        
         /// <summary>
         /// Если object null, то выполнится action, который должен бросить исключение. Если action не бросает исключение, то вручную бросится NullReferenceException.
         /// </summary>

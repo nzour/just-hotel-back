@@ -96,5 +96,14 @@
     <_RazorDebugSymbolsIntermediatePath Remove="obj\Debug\netcoreapp2.2\app.Views.pdb" />
     <_RazorDebugSymbolsIntermediatePath Remove="obj\Debug\netcoreapp2.2\app.Razor.pdb" />
   </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\lib\common\common.csproj" />
+    <ProjectReference Include="..\lib\kernel\kernel.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="Common\Services\Migrator\migrations.json" />
+  </ItemGroup>
   
 </Project>

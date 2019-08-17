@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="$APPLICATION_CONFIG_DIR$/consoles/db" t="IncludeRecursive" />
+    <e p="$APPLICATION_CONFIG_DIR$/extensions" t="IncludeRecursive" />
+    <e p="$APPLICATION_CONFIG_DIR$/scratches" t="IncludeRecursive" />
+    <e p="$USER_HOME$/.Rider2019.2/system/extResources" t="IncludeRecursive" />
+    <e p="$USER_HOME$/.Rider2019.2/system/resharper-host/local/Transient/ReSharperHost/v192/SolutionCaches/_Main.427602696.00" t="ExcludeRecursive" />
+    <e p="$USER_HOME$/.nuget/packages/nunit3testadapter/3.13.0/build/netcoreapp1.0/NUnit3.TestAdapter.dll" t="Include" />
+    <e p="$USER_HOME$/.nuget/packages/nunit3testadapter/3.13.0/build/netcoreapp1.0/NUnit3.TestAdapter.pdb" t="Include" />
+    <e p="$USER_HOME$/.nuget/packages/nunit3testadapter/3.13.0/build/netcoreapp1.0/nunit.engine.netstandard.dll" t="Include" />
+    <e p="$PROJECT_DIR$" t="IncludeFlat">
+      <e p="Main.sln" t="IncludeFlat" />
+      <e p="cli" t="IncludeRecursive">
+        <e p="CommandRunner.cs" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="cli.csproj" t="IncludeRecursive" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp2.2" t="Include">
+              <e p="cli.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+      </e>
+      <e p="lib" t="Include">
+        <e p="common" t="IncludeRecursive">
+          <e p="Extensions" t="Include">
+            <e p="EnumerableExtension.cs" t="Include" />
+            <e p="NullAwareExtension.cs" t="Include" />
+          </e>
+          <e p="bin" t="ExcludeRecursive" />
+          <e p="common.csproj" t="IncludeRecursive" />
+          <e p="obj" t="ExcludeRecursive">
+            <e p="Debug" t="Include">
+              <e p="netstandard2.0" t="Include">
+                <e p="common.AssemblyInfo.cs" t="Include" />
+              </e>
+            </e>
+          </e>
+        </e>
+        <e p="kernel" t="IncludeRecursive">
+          <e p="Kernel.cs" t="Include" />
+          <e p="Service" t="Include">
+            <e p="TypeFinder.cs" t="Include" />
+          </e>
+          <e p="bin" t="ExcludeRecursive" />
+          <e p="kernel.csproj" t="IncludeRecursive" />
+          <e p="obj" t="ExcludeRecursive">
+            <e p="Debug" t="Include">
+              <e p="netstandard2.0" t="Include">
+                <e p="kernel.AssemblyInfo.cs" t="Include" />
+              </e>
+            </e>
+          </e>
+        </e>
+      </e>
+      <e p="packages" t="ExcludeRecursive" />
+      <e p="src" t="IncludeRecursive">
+        <e p=".gitignore" t="Include" />
+        <e p="Application" t="Include">
+          <e p="CQS" t="Include">
+            <e p="AbstractUserAware.cs" t="Include" />
+            <e p="Token" t="Include">
+              <e p="Command" t="Include">
+                <e p="ReceiveTokenCommand.cs" t="Include" />
+              </e>
+              <e p="Input" t="Include">
+                <e p="TokenInput.cs" t="Include" />
+              </e>
+              <e p="Output" t="Include">
+                <e p="TokenOutput.cs" t="Include" />
+              </e>
+            </e>
+            <e p="User" t="Include">
+              <e p="Output" t="Include">
+                <e p="UserOutput.cs" t="Include" />
+              </e>
+              <e p="Query" t="Include">
+                <e p="GetUserQuery.cs" t="Include" />
+              </e>
+            </e>
+          </e>
+          <e p="ErrorResponse.cs" t="Include" />
+          <e p="Http" t="Include">
+            <e p="Token" t="Include">
+              <e p="TokenController.cs" t="Include" />
+            </e>
+            <e p="User" t="Include">
+              <e p="UserController.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Aspect" t="Include">
+          <e p="FilterAttribute" t="Include">
+            <e p="AuthorizationFilter.cs" t="Include" />
+            <e p="IGlobalFilter.cs" t="Include" />
+            <e p="JsonResultFilterAttribute.cs" t="Include" />
+          </e>
+          <e p="HandledExceptionMiddleware.cs" t="Include" />
+        </e>
+        <e p="Common" t="Include">
+          <e p="Attribute" t="Include">
+            <e p="AnonymousAttribute.cs" t="Include" />
+            <e p="InjectedAttribute.cs" t="Include" />
+            <e p="ScopedAttribute.cs" t="Include" />
+            <e p="SingletonAttribute.cs" t="Include" />
+            <e p="TransientAttribute.cs" t="Include" />
+          </e>
+          <e p="DbAccessor.cs" t="Include" />
+          <e p="EncodeHandler.cs" t="Include" />
+          <e p="Services" t="Include">
+            <e p="Jwt" t="Include">
+              <e p="JwtTokenException.cs" t="Include" />
+              <e p="JwtTokenManager.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="DependencyInjection" t="Include">
+          <e p="AbstractAssemblyAware.cs" t="Include" />
+          <e p="Kernel.cs" t="Include" />
+          <e p="ServiceRecorder" t="Include">
+            <e p="AbstractServiceRecorder.cs" t="Include" />
+            <e p="CommandQueryRecorder" t="Include">
+              <e p="CommandQueryRecorder.cs" t="Include" />
+            </e>
+            <e p="CommonServiceRecorder" t="Include">
+              <e p="CommonServiceRecorder.cs" t="Include" />
+            </e>
+            <e p="InjectedAttributeRecorder" t="Include">
+              <e p="InjectedAttributeRecorder.cs" t="Include" />
+            </e>
+            <e p="RepositoryRecorder" t="Include">
+              <e p="RepositoryRecorder.cs" t="Include" />
+              <e p="RepositoryRecorderException.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Domain" t="Include">
+          <e p="Entity" t="Include">
+            <e p="AbstractEntity.cs" t="Include" />
+            <e p="AbstractException.cs" t="Include" />
+            <e p="Token" t="Include">
+              <e p="ITokenRepository.cs" t="Include" />
+              <e p="Token.cs" t="Include" />
+              <e p="TokenException.cs" t="Include" />
+            </e>
+            <e p="User" t="Include">
+              <e p="IUserRepository.cs" t="Include" />
+              <e p="User.cs" t="Include" />
+              <e p="UserException.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Infrastructure" t="Include">
+          <e p="Attributes" t="Include" />
+          <e p="Interceptors" t="Include" />
+          <e p="NHibernate" t="Include">
+            <e p="Mapping" t="Include">
+              <e p="TokenMap.cs" t="Include" />
+              <e p="UserMap.cs" t="Include" />
+            </e>
+            <e p="MappingConversationListener.cs" t="Include" />
+            <e p="NHibernateHelper.cs" t="Include" />
+            <e p="Repository" t="Include">
+              <e p="AbstractRepository.cs" t="Include" />
+              <e p="TokenRepository.cs" t="Include" />
+              <e p="UserRepository.cs" t="Include" />
+            </e>
+            <e p="Transactional.cs" t="Include" />
+          </e>
+        </e>
+        <e p="Migration" t="Include">
+          <e p="InitMigration.cs" t="Include" />
+        </e>
+        <e p="Program.cs" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="launchSettings.json" t="Include" />
+        </e>
+        <e p="Startup.cs" t="Include" />
+        <e p="Tests" t="Include" />
+        <e p="app.csproj" t="IncludeRecursive" />
+        <e p="appsettings.Development.json" t="Include" />
+        <e p="appsettings.json" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="environment.json" t="Include" />
+        <e p="environment.json.dist" t="Include" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp2.2" t="Include">
+              <e p="app.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="supervisord.conf" t="Include" />
+      </e>
+    </e>
+  </component>
+</project>

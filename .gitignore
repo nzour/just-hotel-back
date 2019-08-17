@@ -1,2 +1,8 @@
 docker-compose.yml
 docker-compose.override.yml
+/lib/kernel/obj/
+/lib/kernel/bin/
+/lib/common/obj/
+/lib/common/bin/
+/cli/bin/
+/cli/obj/

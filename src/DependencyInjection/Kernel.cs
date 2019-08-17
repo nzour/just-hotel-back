@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using app.Aspect.FilterAttribute;
-using app.Common.Services.Migrator;
 using app.DependencyInjection.ServiceRecorder;
 using app.Infrastructure.NHibernate;
 using FluentNHibernate.Utils;
@@ -29,7 +28,6 @@ namespace app.DependencyInjection
             ProcessServiceRecorders(services);
             NHibernateHelper.Boot();
             services.AddHttpContextAccessor();
-            new Migrator(services).Execute();
         }
 
         public static void ProcessMvc(IServiceCollection services)

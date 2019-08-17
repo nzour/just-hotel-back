@@ -1,6 +1,6 @@
 using System;
-using app.Common.Extensions;
 using app.Domain.Entity.User;
+using common.Extensions;
 
 namespace app.Infrastructure.NHibernate.Repository
 {

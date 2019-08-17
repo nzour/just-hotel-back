@@ -1,7 +1,6 @@
 using app.Application.CQS.Token.Input;
 using app.Application.CQS.Token.Output;
 using app.Common;
-using app.Common.Extensions;
 using app.Common.Services.Jwt;
 using app.Domain.Entity.User;
 using MyToken = app.Domain.Entity.Token.Token;
@@ -23,7 +22,7 @@ namespace app.Application.CQS.Token.Command
         {
             var user = UserRepository.FindUserWithLogin(input.Login);
 
-            if (user.IsNull() || EncodeHandler.EncodePassword(input.Password) != user.Password)
+            if (null == user || EncodeHandler.EncodePassword(input.Password) != user.Password)
             {
                 throw UserException.NotFound(input.Login);
             }
