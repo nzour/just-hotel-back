@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "common", "lib\common\common
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cli", "cli\cli.csproj", "{51A4FFE6-D076-44C5-8790-B9DBC24615AE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "command_runner", "lib\command_runner\command_runner.csproj", "{89E9135D-ABCD-4E89-BF13-A5A26FBAFEE1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -74,9 +76,22 @@ Global
 		{51A4FFE6-D076-44C5-8790-B9DBC24615AE}.Release|x64.Build.0 = Release|Any CPU
 		{51A4FFE6-D076-44C5-8790-B9DBC24615AE}.Release|x86.ActiveCfg = Release|Any CPU
 		{51A4FFE6-D076-44C5-8790-B9DBC24615AE}.Release|x86.Build.0 = Release|Any CPU
+		{89E9135D-ABCD-4E89-BF13-A5A26FBAFEE1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{89E9135D-ABCD-4E89-BF13-A5A26FBAFEE1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{89E9135D-ABCD-4E89-BF13-A5A26FBAFEE1}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{89E9135D-ABCD-4E89-BF13-A5A26FBAFEE1}.Debug|x64.Build.0 = Debug|Any CPU
+		{89E9135D-ABCD-4E89-BF13-A5A26FBAFEE1}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{89E9135D-ABCD-4E89-BF13-A5A26FBAFEE1}.Debug|x86.Build.0 = Debug|Any CPU
+		{89E9135D-ABCD-4E89-BF13-A5A26FBAFEE1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{89E9135D-ABCD-4E89-BF13-A5A26FBAFEE1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{89E9135D-ABCD-4E89-BF13-A5A26FBAFEE1}.Release|x64.ActiveCfg = Release|Any CPU
+		{89E9135D-ABCD-4E89-BF13-A5A26FBAFEE1}.Release|x64.Build.0 = Release|Any CPU
+		{89E9135D-ABCD-4E89-BF13-A5A26FBAFEE1}.Release|x86.ActiveCfg = Release|Any CPU
+		{89E9135D-ABCD-4E89-BF13-A5A26FBAFEE1}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{C3242B02-CB9A-4F03-9014-D7CA8AC7E409} = {192ACA95-2A59-4FC4-875B-BE60B2F0C96E}
 		{EF17639F-946B-472F-AC63-4C9E0BFACCAF} = {192ACA95-2A59-4FC4-875B-BE60B2F0C96E}
+		{89E9135D-ABCD-4E89-BF13-A5A26FBAFEE1} = {192ACA95-2A59-4FC4-875B-BE60B2F0C96E}
 	EndGlobalSection
 EndGlobal

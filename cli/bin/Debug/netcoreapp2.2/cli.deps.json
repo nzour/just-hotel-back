@@ -11,7 +11,8 @@
           "Microsoft.AspNetCore.Mvc.ViewFeatures": "2.2.0",
           "Microsoft.Extensions.Logging": "3.0.0-preview8.19405.4",
           "Newtonsoft.Json": "12.0.2",
-          "app": "1.0.0"
+          "app": "1.0.0",
+          "command_runner": "1.0.0"
         },
         "runtime": {
           "cli.dll": {}
@@ -2311,6 +2312,15 @@
           "app.dll": {}
         }
       },
+      "command_runner/1.0.0": {
+        "dependencies": {
+          "common": "1.0.0",
+          "kernel": "1.0.0"
+        },
+        "runtime": {
+          "command_runner.dll": {}
+        }
+      },
       "common/1.0.0": {
         "runtime": {
           "common.dll": {}
@@ -2899,7 +2909,7 @@
     "Ninject/3.3.4": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-CmbWW97FfJuh4LEOVZM/spqXl4KAulRUjqeMwRd5J9rDMQArmIYaDMU3pyzXXHT062tbF0OPIMwI7tSOtprPfg==",
+      "sha512": "sha512-pfBwjaYJ306C3KaFa5WToDJUCgMYefnoLKpSevj+EPidcNEUhvveCmNeWtPl6N6DfPTJJv7vRVcbRIofO0U/QA==",
       "path": "ninject/3.3.4",
       "hashPath": "ninject.3.3.4.nupkg.sha512"
     },
@@ -3618,6 +3628,11 @@
       "hashPath": "system.xml.xpath.xmldocument.4.3.0.nupkg.sha512"
     },
     "app/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "command_runner/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

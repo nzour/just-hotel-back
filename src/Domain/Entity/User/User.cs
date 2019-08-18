@@ -22,6 +22,11 @@ namespace app.Domain.Entity.User
             Password = password;
         }
 
+        public virtual void ChangeName(string name)
+        {
+            Name = name;
+        }
+        
         public static implicit operator string(User user)
         {
             return JsonConvert.SerializeObject(new UserPayload(user));

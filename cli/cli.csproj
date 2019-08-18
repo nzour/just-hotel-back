@@ -6,6 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\lib\command_runner\command_runner.csproj" />
     <ProjectReference Include="..\src\app.csproj" />
   </ItemGroup>
 

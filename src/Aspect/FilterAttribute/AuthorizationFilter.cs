@@ -53,7 +53,7 @@ namespace app.Aspect.FilterAttribute
                 .Value;
 
             // Есть ли у контроллера аттрибут Anonymous
-            var isControllerAnonymous = TypeFinder.Assembly.GetType(controller)
+            var isControllerAnonymous = TypeFinder.ApplicationScope.GetType(controller)
                 .CustomAttributes.Select(data => data.AttributeType)
                 .Contains(typeof(AnonymousAttribute));
 

@@ -6,3 +6,5 @@ docker-compose.override.yml
 /lib/common/bin/
 /cli/bin/
 /cli/obj/
+/lib/command_runner/bin/
+/lib/command_runner/obj/

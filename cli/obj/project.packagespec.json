@@ -18,6 +18,9 @@
     "frameworks": {
       "netcoreapp2.2": {
         "projectReferences": {
+          "/home/zaur/coding/zobor/backend/lib/command_runner/command_runner.csproj": {
+            "projectPath": "/home/zaur/coding/zobor/backend/lib/command_runner/command_runner.csproj"
+          },
           "/home/zaur/coding/zobor/backend/src/app.csproj": {
             "projectPath": "/home/zaur/coding/zobor/backend/src/app.csproj"
           }

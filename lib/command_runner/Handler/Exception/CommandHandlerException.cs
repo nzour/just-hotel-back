@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Reflection;
 
-namespace cli.CommandHandler.Exception
+namespace command_runner.Handler.Exception
 {
     public class CommandHandlerException : System.Exception
     {

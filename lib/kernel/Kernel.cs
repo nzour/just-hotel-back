@@ -10,15 +10,15 @@ namespace kernel
 {
     public class Kernel
     {
-        public Assembly Assembly { get; }
+        public Assembly ApplicationScope { get; }
         public IServiceCollection Services { get; }
         public TypeFinder TypeFinder { get; }
 
-        public Kernel(Assembly assembly, IServiceCollection services = null)
+        public Kernel(Assembly applicationScope, IServiceCollection services = null)
         {
-            Assembly = assembly;
+            ApplicationScope = applicationScope;
             Services = services ?? new ServiceCollection();
-            TypeFinder = new TypeFinder(Assembly);
+            TypeFinder = new TypeFinder(ApplicationScope);
 
             Services.AddSingleton(TypeFinder);
         }

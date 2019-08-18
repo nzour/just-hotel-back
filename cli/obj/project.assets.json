@@ -3134,6 +3134,20 @@
           "bin/placeholder/app.dll": {}
         }
       },
+      "command_runner/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "common": "1.0.0",
+          "kernel": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/command_runner.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/command_runner.dll": {}
+        }
+      },
       "common/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
@@ -5820,7 +5834,7 @@
       ]
     },
     "Ninject/3.3.4": {
-      "sha512": "CmbWW97FfJuh4LEOVZM/spqXl4KAulRUjqeMwRd5J9rDMQArmIYaDMU3pyzXXHT062tbF0OPIMwI7tSOtprPfg==",
+      "sha512": "pfBwjaYJ306C3KaFa5WToDJUCgMYefnoLKpSevj+EPidcNEUhvveCmNeWtPl6N6DfPTJJv7vRVcbRIofO0U/QA==",
       "type": "package",
       "path": "ninject/3.3.4",
       "files": [
@@ -10153,6 +10167,11 @@
       "path": "../src/app.csproj",
       "msbuildProject": "../src/app.csproj"
     },
+    "command_runner/1.0.0": {
+      "type": "project",
+      "path": "../lib/command_runner/command_runner.csproj",
+      "msbuildProject": "../lib/command_runner/command_runner.csproj"
+    },
     "common/1.0.0": {
       "type": "project",
       "path": "../lib/common/common.csproj",
@@ -10170,7 +10189,8 @@
       "Microsoft.Extensions.Logging >= 3.0.0-preview8.19405.4",
       "Microsoft.NETCore.App >= 2.2.0",
       "Newtonsoft.Json >= 12.0.2",
-      "app >= 1.0.0"
+      "app >= 1.0.0",
+      "command_runner >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -10201,6 +10221,9 @@
       "frameworks": {
         "netcoreapp2.2": {
           "projectReferences": {
+            "/home/zaur/coding/zobor/backend/lib/command_runner/command_runner.csproj": {
+              "projectPath": "/home/zaur/coding/zobor/backend/lib/command_runner/command_runner.csproj"
+            },
             "/home/zaur/coding/zobor/backend/src/app.csproj": {
               "projectPath": "/home/zaur/coding/zobor/backend/src/app.csproj"
             }

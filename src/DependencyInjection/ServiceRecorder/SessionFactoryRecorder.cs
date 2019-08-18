@@ -8,6 +8,7 @@ using kernel.Abstraction;
 using kernel.Extensions;
 using kernel.Service;
 using Microsoft.Extensions.DependencyInjection;
+using NHibernate;
 
 namespace app.DependencyInjection.ServiceRecorder
 {
@@ -32,14 +33,14 @@ namespace app.DependencyInjection.ServiceRecorder
 
             var sessionFactory = fluentConfiguration.BuildSessionFactory();
 
-            services.AddSingleton(sessionFactory);
-            services.AddSingleton(_ => new Transactional(sessionFactory));
+            services.AddSingleton(typeof(ISessionFactory), sessionFactory);
+            services.AddSingleton(typeof(Transactional), new Transactional(sessionFactory));
             
             services.AddFluentMigratorCore()
                 .ConfigureRunner(runner => runner
                     .AddPostgres()
                     .WithGlobalConnectionString(connection)
-                    .ScanIn(TypeFinder.Assembly).For.Migrations())
+                    .ScanIn(TypeFinder.ApplicationScope).For.Migrations())
                 .AddLogging(logBuilder => logBuilder.AddFluentMigratorConsole());
         }
 

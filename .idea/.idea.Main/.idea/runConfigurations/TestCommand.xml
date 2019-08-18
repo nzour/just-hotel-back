@@ -1,7 +1,7 @@
 <component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="CommandRunner" type="DotNetProject" factoryName=".NET Project">
+  <configuration default="false" name="TestCommand" type="DotNetProject" factoryName=".NET Project">
     <option name="EXE_PATH" value="$PROJECT_DIR$/cli/bin/Debug/netcoreapp2.2/cli.dll" />
-    <option name="PROGRAM_PARAMETERS" value="test=pp_test" />
+    <option name="PROGRAM_PARAMETERS" value="command app:test" />
     <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/cli/bin/Debug/netcoreapp2.2" />
     <option name="PASS_PARENT_ENVS" value="1" />
     <option name="USE_EXTERNAL_CONSOLE" value="0" />
