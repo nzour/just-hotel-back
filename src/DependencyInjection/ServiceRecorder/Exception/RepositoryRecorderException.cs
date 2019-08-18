@@ -1,8 +1,8 @@
 using System;
 
-namespace app.DependencyInjection.ServiceRecorder.RepositoryRecorder
+namespace app.DependencyInjection.ServiceRecorder.Exception
 {
-    public class RepositoryRecorderException : Exception
+    public class RepositoryRecorderException : System.Exception
     {
         public RepositoryRecorderException(string message) : base(message)
         {

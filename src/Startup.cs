@@ -1,5 +1,5 @@
 ﻿using app.Aspect;
-using app.DependencyInjection;
+using kernel;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -7,7 +7,7 @@ using Microsoft.Extensions.DependencyInjection;
 
 namespace app
 {
-    public class Startup : AbstractAssemblyAware
+    public class Startup
     {
         public Startup(IConfiguration configuration)
         {
@@ -18,9 +18,9 @@ namespace app
 
         public void ConfigureServices(IServiceCollection services)
         {
-            Kernel.ProcessServices(services);
-            Kernel.ProcessMvc(services);
-            
+            var kernel = new Kernel(typeof(Startup).Assembly, services);
+            kernel.Boot();
+
             services.AddCors();
         }
 
@@ -37,7 +37,7 @@ namespace app
             }
 
             app.UseMiddleware<HandledExceptionMiddleware>();
-            
+
             app.UseDefaultFiles()
                 .UseHttpsRedirection()
                 .UseMvc();

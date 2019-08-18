@@ -3148,9 +3148,11 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "FluentNHibernate": "2.1.2",
           "Microsoft.AspNetCore.Http": "2.2.2",
           "Microsoft.AspNetCore.Http.Abstractions": "2.2.0",
-          "Microsoft.AspNetCore.Mvc.Core": "2.2.5"
+          "Microsoft.AspNetCore.Mvc.Core": "2.2.5",
+          "common": "1.0.0"
         },
         "compile": {
           "bin/placeholder/kernel.dll": {}
@@ -5818,7 +5820,7 @@
       ]
     },
     "Ninject/3.3.4": {
-      "sha512": "pfBwjaYJ306C3KaFa5WToDJUCgMYefnoLKpSevj+EPidcNEUhvveCmNeWtPl6N6DfPTJJv7vRVcbRIofO0U/QA==",
+      "sha512": "CmbWW97FfJuh4LEOVZM/spqXl4KAulRUjqeMwRd5J9rDMQArmIYaDMU3pyzXXHT062tbF0OPIMwI7tSOtprPfg==",
       "type": "package",
       "path": "ninject/3.3.4",
       "files": [

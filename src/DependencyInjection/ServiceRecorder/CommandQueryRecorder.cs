@@ -1,21 +1,25 @@
 using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Reflection;
 using app.Common.Attribute;
+using kernel.Abstraction;
+using kernel.Extensions;
+using kernel.Service;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace app.DependencyInjection.ServiceRecorder.CommandQueryRecorder
+namespace app.DependencyInjection.ServiceRecorder
 {
     public class CommandQueryRecorder : AbstractServiceRecorder
     {
         private const string NamespacePattern = "app.Application.CQS";
         private const string QueryPattern = "Query";
         private const string CommandPattern = "Command";
-        
+
         protected override void Execute(IServiceCollection services)
         {
-            var types = FindServices();
+            var types = services
+                .GetService<TypeFinder>()
+                .FindTypes(t => (bool) t.Namespace?.Contains(NamespacePattern) &&
+                                (t.Name.EndsWith(QueryPattern) || t.Name.EndsWith(CommandPattern)));
 
             foreach (var type in types)
             {
@@ -52,21 +56,6 @@ namespace app.DependencyInjection.ServiceRecorder.CommandQueryRecorder
             }
 
             services.AddTransient(type);
-        }
-
-        private IEnumerable<TypeInfo> FindServices()
-        {
-            return GetAssembly()
-                .DefinedTypes
-                .Where(type =>
-                {
-                    if (!type.Namespace.Contains(NamespacePattern))
-                    {
-                        return false;
-                    }
-
-                    return type.Name.EndsWith(QueryPattern) || type.Name.EndsWith(CommandPattern);
-                });
         }
     }
 }

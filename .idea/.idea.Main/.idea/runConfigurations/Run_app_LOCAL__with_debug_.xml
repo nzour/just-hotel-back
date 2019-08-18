@@ -1,5 +1,5 @@
 <component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="CommandRunner" type="DotNetProject" factoryName=".NET Project">
+  <configuration default="false" name="Run app LOCAL (with debug)" type="DotNetProject" factoryName=".NET Project">
     <option name="EXE_PATH" value="$PROJECT_DIR$/src/bin/Debug/netcoreapp2.2/app.dll" />
     <option name="PROGRAM_PARAMETERS" value="" />
     <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src" />

@@ -6,23 +6,32 @@ namespace app.Infrastructure.NHibernate.Repository
 {
     public class UserRepository : AbstractRepository, IUserRepository
     {
+        public UserRepository(Transactional transactional) : base(transactional)
+        {
+        }
+
         public void Create(User user)
         {
-            Transactional.Action(() => Session.Persist(user));
+            Transactional.Action(session => session.Save(user));
         }
-        
+
         public User GetUser(Guid id)
         {
-            var user = Session.Get<User>(id);
-
-            return user.AssertNull(() => throw UserException.NotFound(id));
+            return Transactional.WithSession(session =>
+            {
+                var user = session.Get<User>(id);
+                return user.AssertNull(() => throw UserException.NotFound(id));
+            });
         }
 
         public User FindUserWithLogin(string login)
         {
-            return Session.QueryOver<User>()
-                .Where(u => u.Login == login)
-                .SingleOrDefault();
+            return Transactional.WithSession(session =>
+            {
+                return session.QueryOver<User>()
+                    .Where(u => u.Login == login)
+                    .SingleOrDefault();
+            });
         }
     }
 }

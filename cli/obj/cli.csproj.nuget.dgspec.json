@@ -143,7 +143,11 @@
         },
         "frameworks": {
           "netstandard2.0": {
-            "projectReferences": {}
+            "projectReferences": {
+              "/home/zaur/coding/zobor/backend/lib/common/common.csproj": {
+                "projectPath": "/home/zaur/coding/zobor/backend/lib/common/common.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -155,6 +159,10 @@
       "frameworks": {
         "netstandard2.0": {
           "dependencies": {
+            "FluentNHibernate": {
+              "target": "Package",
+              "version": "[2.1.2, )"
+            },
             "Microsoft.AspNetCore.Http": {
               "target": "Package",
               "version": "[2.2.2, )"

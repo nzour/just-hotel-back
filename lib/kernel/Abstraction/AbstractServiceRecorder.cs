@@ -1,10 +1,10 @@
 using System.Collections.Generic;
-using FluentNHibernate.Utils;
 using Microsoft.Extensions.DependencyInjection;
+using NHibernate.Util;
 
-namespace app.DependencyInjection.ServiceRecorder
+namespace kernel.Abstraction
 {
-    public abstract class AbstractServiceRecorder : AbstractAssemblyAware
+    public abstract class AbstractServiceRecorder
     {
         protected bool IsExecuted { get; private set; }
 
@@ -14,9 +14,13 @@ namespace app.DependencyInjection.ServiceRecorder
             {
                 return;
             }
+
+            // Сначала запускаем все service recorder'ы, от которых зависит текущий
+            foreach (var dependency in GetDependencies())
+            {
+                dependency.Process(services);
+            }
             
-            // Сначала запускаем все service recorder'ы, от которые зависит текущий
-            GetDependencies().Each(dependency => dependency.Process(services));
             Execute(services);
 
             IsExecuted = true;

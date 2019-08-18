@@ -5,21 +5,25 @@ using System.Text.RegularExpressions;
 using app.Application.CQS;
 using app.Common.Attribute;
 using app.Common.Services.Jwt;
-using app.DependencyInjection;
 using FluentNHibernate.Utils;
+using kernel.Abstraction;
+using kernel.Service;
 using Microsoft.AspNetCore.Mvc.Filters;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace app.Aspect.FilterAttribute
 {
-    public class AuthorizationFilter : AbstractAssemblyAware, IAuthorizationFilter, IGlobalFilter
+    public class AuthorizationFilter : IAuthorizationFilter, IGlobalFilter
     {
         public JwtTokenManager TokenManager { get; }
         public IServiceProvider ServiceProvider { get; }
+        public TypeFinder TypeFinder { get; }
 
         public AuthorizationFilter(JwtTokenManager tokenManager, IServiceProvider serviceProvider)
         {
             TokenManager = tokenManager;
             ServiceProvider = serviceProvider;
+            TypeFinder = serviceProvider.GetService<TypeFinder>();
         }
 
         public void OnAuthorization(AuthorizationFilterContext context)
@@ -35,7 +39,7 @@ namespace app.Aspect.FilterAttribute
 
         private IEnumerable<AbstractUserAware> GetRequiredUserActions()
         {
-            return FindTypes(t => !t.IsAbstract && t.IsSubclassOf(typeof(AbstractUserAware)))
+            return TypeFinder.FindTypes(t => !t.IsAbstract && t.IsSubclassOf(typeof(AbstractUserAware)))
                 .Select(action => ServiceProvider.GetService(action) as AbstractUserAware);
         }
 
@@ -49,13 +53,12 @@ namespace app.Aspect.FilterAttribute
                 .Value;
 
             // Есть ли у контроллера аттрибут Anonymous
-            var isControllerAnonymous = GetAssembly().GetType(controller)
+            var isControllerAnonymous = TypeFinder.Assembly.GetType(controller)
                 .CustomAttributes.Select(data => data.AttributeType)
                 .Contains(typeof(AnonymousAttribute));
 
             // Есть ли у метода аттрибут Anonymous
-            var isMethodAnonymous = context.ActionDescriptor
-                .EndpointMetadata
+            var isMethodAnonymous = context.ActionDescriptor.EndpointMetadata
                 .Contains(new AnonymousAttribute());
             
             return isControllerAnonymous || isMethodAnonymous;

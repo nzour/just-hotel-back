@@ -9,7 +9,7 @@ namespace kernel.Service
     {
         public Assembly Assembly { get; }
 
-        internal TypeFinder(Assembly assembly)
+        public TypeFinder(Assembly assembly)
         {
             Assembly = assembly;
         }

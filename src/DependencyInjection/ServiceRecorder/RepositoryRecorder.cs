@@ -1,11 +1,14 @@
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
+using app.DependencyInjection.ServiceRecorder.Exception;
 using FluentNHibernate.Conventions;
+using kernel.Abstraction;
+using kernel.Extensions;
+using kernel.Service;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace app.DependencyInjection.ServiceRecorder.RepositoryRecorder
+namespace app.DependencyInjection.ServiceRecorder
 {
     public class RepositoryRecorder : AbstractServiceRecorder
     {
@@ -14,12 +17,13 @@ namespace app.DependencyInjection.ServiceRecorder.RepositoryRecorder
 
         protected override void Execute(IServiceCollection services)
         {
-            var interfaces = FindInterfaces();
+            var finder = services.GetService<TypeFinder>();
+            var interfaces = FindInterfaces(finder);
 
             foreach (var @interface in interfaces)
             {
-                var implementation = FindImplementation(@interface);
-                
+                var implementation = FindImplementation(@interface, finder);
+
                 // Регистрируем реализацию репозитория
                 services.AddScoped(@interface, implementation);
             }
@@ -28,27 +32,21 @@ namespace app.DependencyInjection.ServiceRecorder.RepositoryRecorder
         /// <summary>
         /// Поиск интерфейсов I*Repository с указанным Namespace'ом
         /// </summary>
-        private IEnumerable<TypeInfo> FindInterfaces()
+        private IEnumerable<TypeInfo> FindInterfaces(TypeFinder finder)
         {
-            return GetAssembly()
-                .DefinedTypes
-                .Where(type =>
-                    type.IsInterface &&
+            return finder.FindTypes(type => type.IsInterface &&
                     (bool) type.Namespace?.Contains(NamespacePattern) &&
-                    type.Name.EndsWith(EndsWithPattern)
-                );
+                    type.Name.EndsWith(EndsWithPattern));
         }
 
         /// <summary>
         /// Поиск первой попавшейся реализации.
         /// Если реализации нет, выбросит исключение.
         /// </summary>
-        private TypeInfo FindImplementation(TypeInfo @interface)
+        private TypeInfo FindImplementation(TypeInfo @interface, TypeFinder finder)
         {
-            var implementations = GetAssembly()
-                .DefinedTypes
-                .Where(type =>
-                    type.IsClass &&
+            var implementations = finder
+                .FindTypes(type =>type.IsClass &&
                     type.GetInterfaces().Contains(@interface));
 
             // todo: Сообщение выводится некорректно. Добавить нормальное логирование.

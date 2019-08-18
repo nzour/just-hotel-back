@@ -1,8 +1,11 @@
 using app.Aspect;
 using FluentNHibernate.Utils;
+using kernel.Abstraction;
+using kernel.Extensions;
+using kernel.Service;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace app.DependencyInjection.ServiceRecorder.CommonServiceRecorder
+namespace app.DependencyInjection.ServiceRecorder
 {
     public class CommonServiceRecorder : AbstractServiceRecorder
     {
@@ -14,7 +17,8 @@ namespace app.DependencyInjection.ServiceRecorder.CommonServiceRecorder
 
         private void RecordServices(IServiceCollection services)
         {
-            FindTypes(t => (bool) t.Namespace?.Contains("app.Common.Services") && !t.IsInterface)
+            services.GetService<TypeFinder>()
+                .FindTypes(t => (bool) t.Namespace?.Contains("app.Common.Services") && !t.IsInterface)
                 .Each(s => services.AddTransient(s));
         }
 

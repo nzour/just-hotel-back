@@ -4,6 +4,11 @@ namespace app.Infrastructure.NHibernate.Repository
 {
     public abstract class AbstractRepository
     {
-        protected ISession Session { get; } = NHibernateHelper.OpenSession();
+        protected Transactional Transactional { get; }
+
+        protected AbstractRepository(Transactional transactional)
+        {
+            Transactional = transactional;
+        }
     }
 }
