@@ -1,36 +1,33 @@
 ﻿using System.Reflection;
-using command_runner.CommandHandler;
-using command_runner.Handler;
 using command_runner.Handler.Console;
-using kernel;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace command_runner
 {
     public class CommandRunner
     {
         public Assembly CliScope { get; }
-        public Kernel Kernel { get; }
+        public IServiceCollection Services { get; }
 
-        public CommandRunner(Kernel kernel, Assembly cliScope)
+
+        public CommandRunner(Assembly cliScope, IServiceCollection services)
         {
-            Kernel = kernel;
             CliScope = cliScope;
+            Services = services ?? new ServiceCollection();
         }
 
         public void Execute(string defaultCommand = null)
         {
-            var commandManager = new CommandManager(Kernel, CliScope);
-            var consoleManager = new ConsoleManager(commandManager);
+            var consoleManager = new ConsoleManager(CliScope, Services);
 
-            if (null != defaultCommand)
+            if (0 == defaultCommand?.Length)
             {
-                consoleManager.InvokeDefault(defaultCommand);
+                consoleManager.InvokeWithoutStart(defaultCommand);
             }
             else
             {
-                consoleManager.StartListening();
+                consoleManager.Start();
             }
-            
         }
     }
 }

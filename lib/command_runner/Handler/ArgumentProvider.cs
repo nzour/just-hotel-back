@@ -1,5 +1,7 @@
 using System;
-using command_runner.CommandHandler.Exception;
+using System.Collections.Generic;
+using System.Linq;
+using command_runner.Handler.Exception;
 
 namespace command_runner.Handler
 {
@@ -19,32 +21,49 @@ namespace command_runner.Handler
             return DefinedArguments.Length > Position;
         }
 
-        public int NextAsInt()
+        public long NextAsLong(IEnumerable<long> shouldBe = null)
         {
-            return Next(() => Convert.ToInt32(DefinedArguments[Position]));
+            var value = Next(() => Convert.ToInt64(DefinedArguments[Position]));
+
+            AssertContains(shouldBe, value);
+
+            return value;
+        }
+        
+        public int NextAsInt(IEnumerable<int> shouldBe = null)
+        {
+            var value = Next(() => Convert.ToInt32(DefinedArguments[Position]));
+
+            AssertContains(shouldBe, value);
+
+            return value;
         }
 
-        public string NextAsString()
+        public string NextAsString(IEnumerable<string> shouldBe = null)
         {
-            return Next(() => Convert.ToString(DefinedArguments[Position]));
+            var value = Next(() => Convert.ToString(DefinedArguments[Position]));
+            
+            AssertContains(shouldBe, value);
+
+            return value;
         }
 
-        public double NextAsDouble()
+        public double NextAsDouble(IEnumerable<double> shouldBe = null)
         {
-            return Next(() => Convert.ToDouble(DefinedArguments[Position]));
+            var value = Next(() => Convert.ToDouble(DefinedArguments[Position]));
+            
+            AssertContains(shouldBe, value);
+
+            return value;
         }
 
-        public bool NextAsBool()
+        public bool NextAsBool(IEnumerable<bool> shouldBe = null)
         {
-            return Next(() => Convert.ToBoolean(DefinedArguments[Position]));
-        }
+            var value = Next(() => Convert.ToBoolean(DefinedArguments[Position]));
+            
+            AssertContains(shouldBe, value);
 
-        private void AssertHasNext()
-        {
-            if (!HasNext())
-            {
-                throw CommandArgumentException.NotFound(Position);
-            }   
+            return value;
         }
 
         private T Next<T>(Func<T> action)
@@ -58,6 +77,27 @@ namespace command_runner.Handler
             finally
             {
                 Position++;
+            }
+        }
+
+        private void AssertHasNext()
+        {
+            if (!HasNext())
+            {
+                throw CommandArgumentException.NotFound(Position);
+            }   
+        }
+
+        private void AssertContains<T>(IEnumerable<T> expected, T actual)
+        {
+            if (null == expected)
+            {
+                return;
+            }
+            
+            if (!expected.Contains(actual))
+            {
+                throw CommandArgumentException.NotEquals(expected, actual);
             }
         }
     }

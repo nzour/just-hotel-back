@@ -10,8 +10,8 @@ namespace cli
         {
             var kernel = new Kernel(typeof(Startup).Assembly);
             kernel.Boot();
-            var commandRunner = new CommandRunner(kernel, typeof(CliProgram).Assembly);
             
+            var commandRunner = new CommandRunner(typeof(CliProgram).Assembly, kernel.Services);
             commandRunner.Execute(string.Join(" ", args));
         }
     }

@@ -3138,8 +3138,7 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
-          "common": "1.0.0",
-          "kernel": "1.0.0"
+          "Microsoft.Extensions.DependencyInjection": "3.0.0-preview8.19405.4"
         },
         "compile": {
           "bin/placeholder/command_runner.dll": {}

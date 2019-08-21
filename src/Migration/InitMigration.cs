@@ -1,7 +1,4 @@
-using System;
 using FluentMigrator;
-using FluentMigrator.Expressions;
-using NHibernate.Linq;
 
 namespace app.Migration
 {

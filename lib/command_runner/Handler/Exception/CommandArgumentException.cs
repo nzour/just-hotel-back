@@ -1,6 +1,7 @@
-using System;
+using System.Collections.Generic;
+using System.Linq;
 
-namespace command_runner.CommandHandler.Exception
+namespace command_runner.Handler.Exception
 {
     public class CommandArgumentException : System.Exception
     {
@@ -12,6 +13,12 @@ namespace command_runner.CommandHandler.Exception
         public static CommandArgumentException NotFound(int position)
         {
             return new CommandArgumentException($@"There are no ${++position} argument was specified.");
+        }
+
+        public static CommandArgumentException NotEquals<T>(IEnumerable<T> expected, T actual)
+        {
+            var expectedString = string.Join(", ", expected.Select(item => $"'{item}'"));
+            return new CommandArgumentException($@"Expected values: {expectedString}. '{actual}' was specified.");
         }
     }
 }

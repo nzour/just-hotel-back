@@ -2314,8 +2314,7 @@
       },
       "command_runner/1.0.0": {
         "dependencies": {
-          "common": "1.0.0",
-          "kernel": "1.0.0"
+          "Microsoft.Extensions.DependencyInjection": "3.0.0-preview8.19405.4"
         },
         "runtime": {
           "command_runner.dll": {}

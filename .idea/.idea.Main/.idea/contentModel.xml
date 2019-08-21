@@ -39,7 +39,6 @@
           <e p="CommandRunner.cs" t="Include" />
           <e p="Handler" t="Include">
             <e p="ArgumentProvider.cs" t="Include" />
-            <e p="CommandDefinition.cs" t="Include" />
             <e p="CommandManager.cs" t="Include" />
             <e p="Console" t="Include">
               <e p="ConsoleArgs.cs" t="Include" />

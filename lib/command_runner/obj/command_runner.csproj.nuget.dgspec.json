@@ -27,63 +27,6 @@
         },
         "frameworks": {
           "netstandard2.0": {
-            "projectReferences": {
-              "/home/zaur/coding/zobor/backend/lib/common/common.csproj": {
-                "projectPath": "/home/zaur/coding/zobor/backend/lib/common/common.csproj"
-              },
-              "/home/zaur/coding/zobor/backend/lib/kernel/kernel.csproj": {
-                "projectPath": "/home/zaur/coding/zobor/backend/lib/kernel/kernel.csproj"
-              }
-            }
-          }
-        },
-        "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
-        }
-      },
-      "frameworks": {
-        "netstandard2.0": {
-          "dependencies": {
-            "NETStandard.Library": {
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[2.0.3, )",
-              "autoReferenced": true
-            }
-          },
-          "imports": [
-            "net461"
-          ],
-          "assetTargetFallback": true,
-          "warn": true
-        }
-      }
-    },
-    "/home/zaur/coding/zobor/backend/lib/common/common.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "/home/zaur/coding/zobor/backend/lib/common/common.csproj",
-        "projectName": "common",
-        "projectPath": "/home/zaur/coding/zobor/backend/lib/common/common.csproj",
-        "packagesPath": "/home/zaur/.nuget/packages/",
-        "outputPath": "/home/zaur/coding/zobor/backend/lib/common/obj/",
-        "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "/usr/share/dotnet/sdk/NuGetFallbackFolder"
-        ],
-        "configFilePaths": [
-          "/home/zaur/.config/NuGet/NuGet.Config"
-        ],
-        "originalTargetFrameworks": [
-          "netstandard2.0"
-        ],
-        "sources": {
-          "https://api.nuget.org/v3/index.json": {}
-        },
-        "frameworks": {
-          "netstandard2.0": {
             "projectReferences": {}
           }
         },
@@ -96,75 +39,9 @@
       "frameworks": {
         "netstandard2.0": {
           "dependencies": {
-            "NETStandard.Library": {
-              "suppressParent": "All",
+            "Microsoft.Extensions.DependencyInjection": {
               "target": "Package",
-              "version": "[2.0.3, )",
-              "autoReferenced": true
-            }
-          },
-          "imports": [
-            "net461"
-          ],
-          "assetTargetFallback": true,
-          "warn": true
-        }
-      }
-    },
-    "/home/zaur/coding/zobor/backend/lib/kernel/kernel.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "/home/zaur/coding/zobor/backend/lib/kernel/kernel.csproj",
-        "projectName": "kernel",
-        "projectPath": "/home/zaur/coding/zobor/backend/lib/kernel/kernel.csproj",
-        "packagesPath": "/home/zaur/.nuget/packages/",
-        "outputPath": "/home/zaur/coding/zobor/backend/lib/kernel/obj/",
-        "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "/usr/share/dotnet/sdk/NuGetFallbackFolder"
-        ],
-        "configFilePaths": [
-          "/home/zaur/.config/NuGet/NuGet.Config"
-        ],
-        "originalTargetFrameworks": [
-          "netstandard2.0"
-        ],
-        "sources": {
-          "https://api.nuget.org/v3/index.json": {}
-        },
-        "frameworks": {
-          "netstandard2.0": {
-            "projectReferences": {
-              "/home/zaur/coding/zobor/backend/lib/common/common.csproj": {
-                "projectPath": "/home/zaur/coding/zobor/backend/lib/common/common.csproj"
-              }
-            }
-          }
-        },
-        "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
-        }
-      },
-      "frameworks": {
-        "netstandard2.0": {
-          "dependencies": {
-            "FluentNHibernate": {
-              "target": "Package",
-              "version": "[2.1.2, )"
-            },
-            "Microsoft.AspNetCore.Http": {
-              "target": "Package",
-              "version": "[2.2.2, )"
-            },
-            "Microsoft.AspNetCore.Http.Abstractions": {
-              "target": "Package",
-              "version": "[2.2.0, )"
-            },
-            "Microsoft.AspNetCore.Mvc.Core": {
-              "target": "Package",
-              "version": "[2.2.5, )"
+              "version": "[3.0.0-preview8.19405.4, )"
             },
             "NETStandard.Library": {
               "suppressParent": "All",

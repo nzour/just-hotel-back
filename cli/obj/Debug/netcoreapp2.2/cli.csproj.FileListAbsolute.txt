@@ -18,3 +18,6 @@
 /home/zaur/coding/zobor/backend/cli/obj/Debug/netcoreapp2.2/cli.pdb
 /home/zaur/coding/zobor/backend/cli/bin/Debug/netcoreapp2.2/command_runner.dll
 /home/zaur/coding/zobor/backend/cli/bin/Debug/netcoreapp2.2/command_runner.pdb
+/home/zaur/coding/zobor/backend/cli/bin/Debug/netcoreapp2.2/NUnit3.TestAdapter.dll
+/home/zaur/coding/zobor/backend/cli/bin/Debug/netcoreapp2.2/NUnit3.TestAdapter.pdb
+/home/zaur/coding/zobor/backend/cli/bin/Debug/netcoreapp2.2/nunit.engine.netstandard.dll

@@ -96,14 +96,7 @@
         },
         "frameworks": {
           "netstandard2.0": {
-            "projectReferences": {
-              "/home/zaur/coding/zobor/backend/lib/common/common.csproj": {
-                "projectPath": "/home/zaur/coding/zobor/backend/lib/common/common.csproj"
-              },
-              "/home/zaur/coding/zobor/backend/lib/kernel/kernel.csproj": {
-                "projectPath": "/home/zaur/coding/zobor/backend/lib/kernel/kernel.csproj"
-              }
-            }
+            "projectReferences": {}
           }
         },
         "warningProperties": {
@@ -115,6 +108,10 @@
       "frameworks": {
         "netstandard2.0": {
           "dependencies": {
+            "Microsoft.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[3.0.0-preview8.19405.4, )"
+            },
             "NETStandard.Library": {
               "suppressParent": "All",
               "target": "Package",

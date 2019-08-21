@@ -1,26 +1,27 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace command_runner.Handler.Console
 {
     public class ConsoleManager
     {
-        private CommandManager Manager { get; }
+        private CommandManager CommandManager { get; }
 
-        private Dictionary<string, string> DefaultScripts { get; } = new Dictionary<string, string>();
+        private Dictionary<string, string> Messages { get; } = new Dictionary<string, string>();
 
         private Dictionary<string, Action<ConsoleArgs>> Scripts { get; } =
             new Dictionary<string, Action<ConsoleArgs>>();
 
-        public ConsoleManager(CommandManager manager)
+        public ConsoleManager(Assembly cliScope, IServiceCollection services)
         {
-            Manager = manager;
-
+            CommandManager = new CommandManager(cliScope, services);
             Startup();
         }
 
-        public void StartListening()
+        public void Start()
         {
             Invoke(new ConsoleArgs("help"));
 
@@ -35,33 +36,35 @@ namespace command_runner.Handler.Console
                 System.Console.WriteLine(e.Message);
             }
         }
+        
+        public void InvokeWithoutStart(string defaultLine)
+        {
+            Invoke(new ConsoleArgs(defaultLine));
+        }
 
         private void Startup()
         {
-            DefaultScripts.Add("help", "Помощь");
-            DefaultScripts.Add("command <CommandName> [Arguments...]", "Запуск команды");
-            DefaultScripts.Add("commands", "Список зарегистрированных команд");
+            Messages.Add("help", "Помощь");
+            Messages.Add("command <CommandName> [Arguments...]", "Запуск команды");
+            Messages.Add("commands", "Список зарегистрированных команд");
+            Messages.Add("info <CommandName>", "Посмотреть информацию о команде, если команда её имеет.");
 
-            var commandList = string.Join(", ", Manager.Commands.Select(c => c.Name));
+            var commandList = string.Join(", ", CommandManager.Commands.Select(c => c.GetName()));
 
             Scripts.Add("help", args => DisplayDefaultScripts());
-            Scripts.Add("command", args => Manager.RunCommand(args.Action, args.Arguments));
+            Scripts.Add("command", args => CommandManager.RunCommand(args.Action, args.Arguments));
             Scripts.Add("commands", args => System.Console.WriteLine($"Зарегистрированные команды: {commandList}"));
+            Scripts.Add("info", args => System.Console.Write(CommandManager.GetCommandDescription(args.Action)));
         }
 
         private void DisplayDefaultScripts()
         {
-            foreach (var script in DefaultScripts)
+            foreach (var script in Messages)
             {
                 System.Console.WriteLine($"Комманда {script.Key} - {script.Value}");
             }
             
             System.Console.WriteLine();
-        }
-
-        public void InvokeDefault(string defaultLine)
-        {
-            Invoke(new ConsoleArgs(defaultLine));
         }
         
         private void Invoke(ConsoleArgs args)
