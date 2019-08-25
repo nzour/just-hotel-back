@@ -20,7 +20,7 @@ namespace command_runner
         {
             var consoleManager = new ConsoleManager(CliScope, Services);
 
-            if (0 == defaultCommand?.Length)
+            if (0 != defaultCommand?.Length)
             {
                 consoleManager.InvokeWithoutStart(defaultCommand);
             }

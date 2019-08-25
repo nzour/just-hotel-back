@@ -1,10 +1,13 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Reflection;
 using common.Extensions;
 using kernel.Abstraction;
 using kernel.Service;
 using Microsoft.Extensions.DependencyInjection;
+using Newtonsoft.Json;
 
 namespace kernel
 {
@@ -31,6 +34,16 @@ namespace kernel
             Services.AddHttpContextAccessor();
         }
 
+        public void LoadEnvironment(string path)
+        {
+            var json = JsonConvert.DeserializeObject<Dictionary<string, string>>(File.ReadAllText(path));
+            
+            foreach (var (key,value) in json.Select(item => (item.Key, item.Value)))
+            {
+                Environment.SetEnvironmentVariable(key, value);
+            }
+        }
+        
         private void ProcessRecorders()
         {
             TypeFinder.FindTypes(t => t.IsSubclassOf(typeof(AbstractServiceRecorder)) && !t.IsAbstract)

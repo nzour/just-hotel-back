@@ -1,4 +1,5 @@
 using System;
+using app.Common;
 using app.Domain.Entity;
 using app.Infrastructure.NHibernate;
 using FluentMigrator.Runner;
@@ -20,14 +21,11 @@ namespace app.DependencyInjection.ServiceRecorder
         {
             TypeFinder = services.GetService<TypeFinder>();
 
-            // todo: убрать хадкод
-            var connection = "Server=localhost;Port=5432;Database=zobor;User Id=root;Password=root;";
-            
             var fluentConfiguration = Fluently.Configure()
                 .Database(PostgreSQLConfiguration.PostgreSQL82
                     //Понятия не имею что это и для чего. Но без этого не работает ¯\_(ツ)_/¯
                     .Raw("hbm2ddl.keywords", "none")
-                    .ConnectionString(connection));
+                    .ConnectionString(DbAccessor.ConnectionString));
 
             RegisterEntitiesRecursively(fluentConfiguration, typeof(AbstractEntity));
 
@@ -39,7 +37,7 @@ namespace app.DependencyInjection.ServiceRecorder
             services.AddFluentMigratorCore()
                 .ConfigureRunner(runner => runner
                     .AddPostgres()
-                    .WithGlobalConnectionString(connection)
+                    .WithGlobalConnectionString(DbAccessor.ConnectionString)
                     .ScanIn(TypeFinder.ApplicationScope).For.Migrations())
                 .AddLogging(logBuilder => logBuilder.AddFluentMigratorConsole());
         }

@@ -1,0 +1,18 @@
+using FluentMigrator;
+
+namespace app.Migration
+{{
+    [Migration({0})]
+    public class {1} : FluentMigrator.Migration
+    {{
+        public override void Up()
+        {{
+        
+        }}
+        
+        public override void Down()
+        {{
+        
+        }}
+    }}
+}}

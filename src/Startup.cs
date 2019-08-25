@@ -1,4 +1,5 @@
-﻿using app.Aspect;
+﻿using System.IO;
+using app.Aspect;
 using kernel;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -19,6 +20,8 @@ namespace app
         public void ConfigureServices(IServiceCollection services)
         {
             var kernel = new Kernel(typeof(Startup).Assembly, services);
+            
+            kernel.LoadEnvironment(Directory.GetCurrentDirectory() + "/publish/environment.json");
             kernel.Boot();
 
             services.AddCors();
