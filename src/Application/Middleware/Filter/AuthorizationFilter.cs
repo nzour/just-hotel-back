@@ -11,7 +11,7 @@ using kernel.Service;
 using Microsoft.AspNetCore.Mvc.Filters;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace app.Aspect.FilterAttribute
+namespace app.Application.Middleware.Filter
 {
     public class AuthorizationFilter : IAuthorizationFilter, IGlobalFilter
     {
@@ -46,11 +46,11 @@ namespace app.Aspect.FilterAttribute
         private bool IsAnonymous(AuthorizationFilterContext context)
         {
             var regex = new Regex(@"(?<controller>.*)\..*");
-            
+
             // Достаем имя контроллера
-            var controller = regex.Match(context.ActionDescriptor.DisplayName)
-                .Groups["controller"]
-                .Value;
+            var controller = regex
+                .Match(context.ActionDescriptor.DisplayName)
+                .Groups["controller"].Value;
 
             // Есть ли у контроллера аттрибут Anonymous
             var isControllerAnonymous = TypeFinder.ApplicationScope.GetType(controller)
@@ -60,7 +60,7 @@ namespace app.Aspect.FilterAttribute
             // Есть ли у метода аттрибут Anonymous
             var isMethodAnonymous = context.ActionDescriptor.EndpointMetadata
                 .Contains(new AnonymousAttribute());
-            
+
             return isControllerAnonymous || isMethodAnonymous;
         }
     }

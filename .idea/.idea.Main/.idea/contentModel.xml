@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ContentModelStore">
     <e p="$APPLICATION_CONFIG_DIR$/consoles/db" t="IncludeRecursive" />
-    <e p="$APPLICATION_CONFIG_DIR$/extensions" t="IncludeRecursive" />
     <e p="$APPLICATION_CONFIG_DIR$/scratches" t="IncludeRecursive" />
     <e p="$USER_HOME$/.Rider2019.2/system/extResources" t="IncludeRecursive" />
     <e p="$USER_HOME$/.Rider2019.2/system/resharper-host/local/Transient/ReSharperHost/v192/SolutionCaches/_Main.427602696.00" t="ExcludeRecursive" />
@@ -138,13 +137,16 @@
               <e p="UserController.cs" t="Include" />
             </e>
           </e>
+          <e p="Middleware" t="Include">
+            <e p="Filter" t="Include">
+              <e p="AuthorizationFilter.cs" t="Include" />
+              <e p="JsonResultFilterAttribute.cs" t="Include" />
+            </e>
+            <e p="HandledExceptionMiddleware.cs" t="Include" />
+          </e>
         </e>
         <e p="Aspect" t="Include">
-          <e p="FilterAttribute" t="Include">
-            <e p="AuthorizationFilter.cs" t="Include" />
-            <e p="JsonResultFilterAttribute.cs" t="Include" />
-          </e>
-          <e p="HandledExceptionMiddleware.cs" t="Include" />
+          <e p="FilterAttribute" t="Include" />
         </e>
         <e p="Common" t="Include">
           <e p="Attribute" t="Include">
@@ -161,7 +163,6 @@
               <e p="JwtTokenException.cs" t="Include" />
               <e p="JwtTokenManager.cs" t="Include" />
             </e>
-            <e p="Migrator" t="Include" />
           </e>
         </e>
         <e p="DependencyInjection" t="Include">
@@ -199,7 +200,6 @@
               <e p="TokenMap.cs" t="Include" />
               <e p="UserMap.cs" t="Include" />
             </e>
-            <e p="MappingConversationListener.cs" t="Include" />
             <e p="Repository" t="Include">
               <e p="AbstractRepository.cs" t="Include" />
               <e p="TokenRepository.cs" t="Include" />
@@ -210,10 +210,6 @@
         </e>
         <e p="Migration" t="Include">
           <e p="InitMigration.cs" t="Include" />
-          <e p="Migration20190825001.cs" t="Include" />
-          <e p="Migration20190825002.cs" t="Include" />
-          <e p="Migration20190825003.cs" t="Include" />
-          <e p="Migration20190825004.cs" t="Include" />
         </e>
         <e p="Program.cs" t="Include" />
         <e p="Properties" t="Include">

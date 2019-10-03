@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
 using Newtonsoft.Json;
 
-namespace app.Aspect.FilterAttribute
+namespace app.Application.Middleware.Filter
 {
     public class JsonResultFilterAttribute : ResultFilterAttribute, IGlobalFilter
     {

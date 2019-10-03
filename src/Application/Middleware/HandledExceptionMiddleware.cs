@@ -1,10 +1,9 @@
 using System;
 using System.Threading.Tasks;
-using app.Application;
 using Microsoft.AspNetCore.Http;
 using Newtonsoft.Json;
 
-namespace app.Aspect
+namespace app.Application.Middleware
 {
     public class HandledExceptionMiddleware : IMiddleware
     {
