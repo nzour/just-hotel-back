@@ -9,17 +9,14 @@
   <ItemGroup>
     <PackageReference Include="FluentMigrator" Version="3.2.1" />
     <PackageReference Include="FluentMigrator.Console" Version="3.2.1" />
-    <PackageReference Include="FluentMigrator.NHibernate" Version="1.0.0.17" />
     <PackageReference Include="FluentMigrator.Runner" Version="3.2.1" />
     <PackageReference Include="FluentMigrator.Runner.Postgres" Version="3.2.1" />
     <PackageReference Include="FluentNHibernate" Version="2.1.2" />
-    <PackageReference Include="JWT" Version="5.2.2" />
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.2.0" />
     <PackageReference Include="NHibernate" Version="5.2.5" />
     <PackageReference Include="NHibernate.QueryBuilder" Version="1.1.0" />
-    <PackageReference Include="Ninject" Version="3.3.4" />
     <PackageReference Include="Npgsql" Version="4.0.7" />
     <PackageReference Include="NUnit" Version="3.12.0" />
     <PackageReference Include="NUnit3TestAdapter" Version="3.13.0" />
@@ -27,10 +24,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Aspect\FilterAttribute" />
+    <Folder Include="Application\Http" />
     <Folder Include="Infrastructure\Attributes" />
     <Folder Include="Infrastructure\Interceptors" />
-    <Folder Include="Tests" />
   </ItemGroup>
 
   <ItemGroup>

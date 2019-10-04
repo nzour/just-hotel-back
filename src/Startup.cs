@@ -1,5 +1,4 @@
-﻿using System.IO;
-using app.Application.Middleware;
+﻿using app.Application.Middleware;
 using kernel;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -19,10 +18,7 @@ namespace app
 
         public void ConfigureServices(IServiceCollection services)
         {
-            var kernel = new Kernel(typeof(Startup).Assembly, services);
-            
-            kernel.LoadEnvironment(Directory.GetCurrentDirectory() + "/publish/environment.json");
-            kernel.Boot();
+            new Kernel(GetType().Assembly, services).Boot();
 
             services.AddCors();
         }

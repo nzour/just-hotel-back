@@ -1,4 +1,4 @@
-using System.Collections.Generic;
+using System;
 using System.Linq;
 using System.Reflection;
 using app.DependencyInjection.ServiceRecorder.Exception;
@@ -18,7 +18,7 @@ namespace app.DependencyInjection.ServiceRecorder
         protected override void Execute(IServiceCollection services)
         {
             var finder = services.GetService<TypeFinder>();
-            var interfaces = FindInterfaces(finder);
+            var interfaces = finder.FindTypes(IsRepositoryInterface);
 
             foreach (var @interface in interfaces)
             {
@@ -32,11 +32,10 @@ namespace app.DependencyInjection.ServiceRecorder
         /// <summary>
         /// Поиск интерфейсов I*Repository с указанным Namespace'ом
         /// </summary>
-        private IEnumerable<TypeInfo> FindInterfaces(TypeFinder finder)
+        private bool IsRepositoryInterface(Type type)
         {
-            return finder.FindTypes(type => type.IsInterface &&
-                    (bool) type.Namespace?.Contains(NamespacePattern) &&
-                    type.Name.EndsWith(EndsWithPattern));
+            return (bool) type.Namespace?.Contains(NamespacePattern) &&
+                   type.IsInterface && type.Name.EndsWith(EndsWithPattern);
         }
 
         /// <summary>
@@ -46,8 +45,7 @@ namespace app.DependencyInjection.ServiceRecorder
         private TypeInfo FindImplementation(TypeInfo @interface, TypeFinder finder)
         {
             var implementations = finder
-                .FindTypes(type =>type.IsClass &&
-                    type.GetInterfaces().Contains(@interface));
+                .FindTypes(type => type.IsClass && type.GetInterfaces().Contains(@interface));
 
             // todo: Сообщение выводится некорректно. Добавить нормальное логирование.
             return implementations.IsNotEmpty()

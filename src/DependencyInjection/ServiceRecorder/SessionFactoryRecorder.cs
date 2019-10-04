@@ -1,6 +1,6 @@
 using System;
-using app.Common;
 using app.Domain.Entity;
+using app.Infrastructure.Common;
 using app.Infrastructure.NHibernate;
 using FluentMigrator.Runner;
 using FluentNHibernate.Cfg;
@@ -23,7 +23,7 @@ namespace app.DependencyInjection.ServiceRecorder
 
             var fluentConfiguration = Fluently.Configure()
                 .Database(PostgreSQLConfiguration.PostgreSQL82
-                    //Понятия не имею что это и для чего. Но без этого не работает ¯\_(ツ)_/¯
+                    // Понятия не имею что это и для чего. Но без этого не работает ¯\_(ツ)_/¯
                     .Raw("hbm2ddl.keywords", "none")
                     .ConnectionString(DbAccessor.ConnectionString));
 
@@ -33,7 +33,7 @@ namespace app.DependencyInjection.ServiceRecorder
 
             services.AddSingleton(typeof(ISessionFactory), sessionFactory);
             services.AddSingleton(typeof(Transactional), new Transactional(sessionFactory));
-            
+
             services.AddFluentMigratorCore()
                 .ConfigureRunner(runner => runner
                     .AddPostgres()

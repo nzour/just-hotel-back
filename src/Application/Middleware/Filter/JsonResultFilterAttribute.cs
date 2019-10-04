@@ -1,5 +1,4 @@
 using System.Threading.Tasks;
-using app.Common.Services.Jwt;
 using kernel.Abstraction;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -10,13 +9,6 @@ namespace app.Application.Middleware.Filter
 {
     public class JsonResultFilterAttribute : ResultFilterAttribute, IGlobalFilter
     {
-        public JwtTokenManager TokenManager { get; }
-
-        public JsonResultFilterAttribute(JwtTokenManager tokenManager)
-        {
-            TokenManager = tokenManager;
-        }
-
         public override void OnResultExecuting(ResultExecutingContext context)
         {
             var value = ExtractValue(context.Result);

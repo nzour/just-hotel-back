@@ -1,12 +1,12 @@
-using _User = app.Domain.Entity.User.User;
+using app.Domain.Entity.User;
 
 namespace app.Application.CQS
 {
     public abstract class AbstractUserAware
     {
-        protected _User CurrentUser { get; private set; }
+        protected User CurrentUser { get; private set; }
 
-        public void SetCurrentUser(_User user)
+        public void SetCurrentUser(User user)
         {
             CurrentUser = user;
         }

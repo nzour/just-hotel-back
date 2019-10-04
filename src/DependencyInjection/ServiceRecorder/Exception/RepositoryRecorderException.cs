@@ -6,7 +6,6 @@ namespace app.DependencyInjection.ServiceRecorder.Exception
     {
         public RepositoryRecorderException(string message) : base(message)
         {
-            
         }
 
         public static RepositoryRecorderException NotFoundImplementation(Type @interface)

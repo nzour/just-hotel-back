@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ContentModelStore">
     <e p="$APPLICATION_CONFIG_DIR$/consoles/db" t="IncludeRecursive" />
+    <e p="$APPLICATION_CONFIG_DIR$/extensions" t="IncludeRecursive" />
     <e p="$APPLICATION_CONFIG_DIR$/scratches" t="IncludeRecursive" />
     <e p="$USER_HOME$/.Rider2019.2/system/extResources" t="IncludeRecursive" />
     <e p="$USER_HOME$/.Rider2019.2/system/resharper-host/local/Transient/ReSharperHost/v192/SolutionCaches/_Main.427602696.00" t="ExcludeRecursive" />
@@ -108,67 +109,19 @@
         <e p="Application" t="Include">
           <e p="CQS" t="Include">
             <e p="AbstractUserAware.cs" t="Include" />
-            <e p="Token" t="Include">
-              <e p="Command" t="Include">
-                <e p="ReceiveTokenCommand.cs" t="Include" />
-              </e>
-              <e p="Input" t="Include">
-                <e p="TokenInput.cs" t="Include" />
-              </e>
-              <e p="Output" t="Include">
-                <e p="TokenOutput.cs" t="Include" />
-              </e>
-            </e>
-            <e p="User" t="Include">
-              <e p="Output" t="Include">
-                <e p="UserOutput.cs" t="Include" />
-              </e>
-              <e p="Query" t="Include">
-                <e p="GetUserQuery.cs" t="Include" />
-              </e>
-            </e>
           </e>
-          <e p="ErrorResponse.cs" t="Include" />
-          <e p="Http" t="Include">
-            <e p="Token" t="Include">
-              <e p="TokenController.cs" t="Include" />
-            </e>
-            <e p="User" t="Include">
-              <e p="UserController.cs" t="Include" />
-            </e>
-          </e>
+          <e p="Http" t="Include" />
           <e p="Middleware" t="Include">
+            <e p="ErrorResponse.cs" t="Include" />
             <e p="Filter" t="Include">
-              <e p="AuthorizationFilter.cs" t="Include" />
               <e p="JsonResultFilterAttribute.cs" t="Include" />
             </e>
             <e p="HandledExceptionMiddleware.cs" t="Include" />
           </e>
         </e>
-        <e p="Aspect" t="Include">
-          <e p="FilterAttribute" t="Include" />
-        </e>
-        <e p="Common" t="Include">
-          <e p="Attribute" t="Include">
-            <e p="AnonymousAttribute.cs" t="Include" />
-            <e p="InjectedAttribute.cs" t="Include" />
-            <e p="ScopedAttribute.cs" t="Include" />
-            <e p="SingletonAttribute.cs" t="Include" />
-            <e p="TransientAttribute.cs" t="Include" />
-          </e>
-          <e p="DbAccessor.cs" t="Include" />
-          <e p="EncodeHandler.cs" t="Include" />
-          <e p="Services" t="Include">
-            <e p="Jwt" t="Include">
-              <e p="JwtTokenException.cs" t="Include" />
-              <e p="JwtTokenManager.cs" t="Include" />
-            </e>
-          </e>
-        </e>
         <e p="DependencyInjection" t="Include">
           <e p="ServiceRecorder" t="Include">
             <e p="CommandQueryRecorder.cs" t="Include" />
-            <e p="CommonServiceRecorder.cs" t="Include" />
             <e p="Exception" t="Include">
               <e p="RepositoryRecorderException.cs" t="Include" />
             </e>
@@ -194,11 +147,17 @@
         </e>
         <e p="Infrastructure" t="Include">
           <e p="Attributes" t="Include" />
+          <e p="Common" t="Include">
+            <e p="DbAccessor.cs" t="Include" />
+          </e>
           <e p="Interceptors" t="Include" />
           <e p="NHibernate" t="Include">
             <e p="Mapping" t="Include">
               <e p="TokenMap.cs" t="Include" />
               <e p="UserMap.cs" t="Include" />
+            </e>
+            <e p="Migration" t="Include">
+              <e p="InitMigration.cs" t="Include" />
             </e>
             <e p="Repository" t="Include">
               <e p="AbstractRepository.cs" t="Include" />
@@ -208,15 +167,11 @@
             <e p="Transactional.cs" t="Include" />
           </e>
         </e>
-        <e p="Migration" t="Include">
-          <e p="InitMigration.cs" t="Include" />
-        </e>
         <e p="Program.cs" t="Include" />
         <e p="Properties" t="Include">
           <e p="launchSettings.json" t="Include" />
         </e>
         <e p="Startup.cs" t="Include" />
-        <e p="Tests" t="Include" />
         <e p="app.csproj" t="IncludeRecursive" />
         <e p="appsettings.Development.json" t="Include" />
         <e p="appsettings.json" t="Include" />
@@ -230,7 +185,6 @@
             </e>
           </e>
         </e>
-        <e p="supervisord.conf" t="Include" />
       </e>
     </e>
   </component>
