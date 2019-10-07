@@ -8,3 +8,4 @@ docker-compose.override.yml
 /cli/obj/
 /lib/command_runner/bin/
 /lib/command_runner/obj/
+/.idea/

@@ -1,6 +1,6 @@
 using System;
 
-namespace app.Domain.Entity.Token
+namespace app.Domain.Token
 {
     public class TokenException : Exception
     {

@@ -1,4 +1,5 @@
-﻿using app.Application.Middleware;
+﻿using System.IO;
+using app.Application.Middleware;
 using kernel;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -9,16 +10,21 @@ namespace app
 {
     public class Startup
     {
+        public IConfiguration Configuration { get; }
+
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
         }
 
-        public IConfiguration Configuration { get; }
-
         public void ConfigureServices(IServiceCollection services)
         {
-            new Kernel(GetType().Assembly, services).Boot();
+            var envFile = $"{Directory.GetCurrentDirectory()}/environment.json";
+
+            var kernel = new Kernel(GetType().Assembly, services);
+
+            kernel.Boot();
+            kernel.LoadEnvironmentVariables(envFile);
 
             services.AddCors();
         }
@@ -38,6 +44,7 @@ namespace app
             app.UseMiddleware<HandledExceptionMiddleware>();
 
             app.UseDefaultFiles()
+                .UseAuthentication()
                 .UseHttpsRedirection()
                 .UseMvc();
         }

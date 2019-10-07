@@ -1,4 +1,4 @@
-using app.Domain.Entity.Token;
+using app.Domain.Token;
 
 namespace app.Infrastructure.NHibernate.Repository
 {

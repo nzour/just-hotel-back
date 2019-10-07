@@ -1,4 +1,4 @@
-namespace app.Domain.Entity.Token
+namespace app.Domain.Token
 {
     public interface ITokenRepository
     {

@@ -1,10 +1,13 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Reflection;
 using common.Extensions;
 using kernel.Abstraction;
 using kernel.Service;
 using Microsoft.Extensions.DependencyInjection;
+using Newtonsoft.Json;
 
 namespace kernel
 {
@@ -29,6 +32,23 @@ namespace kernel
             ProcessGlobalFilters();
 
             Services.AddHttpContextAccessor();
+        }
+
+        public void LoadEnvironmentVariables(string envFilename)
+        {
+            if (!File.Exists(envFilename))
+            {
+                throw new FileNotFoundException($"Unable to read environment file. File with name {envFilename} was not found.");
+            }
+
+            File.ReadAllText(envFilename);
+
+            var json = JsonConvert.DeserializeObject<Dictionary<string, string>>(File.ReadAllText(envFilename));
+
+            foreach (var pair in json)
+            {
+                Environment.SetEnvironmentVariable(pair.Key, pair.Value);
+            }
         }
 
         private void ProcessRecorders()

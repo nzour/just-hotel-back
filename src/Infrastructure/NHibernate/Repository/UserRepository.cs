@@ -1,5 +1,5 @@
 using System;
-using app.Domain.Entity.User;
+using app.Domain.User;
 using common.Extensions;
 
 namespace app.Infrastructure.NHibernate.Repository
@@ -20,7 +20,7 @@ namespace app.Infrastructure.NHibernate.Repository
             return Transactional.WithSession(session =>
             {
                 var user = session.Get<User>(id);
-                return user.AssertNull(() => throw UserException.NotFound(id));
+                return user.AssertNull(() => throw UserNotFoundException.WithId(id));
             });
         }
 

@@ -1,5 +1,5 @@
 using System;
-using app.Domain.Entity;
+using app.Domain;
 using app.Infrastructure.Common;
 using app.Infrastructure.NHibernate;
 using FluentMigrator.Runner;

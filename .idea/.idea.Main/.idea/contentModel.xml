@@ -130,34 +130,27 @@
           </e>
         </e>
         <e p="Domain" t="Include">
-          <e p="Entity" t="Include">
-            <e p="AbstractEntity.cs" t="Include" />
-            <e p="AbstractException.cs" t="Include" />
-            <e p="Token" t="Include">
-              <e p="ITokenRepository.cs" t="Include" />
-              <e p="Token.cs" t="Include" />
-              <e p="TokenException.cs" t="Include" />
-            </e>
-            <e p="User" t="Include">
-              <e p="IUserRepository.cs" t="Include" />
-              <e p="User.cs" t="Include" />
-              <e p="UserException.cs" t="Include" />
-            </e>
+          <e p="AbstractEntity.cs" t="Include" />
+          <e p="NotFoundException.cs" t="Include" />
+          <e p="Token" t="Include">
+            <e p="ITokenRepository.cs" t="Include" />
+            <e p="Token.cs" t="Include" />
+            <e p="TokenException.cs" t="Include" />
+          </e>
+          <e p="User" t="Include">
+            <e p="IUserRepository.cs" t="Include" />
+            <e p="User.cs" t="Include" />
+            <e p="UserNotFoundException.cs" t="Include" />
           </e>
         </e>
         <e p="Infrastructure" t="Include">
-          <e p="Attributes" t="Include" />
           <e p="Common" t="Include">
             <e p="DbAccessor.cs" t="Include" />
           </e>
-          <e p="Interceptors" t="Include" />
           <e p="NHibernate" t="Include">
             <e p="Mapping" t="Include">
               <e p="TokenMap.cs" t="Include" />
               <e p="UserMap.cs" t="Include" />
-            </e>
-            <e p="Migration" t="Include">
-              <e p="InitMigration.cs" t="Include" />
             </e>
             <e p="Repository" t="Include">
               <e p="AbstractRepository.cs" t="Include" />
@@ -166,6 +159,9 @@
             </e>
             <e p="Transactional.cs" t="Include" />
           </e>
+        </e>
+        <e p="Migration" t="Include">
+          <e p="InitMigration.cs" t="Include" />
         </e>
         <e p="Program.cs" t="Include" />
         <e p="Properties" t="Include">

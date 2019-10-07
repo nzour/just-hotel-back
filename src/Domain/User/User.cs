@@ -1,6 +1,4 @@
-using Newtonsoft.Json;
-
-namespace app.Domain.Entity.User
+namespace app.Domain.User
 {
     public class User : AbstractEntity
     {
@@ -22,28 +20,9 @@ namespace app.Domain.Entity.User
             Password = password;
         }
 
-        public virtual void ChangeName(string name)
+        public virtual void UpdateName(string name)
         {
             Name = name;
-        }
-        
-        public static implicit operator string(User user)
-        {
-            return JsonConvert.SerializeObject(new UserPayload(user));
-        }
-    }
-
-    internal class UserPayload
-    {
-        public string Id { get; }
-        public string Name { get; }
-        public string Login { get; }
-        
-        public UserPayload(User user)
-        {
-            Id = user.Id.ToString();
-            Name = user.Name;
-            Login = user.Login;
         }
     }
 }

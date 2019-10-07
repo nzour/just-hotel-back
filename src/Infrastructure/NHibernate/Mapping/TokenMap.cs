@@ -1,4 +1,4 @@
-using app.Domain.Entity.Token;
+using app.Domain.Token;
 using FluentNHibernate.Mapping;
 
 namespace app.Infrastructure.NHibernate.Mapping

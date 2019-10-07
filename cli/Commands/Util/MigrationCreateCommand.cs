@@ -26,7 +26,7 @@ namespace cli.Commands.Util
             var name = "Migration" + version;
 
             var content = File.ReadAllText(MigrationTemplate);
-            content = string.Format(@content, version, name);
+            content = string.Format(content, version, name);
 
             var file = File.Create(MigrationDirectory + name + FileExtension);
             file.Write(Encoding.ASCII.GetBytes(content));
