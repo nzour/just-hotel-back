@@ -11,7 +11,7 @@ using kernel.Service;
 using Microsoft.Extensions.DependencyInjection;
 using NHibernate;
 
-namespace app.DependencyInjection.ServiceRecorder
+namespace app.Configuration.ServiceRecorder
 {
     public class SessionFactoryRecorder : AbstractServiceRecorder
     {

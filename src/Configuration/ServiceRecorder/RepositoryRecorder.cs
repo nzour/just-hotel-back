@@ -1,18 +1,18 @@
 using System;
 using System.Linq;
 using System.Reflection;
-using app.DependencyInjection.ServiceRecorder.Exception;
+using app.Configuration.ServiceRecorder.Exception;
 using FluentNHibernate.Conventions;
 using kernel.Abstraction;
 using kernel.Extensions;
 using kernel.Service;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace app.DependencyInjection.ServiceRecorder
+namespace app.Configuration.ServiceRecorder
 {
     public class RepositoryRecorder : AbstractServiceRecorder
     {
-        private const string NamespacePattern = "app.Domain.Entity";
+        private const string NamespacePattern = "app.Domain";
         private const string EndsWithPattern = "Repository";
 
         protected override void Execute(IServiceCollection services)

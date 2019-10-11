@@ -10,7 +10,7 @@ namespace app.Infrastructure.NHibernate.Repository
         {
         }
 
-        public void Create(User user)
+        public void CreateUser(User user)
         {
             Transactional.Action(session => session.Save(user));
         }
@@ -29,7 +29,7 @@ namespace app.Infrastructure.NHibernate.Repository
             return Transactional.WithSession(session =>
             {
                 return session.QueryOver<User>()
-                    .Where(u => u.Login == login)
+                    .Where(u => login == u.Login)
                     .SingleOrDefault();
             });
         }

@@ -26,6 +26,8 @@ namespace app
             kernel.Boot();
             kernel.LoadEnvironmentVariables(envFile);
 
+            services.AddTransient<HandledExceptionMiddleware>();
+
             services.AddCors();
         }
 
@@ -45,7 +47,6 @@ namespace app
 
             app.UseDefaultFiles()
                 .UseAuthentication()
-                .UseHttpsRedirection()
                 .UseMvc();
         }
     }

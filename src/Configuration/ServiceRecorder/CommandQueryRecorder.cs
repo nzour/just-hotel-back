@@ -4,7 +4,7 @@ using kernel.Extensions;
 using kernel.Service;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace app.DependencyInjection.ServiceRecorder
+namespace app.Configuration.ServiceRecorder
 {
     public class CommandQueryRecorder : AbstractServiceRecorder
     {
