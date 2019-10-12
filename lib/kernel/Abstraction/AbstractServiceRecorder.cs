@@ -1,6 +1,5 @@
 using System.Collections.Generic;
 using Microsoft.Extensions.DependencyInjection;
-using NHibernate.Util;
 
 namespace kernel.Abstraction
 {
@@ -20,7 +19,7 @@ namespace kernel.Abstraction
             {
                 dependency.Process(services);
             }
-            
+
             Execute(services);
 
             IsExecuted = true;
