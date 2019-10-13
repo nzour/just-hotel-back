@@ -3,9 +3,9 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Newtonsoft.Json;
 
-namespace app.Application.Middleware
+namespace app.Configuration.Middleware
 {
-    public class HandledExceptionMiddleware : IMiddleware
+    public class ExceptionHandlingMiddleware : IMiddleware
     {
         public async Task InvokeAsync(HttpContext context, RequestDelegate next)
         {
@@ -17,7 +17,7 @@ namespace app.Application.Middleware
 
                 await task;
             }
-            catch(AggregateException e)
+            catch (AggregateException e)
             {
                 context.Response.StatusCode = StatusCodes.Status400BadRequest;
                 context.Response.Headers.Add("Content-Type", "application/json");
@@ -27,9 +27,21 @@ namespace app.Application.Middleware
 
         private string CompileResponse(Exception e)
         {
-            return e.InnerException != null 
-                ? CompileResponse(e.InnerException) 
+            return e.InnerException != null
+                ? CompileResponse(e.InnerException)
                 : JsonConvert.SerializeObject(new ErrorResponse(e));
+        }
+    }
+
+    public class ErrorResponse
+    {
+        public string Type { get; }
+        public string Message { get; }
+
+        public ErrorResponse(Exception exception)
+        {
+            Type = exception.GetType().Name;
+            Message = exception.Message;
         }
     }
 }
