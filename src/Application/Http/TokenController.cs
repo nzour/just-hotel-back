@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace app.Application.Http
 {
     [AllowAnonymous]
-    [Route("/token")]
+    [Route("token")]
     public class TokenController : Controller
     {
         [HttpPost]

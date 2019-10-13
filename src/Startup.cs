@@ -1,6 +1,7 @@
 ﻿using System.IO;
-using app.Application.Middleware;
+using app.Configuration.Middleware;
 using kernel;
+using Microsoft.AspNetCore.Authorization.Policy;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -26,7 +27,8 @@ namespace app
             kernel.Boot();
             kernel.LoadEnvironmentVariables(envFile);
 
-            services.AddTransient<HandledExceptionMiddleware>();
+            services.AddTransient<ExceptionHandlingMiddleware>();
+            services.AddMvc();
 
             services.AddCors();
         }
@@ -43,7 +45,7 @@ namespace app
                 app.UseHsts();
             }
 
-            app.UseMiddleware<HandledExceptionMiddleware>();
+            app.UseMiddleware<ExceptionHandlingMiddleware>();
 
             app.UseDefaultFiles()
                 .UseAuthentication()

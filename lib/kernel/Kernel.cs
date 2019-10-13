@@ -5,9 +5,7 @@ using System.Linq;
 using System.Reflection;
 using common.Extensions;
 using kernel.Abstraction;
-using kernel.Extensions;
 using kernel.Service;
-using Microsoft.AspNetCore.Mvc.Formatters;
 using Microsoft.Extensions.DependencyInjection;
 using Newtonsoft.Json;
 
@@ -62,13 +60,10 @@ namespace kernel
 
         private void ProcessGlobalFilters()
         {
-            var mvcCoreBuilder = Services.AddMvcCore(options =>
-            {
-                options.InputFormatters.Add(Services.GetService<JsonInputFormatter>());
-            });
+            var mvcBuilder = Services.AddMvc();
 
             TypeFinder.FindTypes(t => t.ImplementedInterfaces.Contains(typeof(IGlobalFilter)))
-                .Foreach(filter => mvcCoreBuilder.AddMvcOptions(o => o.Filters.Add(filter)));
+                .Foreach(filter => mvcBuilder.AddMvcOptions(o => o.Filters.Add(filter)));
         }
     }
 }

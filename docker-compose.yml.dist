@@ -14,17 +14,5 @@ services:
     volumes:
       - zobor_postgres_volume:/var/lib/postgresql/data
 
-  pgadmin:
-    container_name: pgadmin
-    image: dpage/pgadmin4
-    environment:
-      PGADMIN_DEFAULT_EMAIL: pgadmin@mail.db
-      PGADMIN_DEFAULT_PASSWORD: 1234
-    volumes:
-      - zobor_pgadmin_volume:/var/lib/pgadmin
-    ports:
-      - 8080:80
-        
 volumes:
   zobor_postgres_volume:
-  zobor_pgadmin_volume:
