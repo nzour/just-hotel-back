@@ -1,8 +1,8 @@
-namespace app.Application.CQS.Token.Exception
+namespace app.Application.CQS.Auth.Exception
 {
     public class UserNotFound : System.Exception
     {
-        public UserNotFound(string message) : base(message)
+        private UserNotFound(string message) : base(message)
         {
         }
 

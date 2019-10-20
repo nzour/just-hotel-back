@@ -22,8 +22,9 @@ namespace app
 
             var kernel = new Kernel(GetType().Assembly, services);
 
-            kernel.LoadEnvironmentVariables(envFile);
-            kernel.Boot();
+            kernel
+                .LoadEnvironmentVariables(envFile)
+                .Boot();
 
             services.AddTransient<ExceptionHandlingMiddleware>();
 

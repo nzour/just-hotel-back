@@ -49,7 +49,7 @@ namespace command_runner.Handler.Console
             Messages.Add("commands", "Список зарегистрированных команд");
             Messages.Add("info <CommandName>", "Посмотреть информацию о команде, если команда её имеет.");
 
-            var commandList = string.Join(", ", CommandManager.Commands.Select(c => c.GetName()));
+            var commandList = string.Join(", ", CommandManager.Commands.Select(c => c!.GetName()));
 
             Scripts.Add("help", args => DisplayDefaultScripts());
             Scripts.Add("command", args => CommandManager.RunCommand(args.Action ?? "", args.Arguments));

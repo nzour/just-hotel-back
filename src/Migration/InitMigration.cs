@@ -7,16 +7,17 @@ namespace app.Migration
     {
         public override void Up()
         {
-            Create.Table("users")
-                .WithColumn("id").AsGuid().PrimaryKey()
-                .WithColumn("name").AsString().NotNullable()
-                .WithColumn("login").AsString().NotNullable().Unique()
-                .WithColumn("password").AsString().NotNullable();
+            Create.Table("Users")
+                .WithColumn("Id").AsGuid().PrimaryKey()
+                .WithColumn("FirstName").AsString().NotNullable()
+                .WithColumn("LastName").AsString().NotNullable()
+                .WithColumn("Login").AsString().NotNullable().Unique()
+                .WithColumn("Password").AsString().NotNullable();
         }
 
         public override void Down()
         {
-            Delete.Table("users");
+            Delete.Table("Users");
         }
     }
 }

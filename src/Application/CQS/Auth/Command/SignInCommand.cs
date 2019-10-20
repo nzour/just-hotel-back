@@ -1,18 +1,18 @@
 using app.Application.Abstraction;
-using app.Application.CQS.Token.Exception;
-using app.Application.CQS.Token.Input;
-using app.Application.CQS.Token.Output;
+using app.Application.CQS.Auth.Exception;
+using app.Application.CQS.Auth.Input;
+using app.Application.CQS.Auth.Output;
 using app.Domain.User;
 
-namespace app.Application.CQS.Token.Query
+namespace app.Application.CQS.Auth.Command
 {
-    public class ObtainTokenQuery
+    public class SignInCommand
     {
         public IUserRepository UserRepository { get; }
         public IJwtTokenService TokenService { get; }
         public IPasswordEncoder PasswordEncoder { get; }
 
-        public ObtainTokenQuery(
+        public SignInCommand(
             IUserRepository userRepository,
             IJwtTokenService tokenService,
             IPasswordEncoder passwordEncoder
@@ -23,13 +23,13 @@ namespace app.Application.CQS.Token.Query
             PasswordEncoder = passwordEncoder;
         }
 
-        public TokenOutput Execute(TokenInput input)
+        public SignInOutput Execute(SignInInput input)
         {
             var encryptedPassword = PasswordEncoder.Encrypt(input.Password);
             var user = UserRepository.FindUserWithLoginAndPassword(input.Login, encryptedPassword);
 
             return null != user
-                ? new TokenOutput(user.Id, TokenService.CreateToken(user))
+                ? new SignInOutput(user.Id, TokenService.CreateToken(user))
                 : throw UserNotFound.InvalidCredentials();
         }
     }

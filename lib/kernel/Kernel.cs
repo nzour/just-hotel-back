@@ -38,7 +38,7 @@ namespace kernel
             Services.AddHttpContextAccessor();
         }
 
-        public void LoadEnvironmentVariables(string envFilename)
+        public Kernel LoadEnvironmentVariables(string envFilename)
         {
             if (!File.Exists(envFilename))
             {
@@ -54,6 +54,8 @@ namespace kernel
             {
                 Environment.SetEnvironmentVariable(key, value);
             }
+
+            return this;
         }
 
         private void ProcessRecorders()
@@ -62,7 +64,7 @@ namespace kernel
                 .Foreach(recorder =>
                 {
                     Services.AddTransient(recorder)
-                        .GetService<AbstractServiceRecorder>(recorder)
+                        .GetService<AbstractServiceRecorder>(recorder)!
                         .Process(Services);
                 });
         }

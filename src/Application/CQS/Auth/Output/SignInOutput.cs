@@ -1,13 +1,13 @@
 using System;
 
-namespace app.Application.CQS.Token.Output
+namespace app.Application.CQS.Auth.Output
 {
-    public class TokenOutput
+    public class SignInOutput
     {
         public Guid UserId { get; }
         public string Token { get; }
 
-        public TokenOutput(Guid userId, string token)
+        public SignInOutput(Guid userId, string token)
         {
             Token = token;
             UserId = userId;

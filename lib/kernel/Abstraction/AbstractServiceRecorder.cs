@@ -14,6 +14,8 @@ namespace kernel.Abstraction
                 return;
             }
 
+            IsExecuted = true;
+
             // Сначала запускаем все service recorder'ы, от которых зависит текущий
             foreach (var dependency in GetDependencies())
             {
@@ -21,10 +23,7 @@ namespace kernel.Abstraction
             }
 
             Execute(services);
-
-            IsExecuted = true;
         }
-
 
         /// <summary>
         /// Массив зависимых Recorder'ов, от которых зависит текущий.

@@ -13,8 +13,9 @@ namespace cli
 
             var kernel = new Kernel(typeof(Startup).Assembly);
 
-            kernel.Boot();
-            kernel.LoadEnvironmentVariables(envFile);
+            kernel
+                .LoadEnvironmentVariables(envFile)
+                .Boot();
 
             var commandRunner = new CommandRunner(typeof(CliProgram).Assembly, kernel.Services);
             commandRunner.Execute(string.Join(" ", args));

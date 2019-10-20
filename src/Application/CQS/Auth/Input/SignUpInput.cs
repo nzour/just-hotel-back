@@ -2,13 +2,19 @@ using System.ComponentModel.DataAnnotations;
 
 #nullable disable
 
-namespace app.Application.CQS.Token.Input
+namespace app.Application.CQS.Auth.Input
 {
-    public class TokenInput
+    public class SignUpInput
     {
         [Required]
         public string Login { get; set; }
-        
+
+        [Required]
+        public string FirstName { get; set; }
+
+        [Required]
+        public string LastName { get; set; }
+
         [Required]
         public string Password { get; set; }
     }

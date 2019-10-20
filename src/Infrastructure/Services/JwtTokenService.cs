@@ -44,8 +44,7 @@ namespace app.Infrastructure.Services
             return new List<Claim>
             {
                 new Claim("userId", user.Id.ToString()),
-                new Claim("login", user.Login),
-                new Claim("name", user.Name)
+                new Claim("login", user.Login)
             };
         }
     }

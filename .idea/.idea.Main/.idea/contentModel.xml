@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ContentModelStore">
     <e p="$APPLICATION_CONFIG_DIR$/consoles/db" t="IncludeRecursive" />
-    <e p="$APPLICATION_CONFIG_DIR$/extensions" t="IncludeRecursive" />
     <e p="$APPLICATION_CONFIG_DIR$/scratches" t="IncludeRecursive" />
     <e p="$USER_HOME$/.Rider2019.2/system/extResources" t="IncludeRecursive" />
     <e p="$USER_HOME$/.Rider2019.2/system/resharper-host/local/Transient/ReSharperHost/v192/SolutionCaches/_Main.427602696.00" t="ExcludeRecursive" />
@@ -122,23 +121,26 @@
           </e>
           <e p="CQS" t="Include">
             <e p="AbstractUserAware.cs" t="Include" />
-            <e p="Token" t="Include">
+            <e p="Auth" t="Include">
+              <e p="Command" t="Include">
+                <e p="SignInCommand.cs" t="Include" />
+                <e p="SignUpCommand.cs" t="Include" />
+              </e>
               <e p="Exception" t="Include">
+                <e p="UserLoginIsBusyException.cs" t="Include" />
                 <e p="UserNotFound.cs" t="Include" />
               </e>
               <e p="Input" t="Include">
-                <e p="TokenInput.cs" t="Include" />
+                <e p="SignInInput.cs" t="Include" />
+                <e p="SignUpInput.cs" t="Include" />
               </e>
               <e p="Output" t="Include">
-                <e p="TokenOutput.cs" t="Include" />
-              </e>
-              <e p="Query" t="Include">
-                <e p="ObtainTokenQuery.cs" t="Include" />
+                <e p="SignInOutput.cs" t="Include" />
               </e>
             </e>
           </e>
           <e p="Http" t="Include">
-            <e p="TokenController.cs" t="Include" />
+            <e p="AuthController.cs" t="Include" />
           </e>
         </e>
         <e p="Configuration" t="Include">
@@ -157,6 +159,7 @@
         </e>
         <e p="Domain" t="Include">
           <e p="AbstractEntity.cs" t="Include" />
+          <e p="IEntityRepository.cs" t="Include" />
           <e p="NotFoundException.cs" t="Include" />
           <e p="User" t="Include">
             <e p="IUserRepository.cs" t="Include" />
@@ -177,6 +180,7 @@
             </e>
             <e p="Repository" t="Include">
               <e p="AbstractRepository.cs" t="Include" />
+              <e p="EntityRepository.cs" t="Include" />
               <e p="UserRepository.cs" t="Include" />
             </e>
             <e p="Transactional.cs" t="Include" />

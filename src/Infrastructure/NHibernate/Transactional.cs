@@ -68,7 +68,7 @@ namespace app.Infrastructure.NHibernate
             }
         }
 
-        public void WithSession(Action<ISession> action)
+        public void Func(Action<ISession> action)
         {
             var session = SessionFactory.OpenSession();
 
@@ -81,8 +81,8 @@ namespace app.Infrastructure.NHibernate
                 session.Dispose();
             }
         }
-        
-        public TResult WithSession<TResult>(Func<ISession, TResult> action)
+
+        public TResult Func<TResult>(Func<ISession, TResult> action)
         {
             var session = SessionFactory.OpenSession();
 

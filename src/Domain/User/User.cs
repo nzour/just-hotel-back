@@ -4,27 +4,24 @@ namespace app.Domain.User
 {
     public class User : AbstractEntity
     {
-        public virtual string Name { get; protected internal set; }
-        public virtual string Login { get; protected internal set; }
-        public virtual string Password { get; protected internal set; }
+        public virtual string FirstName { get; set; }
+        public virtual string LastName { get; set; }
+        public virtual string Login { get; set; }
+        public virtual string Password { get; set; }
 
         // Nhibernate требует наличие безаргументного конструктора.
         protected User()
         {
         }
 
-        public User(string name, string login, string password)
+        public User(string firstName, string lastName, string login, string password)
         {
             Identify();
 
-            Name = name;
+            FirstName = firstName;
+            LastName = lastName;
             Login = login;
             Password = password;
-        }
-
-        public virtual void UpdateName(string name)
-        {
-            Name = name;
         }
     }
 }

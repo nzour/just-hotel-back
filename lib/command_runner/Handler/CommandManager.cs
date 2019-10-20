@@ -72,7 +72,7 @@ namespace command_runner.Handler
 
             for (var i = 1; i < count; i++)
             {
-                if (Equals(array[i].GetName(), array[i - 1].GetName()))
+                if (Equals(array[i]!.GetName(), array[i - 1]!.GetName()))
                 {
                     result.Add(array[i]);
                 }
