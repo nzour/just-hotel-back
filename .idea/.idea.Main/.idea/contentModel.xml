@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ContentModelStore">
     <e p="$APPLICATION_CONFIG_DIR$/consoles/db" t="IncludeRecursive" />
+    <e p="$APPLICATION_CONFIG_DIR$/extensions" t="IncludeRecursive" />
     <e p="$APPLICATION_CONFIG_DIR$/scratches" t="IncludeRecursive" />
     <e p="$USER_HOME$/.Rider2019.2/system/extResources" t="IncludeRecursive" />
     <e p="$USER_HOME$/.Rider2019.2/system/resharper-host/local/Transient/ReSharperHost/v192/SolutionCaches/_Main.427602696.00" t="ExcludeRecursive" />
@@ -41,7 +42,6 @@
           <e p="Abstraction" t="Include">
             <e p="AbstractCommand.cs" t="Include" />
           </e>
-          <e p="CommandRunner.cs" t="Include" />
           <e p="Handler" t="Include">
             <e p="ArgumentProvider.cs" t="Include" />
             <e p="CommandManager.cs" t="Include" />
@@ -54,6 +54,7 @@
               <e p="CommandHandlerException.cs" t="Include" />
             </e>
           </e>
+          <e p="MainRunner.cs" t="Include" />
           <e p="bin" t="ExcludeRecursive" />
           <e p="command_runner.csproj" t="IncludeRecursive" />
           <e p="obj" t="ExcludeRecursive">
@@ -159,12 +160,20 @@
         </e>
         <e p="Domain" t="Include">
           <e p="AbstractEntity.cs" t="Include" />
+          <e p="ChatEntity" t="Include">
+            <e p="AbstractChat.cs" t="Include" />
+            <e p="CantAddMessageException.cs" t="Include" />
+            <e p="GroupChat.cs" t="Include" />
+            <e p="SingleChat.cs" t="Include" />
+          </e>
+          <e p="EntityNotFoundException.cs" t="Include" />
           <e p="IEntityRepository.cs" t="Include" />
-          <e p="NotFoundException.cs" t="Include" />
-          <e p="User" t="Include">
+          <e p="MessageEntity" t="Include">
+            <e p="Message.cs" t="Include" />
+          </e>
+          <e p="UserEntity" t="Include">
             <e p="IUserRepository.cs" t="Include" />
             <e p="User.cs" t="Include" />
-            <e p="UserNotFoundException.cs" t="Include" />
           </e>
         </e>
         <e p="Infrastructure" t="Include">
@@ -176,6 +185,8 @@
               <e p="MappingConversationListener.cs" t="Include" />
             </e>
             <e p="Mapping" t="Include">
+              <e p="AbstractChatMap.cs" t="Include" />
+              <e p="SingleChatMap.cs" t="Include" />
               <e p="UserMap.cs" t="Include" />
             </e>
             <e p="Repository" t="Include">

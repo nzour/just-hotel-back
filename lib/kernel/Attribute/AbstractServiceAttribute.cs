@@ -1,6 +1,6 @@
 using System;
 
-namespace kernel.Attribute
+namespace Kernel.Attribute
 {
     public abstract class AbstractServiceAttribute : System.Attribute
     {

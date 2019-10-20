@@ -1,10 +1,10 @@
-using app.Application.Abstraction;
-using app.Application.CQS.Auth.Exception;
-using app.Application.CQS.Auth.Input;
-using app.Application.CQS.Auth.Output;
-using app.Domain.User;
+using App.Application.Abstraction;
+using App.Application.CQS.Auth.Exception;
+using App.Application.CQS.Auth.Input;
+using App.Application.CQS.Auth.Output;
+using App.Domain.UserEntity;
 
-namespace app.Application.CQS.Auth.Command
+namespace App.Application.CQS.Auth.Command
 {
     public class SignInCommand
     {

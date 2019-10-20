@@ -1,11 +1,11 @@
 ﻿using System.IO;
-using app.Configuration.Middleware;
-using kernel;
+using _Kernel = Kernel.Kernel;
+using App.Configuration.Middleware;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace app
+namespace App
 {
     public class Startup
     {
@@ -20,7 +20,7 @@ namespace app
         {
             var envFile = $"{Directory.GetCurrentDirectory()}/environment.json";
 
-            var kernel = new Kernel(GetType().Assembly, services);
+            var kernel = new _Kernel(GetType().Assembly, services);
 
             kernel
                 .LoadEnvironmentVariables(envFile)

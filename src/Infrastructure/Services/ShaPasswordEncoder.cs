@@ -1,10 +1,10 @@
 using System;
 using System.Security.Cryptography;
 using System.Text;
-using app.Application.Abstraction;
-using kernel.Attribute;
+using App.Application.Abstraction;
+using Kernel.Attribute;
 
-namespace app.Infrastructure.Services
+namespace App.Infrastructure.Services
 {
     [Transient(typeof(IPasswordEncoder))]
     public class ShaPasswordEncoder : IPasswordEncoder

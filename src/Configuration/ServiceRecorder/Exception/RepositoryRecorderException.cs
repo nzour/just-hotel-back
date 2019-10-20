@@ -1,6 +1,6 @@
 using System;
 
-namespace app.Configuration.ServiceRecorder.Exception
+namespace App.Configuration.ServiceRecorder.Exception
 {
     public class RepositoryRecorderException : System.Exception
     {

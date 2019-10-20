@@ -1,10 +1,10 @@
-using app.Application.CQS.Auth.Command;
-using app.Application.CQS.Auth.Input;
-using app.Application.CQS.Auth.Output;
+using App.Application.CQS.Auth.Command;
+using App.Application.CQS.Auth.Input;
+using App.Application.CQS.Auth.Output;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
-namespace app.Application.Http
+namespace App.Application.Http
 {
     [AllowAnonymous]
     [Route("auth")]

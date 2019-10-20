@@ -4,15 +4,15 @@ using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Text.Json;
-using common.Extensions;
-using kernel.Abstraction;
-using kernel.Extension;
-using kernel.Internal;
-using kernel.Service;
+using Common.Extensions;
+using Kernel.Abstraction;
+using Kernel.Extension;
+using Kernel.Internal;
+using Kernel.Service;
 using Microsoft.AspNetCore.Mvc.Authorization;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace kernel
+namespace Kernel
 {
     public class Kernel
     {

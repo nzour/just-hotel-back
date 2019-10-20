@@ -2,7 +2,7 @@ using command_runner.Abstraction;
 using command_runner.Handler;
 using FluentMigrator.Runner;
 
-namespace cli.Commands.Util
+namespace Cli.Commands.Util
 {
     public class MigrateCommand : AbstractCommand
     {

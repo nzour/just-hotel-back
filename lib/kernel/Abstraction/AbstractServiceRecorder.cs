@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace kernel.Abstraction
+namespace Kernel.Abstraction
 {
     public abstract class AbstractServiceRecorder
     {

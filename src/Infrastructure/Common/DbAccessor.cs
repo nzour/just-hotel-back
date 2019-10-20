@@ -1,6 +1,6 @@
 using System;
 
-namespace app.Infrastructure.Common
+namespace App.Infrastructure.Common
 {
     /// <summary>
     /// Класс, знающий о данных для подключения к БД.

@@ -1,6 +1,6 @@
 using System;
 
-namespace common.Extensions
+namespace Common.Extensions
 {
     public static class NullAwareExtension
     {

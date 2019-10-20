@@ -1,10 +1,10 @@
 using System;
 using System.Threading.Tasks;
-using kernel.Attribute;
+using Kernel.Attribute;
 using Microsoft.AspNetCore.Http;
 using Newtonsoft.Json;
 
-namespace app.Configuration.Middleware
+namespace App.Configuration.Middleware
 {
     [Transient]
     public class ExceptionHandlingMiddleware : IMiddleware

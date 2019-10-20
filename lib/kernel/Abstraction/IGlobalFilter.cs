@@ -1,4 +1,4 @@
-namespace kernel.Abstraction
+namespace Kernel.Abstraction
 {
     public interface IGlobalFilter
     {

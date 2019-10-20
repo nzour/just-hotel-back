@@ -1,14 +1,14 @@
 using System;
-using kernel.Abstraction;
-using kernel.Extension;
-using kernel.Service;
+using Kernel.Abstraction;
+using Kernel.Extension;
+using Kernel.Service;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace app.Configuration.ServiceRecorder
+namespace App.Configuration.ServiceRecorder
 {
     public class CommandQueryRecorder : AbstractServiceRecorder
     {
-        private const string NamespacePattern = "app.Application.CQS";
+        private const string NamespacePattern = "App.Application.CQS";
         private const string QueryPattern = "Query";
         private const string CommandPattern = "Command";
 

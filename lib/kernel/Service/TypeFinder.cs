@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 
-namespace kernel.Service
+namespace Kernel.Service
 {
     public class TypeFinder
     {

@@ -2,7 +2,7 @@ using System.ComponentModel.DataAnnotations;
 
 #nullable disable
 
-namespace app.Application.CQS.Auth.Input
+namespace App.Application.CQS.Auth.Input
 {
     public class SignUpInput
     {

@@ -1,6 +1,6 @@
 #nullable disable
 
-namespace app.Domain.User
+namespace App.Domain.UserEntity
 {
     public class User : AbstractEntity
     {

@@ -1,7 +1,7 @@
 using System;
-using app.Domain;
+using App.Domain;
 
-namespace app.Infrastructure.NHibernate.Repository
+namespace App.Infrastructure.NHibernate.Repository
 {
     public class EntityRepository<T> : IEntityRepository<T> where T : class
     {
@@ -18,8 +18,15 @@ namespace app.Infrastructure.NHibernate.Repository
         }
 
         public T Get(Guid id)
-        {
-            return Transactional.Func(session => session.Get<T>(id));
+        { 
+            var entity = Transactional.Func(session => session.Get<T>(id));
+
+            if (entity == null)
+            {
+                throw new EntityNotFoundException<T>(id);
+            }
+
+            return entity;
         }
 
         public T Get(string id) => Get(new Guid(id));

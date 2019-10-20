@@ -2,14 +2,14 @@
 using command_runner.Handler.Console;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace command_runner
+namespace CommandRunner
 {
-    public class CommandRunner
+    public class MainRunner
     {
         public Assembly CliScope { get; }
         public IServiceCollection Services { get; }
 
-        public CommandRunner(Assembly cliScope, IServiceCollection services)
+        public MainRunner(Assembly cliScope, IServiceCollection services)
         {
             CliScope = cliScope;
             Services = services ?? new ServiceCollection();

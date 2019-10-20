@@ -1,4 +1,4 @@
-namespace app.Application.Abstraction
+namespace App.Application.Abstraction
 {
     public interface IPasswordEncoder
     {

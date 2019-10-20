@@ -1,13 +1,13 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using common.Extensions;
-using kernel.Abstraction;
-using kernel.Attribute;
-using kernel.Service;
+using Common.Extensions;
+using Kernel.Abstraction;
+using Kernel.Attribute;
+using Kernel.Service;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace kernel.Internal
+namespace Kernel.Internal
 {
     internal class ResolvingAttributeServiceRecorder : AbstractServiceRecorder
     {

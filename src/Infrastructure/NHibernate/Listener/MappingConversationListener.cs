@@ -1,4 +1,4 @@
-namespace app.Infrastructure.NHibernate.Listener
+namespace App.Infrastructure.NHibernate.Listener
 {
     public class MappingConversationListener
     {

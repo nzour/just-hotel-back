@@ -1,6 +1,6 @@
 using System;
 
-namespace app.Application.CQS.Auth.Output
+namespace App.Application.CQS.Auth.Output
 {
     public class SignInOutput
     {

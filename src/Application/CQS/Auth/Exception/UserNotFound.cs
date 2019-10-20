@@ -1,4 +1,4 @@
-namespace app.Application.CQS.Auth.Exception
+namespace App.Application.CQS.Auth.Exception
 {
     public class UserNotFound : System.Exception
     {

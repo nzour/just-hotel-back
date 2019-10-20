@@ -1,16 +1,16 @@
 using System;
-using app.Domain;
-using app.Infrastructure.Common;
-using app.Infrastructure.NHibernate;
+using App.Domain;
+using App.Infrastructure.Common;
+using App.Infrastructure.NHibernate;
 using FluentMigrator.Runner;
 using FluentNHibernate.Cfg;
 using FluentNHibernate.Cfg.Db;
-using kernel.Abstraction;
-using kernel.Service;
+using Kernel.Abstraction;
+using Kernel.Service;
 using Microsoft.Extensions.DependencyInjection;
 using NHibernate;
 
-namespace app.Configuration.ServiceRecorder
+namespace App.Configuration.ServiceRecorder
 {
     public class SessionFactoryRecorder : AbstractServiceRecorder
     {

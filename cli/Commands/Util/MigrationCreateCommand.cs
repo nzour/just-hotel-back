@@ -3,12 +3,12 @@ using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Text;
-using app;
+using App;
 using command_runner.Abstraction;
 using command_runner.Handler;
 using FluentMigrator;
 
-namespace cli.Commands.Util
+namespace Cli.Commands.Util
 {
     public class MigrationCreateCommand : AbstractCommand
     {

@@ -1,13 +1,13 @@
 using System;
 using System.Text;
-using app.Application.Abstraction;
-using app.Infrastructure.Services;
-using kernel.Abstraction;
+using App.Application.Abstraction;
+using App.Infrastructure.Services;
+using Kernel.Abstraction;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
 
-namespace app.Configuration.ServiceRecorder
+namespace App.Configuration.ServiceRecorder
 {
     public class JwtServiceRecorder : AbstractServiceRecorder
     {

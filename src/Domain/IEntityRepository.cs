@@ -1,6 +1,6 @@
 using System;
 
-namespace app.Domain
+namespace App.Domain
 {
     public interface IEntityRepository<T> where T : class
     {

@@ -1,6 +1,6 @@
 using System;
 
-namespace kernel.Attribute
+namespace Kernel.Attribute
 {
     public class SingletonAttribute : AbstractServiceAttribute
     {

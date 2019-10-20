@@ -1,7 +1,7 @@
 using System.IO;
-using app;
-using command_runner;
-using kernel;
+using App;
+using CommandRunner;
+using _Kernel = Kernel.Kernel;
 
 namespace cli
 {
@@ -11,13 +11,13 @@ namespace cli
         {
             var envFile = $"{Directory.GetCurrentDirectory()}/publish/environment.json";
 
-            var kernel = new Kernel(typeof(Startup).Assembly);
+            var kernel = new _Kernel(typeof(Startup).Assembly);
 
             kernel
                 .LoadEnvironmentVariables(envFile)
                 .Boot();
 
-            var commandRunner = new CommandRunner(typeof(CliProgram).Assembly, kernel.Services);
+            var commandRunner = new MainRunner(typeof(CliProgram).Assembly, kernel.Services);
             commandRunner.Execute(string.Join(" ", args));
         }
     }

@@ -1,17 +1,17 @@
 using System;
 using System.Linq;
 using System.Reflection;
-using app.Configuration.ServiceRecorder.Exception;
+using App.Configuration.ServiceRecorder.Exception;
 using FluentNHibernate.Conventions;
-using kernel.Abstraction;
-using kernel.Service;
+using Kernel.Abstraction;
+using Kernel.Service;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace app.Configuration.ServiceRecorder
+namespace App.Configuration.ServiceRecorder
 {
     public class RepositoryRecorder : AbstractServiceRecorder
     {
-        private const string NamespacePattern = "app.Domain";
+        private const string NamespacePattern = "App.Domain";
         private const string EndsWithPattern = "Repository";
 
         public TypeFinder TypeFinder { get; }

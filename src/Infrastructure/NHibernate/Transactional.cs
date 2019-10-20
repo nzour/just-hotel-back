@@ -1,7 +1,7 @@
 using System;
 using NHibernate;
 
-namespace app.Infrastructure.NHibernate
+namespace App.Infrastructure.NHibernate
 {
     /// <summary>
     /// Умеет оборачивать делегат в транзакцию

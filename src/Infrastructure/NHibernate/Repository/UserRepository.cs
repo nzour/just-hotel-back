@@ -1,8 +1,8 @@
 using System.Linq;
 using System.Threading.Tasks;
-using app.Domain.User;
+using App.Domain.UserEntity;
 
-namespace app.Infrastructure.NHibernate.Repository
+namespace App.Infrastructure.NHibernate.Repository
 {
     public class UserRepository : EntityRepository<User>, IUserRepository
     {

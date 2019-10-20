@@ -1,6 +1,6 @@
-using app.Domain.User;
+using App.Domain.UserEntity;
 
-namespace app.Application.Abstraction
+namespace App.Application.Abstraction
 {
     public interface IJwtTokenService
     {

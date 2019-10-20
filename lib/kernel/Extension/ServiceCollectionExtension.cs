@@ -1,7 +1,7 @@
 using System;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace kernel.Extension
+namespace Kernel.Extension
 {
     public static class ServiceCollectionExtension
     {

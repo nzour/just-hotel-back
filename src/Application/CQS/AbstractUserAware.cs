@@ -1,6 +1,6 @@
-using app.Domain.User;
+using App.Domain.UserEntity;
 
-namespace app.Application.CQS
+namespace App.Application.CQS
 {
     public abstract class AbstractUserAware
     {

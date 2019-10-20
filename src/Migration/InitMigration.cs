@@ -1,6 +1,6 @@
 using FluentMigrator;
 
-namespace app.Migration
+namespace App.Migration
 {
     [Migration(20190805001)]
     public class InitMigration : FluentMigrator.Migration

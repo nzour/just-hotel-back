@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
-using app.Application.Abstraction;
-using app.Domain.User;
+using App.Application.Abstraction;
+using App.Domain.UserEntity;
 using Microsoft.IdentityModel.Tokens;
 
-namespace app.Infrastructure.Services
+namespace App.Infrastructure.Services
 {
     public class JwtTokenService : IJwtTokenService
     {

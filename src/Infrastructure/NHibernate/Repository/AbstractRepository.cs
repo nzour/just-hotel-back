@@ -1,6 +1,6 @@
 using NHibernate;
 
-namespace app.Infrastructure.NHibernate.Repository
+namespace App.Infrastructure.NHibernate.Repository
 {
     public abstract class AbstractRepository
     {
