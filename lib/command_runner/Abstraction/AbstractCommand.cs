@@ -20,7 +20,7 @@ namespace command_runner.Abstraction
         /// <summary>
         /// Описание команды или null, при его отсутствии.
         /// </summary>
-        public virtual string GetDescription()
+        public virtual string? GetDescription()
         {
             return null;
         }

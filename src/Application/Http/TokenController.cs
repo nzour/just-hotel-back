@@ -6,10 +6,10 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace app.Application.Http
 {
-    [AllowAnonymous]
     [Route("token")]
     public class TokenController : Controller
     {
+        [AllowAnonymous]
         [HttpPost]
         public TokenOutput ObtainToken([FromServices] ObtainTokenQuery query, [FromBody] TokenInput input)
         {

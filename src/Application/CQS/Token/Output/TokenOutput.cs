@@ -1,12 +1,16 @@
 using System;
-using System.Collections.Generic;
 
 namespace app.Application.CQS.Token.Output
 {
     public class TokenOutput
     {
-        public string Token { get; set; }
-        public Guid UserId { get; set; }
-        public IEnumerable<string> Roles { get; set; }
+        public Guid UserId { get; }
+        public string Token { get; }
+
+        public TokenOutput(Guid userId, string token)
+        {
+            Token = token;
+            UserId = userId;
+        }
     }
 }

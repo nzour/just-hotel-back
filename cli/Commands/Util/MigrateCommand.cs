@@ -41,7 +41,7 @@ namespace cli.Commands.Util
             return "migrations:execute";
         }
 
-        public override string GetDescription()
+        public override string? GetDescription()
         {
             return "Накатит или откатит конкретную миграцию.";
         }

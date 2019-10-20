@@ -2,42 +2,9 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <LangVersion>8</LangVersion>
   </PropertyGroup>
-
-  <ItemGroup>
-    <_UnmanagedRegistrationCache Remove="obj\command_runner.csproj.UnmanagedRegistration.cache" />
-    <_UnmanagedRegistrationCache Remove="obj\command_runner.csproj.UnmanagedRegistration.cache" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <_ResolveComReferenceCache Remove="obj\Debug\netstandard2.0\command_runner.csproj.ResolveComReference.cache" />
-    <_ResolveComReferenceCache Remove="obj\Debug\netstandard2.0\command_runner.csproj.ResolveComReference.cache" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <IntermediateAssembly Remove="obj\Debug\netstandard2.0\command_runner.dll" />
-    <IntermediateAssembly Remove="obj\Debug\netstandard2.0\command_runner.dll" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <_DebugSymbolsIntermediatePath Remove="obj\Debug\netstandard2.0\command_runner.pdb" />
-    <_DebugSymbolsIntermediatePath Remove="obj\Debug\netstandard2.0\command_runner.pdb" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <_DeploymentManifestEntryPoint Remove="obj\Debug\netstandard2.0\command_runner.dll" />
-    <_DeploymentManifestEntryPoint Remove="obj\Debug\netstandard2.0\command_runner.dll" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ApplicationManifest Remove="obj\Debug\netstandard2.0\Native.command_runner.manifest" />
-    <ApplicationManifest Remove="obj\Debug\netstandard2.0\Native.command_runner.manifest" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <DeployManifest Remove="obj\Debug\netstandard2.0\command_runner.application" />
-    <DeployManifest Remove="obj\Debug\netstandard2.0\command_runner.application" />
-  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Authentication" Version="2.2.0" />

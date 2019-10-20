@@ -4,7 +4,6 @@ using System.Reflection;
 using app.Configuration.ServiceRecorder.Exception;
 using FluentNHibernate.Conventions;
 using kernel.Abstraction;
-using kernel.Extensions;
 using kernel.Service;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -15,14 +14,20 @@ namespace app.Configuration.ServiceRecorder
         private const string NamespacePattern = "app.Domain";
         private const string EndsWithPattern = "Repository";
 
+        public TypeFinder TypeFinder { get; }
+
+        public RepositoryRecorder(TypeFinder typeFinder)
+        {
+            TypeFinder = typeFinder;
+        }
+
         protected override void Execute(IServiceCollection services)
         {
-            var finder = services.GetService<TypeFinder>();
-            var interfaces = finder.FindTypes(IsRepositoryInterface);
+            var interfaces = TypeFinder.FindTypes(IsRepositoryInterface);
 
             foreach (var @interface in interfaces)
             {
-                var implementation = FindImplementation(@interface, finder);
+                var implementation = FindImplementation(@interface);
 
                 // Регистрируем реализацию репозитория
                 services.AddScoped(@interface, implementation);
@@ -34,7 +39,12 @@ namespace app.Configuration.ServiceRecorder
         /// </summary>
         private bool IsRepositoryInterface(Type type)
         {
-            return (bool) type.Namespace?.Contains(NamespacePattern) &&
+            if (null == type.Namespace)
+            {
+                return false;
+            }
+
+            return type.Namespace.Contains(NamespacePattern) &&
                    type.IsInterface && type.Name.EndsWith(EndsWithPattern);
         }
 
@@ -42,10 +52,11 @@ namespace app.Configuration.ServiceRecorder
         /// Поиск первой попавшейся реализации.
         /// Если реализации нет, выбросит исключение.
         /// </summary>
-        private TypeInfo FindImplementation(TypeInfo @interface, TypeFinder finder)
+        private TypeInfo FindImplementation(TypeInfo @interface)
         {
-            var implementations = finder
-                .FindTypes(type => type.IsClass && type.GetInterfaces().Contains(@interface));
+            var implementations = TypeFinder.FindTypes(type =>
+                type.IsClass && type.GetInterfaces().Contains(@interface)
+            );
 
             // todo: Сообщение выводится некорректно. Добавить нормальное логирование.
             return implementations.IsNotEmpty()

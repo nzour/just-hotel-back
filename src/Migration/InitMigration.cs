@@ -9,7 +9,7 @@ namespace app.Migration
         {
             Create.Table("users")
                 .WithColumn("id").AsGuid().PrimaryKey()
-                .WithColumn("name").AsString().NotNullable().Unique()
+                .WithColumn("name").AsString().NotNullable()
                 .WithColumn("login").AsString().NotNullable().Unique()
                 .WithColumn("password").AsString().NotNullable();
         }

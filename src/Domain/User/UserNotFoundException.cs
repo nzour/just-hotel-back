@@ -12,10 +12,5 @@ namespace app.Domain.User
         {
             return new UserNotFoundException($"User with id {id} was not found.");
         }
-
-        public static UserNotFoundException WithLogin(string login)
-        {
-            return new UserNotFoundException($"User with login {login} was not found.");
-        }
     }
 }

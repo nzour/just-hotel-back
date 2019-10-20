@@ -1,14 +1,14 @@
 using System;
+using System.Threading.Tasks;
 
 namespace app.Domain.User
 {
     public interface IUserRepository
     {
-        void CreateUser(User user);
+        Task CreateUserAsync(User user);
         
         User GetUser(Guid id);
 
-        /// <returns>User or null</returns>
-        User FindUserWithLogin(string login);
+        User? FindUserWithLoginAndPassword(string login, string encryptedPassword);
     }
 }

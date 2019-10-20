@@ -48,7 +48,7 @@ namespace cli.Commands.Util
                 .Where(t => t.IsSubclassOf(typeof(Migration)))
                 .Select(m => m.GetCustomAttribute<MigrationAttribute>()?.Version.ToString())
                 .OrderBy(v => v)
-                .LastOrDefault(v => v.StartsWith(version));
+                .LastOrDefault(v => v!.StartsWith(version));
 
             return null == lastVersion
                 ? version + "001"

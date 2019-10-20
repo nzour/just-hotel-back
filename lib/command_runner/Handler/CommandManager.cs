@@ -11,7 +11,7 @@ namespace command_runner.Handler
     {
         public IServiceCollection Services { get; }
         private Assembly CliScope { get; }
-        public IEnumerable<AbstractCommand> Commands { get; private set; }
+        public IEnumerable<AbstractCommand?> Commands { get; private set; } = new List<AbstractCommand>();
 
         internal CommandManager(Assembly cliScope, IServiceCollection services)
         {
@@ -23,7 +23,7 @@ namespace command_runner.Handler
 
         public bool HasCommand(string name)
         {
-            return null != Commands.First(c => c.GetName() == name);
+            return null != Commands.First(c => c!.GetName() == name);
         }
 
         public void RunCommand(string name, string[] arguments)
@@ -31,7 +31,7 @@ namespace command_runner.Handler
             GetCommand(name).Execute(new ArgumentProvider(arguments));
         }
 
-        public string GetCommandDescription(string name)
+        public string? GetCommandDescription(string name)
         {
             return GetCommand(name).GetDescription();
         }
@@ -69,7 +69,7 @@ namespace command_runner.Handler
             {
                 return result;
             }
-            
+
             for (var i = 1; i < count; i++)
             {
                 if (Equals(array[i].GetName(), array[i - 1].GetName()))
@@ -83,7 +83,7 @@ namespace command_runner.Handler
 
         private AbstractCommand GetCommand(string name)
         {
-            var foundCommand = Commands.First(c => c.GetName() == name);
+            var foundCommand = Commands.First(c => c!.GetName() == name);
 
             if (null == foundCommand)
             {

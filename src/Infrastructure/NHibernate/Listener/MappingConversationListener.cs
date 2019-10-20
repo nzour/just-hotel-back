@@ -1,7 +1,6 @@
-namespace app.Infrastructure.NHibernate.EventHandler
+namespace app.Infrastructure.NHibernate.Listener
 {
-    public class MappingConversationEventHandler
+    public class MappingConversationListener
     {
-        
     }
 }

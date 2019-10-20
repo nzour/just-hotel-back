@@ -5,7 +5,6 @@ using System.Security.Claims;
 using System.Text;
 using app.Application.Abstraction;
 using app.Domain.User;
-using Microsoft.EntityFrameworkCore.Internal;
 using Microsoft.IdentityModel.Tokens;
 
 namespace app.Infrastructure.Services
@@ -13,11 +12,11 @@ namespace app.Infrastructure.Services
     public class JwtTokenService : IJwtTokenService
     {
         private JwtSecurityTokenHandler TokenHandler { get; } = new JwtSecurityTokenHandler();
-        private Func<User, IEnumerable<Claim>> ClaimsGenerator { get; set; }
+        private Func<User, IEnumerable<Claim>>? ClaimsGenerator { get; set; }
         
         public string CreateToken(User user)
         {
-            var key = Encoding.UTF8.GetBytes(Environment.GetEnvironmentVariable("TOKEN_SECRET_KEY"));
+            var key = Encoding.UTF8.GetBytes(Environment.GetEnvironmentVariable("TOKEN_SECRET_KEY") ?? "");
 
             var claims = null != ClaimsGenerator ? ClaimsGenerator.Invoke(user) : CreateDefaultClaims(user);
             
@@ -27,7 +26,7 @@ namespace app.Infrastructure.Services
                 Audience = null,
                 IssuedAt = DateTime.UtcNow,
                 NotBefore = DateTime.UtcNow,
-                Expires = DateTime.UtcNow.AddSeconds(Convert.ToDouble(Environment.GetEnvironmentVariable("TOKE_TTL"))),
+                Expires = DateTime.UtcNow.AddSeconds(Convert.ToDouble(Environment.GetEnvironmentVariable("TOKE_TTL") ?? "")),
                 SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature),
                 Subject = new ClaimsIdentity(claims)
             };
@@ -46,8 +45,7 @@ namespace app.Infrastructure.Services
             {
                 new Claim("userId", user.Id.ToString()),
                 new Claim("login", user.Login),
-                new Claim("name", user.Name),
-                new Claim("roles", user.Roles.Join(","))
+                new Claim("name", user.Name)
             };
         }
     }

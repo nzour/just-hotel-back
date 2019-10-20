@@ -6,7 +6,6 @@ using FluentMigrator.Runner;
 using FluentNHibernate.Cfg;
 using FluentNHibernate.Cfg.Db;
 using kernel.Abstraction;
-using kernel.Extensions;
 using kernel.Service;
 using Microsoft.Extensions.DependencyInjection;
 using NHibernate;
@@ -15,12 +14,15 @@ namespace app.Configuration.ServiceRecorder
 {
     public class SessionFactoryRecorder : AbstractServiceRecorder
     {
-        private TypeFinder TypeFinder { get; set; }
+        private TypeFinder TypeFinder { get; }
+
+        public SessionFactoryRecorder(TypeFinder typeFinder)
+        {
+            TypeFinder = typeFinder;
+        }
 
         protected override void Execute(IServiceCollection services)
         {
-            TypeFinder = services.GetService<TypeFinder>();
-
             var fluentConfiguration = Fluently.Configure()
                 .Database(PostgreSQLConfiguration.PostgreSQL82
                     // Понятия не имею что это и для чего. Но без этого не работает ¯\_(ツ)_/¯
@@ -32,7 +34,7 @@ namespace app.Configuration.ServiceRecorder
             var sessionFactory = fluentConfiguration.BuildSessionFactory();
 
             services.AddSingleton(typeof(ISessionFactory), sessionFactory);
-            services.AddSingleton(typeof(Transactional), new Transactional(sessionFactory));
+            services.AddSingleton(new Transactional(sessionFactory));
 
             services.AddFluentMigratorCore()
                 .ConfigureRunner(runner => runner

@@ -1,16 +1,16 @@
 using System;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace kernel.Extensions
+namespace kernel.Extension
 {
     public static class ServiceCollectionExtension
     {
-        public static T GetService<T>(this IServiceCollection services) where T : class
+        public static T? GetService<T>(this IServiceCollection services) where T : class
         {
             return services.BuildServiceProvider().GetService(typeof(T)) as T;
         }
 
-        public static TCast GetService<TCast>(this IServiceCollection services, Type type) where TCast : class
+        public static TCast? GetService<TCast>(this IServiceCollection services, Type type) where TCast : class
         {
             return services.BuildServiceProvider().GetService(type) as TCast;
         }

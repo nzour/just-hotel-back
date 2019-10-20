@@ -5,7 +5,7 @@ namespace command_runner.Handler.Console
     public class ConsoleArgs
     {
         public string Key { get; }
-        public string Action { get; }
+        public string? Action { get; }
         public string[] Arguments { get; }
 
         public ConsoleArgs(string consoleLine)

@@ -1,4 +1,5 @@
 using System;
+using System.Threading.Tasks;
 using app.Domain.User;
 using common.Extensions;
 
@@ -10,9 +11,9 @@ namespace app.Infrastructure.NHibernate.Repository
         {
         }
 
-        public void CreateUser(User user)
+        public async Task CreateUserAsync(User user)
         {
-            Transactional.Action(session => session.Save(user));
+            await Task.Run(() => Transactional.Action(session => session.Save(user))) ;
         }
 
         public User GetUser(Guid id)
@@ -24,12 +25,12 @@ namespace app.Infrastructure.NHibernate.Repository
             });
         }
 
-        public User FindUserWithLogin(string login)
+        public User FindUserWithLoginAndPassword(string login, string encryptedPassword)
         {
             return Transactional.WithSession(session =>
             {
                 return session.QueryOver<User>()
-                    .Where(u => login == u.Login)
+                    .Where(u => login == u.Login && encryptedPassword == u.Password)
                     .SingleOrDefault();
             });
         }

@@ -1,10 +1,12 @@
 using System;
 using System.Threading.Tasks;
+using kernel.Attribute;
 using Microsoft.AspNetCore.Http;
 using Newtonsoft.Json;
 
 namespace app.Configuration.Middleware
 {
+    [Transient]
     public class ExceptionHandlingMiddleware : IMiddleware
     {
         public async Task InvokeAsync(HttpContext context, RequestDelegate next)

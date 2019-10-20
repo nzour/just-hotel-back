@@ -22,7 +22,7 @@ namespace app.Configuration.ServiceRecorder
                 })
                 .AddJwtBearer(options =>
                 {
-                    var key = Encoding.UTF8.GetBytes(Environment.GetEnvironmentVariable("TOKEN_SECRET_KEY"));
+                    var key = Encoding.UTF8.GetBytes(Environment.GetEnvironmentVariable("TOKEN_SECRET_KEY") ?? "");
                     options.TokenValidationParameters = new TokenValidationParameters
                     {
                         RequireExpirationTime = true,

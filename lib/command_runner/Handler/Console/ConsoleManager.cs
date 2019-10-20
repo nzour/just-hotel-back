@@ -52,9 +52,9 @@ namespace command_runner.Handler.Console
             var commandList = string.Join(", ", CommandManager.Commands.Select(c => c.GetName()));
 
             Scripts.Add("help", args => DisplayDefaultScripts());
-            Scripts.Add("command", args => CommandManager.RunCommand(args.Action, args.Arguments));
+            Scripts.Add("command", args => CommandManager.RunCommand(args.Action ?? "", args.Arguments));
             Scripts.Add("commands", args => System.Console.WriteLine($"Зарегистрированные команды: {commandList}"));
-            Scripts.Add("info", args => System.Console.Write(CommandManager.GetCommandDescription(args.Action)));
+            Scripts.Add("info", args => System.Console.WriteLine(CommandManager.GetCommandDescription(args.Action ?? "") ?? "No description"));
         }
 
         private void DisplayDefaultScripts()

@@ -1,6 +1,6 @@
 using System;
 using kernel.Abstraction;
-using kernel.Extensions;
+using kernel.Extension;
 using kernel.Service;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -15,7 +15,7 @@ namespace app.Configuration.ServiceRecorder
         protected override void Execute(IServiceCollection services)
         {
             var actions = services
-                .GetService<TypeFinder>()
+                .GetService<TypeFinder>()!
                 .FindTypes(IsCommandOrQuery);
 
             foreach (var action in actions)
@@ -26,7 +26,12 @@ namespace app.Configuration.ServiceRecorder
 
         private bool IsCommandOrQuery(Type type)
         {
-            return (bool) type.Namespace?.Contains(NamespacePattern) &&
+            if (null == type.Namespace)
+            {
+                return false;
+            }
+
+            return type.Namespace.Contains(NamespacePattern) &&
                    (type.Name.EndsWith(QueryPattern) || type.Name.EndsWith(CommandPattern));
         }
     }

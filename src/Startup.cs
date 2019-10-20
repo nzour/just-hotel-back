@@ -1,9 +1,7 @@
 ﻿using System.IO;
 using app.Configuration.Middleware;
 using kernel;
-using Microsoft.AspNetCore.Authorization.Policy;
 using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -24,32 +22,23 @@ namespace app
 
             var kernel = new Kernel(GetType().Assembly, services);
 
-            kernel.Boot();
             kernel.LoadEnvironmentVariables(envFile);
+            kernel.Boot();
 
             services.AddTransient<ExceptionHandlingMiddleware>();
-            services.AddMvc();
 
             services.AddCors();
         }
 
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        public void Configure(IApplicationBuilder app)
         {
-            if (env.IsDevelopment())
-            {
-                app.UseCors(builder => builder.WithOrigins("http://localhost:4200"));
-            }
-            else
-            {
-                // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
-                app.UseHsts();
-            }
-
-            app.UseMiddleware<ExceptionHandlingMiddleware>();
-
             app.UseDefaultFiles()
+                .UseCors(builder => builder.WithOrigins("http://localhost:4200"))
+                .UseMiddleware<ExceptionHandlingMiddleware>()
                 .UseAuthentication()
-                .UseMvc();
+                .UseHsts()
+                .UseRouting()
+                .UseEndpoints(endpoints => endpoints.MapControllers());
         }
     }
 }

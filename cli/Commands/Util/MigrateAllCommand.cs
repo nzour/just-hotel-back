@@ -23,7 +23,7 @@ namespace cli.Commands.Util
             return "migrations:migrate";
         }
 
-        public override string GetDescription()
+        public override string? GetDescription()
         {
             return "Накатит все миграции, которые не были накатаны ранее, на текущую архитектуру БД.";
         }

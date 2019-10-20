@@ -21,7 +21,7 @@ namespace command_runner.Handler
             return DefinedArguments.Length > Position;
         }
 
-        public long NextAsLong(IEnumerable<long> shouldBe = null)
+        public long NextAsLong(IEnumerable<long>? shouldBe = null)
         {
             var value = Next(() => Convert.ToInt64(DefinedArguments[Position]));
 
@@ -30,7 +30,7 @@ namespace command_runner.Handler
             return value;
         }
         
-        public int NextAsInt(IEnumerable<int> shouldBe = null)
+        public int NextAsInt(IEnumerable<int>? shouldBe = null)
         {
             var value = Next(() => Convert.ToInt32(DefinedArguments[Position]));
 
@@ -39,7 +39,7 @@ namespace command_runner.Handler
             return value;
         }
 
-        public string NextAsString(IEnumerable<string> shouldBe = null)
+        public string NextAsString(IEnumerable<string>? shouldBe = null)
         {
             var value = Next(() => Convert.ToString(DefinedArguments[Position]));
             
@@ -48,7 +48,7 @@ namespace command_runner.Handler
             return value;
         }
 
-        public double NextAsDouble(IEnumerable<double> shouldBe = null)
+        public double NextAsDouble(IEnumerable<double>? shouldBe = null)
         {
             var value = Next(() => Convert.ToDouble(DefinedArguments[Position]));
             
@@ -57,7 +57,7 @@ namespace command_runner.Handler
             return value;
         }
 
-        public bool NextAsBool(IEnumerable<bool> shouldBe = null)
+        public bool NextAsBool(IEnumerable<bool>? shouldBe = null)
         {
             var value = Next(() => Convert.ToBoolean(DefinedArguments[Position]));
             
@@ -88,7 +88,7 @@ namespace command_runner.Handler
             }   
         }
 
-        private void AssertContains<T>(IEnumerable<T> expected, T actual)
+        private void AssertContains<T>(IEnumerable<T>? expected, T actual)
         {
             if (null == expected)
             {
