@@ -153,6 +153,7 @@
             <e p="Exception" t="Include">
               <e p="RepositoryRecorderException.cs" t="Include" />
             </e>
+            <e p="IgnoreMappingAttribute.cs" t="Include" />
             <e p="JwtServiceRecorder.cs" t="Include" />
             <e p="RepositoryRecorder.cs" t="Include" />
             <e p="SessionFactoryRecorder.cs" t="Include" />
@@ -164,6 +165,7 @@
             <e p="AbstractChat.cs" t="Include" />
             <e p="CantAddMessageException.cs" t="Include" />
             <e p="GroupChat.cs" t="Include" />
+            <e p="IChatRepository.cs" t="Include" />
             <e p="SingleChat.cs" t="Include" />
           </e>
           <e p="EntityNotFoundException.cs" t="Include" />
@@ -181,16 +183,15 @@
             <e p="DbAccessor.cs" t="Include" />
           </e>
           <e p="NHibernate" t="Include">
-            <e p="Listener" t="Include">
-              <e p="MappingConversationListener.cs" t="Include" />
-            </e>
             <e p="Mapping" t="Include">
               <e p="AbstractChatMap.cs" t="Include" />
+              <e p="GroupChatMap.cs" t="Include" />
+              <e p="MessageMap.cs" t="Include" />
               <e p="SingleChatMap.cs" t="Include" />
               <e p="UserMap.cs" t="Include" />
             </e>
             <e p="Repository" t="Include">
-              <e p="AbstractRepository.cs" t="Include" />
+              <e p="ChatRepository.cs" t="Include" />
               <e p="EntityRepository.cs" t="Include" />
               <e p="UserRepository.cs" t="Include" />
             </e>
@@ -203,6 +204,7 @@
         </e>
         <e p="Migration" t="Include">
           <e p="InitMigration.cs" t="Include" />
+          <e p="Migration20191020001.cs" t="Include" />
         </e>
         <e p="Program.cs" t="Include" />
         <e p="Properties" t="Include">

@@ -9,10 +9,11 @@ namespace App.Infrastructure.NHibernate.Mapping
         {
             Table("Users");
             Id(x => x.Id).Column("Id");
-            Map(x => x.FirstName).Column("FirstName");
-            Map(x => x.LastName).Column("LastName");
-            Map(x => x.Login).Column("Login").Unique();
-            Map(x => x.Password).Column("Password");
+            
+            Map(x => x.FirstName).Column("FirstName").Not.Nullable();
+            Map(x => x.LastName).Column("LastName").Not.Nullable();
+            Map(x => x.Login).Column("Login").Not.Nullable().Unique();
+            Map(x => x.Password).Column("Password").Not.Nullable();
         }
     }
 }

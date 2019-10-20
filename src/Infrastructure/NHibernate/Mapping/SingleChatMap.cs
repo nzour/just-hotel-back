@@ -3,12 +3,13 @@ using FluentNHibernate.Mapping;
 
 namespace App.Infrastructure.NHibernate.Mapping
 {
-    public class SingleChatMap : ClassMap<SingleChat>
+    public class SingleChatMap : SubclassMap<SingleChat>
     {
         public SingleChatMap()
         {
-            Table("SingleChat");
-            Id(x => x.Id);
+            Table("SingleChats");
+
+            DiscriminatorValue(ChatType.Single);
         }
     }
 }

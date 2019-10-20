@@ -1,4 +1,6 @@
 using System;
+using System.Linq;
+using System.Reflection;
 using App.Domain;
 using App.Infrastructure.Common;
 using App.Infrastructure.NHibernate;
@@ -55,7 +57,7 @@ namespace App.Configuration.ServiceRecorder
 
             foreach (var entity in entities)
             {
-                if (entity.IsAbstract || entity.IsInterface)
+                if (MustIgnoreEntity(entity))
                 {
                     RegisterEntitiesRecursively(configuration, entity);
                 }
@@ -65,6 +67,11 @@ namespace App.Configuration.ServiceRecorder
                     RegisterEntitiesRecursively(configuration, entity);
                 }
             }
+        }
+
+        private bool MustIgnoreEntity(TypeInfo entity)
+        {
+            return entity.IsInterface || entity.GetCustomAttributes(true).Contains(new IgnoreMappingAttribute());
         }
     }
 }

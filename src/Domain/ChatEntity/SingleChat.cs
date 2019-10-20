@@ -1,22 +1,20 @@
-using App.Domain.MessageEntity;
+using System.Linq;
 using App.Domain.UserEntity;
+
+#nullable disable
 
 namespace App.Domain.ChatEntity
 {
     public class SingleChat : AbstractChat
     {
-        public User First { get; private set; }
-        public User Second { get; private set; }
+        public User First => Members.First();
+        public User Second => Members.Last();
 
         public SingleChat(User first, User second) : base(ChatType.Single)
         {
-            First = first;
-            Second = second;
-        }
-
-        public override bool CanAddMessage(Message message)
-        {
-            return First == message.Sender || Second == message.Sender;
+            Members
+                .Append(first)
+                .Append(second);
         }
     }
 }
