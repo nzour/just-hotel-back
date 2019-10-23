@@ -8,12 +8,13 @@ namespace App.Infrastructure.NHibernate.Mapping
         public UserMap()
         {
             Table("Users");
-            Id(x => x.Id).Column("Id");
-            
-            Map(x => x.FirstName).Column("FirstName").Not.Nullable();
-            Map(x => x.LastName).Column("LastName").Not.Nullable();
-            Map(x => x.Login).Column("Login").Not.Nullable().Unique();
-            Map(x => x.Password).Column("Password").Not.Nullable();
+            Id(x => x.Id);
+
+            Map(x => x.FirstName).Not.Nullable();
+            Map(x => x.LastName).Not.Nullable();
+            Map(x => x.Login).Not.Nullable().Unique();
+            Map(x => x.Password).Not.Nullable();
+            Map(x => x.Role).Not.Nullable();
         }
     }
 }

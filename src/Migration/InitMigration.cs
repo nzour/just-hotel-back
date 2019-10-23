@@ -12,7 +12,8 @@ namespace App.Migration
                 .WithColumn("FirstName").AsString().NotNullable()
                 .WithColumn("LastName").AsString().NotNullable()
                 .WithColumn("Login").AsString().NotNullable().Unique()
-                .WithColumn("Password").AsString().NotNullable();
+                .WithColumn("Password").AsString().NotNullable()
+                .WithColumn("Role").AsString().NotNullable();
         }
 
         public override void Down()

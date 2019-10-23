@@ -161,18 +161,8 @@
         </e>
         <e p="Domain" t="Include">
           <e p="AbstractEntity.cs" t="Include" />
-          <e p="ChatEntity" t="Include">
-            <e p="AbstractChat.cs" t="Include" />
-            <e p="CantAddMessageException.cs" t="Include" />
-            <e p="GroupChat.cs" t="Include" />
-            <e p="IChatRepository.cs" t="Include" />
-            <e p="SingleChat.cs" t="Include" />
-          </e>
           <e p="EntityNotFoundException.cs" t="Include" />
           <e p="IEntityRepository.cs" t="Include" />
-          <e p="MessageEntity" t="Include">
-            <e p="Message.cs" t="Include" />
-          </e>
           <e p="UserEntity" t="Include">
             <e p="IUserRepository.cs" t="Include" />
             <e p="User.cs" t="Include" />
@@ -184,14 +174,10 @@
           </e>
           <e p="NHibernate" t="Include">
             <e p="Mapping" t="Include">
-              <e p="AbstractChatMap.cs" t="Include" />
-              <e p="GroupChatMap.cs" t="Include" />
-              <e p="MessageMap.cs" t="Include" />
-              <e p="SingleChatMap.cs" t="Include" />
               <e p="UserMap.cs" t="Include" />
             </e>
+            <e p="PostgresNamingStrategy.cs" t="Include" />
             <e p="Repository" t="Include">
-              <e p="ChatRepository.cs" t="Include" />
               <e p="EntityRepository.cs" t="Include" />
               <e p="UserRepository.cs" t="Include" />
             </e>
@@ -204,7 +190,6 @@
         </e>
         <e p="Migration" t="Include">
           <e p="InitMigration.cs" t="Include" />
-          <e p="Migration20191020001.cs" t="Include" />
         </e>
         <e p="Program.cs" t="Include" />
         <e p="Properties" t="Include">

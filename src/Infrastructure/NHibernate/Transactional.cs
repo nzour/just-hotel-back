@@ -40,6 +40,7 @@ namespace App.Infrastructure.NHibernate
             finally
             {
                 session.Transaction.Dispose();
+                session.Dispose();
             }
         }
 
@@ -65,6 +66,7 @@ namespace App.Infrastructure.NHibernate
             finally
             {
                 session.Transaction.Dispose();
+                session.Dispose();
             }
         }
 

@@ -1,4 +1,5 @@
 using System;
+using System.Threading.Tasks;
 
 namespace App.Domain
 {
@@ -9,5 +10,6 @@ namespace App.Domain
         T Get(string id);
 
         void Save(params T[] entities);
+        void SaveAsync(params T[] entities);
     }
 }

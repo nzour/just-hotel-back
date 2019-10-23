@@ -20,6 +20,8 @@ namespace App.Infrastructure.Common
         // Пароль
         public static string Password => Environment.GetEnvironmentVariable("DB_PASSWORD") ?? "";
 
+        public static string Schema => Environment.GetEnvironmentVariable("DB_SCHEMA") ?? "";
+
         // Готовая строка для connecion к БД.
         public static string ConnectionString => $"Server={Host};Port=5432;Database={Database};User Id={User};Password={Password};";
     }

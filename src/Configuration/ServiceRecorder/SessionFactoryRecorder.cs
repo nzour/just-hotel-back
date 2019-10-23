@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using App.Domain;
@@ -11,11 +12,14 @@ using Kernel.Abstraction;
 using Kernel.Service;
 using Microsoft.Extensions.DependencyInjection;
 using NHibernate;
+using NHibernateConfiguration = NHibernate.Cfg.Configuration;
 
 namespace App.Configuration.ServiceRecorder
 {
     public class SessionFactoryRecorder : AbstractServiceRecorder
     {
+        private IEnumerable<TypeInfo> IgnoredEntities => new[] { typeof(AbstractEntity).GetTypeInfo() };
+
         private TypeFinder TypeFinder { get; }
 
         public SessionFactoryRecorder(TypeFinder typeFinder)
@@ -25,24 +29,29 @@ namespace App.Configuration.ServiceRecorder
 
         protected override void Execute(IServiceCollection services)
         {
-            var fluentConfiguration = Fluently.Configure()
-                .Database(PostgreSQLConfiguration.PostgreSQL82
-                    // Понятия не имею что это и для чего. Но без этого не работает ¯\_(ツ)_/¯
-                    .Raw("hbm2ddl.keywords", "none")
-                    .ConnectionString(DbAccessor.ConnectionString));
+            var configuration = new NHibernateConfiguration().SetNamingStrategy(new PostgresNamingStrategy());
+
+            var fluentConfiguration = Fluently.Configure(configuration)
+                .Database(
+                    PostgreSQLConfiguration.PostgreSQL82
+                        .DefaultSchema(DbAccessor.Schema)
+                        .ConnectionString(DbAccessor.ConnectionString)
+                );
 
             RegisterEntitiesRecursively(fluentConfiguration, typeof(AbstractEntity));
 
-            var sessionFactory = fluentConfiguration.BuildSessionFactory();
+            ISessionFactory sessionFactory = fluentConfiguration.BuildSessionFactory();
 
             services.AddSingleton(typeof(ISessionFactory), sessionFactory);
             services.AddSingleton(new Transactional(sessionFactory));
 
             services.AddFluentMigratorCore()
-                .ConfigureRunner(runner => runner
-                    .AddPostgres()
-                    .WithGlobalConnectionString(DbAccessor.ConnectionString)
-                    .ScanIn(TypeFinder.ApplicationScope).For.Migrations())
+                .ConfigureRunner(
+                    runner => runner
+                        .AddPostgres()
+                        .WithGlobalConnectionString(DbAccessor.ConnectionString)
+                        .ScanIn(TypeFinder.ApplicationScope).For.Migrations()
+                )
                 .AddLogging(logBuilder => logBuilder.AddFluentMigratorConsole());
         }
 
@@ -59,19 +68,17 @@ namespace App.Configuration.ServiceRecorder
             {
                 if (MustIgnoreEntity(entity))
                 {
-                    RegisterEntitiesRecursively(configuration, entity);
+                    continue;
                 }
-                else
-                {
-                    configuration.Mappings(cfg => cfg.FluentMappings.AddFromAssembly(entity.Assembly));
-                    RegisterEntitiesRecursively(configuration, entity);
-                }
+
+                configuration.Mappings(cfg => cfg.FluentMappings.AddFromAssembly(entity.Assembly));
+                RegisterEntitiesRecursively(configuration, entity);
             }
         }
 
         private bool MustIgnoreEntity(TypeInfo entity)
         {
-            return entity.IsInterface || entity.GetCustomAttributes(true).Contains(new IgnoreMappingAttribute());
+            return entity.IsInterface || IgnoredEntities.Contains(entity);
         }
     }
 }

@@ -8,12 +8,11 @@ namespace App.Application.CQS.Auth.Command
 {
     public class SignUpCommand
     {
-        public IUserRepository UserRepository { get; }
-        public IPasswordEncoder PasswordEncoder { get; }
-        public SignInCommand SignInCommand { get; }
+        private IUserRepository UserRepository { get; }
+        private IPasswordEncoder PasswordEncoder { get; }
+        private SignInCommand SignInCommand { get; }
 
-        public SignUpCommand(IUserRepository userRepository, IPasswordEncoder passwordEncoder,
-            SignInCommand signInCommand)
+        public SignUpCommand(IUserRepository userRepository, IPasswordEncoder passwordEncoder, SignInCommand signInCommand)
         {
             UserRepository = userRepository;
             PasswordEncoder = passwordEncoder;
@@ -25,9 +24,9 @@ namespace App.Application.CQS.Auth.Command
             AssertLoginIsNotBusy(input.Login);
 
             var encryptedPassword = PasswordEncoder.Encrypt(input.Password);
-            var user = new User(input.FirstName, input.LastName, input.Login, encryptedPassword);
+            var user = new User(input.FirstName, input.LastName, input.Login, encryptedPassword, UserRole.Client);
 
-            UserRepository.CreateUserAsync(user);
+            UserRepository.CreateUser(user);
 
             return SignInCommand.Execute(new SignInInput(user.Login, user.Password));
         }

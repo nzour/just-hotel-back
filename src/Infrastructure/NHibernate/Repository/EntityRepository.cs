@@ -1,24 +1,30 @@
 using System;
 using App.Domain;
+using NHibernate;
 
 namespace App.Infrastructure.NHibernate.Repository
 {
     public class EntityRepository<T> : IEntityRepository<T> where T : class
     {
         public Transactional Transactional { get; }
-
-        public EntityRepository(Transactional transactional)
+        public ISessionFactory SessionFactory { get; }
+        public EntityRepository(Transactional transactional, ISessionFactory sessionFactory)
         {
             Transactional = transactional;
+            SessionFactory = sessionFactory;
         }
 
         public void Save(T entity)
         {
-            Transactional.Action(session => session.Save(entity));
+            var session = SessionFactory.OpenSession();
+
+            session.SaveOrUpdate(entity);
+
+            session.Flush();
         }
 
         public T Get(Guid id)
-        { 
+        {
             var entity = Transactional.Func(session => session.Get<T>(id));
 
             if (entity == null)
@@ -37,7 +43,18 @@ namespace App.Infrastructure.NHibernate.Repository
             {
                 foreach (var entity in entities)
                 {
-                    session.Save(entity);
+                    session.SaveOrUpdate(entity);
+                }
+            });
+        }
+
+        public void SaveAsync(params T[] entities)
+        {
+            Transactional.Action(session =>
+            {
+                foreach (var entity in entities)
+                {
+                    session.SaveOrUpdateAsync(entity);
                 }
             });
         }
