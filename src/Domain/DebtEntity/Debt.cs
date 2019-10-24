@@ -20,6 +20,8 @@ namespace App.Domain.DebtEntity
 
         public Debt(User debtor, Room room, int? money = null)
         {
+            Identify();
+
             if (UserRole.Client != Debtor.Role)
             {
                 throw new DebtException($"Debtor must be with role '{UserRole.Client}', specified '{debtor.Role}'.");

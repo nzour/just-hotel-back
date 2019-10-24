@@ -8,11 +8,5 @@ namespace App.Domain.RoomEntity
         public DateTime? DateTo { get; set; }
 
         public bool IsSomeEmpty => null == DateFrom || null == DateTo;
-
-        public void Deconstruct(out DateTime? from, out DateTime? to)
-        {
-            from = DateFrom;
-            to = DateTo;
-        }
     }
 }
