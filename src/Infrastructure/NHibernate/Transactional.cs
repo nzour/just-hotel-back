@@ -19,7 +19,7 @@ namespace App.Infrastructure.NHibernate
         /// Обернет делегат в транзакцию и вернет результат выполнения делегата.
         /// </summary>
         /// <param name="function">Делегат, который произойдет внутри транзакции</param>
-        /// <typeparam name="T">Тип, который вернет делегат</typeparam>
+        /// <typeparam name="TResult">Тип, который вернет делегат</typeparam>
         public TResult Action<TResult>(Func<ISession, TResult> function)
         {
             var session = Begin();

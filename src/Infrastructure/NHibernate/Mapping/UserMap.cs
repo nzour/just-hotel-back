@@ -7,6 +7,8 @@ namespace App.Infrastructure.NHibernate.Mapping
     {
         public UserMap()
         {
+            Not.LazyLoad();
+
             Table("Users");
             Id(x => x.Id);
 

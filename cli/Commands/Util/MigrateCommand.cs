@@ -32,10 +32,9 @@ namespace Cli.Commands.Util
             }
             else
             {
-                Runner.MigrateDown(version);
+                Runner.RollbackToVersion(version);
             }
         }
-
         public override string GetName()
         {
             return "migrations:execute";

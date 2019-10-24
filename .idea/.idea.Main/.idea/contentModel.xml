@@ -161,8 +161,20 @@
         </e>
         <e p="Domain" t="Include">
           <e p="AbstractEntity.cs" t="Include" />
+          <e p="DebtEntity" t="Include">
+            <e p="Debt.cs" t="Include" />
+            <e p="DebtException.cs" t="Include" />
+            <e p="IDebtRepository.cs" t="Include" />
+          </e>
           <e p="EntityNotFoundException.cs" t="Include" />
           <e p="IEntityRepository.cs" t="Include" />
+          <e p="RoomEntity" t="Include">
+            <e p="IRoomRepository.cs" t="Include" />
+            <e p="RentalDates.cs" t="Include" />
+            <e p="Room.cs" t="Include" />
+            <e p="RoomAssertion.cs" t="Include" />
+            <e p="RoomException.cs" t="Include" />
+          </e>
           <e p="UserEntity" t="Include">
             <e p="IUserRepository.cs" t="Include" />
             <e p="User.cs" t="Include" />
@@ -174,11 +186,15 @@
           </e>
           <e p="NHibernate" t="Include">
             <e p="Mapping" t="Include">
+              <e p="DebtMap.cs" t="Include" />
+              <e p="RoomMap.cs" t="Include" />
               <e p="UserMap.cs" t="Include" />
             </e>
             <e p="PostgresNamingStrategy.cs" t="Include" />
             <e p="Repository" t="Include">
+              <e p="DebtRepository.cs" t="Include" />
               <e p="EntityRepository.cs" t="Include" />
+              <e p="RoomRepository.cs" t="Include" />
               <e p="UserRepository.cs" t="Include" />
             </e>
             <e p="Transactional.cs" t="Include" />
@@ -190,6 +206,8 @@
         </e>
         <e p="Migration" t="Include">
           <e p="InitMigration.cs" t="Include" />
+          <e p="Migration20191024001.cs" t="Include" />
+          <e p="Migration20191025001.cs" t="Include" />
         </e>
         <e p="Program.cs" t="Include" />
         <e p="Properties" t="Include">

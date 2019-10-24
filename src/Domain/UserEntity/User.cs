@@ -4,17 +4,17 @@ namespace App.Domain.UserEntity
 {
     public class User : AbstractEntity
     {
-        public virtual string FirstName { get; protected set; }
-        public virtual string LastName { get; protected set; }
-        public virtual string Login { get; protected set; }
-        public virtual string Password { get; protected set; }
-        public virtual UserRole Role { get; protected set; }
+        public string FirstName { get; private set; }
+        public string LastName { get; private set; }
+        public string Login { get; private set; }
+        public string Password { get; private set; }
+        public UserRole Role { get; private set; }
 
         // Nhibernate требует наличие безаргументного конструктора.
         protected User()
         {
         }
-
+        
         public User(string firstName, string lastName, string login, string password, UserRole role)
         {
             Identify();

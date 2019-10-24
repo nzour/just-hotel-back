@@ -12,6 +12,7 @@ using Kernel.Abstraction;
 using Kernel.Service;
 using Microsoft.Extensions.DependencyInjection;
 using NHibernate;
+using NHibernate.Cfg;
 using NHibernateConfiguration = NHibernate.Cfg.Configuration;
 
 namespace App.Configuration.ServiceRecorder
