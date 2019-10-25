@@ -4,7 +4,7 @@ using NHibernate;
 
 namespace App.Infrastructure.NHibernate.Repository
 {
-    public class EntityRepository<T> : IEntityRepository<T> where T : class
+    public class EntityRepository<T> : IEntityRepository<T> where T : AbstractEntity
     {
         public Transactional Transactional { get; }
         public ISessionFactory SessionFactory { get; }

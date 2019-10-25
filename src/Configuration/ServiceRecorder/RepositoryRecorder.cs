@@ -2,6 +2,11 @@ using System;
 using System.Linq;
 using System.Reflection;
 using App.Configuration.ServiceRecorder.Exception;
+using App.Domain;
+using App.Domain.DebtEntity;
+using App.Domain.RoomEntity;
+using App.Domain.UserEntity;
+using App.Infrastructure.NHibernate.Repository;
 using FluentNHibernate.Conventions;
 using Kernel.Abstraction;
 using Kernel.Service;
@@ -24,6 +29,8 @@ namespace App.Configuration.ServiceRecorder
         protected override void Execute(IServiceCollection services)
         {
             var interfaces = TypeFinder.FindTypes(IsRepositoryInterface);
+
+            ProcessEntityRepositoryExplicitly(services);
 
             foreach (var @interface in interfaces)
             {
@@ -62,6 +69,13 @@ namespace App.Configuration.ServiceRecorder
             return implementations.IsNotEmpty()
                 ? implementations.First()
                 : throw RepositoryRecorderException.NotFoundImplementation(@interface);
+        }
+
+        private void ProcessEntityRepositoryExplicitly(IServiceCollection services)
+        {
+            services.AddScoped<IEntityRepository<User>, EntityRepository<User>>();
+            services.AddScoped<IEntityRepository<Room>, EntityRepository<Room>>();
+            services.AddScoped<IEntityRepository<Debt>, EntityRepository<Debt>>();
         }
     }
 }

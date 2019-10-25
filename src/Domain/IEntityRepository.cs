@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 
 namespace App.Domain
 {
-    public interface IEntityRepository<T> where T : class
+    public interface IEntityRepository<T> where T : AbstractEntity
     {
         void Save(T entity);
         T Get(Guid id);
