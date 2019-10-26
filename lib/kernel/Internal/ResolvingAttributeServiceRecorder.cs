@@ -11,12 +11,12 @@ namespace Kernel.Internal
 {
     internal class ResolvingAttributeServiceRecorder : AbstractServiceRecorder
     {
-        private TypeFinder TypeFinder { get; }
-
         public ResolvingAttributeServiceRecorder(TypeFinder typeFinder)
         {
             TypeFinder = typeFinder;
         }
+
+        private TypeFinder TypeFinder { get; }
 
         protected override void Execute(IServiceCollection services)
         {

@@ -12,7 +12,8 @@ namespace command_runner.Handler.Exception
 
         public static CommandHandlerException DuplicatedNames(IEnumerable<string> duplicates)
         {
-            return new CommandHandlerException($"There are duplicated command names was found: {string.Join(", ", duplicates)}.");
+            return new CommandHandlerException(
+                $"There are duplicated command names was found: {string.Join(", ", duplicates)}.");
         }
 
         public static CommandHandlerException NotFound(string name)
@@ -24,10 +25,11 @@ namespace command_runner.Handler.Exception
         {
             return new CommandHandlerException($"Expected command arguments {expected}, {actual} was specified.");
         }
-        
+
         public static CommandHandlerException CommandArgumentPropertyIsNotScalar(Type argument, PropertyInfo property)
         {
-            return new CommandHandlerException($"Command argument {argument.Name} contains non scalar property {property.Name}");
+            return new CommandHandlerException(
+                $"Command argument {argument.Name} contains non scalar property {property.Name}");
         }
     }
 }

@@ -7,12 +7,12 @@ namespace Kernel.Service
 {
     public class TypeFinder
     {
-        public Assembly ApplicationScope { get; }
-
         public TypeFinder(Assembly applicationScope)
         {
             ApplicationScope = applicationScope;
         }
+
+        public Assembly ApplicationScope { get; }
 
         public IEnumerable<TypeInfo> FindTypes(Func<TypeInfo, bool> filter)
         {

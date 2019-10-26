@@ -7,14 +7,14 @@ namespace command_runner.Handler
 {
     public class ArgumentProvider
     {
-        private string[] DefinedArguments { get; }
-        private int Position { get; set; }
-        
         public ArgumentProvider(string[] arguments)
         {
             DefinedArguments = arguments;
             Position = 0;
         }
+
+        private string[] DefinedArguments { get; }
+        private int Position { get; set; }
 
         public bool HasNext()
         {
@@ -29,7 +29,7 @@ namespace command_runner.Handler
 
             return value;
         }
-        
+
         public int NextAsInt(IEnumerable<int>? shouldBe = null)
         {
             var value = Next(() => Convert.ToInt32(DefinedArguments[Position]));
@@ -42,7 +42,7 @@ namespace command_runner.Handler
         public string NextAsString(IEnumerable<string>? shouldBe = null)
         {
             var value = Next(() => Convert.ToString(DefinedArguments[Position]));
-            
+
             AssertContains(shouldBe, value);
 
             return value;
@@ -51,7 +51,7 @@ namespace command_runner.Handler
         public double NextAsDouble(IEnumerable<double>? shouldBe = null)
         {
             var value = Next(() => Convert.ToDouble(DefinedArguments[Position]));
-            
+
             AssertContains(shouldBe, value);
 
             return value;
@@ -60,7 +60,7 @@ namespace command_runner.Handler
         public bool NextAsBool(IEnumerable<bool>? shouldBe = null)
         {
             var value = Next(() => Convert.ToBoolean(DefinedArguments[Position]));
-            
+
             AssertContains(shouldBe, value);
 
             return value;
@@ -69,7 +69,7 @@ namespace command_runner.Handler
         private T Next<T>(Func<T> action)
         {
             AssertHasNext();
-            
+
             try
             {
                 return action.Invoke();
@@ -82,23 +82,14 @@ namespace command_runner.Handler
 
         private void AssertHasNext()
         {
-            if (!HasNext())
-            {
-                throw CommandArgumentException.NotFound(Position);
-            }   
+            if (!HasNext()) throw CommandArgumentException.NotFound(Position);
         }
 
         private void AssertContains<T>(IEnumerable<T>? expected, T actual)
         {
-            if (null == expected)
-            {
-                return;
-            }
-            
-            if (!expected.Contains(actual))
-            {
-                throw CommandArgumentException.NotEquals(expected, actual);
-            }
+            if (null == expected) return;
+
+            if (!expected.Contains(actual)) throw CommandArgumentException.NotEquals(expected, actual);
         }
     }
 }

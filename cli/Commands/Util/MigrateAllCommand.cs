@@ -6,12 +6,12 @@ namespace Cli.Commands.Util
 {
     public class MigrateAllCommand : AbstractCommand
     {
-        public IMigrationRunner Runner { get; }
-
         public MigrateAllCommand(IMigrationRunner runner)
         {
             Runner = runner;
         }
+
+        public IMigrationRunner Runner { get; }
 
         public override void Execute(ArgumentProvider provider)
         {

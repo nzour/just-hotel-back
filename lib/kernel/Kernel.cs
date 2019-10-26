@@ -16,10 +16,6 @@ namespace Kernel
 {
     public class Kernel
     {
-        public Assembly ApplicationScope { get; }
-        public IServiceCollection Services { get; }
-        public TypeFinder TypeFinder { get; }
-
         public Kernel(Assembly applicationScope, IServiceCollection? services = null)
         {
             ApplicationScope = applicationScope;
@@ -28,6 +24,10 @@ namespace Kernel
 
             Services.AddSingleton(TypeFinder);
         }
+
+        public Assembly ApplicationScope { get; }
+        public IServiceCollection Services { get; }
+        public TypeFinder TypeFinder { get; }
 
         public void Boot()
         {
@@ -41,19 +41,14 @@ namespace Kernel
         public Kernel LoadEnvironmentVariables(string envFilename)
         {
             if (!File.Exists(envFilename))
-            {
                 throw new FileNotFoundException(
                     $"Unable to read environment file. File with name {envFilename} was not found.");
-            }
 
             File.ReadAllText(envFilename);
 
             var json = JsonSerializer.Deserialize<Dictionary<string, string>>(File.ReadAllText(envFilename));
 
-            foreach (var (key, value) in json)
-            {
-                Environment.SetEnvironmentVariable(key, value);
-            }
+            foreach (var (key, value) in json) Environment.SetEnvironmentVariable(key, value);
 
             return this;
         }
@@ -64,7 +59,7 @@ namespace Kernel
                 .Foreach(recorder =>
                 {
                     Services.AddTransient(recorder)
-                        .GetService<AbstractServiceRecorder>(recorder)!
+                            .GetService<AbstractServiceRecorder>(recorder)!
                         .Process(Services);
                 });
         }

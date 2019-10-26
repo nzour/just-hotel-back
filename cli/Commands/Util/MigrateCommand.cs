@@ -9,32 +9,26 @@ namespace Cli.Commands.Util
         private const string DirectionUp = "--up";
         private const string DirectionDown = "--down";
 
-        public IMigrationRunner Runner { get; }
-
         public MigrateCommand(IMigrationRunner runner)
         {
             Runner = runner;
         }
+
+        public IMigrationRunner Runner { get; }
 
         public override void Execute(ArgumentProvider provider)
         {
             var version = provider.NextAsLong();
             var direction = DirectionUp;
 
-            if (provider.HasNext())
-            {
-                direction = provider.NextAsString(new[] { DirectionUp, DirectionDown });
-            }
+            if (provider.HasNext()) direction = provider.NextAsString(new[] { DirectionUp, DirectionDown });
 
             if (direction.Equals(DirectionUp))
-            {
                 Runner.MigrateUp(version);
-            }
             else
-            {
                 Runner.RollbackToVersion(version);
-            }
         }
+
         public override string GetName()
         {
             return "migrations:execute";

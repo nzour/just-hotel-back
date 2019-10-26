@@ -9,10 +9,6 @@ namespace command_runner.Handler
 {
     public class CommandManager
     {
-        public IServiceCollection Services { get; }
-        private Assembly CliScope { get; }
-        public IEnumerable<AbstractCommand?> Commands { get; private set; } = new List<AbstractCommand>();
-
         internal CommandManager(Assembly cliScope, IServiceCollection services)
         {
             CliScope = cliScope;
@@ -20,6 +16,10 @@ namespace command_runner.Handler
 
             RegisterCommands();
         }
+
+        public IServiceCollection Services { get; }
+        private Assembly CliScope { get; }
+        public IEnumerable<AbstractCommand?> Commands { get; private set; } = new List<AbstractCommand>();
 
         public bool HasCommand(string name)
         {
@@ -41,10 +41,7 @@ namespace command_runner.Handler
             var commandTypes = CliScope.DefinedTypes
                 .Where(t => t.IsSubclassOf(typeof(AbstractCommand)) && !t.IsAbstract);
 
-            foreach (var type in commandTypes)
-            {
-                Services.AddTransient(type);
-            }
+            foreach (var type in commandTypes) Services.AddTransient(type);
 
             Commands = commandTypes
                 .Select(type => Services.BuildServiceProvider().GetService(type) as AbstractCommand)
@@ -53,9 +50,7 @@ namespace command_runner.Handler
             var duplicates = FindDuplicates();
 
             if (0 != duplicates.Count())
-            {
                 throw CommandHandlerException.DuplicatedNames(duplicates.Select(c => c.GetName()));
-            }
         }
 
         private IEnumerable<AbstractCommand> FindDuplicates()
@@ -65,18 +60,11 @@ namespace command_runner.Handler
 
             var result = new List<AbstractCommand>();
 
-            if (1 == count)
-            {
-                return result;
-            }
+            if (1 == count) return result;
 
             for (var i = 1; i < count; i++)
-            {
                 if (Equals(array[i]!.GetName(), array[i - 1]!.GetName()))
-                {
                     result.Add(array[i]);
-                }
-            }
 
             return result;
         }
@@ -85,10 +73,7 @@ namespace command_runner.Handler
         {
             var foundCommand = Commands.First(c => c!.GetName() == name);
 
-            if (null == foundCommand)
-            {
-                throw CommandHandlerException.NotFound(name);
-            }
+            if (null == foundCommand) throw CommandHandlerException.NotFound(name);
 
             return foundCommand;
         }

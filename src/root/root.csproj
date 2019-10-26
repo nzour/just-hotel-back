@@ -1,0 +1,92 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <RootNamespace>Root</RootNamespace>
+    <LangVersion>8</LangVersion>
+    <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
+    <GenerateProgramFile>false</GenerateProgramFile>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FluentMigrator" Version="3.2.1" />
+    <PackageReference Include="FluentMigrator.Console" Version="3.2.1" />
+    <PackageReference Include="FluentMigrator.Runner" Version="3.2.1" />
+    <PackageReference Include="FluentMigrator.Runner.Postgres" Version="3.2.1" />
+    <PackageReference Include="FluentNHibernate" Version="2.1.2" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="3.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Analyzers" Version="3.0.0-preview3-19153-02" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="3.0.0" />
+    <PackageReference Include="NHibernate" Version="5.2.5" />
+    <PackageReference Include="NHibernate.QueryBuilder" Version="1.1.0" />
+    <PackageReference Include="Npgsql" Version="4.0.7" />
+    <PackageReference Include="NUnit" Version="3.12.0" />
+    <PackageReference Include="NUnit3TestAdapter" Version="3.13.0" />
+    <PackageReference Include="System.Runtime" Version="4.3.1" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\..\lib\common\common.csproj" />
+    <ProjectReference Include="..\..\lib\kernel\kernel.csproj" />
+    <ProjectReference Include="..\application\application.csproj" />
+    <ProjectReference Include="..\infrastructure\infrastructure.csproj" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <_ResolveComReferenceCache Remove="obj\Debug\netcoreapp3.0\root.csproj.ResolveComReference.cache" />
+    <_ResolveComReferenceCache Remove="obj\Debug\netcoreapp3.0\root.csproj.ResolveComReference.cache" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <IntermediateAssembly Remove="obj\Debug\netcoreapp3.0\root.dll" />
+    <IntermediateAssembly Remove="obj\Debug\netcoreapp3.0\root.dll" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <_DebugSymbolsIntermediatePath Remove="obj\Debug\netcoreapp3.0\root.pdb" />
+    <_DebugSymbolsIntermediatePath Remove="obj\Debug\netcoreapp3.0\root.pdb" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <_DeploymentManifestEntryPoint Remove="obj\Debug\netcoreapp3.0\root.dll" />
+    <_DeploymentManifestEntryPoint Remove="obj\Debug\netcoreapp3.0\root.dll" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <ApplicationManifest Remove="obj\Debug\netcoreapp3.0\root.dll.manifest" />
+    <ApplicationManifest Remove="obj\Debug\netcoreapp3.0\root.dll.manifest" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <DeployManifest Remove="obj\Debug\netcoreapp3.0\root.application" />
+    <DeployManifest Remove="obj\Debug\netcoreapp3.0\root.application" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <ClsidMap Remove="obj\Debug\netcoreapp3.0\root.clsidmap" />
+    <ClsidMap Remove="obj\Debug\netcoreapp3.0\root.clsidmap" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <RegFreeComManifest Remove="obj\Debug\netcoreapp3.0\root.X.manifest" />
+    <RegFreeComManifest Remove="obj\Debug\netcoreapp3.0\root.X.manifest" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <RazorIntermediateAssembly Remove="obj\Debug\netcoreapp3.0\root.Views.dll" />
+    <RazorIntermediateAssembly Remove="obj\Debug\netcoreapp3.0\root.Views.dll" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <_RazorDebugSymbolsIntermediatePath Remove="obj\Debug\netcoreapp3.0\root.Views.pdb" />
+    <_RazorDebugSymbolsIntermediatePath Remove="obj\Debug\netcoreapp3.0\root.Views.pdb" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <_RazorComponentDeclarationAssembly Remove="obj\Debug\netcoreapp3.0\RazorDeclaration\root.dll" />
+    <_RazorComponentDeclarationAssembly Remove="obj\Debug\netcoreapp3.0\RazorDeclaration\root.dll" />
+  </ItemGroup>
+  
+</Project>

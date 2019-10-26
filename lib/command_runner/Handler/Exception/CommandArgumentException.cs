@@ -7,7 +7,6 @@ namespace command_runner.Handler.Exception
     {
         public CommandArgumentException(string message) : base(message)
         {
-            
         }
 
         public static CommandArgumentException NotFound(int position)

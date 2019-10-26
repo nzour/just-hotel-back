@@ -8,18 +8,18 @@ namespace command_runner.Handler.Console
 {
     public class ConsoleManager
     {
+        public ConsoleManager(Assembly cliScope, IServiceCollection services)
+        {
+            CommandManager = new CommandManager(cliScope, services);
+            Startup();
+        }
+
         private CommandManager CommandManager { get; }
 
         private Dictionary<string, string> Messages { get; } = new Dictionary<string, string>();
 
         private Dictionary<string, Action<ConsoleArgs>> Scripts { get; } =
             new Dictionary<string, Action<ConsoleArgs>>();
-
-        public ConsoleManager(Assembly cliScope, IServiceCollection services)
-        {
-            CommandManager = new CommandManager(cliScope, services);
-            Startup();
-        }
 
         public void Start()
         {
@@ -36,7 +36,7 @@ namespace command_runner.Handler.Console
                 System.Console.WriteLine(e.Message);
             }
         }
-        
+
         public void InvokeWithoutStart(string defaultLine)
         {
             Invoke(new ConsoleArgs(defaultLine));
@@ -54,27 +54,23 @@ namespace command_runner.Handler.Console
             Scripts.Add("help", args => DisplayDefaultScripts());
             Scripts.Add("command", args => CommandManager.RunCommand(args.Action ?? "", args.Arguments));
             Scripts.Add("commands", args => System.Console.WriteLine($"Зарегистрированные команды: {commandList}"));
-            Scripts.Add("info", args => System.Console.WriteLine(CommandManager.GetCommandDescription(args.Action ?? "") ?? "No description"));
+            Scripts.Add("info",
+                args => System.Console.WriteLine(CommandManager.GetCommandDescription(args.Action ?? "") ??
+                                                 "No description"));
         }
 
         private void DisplayDefaultScripts()
         {
-            foreach (var script in Messages)
-            {
-                System.Console.WriteLine($"Комманда {script.Key} - {script.Value}");
-            }
-            
+            foreach (var script in Messages) System.Console.WriteLine($"Комманда {script.Key} - {script.Value}");
+
             System.Console.WriteLine();
         }
-        
+
         private void Invoke(ConsoleArgs args)
         {
             var found = Scripts.TryGetValue(args.Key, out var action);
 
-            if (!found)
-            {
-                throw new System.Exception($"Command '{args.Key}' was not found");
-            }
+            if (!found) throw new System.Exception($"Command '{args.Key}' was not found");
 
             action.Invoke(args);
         }

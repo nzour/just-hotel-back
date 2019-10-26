@@ -3,22 +3,22 @@ using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Text;
-using App;
 using command_runner.Abstraction;
 using command_runner.Handler;
 using FluentMigrator;
+using Root;
 
 namespace Cli.Commands.Util
 {
     public class MigrationCreateCommand : AbstractCommand
     {
+        private const string FileExtension = ".cs";
+
         private static readonly string MigrationDirectory =
             Directory.GetCurrentDirectory() + "/../../../../src/Migration/";
 
         private static readonly string MigrationTemplate =
             Directory.GetCurrentDirectory() + "/../../../Commands/Util/resources/migration.template.txt";
-
-        private const string FileExtension = ".cs";
 
         public override void Execute(ArgumentProvider provider)
         {
