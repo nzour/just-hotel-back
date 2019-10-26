@@ -9,3 +9,4 @@ docker-compose.override.yml
 /lib/command_runner/bin/
 /lib/command_runner/obj/
 /.idea/
+!/.idea/**/runConfigurations
