@@ -1,4 +1,6 @@
 using System.IO;
+using Application;
+using Infrastructure;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -23,6 +25,7 @@ namespace Root
             var kernel = new _Kernel(GetType().Assembly, services);
 
             kernel
+                .LoadModules(new ApplicationModule(), new InfrastructureModule())
                 .LoadEnvironmentVariables(envFile)
                 .Boot();
 

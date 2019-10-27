@@ -28,14 +28,39 @@ namespace Kernel
         public Assembly ApplicationScope { get; }
         public IServiceCollection Services { get; }
         public TypeFinder TypeFinder { get; }
+        public IList<IModule> Modules { get; set; } = new List<IModule>();
 
         public void Boot()
         {
             ProcessInternalRecorders();
-            ProcessRecorders();
             ProcessMvc();
 
+            foreach (var module in Modules)
+            {
+                module.Boot(Services);
+            }
+
             Services.AddHttpContextAccessor();
+        }
+
+        public Kernel LoadModule(IModule module)
+        {
+            if (!Modules.Contains(module))
+            {
+                Modules.Add(module);
+            }
+
+            return this;
+        }
+
+        public Kernel LoadModules(params IModule[] modules)
+        {
+            foreach (var module in modules)
+            {
+                LoadModule(module);
+            }
+
+            return this;
         }
 
         public Kernel LoadEnvironmentVariables(string envFilename)
@@ -51,17 +76,6 @@ namespace Kernel
             foreach (var (key, value) in json) Environment.SetEnvironmentVariable(key, value);
 
             return this;
-        }
-
-        private void ProcessRecorders()
-        {
-            TypeFinder.FindTypes(t => t.IsSubclassOf(typeof(AbstractServiceRecorder)) && !t.IsAbstract)
-                .Foreach(recorder =>
-                {
-                    Services.AddTransient(recorder)
-                            .GetService<AbstractServiceRecorder>(recorder)!
-                        .Process(Services);
-                });
         }
 
         private void ProcessMvc()

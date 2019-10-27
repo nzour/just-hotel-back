@@ -6,6 +6,13 @@ namespace Domain.RoomEntity
 {
     public class Room : AbstractEntity
     {
+        public RoomType RoomType { get; private set; } = RoomType.Single;
+        public ISet<User> Employees { get; private set; } = new HashSet<User>();
+        public int Cost { get; private set; }
+        public User? RentedBy { get; private set; }
+        public RentalDates RentalDates { get; private set; } = new RentalDates();
+        public bool IsRented => null != RentedBy;
+
         protected Room()
         {
         }
@@ -19,13 +26,6 @@ namespace Domain.RoomEntity
 
             RentalDates = new RentalDates();
         }
-
-        public RoomType RoomType { get; private set; } = RoomType.Single;
-        public ISet<User> Employees { get; private set; } = new HashSet<User>();
-        public int Cost { get; private set; }
-        public User? RentedBy { get; private set; }
-        public RentalDates RentalDates { get; private set; } = new RentalDates();
-        public bool IsRented => null != RentedBy;
 
         public void Rent(User rentedBy, RentalDates dates)
         {

@@ -6,7 +6,6 @@ using Domain;
 using FluentMigrator.Runner;
 using FluentNHibernate.Cfg;
 using FluentNHibernate.Cfg.Db;
-using Infrastructure.Common;
 using Infrastructure.NHibernate;
 using Kernel.Abstraction;
 using Kernel.Service;
@@ -14,7 +13,7 @@ using Microsoft.Extensions.DependencyInjection;
 using NHibernate;
 using NHibernateConfiguration = NHibernate.Cfg.Configuration;
 
-namespace Root.Configuration.ServiceRecorder
+namespace Infrastructure.Common.DiRecorder
 {
     public class SessionFactoryRecorder : AbstractServiceRecorder
     {

@@ -1,8 +1,10 @@
+using System;
 using System.Collections.Generic;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace Kernel.Abstraction
 {
+    [Obsolete]
     public abstract class AbstractServiceRecorder
     {
         protected bool IsExecuted { get; private set; }

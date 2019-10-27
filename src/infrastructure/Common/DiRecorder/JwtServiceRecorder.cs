@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
 
-namespace Root.Configuration.ServiceRecorder
+namespace Infrastructure.Common.DiRecorder
 {
     public class JwtServiceRecorder : AbstractServiceRecorder
     {

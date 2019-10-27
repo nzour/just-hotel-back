@@ -12,25 +12,27 @@ using Kernel.Service;
 using Microsoft.Extensions.DependencyInjection;
 using Root.Configuration.ServiceRecorder.Exception;
 
-namespace Root.Configuration.ServiceRecorder
+namespace Infrastructure.Common.DiRecorder
 {
     public class RepositoryRecorder : AbstractServiceRecorder
     {
-        private const string NamespacePattern = "App.Domain";
+        private const string NamespacePattern = "Domain";
         private const string EndsWithPattern = "Repository";
 
-        public RepositoryRecorder(TypeFinder typeFinder)
-        {
-            TypeFinder = typeFinder;
-        }
+        public TypeFinder DomainFinder { get; }
+        public TypeFinder InfrastructureFinder { get; }
 
-        public TypeFinder TypeFinder { get; }
+        public RepositoryRecorder(TypeFinder domainFinder, TypeFinder infrastructureFinder)
+        {
+            DomainFinder = domainFinder;
+            InfrastructureFinder = infrastructureFinder;
+        }
 
         protected override void Execute(IServiceCollection services)
         {
-            var interfaces = TypeFinder.FindTypes(IsRepositoryInterface);
-
             ProcessEntityRepositoryExplicitly(services);
+
+            var interfaces = DomainFinder.FindTypes(IsRepositoryInterface);
 
             foreach (var @interface in interfaces)
             {
@@ -58,7 +60,7 @@ namespace Root.Configuration.ServiceRecorder
         /// </summary>
         private TypeInfo FindImplementation(TypeInfo @interface)
         {
-            var implementations = TypeFinder.FindTypes(type =>
+            var implementations = InfrastructureFinder.FindTypes(type =>
                 type.IsClass && type.GetInterfaces().Contains(@interface));
 
             // todo: Сообщение выводится некорректно. Добавить нормальное логирование.

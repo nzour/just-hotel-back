@@ -1,5 +1,7 @@
 using System.IO;
+using Application;
 using CommandRunner;
+using Infrastructure;
 using Root;
 using _Kernel = Kernel.Kernel;
 
@@ -14,6 +16,7 @@ namespace cli
             var kernel = new _Kernel(typeof(Startup).Assembly);
 
             kernel
+                .LoadModules(new ApplicationModule(), new InfrastructureModule())
                 .LoadEnvironmentVariables(envFile)
                 .Boot();
 
