@@ -1,9 +1,10 @@
+using Domain.Debt;
 using Domain.DebtEntity;
 using FluentNHibernate.Mapping;
 
 namespace Infrastructure.NHibernate.Mapping
 {
-    public class DebtMap : ClassMap<Debt>
+    public class DebtMap : ClassMap<DebtEntity>
     {
         public DebtMap()
         {
@@ -19,7 +20,7 @@ namespace Infrastructure.NHibernate.Mapping
                 .Column("DebtorId")
                 .Not.Nullable();
 
-            References(x => x.Room)
+            References(x => x.RoomEntity)
                 .Column("RoomId")
                 .Not.Nullable();
         }

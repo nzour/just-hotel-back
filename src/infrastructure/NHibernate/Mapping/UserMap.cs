@@ -1,9 +1,10 @@
+using Domain.User;
 using Domain.UserEntity;
 using FluentNHibernate.Mapping;
 
 namespace Infrastructure.NHibernate.Mapping
 {
-    public class UserMap : ClassMap<User>
+    public class UserMap : ClassMap<UserEntity>
     {
         public UserMap()
         {

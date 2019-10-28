@@ -1,12 +1,12 @@
 using Application.CQS.Room.Input;
+using Domain.Room;
 using Domain.RoomEntity;
-using _Room = Domain.RoomEntity.Room;
 
 namespace Application.CQS.Room.Command
 {
     public class CreateRoomCommand
     {
-        public IRoomRepository RoomRepository { get; }
+        private IRoomRepository RoomRepository { get; }
 
         public CreateRoomCommand(IRoomRepository roomRepository)
         {
@@ -15,7 +15,7 @@ namespace Application.CQS.Room.Command
 
         public void Execute(CreateRoomInput input)
         {
-            RoomRepository.SaveAsync(new _Room(input.Type, input.Cost));
+            RoomRepository.SaveAsync(new RoomEntity(input.Type, input.Cost));
         }
     }
 }

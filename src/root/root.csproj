@@ -31,9 +31,11 @@
     <_ResolveComReferenceCache Remove="obj\Debug\netcoreapp3.0\root.csproj.ResolveComReference.cache" />
     <_ResolveComReferenceCache Remove="obj\Debug\netcoreapp3.0\root.csproj.ResolveComReference.cache" />
     <_ResolveComReferenceCache Remove="obj\Debug\netcoreapp3.0\root.csproj.ResolveComReference.cache" />
+    <_ResolveComReferenceCache Remove="obj\Debug\netcoreapp3.0\root.csproj.ResolveComReference.cache" />
   </ItemGroup>
   
   <ItemGroup>
+    <IntermediateAssembly Remove="obj\Debug\netcoreapp3.0\root.dll" />
     <IntermediateAssembly Remove="obj\Debug\netcoreapp3.0\root.dll" />
     <IntermediateAssembly Remove="obj\Debug\netcoreapp3.0\root.dll" />
     <IntermediateAssembly Remove="obj\Debug\netcoreapp3.0\root.dll" />
@@ -45,9 +47,11 @@
     <_DebugSymbolsIntermediatePath Remove="obj\Debug\netcoreapp3.0\root.pdb" />
     <_DebugSymbolsIntermediatePath Remove="obj\Debug\netcoreapp3.0\root.pdb" />
     <_DebugSymbolsIntermediatePath Remove="obj\Debug\netcoreapp3.0\root.pdb" />
+    <_DebugSymbolsIntermediatePath Remove="obj\Debug\netcoreapp3.0\root.pdb" />
   </ItemGroup>
   
   <ItemGroup>
+    <_DeploymentManifestEntryPoint Remove="obj\Debug\netcoreapp3.0\root.dll" />
     <_DeploymentManifestEntryPoint Remove="obj\Debug\netcoreapp3.0\root.dll" />
     <_DeploymentManifestEntryPoint Remove="obj\Debug\netcoreapp3.0\root.dll" />
     <_DeploymentManifestEntryPoint Remove="obj\Debug\netcoreapp3.0\root.dll" />
@@ -59,9 +63,11 @@
     <ApplicationManifest Remove="obj\Debug\netcoreapp3.0\root.dll.manifest" />
     <ApplicationManifest Remove="obj\Debug\netcoreapp3.0\root.dll.manifest" />
     <ApplicationManifest Remove="obj\Debug\netcoreapp3.0\root.dll.manifest" />
+    <ApplicationManifest Remove="obj\Debug\netcoreapp3.0\root.dll.manifest" />
   </ItemGroup>
   
   <ItemGroup>
+    <DeployManifest Remove="obj\Debug\netcoreapp3.0\root.application" />
     <DeployManifest Remove="obj\Debug\netcoreapp3.0\root.application" />
     <DeployManifest Remove="obj\Debug\netcoreapp3.0\root.application" />
     <DeployManifest Remove="obj\Debug\netcoreapp3.0\root.application" />
@@ -73,9 +79,11 @@
     <ClsidMap Remove="obj\Debug\netcoreapp3.0\root.clsidmap" />
     <ClsidMap Remove="obj\Debug\netcoreapp3.0\root.clsidmap" />
     <ClsidMap Remove="obj\Debug\netcoreapp3.0\root.clsidmap" />
+    <ClsidMap Remove="obj\Debug\netcoreapp3.0\root.clsidmap" />
   </ItemGroup>
   
   <ItemGroup>
+    <RegFreeComManifest Remove="obj\Debug\netcoreapp3.0\root.X.manifest" />
     <RegFreeComManifest Remove="obj\Debug\netcoreapp3.0\root.X.manifest" />
     <RegFreeComManifest Remove="obj\Debug\netcoreapp3.0\root.X.manifest" />
     <RegFreeComManifest Remove="obj\Debug\netcoreapp3.0\root.X.manifest" />
@@ -87,6 +95,7 @@
     <RazorIntermediateAssembly Remove="obj\Debug\netcoreapp3.0\root.Views.dll" />
     <RazorIntermediateAssembly Remove="obj\Debug\netcoreapp3.0\root.Views.dll" />
     <RazorIntermediateAssembly Remove="obj\Debug\netcoreapp3.0\root.Views.dll" />
+    <RazorIntermediateAssembly Remove="obj\Debug\netcoreapp3.0\root.Views.dll" />
   </ItemGroup>
   
   <ItemGroup>
@@ -94,9 +103,11 @@
     <_RazorDebugSymbolsIntermediatePath Remove="obj\Debug\netcoreapp3.0\root.Views.pdb" />
     <_RazorDebugSymbolsIntermediatePath Remove="obj\Debug\netcoreapp3.0\root.Views.pdb" />
     <_RazorDebugSymbolsIntermediatePath Remove="obj\Debug\netcoreapp3.0\root.Views.pdb" />
+    <_RazorDebugSymbolsIntermediatePath Remove="obj\Debug\netcoreapp3.0\root.Views.pdb" />
   </ItemGroup>
   
   <ItemGroup>
+    <_RazorComponentDeclarationAssembly Remove="obj\Debug\netcoreapp3.0\RazorDeclaration\root.dll" />
     <_RazorComponentDeclarationAssembly Remove="obj\Debug\netcoreapp3.0\RazorDeclaration\root.dll" />
     <_RazorComponentDeclarationAssembly Remove="obj\Debug\netcoreapp3.0\RazorDeclaration\root.dll" />
     <_RazorComponentDeclarationAssembly Remove="obj\Debug\netcoreapp3.0\RazorDeclaration\root.dll" />

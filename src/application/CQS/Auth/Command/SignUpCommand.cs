@@ -2,6 +2,7 @@ using Application.Abstraction;
 using Application.CQS.Auth.Exception;
 using Application.CQS.Auth.Input;
 using Application.CQS.Auth.Output;
+using Domain.User;
 using Domain.UserEntity;
 
 namespace Application.CQS.Auth.Command
@@ -26,7 +27,7 @@ namespace Application.CQS.Auth.Command
             AssertLoginIsNotBusy(input.Login);
 
             var encryptedPassword = PasswordEncoder.Encrypt(input.Password);
-            var user = new User(input.FirstName, input.LastName, input.Login, encryptedPassword, UserRole.Client);
+            var user = new UserEntity(input.FirstName, input.LastName, input.Login, encryptedPassword, UserRole.Client);
 
             UserRepository.CreateUser(user);
 

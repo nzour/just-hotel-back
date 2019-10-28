@@ -1,46 +1,14 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
     <Nullable>enable</Nullable>
     <LangVersion>8</LangVersion>
     <RootNamespace>Common</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
-    <_UnmanagedRegistrationCache Remove="obj\common.csproj.UnmanagedRegistration.cache" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <_ResolveComReferenceCache Remove="obj\Debug\netstandard2.0\common.csproj.ResolveComReference.cache" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <IntermediateAssembly Remove="obj\Debug\netstandard2.0\common.dll" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <_DebugSymbolsIntermediatePath Remove="obj\Debug\netstandard2.0\common.pdb" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <_DeploymentManifestEntryPoint Remove="obj\Debug\netstandard2.0\common.dll" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ApplicationManifest Remove="obj\Debug\netstandard2.0\Native.common.manifest" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <DeployManifest Remove="obj\Debug\netstandard2.0\common.application" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ClsidMap Remove="obj\Debug\netstandard2.0\common.clsidmap" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <RegFreeComManifest Remove="obj\Debug\netstandard2.0\common.X.manifest" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Formatters.Json" Version="2.2.0" />
   </ItemGroup>
 
 </Project>

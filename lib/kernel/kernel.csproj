@@ -23,9 +23,13 @@
   <ItemGroup>
     <_UnmanagedRegistrationCache Remove="obj\kernel.csproj.UnmanagedRegistration.cache" />
     <_UnmanagedRegistrationCache Remove="obj\kernel.csproj.UnmanagedRegistration.cache" />
+    <_UnmanagedRegistrationCache Remove="obj\kernel.csproj.UnmanagedRegistration.cache" />
+    <_UnmanagedRegistrationCache Remove="obj\kernel.csproj.UnmanagedRegistration.cache" />
   </ItemGroup>
 
   <ItemGroup>
+    <_ResolveComReferenceCache Remove="obj\Debug\netcoreapp3.0\kernel.csproj.ResolveComReference.cache" />
+    <_ResolveComReferenceCache Remove="obj\Debug\netcoreapp3.0\kernel.csproj.ResolveComReference.cache" />
     <_ResolveComReferenceCache Remove="obj\Debug\netcoreapp3.0\kernel.csproj.ResolveComReference.cache" />
     <_ResolveComReferenceCache Remove="obj\Debug\netcoreapp3.0\kernel.csproj.ResolveComReference.cache" />
   </ItemGroup>
@@ -33,9 +37,13 @@
   <ItemGroup>
     <IntermediateAssembly Remove="obj\Debug\netcoreapp3.0\kernel.dll" />
     <IntermediateAssembly Remove="obj\Debug\netcoreapp3.0\kernel.dll" />
+    <IntermediateAssembly Remove="obj\Debug\netcoreapp3.0\kernel.dll" />
+    <IntermediateAssembly Remove="obj\Debug\netcoreapp3.0\kernel.dll" />
   </ItemGroup>
 
   <ItemGroup>
+    <_DebugSymbolsIntermediatePath Remove="obj\Debug\netcoreapp3.0\kernel.pdb" />
+    <_DebugSymbolsIntermediatePath Remove="obj\Debug\netcoreapp3.0\kernel.pdb" />
     <_DebugSymbolsIntermediatePath Remove="obj\Debug\netcoreapp3.0\kernel.pdb" />
     <_DebugSymbolsIntermediatePath Remove="obj\Debug\netcoreapp3.0\kernel.pdb" />
   </ItemGroup>
@@ -43,9 +51,13 @@
   <ItemGroup>
     <_DeploymentManifestEntryPoint Remove="obj\Debug\netcoreapp3.0\kernel.dll" />
     <_DeploymentManifestEntryPoint Remove="obj\Debug\netcoreapp3.0\kernel.dll" />
+    <_DeploymentManifestEntryPoint Remove="obj\Debug\netcoreapp3.0\kernel.dll" />
+    <_DeploymentManifestEntryPoint Remove="obj\Debug\netcoreapp3.0\kernel.dll" />
   </ItemGroup>
 
   <ItemGroup>
+    <ApplicationManifest Remove="obj\Debug\netcoreapp3.0\Native.kernel.manifest" />
+    <ApplicationManifest Remove="obj\Debug\netcoreapp3.0\Native.kernel.manifest" />
     <ApplicationManifest Remove="obj\Debug\netcoreapp3.0\Native.kernel.manifest" />
     <ApplicationManifest Remove="obj\Debug\netcoreapp3.0\Native.kernel.manifest" />
   </ItemGroup>
@@ -53,14 +65,20 @@
   <ItemGroup>
     <DeployManifest Remove="obj\Debug\netcoreapp3.0\kernel.application" />
     <DeployManifest Remove="obj\Debug\netcoreapp3.0\kernel.application" />
+    <DeployManifest Remove="obj\Debug\netcoreapp3.0\kernel.application" />
+    <DeployManifest Remove="obj\Debug\netcoreapp3.0\kernel.application" />
   </ItemGroup>
 
   <ItemGroup>
     <ClsidMap Remove="obj\Debug\netcoreapp3.0\kernel.clsidmap" />
     <ClsidMap Remove="obj\Debug\netcoreapp3.0\kernel.clsidmap" />
+    <ClsidMap Remove="obj\Debug\netcoreapp3.0\kernel.clsidmap" />
+    <ClsidMap Remove="obj\Debug\netcoreapp3.0\kernel.clsidmap" />
   </ItemGroup>
 
   <ItemGroup>
+    <RegFreeComManifest Remove="obj\Debug\netcoreapp3.0\kernel.X.manifest" />
+    <RegFreeComManifest Remove="obj\Debug\netcoreapp3.0\kernel.X.manifest" />
     <RegFreeComManifest Remove="obj\Debug\netcoreapp3.0\kernel.X.manifest" />
     <RegFreeComManifest Remove="obj\Debug\netcoreapp3.0\kernel.X.manifest" />
   </ItemGroup>

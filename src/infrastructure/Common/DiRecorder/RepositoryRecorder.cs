@@ -2,8 +2,11 @@ using System;
 using System.Linq;
 using System.Reflection;
 using Domain;
+using Domain.Debt;
 using Domain.DebtEntity;
+using Domain.Room;
 using Domain.RoomEntity;
+using Domain.User;
 using Domain.UserEntity;
 using FluentNHibernate.Conventions;
 using Infrastructure.NHibernate.Repository;
@@ -71,9 +74,9 @@ namespace Infrastructure.Common.DiRecorder
 
         private void ProcessEntityRepositoryExplicitly(IServiceCollection services)
         {
-            services.AddScoped<IEntityRepository<User>, EntityRepository<User>>();
-            services.AddScoped<IEntityRepository<Room>, EntityRepository<Room>>();
-            services.AddScoped<IEntityRepository<Debt>, EntityRepository<Debt>>();
+            services.AddScoped<IEntityRepository<UserEntity>, EntityRepository<UserEntity>>();
+            services.AddScoped<IEntityRepository<RoomEntity>, EntityRepository<RoomEntity>>();
+            services.AddScoped<IEntityRepository<DebtEntity>, EntityRepository<DebtEntity>>();
         }
     }
 }

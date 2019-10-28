@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.Extensions.Configuration;
 
 namespace Root
 {
@@ -12,7 +13,13 @@ namespace Root
 
         public static IWebHostBuilder CreateWebHostBuilder(string[] args)
         {
+            var configuration = new ConfigurationBuilder()
+                .AddEnvironmentVariables()
+                .Build();
+
             return WebHost.CreateDefaultBuilder(args)
+                .UseConfiguration(configuration)
+                .UseEnvironment("Development")
                 .UseStartup<Startup>();
         }
     }

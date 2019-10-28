@@ -1,9 +1,10 @@
+using Domain.Room;
 using Domain.RoomEntity;
 using FluentNHibernate.Mapping;
 
 namespace Infrastructure.NHibernate.Mapping
 {
-    public class RoomMap : ClassMap<Room>
+    public class RoomMap : ClassMap<RoomEntity>
     {
         public RoomMap()
         {
