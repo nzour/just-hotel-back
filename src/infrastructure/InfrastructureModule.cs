@@ -10,11 +10,11 @@ namespace Infrastructure
     {
         public void Boot(IServiceCollection services)
         {
-            var finder = new TypeFinder(GetType().Assembly);
+            var infrastructureFinder = new TypeFinder(GetType().Assembly);
             var domainFinder = new TypeFinder(typeof(AbstractEntity).Assembly);
 
-            new SessionFactoryRecorder(finder).Process(services);
-            new RepositoryRecorder(domainFinder, finder).Process(services);
+            new SessionFactoryRecorder(domainFinder, infrastructureFinder).Process(services);
+            new RepositoryRecorder(domainFinder, infrastructureFinder).Process(services);
             new JwtServiceRecorder().Process(services);
         }
     }

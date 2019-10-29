@@ -2,7 +2,7 @@ using Application.Abstraction;
 using Application.CQS.Auth.Exception;
 using Application.CQS.Auth.Input;
 using Application.CQS.Auth.Output;
-using Domain.UserEntity;
+using Domain.User;
 
 namespace Application.CQS.Auth.Command
 {

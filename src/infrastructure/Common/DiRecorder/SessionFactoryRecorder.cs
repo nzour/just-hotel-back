@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
@@ -17,14 +16,19 @@ namespace Infrastructure.Common.DiRecorder
 {
     public class SessionFactoryRecorder : AbstractServiceRecorder
     {
-        public SessionFactoryRecorder(TypeFinder typeFinder)
-        {
-            TypeFinder = typeFinder;
-        }
+        private const string MappingNamespace = "Infrastructure.NHibernate.Mapping";
+        private const string MappingPostfix = "Map";
 
         private IEnumerable<TypeInfo> IgnoredEntities => new[] { typeof(AbstractEntity).GetTypeInfo() };
 
-        private TypeFinder TypeFinder { get; }
+        private TypeFinder DomainTypeFinder { get; }
+        private TypeFinder InfrastructureFinder { get; }
+
+        public SessionFactoryRecorder(TypeFinder domainTypeFinder, TypeFinder infrastructureFinder)
+        {
+            DomainTypeFinder = domainTypeFinder;
+            InfrastructureFinder = infrastructureFinder;
+        }
 
         protected override void Execute(IServiceCollection services)
         {
@@ -35,7 +39,7 @@ namespace Infrastructure.Common.DiRecorder
                     .DefaultSchema(DbAccessor.Schema)
                     .ConnectionString(DbAccessor.ConnectionString));
 
-            RegisterEntitiesRecursively(fluentConfiguration, typeof(AbstractEntity));
+            RegisterMappings(fluentConfiguration);
 
             var sessionFactory = fluentConfiguration.BuildSessionFactory();
 
@@ -46,7 +50,7 @@ namespace Infrastructure.Common.DiRecorder
                 .ConfigureRunner(runner => runner
                     .AddPostgres()
                     .WithGlobalConnectionString(DbAccessor.ConnectionString)
-                    .ScanIn(TypeFinder.ApplicationScope).For.Migrations())
+                    .ScanIn(GetType().Assembly).For.Migrations())
                 .AddLogging(logBuilder => logBuilder.AddFluentMigratorConsole());
         }
 
@@ -54,17 +58,26 @@ namespace Infrastructure.Common.DiRecorder
         ///     Добавит сборки всех наследников класса или интерфейса в конфигурацию маппингов Nhibernate (рекурсивно)
         /// </summary>
         /// <param name="configuration">Конфигурация Fluent NHibernate</param>
-        /// <param name="class">Тип класса</param>
-        private void RegisterEntitiesRecursively(FluentConfiguration configuration, Type @class)
+        private void RegisterMappings(FluentConfiguration configuration)
         {
-            var entities = TypeFinder.FindTypes(t => t.IsSubclassOf(@class));
+//            var entities = DomainTypeFinder.FindTypes(t => t.IsSubclassOf(@class));
+//
+//            foreach (var entity in entities)
+//            {
+//                if (MustIgnoreEntity(entity)) continue;
+//
+//                var mapping = InfrastructureFinder.FindTypes(t => t.IsAssignableFrom(typeof(ClassMap<>))).FirstOrDefault()
+//                              ?? throw new Exception($"Not found mapping for class {entity.Name}.");
+//
+//                configuration.Mappings(cfg => cfg.FluentMappings.AddFromAssembly(mapping.GetType().Assembly));
+//                RegisterEntitiesRecursively(configuration, entity);
+//            }
+            var mappings = InfrastructureFinder.FindTypes(t => (bool) t.Namespace?.StartsWith(MappingNamespace) &&
+                                                               t.Name.EndsWith(MappingPostfix));
 
-            foreach (var entity in entities)
+            foreach (var mapping in mappings)
             {
-                if (MustIgnoreEntity(entity)) continue;
-
-                configuration.Mappings(cfg => cfg.FluentMappings.AddFromAssembly(entity.Assembly));
-                RegisterEntitiesRecursively(configuration, entity);
+                configuration.Mappings(cfg => cfg.FluentMappings.AddFromAssembly(mapping.Assembly));
             }
         }
 

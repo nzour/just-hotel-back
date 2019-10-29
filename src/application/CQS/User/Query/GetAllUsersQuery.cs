@@ -1,7 +1,7 @@
 using Application.CQS.User.Output;
 using Common.Extensions;
 using Common.Util;
-using Domain.UserEntity;
+using Domain.User;
 
 namespace Application.CQS.User.Query
 {

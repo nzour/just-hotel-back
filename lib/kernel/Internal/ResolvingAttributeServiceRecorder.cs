@@ -11,12 +11,12 @@ namespace Kernel.Internal
 {
     internal class ResolvingAttributeServiceRecorder : AbstractServiceRecorder
     {
-        public ResolvingAttributeServiceRecorder(TypeFinder typeFinder)
-        {
-            TypeFinder = typeFinder;
-        }
+        private TypeFinder[] TypeFinders { get; }
 
-        private TypeFinder TypeFinder { get; }
+        public ResolvingAttributeServiceRecorder(params TypeFinder[] typeFinders)
+        {
+            TypeFinders = typeFinders;
+        }
 
         protected override void Execute(IServiceCollection services)
         {
@@ -27,19 +27,22 @@ namespace Kernel.Internal
 
         private void RecordMarkedServices<TAttribute>(Action<Type, Type> recordAction)
         {
-            FindMarkedByAttributeServices<TAttribute>()
-                .Foreach(service =>
-                {
-                    var attribute = (TransientAttribute) service.GetCustomAttributes(true)
-                        .First(attr => attr is TransientAttribute);
+            foreach (var finder in TypeFinders)
+            {
+                FindMarkedByAttributeServices<TAttribute>(finder)
+                    .Foreach(service =>
+                    {
+                        var attribute = (TransientAttribute) service.GetCustomAttributes(true)
+                            .First(attr => attr is TransientAttribute);
 
-                    recordAction.Invoke(attribute.Interface ?? service, service);
-                });
+                        recordAction.Invoke(attribute.Interface ?? service, service);
+                    });
+            }
         }
 
-        private IEnumerable<Type> FindMarkedByAttributeServices<TAttribute>()
+        private IEnumerable<Type> FindMarkedByAttributeServices<TAttribute>(TypeFinder finder)
         {
-            return TypeFinder.FindTypes(t =>
+            return finder.FindTypes(t =>
                 t.CustomAttributes.Select(attributeData => attributeData.AttributeType)
                     .Contains(typeof(TAttribute)));
         }

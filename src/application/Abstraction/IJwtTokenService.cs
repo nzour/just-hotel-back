@@ -1,5 +1,4 @@
 using Domain.User;
-using Domain.UserEntity;
 
 namespace Application.Abstraction
 {

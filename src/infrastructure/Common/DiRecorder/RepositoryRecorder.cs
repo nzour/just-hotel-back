@@ -7,7 +7,6 @@ using Domain.DebtEntity;
 using Domain.Room;
 using Domain.RoomEntity;
 using Domain.User;
-using Domain.UserEntity;
 using FluentNHibernate.Conventions;
 using Infrastructure.NHibernate.Repository;
 using Kernel.Abstraction;

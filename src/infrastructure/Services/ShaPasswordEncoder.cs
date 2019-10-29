@@ -15,9 +15,8 @@ namespace Infrastructure.Services
         {
             var bytes = Encoding.UTF8.GetBytes(passwordToEncode);
 
-            var encoded = HashAlgorithm.Create(AlgorithmName)?.ComputeHash(bytes);
-
-            if (null == encoded) throw new Exception("Unable to create hash.");
+            var encoded = HashAlgorithm.Create(AlgorithmName)?.ComputeHash(bytes)
+                          ?? throw new Exception("Unable to create hash.");
 
             return Convert.ToBase64String(encoded);
         }

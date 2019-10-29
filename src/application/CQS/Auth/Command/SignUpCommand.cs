@@ -3,7 +3,6 @@ using Application.CQS.Auth.Exception;
 using Application.CQS.Auth.Input;
 using Application.CQS.Auth.Output;
 using Domain.User;
-using Domain.UserEntity;
 
 namespace Application.CQS.Auth.Command
 {
@@ -36,7 +35,10 @@ namespace Application.CQS.Auth.Command
 
         private void AssertLoginIsNotBusy(string login)
         {
-            if (UserRepository.IsLoginBusy(login)) throw new UserLoginIsBusyException(login);
+            if (UserRepository.IsLoginBusy(login))
+            {
+                throw new UserLoginIsBusyException(login);
+            };
         }
     }
 }

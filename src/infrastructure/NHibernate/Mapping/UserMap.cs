@@ -1,5 +1,4 @@
 using Domain.User;
-using Domain.UserEntity;
 using FluentNHibernate.Mapping;
 
 namespace Infrastructure.NHibernate.Mapping

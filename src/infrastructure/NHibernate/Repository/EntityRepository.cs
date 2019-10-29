@@ -17,18 +17,19 @@ namespace Infrastructure.NHibernate.Repository
 
         public void Save(T entity)
         {
-            var session = SessionFactory.OpenSession();
+            using var session = SessionFactory.OpenSession();
 
-            session.SaveOrUpdate(entity);
-
-            session.Flush();
+            session.Save(entity);
         }
 
         public T Get(Guid id)
         {
             var entity = Transactional.Func(session => session.Get<T>(id));
 
-            if (entity == null) throw new EntityNotFoundException<T>(id);
+            if (entity == null)
+            {
+                throw new EntityNotFoundException<T>(id);
+            }
 
             return entity;
         }

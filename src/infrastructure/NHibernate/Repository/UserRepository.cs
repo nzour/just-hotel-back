@@ -1,7 +1,6 @@
 using System.Linq;
 using System.Threading.Tasks;
 using Domain.User;
-using Domain.UserEntity;
 using NHibernate;
 using NHibernate.QueryBuilder.Core;
 

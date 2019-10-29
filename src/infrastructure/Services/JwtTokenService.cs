@@ -5,7 +5,6 @@ using System.Security.Claims;
 using System.Text;
 using Application.Abstraction;
 using Domain.User;
-using Domain.UserEntity;
 using Microsoft.IdentityModel.Tokens;
 
 namespace Infrastructure.Services

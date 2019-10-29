@@ -7,15 +7,6 @@ namespace Cli.Commands.Sandbox
     {
         public override void Execute(ArgumentProvider provider)
         {
-//            var input = new SignUpInput
-//            {
-//                Login = "zaur_client",
-//                Password = "zaur_client",
-//                FirstName = "Заур",
-//                LastName = "Надиралиев"
-//            };
-//
-//            Command.Execute(input);
         }
 
         public override string GetName()

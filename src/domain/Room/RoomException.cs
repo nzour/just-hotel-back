@@ -1,6 +1,5 @@
 using System;
 using Domain.User;
-using Domain.UserEntity;
 
 namespace Domain.RoomEntity
 {

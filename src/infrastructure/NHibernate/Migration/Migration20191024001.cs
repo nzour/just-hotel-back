@@ -1,6 +1,6 @@
 using FluentMigrator;
 
-namespace Root.Migration
+namespace Infrastructure.NHibernate.Migration
 {
     [Migration(20191024001)]
     public class Migration20191024001 : FluentMigrator.Migration

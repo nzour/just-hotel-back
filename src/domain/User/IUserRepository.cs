@@ -1,18 +1,18 @@
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Domain.UserEntity
+namespace Domain.User
 {
-    public interface IUserRepository : IEntityRepository<User.UserEntity>
+    public interface IUserRepository : IEntityRepository<UserEntity>
     {
-        Task CreateUserAsync(User.UserEntity userEntity);
+        Task CreateUserAsync(UserEntity userEntity);
 
-        void CreateUser(User.UserEntity userEntity);
+        void CreateUser(UserEntity userEntity);
 
-        User.UserEntity? FindUserWithLoginAndPassword(string login, string encryptedPassword);
+        UserEntity? FindUserWithLoginAndPassword(string login, string encryptedPassword);
 
         bool IsLoginBusy(string login);
 
-        IQueryable<User.UserEntity> FindAllUsers();
+        IQueryable<UserEntity> FindAllUsers();
     }
 }

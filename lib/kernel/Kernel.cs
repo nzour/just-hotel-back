@@ -6,7 +6,6 @@ using System.Reflection;
 using System.Text.Json;
 using Common.Extensions;
 using Kernel.Abstraction;
-using Kernel.Extension;
 using Kernel.Internal;
 using Kernel.Service;
 using Microsoft.AspNetCore.Mvc.Authorization;
@@ -90,8 +89,8 @@ namespace Kernel
 
         private void ProcessInternalRecorders()
         {
-            Services.AddTransient(typeof(ResolvingAttributeServiceRecorder));
-            Services.GetService<ResolvingAttributeServiceRecorder>()!.Process(Services);
+            TypeFinder[] finders = Modules.Select(module => new TypeFinder(module.GetType().Assembly)).ToArray();
+            new ResolvingAttributeServiceRecorder(finders).Process(Services);
         }
 
         private bool IsGlobalFilter(TypeInfo type)
