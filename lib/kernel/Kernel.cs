@@ -29,6 +29,9 @@ namespace Kernel
         public TypeFinder TypeFinder { get; }
         public IList<IModule> Modules { get; set; } = new List<IModule>();
 
+        public TypeFinder[] DeclaredFinders =>
+            Modules.Select(module => new TypeFinder(module.GetType().Assembly)).Append(TypeFinder).ToArray();
+
         public void Boot()
         {
             ProcessInternalRecorders();
@@ -72,7 +75,10 @@ namespace Kernel
 
             var json = JsonSerializer.Deserialize<Dictionary<string, string>>(File.ReadAllText(envFilename));
 
-            foreach (var (key, value) in json) Environment.SetEnvironmentVariable(key, value);
+            foreach (var (key, value) in json)
+            {
+                Environment.SetEnvironmentVariable(key, value);
+            }
 
             return this;
         }
@@ -83,14 +89,16 @@ namespace Kernel
 
             mvcBuilder.AddMvcOptions(options => options.Filters.Add(new AuthorizeFilter()));
 
-            TypeFinder.FindTypes(IsGlobalFilter)
-                .Foreach(filter => mvcBuilder.AddMvcOptions(o => o.Filters.Add(filter)));
+            foreach (var finder in DeclaredFinders)
+            {
+                finder.FindTypes(IsGlobalFilter)
+                    .Foreach(filter => mvcBuilder.AddMvcOptions(o => o.Filters.Add(filter)));
+            }
         }
 
         private void ProcessInternalRecorders()
         {
-            TypeFinder[] finders = Modules.Select(module => new TypeFinder(module.GetType().Assembly)).ToArray();
-            new ResolvingAttributeServiceRecorder(finders).Process(Services);
+            new ResolvingAttributeServiceRecorder(DeclaredFinders).Process(Services);
         }
 
         private bool IsGlobalFilter(TypeInfo type)

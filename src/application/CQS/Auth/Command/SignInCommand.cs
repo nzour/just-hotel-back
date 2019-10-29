@@ -8,6 +8,10 @@ namespace Application.CQS.Auth.Command
 {
     public class SignInCommand
     {
+        public IUserRepository UserRepository { get; }
+        public IJwtTokenService TokenService { get; }
+        public IPasswordEncoder PasswordEncoder { get; }
+
         public SignInCommand(
             IUserRepository userRepository,
             IJwtTokenService tokenService,
@@ -18,10 +22,6 @@ namespace Application.CQS.Auth.Command
             TokenService = tokenService;
             PasswordEncoder = passwordEncoder;
         }
-
-        public IUserRepository UserRepository { get; }
-        public IJwtTokenService TokenService { get; }
-        public IPasswordEncoder PasswordEncoder { get; }
 
         public SignInOutput Execute(SignInInput input)
         {

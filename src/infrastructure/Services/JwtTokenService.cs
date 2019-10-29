@@ -26,13 +26,14 @@ namespace Infrastructure.Services
                 Audience = null,
                 IssuedAt = DateTime.UtcNow,
                 NotBefore = DateTime.UtcNow,
-                Expires =
-                    DateTime.UtcNow.AddSeconds(
-                        Convert.ToDouble(Environment.GetEnvironmentVariable("TOKE_TTL") ?? "")),
+                Subject = new ClaimsIdentity(claims),
+                Expires = DateTime.UtcNow.AddSeconds(
+                    Convert.ToDouble(Environment.GetEnvironmentVariable("TOKEN_TTL") ?? "0")
+                ),
                 SigningCredentials =
-                    new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature),
-                Subject = new ClaimsIdentity(claims)
+                    new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)
             };
+
 
             return TokenHandler.WriteToken(TokenHandler.CreateJwtSecurityToken(descriptor));
         }
@@ -42,9 +43,14 @@ namespace Infrastructure.Services
             ClaimsGenerator = claimsGenerator;
         }
 
-        private IEnumerable<Claim> CreateDefaultClaims(UserEntity userEntity)
+        private IEnumerable<Claim> CreateDefaultClaims(UserEntity user)
         {
-            return new List<Claim> { new Claim("userId", userEntity.Id.ToString()), new Claim("login", userEntity.Login) };
+            return new List<Claim>
+            {
+                new Claim("UserId", user.Id.ToString()), 
+                new Claim("Login", user.Login),
+                new Claim("Roles", user.Role.ToString())
+            };
         }
     }
 }

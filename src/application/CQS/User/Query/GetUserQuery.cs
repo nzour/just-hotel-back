@@ -13,10 +13,11 @@ namespace Application.CQS.User.Query
         {
             UserRepository = userRepository;
         }
-        
+
         public UserOutput Execute(Guid userId)
         {
-            return UserRepository.Get(userId);
+            UserEntity user = UserRepository.Get(userId);
+            return new UserOutput(user);
         }
     }
 }

@@ -13,16 +13,13 @@ namespace Application.CQS.User.Output
         public string Firstname { get; set; }
         public string Lastname { get; set; }
 
-        public static implicit operator UserOutput(UserEntity userEntity)
+        public UserOutput(UserEntity user)
         {
-            return new UserOutput
-            {
-                Id = userEntity.Id,
-                Role = userEntity.Role,
-                Login = userEntity.Login,
-                Firstname = userEntity.FirstName,
-                Lastname = userEntity.LastName
-            };
+            Id = user.Id;
+            Role = user.Role;
+            Login = user.Login;
+            Firstname = user.FirstName;
+            Lastname = user.LastName;
         }
     }
 }

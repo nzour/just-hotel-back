@@ -2,7 +2,6 @@ using System.Linq;
 using System.Threading.Tasks;
 using Domain.User;
 using NHibernate;
-using NHibernate.QueryBuilder.Core;
 
 namespace Infrastructure.NHibernate.Repository
 {
@@ -36,7 +35,7 @@ namespace Infrastructure.NHibernate.Repository
 
         public IQueryable<UserEntity> FindAllUsers()
         {
-            using var session = SessionFactory.OpenSession();
+            var session = SessionFactory.OpenSession();
             return session.Query<UserEntity>();
         }
     }

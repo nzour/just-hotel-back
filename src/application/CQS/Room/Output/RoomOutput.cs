@@ -18,18 +18,15 @@ namespace Application.CQS.Room.Output
         public RentalDates RentalDates { get; set; }
         public IEnumerable<UserOutput> Employees { get; set; }
 
-        public static implicit operator RoomOutput(RoomEntity room)
+        public RoomOutput(RoomEntity room)
         {
-            return new RoomOutput
-            {
-                Id = room.Id,
-                RoomType = room.RoomType,
-                Cost = room.Cost,
-                IsRented = room.IsRented,
-                RentedBy = room.RentedBy,
-                RentalDates = room.RentalDates,
-                Employees = room.Employees.Select(e => (UserOutput) e)
-            };
+            Id = room.Id;
+            RoomType = room.RoomType;
+            Cost = room.Cost;
+            IsRented = room.IsRented;
+            RentedBy = new UserOutput(room.RentedBy);
+            RentalDates = room.RentalDates;
+            Employees = room.Employees.Select(e => new UserOutput(e));
         }
     }
 }

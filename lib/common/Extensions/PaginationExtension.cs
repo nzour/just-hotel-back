@@ -5,10 +5,11 @@ namespace Common.Extensions
 {
     public static class PaginationExtension
     {
-        public static PaginatedData<TOutput> Paginate<TOutput>(this IQueryable<object> query, Pagination pagination)
+        public static PaginatedData<T> Paginate<T>(this IQueryable<T> query,
+            Pagination pagination)
         {
-            var result = new PaginatedData<TOutput>(query.Count());
-            
+            var result = new PaginatedData<T>(query.Count());
+
             if (null != pagination.Offset)
             {
                 query = query.Skip((int) pagination.Offset);
@@ -19,7 +20,7 @@ namespace Common.Extensions
                 query = query.Take((int) pagination.Limit);
             }
 
-            result.Data = query.ToArray() as TOutput[];
+            result.Data = query.ToArray() ;
 
             return result;
         }

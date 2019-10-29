@@ -10,15 +10,12 @@ namespace Application.CQS.Room.Output
         public int Cost { get; set; }
         public bool IsRented { get; set; }
 
-        public static implicit operator RoomShortOutput(RoomEntity room)
+        public RoomShortOutput(RoomEntity room)
         {
-            return new RoomShortOutput
-            {
-                Id = room.Id,
-                RoomType = room.RoomType,
-                Cost = room.Cost,
-                IsRented = room.IsRented
-            };
+            Id = room.Id;
+            RoomType = room.RoomType;
+            Cost = room.Cost;
+            IsRented = room.IsRented;
         }
     }
 }

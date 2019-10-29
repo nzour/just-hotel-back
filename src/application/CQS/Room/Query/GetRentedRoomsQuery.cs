@@ -20,7 +20,8 @@ namespace Application.CQS.Room.Query
             return RoomRepository
                 .FindAllRooms()
                 .Where(r => r.IsRented)
-                .Paginate<RoomShortOutput>(pagination);
+                .Select(r => new RoomShortOutput(r))
+                .Paginate(pagination);
         }
     }
 }

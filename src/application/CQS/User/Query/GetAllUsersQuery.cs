@@ -1,3 +1,4 @@
+using System.Linq;
 using Application.CQS.User.Output;
 using Common.Extensions;
 using Common.Util;
@@ -18,7 +19,8 @@ namespace Application.CQS.User.Query
         {
             return UserRepository
                 .FindAllUsers()
-                .Paginate<UserOutput>(pagination);
+                .Select(u => new UserOutput(u))
+                .Paginate(pagination);
         }
     }
 }
