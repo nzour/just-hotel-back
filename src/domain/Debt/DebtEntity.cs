@@ -8,7 +8,7 @@ namespace Domain.Debt
 {
     public class DebtEntity : AbstractEntity
     {
-        public User.UserEntity Debtor { get; private set; }
+        public UserEntity Debtor { get; private set; }
         public Room.RoomEntity RoomEntity { get; private set; }
         public DateTime? HandedAt { get; private set; }
         public int Money { get; private set; }
@@ -18,12 +18,14 @@ namespace Domain.Debt
         {
         }
 
-        public DebtEntity(User.UserEntity debtor, Room.RoomEntity roomEntity, int? money = null)
+        public DebtEntity(UserEntity debtor, Room.RoomEntity roomEntity, int? money = null)
         {
             Identify();
 
             if (UserRole.Client != Debtor.Role)
+            {
                 throw new DebtException($"Debtor must be with role '{UserRole.Client}', specified '{debtor.Role}'.");
+            }
 
             Debtor = debtor;
             RoomEntity = roomEntity;

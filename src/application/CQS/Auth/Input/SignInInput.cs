@@ -1,3 +1,5 @@
+#nullable disable
+
 namespace Application.CQS.Auth.Input
 {
     public class SignInInput

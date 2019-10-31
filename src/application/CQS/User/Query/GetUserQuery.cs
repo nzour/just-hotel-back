@@ -1,6 +1,5 @@
 using System;
 using Application.CQS.User.Output;
-using Common.Extensions;
 using Domain;
 using Domain.User;
 
@@ -17,8 +16,9 @@ namespace Application.CQS.User.Query
 
         public UserOutput Execute(Guid userId)
         {
-            UserEntity user = UserRepository.Get(userId);
-            return user.ConstructorCast<UserOutput>();
+            return new UserOutput(
+                UserRepository.Get(userId)
+            );
         }
     }
 }

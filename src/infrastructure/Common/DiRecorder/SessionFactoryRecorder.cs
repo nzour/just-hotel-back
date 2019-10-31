@@ -1,7 +1,3 @@
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection;
-using Domain;
 using FluentMigrator.Runner;
 using FluentNHibernate.Cfg;
 using FluentNHibernate.Cfg.Db;
@@ -19,8 +15,6 @@ namespace Infrastructure.Common.DiRecorder
         private const string MappingNamespace = "Infrastructure.NHibernate.Mapping";
         private const string MappingPostfix = "Map";
 
-        private IEnumerable<TypeInfo> IgnoredEntities => new[] { typeof(AbstractEntity).GetTypeInfo() };
-
         private TypeFinder DomainTypeFinder { get; }
         private TypeFinder InfrastructureFinder { get; }
 
@@ -37,7 +31,8 @@ namespace Infrastructure.Common.DiRecorder
             var fluentConfiguration = Fluently.Configure(configuration)
                 .Database(PostgreSQLConfiguration.PostgreSQL82
                     .DefaultSchema(DbAccessor.Schema)
-                    .ConnectionString(DbAccessor.ConnectionString));
+                    .ConnectionString(DbAccessor.ConnectionString)
+                );
 
             RegisterMappings(fluentConfiguration);
 
@@ -61,30 +56,14 @@ namespace Infrastructure.Common.DiRecorder
         /// <param name="configuration">Конфигурация Fluent NHibernate</param>
         private void RegisterMappings(FluentConfiguration configuration)
         {
-//            var entities = DomainTypeFinder.FindTypes(t => t.IsSubclassOf(@class));
-//
-//            foreach (var entity in entities)
-//            {
-//                if (MustIgnoreEntity(entity)) continue;
-//
-//                var mapping = InfrastructureFinder.FindTypes(t => t.IsAssignableFrom(typeof(ClassMap<>))).FirstOrDefault()
-//                              ?? throw new Exception($"Not found mapping for class {entity.Name}.");
-//
-//                configuration.Mappings(cfg => cfg.FluentMappings.AddFromAssembly(mapping.GetType().Assembly));
-//                RegisterEntitiesRecursively(configuration, entity);
-//            }
-            var mappings = InfrastructureFinder.FindTypes(t => (bool) t.Namespace?.StartsWith(MappingNamespace) &&
-                                                               t.Name.EndsWith(MappingPostfix));
+            var mappings = InfrastructureFinder.FindTypes(t =>
+                (bool) t.Namespace?.StartsWith(MappingNamespace) && t.Name.EndsWith(MappingPostfix)
+            );
 
             foreach (var mapping in mappings)
             {
                 configuration.Mappings(cfg => cfg.FluentMappings.AddFromAssembly(mapping.Assembly));
             }
-        }
-
-        private bool MustIgnoreEntity(TypeInfo entity)
-        {
-            return entity.IsInterface || IgnoredEntities.Contains(entity);
         }
     }
 }

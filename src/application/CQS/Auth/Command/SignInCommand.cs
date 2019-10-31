@@ -29,7 +29,7 @@ namespace Application.CQS.Auth.Command
             var user = UserRepository.FindUserWithLoginAndPassword(input.Login, encryptedPassword);
 
             return null != user
-                ? new SignInOutput(user.Id, TokenService.CreateToken(user))
+                ? new SignInOutput(user, TokenService.CreateToken(user))
                 : throw UserNotFound.InvalidCredentials();
         }
     }
