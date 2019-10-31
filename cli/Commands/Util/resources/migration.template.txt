@@ -1,6 +1,6 @@
 using FluentMigrator;
 
-namespace app.Migration
+namespace Infrastructure.NHibernate.Migration
 {{
     [Migration({0})]
     public class {1} : FluentMigrator.Migration
