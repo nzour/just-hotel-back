@@ -1,3 +1,4 @@
+
 using FluentMigrator;
 
 namespace Infrastructure.NHibernate.Migration

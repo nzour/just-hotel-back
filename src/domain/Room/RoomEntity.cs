@@ -1,16 +1,13 @@
-using System;
 using System.Collections.Generic;
+using Domain.User;
 
 namespace Domain.Room
 {
     public class RoomEntity : AbstractEntity
     {
         public RoomType RoomType { get; internal set; } = RoomType.Single;
-        public ISet<User.UserEntity> Employees { get; internal set; } = new HashSet<User.UserEntity>();
+        public ISet<UserEntity> Employees { get; internal set; } = new HashSet<UserEntity>();
         public int Cost { get; internal set; }
-        public User.UserEntity? RentedBy { get; internal set; }
-        public RentalDates RentalDates { get; internal set; } = new RentalDates();
-        public bool IsRented => null != RentedBy;
 
         protected RoomEntity()
         {
@@ -22,19 +19,7 @@ namespace Domain.Room
 
             RoomType = type;
             Cost = cost;
-
-            RentalDates = new RentalDates();
         }
-    }
-
-    #region types
-
-    public class RentalDates
-    {
-        public DateTime? DateFrom { get; set; }
-        public DateTime? DateTo { get; set; }
-
-        public bool IsSomeEmpty => null == DateFrom || null == DateTo;
     }
 
     public enum RoomType
@@ -43,6 +28,4 @@ namespace Domain.Room
         Double,
         Triple
     }
-
-    #endregion
 }

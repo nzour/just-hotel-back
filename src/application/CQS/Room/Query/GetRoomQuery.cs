@@ -16,8 +16,9 @@ namespace Application.CQS.Room.Query
 
         public RoomOutput Execute(Guid roomId)
         {
-            RoomEntity room = RoomRepository.Get(roomId);
-            return new RoomOutput(room);
+            return new RoomOutput(
+                RoomRepository.Get(roomId)
+            );
         }
     }
 }

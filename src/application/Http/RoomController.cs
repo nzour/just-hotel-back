@@ -24,23 +24,5 @@ namespace Application.Http
         {
             return query.Execute(roomId);
         }
-
-        [Route("rented")]
-        public PaginatedData<RoomShortOutput> GetRentedRooms(
-            [FromServices] GetRentedRoomsQuery query,
-            [FromQuery] Pagination pagination
-        )
-        {
-            return query.Execute(pagination);
-        }
-
-        [Route("not-rented")]
-        public PaginatedData<RoomShortOutput> GetNotRentedRooms(
-            [FromServices] GetNotRentedRoomsQuery query,
-            [FromQuery] Pagination pagination
-        )
-        {
-            return query.Execute(pagination);
-        }
     }
 }

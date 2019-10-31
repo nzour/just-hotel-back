@@ -6,7 +6,7 @@ using System.Text;
 using command_runner.Abstraction;
 using command_runner.Handler;
 using FluentMigrator;
-using Root;
+using Infrastructure;
 
 namespace Cli.Commands.Util
 {
@@ -44,7 +44,7 @@ namespace Cli.Commands.Util
         {
             var version = DateTime.Now.ToString("yyyyMMdd");
 
-            var lastVersion = typeof(Startup).Assembly.DefinedTypes
+            var lastVersion = typeof(InfrastructureModule).Assembly.DefinedTypes
                 .Where(t => t.IsSubclassOf(typeof(Migration)))
                 .Select(m => m.GetCustomAttribute<MigrationAttribute>()?.Version.ToString())
                 .OrderBy(v => v)

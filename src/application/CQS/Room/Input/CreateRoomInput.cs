@@ -1,5 +1,4 @@
 using Domain.Room;
-using Domain.RoomEntity;
 
 #nullable disable
 
