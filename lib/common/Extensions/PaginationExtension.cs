@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.Linq;
 using Common.Util;
 
@@ -5,7 +6,7 @@ namespace Common.Extensions
 {
     public static class PaginationExtension
     {
-        public static PaginatedData<T> Paginate<T>(this IQueryable<T> query,
+        public static PaginatedData<T> Paginate<T>(this IEnumerable<T> query,
             Pagination pagination)
         {
             var result = new PaginatedData<T>(query.Count());

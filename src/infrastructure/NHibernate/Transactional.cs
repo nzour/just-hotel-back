@@ -6,117 +6,118 @@ namespace Infrastructure.NHibernate
     /// <summary>
     ///     Умеет оборачивать делегат в транзакцию
     /// </summary>
-    public class Transactional
+    public sealed class Transactional
     {
-        public Transactional(ISessionFactory sessionFactory)
+        private ISession Session { get; }
+
+        public Transactional(ISession session)
         {
-            SessionFactory = sessionFactory;
+            Session = session;
         }
 
-        public ISessionFactory SessionFactory { get; }
-
-        /// <summary>
-        ///     Обернет делегат в транзакцию и вернет результат выполнения делегата.
-        /// </summary>
-        /// <param name="function">Делегат, который произойдет внутри транзакции</param>
-        /// <typeparam name="TResult">Тип, который вернет делегат</typeparam>
         public TResult Action<TResult>(Func<ISession, TResult> function)
         {
-            var session = Begin();
+            BeginTransaction();
 
             try
             {
-                var result = function.Invoke(session);
+                var result = function.Invoke(Session);
 
-                Commit(session);
+                CommitTransaction();
 
                 return result;
             }
             catch
             {
-                RollBack(session);
+                RollBackTransaction();
                 throw;
             }
             finally
             {
-                session.Transaction.Dispose();
-                session.Dispose();
+                DisposeTransaction();
             }
         }
 
-        /// <summary>
-        ///     Обернет VoidResult-делегат в транзакцию.
-        /// </summary>
-        /// <param name="function"></param>
         public void Action(Action<ISession> function)
         {
-            var session = Begin();
+            BeginTransaction();
 
             try
             {
-                function.Invoke(session);
-
-                Commit(session);
+                function.Invoke(Session);
+                CommitTransaction();
             }
             catch
             {
-                RollBack(session);
+                RollBackTransaction();
                 throw;
             }
             finally
             {
-                session.Transaction.Dispose();
-                session.Dispose();
+                DisposeTransaction();
             }
         }
 
-        public void Func(Action<ISession> action)
+        public void Action(Action function)
         {
-            var session = SessionFactory.OpenSession();
+            BeginTransaction();
 
             try
             {
-                action.Invoke(session);
+                function.Invoke();
+                CommitTransaction();
+            }
+            catch
+            {
+                RollBackTransaction();
+                throw;
             }
             finally
             {
-                session.Dispose();
+                DisposeTransaction();
             }
         }
 
-        public TResult Func<TResult>(Func<ISession, TResult> action)
+        private void BeginTransaction()
         {
-            var session = SessionFactory.OpenSession();
-
-            try
+            if (Session.Transaction.IsActive)
             {
-                return action.Invoke(session);
+                return;
             }
-            finally
+
+            Session.Transaction.Begin();
+        }
+
+        private void CommitTransaction()
+        {
+            Session.Flush();
+
+            if (Session.Transaction.WasCommitted)
             {
-                session.Dispose();
+                return;
             }
+
+            Session.Transaction.Commit();
         }
 
-        private ISession Begin()
+        private void RollBackTransaction()
         {
-            var session = SessionFactory.OpenSession();
+            if (Session.Transaction.WasRolledBack)
+            {
+                return;
+            }
 
-            if (!session.Transaction.IsActive) session.Transaction.Begin();
-
-            return session;
+            Session.Transaction.Rollback();
         }
 
-        private void Commit(ISession session)
+        private void DisposeTransaction()
         {
-            session.Flush();
+            if (!Session.Transaction.IsActive)
+            {
+                return;
+            }
 
-            if (!session.Transaction.WasCommitted) session.Transaction.Commit();
-        }
-
-        private void RollBack(ISession session)
-        {
-            if (!session.Transaction.WasRolledBack) session.Transaction.Rollback();
+            Session.Transaction.Dispose();
         }
     }
 }

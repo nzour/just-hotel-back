@@ -1,58 +1,52 @@
 using System;
+using System.Linq;
 using Domain;
 using NHibernate;
 
 namespace Infrastructure.NHibernate.Repository
 {
-    public class EntityRepository<T> : IEntityRepository<T> where T : AbstractEntity
+    public class EntityRepository<TEntity> : IEntityRepository<TEntity> where TEntity : AbstractEntity
     {
-        public EntityRepository(Transactional transactional, ISessionFactory sessionFactory)
+        protected ISession Session { get; }
+
+        public EntityRepository(ISession session)
         {
-            Transactional = transactional;
-            SessionFactory = sessionFactory;
+            Session = session;
         }
 
-        public Transactional Transactional { get; }
-        public ISessionFactory SessionFactory { get; }
-
-        public void Save(T entity)
+        public void Save(TEntity entity)
         {
-            using var session = SessionFactory.OpenSession();
-
-            session.Save(entity);
+            Session.Save(entity);
         }
 
-        public T Get(Guid id)
+        public void Save(params TEntity[] entities)
         {
-            var entity = Transactional.Func(session => session.Get<T>(id));
-
-            if (entity == null)
+            foreach (var entity in entities)
             {
-                throw new EntityNotFoundException<T>(id);
+                Save(entity);
+            }
+        }
+
+        public TEntity Get(Guid id)
+        {
+            var entity = Session.Get<TEntity>(id);
+
+            if (null == entity)
+            {
+                throw new EntityNotFoundException<TEntity>(id);
             }
 
             return entity;
         }
 
-        public T Get(string id)
+        public TEntity Get(string id)
         {
             return Get(new Guid(id));
         }
 
-        public void Save(params T[] entities)
+        public IQueryable<TEntity> FindAll()
         {
-            Transactional.Action(session =>
-            {
-                foreach (var entity in entities) session.SaveOrUpdate(entity);
-            });
-        }
-
-        public void SaveAsync(params T[] entities)
-        {
-            Transactional.Action(session =>
-            {
-                foreach (var entity in entities) session.SaveOrUpdateAsync(entity);
-            });
+            return Session.Query<TEntity>();
         }
     }
 }

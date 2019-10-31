@@ -44,7 +44,8 @@ namespace Infrastructure.Common.DiRecorder
             var sessionFactory = fluentConfiguration.BuildSessionFactory();
 
             services.AddSingleton(typeof(ISessionFactory), sessionFactory);
-            services.AddSingleton(new Transactional(sessionFactory));
+            services.AddScoped(_ => sessionFactory.OpenSession());
+            services.AddScoped<Transactional>();
 
             services.AddFluentMigratorCore()
                 .ConfigureRunner(runner => runner

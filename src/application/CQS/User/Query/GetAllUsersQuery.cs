@@ -18,8 +18,9 @@ namespace Application.CQS.User.Query
         public PaginatedData<UserOutput> Execute(Pagination pagination)
         {
             return UserRepository
-                .FindAllUsers()
-                .Select(u => new UserOutput(u))
+                .FindAll()
+                .AsEnumerable()
+                .ConstructorCast<UserEntity, UserOutput>()
                 .Paginate(pagination);
         }
     }

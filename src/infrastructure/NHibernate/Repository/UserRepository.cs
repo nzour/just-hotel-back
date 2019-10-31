@@ -7,14 +7,13 @@ namespace Infrastructure.NHibernate.Repository
 {
     public class UserRepository : EntityRepository<UserEntity>, IUserRepository
     {
-        public UserRepository(Transactional transactional, ISessionFactory sessionFactory) : base(transactional,
-            sessionFactory)
+        public UserRepository(ISession session) : base(session)
         {
         }
 
-        public async Task CreateUserAsync(UserEntity userEntity)
+        public async Task CreateUserAsync(UserEntity user)
         {
-            await Task.Run(() => Transactional.Action(session => session.SaveOrUpdate(userEntity)));
+            await Task.Run(() => Save(user));
         }
 
         public void CreateUser(UserEntity userEntity)
@@ -24,19 +23,14 @@ namespace Infrastructure.NHibernate.Repository
 
         public UserEntity FindUserWithLoginAndPassword(string login, string encryptedPassword)
         {
-            return Transactional.Func(session => session.Query<UserEntity>()
-                .SingleOrDefault(u => login == u.Login && encryptedPassword == u.Password));
+            return Session.Query<UserEntity>()
+                .SingleOrDefault(u => login == u.Login && encryptedPassword == u.Password);
         }
 
         public bool IsLoginBusy(string login)
         {
-            return Transactional.Func(session => null != session.Query<UserEntity>().SingleOrDefault(u => u.Login == login));
-        }
-
-        public IQueryable<UserEntity> FindAllUsers()
-        {
-            var session = SessionFactory.OpenSession();
-            return session.Query<UserEntity>();
+            return null != Session.Query<UserEntity>()
+                       .SingleOrDefault(u => u.Login == login);
         }
     }
 }

@@ -1,6 +1,5 @@
 using Application.CQS.Room.Input;
 using Domain.Room;
-using Domain.RoomEntity;
 
 namespace Application.CQS.Room.Command
 {
@@ -15,7 +14,7 @@ namespace Application.CQS.Room.Command
 
         public void Execute(CreateRoomInput input)
         {
-            RoomRepository.SaveAsync(new RoomEntity(input.Type, input.Cost));
+            RoomRepository.Save(new RoomEntity(input.Type, input.Cost));
         }
     }
 }

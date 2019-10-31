@@ -18,7 +18,7 @@ namespace Application.CQS.Room.Query
         public PaginatedData<RoomShortOutput> Execute(Pagination pagination)
         {
             return RoomRepository
-                .FindAllRooms()
+                .FindAll()
                 .Where(r => !r.IsRented)
                 .Select(r => new RoomShortOutput(r))
                 .Paginate(pagination);
