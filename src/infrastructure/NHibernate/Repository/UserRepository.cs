@@ -13,12 +13,12 @@ namespace Infrastructure.NHibernate.Repository
 
         public async Task CreateUserAsync(UserEntity user)
         {
-            await Task.Run(() => Save(user));
+            await Task.Run(() => SaveAndFlush(user));
         }
 
         public void CreateUser(UserEntity userEntity)
         {
-            Save(userEntity);
+            SaveAndFlush(userEntity);
         }
 
         public UserEntity FindUserWithLoginAndPassword(string login, string encryptedPassword)

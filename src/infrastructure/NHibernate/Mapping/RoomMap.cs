@@ -16,6 +16,8 @@ namespace Infrastructure.NHibernate.Mapping
             Map(x => x.Cost).Not.Nullable();
 
             HasMany(x => x.Employees);
+
+            HasOne(x => x.Rent).Cascade.None();
         }
     }
 }

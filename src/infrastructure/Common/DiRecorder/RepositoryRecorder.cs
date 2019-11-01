@@ -2,6 +2,7 @@ using System;
 using System.Linq;
 using System.Reflection;
 using Domain;
+using Domain.Rent;
 using Domain.Room;
 using Domain.User;
 using FluentNHibernate.Conventions;
@@ -72,6 +73,7 @@ namespace Infrastructure.Common.DiRecorder
         {
             services.AddScoped<IEntityRepository<UserEntity>, EntityRepository<UserEntity>>();
             services.AddScoped<IEntityRepository<RoomEntity>, EntityRepository<RoomEntity>>();
+            services.AddScoped<IEntityRepository<RentEntity>, EntityRepository<RentEntity>>();
         }
     }
 }

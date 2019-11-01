@@ -1,14 +1,18 @@
+using System.Collections.Generic;
+using Domain.Rent;
+
 #nullable disable
 
 namespace Domain.User
 {
     public class UserEntity : AbstractEntity
     {
-        public string FirstName { get; private set; }
-        public string LastName { get; private set; }
-        public string Login { get; private set; }
-        public string Password { get; private set; }
-        public UserRole Role { get; private set; }
+        public string FirstName { get; internal set; }
+        public string LastName { get; internal set; }
+        public string Login { get; internal set; }
+        public string Password { get; internal set; }
+        public UserRole Role { get; internal set; }
+        public ISet<RentEntity> Rents { get; internal set; } = new HashSet<RentEntity>();
 
         // Nhibernate требует наличие безаргументного конструктора.
         protected UserEntity()

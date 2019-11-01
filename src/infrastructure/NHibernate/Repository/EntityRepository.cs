@@ -5,7 +5,7 @@ using NHibernate;
 
 namespace Infrastructure.NHibernate.Repository
 {
-    public class EntityRepository<TEntity> : IEntityRepository<TEntity> where TEntity : AbstractEntity
+    public class EntityRepository<TEntity> : IEntityRepository<TEntity> where TEntity : class
     {
         protected ISession Session { get; }
 
@@ -14,16 +14,17 @@ namespace Infrastructure.NHibernate.Repository
             Session = session;
         }
 
-        public void Save(TEntity entity)
+        public void SaveAndFlush(TEntity entity)
         {
             Session.Save(entity);
+            Session.Flush();
         }
 
-        public void Save(params TEntity[] entities)
+        public void SaveAndFlush(params TEntity[] entities)
         {
             foreach (var entity in entities)
             {
-                Save(entity);
+                SaveAndFlush(entity);
             }
         }
 

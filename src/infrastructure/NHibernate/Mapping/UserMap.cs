@@ -17,6 +17,8 @@ namespace Infrastructure.NHibernate.Mapping
             Map(x => x.Login).Not.Nullable().Unique();
             Map(x => x.Password).Not.Nullable();
             Map(x => x.Role).Not.Nullable();
+
+            HasMany(x => x.Rents).KeyColumn("UserId");
         }
     }
 }

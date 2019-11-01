@@ -4,7 +4,7 @@ namespace Domain
 {
     public abstract class AbstractEntity
     {
-        public virtual Guid Id { get; private set; }
+        public virtual Guid Id { get; protected set; }
 
         protected void Identify()
         {

@@ -14,7 +14,7 @@ namespace Application.CQS.Room.Command
 
         public void Execute(CreateRoomInput input)
         {
-            RoomRepository.Save(new RoomEntity(input.Type, input.Cost));
+            RoomRepository.SaveAndFlush(new RoomEntity(input.Type, input.Cost));
         }
     }
 }
