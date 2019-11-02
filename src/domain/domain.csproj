@@ -11,9 +11,11 @@
     <_UnmanagedRegistrationCache Remove="obj\domain.csproj.UnmanagedRegistration.cache" />
     <_UnmanagedRegistrationCache Remove="obj\domain.csproj.UnmanagedRegistration.cache" />
     <_UnmanagedRegistrationCache Remove="obj\domain.csproj.UnmanagedRegistration.cache" />
+    <_UnmanagedRegistrationCache Remove="obj\domain.csproj.UnmanagedRegistration.cache" />
   </ItemGroup>
 
   <ItemGroup>
+    <_ResolveComReferenceCache Remove="obj\Debug\netcoreapp3.0\domain.csproj.ResolveComReference.cache" />
     <_ResolveComReferenceCache Remove="obj\Debug\netcoreapp3.0\domain.csproj.ResolveComReference.cache" />
     <_ResolveComReferenceCache Remove="obj\Debug\netcoreapp3.0\domain.csproj.ResolveComReference.cache" />
     <_ResolveComReferenceCache Remove="obj\Debug\netcoreapp3.0\domain.csproj.ResolveComReference.cache" />
@@ -23,9 +25,11 @@
     <IntermediateAssembly Remove="obj\Debug\netcoreapp3.0\domain.dll" />
     <IntermediateAssembly Remove="obj\Debug\netcoreapp3.0\domain.dll" />
     <IntermediateAssembly Remove="obj\Debug\netcoreapp3.0\domain.dll" />
+    <IntermediateAssembly Remove="obj\Debug\netcoreapp3.0\domain.dll" />
   </ItemGroup>
 
   <ItemGroup>
+    <_DebugSymbolsIntermediatePath Remove="obj\Debug\netcoreapp3.0\domain.pdb" />
     <_DebugSymbolsIntermediatePath Remove="obj\Debug\netcoreapp3.0\domain.pdb" />
     <_DebugSymbolsIntermediatePath Remove="obj\Debug\netcoreapp3.0\domain.pdb" />
     <_DebugSymbolsIntermediatePath Remove="obj\Debug\netcoreapp3.0\domain.pdb" />
@@ -35,9 +39,11 @@
     <_DeploymentManifestEntryPoint Remove="obj\Debug\netcoreapp3.0\domain.dll" />
     <_DeploymentManifestEntryPoint Remove="obj\Debug\netcoreapp3.0\domain.dll" />
     <_DeploymentManifestEntryPoint Remove="obj\Debug\netcoreapp3.0\domain.dll" />
+    <_DeploymentManifestEntryPoint Remove="obj\Debug\netcoreapp3.0\domain.dll" />
   </ItemGroup>
 
   <ItemGroup>
+    <ApplicationManifest Remove="obj\Debug\netcoreapp3.0\Native.domain.manifest" />
     <ApplicationManifest Remove="obj\Debug\netcoreapp3.0\Native.domain.manifest" />
     <ApplicationManifest Remove="obj\Debug\netcoreapp3.0\Native.domain.manifest" />
     <ApplicationManifest Remove="obj\Debug\netcoreapp3.0\Native.domain.manifest" />
@@ -47,15 +53,18 @@
     <DeployManifest Remove="obj\Debug\netcoreapp3.0\domain.application" />
     <DeployManifest Remove="obj\Debug\netcoreapp3.0\domain.application" />
     <DeployManifest Remove="obj\Debug\netcoreapp3.0\domain.application" />
+    <DeployManifest Remove="obj\Debug\netcoreapp3.0\domain.application" />
   </ItemGroup>
 
   <ItemGroup>
     <ClsidMap Remove="obj\Debug\netcoreapp3.0\domain.clsidmap" />
     <ClsidMap Remove="obj\Debug\netcoreapp3.0\domain.clsidmap" />
     <ClsidMap Remove="obj\Debug\netcoreapp3.0\domain.clsidmap" />
+    <ClsidMap Remove="obj\Debug\netcoreapp3.0\domain.clsidmap" />
   </ItemGroup>
 
   <ItemGroup>
+    <RegFreeComManifest Remove="obj\Debug\netcoreapp3.0\domain.X.manifest" />
     <RegFreeComManifest Remove="obj\Debug\netcoreapp3.0\domain.X.manifest" />
     <RegFreeComManifest Remove="obj\Debug\netcoreapp3.0\domain.X.manifest" />
     <RegFreeComManifest Remove="obj\Debug\netcoreapp3.0\domain.X.manifest" />

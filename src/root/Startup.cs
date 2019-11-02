@@ -3,6 +3,7 @@ using Infrastructure;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.OpenApi.Models;
 using Root.Configuration;
 using _Kernel = Kernel.Kernel;
 
@@ -26,6 +27,7 @@ namespace Root
                 .Boot();
 
             services.AddTransient<ExceptionHandlingMiddleware>();
+            services.AddSwaggerGen(setup => setup.SwaggerDoc("v1", new OpenApiInfo { Title = "Zobor" }));
 
             services.AddCors();
         }
@@ -39,6 +41,8 @@ namespace Root
                 .UseAuthentication()
                 .UseHsts()
                 .UseRouting()
+                .UseSwagger()
+                .UseSwaggerUI(setup => setup.SwaggerEndpoint("/doc", "Zobor doc"))
                 .UseEndpoints(endpoints => endpoints.MapControllers());
         }
     }

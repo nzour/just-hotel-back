@@ -12,4 +12,4 @@ services:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
     volumes:
-      - ./src:/app
+      - .:/app

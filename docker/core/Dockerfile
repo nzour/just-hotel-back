@@ -1,8 +1,8 @@
-FROM mcr.microsoft.com/dotnet/core/sdk:2.2
+FROM mcr.microsoft.com/dotnet/core/sdk:3.0-bionic
 
-WORKDIR /app/src
+WORKDIR /app/src/root
 
-# Cli для миграций
-#RUN dotnet tool install -g FluentMigrator.DotNet.Cli
+RUN apt-get update && apt-get -y install \
+    htop nano sudo
 
 CMD ["dotnet", "run"]
