@@ -40,7 +40,7 @@ namespace Infrastructure.Common.DiRecorder
 
             services.AddSingleton(typeof(ISessionFactory), sessionFactory);
             services.AddScoped(_ => sessionFactory.OpenSession());
-            services.AddScoped<Transactional>();
+            services.AddScoped<TransactionFacade>();
 
             services.AddFluentMigratorCore()
                 .ConfigureRunner(runner => runner
