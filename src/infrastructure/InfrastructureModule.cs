@@ -1,7 +1,9 @@
 using Domain;
 using Infrastructure.Common.DiRecorder;
 using Kernel;
+using Kernel.Extension;
 using Kernel.Service;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace Infrastructure
@@ -13,9 +15,11 @@ namespace Infrastructure
             var infrastructureFinder = new TypeFinder(GetType().Assembly);
             var domainFinder = new TypeFinder(typeof(AbstractEntity).Assembly);
 
-            new SessionFactoryRecorder(domainFinder, infrastructureFinder).Process(services);
+            var configuration = services.GetService<IConfiguration>()!;
+
+            new SessionFactoryRecorder(configuration, domainFinder, infrastructureFinder).Process(services);
             new RepositoryRecorder(domainFinder, infrastructureFinder).Process(services);
-            new JwtServiceRecorder().Process(services);
+            new JwtServiceRecorder(configuration).Process(services);
         }
     }
 }

@@ -4,6 +4,7 @@ using FluentNHibernate.Cfg.Db;
 using Infrastructure.NHibernate;
 using Kernel.Abstraction;
 using Kernel.Service;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using NHibernate;
 using NHibernateConfiguration = NHibernate.Cfg.Configuration;
@@ -15,23 +16,27 @@ namespace Infrastructure.Common.DiRecorder
         private const string MappingNamespace = "Infrastructure.NHibernate.Mapping";
         private const string MappingPostfix = "Map";
 
+        private IConfiguration Configuration { get; }
         private TypeFinder DomainTypeFinder { get; }
         private TypeFinder InfrastructureFinder { get; }
 
-        public SessionFactoryRecorder(TypeFinder domainTypeFinder, TypeFinder infrastructureFinder)
+        public SessionFactoryRecorder(IConfiguration configuration, TypeFinder domainTypeFinder,
+            TypeFinder infrastructureFinder)
         {
             DomainTypeFinder = domainTypeFinder;
             InfrastructureFinder = infrastructureFinder;
+            Configuration = configuration;
         }
 
         protected override void Execute(IServiceCollection services)
         {
+            var connectionString = GetConnectionString();
             var configuration = new NHibernateConfiguration().SetNamingStrategy(new PostgresNamingStrategy());
 
             var fluentConfiguration = Fluently.Configure(configuration)
                 .Database(PostgreSQLConfiguration.PostgreSQL82
-                    .DefaultSchema(DbAccessor.Schema)
-                    .ConnectionString(DbAccessor.ConnectionString)
+                    .DefaultSchema(Configuration["DB_SCHEMA"])
+                    .ConnectionString(connectionString)
                 );
 
             RegisterMappings(fluentConfiguration);
@@ -45,7 +50,7 @@ namespace Infrastructure.Common.DiRecorder
             services.AddFluentMigratorCore()
                 .ConfigureRunner(runner => runner
                     .AddPostgres()
-                    .WithGlobalConnectionString(DbAccessor.ConnectionString)
+                    .WithGlobalConnectionString(connectionString)
                     .ScanIn(GetType().Assembly).For.Migrations())
                 .AddLogging(logBuilder => logBuilder.AddFluentMigratorConsole());
         }
@@ -64,6 +69,11 @@ namespace Infrastructure.Common.DiRecorder
             {
                 configuration.Mappings(cfg => cfg.FluentMappings.AddFromAssembly(mapping.Assembly));
             }
+        }
+
+        private string GetConnectionString()
+        {
+            return $"Server={Configuration["DB_HOST"]};Port=5432;Database={Configuration["DB_NAME"]};User Id={Configuration["DB_USER"]};Password={Configuration["DB_PASSWORD"]}";
         }
     }
 }

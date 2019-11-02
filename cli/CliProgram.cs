@@ -1,7 +1,7 @@
-using System.IO;
 using Application;
 using CommandRunner;
 using Infrastructure;
+using Microsoft.Extensions.DependencyInjection;
 using Root;
 using _Kernel = Kernel.Kernel;
 
@@ -11,13 +11,12 @@ namespace cli
     {
         public static void Main(string[] args)
         {
-            var envFile = $"{Directory.GetCurrentDirectory()}/publish/environment.json";
-
             var kernel = new _Kernel(typeof(Startup).Assembly);
+
+            kernel.Services.AddScoped(_ => Program.CreateConfiguration());
 
             kernel
                 .LoadModules(new ApplicationModule(), new InfrastructureModule())
-                .LoadEnvironmentVariables(envFile)
                 .Boot();
 
             var commandRunner = new MainRunner(typeof(CliProgram).Assembly, kernel.Services);

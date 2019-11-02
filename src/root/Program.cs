@@ -13,14 +13,19 @@ namespace Root
 
         public static IWebHostBuilder CreateWebHostBuilder(string[] args)
         {
-            var configuration = new ConfigurationBuilder()
-                .AddEnvironmentVariables()
-                .Build();
-
             return WebHost.CreateDefaultBuilder(args)
-                .UseConfiguration(configuration)
+                .UseConfiguration(CreateConfiguration())
                 .UseEnvironment("Development")
                 .UseStartup<Startup>();
+        }
+
+        public static IConfiguration CreateConfiguration()
+        {
+            return new ConfigurationBuilder()
+                .AddJsonFile("appsettings.json", false, true)
+                .AddJsonFile("appsettings.Development.json", true, true)
+                .AddEnvironmentVariables()
+                .Build();
         }
     }
 }

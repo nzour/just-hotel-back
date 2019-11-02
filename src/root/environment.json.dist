@@ -1,9 +1,0 @@
-{
-  "DB_HOST": "localhost",
-  "DB_NAME": "zobor",
-  "DB_USER": "root",
-  "DB_PASSWORD": "root",
-  "TOKEN_SECRET_KEY": "SUPER_SECRET_KEY",
-  "TOKEN_TTL": "3600",
-  "DB_SCHEMA": "public"
-}

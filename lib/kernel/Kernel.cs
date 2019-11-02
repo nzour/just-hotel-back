@@ -1,9 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
+﻿using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
-using System.Text.Json;
 using Common.Extensions;
 using Kernel.Abstraction;
 using Kernel.Internal;
@@ -60,24 +57,6 @@ namespace Kernel
             foreach (var module in modules)
             {
                 LoadModule(module);
-            }
-
-            return this;
-        }
-
-        public Kernel LoadEnvironmentVariables(string envFilename)
-        {
-            if (!File.Exists(envFilename))
-                throw new FileNotFoundException(
-                    $"Unable to read environment file. File with name {envFilename} was not found.");
-
-            File.ReadAllText(envFilename);
-
-            var json = JsonSerializer.Deserialize<Dictionary<string, string>>(File.ReadAllText(envFilename));
-
-            foreach (var (key, value) in json)
-            {
-                Environment.SetEnvironmentVariable(key, value);
             }
 
             return this;

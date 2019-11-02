@@ -1,4 +1,3 @@
-using System.IO;
 using Application;
 using Infrastructure;
 using Microsoft.AspNetCore.Builder;
@@ -20,13 +19,10 @@ namespace Root
 
         public void ConfigureServices(IServiceCollection services)
         {
-            var envFile = $"{Directory.GetCurrentDirectory()}/environment.json";
-
             var kernel = new _Kernel(GetType().Assembly, services);
 
             kernel
                 .LoadModules(new ApplicationModule(), new InfrastructureModule())
-                .LoadEnvironmentVariables(envFile)
                 .Boot();
 
             services.AddTransient<ExceptionHandlingMiddleware>();
