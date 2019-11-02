@@ -8,7 +8,7 @@ namespace Application.CQS.User.Output
     public class UserOutput
     {
         public Guid Id { get; set; }
-        public UserRole Role { get; set; }
+        public string Role { get; set; }
         public string Login { get; set; }
         public string Firstname { get; set; }
         public string Lastname { get; set; }

@@ -49,7 +49,7 @@ namespace Infrastructure.Services
             {
                 new Claim("UserId", user.Id.ToString()), 
                 new Claim("Login", user.Login),
-                new Claim("Roles", user.Role.ToString())
+                new Claim(ClaimTypes.Role, user.Role.ToString())
             };
         }
     }

@@ -39,6 +39,7 @@ namespace Root
             app.UseDefaultFiles()
                 .UseCors(builder => builder.WithOrigins("http://localhost:4200"))
                 .UseMiddleware<ExceptionHandlingMiddleware>()
+                .UseAuthorization()
                 .UseAuthentication()
                 .UseHsts()
                 .UseRouting()

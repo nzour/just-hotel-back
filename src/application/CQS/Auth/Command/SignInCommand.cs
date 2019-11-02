@@ -6,6 +6,7 @@ using Domain.User;
 
 namespace Application.CQS.Auth.Command
 {
+    [NotTransactional]
     public class SignInCommand
     {
         public IUserRepository UserRepository { get; }

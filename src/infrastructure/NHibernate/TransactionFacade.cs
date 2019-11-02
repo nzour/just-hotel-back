@@ -4,81 +4,82 @@ using NHibernate;
 namespace Infrastructure.NHibernate
 {
     /// <summary>
-    ///     Умеет оборачивать делегат в транзакцию
+    /// Фасад для транзакций из NHibernate
     /// </summary>
-    public sealed class Transactional
+    public sealed class TransactionFacade : IDisposable
     {
         private ISession Session { get; }
+        public bool IsActive => Session.Transaction.IsActive;
 
-        public Transactional(ISession session)
+        public TransactionFacade(ISession session)
         {
             Session = session;
         }
 
         public TResult Action<TResult>(Func<ISession, TResult> function)
         {
-            BeginTransaction();
+            Begin();
 
             try
             {
                 var result = function.Invoke(Session);
 
-                CommitTransaction();
+                Commit();
 
                 return result;
             }
             catch
             {
-                RollBackTransaction();
+                Rollback();
                 throw;
             }
             finally
             {
-                DisposeTransaction();
+                Dispose();
             }
         }
 
         public void Action(Action<ISession> function)
         {
-            BeginTransaction();
+            Begin();
 
             try
             {
                 function.Invoke(Session);
-                CommitTransaction();
+                Commit();
             }
             catch
             {
-                RollBackTransaction();
+                Rollback();
                 throw;
             }
             finally
             {
-                DisposeTransaction();
+                Dispose();
             }
         }
 
         public void Action(Action function)
         {
-            BeginTransaction();
+            Begin();
 
             try
             {
                 function.Invoke();
-                CommitTransaction();
+                Commit();
             }
             catch
             {
-                RollBackTransaction();
+                Rollback();
                 throw;
             }
             finally
             {
-                DisposeTransaction();
+                Dispose();
             }
         }
 
-        private void BeginTransaction()
+        public void Begin()
         {
             if (Session.Transaction.IsActive)
             {
@@ -88,7 +89,7 @@ namespace Infrastructure.NHibernate
             Session.Transaction.Begin();
         }
 
-        private void CommitTransaction()
+        public void Commit()
         {
             Session.Flush();
 
@@ -100,7 +101,7 @@ namespace Infrastructure.NHibernate
             Session.Transaction.Commit();
         }
 
-        private void RollBackTransaction()
+        public void Rollback()
         {
             if (Session.Transaction.WasRolledBack)
             {
@@ -110,7 +111,7 @@ namespace Infrastructure.NHibernate
             Session.Transaction.Rollback();
         }
 
-        private void DisposeTransaction()
+        public void Dispose()
         {
             if (!Session.Transaction.IsActive)
             {

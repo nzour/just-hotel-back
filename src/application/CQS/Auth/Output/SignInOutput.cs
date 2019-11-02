@@ -7,7 +7,7 @@ namespace Application.CQS.Auth.Output
     {
         public Guid UserId { get; }
         public string Token { get; }
-        public UserRole Role { get; }
+        public string Role { get; }
 
         public SignInOutput(UserEntity user, string token)
         {
