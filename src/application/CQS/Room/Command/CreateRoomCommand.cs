@@ -1,13 +1,14 @@
 using Application.CQS.Room.Input;
+using Domain;
 using Domain.Room;
 
 namespace Application.CQS.Room.Command
 {
     public class CreateRoomCommand
     {
-        private IRoomRepository RoomRepository { get; }
+        private IEntityRepository<RoomEntity> RoomRepository { get; }
 
-        public CreateRoomCommand(IRoomRepository roomRepository)
+        public CreateRoomCommand(IEntityRepository<RoomEntity> roomRepository)
         {
             RoomRepository = roomRepository;
         }

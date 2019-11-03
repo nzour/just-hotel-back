@@ -3,15 +3,16 @@ using Application.CQS.Room.Input;
 using Application.CQS.Room.Output;
 using Common.Extensions;
 using Common.Util;
+using Domain;
 using Domain.Room;
 
 namespace Application.CQS.Room.Query
 {
     public class GetAllRoomsQuery
     {
-        private IRoomRepository RoomRepository { get; }
+        private IEntityRepository<RoomEntity> RoomRepository { get; }
 
-        public GetAllRoomsQuery(IRoomRepository roomRepository)
+        public GetAllRoomsQuery(IEntityRepository<RoomEntity> roomRepository)
         {
             RoomRepository = roomRepository;
         }
