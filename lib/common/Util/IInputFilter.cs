@@ -2,8 +2,8 @@ using System.Linq;
 
 namespace Common.Util
 {
-    public interface IInputFilter
+    public interface IInputFilter<T>
     {
-        IQueryable Process(IQueryable query);
+        IQueryable<T> Process(IQueryable<T> query);
     }
 }
