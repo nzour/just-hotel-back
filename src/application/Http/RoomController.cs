@@ -28,6 +28,7 @@ namespace Application.Http
         }
 
         // GET /rooms
+        [AllowAnonymous]
         public PaginatedData<RoomOutput> GetAllRooms([FromServices] GetAllRoomsQuery query,
             [FromQuery] GetRoomInputFilter filter, [FromQuery] Pagination pagination)
         {
