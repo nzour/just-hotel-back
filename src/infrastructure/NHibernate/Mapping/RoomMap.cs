@@ -12,7 +12,7 @@ namespace Infrastructure.NHibernate.Mapping
             Id(x => x.Id);
             Table("Rooms");
 
-            Map(x => x.RoomType).CustomType<RoomType>().Not.Nullable();
+            Map(x => x.RoomType).Not.Nullable();
             Map(x => x.Cost).Not.Nullable();
 
             HasMany(x => x.Employees);

@@ -8,7 +8,7 @@ namespace Application.CQS.Room.Output
     public class RoomOutput
     {
         public Guid Id { get; set; }
-        public RoomType RoomType { get; set; }
+        public string RoomType { get; set; }
         public int Cost { get; set; }
         public bool IsRented { get; set; }
 
