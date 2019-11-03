@@ -3,7 +3,6 @@ using Application.CQS.Room.Command;
 using Application.CQS.Room.Input;
 using Application.CQS.Room.Output;
 using Application.CQS.Room.Query;
-using Common.Util;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
