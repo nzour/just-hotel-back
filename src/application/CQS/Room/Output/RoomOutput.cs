@@ -17,6 +17,7 @@ namespace Application.CQS.Room.Output
             Id = room.Id;
             RoomType = room.RoomType;
             Cost = room.Cost;
+            IsRented = room.IsRented;
         }
     }
 }

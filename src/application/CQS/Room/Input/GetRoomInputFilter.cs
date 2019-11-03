@@ -3,7 +3,6 @@ using System.Linq;
 using Common.Util;
 using Domain.Room;
 using FluentNHibernate.Conventions;
-using FluentNHibernate.Utils;
 
 namespace Application.CQS.Room.Input
 {
@@ -16,12 +15,14 @@ namespace Application.CQS.Room.Input
         {
             if (null != IsRented)
             {
-                query = query.Where(room => IsRented == room.IsBusy);
+                query = true == IsRented
+                    ? query.Where(r => null != r.Rent)
+                    : query.Where(r => null == r.Rent);
             }
 
             if (null != RoomTypes && RoomTypes.IsNotEmpty())
             {
-                query = query.Where(room => room.RoomType.In(RoomTypes.ToArray()));
+                query = query.Where(r => RoomTypes.Contains(r.RoomType));
             }
 
             return query;

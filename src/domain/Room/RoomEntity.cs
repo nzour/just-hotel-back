@@ -11,7 +11,7 @@ namespace Domain.Room
         public ISet<UserEntity> Employees { get; internal set; } = new HashSet<UserEntity>();
         public int Cost { get; internal set; }
         public RentEntity? Rent { get; private set; }
-        public bool IsBusy => null != Rent;
+        public bool IsRented => null != Rent;
 
         protected RoomEntity()
         {
