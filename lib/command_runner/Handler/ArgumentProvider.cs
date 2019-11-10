@@ -1,9 +1,9 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using command_runner.Handler.Exception;
+using CommandRunner.Handler.Exception;
 
-namespace command_runner.Handler
+namespace CommandRunner.Handler
 {
     public class ArgumentProvider
     {

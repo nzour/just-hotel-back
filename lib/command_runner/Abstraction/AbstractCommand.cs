@@ -1,6 +1,6 @@
-using command_runner.Handler;
+using CommandRunner.Handler;
 
-namespace command_runner.Abstraction
+namespace CommandRunner.Abstraction
 {
     public abstract class AbstractCommand
     {

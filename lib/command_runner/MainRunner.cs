@@ -1,5 +1,5 @@
 ﻿using System.Reflection;
-using command_runner.Handler.Console;
+using CommandRunner.Handler.Console;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace CommandRunner

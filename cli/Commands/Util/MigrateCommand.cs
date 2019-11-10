@@ -1,5 +1,5 @@
-using command_runner.Abstraction;
-using command_runner.Handler;
+using CommandRunner.Abstraction;
+using CommandRunner.Handler;
 using FluentMigrator.Runner;
 
 namespace Cli.Commands.Util

@@ -3,8 +3,8 @@ using System.IO;
 using System.Linq;
 using System.Reflection;
 using System.Text;
-using command_runner.Abstraction;
-using command_runner.Handler;
+using CommandRunner.Abstraction;
+using CommandRunner.Handler;
 using FluentMigrator;
 using Infrastructure;
 

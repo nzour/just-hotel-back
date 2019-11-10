@@ -4,7 +4,7 @@ using System.Linq;
 using System.Reflection;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace command_runner.Handler.Console
+namespace CommandRunner.Handler.Console
 {
     public class ConsoleManager
     {

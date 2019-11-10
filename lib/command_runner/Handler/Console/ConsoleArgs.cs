@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace command_runner.Handler.Console
+namespace CommandRunner.Handler.Console
 {
     public class ConsoleArgs
     {

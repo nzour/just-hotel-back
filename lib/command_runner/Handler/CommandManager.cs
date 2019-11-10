@@ -1,11 +1,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
-using command_runner.Abstraction;
-using command_runner.Handler.Exception;
+using CommandRunner.Abstraction;
+using CommandRunner.Handler.Exception;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace command_runner.Handler
+namespace CommandRunner.Handler
 {
     public class CommandManager
     {
