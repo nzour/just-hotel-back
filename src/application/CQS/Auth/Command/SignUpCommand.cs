@@ -8,18 +8,17 @@ namespace Application.CQS.Auth.Command
 {
     public class SignUpCommand
     {
-        public SignUpCommand(
-            IUserRepository userRepository, IPasswordEncoder passwordEncoder, SignInCommand signInCommand
-        )
+        private IUserRepository UserRepository { get; }
+
+        private IPasswordEncoder PasswordEncoder { get; }
+        private IJwtTokenService TokenService { get; }
+
+        public SignUpCommand(IUserRepository userRepository, IPasswordEncoder passwordEncoder, IJwtTokenService tokenService)
         {
             UserRepository = userRepository;
             PasswordEncoder = passwordEncoder;
-            SignInCommand = signInCommand;
+            TokenService = tokenService;
         }
-
-        private IUserRepository UserRepository { get; }
-        private IPasswordEncoder PasswordEncoder { get; }
-        private SignInCommand SignInCommand { get; }
 
         public SignInOutput Execute(SignUpInput input)
         {
@@ -28,9 +27,9 @@ namespace Application.CQS.Auth.Command
             var encryptedPassword = PasswordEncoder.Encrypt(input.Password);
             var user = new UserEntity(input.FirstName, input.LastName, input.Login, encryptedPassword, UserRole.Client);
 
-            UserRepository.CreateUser(user);
+            UserRepository.SaveAndFlush(user);
 
-            return SignInCommand.Execute(new SignInInput(user.Login, user.Password));
+            return new SignInOutput(user, TokenService.CreateToken(user));
         }
 
         private void AssertLoginIsNotBusy(string login)
@@ -38,7 +37,7 @@ namespace Application.CQS.Auth.Command
             if (UserRepository.IsLoginBusy(login))
             {
                 throw new UserLoginIsBusyException(login);
-            };
+            }
         }
     }
 }

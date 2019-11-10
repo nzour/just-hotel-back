@@ -1,5 +1,4 @@
 using System.Linq;
-using System.Threading.Tasks;
 using Domain.User;
 using NHibernate;
 
@@ -9,16 +8,6 @@ namespace Infrastructure.NHibernate.Repository
     {
         public UserRepository(ISession session) : base(session)
         {
-        }
-
-        public async Task CreateUserAsync(UserEntity user)
-        {
-            await Task.Run(() => SaveAndFlush(user));
-        }
-
-        public void CreateUser(UserEntity userEntity)
-        {
-            SaveAndFlush(userEntity);
         }
 
         public UserEntity FindUserWithLoginAndPassword(string login, string encryptedPassword)

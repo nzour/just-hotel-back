@@ -1,3 +1,5 @@
+using System.ComponentModel.DataAnnotations;
+
 namespace Application.CQS.Auth.Input
 {
     public class SignUpInput
@@ -8,6 +10,7 @@ namespace Application.CQS.Auth.Input
 
         public string LastName { get; set; }
 
+        [MinLength(6)]
         public string Password { get; set; }
 
         public SignUpInput(string login, string firstName, string lastName, string password)

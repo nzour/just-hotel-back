@@ -18,7 +18,7 @@ namespace Application.Http
         }
 
         [HttpPost]
-        [Route("sing-up")]
+        [Route("sign-up")]
         public SignInOutput SignUp([FromServices] SignUpCommand command, [FromBody] SignUpInput input)
         {
             return command.Execute(input);
