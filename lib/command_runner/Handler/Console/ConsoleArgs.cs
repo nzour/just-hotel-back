@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 
 namespace CommandRunner.Handler.Console
 {
@@ -6,18 +7,26 @@ namespace CommandRunner.Handler.Console
     {
         public ConsoleArgs(string consoleLine)
         {
-            var matches = consoleLine.Split(" ".ToCharArray());
+            IEnumerable<string> matches = consoleLine.Split(" ".ToCharArray());
 
-            if (matches.Length == 0) throw new System.Exception("Invalid string");
+            if (!matches.Any())
+            {
+                throw new System.Exception("Invalid string");
+            }
 
             var args = new List<string>();
+            var count = matches.Count();
 
-            if (matches.Length > 2)
-                for (var i = 2; i < matches.Length; i++)
-                    args.Add(matches[i]);
+            if (count > 2)
+            {
+                for (var i = 2; i < count; i++)
+                {
+                    args.Add(matches.ToArray()[i]);
+                }
+            }
 
-            Key = matches[0];
-            Action = matches.Length > 1 ? matches[1] : null;
+            Key = matches.First();
+            Action = count > 1 ? matches.ToArray()[1] : null;
             Arguments = args.ToArray();
         }
 

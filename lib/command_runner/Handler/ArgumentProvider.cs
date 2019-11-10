@@ -82,14 +82,23 @@ namespace CommandRunner.Handler
 
         private void AssertHasNext()
         {
-            if (!HasNext()) throw CommandArgumentException.NotFound(Position);
+            if (!HasNext())
+            {
+                throw CommandArgumentException.NotFound(Position);
+            }
         }
 
         private void AssertContains<T>(IEnumerable<T>? expected, T actual)
         {
-            if (null == expected) return;
+            if (null == expected)
+            {
+                return;
+            }
 
-            if (!expected.Contains(actual)) throw CommandArgumentException.NotEquals(expected, actual);
+            if (!expected.Contains(actual))
+            {
+                throw CommandArgumentException.NotEquals(expected, actual);
+            }
         }
     }
 }
