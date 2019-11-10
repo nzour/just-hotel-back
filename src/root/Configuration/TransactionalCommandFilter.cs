@@ -32,12 +32,20 @@ namespace Root.Configuration
 
         public void OnActionExecuted(ActionExecutedContext context)
         {
-            if (!MustActionBeWrapped(context.ActionDescriptor) || !Transaction.IsActive || null != context.Exception)
+            if (!MustActionBeWrapped(context.ActionDescriptor) || !Transaction.IsActive)
             {
                 return;
             }
 
-            Transaction.Commit();
+            if (null != context.Exception)
+            {
+                Transaction.Rollback();
+            }
+            else
+            {
+                Transaction.Commit();                
+            }
+
             Transaction.Dispose();
         }
 
