@@ -20,8 +20,10 @@ namespace Infrastructure.Common.DiRecorder
         private TypeFinder DomainTypeFinder { get; }
         private TypeFinder InfrastructureFinder { get; }
 
-        public SessionFactoryRecorder(IConfiguration configuration, TypeFinder domainTypeFinder,
-            TypeFinder infrastructureFinder)
+        public SessionFactoryRecorder(
+            IConfiguration configuration, TypeFinder domainTypeFinder,
+            TypeFinder infrastructureFinder
+        )
         {
             DomainTypeFinder = domainTypeFinder;
             InfrastructureFinder = infrastructureFinder;
@@ -36,8 +38,7 @@ namespace Infrastructure.Common.DiRecorder
             var fluentConfiguration = Fluently.Configure(configuration)
                 .Database(PostgreSQLConfiguration.PostgreSQL82
                     .DefaultSchema(Configuration["DB_SCHEMA"])
-                    .ConnectionString(connectionString)
-                );
+                    .ConnectionString(connectionString));
 
             RegisterMappings(fluentConfiguration);
 
@@ -62,7 +63,9 @@ namespace Infrastructure.Common.DiRecorder
         private void RegisterMappings(FluentConfiguration configuration)
         {
             var mappings = InfrastructureFinder.FindTypes(t =>
-                (bool) t.Namespace?.StartsWith(MappingNamespace) && t.Name.EndsWith(MappingPostfix)
+                null != t.Namespace &&
+                t.Namespace.StartsWith(MappingNamespace) &&
+                t.Name.EndsWith(MappingPostfix)
             );
 
             foreach (var mapping in mappings)
@@ -73,7 +76,8 @@ namespace Infrastructure.Common.DiRecorder
 
         private string GetConnectionString()
         {
-            return $"Server={Configuration["DB_HOST"]};Port=5432;Database={Configuration["DB_NAME"]};User Id={Configuration["DB_USER"]};Password={Configuration["DB_PASSWORD"]}";
+            return
+                $"Server={Configuration["DB_HOST"]};Port=5432;Database={Configuration["DB_NAME"]};User Id={Configuration["DB_USER"]};Password={Configuration["DB_PASSWORD"]}";
         }
     }
 }

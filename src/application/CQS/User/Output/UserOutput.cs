@@ -1,8 +1,6 @@
 using System;
 using Domain.User;
 
-#nullable disable
-
 namespace Application.CQS.User.Output
 {
     public class UserOutput

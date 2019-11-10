@@ -2,8 +2,6 @@ using System.Collections.Generic;
 using System.Linq;
 using Domain.Rent;
 
-#nullable disable
-
 namespace Domain.User
 {
     public class UserEntity : AbstractEntity
@@ -15,14 +13,9 @@ namespace Domain.User
         public string Role { get; internal set; }
         public ISet<RentEntity> Rents { get; internal set; } = new HashSet<RentEntity>();
 
-        // Nhibernate требует наличие безаргументного конструктора.
-        protected UserEntity()
-        {
-        }
-
         public UserEntity(string firstName, string lastName, string login, string password, string role)
         {
-            UserRole.Validate(role);
+            role.AssertValidUserRole();
 
             Identify();
             FirstName = firstName;
@@ -41,7 +34,7 @@ namespace Domain.User
 
         public static IEnumerable<string> Roles { get; } = new[] { Manager, Employee, Client };
 
-        public static void Validate(string role)
+        public static void AssertValidUserRole(this string role)
         {
             if (Roles.Contains(role))
             {

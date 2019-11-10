@@ -1,5 +1,3 @@
-#nullable disable
-
 namespace Application.CQS.Auth.Input
 {
     public class SignInInput
@@ -7,10 +5,6 @@ namespace Application.CQS.Auth.Input
         public string Login { get; set; }
 
         public string Password { get; set; }
-
-        public SignInInput()
-        {
-        }
 
         public SignInInput(string login, string password)
         {

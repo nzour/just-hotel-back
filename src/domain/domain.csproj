@@ -70,4 +70,8 @@
     <RegFreeComManifest Remove="obj\Debug\netcoreapp3.0\domain.X.manifest" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="EmptyConstructor.Fody" Version="2.1.0" />
+  </ItemGroup>
+
 </Project>

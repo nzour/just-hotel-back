@@ -50,8 +50,11 @@ namespace Root.Configuration
 
         private bool IsCommand(Type param)
         {
-            return (bool) param.Namespace?.StartsWith(CommandNamespace) &&
-                   param.Namespace.EndsWith(CommandPostfix) &&
+            var @namespace = param.Namespace;
+
+            return null != @namespace &&
+                   @namespace.StartsWith(CommandNamespace) &&
+                   @namespace.EndsWith(CommandPostfix) &&
                    !param.CustomAttributes
                        .Select(attrData => attrData.AttributeType)
                        .Contains(typeof(NotTransactionalAttribute));
