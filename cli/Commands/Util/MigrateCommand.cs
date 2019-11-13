@@ -21,12 +21,19 @@ namespace Cli.Commands.Util
             var version = provider.NextAsLong();
             var direction = DirectionUp;
 
-            if (provider.HasNext()) direction = provider.NextAsString(new[] { DirectionUp, DirectionDown });
+            if (provider.HasNext())
+            {
+                direction = provider.NextAsString(new[] { DirectionUp, DirectionDown });
+            }
 
             if (direction.Equals(DirectionUp))
+            {
                 Runner.MigrateUp(version);
+            }
             else
-                Runner.RollbackToVersion(version);
+            {
+                Runner.MigrateDown(version);
+            }
         }
 
         public override string GetName()

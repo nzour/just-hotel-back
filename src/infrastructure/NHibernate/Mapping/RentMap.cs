@@ -12,6 +12,11 @@ namespace Infrastructure.NHibernate.Mapping
 
             HasOne(x => x.Room).Constrained();
 
+            HasManyToMany(x => x.Services)
+                .ParentKeyColumn("RentId")
+                .ChildKeyColumn("ServiceId")
+                .Table("ServiceRent");
+
             References(x => x.User)
                 .Column("UserId")
                 .Not.Nullable();

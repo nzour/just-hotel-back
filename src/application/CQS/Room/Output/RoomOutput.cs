@@ -1,8 +1,6 @@
 using System;
 using Domain.Room;
 
-#nullable disable
-
 namespace Application.CQS.Room.Output
 {
     public class RoomOutput
