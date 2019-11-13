@@ -13,7 +13,7 @@ namespace Application.CQS.Auth.Output
         {
             Token = token;
             UserId = user.Id;
-            Role = user.Role;
+            Role = user.Role.ToString();
         }
     }
 }

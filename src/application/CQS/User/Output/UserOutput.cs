@@ -14,7 +14,7 @@ namespace Application.CQS.User.Output
         public UserOutput(UserEntity user)
         {
             Id = user.Id;
-            Role = user.Role;
+            Role = user.Role.ToString();
             Login = user.Login;
             Firstname = user.FirstName;
             Lastname = user.LastName;

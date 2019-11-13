@@ -1,5 +1,6 @@
 using Domain.User;
 using FluentNHibernate.Mapping;
+using NHibernate.Type;
 
 namespace Infrastructure.NHibernate.Mapping
 {
@@ -16,7 +17,10 @@ namespace Infrastructure.NHibernate.Mapping
             Map(x => x.LastName).Not.Nullable();
             Map(x => x.Login).Not.Nullable().Unique();
             Map(x => x.Password).Not.Nullable();
-            Map(x => x.Role).Not.Nullable();
+
+            Map(x => x.Role)
+                .CustomType<EnumStringType<UserRole>>()
+                .Not.Nullable();
 
             HasMany(x => x.Rents).KeyColumn("UserId");
         }

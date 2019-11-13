@@ -3,21 +3,23 @@ using Application.CQS.User.Output;
 using Application.CQS.User.Query;
 using Common.Util;
 using Domain.User;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Application.Http
 {
+    [ApiController]
     [Route("users")]
-    [Authorize(Roles = UserRole.Manager)]
+    [AuthorizeRoles(UserRole.Manager)]
     public class UserController : Controller
     {
+        [HttpGet]
         public PaginatedData<UserOutput> GetAllUsers([FromServices] GetAllUsersQuery query,
             [FromQuery] Pagination pagination)
         {
             return query.Execute(pagination);
         }
 
+        [HttpGet]
         [Route("{userId}")]
         public UserOutput GetUser([FromServices] GetUserQuery query, [FromRoute] Guid userId)
         {

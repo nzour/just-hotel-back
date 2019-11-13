@@ -56,7 +56,7 @@ namespace Infrastructure.Services
             {
                 new Claim("UserId", user.Id.ToString()),
                 new Claim("Login", user.Login),
-                new Claim(ClaimTypes.Role, user.Role)
+                new Claim(ClaimTypes.Role, user.Role.ToString())
             };
         }
     }
