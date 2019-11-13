@@ -1,6 +1,4 @@
 using System.Collections.Generic;
-using System.IO.Pipes;
-using System.Linq;
 using Domain.Rent;
 using Domain.User;
 
@@ -8,16 +6,14 @@ namespace Domain.Room
 {
     public class RoomEntity : AbstractEntity
     {
-        public string RoomType { get; internal set; }
-        public ISet<UserEntity> Employees { get; internal set; } = new HashSet<UserEntity>();
+        public RoomType RoomType { get; internal set; }
         public int Cost { get; internal set; }
+        public ISet<UserEntity> Employees { get; internal set; } = new HashSet<UserEntity>();
         public RentEntity? Rent { get; private set; }
         public bool IsRented => null != Rent;
 
-        public RoomEntity(string roomType, int cost)
+        public RoomEntity(RoomType roomType, int cost)
         {
-            roomType.AssertValidRoomType();
-
             Identify();
 
             RoomType = roomType;
@@ -25,22 +21,10 @@ namespace Domain.Room
         }
     }
 
-    public static class RoomTypes
+    public enum RoomType
     {
-        public const string Single = "Single";
-        public const string Double = "Double";
-        public const string Triple = "Triple";
-
-        public static IEnumerable<string> ValidTypes { get; } = new[] { Single, Double, Triple };
-
-        public static void AssertValidRoomType(this string roomType)
-        {
-            if (ValidTypes.Contains(roomType))
-            {
-                return;
-            }
-
-            throw RoomException.InvalidRoomType(roomType);
-        }
+        Single,
+        Double,
+        Triple
     }
 }

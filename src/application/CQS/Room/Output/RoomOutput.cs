@@ -15,7 +15,7 @@ namespace Application.CQS.Room.Output
         public RoomOutput(RoomEntity room)
         {
             Id = room.Id;
-            RoomType = room.RoomType;
+            RoomType = room.RoomType.ToString();
             Cost = room.Cost;
             IsRented = room.IsRented;
         }

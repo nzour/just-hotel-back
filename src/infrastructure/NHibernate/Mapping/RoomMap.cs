@@ -1,5 +1,6 @@
 using Domain.Room;
 using FluentNHibernate.Mapping;
+using NHibernate.Type;
 
 namespace Infrastructure.NHibernate.Mapping
 {
@@ -12,7 +13,9 @@ namespace Infrastructure.NHibernate.Mapping
             Id(x => x.Id);
             Table("Rooms");
 
-            Map(x => x.RoomType).Not.Nullable();
+            Map(x => x.RoomType)
+                .CustomType<EnumStringType<RoomType>>()
+                .Not.Nullable();
             Map(x => x.Cost).Not.Nullable();
 
             HasMany(x => x.Employees);

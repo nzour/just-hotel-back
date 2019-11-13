@@ -1,11 +1,13 @@
+using Domain.Room;
+
 namespace Application.CQS.Room.Input
 {
     public class CreateRoomInput
     {
-        public string RoomType { get; set; }
+        public RoomType RoomType { get; set; }
         public int Cost { get; set; }
 
-        public CreateRoomInput(string roomType, int cost)
+        public CreateRoomInput(RoomType roomType, int cost)
         {
             RoomType = roomType;
             Cost = cost;
