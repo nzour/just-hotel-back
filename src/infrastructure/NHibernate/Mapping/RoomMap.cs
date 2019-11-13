@@ -8,8 +8,6 @@ namespace Infrastructure.NHibernate.Mapping
     {
         public RoomMap()
         {
-            Not.LazyLoad();
-
             Id(x => x.Id);
             Table("Rooms");
 

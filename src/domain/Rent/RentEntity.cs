@@ -6,10 +6,10 @@ namespace Domain.Rent
 {
     public class RentEntity : AbstractEntity
     {
-        public RoomEntity Room { get; internal set; }
-        public UserEntity User { get; internal set; }
-        public DateTime StartedAt { get; internal set; }
-        public DateTime ExpiredAt { get; internal set; }
+        public RoomEntity Room { get; protected internal set; }
+        public UserEntity User { get; protected internal set; }
+        public DateTime StartedAt { get; protected internal set; }
+        public DateTime ExpiredAt { get; protected internal set; }
 
         public RentEntity(RoomEntity room, UserEntity user, DateTime startedAt, DateTime expiredAt)
         {

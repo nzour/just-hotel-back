@@ -7,8 +7,6 @@ namespace Infrastructure.NHibernate.Mapping
     {
         public RentMap()
         {
-            Not.LazyLoad();
-
             Id(x => x.Id).GeneratedBy.Foreign("Room");
             Table("Rents");
 
