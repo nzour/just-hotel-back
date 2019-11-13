@@ -6,9 +6,9 @@ namespace Domain.Room
 {
     public class RoomEntity : AbstractEntity
     {
-        public RoomType RoomType { get; protected internal set; }
-        public int Cost { get; protected internal set; }
-        public ISet<UserEntity> Employees { get; protected internal set; } = new HashSet<UserEntity>();
+        public RoomType RoomType { get; set; }
+        public int Cost { get; set; }
+        public ISet<UserEntity> Employees { get; set; } = new HashSet<UserEntity>();
         public RentEntity? Rent { get; protected set; }
         public bool IsRented => null != Rent;
 
