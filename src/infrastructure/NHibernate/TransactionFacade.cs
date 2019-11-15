@@ -16,37 +16,17 @@ namespace Infrastructure.NHibernate
             Session = session;
         }
 
-        public TResult Action<TResult>(Func<ISession, TResult> function)
+        public TResult Action<TResult>(Func<TResult> function)
         {
             Begin();
 
             try
             {
-                var result = function.Invoke(Session);
+                var result = function.Invoke();
 
                 Commit();
 
                 return result;
-            }
-            catch
-            {
-                Rollback();
-                throw;
-            }
-            finally
-            {
-                Dispose();
-            }
-        }
-
-        public void Action(Action<ISession> function)
-        {
-            Begin();
-
-            try
-            {
-                function.Invoke(Session);
-                Commit();
             }
             catch
             {
@@ -120,5 +100,9 @@ namespace Infrastructure.NHibernate
 
             Session.Transaction.Dispose();
         }
+    }
+
+    public class NotTransactionalAttribute : Attribute
+    {
     }
 }

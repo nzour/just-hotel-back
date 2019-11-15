@@ -16,9 +16,11 @@
     <_UnmanagedRegistrationCache Remove="obj\command_runner.csproj.UnmanagedRegistration.cache" />
     <_UnmanagedRegistrationCache Remove="obj\command_runner.csproj.UnmanagedRegistration.cache" />
     <_UnmanagedRegistrationCache Remove="obj\command_runner.csproj.UnmanagedRegistration.cache" />
+    <_UnmanagedRegistrationCache Remove="obj\command_runner.csproj.UnmanagedRegistration.cache" />
   </ItemGroup>
 
   <ItemGroup>
+    <_ResolveComReferenceCache Remove="obj\Debug\netstandard2.0\command_runner.csproj.ResolveComReference.cache" />
     <_ResolveComReferenceCache Remove="obj\Debug\netstandard2.0\command_runner.csproj.ResolveComReference.cache" />
     <_ResolveComReferenceCache Remove="obj\Debug\netstandard2.0\command_runner.csproj.ResolveComReference.cache" />
     <_ResolveComReferenceCache Remove="obj\Debug\netstandard2.0\command_runner.csproj.ResolveComReference.cache" />
@@ -28,9 +30,11 @@
     <IntermediateAssembly Remove="obj\Debug\netstandard2.0\command_runner.dll" />
     <IntermediateAssembly Remove="obj\Debug\netstandard2.0\command_runner.dll" />
     <IntermediateAssembly Remove="obj\Debug\netstandard2.0\command_runner.dll" />
+    <IntermediateAssembly Remove="obj\Debug\netstandard2.0\command_runner.dll" />
   </ItemGroup>
 
   <ItemGroup>
+    <_DebugSymbolsIntermediatePath Remove="obj\Debug\netstandard2.0\command_runner.pdb" />
     <_DebugSymbolsIntermediatePath Remove="obj\Debug\netstandard2.0\command_runner.pdb" />
     <_DebugSymbolsIntermediatePath Remove="obj\Debug\netstandard2.0\command_runner.pdb" />
     <_DebugSymbolsIntermediatePath Remove="obj\Debug\netstandard2.0\command_runner.pdb" />
@@ -40,9 +44,11 @@
     <_DeploymentManifestEntryPoint Remove="obj\Debug\netstandard2.0\command_runner.dll" />
     <_DeploymentManifestEntryPoint Remove="obj\Debug\netstandard2.0\command_runner.dll" />
     <_DeploymentManifestEntryPoint Remove="obj\Debug\netstandard2.0\command_runner.dll" />
+    <_DeploymentManifestEntryPoint Remove="obj\Debug\netstandard2.0\command_runner.dll" />
   </ItemGroup>
 
   <ItemGroup>
+    <ApplicationManifest Remove="obj\Debug\netstandard2.0\Native.command_runner.manifest" />
     <ApplicationManifest Remove="obj\Debug\netstandard2.0\Native.command_runner.manifest" />
     <ApplicationManifest Remove="obj\Debug\netstandard2.0\Native.command_runner.manifest" />
     <ApplicationManifest Remove="obj\Debug\netstandard2.0\Native.command_runner.manifest" />
@@ -52,15 +58,18 @@
     <DeployManifest Remove="obj\Debug\netstandard2.0\command_runner.application" />
     <DeployManifest Remove="obj\Debug\netstandard2.0\command_runner.application" />
     <DeployManifest Remove="obj\Debug\netstandard2.0\command_runner.application" />
+    <DeployManifest Remove="obj\Debug\netstandard2.0\command_runner.application" />
   </ItemGroup>
 
   <ItemGroup>
     <ClsidMap Remove="obj\Debug\netstandard2.0\command_runner.clsidmap" />
     <ClsidMap Remove="obj\Debug\netstandard2.0\command_runner.clsidmap" />
     <ClsidMap Remove="obj\Debug\netstandard2.0\command_runner.clsidmap" />
+    <ClsidMap Remove="obj\Debug\netstandard2.0\command_runner.clsidmap" />
   </ItemGroup>
 
   <ItemGroup>
+    <RegFreeComManifest Remove="obj\Debug\netstandard2.0\command_runner.X.manifest" />
     <RegFreeComManifest Remove="obj\Debug\netstandard2.0\command_runner.X.manifest" />
     <RegFreeComManifest Remove="obj\Debug\netstandard2.0\command_runner.X.manifest" />
     <RegFreeComManifest Remove="obj\Debug\netstandard2.0\command_runner.X.manifest" />

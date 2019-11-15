@@ -3,13 +3,12 @@ using System.Linq;
 using Application.CQS;
 using Common.Extensions;
 using Domain.User;
-using Kernel.Abstraction;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc.Filters;
 
 namespace Root.Configuration
 {
-    public class UserAwareActionFilter : IActionFilter, IGlobalFilter
+    public class UserAwareActionFilter : IActionFilter
     {
         private IHttpContextAccessor Http { get; }
         private IUserRepository UserRepository { get; }

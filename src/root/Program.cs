@@ -22,8 +22,8 @@ namespace Root
         public static IConfiguration CreateConfiguration()
         {
             return new ConfigurationBuilder()
-                .AddJsonFile("appsettings.json", false, true)
-                .AddJsonFile("appsettings.Development.json", true, true)
+                .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
+                .AddJsonFile("appsettings.Development.json", optional:true, reloadOnChange:true)
                 .AddEnvironmentVariables()
                 .Build();
         }

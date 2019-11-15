@@ -1,11 +1,10 @@
+using System.Text.Json.Serialization;
 using Application;
 using Infrastructure;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.OpenApi.Models;
 using Root.Configuration;
-using _Kernel = Kernel.Kernel;
 
 namespace Root
 {
@@ -20,16 +19,23 @@ namespace Root
 
         public void ConfigureServices(IServiceCollection services)
         {
-            var kernel = new _Kernel(GetType().Assembly, services);
+            services
+                .AddControllers()
+                .AddJsonOptions(options =>
+                {
+                    options.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter());
+                })
+                .AddMvcOptions(options =>
+                {
+                    options.Filters.Add<ModelStateValidationFilter>();
+                    options.Filters.Add<TransactionalCommandFilter>();
+                    options.Filters.Add<UserAwareActionFilter>();
+                });
 
-            kernel
-                .LoadModules(new ApplicationModule(), new InfrastructureModule())
-                .Boot();
-
-            services.AddTransient<ExceptionHandlingMiddleware>();
-            services.AddSwaggerGen(setup => setup.SwaggerDoc("v1", new OpenApiInfo { Title = "Zobor" }));
-
-            services.AddCors();
+            services
+                .AddApplication()
+                .AddInfrastructure(Configuration)
+                .AddTransient<ExceptionHandlingMiddleware>();
         }
 
         public void Configure(IApplicationBuilder app)

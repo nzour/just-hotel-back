@@ -3,28 +3,30 @@ using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
-using Application.Abstraction;
 using Domain.User;
-using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 
 namespace Infrastructure.Services
 {
+    public interface IJwtTokenService
+    {
+        string CreateToken(UserEntity userEntity);
+    }
+
     public class JwtTokenService : IJwtTokenService
     {
-        private IConfiguration Configuration { get; }
+        private JwtTokenConfig Config { get; }
         private JwtSecurityTokenHandler TokenHandler { get; } = new JwtSecurityTokenHandler();
         private Func<UserEntity, IEnumerable<Claim>>? ClaimsGenerator { get; set; }
 
-        public JwtTokenService(IConfiguration configuration)
+        public JwtTokenService(JwtTokenConfig config)
         {
-            Configuration = configuration;
+            Config = config;
         }
 
         public string CreateToken(UserEntity userEntity)
         {
-            var key = Encoding.UTF8.GetBytes(Configuration["TOKEN_SECRET_KEY"] ?? "");
-
+            var secret = Encoding.UTF8.GetBytes(Config.Secret);
             var claims = null != ClaimsGenerator ? ClaimsGenerator.Invoke(userEntity) : CreateDefaultClaims(userEntity);
 
             var descriptor = new SecurityTokenDescriptor
@@ -35,10 +37,10 @@ namespace Infrastructure.Services
                 NotBefore = DateTime.UtcNow,
                 Subject = new ClaimsIdentity(claims),
                 Expires = DateTime.UtcNow.AddSeconds(
-                    Convert.ToDouble(Configuration["TOKEN_TTL"] ?? "0")
+                    Convert.ToDouble(Config.Ttl)
                 ),
                 SigningCredentials =
-                    new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)
+                    new SigningCredentials(new SymmetricSecurityKey(secret), SecurityAlgorithms.HmacSha256Signature)
             };
 
 
@@ -59,5 +61,11 @@ namespace Infrastructure.Services
                 new Claim(ClaimTypes.Role, user.Role.ToString())
             };
         }
+    }
+
+    public class JwtTokenConfig
+    {
+        public string Secret { get; set; } = string.Empty;
+        public uint Ttl { get; set; }
     }
 }

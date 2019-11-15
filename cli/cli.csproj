@@ -10,7 +10,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\lib\command_runner\command_runner.csproj" />
-    <ProjectReference Include="..\lib\kernel\kernel.csproj" />
     <ProjectReference Include="..\src\root\root.csproj" />
   </ItemGroup>
 
@@ -29,9 +28,11 @@
     <_UnmanagedRegistrationCache Remove="obj\cli.csproj.UnmanagedRegistration.cache" />
     <_UnmanagedRegistrationCache Remove="obj\cli.csproj.UnmanagedRegistration.cache" />
     <_UnmanagedRegistrationCache Remove="obj\cli.csproj.UnmanagedRegistration.cache" />
+    <_UnmanagedRegistrationCache Remove="obj\cli.csproj.UnmanagedRegistration.cache" />
   </ItemGroup>
 
   <ItemGroup>
+    <_ResolveComReferenceCache Remove="obj\Debug\netcoreapp3.0\cli.csproj.ResolveComReference.cache" />
     <_ResolveComReferenceCache Remove="obj\Debug\netcoreapp3.0\cli.csproj.ResolveComReference.cache" />
     <_ResolveComReferenceCache Remove="obj\Debug\netcoreapp3.0\cli.csproj.ResolveComReference.cache" />
     <_ResolveComReferenceCache Remove="obj\Debug\netcoreapp3.0\cli.csproj.ResolveComReference.cache" />
@@ -43,9 +44,11 @@
     <IntermediateAssembly Remove="obj\Debug\netcoreapp3.0\cli.dll" />
     <IntermediateAssembly Remove="obj\Debug\netcoreapp3.0\cli.dll" />
     <IntermediateAssembly Remove="obj\Debug\netcoreapp3.0\cli.dll" />
+    <IntermediateAssembly Remove="obj\Debug\netcoreapp3.0\cli.dll" />
   </ItemGroup>
 
   <ItemGroup>
+    <_DebugSymbolsIntermediatePath Remove="obj\Debug\netcoreapp3.0\cli.pdb" />
     <_DebugSymbolsIntermediatePath Remove="obj\Debug\netcoreapp3.0\cli.pdb" />
     <_DebugSymbolsIntermediatePath Remove="obj\Debug\netcoreapp3.0\cli.pdb" />
     <_DebugSymbolsIntermediatePath Remove="obj\Debug\netcoreapp3.0\cli.pdb" />
@@ -57,9 +60,11 @@
     <_DeploymentManifestEntryPoint Remove="obj\Debug\netcoreapp3.0\cli.dll" />
     <_DeploymentManifestEntryPoint Remove="obj\Debug\netcoreapp3.0\cli.dll" />
     <_DeploymentManifestEntryPoint Remove="obj\Debug\netcoreapp3.0\cli.dll" />
+    <_DeploymentManifestEntryPoint Remove="obj\Debug\netcoreapp3.0\cli.dll" />
   </ItemGroup>
 
   <ItemGroup>
+    <ApplicationManifest Remove="obj\Debug\netcoreapp3.0\cli.dll.manifest" />
     <ApplicationManifest Remove="obj\Debug\netcoreapp3.0\cli.dll.manifest" />
     <ApplicationManifest Remove="obj\Debug\netcoreapp3.0\cli.dll.manifest" />
     <ApplicationManifest Remove="obj\Debug\netcoreapp3.0\cli.dll.manifest" />
@@ -71,6 +76,7 @@
     <DeployManifest Remove="obj\Debug\netcoreapp3.0\cli.application" />
     <DeployManifest Remove="obj\Debug\netcoreapp3.0\cli.application" />
     <DeployManifest Remove="obj\Debug\netcoreapp3.0\cli.application" />
+    <DeployManifest Remove="obj\Debug\netcoreapp3.0\cli.application" />
   </ItemGroup>
 
   <ItemGroup>
@@ -78,9 +84,11 @@
     <ClsidMap Remove="obj\Debug\netcoreapp3.0\cli.clsidmap" />
     <ClsidMap Remove="obj\Debug\netcoreapp3.0\cli.clsidmap" />
     <ClsidMap Remove="obj\Debug\netcoreapp3.0\cli.clsidmap" />
+    <ClsidMap Remove="obj\Debug\netcoreapp3.0\cli.clsidmap" />
   </ItemGroup>
 
   <ItemGroup>
+    <RegFreeComManifest Remove="obj\Debug\netcoreapp3.0\cli.X.manifest" />
     <RegFreeComManifest Remove="obj\Debug\netcoreapp3.0\cli.X.manifest" />
     <RegFreeComManifest Remove="obj\Debug\netcoreapp3.0\cli.X.manifest" />
     <RegFreeComManifest Remove="obj\Debug\netcoreapp3.0\cli.X.manifest" />

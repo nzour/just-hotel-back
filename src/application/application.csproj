@@ -9,62 +9,8 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\lib\common\common.csproj" />
-    <ProjectReference Include="..\..\lib\kernel\kernel.csproj" />
     <ProjectReference Include="..\domain\domain.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <_UnmanagedRegistrationCache Remove="obj\application.csproj.UnmanagedRegistration.cache" />
-    <_UnmanagedRegistrationCache Remove="obj\application.csproj.UnmanagedRegistration.cache" />
-    <_UnmanagedRegistrationCache Remove="obj\application.csproj.UnmanagedRegistration.cache" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <_ResolveComReferenceCache Remove="obj\Debug\netcoreapp3.0\application.csproj.ResolveComReference.cache" />
-    <_ResolveComReferenceCache Remove="obj\Debug\netcoreapp3.0\application.csproj.ResolveComReference.cache" />
-    <_ResolveComReferenceCache Remove="obj\Debug\netcoreapp3.0\application.csproj.ResolveComReference.cache" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <IntermediateAssembly Remove="obj\Debug\netcoreapp3.0\application.dll" />
-    <IntermediateAssembly Remove="obj\Debug\netcoreapp3.0\application.dll" />
-    <IntermediateAssembly Remove="obj\Debug\netcoreapp3.0\application.dll" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <_DebugSymbolsIntermediatePath Remove="obj\Debug\netcoreapp3.0\application.pdb" />
-    <_DebugSymbolsIntermediatePath Remove="obj\Debug\netcoreapp3.0\application.pdb" />
-    <_DebugSymbolsIntermediatePath Remove="obj\Debug\netcoreapp3.0\application.pdb" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <_DeploymentManifestEntryPoint Remove="obj\Debug\netcoreapp3.0\application.dll" />
-    <_DeploymentManifestEntryPoint Remove="obj\Debug\netcoreapp3.0\application.dll" />
-    <_DeploymentManifestEntryPoint Remove="obj\Debug\netcoreapp3.0\application.dll" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ApplicationManifest Remove="obj\Debug\netcoreapp3.0\Native.application.manifest" />
-    <ApplicationManifest Remove="obj\Debug\netcoreapp3.0\Native.application.manifest" />
-    <ApplicationManifest Remove="obj\Debug\netcoreapp3.0\Native.application.manifest" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <DeployManifest Remove="obj\Debug\netcoreapp3.0\application.application" />
-    <DeployManifest Remove="obj\Debug\netcoreapp3.0\application.application" />
-    <DeployManifest Remove="obj\Debug\netcoreapp3.0\application.application" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ClsidMap Remove="obj\Debug\netcoreapp3.0\application.clsidmap" />
-    <ClsidMap Remove="obj\Debug\netcoreapp3.0\application.clsidmap" />
-    <ClsidMap Remove="obj\Debug\netcoreapp3.0\application.clsidmap" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <RegFreeComManifest Remove="obj\Debug\netcoreapp3.0\application.X.manifest" />
-    <RegFreeComManifest Remove="obj\Debug\netcoreapp3.0\application.X.manifest" />
-    <RegFreeComManifest Remove="obj\Debug\netcoreapp3.0\application.X.manifest" />
+    <ProjectReference Include="..\infrastructure\infrastructure.csproj" />
   </ItemGroup>
 
   <ItemGroup>

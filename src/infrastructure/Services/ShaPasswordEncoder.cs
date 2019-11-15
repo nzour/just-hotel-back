@@ -1,12 +1,14 @@
 using System;
 using System.Security.Cryptography;
 using System.Text;
-using Application.Abstraction;
-using Kernel.Attribute;
 
 namespace Infrastructure.Services
 {
-    [Transient(typeof(IPasswordEncoder))]
+    public interface IPasswordEncoder
+    {
+        string Encrypt(string passwordToEncode);
+    }
+
     public class ShaPasswordEncoder : IPasswordEncoder
     {
         private const string AlgorithmName = "SHA1";

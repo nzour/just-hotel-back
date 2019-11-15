@@ -44,7 +44,7 @@ namespace Cli.Commands.Util
         {
             var version = DateTime.Now.ToString("yyyyMMdd");
 
-            var lastVersion = typeof(InfrastructureModule).Assembly.DefinedTypes
+            var lastVersion = typeof(InfrastructureExtension).Assembly.DefinedTypes
                 .Where(t => t.IsSubclassOf(typeof(Migration)))
                 .Select(m => m.GetCustomAttribute<MigrationAttribute>()?.Version.ToString())
                 .OrderBy(v => v)

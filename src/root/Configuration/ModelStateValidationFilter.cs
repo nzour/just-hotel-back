@@ -1,12 +1,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using Application.Exception;
-using Kernel.Abstraction;
 using Microsoft.AspNetCore.Mvc.Filters;
 
 namespace Root.Configuration
 {
-    public class ModelStateValidationFilter : IActionFilter, IGlobalFilter
+    public class ModelStateValidationFilter : IActionFilter
     {
         public void OnActionExecuting(ActionExecutingContext context)
         {

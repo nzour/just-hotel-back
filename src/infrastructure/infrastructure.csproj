@@ -9,8 +9,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\lib\common\common.csproj" />
-    <ProjectReference Include="..\..\lib\kernel\kernel.csproj" />
-    <ProjectReference Include="..\application\application.csproj" />
     <ProjectReference Include="..\domain\domain.csproj" />
   </ItemGroup>
 
@@ -35,9 +33,11 @@
     <_UnmanagedRegistrationCache Remove="obj\infrastructure.csproj.UnmanagedRegistration.cache" />
     <_UnmanagedRegistrationCache Remove="obj\infrastructure.csproj.UnmanagedRegistration.cache" />
     <_UnmanagedRegistrationCache Remove="obj\infrastructure.csproj.UnmanagedRegistration.cache" />
+    <_UnmanagedRegistrationCache Remove="obj\infrastructure.csproj.UnmanagedRegistration.cache" />
   </ItemGroup>
 
   <ItemGroup>
+    <_ResolveComReferenceCache Remove="obj\Debug\netcoreapp3.0\infrastructure.csproj.ResolveComReference.cache" />
     <_ResolveComReferenceCache Remove="obj\Debug\netcoreapp3.0\infrastructure.csproj.ResolveComReference.cache" />
     <_ResolveComReferenceCache Remove="obj\Debug\netcoreapp3.0\infrastructure.csproj.ResolveComReference.cache" />
     <_ResolveComReferenceCache Remove="obj\Debug\netcoreapp3.0\infrastructure.csproj.ResolveComReference.cache" />
@@ -51,9 +51,11 @@
     <IntermediateAssembly Remove="obj\Debug\netcoreapp3.0\infrastructure.dll" />
     <IntermediateAssembly Remove="obj\Debug\netcoreapp3.0\infrastructure.dll" />
     <IntermediateAssembly Remove="obj\Debug\netcoreapp3.0\infrastructure.dll" />
+    <IntermediateAssembly Remove="obj\Debug\netcoreapp3.0\infrastructure.dll" />
   </ItemGroup>
 
   <ItemGroup>
+    <_DebugSymbolsIntermediatePath Remove="obj\Debug\netcoreapp3.0\infrastructure.pdb" />
     <_DebugSymbolsIntermediatePath Remove="obj\Debug\netcoreapp3.0\infrastructure.pdb" />
     <_DebugSymbolsIntermediatePath Remove="obj\Debug\netcoreapp3.0\infrastructure.pdb" />
     <_DebugSymbolsIntermediatePath Remove="obj\Debug\netcoreapp3.0\infrastructure.pdb" />
@@ -67,6 +69,7 @@
     <_DeploymentManifestEntryPoint Remove="obj\Debug\netcoreapp3.0\infrastructure.dll" />
     <_DeploymentManifestEntryPoint Remove="obj\Debug\netcoreapp3.0\infrastructure.dll" />
     <_DeploymentManifestEntryPoint Remove="obj\Debug\netcoreapp3.0\infrastructure.dll" />
+    <_DeploymentManifestEntryPoint Remove="obj\Debug\netcoreapp3.0\infrastructure.dll" />
   </ItemGroup>
 
   <ItemGroup>
@@ -75,6 +78,7 @@
     <ApplicationManifest Remove="obj\Debug\netcoreapp3.0\Native.infrastructure.manifest" />
     <ApplicationManifest Remove="obj\Debug\netcoreapp3.0\Native.infrastructure.manifest" />
     <ApplicationManifest Remove="obj\Debug\netcoreapp3.0\Native.infrastructure.manifest" />
+    <ApplicationManifest Remove="obj\Debug\netcoreapp3.0\Native.infrastructure.manifest" />
   </ItemGroup>
 
   <ItemGroup>
@@ -83,6 +87,7 @@
     <DeployManifest Remove="obj\Debug\netcoreapp3.0\infrastructure.application" />
     <DeployManifest Remove="obj\Debug\netcoreapp3.0\infrastructure.application" />
     <DeployManifest Remove="obj\Debug\netcoreapp3.0\infrastructure.application" />
+    <DeployManifest Remove="obj\Debug\netcoreapp3.0\infrastructure.application" />
   </ItemGroup>
 
   <ItemGroup>
@@ -91,9 +96,11 @@
     <ClsidMap Remove="obj\Debug\netcoreapp3.0\infrastructure.clsidmap" />
     <ClsidMap Remove="obj\Debug\netcoreapp3.0\infrastructure.clsidmap" />
     <ClsidMap Remove="obj\Debug\netcoreapp3.0\infrastructure.clsidmap" />
+    <ClsidMap Remove="obj\Debug\netcoreapp3.0\infrastructure.clsidmap" />
   </ItemGroup>
 
   <ItemGroup>
+    <RegFreeComManifest Remove="obj\Debug\netcoreapp3.0\infrastructure.X.manifest" />
     <RegFreeComManifest Remove="obj\Debug\netcoreapp3.0\infrastructure.X.manifest" />
     <RegFreeComManifest Remove="obj\Debug\netcoreapp3.0\infrastructure.X.manifest" />
     <RegFreeComManifest Remove="obj\Debug\netcoreapp3.0\infrastructure.X.manifest" />

@@ -3,23 +3,23 @@ using CommandRunner;
 using Infrastructure;
 using Microsoft.Extensions.DependencyInjection;
 using Root;
-using _Kernel = Kernel.Kernel;
 
 namespace cli
 {
-    public static class CliProgram
+    internal static class CliProgram
     {
         public static void Main(string[] args)
         {
-            var kernel = new _Kernel(typeof(Startup).Assembly);
+            var configuration = Program.CreateConfiguration();
+            var services = new ServiceCollection();
 
-            kernel.Services.AddScoped(_ => Program.CreateConfiguration());
+            services.AddScoped(_ => Program.CreateConfiguration());
 
-            kernel
-                .LoadModules(new ApplicationModule(), new InfrastructureModule())
-                .Boot();
+            services
+                .AddInfrastructure(configuration)
+                .AddApplication();
 
-            var commandRunner = new MainRunner(typeof(CliProgram).Assembly, kernel.Services);
+            var commandRunner = new MainRunner(typeof(CliProgram).Assembly, services);
             commandRunner.Execute(string.Join(" ", args));
         }
     }

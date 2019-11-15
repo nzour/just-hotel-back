@@ -1,14 +1,12 @@
 using System;
 using System.Linq;
-using Application.Abstraction;
 using Infrastructure.NHibernate;
-using Kernel.Abstraction;
 using Microsoft.AspNetCore.Mvc.Abstractions;
 using Microsoft.AspNetCore.Mvc.Filters;
 
 namespace Root.Configuration
 {
-    public class TransactionalCommandFilter : IActionFilter, IGlobalFilter
+    public class TransactionalCommandFilter : IActionFilter
     {
         private const string CommandNamespace = "Application.CQS";
         private const string CommandPostfix = "Command";
