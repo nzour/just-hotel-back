@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Root.Configuration;
+using Root.Configuration.Converter;
 
 namespace Root
 {
@@ -24,6 +25,7 @@ namespace Root
                 .AddJsonOptions(options =>
                 {
                     options.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter());
+                    options.JsonSerializerOptions.Converters.Add(new DateTimeConverter());
                 })
                 .AddMvcOptions(options =>
                 {
