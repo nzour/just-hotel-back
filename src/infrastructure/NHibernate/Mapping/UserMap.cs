@@ -21,6 +21,7 @@ namespace Infrastructure.NHibernate.Mapping
                 .Not.Nullable();
 
             HasMany(x => x.Rents).KeyColumn("UserId");
+            HasMany(x => x.Transactions).KeyColumn("UserId");
         }
     }
 }

@@ -1,7 +1,7 @@
-using Domain;
 using Domain.Rent;
 using Domain.Room;
 using Domain.Service;
+using Domain.Transaction;
 using Domain.User;
 using FluentMigrator.Runner;
 using Infrastructure.NHibernate;
@@ -56,10 +56,11 @@ namespace Infrastructure
 
         public static IServiceCollection AddEntityRepositories(this IServiceCollection services)
         {
-            services.AddTransient<IEntityRepository<UserEntity>>();
-            services.AddTransient<IEntityRepository<RentEntity>>();
-            services.AddTransient<IEntityRepository<RoomEntity>>();
-            services.AddTransient<IEntityRepository<ServiceEntity>>();
+            services.AddTransient<EntityRepository<UserEntity>>();
+            services.AddTransient<EntityRepository<RoomEntity>>();
+            services.AddTransient<EntityRepository<RentEntity>>();
+            services.AddTransient<EntityRepository<ServiceEntity>>();
+            services.AddTransient<EntityRepository<TransactionEntity>>();
 
             services.AddTransient<IUserRepository, UserRepository>();
 

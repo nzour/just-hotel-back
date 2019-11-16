@@ -17,8 +17,7 @@ namespace Infrastructure.NHibernate.Mapping
                 .ChildKeyColumn("ServiceId")
                 .Table("ServiceRent");
 
-            References(x => x.User)
-                .Column("UserId")
+            References(x => x.User, "UserId")
                 .Not.Nullable();
 
             Map(x => x.StartedAt)
