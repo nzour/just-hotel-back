@@ -6,15 +6,15 @@ namespace Application.CQS.Room.Output
     public class RoomOutput
     {
         public Guid Id { get; set; }
-        public string RoomType { get; set; }
-        public int Cost { get; set; }
+        public uint Cost { get; set; }
+        public RoomType RoomType { get; set; }
         public bool IsRented { get; set; }
 
         public RoomOutput(RoomEntity room)
         {
             Id = room.Id;
-            RoomType = room.RoomType.ToString();
             Cost = room.Cost;
+            RoomType = room.RoomType;
             IsRented = room.IsRented;
         }
     }

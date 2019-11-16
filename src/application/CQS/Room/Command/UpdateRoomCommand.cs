@@ -14,7 +14,7 @@ namespace Application.CQS.Room.Command
             RoomRepository = roomRepository;
         }
 
-        public void Execute(Guid roomId, UpdateRoomInput input)
+        public void Execute(Guid roomId, RoomInput input)
         {
             var room = RoomRepository.Get(roomId);
 

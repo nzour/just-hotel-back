@@ -4,6 +4,7 @@ using Application.CQS.Room.Input;
 using Application.CQS.Room.Output;
 using Application.CQS.Room.Query;
 using Common.Util;
+using Domain.User;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
@@ -14,13 +15,14 @@ namespace Application.Http
     public class RoomController : Controller
     {
         [HttpPost]
-        [Authorize(Roles = "Manager")]
-        public void CreateRoom([FromServices] CreateRoomCommand command, [FromBody] CreateRoomInput input)
+        [AuthorizeRoles(UserRole.Manager)]
+        public void CreateRoom([FromServices] CreateRoomCommand command, [FromBody] RoomInput input)
         {
             command.Execute(input);
         }
 
         [HttpGet]
+        [AllowAnonymous]
         [Route("{roomId}")]
         public RoomOutput GetRoom([FromServices] GetRoomQuery query, Guid roomId)
         {
@@ -29,16 +31,20 @@ namespace Application.Http
 
         [HttpGet]
         [AllowAnonymous]
-        public PaginatedData<RoomOutput> GetAllRooms([FromServices] GetAllRoomsQuery query,
-            [FromQuery] GetRoomInputFilter filter, [FromQuery] Pagination pagination)
+        public PaginatedData<RoomOutput> GetAllRooms(
+            [FromServices] GetAllRoomsQuery query,
+            [FromQuery] GetRoomInputFilter filter, [FromQuery] Pagination pagination
+        )
         {
             return query.Execute(filter, pagination);
         }
 
         [HttpPut]
         [Route("{roomId}")]
-        public void UpdateRoom([FromServices] UpdateRoomCommand command, [FromBody] UpdateRoomInput input,
-            [FromRoute] Guid roomId)
+        public void UpdateRoom(
+            [FromServices] UpdateRoomCommand command, [FromBody] RoomInput input,
+            [FromRoute] Guid roomId
+        )
         {
             command.Execute(roomId, input);
         }

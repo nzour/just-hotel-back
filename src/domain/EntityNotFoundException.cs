@@ -4,7 +4,7 @@ namespace Domain
 {
     public class EntityNotFoundException<TEntity> : Exception where TEntity : class
     {
-        public EntityNotFoundException(Guid id) : base($"${typeof(TEntity).Name} with identifier {id} was not found.")
+        public EntityNotFoundException(object id) : base($"${typeof(TEntity).Name} with identifier {id} was not found.")
         {
         }
     }

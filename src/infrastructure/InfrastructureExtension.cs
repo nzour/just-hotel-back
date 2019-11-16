@@ -16,7 +16,8 @@ namespace Infrastructure
     {
         public static IServiceCollection AddInfrastructure(
             this IServiceCollection services,
-            IConfiguration configuration)
+            IConfiguration configuration
+        )
         {
             var connectionString = configuration.GetConnectionString("Dev");
 
@@ -72,8 +73,10 @@ namespace Infrastructure
             return services;
         }
 
-        public static IServiceCollection AddJwtTokenService(this IServiceCollection services,
-            IConfiguration configuration)
+        public static IServiceCollection AddJwtTokenService(
+            this IServiceCollection services,
+            IConfiguration configuration
+        )
         {
             var config = new JwtTokenConfig();
             configuration.Bind("JwtToken", config);

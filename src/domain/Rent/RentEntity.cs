@@ -14,7 +14,7 @@ namespace Domain.Rent
         public DateTime StartedAt { get; protected internal set; }
         public DateTime ExpiredAt { get; protected internal set; }
         public ISet<ServiceEntity> Services { get; protected internal set; }
-        public int Cost => Services.Sum(s => s.Cost) + Room.Cost;
+        public uint Cost => Room.Cost + (uint) Services.Sum(s => s.Cost);
 
         public RentEntity(RoomEntity room, UserEntity user, DateTime startedAt, DateTime expiredAt)
         {

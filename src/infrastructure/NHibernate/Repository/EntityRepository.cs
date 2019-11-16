@@ -1,5 +1,5 @@
-using System;
 using System.Linq;
+using System.Threading.Tasks;
 using Domain;
 using NHibernate;
 
@@ -14,21 +14,27 @@ namespace Infrastructure.NHibernate.Repository
             Session = session;
         }
 
-        public void SaveAndFlush(TEntity entity)
-        {
-            Session.Save(entity);
-            Session.Flush();
-        }
-
         public void SaveAndFlush(params TEntity[] entities)
         {
             foreach (var entity in entities)
             {
-                SaveAndFlush(entity);
+                Session.Save(entity);
             }
+
+            Session.Flush();
         }
 
-        public TEntity Get(Guid id)
+        public async Task SaveAndFlushAsync(params TEntity[] entities)
+        {
+            foreach (var entity in entities)
+            {
+                await Session.SaveAsync(entity);
+            }
+
+            await Session.FlushAsync();
+        }
+
+        public TEntity Get(object id)
         {
             var entity = Session.Get<TEntity>(id);
 
@@ -40,9 +46,9 @@ namespace Infrastructure.NHibernate.Repository
             return entity;
         }
 
-        public TEntity Get(string id)
+        public async Task<TEntity> GetAsync(object id)
         {
-            return Get(new Guid(id));
+            return await Session.GetAsync<TEntity>(id);
         }
 
         public IQueryable<TEntity> FindAll()

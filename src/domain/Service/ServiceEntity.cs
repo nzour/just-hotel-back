@@ -2,10 +2,10 @@ namespace Domain.Service
 {
     public class ServiceEntity : AbstractEntity
     {
-        public string Name { get; }
-        public int Cost { get; }
+        public string Name { get; set; }
+        public uint Cost { get; set; }
 
-        public ServiceEntity(string name, int cost)
+        public ServiceEntity(string name, uint cost)
         {
             Identify();
             Name = name;

@@ -41,7 +41,7 @@ namespace Root.Configuration
             }
             else
             {
-                Transaction.Commit();                
+                Transaction.Commit();
             }
 
             Transaction.Dispose();

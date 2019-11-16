@@ -1,16 +1,16 @@
-using System;
 using System.Linq;
+using System.Threading.Tasks;
 
 namespace Domain
 {
-    public interface IEntityRepository<T> where T : class
+    public interface IEntityRepository<TEntity> where TEntity : class
     {
-        void SaveAndFlush(T entity);
-        void SaveAndFlush(params T[] entities);
+        void SaveAndFlush(params TEntity[] entities);
+        Task SaveAndFlushAsync(params TEntity[] entities);
 
-        T Get(Guid id);
-        T Get(string id);
+        TEntity Get(object id);
+        Task<TEntity> GetAsync(object id);
 
-        IQueryable<T> FindAll();
+        IQueryable<TEntity> FindAll();
     }
 }
