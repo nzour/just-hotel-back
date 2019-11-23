@@ -2,6 +2,7 @@ using System;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Serialization;
 
 namespace Root.Configuration
 {
@@ -23,9 +24,11 @@ namespace Root.Configuration
 
         private string CompileResponse(Exception e)
         {
+            var settings = new JsonSerializerSettings { ContractResolver = new CamelCasePropertyNamesContractResolver() };
+
             return e.InnerException != null
                 ? CompileResponse(e.InnerException)
-                : JsonConvert.SerializeObject(new ErrorResponse(e));
+                : JsonConvert.SerializeObject(new ErrorResponse(e), settings);
         }
     }
 
