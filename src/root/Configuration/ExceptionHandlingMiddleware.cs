@@ -11,13 +11,9 @@ namespace Root.Configuration
         {
             try
             {
-                var task = next.Invoke(context);
-
-                task.Wait();
-
-                await task;
+                await next.Invoke(context);
             }
-            catch (AggregateException e)
+            catch (Exception e)
             {
                 context.Response.StatusCode = StatusCodes.Status400BadRequest;
                 context.Response.Headers.Add("Content-Type", "application/json");
