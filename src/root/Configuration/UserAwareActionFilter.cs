@@ -40,7 +40,7 @@ namespace Root.Configuration
             string userId = Http.HttpContext.User.Claims.FirstOrDefault(c => "UserId" == c.Type)?.Value
                             ?? throw new Exception("Action requires logged user.");
 
-            return UserRepository.Get(userId);
+            return UserRepository.Get(Guid.Parse(userId));
         }
     }
 }

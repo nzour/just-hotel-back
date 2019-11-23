@@ -2,6 +2,7 @@ using System.Text.Json.Serialization;
 using Application;
 using Infrastructure;
 using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Mvc.Authorization;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Root.Configuration;
@@ -32,25 +33,30 @@ namespace Root
                     options.Filters.Add<ModelStateValidationFilter>();
                     options.Filters.Add<TransactionalCommandFilter>();
                     options.Filters.Add<UserAwareActionFilter>();
+                    options.Filters.Add(new AuthorizeFilter());
                 });
 
             services
                 .AddApplication()
                 .AddInfrastructure(Configuration)
+                .AddHttpContextAccessor()
                 .AddTransient<ExceptionHandlingMiddleware>();
         }
 
         public void Configure(IApplicationBuilder app)
         {
             app.UseDefaultFiles()
-                .UseCors(builder => builder.WithOrigins("http://localhost:4200"))
+                .UseCors(builder =>
+                    builder
+                        .AllowAnyHeader()
+                        .AllowAnyMethod()
+                        .AllowAnyOrigin()
+                )
                 .UseMiddleware<ExceptionHandlingMiddleware>()
                 .UseAuthorization()
                 .UseAuthentication()
                 .UseHsts()
                 .UseRouting()
-                .UseSwagger()
-                .UseSwaggerUI(setup => setup.SwaggerEndpoint("/doc", "Zobor doc"))
                 .UseEndpoints(endpoints => endpoints.MapControllers());
         }
     }

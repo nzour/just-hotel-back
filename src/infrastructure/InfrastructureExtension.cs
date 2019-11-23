@@ -1,3 +1,4 @@
+using System.Text;
 using Domain.Rent;
 using Domain.Room;
 using Domain.Service;
@@ -7,8 +8,10 @@ using FluentMigrator.Runner;
 using Infrastructure.NHibernate;
 using Infrastructure.NHibernate.Repository;
 using Infrastructure.Services;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.IdentityModel.Tokens;
 
 namespace Infrastructure
 {
@@ -84,6 +87,25 @@ namespace Infrastructure
 
             services.AddTransient<IJwtTokenService>(_ => new JwtTokenService(config));
 
+            services.AddAuthentication(options =>
+                {
+                    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+                })
+                .AddJwtBearer(options =>
+                {
+                    var key = Encoding.UTF8.GetBytes(config.Secret);
+                    options.TokenValidationParameters = new TokenValidationParameters
+                    {
+                        RequireExpirationTime = true,
+                        ValidateLifetime = true,
+                        ValidateIssuer = false,
+                        ValidateAudience = false,
+                        ValidateIssuerSigningKey = true,
+                        IssuerSigningKey = new SymmetricSecurityKey(key)
+                    };
+                });
+            
             return services;
         }
     }
