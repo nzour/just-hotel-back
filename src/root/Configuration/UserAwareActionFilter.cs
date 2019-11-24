@@ -16,11 +16,11 @@ namespace Root.Configuration
 
         public void OnActionExecuting(ActionExecutingContext context)
         {
-            context.ActionArguments.Foreach(async pair =>
+            context.ActionArguments.Foreach(pair =>
             {
                 if (pair.Value is IUserAware userAware)
                 {
-                    userAware.CurrentUser = await UserExtractor.ProvideUser();
+                    userAware.CurrentUser = UserExtractor.ProvideUser();
                 }
             });
         }

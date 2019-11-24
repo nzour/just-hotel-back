@@ -19,12 +19,20 @@ namespace Application
             UserRepository = userRepository;
         }
 
-        public async Task<UserEntity> ProvideUser()
+        public UserEntity ProvideUser()
         {
-            string userId = ContextAccessor.HttpContext.User.Claims.FirstOrDefault(c => "UserId" == c.Type)?.Value
-                            ?? throw new AuthenticationException("Action requires logged user.");
+            return UserRepository.Get(Guid.Parse(ExtractUserId()));
+        }
 
-            return await UserRepository.GetAsync(Guid.Parse(userId));
+        public async Task<UserEntity> ProvideUserAsync()
+        {
+            return await UserRepository.GetAsync(Guid.Parse(ExtractUserId()));
+        }
+
+        private string ExtractUserId()
+        {
+            return ContextAccessor.HttpContext.User.Claims.FirstOrDefault(c => "UserId" == c.Type)?.Value
+                   ?? throw new AuthenticationException("Action requires logged user.");
         }
     }
 }

@@ -33,7 +33,7 @@ namespace Application.Http
             [FromQuery] Pagination pagination
         )
         {
-            var currentUser = await UserExtractor.ProvideUser();
+            var currentUser = await UserExtractor.ProvideUserAsync();
             filter.UserId = currentUser.Id;
 
             return query.Execute(filter, pagination);
@@ -46,7 +46,7 @@ namespace Application.Http
             [FromQuery] Pagination pagination
         )
         {
-            var currentUser = await UserExtractor.ProvideUser();
+            var currentUser = await UserExtractor.ProvideUserAsync();
             filter.UserId = currentUser.Id;
 
             return query.Execute(filter, pagination);
