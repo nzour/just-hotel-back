@@ -18,7 +18,6 @@ namespace Infrastructure.NHibernate.Mapping
 
             HasMany(x => x.Employees);
 
-            HasOne(x => x.Rent).Cascade.None();
             HasMany(x => x.Transactions).KeyColumn("RoomId");
         }
     }

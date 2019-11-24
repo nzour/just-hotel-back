@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using Domain.Rent;
 using Domain.Transaction;
 
 namespace Domain.User
@@ -11,7 +10,6 @@ namespace Domain.User
         public string Login { get; protected internal set; }
         public string Password { get; protected internal set; }
         public UserRole Role { get; protected internal set; }
-        public ISet<RentEntity> Rents { get; protected internal set; } = new HashSet<RentEntity>();
         public ISet<TransactionEntity> Transactions { get; protected internal set; } = new HashSet<TransactionEntity>();
 
         public UserEntity(string firstName, string lastName, string login, string password, UserRole role)

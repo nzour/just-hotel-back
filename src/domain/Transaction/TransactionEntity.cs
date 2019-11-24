@@ -1,6 +1,6 @@
 using System;
 using System.Collections.Generic;
-using Domain.Rent;
+using System.Linq;
 using Domain.Room;
 using Domain.Service;
 using Domain.User;
@@ -15,14 +15,14 @@ namespace Domain.Transaction
         public uint Money { get; }
         public DateTime CreatedAt { get; }
 
-        public TransactionEntity(RentEntity rent)
+        public TransactionEntity(UserEntity user, RoomEntity room, IEnumerable<ServiceEntity> services)
         {
             Identify();
 
-            User = rent.User;
-            Room = rent.Room;
-            Services = rent.Services;
-            Money = rent.Cost;
+            User = user;
+            Room = room;
+            Services = services;
+            Money = room.Cost + (uint) services.Sum(s => s.Cost);
             CreatedAt = DateTime.UtcNow;
         }
     }

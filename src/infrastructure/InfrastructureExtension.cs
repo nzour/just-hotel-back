@@ -1,6 +1,5 @@
 using System.Text;
 using Domain;
-using Domain.Rent;
 using Domain.Room;
 using Domain.Service;
 using Domain.Transaction;
@@ -62,7 +61,6 @@ namespace Infrastructure
         {
             services.AddTransient<IEntityRepository<UserEntity>, EntityRepository<UserEntity>>();
             services.AddTransient<IEntityRepository<RoomEntity>, EntityRepository<RoomEntity>>();
-            services.AddTransient<IEntityRepository<RentEntity>, EntityRepository<RentEntity>>();
             services.AddTransient<IEntityRepository<ServiceEntity>, EntityRepository<ServiceEntity>>();
             services.AddTransient<IEntityRepository<TransactionEntity>, EntityRepository<TransactionEntity>>();
 
