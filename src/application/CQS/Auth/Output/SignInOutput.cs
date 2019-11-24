@@ -9,7 +9,7 @@ namespace Application.CQS.Auth.Output
         public string Token { get; }
         public string Role { get; }
 
-        public SignInOutput(Domain.Entities.UserEntity userEntity, string token)
+        public SignInOutput(UserEntity userEntity, string token)
         {
             Token = token;
             UserId = userEntity.Id;

@@ -8,9 +8,9 @@ namespace Application.CQS.Transaction
 {
     public class GetAllTransactionsQuery
     {
-        private IEntityRepository<Domain.Entities.TransactionEntity> TransactionRepository { get; }
+        private IEntityRepository<TransactionEntity> TransactionRepository { get; }
 
-        public GetAllTransactionsQuery(IEntityRepository<Domain.Entities.TransactionEntity> transactionRepository)
+        public GetAllTransactionsQuery(IEntityRepository<TransactionEntity> transactionRepository)
         {
             TransactionRepository = transactionRepository;
         }

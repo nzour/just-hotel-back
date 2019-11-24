@@ -11,7 +11,7 @@ namespace Application.CQS.User.Output
         public string Firstname { get; set; }
         public string Lastname { get; set; }
 
-        public UserOutput(Domain.Entities.UserEntity userEntity)
+        public UserOutput(UserEntity userEntity)
         {
             Id = userEntity.Id;
             Role = userEntity.Role;

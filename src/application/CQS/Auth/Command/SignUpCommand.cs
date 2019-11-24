@@ -26,7 +26,7 @@ namespace Application.CQS.Auth.Command
             AssertLoginIsNotBusy(input.Login);
 
             var encryptedPassword = PasswordEncoder.Encrypt(input.Password);
-            var user = new Domain.Entities.UserEntity(input.FirstName, input.LastName, input.Login, encryptedPassword, UserRole.Client);
+            var user = new UserEntity(input.FirstName, input.LastName, input.Login, encryptedPassword, UserRole.Client);
 
             UserRepository.SaveAndFlush(user);
 

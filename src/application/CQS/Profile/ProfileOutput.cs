@@ -11,7 +11,7 @@ namespace Application.CQS.Profile
         public string Login { get; }
         public UserRole Role { get; }
 
-        public ProfileOutput(Domain.Entities.UserEntity entity)
+        public ProfileOutput(UserEntity entity)
         {
             Id = entity.Id;
             FirstName = entity.FirstName;

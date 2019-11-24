@@ -5,12 +5,12 @@ using Domain.Entities;
 
 namespace Application.CQS.Transaction
 {
-    public class TransactionFilter : IInputFilter<Domain.Entities.TransactionEntity>
+    public class TransactionFilter : IInputFilter<TransactionEntity>
     {
         public Guid? UserId { get; set; }
         public Guid? RoomId { get; set; }
 
-        public IQueryable<Domain.Entities.TransactionEntity> Process(IQueryable<Domain.Entities.TransactionEntity> query)
+        public IQueryable<TransactionEntity> Process(IQueryable<TransactionEntity> query)
         {
             if (null != UserId)
             {
