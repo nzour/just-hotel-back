@@ -1,6 +1,7 @@
 using System.Threading.Tasks;
 using Application.CQS.Profile;
 using Application.CQS.Reservation;
+using Application.CQS.Transaction;
 using Common.Util;
 using Microsoft.AspNetCore.Mvc;
 
@@ -16,17 +17,30 @@ namespace Application.Http
         {
             UserExtractor = userExtractor;
         }
-        
+
         [HttpGet]
         public ProfileOutput GetProfile([FromServices] GetProfileQuery query)
         {
             return query.Execute();
         }
-        
-        [HttpGet("")]
+
+        [HttpGet("reservations")]
         public async Task<PaginatedData<ReservationsOutput>> GetCurrentUserReservations(
             [FromServices] GetAllReservationsQuery query,
             [FromQuery] ReservationsFilter filter,
+            [FromQuery] Pagination pagination
+        )
+        {
+            var currentUser = await UserExtractor.ProvideUser();
+            filter.UserId = currentUser.Id;
+
+            return query.Execute(filter, pagination);
+        }
+
+        [HttpGet("transactions")]
+        public async Task<PaginatedData<TransactionOutput>> GetCurrentUserTransactions(
+            [FromServices] GetAllTransactionsQuery query,
+            [FromQuery] TransactionFilter filter,
             [FromQuery] Pagination pagination
         )
         {
