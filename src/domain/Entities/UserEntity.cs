@@ -14,7 +14,7 @@ namespace Domain.Entities
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string Login { get; protected internal set; }
-        public string Password { get; protected internal set; }
+        public string Password { get; set; }
         public UserRole Role { get; protected internal set; }
         public ISet<TransactionEntity> Transactions { get; protected internal set; } = new HashSet<TransactionEntity>();
         public ISet<ReservationEntity> Reservations { get; protected internal set; } = new HashSet<ReservationEntity>();

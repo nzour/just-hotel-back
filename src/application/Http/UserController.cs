@@ -35,5 +35,11 @@ namespace Application.Http
         {
             command.Execute(input);
         }
+
+        [HttpPut("update-password")]
+        public void UpdateUserPassword([FromServices] UpdatePasswordCommand command, [FromBody] UpdatePasswordInput input)
+        {
+            command.Execute(input);
+        }
     }
 }
