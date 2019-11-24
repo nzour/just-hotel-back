@@ -8,8 +8,8 @@ namespace Infrastructure.NHibernate.Mapping
     {
         public UserMap()
         {
+            Id(x => x.Id).GeneratedBy.Assigned();
             Table("Users");
-            Id(x => x.Id);
 
             Map(x => x.FirstName).Not.Nullable();
             Map(x => x.LastName).Not.Nullable();
@@ -21,6 +21,7 @@ namespace Infrastructure.NHibernate.Mapping
                 .Not.Nullable();
 
             HasMany(x => x.Transactions).KeyColumn("UserId");
+            HasMany(x => x.Reservations).KeyColumn("UserId");
         }
     }
 }

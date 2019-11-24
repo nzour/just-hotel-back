@@ -1,21 +1,21 @@
-using Domain.Transaction;
+using Domain.Reservation;
 using FluentNHibernate.Mapping;
 
 namespace Infrastructure.NHibernate.Mapping
 {
-    public class TransactionMap : ClassMap<TransactionEntity>
+    public class ReservationMap : ClassMap<ReservationEntity>
     {
-        public TransactionMap()
+        public ReservationMap()
         {
             Id(x => x.Id).GeneratedBy.Assigned();
-            Table("Transactions");
+            Table("Reservations");
 
-            Map(x => x.Money)
+            Map(x => x.ReservedFrom)
                 .Not.Nullable();
 
-            Map(x => x.CreatedAt)
+            Map(x => x.ReservedTo)
                 .Not.Nullable();
-
+            
             References(x => x.User, "UserId")
                 .Cascade.Delete()
                 .Not.Nullable();
@@ -23,11 +23,6 @@ namespace Infrastructure.NHibernate.Mapping
             References(x => x.Room, "RoomId")
                 .Cascade.Delete()
                 .Not.Nullable();
-
-            HasManyToMany(x => x.Services)
-                .ParentKeyColumn("TransactionId")
-                .ChildKeyColumn("ServiceId")
-                .Table("TransactionService");
         }
     }
 }

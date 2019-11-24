@@ -8,7 +8,7 @@ namespace Infrastructure.NHibernate.Mapping
     {
         public RoomMap()
         {
-            Id(x => x.Id);
+            Id(x => x.Id).GeneratedBy.Assigned();
             Table("Rooms");
 
             Map(x => x.RoomType)

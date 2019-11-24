@@ -7,9 +7,8 @@ namespace Infrastructure.NHibernate.Mapping
     {
         public ServiceMap()
         {
-            Table("Services");
-
             Id(x => x.Id).GeneratedBy.Assigned();
+            Table("Services");
 
             Map(x => x.Name).Not.Nullable();
             Map(x => x.Cost).Not.Nullable();
