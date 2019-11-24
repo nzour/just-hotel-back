@@ -40,6 +40,7 @@ namespace Root
                 .AddApplication()
                 .AddInfrastructure(Configuration)
                 .AddHttpContextAccessor()
+                .AddTransient<UserExtractor>()
                 .AddTransient<ExceptionHandlingMiddleware>();
         }
 

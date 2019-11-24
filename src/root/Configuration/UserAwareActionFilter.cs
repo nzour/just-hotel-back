@@ -1,31 +1,25 @@
-using System;
-using System.Linq;
 using Application.CQS;
 using Common.Extensions;
-using Domain.User;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc.Filters;
 
 namespace Root.Configuration
 {
     public class UserAwareActionFilter : IActionFilter
     {
-        private IHttpContextAccessor Http { get; }
-        private IUserRepository UserRepository { get; }
+        private UserExtractor UserExtractor { get; }
 
-        public UserAwareActionFilter(IHttpContextAccessor http, IUserRepository userRepository)
+        public UserAwareActionFilter(UserExtractor userExtractor)
         {
-            Http = http;
-            UserRepository = userRepository;
+            UserExtractor = userExtractor;
         }
 
         public void OnActionExecuting(ActionExecutingContext context)
         {
-            context.ActionArguments.Foreach(pair =>
+            context.ActionArguments.Foreach(async pair =>
             {
                 if (pair.Value is IUserAware userAware)
                 {
-                    userAware.CurrentUser = DetermineCurrentUser();
+                    userAware.CurrentUser = await UserExtractor.ProvideUser();
                 }
             });
         }
@@ -33,14 +27,6 @@ namespace Root.Configuration
         public void OnActionExecuted(ActionExecutedContext context)
         {
             // noop
-        }
-
-        private UserEntity DetermineCurrentUser()
-        {
-            string userId = Http.HttpContext.User.Claims.FirstOrDefault(c => "UserId" == c.Type)?.Value
-                            ?? throw new Exception("Action requires logged user.");
-
-            return UserRepository.Get(Guid.Parse(userId));
         }
     }
 }
