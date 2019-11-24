@@ -1,5 +1,4 @@
-using Application.CQS.Profile.Output;
-using Application.CQS.Profile.Query;
+using Application.CQS.Profile;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Application.Http

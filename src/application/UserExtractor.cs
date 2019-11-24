@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Domain.User;
 using Microsoft.AspNetCore.Http;
 
-namespace Root.Configuration
+namespace Application
 {
     public class UserExtractor
     {

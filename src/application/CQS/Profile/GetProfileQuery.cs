@@ -1,7 +1,6 @@
-using Application.CQS.Profile.Output;
 using Domain.User;
 
-namespace Application.CQS.Profile.Query
+namespace Application.CQS.Profile
 {
     public class GetProfileQuery : IUserAware
     {

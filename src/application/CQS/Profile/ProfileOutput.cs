@@ -1,7 +1,7 @@
 using System;
 using Domain.User;
 
-namespace Application.CQS.Profile.Output
+namespace Application.CQS.Profile
 {
     public class ProfileOutput
     {
