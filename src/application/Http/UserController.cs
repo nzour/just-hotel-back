@@ -1,6 +1,4 @@
 using System;
-using Application.CQS.User.Command;
-using Application.CQS.User.Input;
 using Application.CQS.User.Output;
 using Application.CQS.User.Query;
 using Common.Util;
@@ -28,18 +26,6 @@ namespace Application.Http
         public UserOutput GetUser([FromServices] GetUserQuery query, [FromRoute] Guid userId)
         {
             return query.Execute(userId);
-        }
-
-        [HttpPut("update-names")]
-        public void UpdateUserNames([FromServices] UpdateNamesCommand command, [FromBody] UpdateNamesInput input)
-        {
-            command.Execute(input);
-        }
-
-        [HttpPut("update-password")]
-        public void UpdateUserPassword([FromServices] UpdatePasswordCommand command, [FromBody] UpdatePasswordInput input)
-        {
-            command.Execute(input);
         }
     }
 }

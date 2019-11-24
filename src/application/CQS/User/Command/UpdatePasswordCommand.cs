@@ -12,7 +12,6 @@ namespace Application.CQS.User.Command
         private IUserRepository UserRepository { get; }
         private IPasswordEncoder PasswordEncoder { get; }
 
-
         public UpdatePasswordCommand(IUserRepository userRepository, IPasswordEncoder passwordEncoder)
         {
             UserRepository = userRepository;
