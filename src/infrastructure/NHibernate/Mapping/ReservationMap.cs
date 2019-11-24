@@ -1,4 +1,4 @@
-using Domain.Reservation;
+using Domain.Entities;
 using FluentNHibernate.Mapping;
 
 namespace Infrastructure.NHibernate.Mapping

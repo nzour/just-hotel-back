@@ -1,6 +1,6 @@
 using System;
 
-namespace Domain.Room
+namespace Domain.Exceptions
 {
     public class RoomException : Exception
     {

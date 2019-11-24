@@ -4,7 +4,7 @@ using System.Linq;
 using Application.CQS.Room.Output;
 using Application.CQS.Service.Output;
 using Application.CQS.User.Output;
-using Domain.Reservation;
+using Domain.Entities;
 
 namespace Application.CQS.Reservation
 {

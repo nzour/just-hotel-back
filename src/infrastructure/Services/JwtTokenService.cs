@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
-using Domain.User;
+using Domain.Entities;
 using Microsoft.IdentityModel.Tokens;
 
 namespace Infrastructure.Services
 {
     public interface IJwtTokenService
     {
-        string CreateToken(UserEntity userEntity);
+        string CreateToken(UserEntity user);
     }
 
     public class JwtTokenService : IJwtTokenService
@@ -24,10 +24,10 @@ namespace Infrastructure.Services
             Config = config;
         }
 
-        public string CreateToken(UserEntity userEntity)
+        public string CreateToken(UserEntity user)
         {
             var secret = Encoding.UTF8.GetBytes(Config.Secret);
-            var claims = null != ClaimsGenerator ? ClaimsGenerator.Invoke(userEntity) : CreateDefaultClaims(userEntity);
+            var claims = null != ClaimsGenerator ? ClaimsGenerator.Invoke(user) : CreateDefaultClaims(user);
 
             var descriptor = new SecurityTokenDescriptor
             {

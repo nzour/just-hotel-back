@@ -1,5 +1,5 @@
 using System;
-using Domain.Room;
+using Domain.Entities;
 
 namespace Application.CQS.Room.Output
 {

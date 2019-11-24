@@ -1,7 +1,7 @@
 using System;
 using Application.CQS.User.Output;
 using Domain;
-using Domain.User;
+using Domain.Entities;
 
 namespace Application.CQS.User.Query
 {

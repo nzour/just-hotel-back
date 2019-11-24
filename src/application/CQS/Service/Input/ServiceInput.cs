@@ -1,5 +1,5 @@
 using System.ComponentModel.DataAnnotations;
-using Domain.Service;
+using Domain.Entities;
 
 namespace Application.CQS.Service.Input
 {

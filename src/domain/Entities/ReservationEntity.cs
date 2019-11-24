@@ -1,11 +1,9 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using Domain.Room;
-using Domain.Service;
-using Domain.User;
+using Domain.Exceptions;
 
-namespace Domain.Reservation
+namespace Domain.Entities
 {
     public class ReservationEntity : AbstractEntity
     {

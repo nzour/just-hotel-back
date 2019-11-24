@@ -1,5 +1,5 @@
 using System.ComponentModel.DataAnnotations;
-using Domain.Room;
+using Domain.Entities;
 
 namespace Application.CQS.Room.Input
 {

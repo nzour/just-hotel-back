@@ -1,6 +1,6 @@
 using System;
 
-namespace Domain.Reservation
+namespace Domain.Exceptions
 {
     public class ReservationException : Exception
     {

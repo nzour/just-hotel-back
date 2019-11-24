@@ -1,7 +1,7 @@
 using System;
 using Application.CQS.Room.Input;
 using Domain;
-using Domain.Room;
+using Domain.Entities;
 
 namespace Application.CQS.Room.Command
 {

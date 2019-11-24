@@ -1,4 +1,4 @@
-using Domain.User;
+using Domain.Entities;
 using Microsoft.AspNetCore.Authorization;
 
 namespace Application

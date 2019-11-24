@@ -1,5 +1,5 @@
 using System;
-using Domain.User;
+using Domain.Entities;
 
 namespace Application.CQS.Profile
 {
@@ -11,7 +11,7 @@ namespace Application.CQS.Profile
         public string Login { get; }
         public UserRole Role { get; }
 
-        public ProfileOutput(UserEntity entity)
+        public ProfileOutput(Domain.Entities.UserEntity entity)
         {
             Id = entity.Id;
             FirstName = entity.FirstName;

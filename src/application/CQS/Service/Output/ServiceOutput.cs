@@ -1,5 +1,5 @@
 using System;
-using Domain.Service;
+using Domain.Entities;
 
 namespace Application.CQS.Service.Output
 {

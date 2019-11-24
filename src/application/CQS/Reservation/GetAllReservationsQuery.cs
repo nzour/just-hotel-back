@@ -2,7 +2,7 @@ using System.Linq;
 using Common.Extensions;
 using Common.Util;
 using Domain;
-using Domain.Reservation;
+using Domain.Entities;
 
 namespace Application.CQS.Reservation
 {

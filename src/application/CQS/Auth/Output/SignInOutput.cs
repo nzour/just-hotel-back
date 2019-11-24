@@ -1,5 +1,5 @@
 using System;
-using Domain.User;
+using Domain.Entities;
 
 namespace Application.CQS.Auth.Output
 {
@@ -9,11 +9,11 @@ namespace Application.CQS.Auth.Output
         public string Token { get; }
         public string Role { get; }
 
-        public SignInOutput(UserEntity user, string token)
+        public SignInOutput(Domain.Entities.UserEntity userEntity, string token)
         {
             Token = token;
-            UserId = user.Id;
-            Role = user.Role.ToString();
+            UserId = userEntity.Id;
+            Role = userEntity.Role.ToString();
         }
     }
 }

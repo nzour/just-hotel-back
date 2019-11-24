@@ -2,7 +2,7 @@ using System.Linq;
 using Application.CQS.User.Output;
 using Common.Extensions;
 using Common.Util;
-using Domain.User;
+using Domain.Repositories;
 
 namespace Application.CQS.User.Query
 {

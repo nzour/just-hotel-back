@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using Common.Util;
-using Domain.Room;
+using Domain.Entities;
 using FluentNHibernate.Conventions;
 
 namespace Application.CQS.Room.Input

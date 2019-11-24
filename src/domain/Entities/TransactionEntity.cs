@@ -1,11 +1,8 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using Domain.Room;
-using Domain.Service;
-using Domain.User;
 
-namespace Domain.Transaction
+namespace Domain.Entities
 {
     public class TransactionEntity : AbstractEntity
     {

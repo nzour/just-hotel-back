@@ -2,15 +2,15 @@ using System.Linq;
 using Common.Extensions;
 using Common.Util;
 using Domain;
-using Domain.Transaction;
+using Domain.Entities;
 
 namespace Application.CQS.Transaction
 {
     public class GetAllTransactionsQuery
     {
-        private IEntityRepository<TransactionEntity> TransactionRepository { get; }
+        private IEntityRepository<Domain.Entities.TransactionEntity> TransactionRepository { get; }
 
-        public GetAllTransactionsQuery(IEntityRepository<TransactionEntity> transactionRepository)
+        public GetAllTransactionsQuery(IEntityRepository<Domain.Entities.TransactionEntity> transactionRepository)
         {
             TransactionRepository = transactionRepository;
         }

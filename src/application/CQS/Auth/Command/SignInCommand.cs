@@ -1,7 +1,7 @@
 using Application.CQS.Auth.Exception;
 using Application.CQS.Auth.Input;
 using Application.CQS.Auth.Output;
-using Domain.User;
+using Domain.Repositories;
 using Infrastructure.NHibernate;
 using Infrastructure.Services;
 

@@ -1,4 +1,4 @@
-using Domain.Service;
+using Domain.Entities;
 using FluentNHibernate.Mapping;
 
 namespace Infrastructure.NHibernate.Mapping

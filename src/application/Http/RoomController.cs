@@ -4,7 +4,7 @@ using Application.CQS.Room.Input;
 using Application.CQS.Room.Output;
 using Application.CQS.Room.Query;
 using Common.Util;
-using Domain.User;
+using Domain.Entities;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 

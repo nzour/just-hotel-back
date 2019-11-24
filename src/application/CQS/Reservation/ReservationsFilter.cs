@@ -1,7 +1,7 @@
 using System;
 using System.Linq;
 using Common.Util;
-using Domain.Reservation;
+using Domain.Entities;
 
 namespace Application.CQS.Reservation
 {

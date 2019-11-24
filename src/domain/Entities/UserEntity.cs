@@ -1,9 +1,14 @@
 using System.Collections.Generic;
-using Domain.Reservation;
-using Domain.Transaction;
 
-namespace Domain.User
+namespace Domain.Entities
 {
+    public enum UserRole
+    {
+        Manager,
+        Employee,
+        Client
+    }
+
     public class UserEntity : AbstractEntity
     {
         public string FirstName { get; protected internal set; }
@@ -23,12 +28,5 @@ namespace Domain.User
             Password = password;
             Role = role;
         }
-    }
-
-    public enum UserRole
-    {
-        Manager,
-        Employee,
-        Client
     }
 }

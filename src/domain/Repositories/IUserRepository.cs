@@ -1,4 +1,6 @@
-namespace Domain.User
+using Domain.Entities;
+
+namespace Domain.Repositories
 {
     public interface IUserRepository : IEntityRepository<UserEntity>
     {

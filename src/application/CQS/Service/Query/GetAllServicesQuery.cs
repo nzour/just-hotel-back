@@ -3,7 +3,7 @@ using Application.CQS.Service.Output;
 using Common.Extensions;
 using Common.Util;
 using Domain;
-using Domain.Service;
+using Domain.Entities;
 
 namespace Application.CQS.Service.Query
 {

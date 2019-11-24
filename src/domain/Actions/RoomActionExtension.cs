@@ -1,6 +1,7 @@
-using Domain.User;
+using Domain.Entities;
+using Domain.Exceptions;
 
-namespace Domain.Room
+namespace Domain.Actions
 {
     public static class RoomActionExtension
     {

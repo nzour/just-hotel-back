@@ -1,9 +1,14 @@
 using System.Collections.Generic;
-using Domain.Transaction;
-using Domain.User;
 
-namespace Domain.Room
+namespace Domain.Entities
 {
+    public enum RoomType
+    {
+        Single,
+        Double,
+        Triple
+    }
+
     public class RoomEntity : AbstractEntity
     {
         public RoomType RoomType { get; set; }
@@ -18,12 +23,5 @@ namespace Domain.Room
             RoomType = roomType;
             Cost = cost;
         }
-    }
-
-    public enum RoomType
-    {
-        Single,
-        Double,
-        Triple
     }
 }

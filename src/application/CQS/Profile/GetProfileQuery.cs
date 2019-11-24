@@ -1,4 +1,4 @@
-using Domain.User;
+using Domain.Entities;
 
 namespace Application.CQS.Profile
 {

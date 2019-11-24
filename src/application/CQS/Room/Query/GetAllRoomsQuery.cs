@@ -4,7 +4,7 @@ using Application.CQS.Room.Output;
 using Common.Extensions;
 using Common.Util;
 using Domain;
-using Domain.Room;
+using Domain.Entities;
 
 namespace Application.CQS.Room.Query
 {

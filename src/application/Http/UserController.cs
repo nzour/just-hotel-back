@@ -2,7 +2,7 @@ using System;
 using Application.CQS.User.Output;
 using Application.CQS.User.Query;
 using Common.Util;
-using Domain.User;
+using Domain.Entities;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Application.Http

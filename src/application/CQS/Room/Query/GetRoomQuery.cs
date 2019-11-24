@@ -1,7 +1,7 @@
 using System;
 using Application.CQS.Room.Output;
 using Domain;
-using Domain.Room;
+using Domain.Entities;
 
 namespace Application.CQS.Room.Query
 {

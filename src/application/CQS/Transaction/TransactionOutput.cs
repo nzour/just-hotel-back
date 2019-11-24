@@ -4,7 +4,6 @@ using System.Linq;
 using Application.CQS.Room.Output;
 using Application.CQS.Service.Output;
 using Application.CQS.User.Output;
-using Domain.Transaction;
 
 namespace Application.CQS.Transaction
 {
@@ -17,14 +16,14 @@ namespace Application.CQS.Transaction
         public DateTime CreatedAt { get; }
         public IEnumerable<ServiceOutput> Services { get; }
 
-        public TransactionOutput(TransactionEntity transaction)
+        public TransactionOutput(Domain.Entities.TransactionEntity transactionEntity)
         {
-            Id = transaction.Id;
-            Money = transaction.Money;
-            User = new UserOutput(transaction.User);
-            Room = new RoomOutput(transaction.Room);
-            CreatedAt = transaction.CreatedAt;
-            Services = transaction.Services.Select(s => new ServiceOutput(s));
+            Id = transactionEntity.Id;
+            Money = transactionEntity.Money;
+            User = new UserOutput(transactionEntity.User);
+            Room = new RoomOutput(transactionEntity.Room);
+            CreatedAt = transactionEntity.CreatedAt;
+            Services = transactionEntity.Services.Select(s => new ServiceOutput(s));
         }
     }
 }

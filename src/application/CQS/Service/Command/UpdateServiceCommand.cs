@@ -2,7 +2,7 @@ using System;
 using System.Threading.Tasks;
 using Application.CQS.Service.Input;
 using Domain;
-using Domain.Service;
+using Domain.Entities;
 
 namespace Application.CQS.Service.Command
 {

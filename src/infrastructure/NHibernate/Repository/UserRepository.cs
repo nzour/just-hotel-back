@@ -1,5 +1,6 @@
 using System.Linq;
-using Domain.User;
+using Domain.Entities;
+using Domain.Repositories;
 using NHibernate;
 
 namespace Infrastructure.NHibernate.Repository

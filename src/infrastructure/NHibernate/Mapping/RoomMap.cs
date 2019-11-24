@@ -1,4 +1,4 @@
-using Domain.Room;
+using Domain.Entities;
 using FluentNHibernate.Mapping;
 using NHibernate.Type;
 

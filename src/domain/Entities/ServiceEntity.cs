@@ -1,4 +1,4 @@
-namespace Domain.Service
+namespace Domain.Entities
 {
     public class ServiceEntity : AbstractEntity
     {

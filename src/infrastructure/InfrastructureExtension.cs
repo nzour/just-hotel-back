@@ -1,10 +1,7 @@
 using System.Text;
 using Domain;
-using Domain.Reservation;
-using Domain.Room;
-using Domain.Service;
-using Domain.Transaction;
-using Domain.User;
+using Domain.Entities;
+using Domain.Repositories;
 using FluentMigrator.Runner;
 using Infrastructure.NHibernate;
 using Infrastructure.NHibernate.Repository;
@@ -106,7 +103,7 @@ namespace Infrastructure
                         IssuerSigningKey = new SymmetricSecurityKey(key)
                     };
                 });
-            
+
             return services;
         }
     }

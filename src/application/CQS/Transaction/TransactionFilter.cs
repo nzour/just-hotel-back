@@ -1,16 +1,16 @@
 using System;
 using System.Linq;
 using Common.Util;
-using Domain.Transaction;
+using Domain.Entities;
 
 namespace Application.CQS.Transaction
 {
-    public class TransactionFilter : IInputFilter<TransactionEntity>
+    public class TransactionFilter : IInputFilter<Domain.Entities.TransactionEntity>
     {
         public Guid? UserId { get; set; }
         public Guid? RoomId { get; set; }
 
-        public IQueryable<TransactionEntity> Process(IQueryable<TransactionEntity> query)
+        public IQueryable<Domain.Entities.TransactionEntity> Process(IQueryable<Domain.Entities.TransactionEntity> query)
         {
             if (null != UserId)
             {
