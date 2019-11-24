@@ -11,8 +11,8 @@ namespace Domain.Entities
 
     public class UserEntity : AbstractEntity
     {
-        public string FirstName { get; protected internal set; }
-        public string LastName { get; protected internal set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
         public string Login { get; protected internal set; }
         public string Password { get; protected internal set; }
         public UserRole Role { get; protected internal set; }
