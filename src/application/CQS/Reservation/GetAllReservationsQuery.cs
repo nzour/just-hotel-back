@@ -1,6 +1,6 @@
+using System.Collections.Generic;
 using System.Linq;
 using Common.Extensions;
-using Common.Util;
 using Domain;
 using Domain.Entities;
 
@@ -15,12 +15,11 @@ namespace Application.CQS.Reservation
             ReservationRepository = reservationRepository;
         }
 
-        public PaginatedData<ReservationsOutput> Execute(ReservationsFilter filter, Pagination pagination)
+        public IEnumerable<ReservationsOutput> Execute(ReservationsFilter filter)
         {
             return ReservationRepository.FindAll()
                 .ApplyFilter(filter)
-                .Select(r => new ReservationsOutput(r))
-                .Paginate(pagination);
+                .Select(r => new ReservationsOutput(r));
         }
     }
 }

@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using Application.CQS.Profile;
 using Application.CQS.Reservation;
@@ -27,16 +28,15 @@ namespace Application.Http
         }
 
         [HttpGet("reservations")]
-        public async Task<PaginatedData<ReservationsOutput>> GetCurrentUserReservations(
+        public async Task<IEnumerable<ReservationsOutput>> GetCurrentUserReservations(
             [FromServices] GetAllReservationsQuery query,
-            [FromQuery] ReservationsFilter filter,
-            [FromQuery] Pagination pagination
+            [FromQuery] ReservationsFilter filter
         )
         {
             var currentUser = await UserExtractor.ProvideUserAsync();
             filter.UserId = currentUser.Id;
 
-            return query.Execute(filter, pagination);
+            return query.Execute(filter);
         }
 
         [HttpGet("transactions")]

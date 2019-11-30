@@ -1,5 +1,5 @@
+using System.Collections.Generic;
 using Application.CQS.Reservation;
-using Common.Util;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Application.Http
@@ -9,13 +9,12 @@ namespace Application.Http
     public class ReservationController
     {
         [HttpGet]
-        public PaginatedData<ReservationsOutput> GetReservations(
+        public IEnumerable<ReservationsOutput> GetReservations(
             [FromServices] GetAllReservationsQuery query,
-            [FromQuery] ReservationsFilter filter,
-            [FromQuery] Pagination pagination
+            [FromQuery] ReservationsFilter filter
         )
         {
-            return query.Execute(filter, pagination);
+            return query.Execute(filter);
         }
     }
 }
