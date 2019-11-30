@@ -38,7 +38,6 @@ namespace Infrastructure.NHibernate.Migration
 
         public override void Down()
         {
-            Delete.Table("ServiceRent");
             Delete.Table("Services");
         }
     }

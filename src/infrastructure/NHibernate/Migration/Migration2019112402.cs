@@ -9,8 +9,8 @@ namespace Infrastructure.NHibernate.Migration
         {
             Create.Table("Reservations")
                 .WithColumn("Id").AsGuid().PrimaryKey()
-                .WithColumn("ReservationFrom").AsDateTime().NotNullable()
-                .WithColumn("ReservationTo").AsDateTime().NotNullable()
+                .WithColumn("ReservedFrom").AsDateTime().NotNullable()
+                .WithColumn("ReservedTo").AsDateTime().NotNullable()
                 .WithColumn("UserId").AsGuid().NotNullable()
                 .WithColumn("RoomId").AsGuid().NotNullable();
 
