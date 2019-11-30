@@ -12,7 +12,7 @@ namespace Domain.Entities
         public DateTime ReservedFrom { get; }
         public DateTime ReservedTo { get; }
         public IEnumerable<ServiceEntity> Services { get; }
-        public uint Cost => Room.Cost + (uint) Services.Sum(s => s.Cost);
+        public uint Cost => (uint) Room.Cost + (uint) Services.Sum(s => s.Cost);
 
         public ReservationEntity(UserEntity user, RoomEntity room, DateTime from, DateTime to, IEnumerable<ServiceEntity> services)
         {

@@ -13,7 +13,7 @@ namespace Application.CQS.Service.Output
         {
             Id = entity.Id;
             Name = entity.Name;
-            Cost = entity.Cost;
+            Cost = (uint) entity.Cost;
         }
     }
 }

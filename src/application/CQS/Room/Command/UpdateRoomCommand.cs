@@ -18,7 +18,7 @@ namespace Application.CQS.Room.Command
         {
             var room = RoomRepository.Get(roomId);
 
-            room.Cost = input.Cost;
+            room.Cost = (int) input.Cost;
             room.RoomType = input.RoomType;
         }
     }

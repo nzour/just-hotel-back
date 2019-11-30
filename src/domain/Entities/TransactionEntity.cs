@@ -9,7 +9,7 @@ namespace Domain.Entities
         public UserEntity User { get; }
         public RoomEntity Room { get; }
         public IEnumerable<ServiceEntity> Services { get; }
-        public uint Money { get; }
+        public int Money { get; }
         public DateTime CreatedAt { get; }
 
         public TransactionEntity(UserEntity user, RoomEntity room, IEnumerable<ServiceEntity> services)
@@ -19,7 +19,7 @@ namespace Domain.Entities
             User = user;
             Room = room;
             Services = services;
-            Money = room.Cost + (uint) services.Sum(s => s.Cost);
+            Money = room.Cost + (int) services.Sum(s => s.Cost);
             CreatedAt = DateTime.UtcNow;
         }
     }

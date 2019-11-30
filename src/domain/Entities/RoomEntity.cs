@@ -12,7 +12,7 @@ namespace Domain.Entities
     public class RoomEntity : AbstractEntity
     {
         public RoomType RoomType { get; set; }
-        public uint Cost { get; set; }
+        public int Cost { get; set; }
         public ISet<UserEntity> Employees { get; protected set; } = new HashSet<UserEntity>();
         public ISet<TransactionEntity> Transactions { get; protected set; } = new HashSet<TransactionEntity>();
 
@@ -21,7 +21,7 @@ namespace Domain.Entities
             Identify();
 
             RoomType = roomType;
-            Cost = cost;
+            Cost = (int) cost;
         }
     }
 }

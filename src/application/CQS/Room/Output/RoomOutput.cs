@@ -12,7 +12,7 @@ namespace Application.CQS.Room.Output
         public RoomOutput(RoomEntity room)
         {
             Id = room.Id;
-            Cost = room.Cost;
+            Cost = (uint) room.Cost;
             RoomType = room.RoomType;
         }
     }

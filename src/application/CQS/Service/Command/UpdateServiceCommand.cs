@@ -20,7 +20,7 @@ namespace Application.CQS.Service.Command
             var service = await ServiceRepository.GetAsync(serviceId);
 
             service.Name = input.Name;
-            service.Cost = input.Cost;
+            service.Cost = (int) input.Cost;
         }
     }
 }

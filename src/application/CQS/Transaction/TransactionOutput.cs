@@ -19,7 +19,7 @@ namespace Application.CQS.Transaction
         public TransactionOutput(Domain.Entities.TransactionEntity transactionEntity)
         {
             Id = transactionEntity.Id;
-            Money = transactionEntity.Money;
+            Money = (uint) transactionEntity.Money;
             User = new UserOutput(transactionEntity.User);
             Room = new RoomOutput(transactionEntity.Room);
             CreatedAt = transactionEntity.CreatedAt;
