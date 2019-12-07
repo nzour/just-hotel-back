@@ -57,10 +57,10 @@ namespace Infrastructure
 
         public static IServiceCollection AddEntityRepositories(this IServiceCollection services)
         {
-            services.AddTransient<IEntityRepository<UserEntity>, EntityRepository<UserEntity>>();
-            services.AddTransient<IEntityRepository<RoomEntity>, EntityRepository<RoomEntity>>();
-            services.AddTransient<IEntityRepository<ServiceEntity>, EntityRepository<ServiceEntity>>();
-            services.AddTransient<IEntityRepository<ReservationEntity>, EntityRepository<ReservationEntity>>();
+            services.AddTransient<IRepository<UserEntity>, Repository<UserEntity>>();
+            services.AddTransient<IRepository<RoomEntity>, Repository<RoomEntity>>();
+            services.AddTransient<IRepository<ServiceEntity>, Repository<ServiceEntity>>();
+            services.AddTransient<IRepository<ReservationEntity>, Repository<ReservationEntity>>();
 
             services.AddTransient<IUserRepository, UserRepository>();
 

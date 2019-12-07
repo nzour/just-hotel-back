@@ -7,9 +7,9 @@ namespace Application.CQS.Room.Command
 {
     public class UpdateRoomCommand
     {
-        private IEntityRepository<RoomEntity> RoomRepository { get; }
+        private IRepository<RoomEntity> RoomRepository { get; }
 
-        public UpdateRoomCommand(IEntityRepository<RoomEntity> roomRepository)
+        public UpdateRoomCommand(IRepository<RoomEntity> roomRepository)
         {
             RoomRepository = roomRepository;
         }

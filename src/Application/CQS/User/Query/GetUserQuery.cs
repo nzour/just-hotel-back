@@ -7,9 +7,9 @@ namespace Application.CQS.User.Query
 {
     public class GetUserQuery
     {
-        private IEntityRepository<UserEntity> UserRepository { get; }
+        private IRepository<UserEntity> UserRepository { get; }
 
-        public GetUserQuery(IEntityRepository<UserEntity> userRepository)
+        public GetUserQuery(IRepository<UserEntity> userRepository)
         {
             UserRepository = userRepository;
         }

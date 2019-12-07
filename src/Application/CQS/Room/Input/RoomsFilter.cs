@@ -6,7 +6,7 @@ using FluentNHibernate.Conventions;
 
 namespace Application.CQS.Room.Input
 {
-    public class GetRoomInputFilter : IInputFilter<RoomEntity>
+    public class RoomsFilter : IFilter<RoomEntity>
     {
         public IEnumerable<RoomType>? RoomTypes { get; set; }
 

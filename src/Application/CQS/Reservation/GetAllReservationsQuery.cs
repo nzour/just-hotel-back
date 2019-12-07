@@ -8,9 +8,9 @@ namespace Application.CQS.Reservation
 {
     public class GetAllReservationsQuery
     {
-        private IEntityRepository<ReservationEntity> ReservationRepository { get; }
+        private IRepository<ReservationEntity> ReservationRepository { get; }
 
-        public GetAllReservationsQuery(IEntityRepository<ReservationEntity> reservationRepository)
+        public GetAllReservationsQuery(IRepository<ReservationEntity> reservationRepository)
         {
             ReservationRepository = reservationRepository;
         }

@@ -2,7 +2,7 @@ using Domain.Entities;
 
 namespace Domain.Repositories
 {
-    public interface IUserRepository : IEntityRepository<UserEntity>
+    public interface IUserRepository : IRepository<UserEntity>
     {
         UserEntity? FindUserWithLoginAndPassword(string login, string encryptedPassword);
 

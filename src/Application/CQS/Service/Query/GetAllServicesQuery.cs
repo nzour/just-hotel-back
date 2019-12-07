@@ -9,9 +9,9 @@ namespace Application.CQS.Service.Query
 {
     public class GetAllServicesQuery
     {
-        private IEntityRepository<ServiceEntity> ServiceRepository { get; }
+        private IRepository<ServiceEntity> ServiceRepository { get; }
 
-        public GetAllServicesQuery(IEntityRepository<ServiceEntity> serviceRepository)
+        public GetAllServicesQuery(IRepository<ServiceEntity> serviceRepository)
         {
             ServiceRepository = serviceRepository;
         }

@@ -7,9 +7,9 @@ namespace Application.CQS.Service.Command
 {
     public class CreateServiceCommand
     {
-        private IEntityRepository<ServiceEntity> ServiceRepository { get; }
+        private IRepository<ServiceEntity> ServiceRepository { get; }
 
-        public CreateServiceCommand(IEntityRepository<ServiceEntity> serviceRepository)
+        public CreateServiceCommand(IRepository<ServiceEntity> serviceRepository)
         {
             ServiceRepository = serviceRepository;
         }

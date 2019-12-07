@@ -7,9 +7,9 @@ namespace Application.CQS.Room.Query
 {
     public class GetRoomQuery
     {
-        private IEntityRepository<RoomEntity> RoomRepository { get; }
+        private IRepository<RoomEntity> RoomRepository { get; }
 
-        public GetRoomQuery(IEntityRepository<RoomEntity> roomRepository)
+        public GetRoomQuery(IRepository<RoomEntity> roomRepository)
         {
             RoomRepository = roomRepository;
         }

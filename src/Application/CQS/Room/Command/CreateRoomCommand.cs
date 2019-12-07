@@ -6,9 +6,9 @@ namespace Application.CQS.Room.Command
 {
     public class CreateRoomCommand
     {
-        private IEntityRepository<RoomEntity> RoomRepository { get; }
+        private IRepository<RoomEntity> RoomRepository { get; }
 
-        public CreateRoomCommand(IEntityRepository<RoomEntity> roomRepository)
+        public CreateRoomCommand(IRepository<RoomEntity> roomRepository)
         {
             RoomRepository = roomRepository;
         }

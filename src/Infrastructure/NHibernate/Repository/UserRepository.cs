@@ -5,7 +5,7 @@ using NHibernate;
 
 namespace Infrastructure.NHibernate.Repository
 {
-    public class UserRepository : EntityRepository<UserEntity>, IUserRepository
+    public class UserRepository : Repository<UserEntity>, IUserRepository
     {
         public UserRepository(ISession session) : base(session)
         {

@@ -5,11 +5,11 @@ using NHibernate;
 
 namespace Infrastructure.NHibernate.Repository
 {
-    public class EntityRepository<TEntity> : IEntityRepository<TEntity> where TEntity : class
+    public class Repository<TEntity> : IRepository<TEntity> where TEntity : class
     {
         protected ISession Session { get; }
 
-        public EntityRepository(ISession session)
+        public Repository(ISession session)
         {
             Session = session;
         }
@@ -49,6 +49,18 @@ namespace Infrastructure.NHibernate.Repository
         public async Task<TEntity> GetAsync(object id)
         {
             return await Session.GetAsync<TEntity>(id);
+        }
+
+        public void Delete(object id)
+        {
+            Session.Delete(id);
+            Session.Flush();
+        }
+
+        public async Task DeleteAsync(object id)
+        {
+            await Session.DeleteAsync(id);
+            await Session.FlushAsync();
         }
 
         public IQueryable<TEntity> FindAll()

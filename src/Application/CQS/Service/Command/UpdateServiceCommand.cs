@@ -8,9 +8,9 @@ namespace Application.CQS.Service.Command
 {
     public class UpdateServiceCommand
     {
-        private IEntityRepository<ServiceEntity> ServiceRepository { get; }
+        private IRepository<ServiceEntity> ServiceRepository { get; }
 
-        public UpdateServiceCommand(IEntityRepository<ServiceEntity> serviceRepository)
+        public UpdateServiceCommand(IRepository<ServiceEntity> serviceRepository)
         {
             ServiceRepository = serviceRepository;
         }
