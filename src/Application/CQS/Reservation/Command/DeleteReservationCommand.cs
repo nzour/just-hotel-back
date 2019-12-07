@@ -6,9 +6,8 @@ using Domain.Entities;
 
 namespace Application.CQS.Reservation.Command
 {
-    public class DeleteReservationCommand : IUserAware
+    public class DeleteReservationCommand : AbstractUserAware
     {
-        public UserEntity? CurrentUser { get; set; }
         private IRepository<ReservationEntity> ReservationRepository { get; }
 
         public DeleteReservationCommand(IRepository<ReservationEntity> reservationRepository)

@@ -18,7 +18,7 @@ namespace Root.Configuration
         {
             context.ActionArguments.Foreach(pair =>
             {
-                if (pair.Value is IUserAware userAware)
+                if (pair.Value is AbstractUserAware userAware)
                 {
                     userAware.CurrentUser = UserExtractor.ProvideUser();
                 }

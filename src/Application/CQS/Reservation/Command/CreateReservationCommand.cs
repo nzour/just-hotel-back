@@ -10,9 +10,8 @@ using NHibernate.Linq;
 
 namespace Application.CQS.Reservation.Command
 {
-    public class CreateReservationCommand : IUserAware
+    public class CreateReservationCommand : AbstractUserAware
     {
-        public UserEntity? CurrentUser { get; set; }
         private IRepository<ReservationEntity> ReservationRepository { get; }
         private IRepository<RoomEntity> RoomRepository { get; }
         private IRepository<ServiceEntity> ServiceRepository { get; }
