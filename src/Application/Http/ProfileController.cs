@@ -34,7 +34,7 @@ namespace Application.Http
             var currentUser = await UserExtractor.ProvideUserAsync();
             filter.UserId = currentUser.Id;
 
-            return query.Execute(filter);
+            return await query.ExecuteAsync(filter);
         }
 
 

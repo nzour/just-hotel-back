@@ -1,8 +1,10 @@
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using Common.Extensions;
 using Domain;
 using Domain.Entities;
+using NHibernate.Linq;
 
 namespace Application.CQS.Reservation
 {
@@ -15,11 +17,12 @@ namespace Application.CQS.Reservation
             ReservationRepository = reservationRepository;
         }
 
-        public IEnumerable<ReservationsOutput> Execute(ReservationsFilter filter)
+        public async Task<IEnumerable<ReservationsOutput>> ExecuteAsync(ReservationsFilter filter)
         {
-            return ReservationRepository.FindAll()
+            return await ReservationRepository.FindAll()
                 .ApplyFilter(filter)
-                .Select(r => new ReservationsOutput(r));
+                .Select(r => new ReservationsOutput(r))
+                .ToListAsync();
         }
     }
 }
