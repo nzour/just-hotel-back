@@ -48,16 +48,23 @@ namespace Infrastructure.NHibernate.Repository
 
         public async Task<TEntity> GetAsync(object id)
         {
-            return await Session.GetAsync<TEntity>(id);
+            var entity = await Session.GetAsync<TEntity>(id);
+
+            if (null == entity)
+            {
+                throw new EntityNotFoundException<TEntity>(id);
+            }
+
+            return entity;
         }
 
-        public void Delete(object id)
+        public void DeleteAndFlush(object id)
         {
             Session.Delete(id);
             Session.Flush();
         }
 
-        public async Task DeleteAsync(object id)
+        public async Task DeleteAndFlushAsync(object id)
         {
             await Session.DeleteAsync(id);
             await Session.FlushAsync();

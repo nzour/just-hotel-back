@@ -11,8 +11,8 @@ namespace Domain
         TEntity Get(object id);
         Task<TEntity> GetAsync(object id);
 
-        void Delete(object id);
-        Task DeleteAsync(object id);
+        void DeleteAndFlush(object id);
+        Task DeleteAndFlushAsync(object id);
 
         IQueryable<TEntity> FindAll();
     }

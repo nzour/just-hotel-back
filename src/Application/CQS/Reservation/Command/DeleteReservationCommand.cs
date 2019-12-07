@@ -1,5 +1,6 @@
 using System;
 using System.Threading.Tasks;
+using Application.CQS.Reservation.Exception;
 using Domain;
 using Domain.Entities;
 
@@ -29,7 +30,7 @@ namespace Application.CQS.Reservation.Command
                 throw ReservationException.AlreadyExpired();
             }
 
-            await ReservationRepository.DeleteAsync(reservation);
+            await ReservationRepository.DeleteAndFlushAsync(reservation);
         }
     }
 }

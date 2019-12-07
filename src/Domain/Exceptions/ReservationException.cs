@@ -10,9 +10,14 @@ namespace Domain.Exceptions
 
         public static void AssertDatesValid(DateTime from, DateTime to)
         {
+            if (to < DateTime.Now)
+            {
+                throw new ReservationException("Reservation date 'from' can't be in past.");
+            }
+
             if (from >= to)
             {
-                throw new ReservationException($"Reservation date 'from' must be greater than date 'to'.");
+                throw new ReservationException("Reservation date 'from' must be greater than date 'to'.");
             }
         }
     }

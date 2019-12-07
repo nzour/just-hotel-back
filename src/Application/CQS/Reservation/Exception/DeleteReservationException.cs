@@ -1,6 +1,4 @@
-using System;
-
-namespace Application.CQS.Reservation
+namespace Application.CQS.Reservation.Exception
 {
     public class ReservationException : System.Exception
     {
