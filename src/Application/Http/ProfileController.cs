@@ -2,10 +2,8 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using Application.CQS.Profile;
 using Application.CQS.Reservation;
-using Application.CQS.Transaction;
 using Application.CQS.User.Command;
 using Application.CQS.User.Input;
-using Common.Util;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Application.Http
@@ -39,18 +37,6 @@ namespace Application.Http
             return query.Execute(filter);
         }
 
-        [HttpGet("transactions")]
-        public async Task<PaginatedData<TransactionOutput>> GetCurrentUserTransactions(
-            [FromServices] GetAllTransactionsQuery query,
-            [FromQuery] TransactionFilter filter,
-            [FromQuery] Pagination pagination
-        )
-        {
-            var currentUser = await UserExtractor.ProvideUserAsync();
-            filter.UserId = currentUser.Id;
-
-            return query.Execute(filter, pagination);
-        }
 
         [HttpPut("update-names")]
         public void UpdateUserNames([FromServices] UpdateNamesCommand command, [FromBody] UpdateNamesInput input)

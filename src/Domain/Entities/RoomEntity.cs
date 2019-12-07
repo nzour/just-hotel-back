@@ -16,7 +16,6 @@ namespace Domain.Entities
         public RoomType RoomType { get; set; }
         public int Cost { get; set; }
         public ISet<UserEntity> Employees { get; protected set; } = new HashSet<UserEntity>();
-        public ISet<TransactionEntity> Transactions { get; protected set; } = new HashSet<TransactionEntity>();
 
         public RoomEntity(RoomType roomType, uint cost)
         {

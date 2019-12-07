@@ -60,7 +60,6 @@ namespace Infrastructure
             services.AddTransient<IEntityRepository<UserEntity>, EntityRepository<UserEntity>>();
             services.AddTransient<IEntityRepository<RoomEntity>, EntityRepository<RoomEntity>>();
             services.AddTransient<IEntityRepository<ServiceEntity>, EntityRepository<ServiceEntity>>();
-            services.AddTransient<IEntityRepository<TransactionEntity>, EntityRepository<TransactionEntity>>();
             services.AddTransient<IEntityRepository<ReservationEntity>, EntityRepository<ReservationEntity>>();
 
             services.AddTransient<IUserRepository, UserRepository>();

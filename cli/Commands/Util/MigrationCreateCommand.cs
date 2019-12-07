@@ -18,7 +18,7 @@ namespace Cli.Commands.Util
             Directory.GetCurrentDirectory() + "/../../../../src/Infrastructure/NHibernate/Migration/";
 
         private static readonly string MigrationTemplate =
-            Directory.GetCurrentDirectory() + "/../Commands/Util/resources/migration.template.txt";
+            Directory.GetCurrentDirectory() + "/../../../Commands/Util/resources/migration.template.txt";
 
         public override void Execute(ArgumentProvider provider)
         {

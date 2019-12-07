@@ -19,8 +19,7 @@ namespace Infrastructure.NHibernate.Mapping
             Map(x => x.Role)
                 .CustomType<EnumStringType<UserRole>>()
                 .Not.Nullable();
-
-            HasMany(x => x.Transactions).KeyColumn("UserId");
+            
             HasMany(x => x.Reservations).KeyColumn("UserId");
         }
     }

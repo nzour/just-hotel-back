@@ -18,8 +18,6 @@ namespace Infrastructure.NHibernate.Mapping
             Map(x => x.Cost).Not.Nullable();
 
             HasMany(x => x.Employees);
-
-            HasMany(x => x.Transactions).KeyColumn("RoomId");
         }
     }
 }
