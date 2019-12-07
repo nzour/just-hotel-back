@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using Application.CQS.Profile;
 using Application.CQS.Reservation;
+using Application.CQS.Reservation.Query;
 using Application.CQS.User.Command;
 using Application.CQS.User.Input;
 using Microsoft.AspNetCore.Mvc;

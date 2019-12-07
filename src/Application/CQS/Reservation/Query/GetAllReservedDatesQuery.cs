@@ -1,27 +1,27 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Common.Extensions;
 using Domain;
 using Domain.Entities;
 using NHibernate.Linq;
 
-namespace Application.CQS.Reservation
+namespace Application.CQS.Reservation.Query
 {
-    public class GetAllReservationsQuery
+    public class GetAllReservedDatesQuery
     {
         private IRepository<ReservationEntity> ReservationRepository { get; }
 
-        public GetAllReservationsQuery(IRepository<ReservationEntity> reservationRepository)
+        public GetAllReservedDatesQuery(IRepository<ReservationEntity> reservationRepository)
         {
             ReservationRepository = reservationRepository;
         }
 
-        public async Task<IEnumerable<ReservationsOutput>> ExecuteAsync(ReservationsFilter filter)
+        public async Task<IEnumerable<ReservedDateOutput>> ExecuteAsync()
         {
             return await ReservationRepository.FindAll()
-                .ApplyFilter(filter)
-                .Select(r => new ReservationsOutput(r))
+                .Where(r => r.ReservedFrom >= DateTime.Now)
+                .Select(reservation => new ReservedDateOutput(reservation))
                 .ToListAsync();
         }
     }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using Application.CQS.Reservation;
 using Application.CQS.Reservation.Command;
+using Application.CQS.Reservation.Query;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Application.Http
@@ -18,6 +19,12 @@ namespace Application.Http
         )
         {
             return await query.ExecuteAsync(filter);
+        }
+
+        [HttpGet("dates")]
+        public async Task<IEnumerable<ReservedDateOutput>> GetAllReservedDatesAsync([FromServices] GetAllReservedDatesQuery query)
+        {
+            return await query.ExecuteAsync();
         }
 
         [HttpPost]
