@@ -23,6 +23,10 @@ namespace Infrastructure.NHibernate.Mapping
             References(x => x.Room, "RoomId")
                 .Cascade.Delete()
                 .Not.Nullable();
+
+            HasManyToMany(x => x.Services)
+                .Cascade.Delete()
+                .Table("ReservationServices");
         }
     }
 }
