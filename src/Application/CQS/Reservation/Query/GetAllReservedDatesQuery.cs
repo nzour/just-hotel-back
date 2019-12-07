@@ -17,10 +17,10 @@ namespace Application.CQS.Reservation.Query
             ReservationRepository = reservationRepository;
         }
 
-        public async Task<IEnumerable<ReservedDateOutput>> ExecuteAsync()
+        public async Task<IEnumerable<ReservedDateOutput>> ExecuteAsync(Guid roomId)
         {
             return await ReservationRepository.FindAll()
-                .Where(r => r.ReservedFrom >= DateTime.Now)
+                .Where(r => roomId == r.Id && r.ReservedFrom >= DateTime.Now)
                 .Select(reservation => new ReservedDateOutput(reservation))
                 .ToListAsync();
         }

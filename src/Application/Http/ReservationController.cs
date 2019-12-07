@@ -21,10 +21,13 @@ namespace Application.Http
             return await query.ExecuteAsync(filter);
         }
 
-        [HttpGet("dates")]
-        public async Task<IEnumerable<ReservedDateOutput>> GetAllReservedDatesAsync([FromServices] GetAllReservedDatesQuery query)
+        [HttpGet("{roomId:guid}/dates")]
+        public async Task<IEnumerable<ReservedDateOutput>> GetAllReservedDatesAsync(
+            [FromServices] GetAllReservedDatesQuery query,
+            [FromRoute] Guid roomId
+        )
         {
-            return await query.ExecuteAsync();
+            return await query.ExecuteAsync(roomId);
         }
 
         [HttpPost]
