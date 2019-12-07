@@ -9,8 +9,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\lib\command_runner\command_runner.csproj" />
-    <ProjectReference Include="..\src\root\root.csproj" />
+    <ProjectReference Include="..\lib\CommandRunner\CommandRunner.csproj" />
+    <ProjectReference Include="..\src\Root\Root.csproj" />
   </ItemGroup>
 
   <ItemGroup>

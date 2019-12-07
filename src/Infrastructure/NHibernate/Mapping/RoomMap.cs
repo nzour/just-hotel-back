@@ -14,6 +14,7 @@ namespace Infrastructure.NHibernate.Mapping
             Map(x => x.RoomType)
                 .CustomType<EnumStringType<RoomType>>()
                 .Not.Nullable();
+
             Map(x => x.Cost).Not.Nullable();
 
             HasMany(x => x.Employees);

@@ -5,21 +5,21 @@ VisualStudioVersion = 15.0.26124.0
 MinimumVisualStudioVersion = 15.0.26124.0
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "lib", "lib", "{192ACA95-2A59-4FC4-875B-BE60B2F0C96E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "common", "lib\common\common.csproj", "{EF17639F-946B-472F-AC63-4C9E0BFACCAF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "lib\Common\Common.csproj", "{EF17639F-946B-472F-AC63-4C9E0BFACCAF}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cli", "cli\cli.csproj", "{51A4FFE6-D076-44C5-8790-B9DBC24615AE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "command_runner", "lib\command_runner\command_runner.csproj", "{89E9135D-ABCD-4E89-BF13-A5A26FBAFEE1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommandRunner", "lib\CommandRunner\CommandRunner.csproj", "{89E9135D-ABCD-4E89-BF13-A5A26FBAFEE1}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{B1C8122F-4AFD-47F7-8EEF-E514CA0E8F83}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "application", "src\application\application.csproj", "{AEB1BDEF-A16F-4409-9799-5D4C047B5E17}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Application", "src\Application\Application.csproj", "{AEB1BDEF-A16F-4409-9799-5D4C047B5E17}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "domain", "src\domain\domain.csproj", "{959AC8D3-6F11-4D44-B2B5-D71549D08D0E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "src\Domain\Domain.csproj", "{959AC8D3-6F11-4D44-B2B5-D71549D08D0E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "root", "src\root\root.csproj", "{0CA5AB1B-4327-41DA-B3C7-969192CDA9E1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Root", "src\Root\Root.csproj", "{0CA5AB1B-4327-41DA-B3C7-969192CDA9E1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "infrastructure", "src\infrastructure\infrastructure.csproj", "{571A331D-9752-4517-ACEC-57DFAF9A9BF6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure", "src\Infrastructure\Infrastructure.csproj", "{571A331D-9752-4517-ACEC-57DFAF9A9BF6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -21,9 +21,9 @@
   </ItemGroup>
   
   <ItemGroup>
-    <ProjectReference Include="..\..\lib\common\common.csproj" />
-    <ProjectReference Include="..\application\application.csproj" />
-    <ProjectReference Include="..\infrastructure\infrastructure.csproj" />
+    <ProjectReference Include="..\..\lib\Common\Common.csproj" />
+    <ProjectReference Include="..\Application\Application.csproj" />
+    <ProjectReference Include="..\Infrastructure\Infrastructure.csproj" />
   </ItemGroup>
   
   <ItemGroup>

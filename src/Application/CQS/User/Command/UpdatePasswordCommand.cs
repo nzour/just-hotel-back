@@ -8,7 +8,7 @@ namespace Application.CQS.User.Command
 {
     public class UpdatePasswordCommand : IUserAware
     {
-        public UserEntity CurrentUser { get; set; }
+        public UserEntity? CurrentUser { get; set; }
         private IUserRepository UserRepository { get; }
         private IPasswordEncoder PasswordEncoder { get; }
 

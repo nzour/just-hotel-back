@@ -19,7 +19,7 @@ namespace Domain.Entities
             User = user;
             Room = room;
             Services = services;
-            Money = room.Cost + (int) services.Sum(s => s.Cost);
+            Money = room.Cost + services.Sum(s => s.Cost);
             CreatedAt = DateTime.UtcNow;
         }
     }

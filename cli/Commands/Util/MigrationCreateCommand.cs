@@ -15,7 +15,7 @@ namespace Cli.Commands.Util
         private const string FileExtension = ".cs";
 
         private static readonly string MigrationDirectory =
-            Directory.GetCurrentDirectory() + "/../../../../src/infrastructure/NHibernate/Migration/";
+            Directory.GetCurrentDirectory() + "/../../../../src/Infrastructure/NHibernate/Migration/";
 
         private static readonly string MigrationTemplate =
             Directory.GetCurrentDirectory() + "/../Commands/Util/resources/migration.template.txt";

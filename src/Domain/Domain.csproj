@@ -84,4 +84,8 @@
     <PackageReference Include="Virtuosity.Fody" Version="3.1.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\lib\Common\Common.csproj" />
+  </ItemGroup>
+
 </Project>

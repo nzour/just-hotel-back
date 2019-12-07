@@ -5,7 +5,7 @@ namespace Application.CQS.User.Command
 {
     public class UpdateNamesCommand : IUserAware
     {
-        public UserEntity CurrentUser { get; set; }
+        public UserEntity? CurrentUser { get; set; }
 
         public void Execute(UpdateNamesInput input)
         {
