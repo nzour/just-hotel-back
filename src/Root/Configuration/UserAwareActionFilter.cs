@@ -1,7 +1,6 @@
 using System.Threading.Tasks;
 using Application;
 using Application.CQS;
-using Common.Extensions;
 using Microsoft.AspNetCore.Mvc.Filters;
 
 namespace Root.Configuration
@@ -17,13 +16,13 @@ namespace Root.Configuration
 
         public async Task OnActionExecutionAsync(ActionExecutingContext context, ActionExecutionDelegate next)
         {
-            context.ActionArguments.Foreach(async pair =>
+            foreach (var (_, parameter) in context.ActionArguments)
             {
-                if (pair.Value is AbstractUserAware userAware)
+                if (parameter is AbstractUserAware userAware)
                 {
                     userAware.CurrentUser = await UserExtractor.ProvideUserAsync();
                 }
-            });
+            }
 
             await next();
         }
