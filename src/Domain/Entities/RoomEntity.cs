@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 
 namespace Domain.Entities
@@ -9,8 +10,9 @@ namespace Domain.Entities
         Triple
     }
 
-    public class RoomEntity : AbstractEntity
+    public class RoomEntity
     {
+        public Guid Id { get; }
         public RoomType RoomType { get; set; }
         public int Cost { get; set; }
         public ISet<UserEntity> Employees { get; protected set; } = new HashSet<UserEntity>();
@@ -18,8 +20,7 @@ namespace Domain.Entities
 
         public RoomEntity(RoomType roomType, uint cost)
         {
-            Identify();
-
+            Id = Guid.NewGuid();
             RoomType = roomType;
             Cost = (int) cost;
         }

@@ -5,8 +5,9 @@ using Domain.Exceptions;
 
 namespace Domain.Entities
 {
-    public class ReservationEntity : AbstractEntity
+    public class ReservationEntity
     {
+        public Guid Id { get; }
         public UserEntity User { get; }
         public RoomEntity Room { get; }
         public DateTime ReservedFrom { get; }
@@ -17,8 +18,8 @@ namespace Domain.Entities
         public ReservationEntity(UserEntity user, RoomEntity room, DateTime from, DateTime to, IEnumerable<ServiceEntity> services)
         {
             ReservationException.AssertDatesValid(from, to);
-            
-            Identify();
+
+            Id = Guid.NewGuid();
             User = user;
             Room = room;
             ReservedFrom = from;

@@ -4,8 +4,9 @@ using System.Linq;
 
 namespace Domain.Entities
 {
-    public class TransactionEntity : AbstractEntity
+    public class TransactionEntity
     {
+        public Guid Id { get; }
         public UserEntity User { get; }
         public RoomEntity Room { get; }
         public IEnumerable<ServiceEntity> Services { get; }
@@ -14,8 +15,7 @@ namespace Domain.Entities
 
         public TransactionEntity(UserEntity user, RoomEntity room, IEnumerable<ServiceEntity> services)
         {
-            Identify();
-
+            Id = Guid.NewGuid();
             User = user;
             Room = room;
             Services = services;

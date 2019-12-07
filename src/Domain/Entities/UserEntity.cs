@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 
 namespace Domain.Entities
@@ -9,8 +10,9 @@ namespace Domain.Entities
         Client
     }
 
-    public class UserEntity : AbstractEntity
+    public class UserEntity
     {
+        public Guid Id { get; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string Login { get; protected internal set; }
@@ -21,7 +23,7 @@ namespace Domain.Entities
 
         public UserEntity(string firstName, string lastName, string login, string password, UserRole role)
         {
-            Identify();
+            Id = Guid.NewGuid();
             FirstName = firstName;
             LastName = lastName;
             Login = login;

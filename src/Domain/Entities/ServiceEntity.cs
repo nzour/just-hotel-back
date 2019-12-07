@@ -1,13 +1,16 @@
+using System;
+
 namespace Domain.Entities
 {
-    public class ServiceEntity : AbstractEntity
+    public class ServiceEntity
     {
+        public Guid Id { get; }
         public string Name { get; set; }
         public int Cost { get; set; }
 
         public ServiceEntity(string name, uint cost)
         {
-            Identify();
+            Id = Guid.NewGuid();
             Name = name;
             Cost = (int) cost;
         }
