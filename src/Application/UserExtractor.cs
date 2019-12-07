@@ -19,11 +19,6 @@ namespace Application
             UserRepository = userRepository;
         }
 
-        public UserEntity ProvideUser()
-        {
-            return UserRepository.Get(Guid.Parse(ExtractUserId()));
-        }
-
         public async Task<UserEntity> ProvideUserAsync()
         {
             return await UserRepository.GetAsync(Guid.Parse(ExtractUserId()));

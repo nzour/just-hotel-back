@@ -1,4 +1,5 @@
 using System;
+using System.Threading.Tasks;
 using Application.CQS.User.Output;
 using Domain;
 using Domain.Entities;
@@ -14,10 +15,10 @@ namespace Application.CQS.User.Query
             UserRepository = userRepository;
         }
 
-        public UserOutput Execute(Guid userId)
+        public async Task<UserOutput> ExecuteAsync(Guid userId)
         {
             return new UserOutput(
-                UserRepository.Get(userId)
+                await UserRepository.GetAsync(userId)
             );
         }
     }

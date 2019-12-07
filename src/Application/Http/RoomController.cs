@@ -1,4 +1,5 @@
 using System;
+using System.Threading.Tasks;
 using Application.CQS.Room.Command;
 using Application.CQS.Room.Input;
 using Application.CQS.Room.Output;
@@ -16,17 +17,17 @@ namespace Application.Http
     {
         [HttpPost]
         [AuthorizeRoles(UserRole.Manager)]
-        public void CreateRoom([FromServices] CreateRoomCommand command, [FromBody] RoomInput input)
+        public async Task CreateRoom([FromServices] CreateRoomCommand command, [FromBody] RoomInput input)
         {
-            command.Execute(input);
+            await command.ExecuteAsync(input);
         }
 
         [HttpGet]
         [AllowAnonymous]
         [Route("{roomId}")]
-        public RoomOutput GetRoom([FromServices] GetRoomQuery query, Guid roomId)
+        public async Task<RoomOutput> GetRoom([FromServices] GetRoomQuery query, Guid roomId)
         {
-            return query.Execute(roomId);
+            return await query.ExecuteAsync(roomId);
         }
 
         [HttpGet]
@@ -41,12 +42,12 @@ namespace Application.Http
 
         [HttpPut]
         [Route("{roomId}")]
-        public void UpdateRoom(
+        public async Task UpdateRoom(
             [FromServices] UpdateRoomCommand command, [FromBody] RoomInput input,
             [FromRoute] Guid roomId
         )
         {
-            command.Execute(roomId, input);
+            await command.ExecuteAsync(roomId, input);
         }
     }
 }

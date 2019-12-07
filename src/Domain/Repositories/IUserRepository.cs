@@ -1,11 +1,12 @@
+using System.Threading.Tasks;
 using Domain.Entities;
 
 namespace Domain.Repositories
 {
     public interface IUserRepository : IRepository<UserEntity>
     {
-        UserEntity? FindUserWithLoginAndPassword(string login, string encryptedPassword);
+        Task<UserEntity?> FindUserAsync(string login, string encryptedPassword);
 
-        bool IsLoginBusy(string login);
+        Task<bool> IsLoginBusyAsync(string login);
     }
 }

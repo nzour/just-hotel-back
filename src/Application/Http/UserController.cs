@@ -1,4 +1,5 @@
 using System;
+using System.Threading.Tasks;
 using Application.CQS.User.Output;
 using Application.CQS.User.Query;
 using Common.Util;
@@ -23,9 +24,9 @@ namespace Application.Http
 
         [HttpGet]
         [Route("{userId}")]
-        public UserOutput GetUser([FromServices] GetUserQuery query, [FromRoute] Guid userId)
+        public async Task<UserOutput> GetUser([FromServices] GetUserQuery query, [FromRoute] Guid userId)
         {
-            return query.Execute(userId);
+            return await query.ExecuteAsync(userId);
         }
     }
 }

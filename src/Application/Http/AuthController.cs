@@ -1,3 +1,4 @@
+using System.Threading.Tasks;
 using Application.CQS.Auth.Command;
 using Application.CQS.Auth.Input;
 using Application.CQS.Auth.Output;
@@ -12,16 +13,16 @@ namespace Application.Http
     {
         [HttpPost]
         [Route("sign-in")]
-        public SignInOutput SignIn([FromServices] SignInCommand command, [FromBody] SignInInput input)
+        public async Task<SignInOutput> SignIn([FromServices] SignInCommand command, [FromBody] SignInInput input)
         {
-            return command.Execute(input);
+            return await command.Execute(input);
         }
 
         [HttpPost]
         [Route("sign-up")]
-        public SignInOutput SignUp([FromServices] SignUpCommand command, [FromBody] SignUpInput input)
+        public async Task<SignInOutput> SignUp([FromServices] SignUpCommand command, [FromBody] SignUpInput input)
         {
-            return command.Execute(input);
+            return await command.ExecuteAsync(input);
         }
     }
 }

@@ -14,16 +14,6 @@ namespace Infrastructure.NHibernate.Repository
             Session = session;
         }
 
-        public void SaveAndFlush(params TEntity[] entities)
-        {
-            foreach (var entity in entities)
-            {
-                Session.Save(entity);
-            }
-
-            Session.Flush();
-        }
-
         public async Task SaveAndFlushAsync(params TEntity[] entities)
         {
             foreach (var entity in entities)
@@ -32,18 +22,6 @@ namespace Infrastructure.NHibernate.Repository
             }
 
             await Session.FlushAsync();
-        }
-
-        public TEntity Get(object id)
-        {
-            var entity = Session.Get<TEntity>(id);
-
-            if (null == entity)
-            {
-                throw new EntityNotFoundException<TEntity>(id);
-            }
-
-            return entity;
         }
 
         public async Task<TEntity> GetAsync(object id)
@@ -56,12 +34,6 @@ namespace Infrastructure.NHibernate.Repository
             }
 
             return entity;
-        }
-
-        public void DeleteAndFlush(object id)
-        {
-            Session.Delete(id);
-            Session.Flush();
         }
 
         public async Task DeleteAndFlushAsync(object id)

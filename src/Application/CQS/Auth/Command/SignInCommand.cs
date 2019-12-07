@@ -1,3 +1,4 @@
+using System.Threading.Tasks;
 using Application.CQS.Auth.Exception;
 using Application.CQS.Auth.Input;
 using Application.CQS.Auth.Output;
@@ -25,10 +26,10 @@ namespace Application.CQS.Auth.Command
             PasswordEncoder = passwordEncoder;
         }
 
-        public SignInOutput Execute(SignInInput input)
+        public async Task<SignInOutput> Execute(SignInInput input)
         {
             var encryptedPassword = PasswordEncoder.Encrypt(input.Password);
-            var user = UserRepository.FindUserWithLoginAndPassword(input.Login, encryptedPassword);
+            var user = await UserRepository.FindUserAsync(input.Login, encryptedPassword);
 
             return null != user
                 ? new SignInOutput(user, TokenService.CreateToken(user))

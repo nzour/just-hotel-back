@@ -1,3 +1,4 @@
+using System.Threading.Tasks;
 using Application.CQS.Auth.Exception;
 using Application.CQS.Auth.Input;
 using Application.CQS.Auth.Output;
@@ -21,21 +22,21 @@ namespace Application.CQS.Auth.Command
             TokenService = tokenService;
         }
 
-        public SignInOutput Execute(SignUpInput input)
+        public async Task<SignInOutput> ExecuteAsync(SignUpInput input)
         {
-            AssertLoginIsNotBusy(input.Login);
+            await AssertLoginIsNotBusyAsync(input.Login);
 
             var encryptedPassword = PasswordEncoder.Encrypt(input.Password);
             var user = new UserEntity(input.FirstName, input.LastName, input.Login, encryptedPassword, UserRole.Client);
 
-            UserRepository.SaveAndFlush(user);
+            await UserRepository.SaveAndFlushAsync(user);
 
             return new SignInOutput(user, TokenService.CreateToken(user));
         }
 
-        private void AssertLoginIsNotBusy(string login)
+        private async Task AssertLoginIsNotBusyAsync(string login)
         {
-            if (UserRepository.IsLoginBusy(login))
+            if (await UserRepository.IsLoginBusyAsync(login))
             {
                 throw new UserLoginIsBusyException(login);
             }

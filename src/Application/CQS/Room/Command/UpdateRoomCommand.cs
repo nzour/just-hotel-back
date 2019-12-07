@@ -1,4 +1,5 @@
 using System;
+using System.Threading.Tasks;
 using Application.CQS.Room.Input;
 using Domain;
 using Domain.Entities;
@@ -14,9 +15,9 @@ namespace Application.CQS.Room.Command
             RoomRepository = roomRepository;
         }
 
-        public void Execute(Guid roomId, RoomInput input)
+        public async Task ExecuteAsync(Guid roomId, RoomInput input)
         {
-            var room = RoomRepository.Get(roomId);
+            var room = await RoomRepository.GetAsync(roomId);
 
             room.Cost = (int) input.Cost;
             room.RoomType = input.RoomType;

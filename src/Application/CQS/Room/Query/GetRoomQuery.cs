@@ -1,4 +1,5 @@
 using System;
+using System.Threading.Tasks;
 using Application.CQS.Room.Output;
 using Domain;
 using Domain.Entities;
@@ -14,10 +15,10 @@ namespace Application.CQS.Room.Query
             RoomRepository = roomRepository;
         }
 
-        public RoomOutput Execute(Guid roomId)
+        public async Task<RoomOutput> ExecuteAsync(Guid roomId)
         {
             return new RoomOutput(
-                RoomRepository.Get(roomId)
+                await RoomRepository.GetAsync(roomId)
             );
         }
     }

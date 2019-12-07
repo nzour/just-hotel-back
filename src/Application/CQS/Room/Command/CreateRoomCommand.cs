@@ -1,3 +1,4 @@
+using System.Threading.Tasks;
 using Application.CQS.Room.Input;
 using Domain;
 using Domain.Entities;
@@ -13,9 +14,9 @@ namespace Application.CQS.Room.Command
             RoomRepository = roomRepository;
         }
 
-        public void Execute(RoomInput input)
+        public async Task ExecuteAsync(RoomInput input)
         {
-            RoomRepository.SaveAndFlush(new RoomEntity(input.RoomType, input.Cost));
+            await RoomRepository.SaveAndFlushAsync(new RoomEntity(input.RoomType, input.Cost));
         }
     }
 }

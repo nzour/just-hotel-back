@@ -1,3 +1,4 @@
+using System.Threading.Tasks;
 using Application;
 using Application.CQS;
 using Common.Extensions;
@@ -5,7 +6,7 @@ using Microsoft.AspNetCore.Mvc.Filters;
 
 namespace Root.Configuration
 {
-    public class UserAwareActionFilter : IActionFilter
+    public class UserAwareActionFilter : IAsyncActionFilter
     {
         private UserExtractor UserExtractor { get; }
 
@@ -14,20 +15,17 @@ namespace Root.Configuration
             UserExtractor = userExtractor;
         }
 
-        public void OnActionExecuting(ActionExecutingContext context)
+        public async Task OnActionExecutionAsync(ActionExecutingContext context, ActionExecutionDelegate next)
         {
-            context.ActionArguments.Foreach(pair =>
+            context.ActionArguments.Foreach(async pair =>
             {
                 if (pair.Value is AbstractUserAware userAware)
                 {
-                    userAware.CurrentUser = UserExtractor.ProvideUser();
+                    userAware.CurrentUser = await UserExtractor.ProvideUserAsync();
                 }
             });
-        }
 
-        public void OnActionExecuted(ActionExecutedContext context)
-        {
-            // noop
+            await next();
         }
     }
 }

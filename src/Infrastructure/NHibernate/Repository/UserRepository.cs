@@ -1,7 +1,8 @@
-using System.Linq;
+using System.Threading.Tasks;
 using Domain.Entities;
 using Domain.Repositories;
 using NHibernate;
+using NHibernate.Linq;
 
 namespace Infrastructure.NHibernate.Repository
 {
@@ -11,16 +12,18 @@ namespace Infrastructure.NHibernate.Repository
         {
         }
 
-        public UserEntity FindUserWithLoginAndPassword(string login, string encryptedPassword)
+        public async Task<UserEntity?> FindUserAsync(string login, string encryptedPassword)
         {
-            return Session.Query<UserEntity>()
-                .SingleOrDefault(u => login == u.Login && encryptedPassword == u.Password);
+            return await Session
+                .Query<UserEntity>()
+                .SingleOrDefaultAsync(u => login == u.Login && encryptedPassword == u.Password);
         }
 
-        public bool IsLoginBusy(string login)
+        public async Task<bool> IsLoginBusyAsync(string login)
         {
-            return null != Session.Query<UserEntity>()
-                       .SingleOrDefault(u => u.Login == login);
+            return 0 != await Session
+                       .Query<UserEntity>()
+                       .CountAsync(u => u.Login == login);
         }
     }
 }
