@@ -33,7 +33,7 @@ namespace Application.Http
         [AllowAnonymous]
         public PaginatedData<RoomOutput> GetAllRooms(
             [FromServices] GetAllRoomsQuery query,
-            [FromQuery] GetRoomInputFilter filter, [FromQuery] Pagination pagination
+            [FromQuery] RoomsFilter filter, [FromQuery] Pagination pagination
         )
         {
             return query.Execute(filter, pagination);

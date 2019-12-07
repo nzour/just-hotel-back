@@ -17,7 +17,7 @@ namespace Application.CQS.Room.Query
             RoomRepository = roomRepository;
         }
 
-        public PaginatedData<RoomOutput> Execute(GetRoomInputFilter filter, Pagination pagination)
+        public PaginatedData<RoomOutput> Execute(RoomsFilter filter, Pagination pagination)
         {
             return RoomRepository.FindAll()
                 .ApplyFilter(filter)

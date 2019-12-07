@@ -2,7 +2,7 @@ using System.Linq;
 
 namespace Common.Util
 {
-    public interface IInputFilter<T>
+    public interface IFilter<T>
     {
         IQueryable<T> Process(IQueryable<T> query);
     }

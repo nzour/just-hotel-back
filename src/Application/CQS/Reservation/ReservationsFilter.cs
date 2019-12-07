@@ -5,7 +5,7 @@ using Domain.Entities;
 
 namespace Application.CQS.Reservation
 {
-    public class ReservationsFilter : IInputFilter<ReservationEntity>
+    public class ReservationsFilter : IFilter<ReservationEntity>
     {
         public Guid? UserId { get; set; }
         public Guid? RoomId { get; set; }
