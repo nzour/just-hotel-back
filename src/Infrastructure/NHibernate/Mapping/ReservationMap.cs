@@ -26,6 +26,8 @@ namespace Infrastructure.NHibernate.Mapping
 
             HasManyToMany(x => x.Services)
                 .Cascade.Delete()
+                .ParentKeyColumn("ReservationId")
+                .ChildKeyColumn("ServiceId")
                 .Table("ReservationServices");
         }
     }

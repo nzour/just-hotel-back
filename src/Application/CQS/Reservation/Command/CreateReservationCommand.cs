@@ -2,7 +2,6 @@ using System;
 using System.Linq;
 using System.Threading.Tasks;
 using Application.CQS.Reservation.Exception;
-using Common.Extensions;
 using Domain;
 using Domain.Entities;
 using JetBrains.Annotations;
@@ -51,7 +50,7 @@ namespace Application.CQS.Reservation.Command
                 throw CreateReservationException.DateToCantBeInPast();
             }
 
-            if (input.ReservedFrom <= input.ReservedTo)
+            if (input.ReservedFrom >= input.ReservedTo)
             {
                 throw CreateReservationException.InvalidDateValues();
             }
@@ -63,8 +62,8 @@ namespace Application.CQS.Reservation.Command
             var reservations = ReservationRepository
                 .FindAll()
                 .Where(r => input.RoomId == r.Room.Id
-                            && (input.ReservedFrom.Between(r.ReservedFrom, r.ReservedTo)
-                                || input.ReservedTo.Between(r.ReservedFrom, r.ReservedTo)));
+                            && (r.ReservedFrom <= input.ReservedFrom && input.ReservedFrom <= r.ReservedTo
+                                || r.ReservedFrom <= input.ReservedTo && input.ReservedTo <= r.ReservedTo));
 
             if (0 != await reservations.CountAsync())
             {
