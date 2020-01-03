@@ -10,14 +10,16 @@ namespace Application.CQS.Profile
         public string LastName { get; }
         public string Login { get; }
         public UserRole Role { get; }
+        public string? Avatar { get; }
 
-        public ProfileOutput(UserEntity entity)
+        public ProfileOutput(UserEntity user)
         {
-            Id = entity.Id;
-            FirstName = entity.FirstName;
-            LastName = entity.LastName;
-            Login = entity.Login;
-            Role = entity.Role;
+            Id = user.Id;
+            FirstName = user.FirstName;
+            LastName = user.LastName;
+            Login = user.Login;
+            Role = user.Role;
+            Avatar = user.Avatar;
         }
     }
 }

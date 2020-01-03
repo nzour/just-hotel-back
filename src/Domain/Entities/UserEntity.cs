@@ -18,6 +18,11 @@ namespace Domain.Entities
         public string Login { get; protected internal set; }
         public string Password { get; set; }
         public UserRole Role { get; protected internal set; }
+        
+        /// <summary>
+        /// Base64 изображения.
+        /// </summary>
+        public string? Avatar { get; set; }
         public ISet<ReservationEntity> Reservations { get; protected internal set; } = new HashSet<ReservationEntity>();
 
         public UserEntity(string firstName, string lastName, string login, string password, UserRole role)
