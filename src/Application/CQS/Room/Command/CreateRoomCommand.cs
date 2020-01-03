@@ -16,7 +16,7 @@ namespace Application.CQS.Room.Command
 
         public async Task ExecuteAsync(RoomInput input)
         {
-            await RoomRepository.SaveAndFlushAsync(new RoomEntity(input.RoomType, input.Cost));
+            await RoomRepository.SaveAndFlushAsync(new RoomEntity(input.RoomType, input.Cost, input.Images));
         }
     }
 }

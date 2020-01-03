@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 using System.Threading.Tasks;
 using Application.CQS.Room.Input;
 using Domain;
@@ -21,6 +22,7 @@ namespace Application.CQS.Room.Command
 
             room.Cost = (int) input.Cost;
             room.RoomType = input.RoomType;
+            room.Images = input.Images.ToList();
         }
     }
 }

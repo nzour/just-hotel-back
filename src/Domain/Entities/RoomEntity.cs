@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Domain.Entities
 {
@@ -18,11 +19,12 @@ namespace Domain.Entities
         public ICollection<string> Images { get; set; } = new List<string>();
         public ISet<UserEntity> Employees { get; protected set; } = new HashSet<UserEntity>();
 
-        public RoomEntity(RoomType roomType, uint cost)
+        public RoomEntity(RoomType roomType, uint cost, IEnumerable<string> images)
         {
             Id = Guid.NewGuid();
             RoomType = roomType;
             Cost = (int) cost;
+            Images = images.ToList();
         }
     }
 }
