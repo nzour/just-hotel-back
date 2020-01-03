@@ -15,6 +15,7 @@ namespace Domain.Entities
         public Guid Id { get; }
         public RoomType RoomType { get; set; }
         public int Cost { get; set; }
+        public ICollection<string> Images { get; set; } = new List<string>();
         public ISet<UserEntity> Employees { get; protected set; } = new HashSet<UserEntity>();
 
         public RoomEntity(RoomType roomType, uint cost)

@@ -1,6 +1,7 @@
 using Domain.Entities;
 using FluentNHibernate.Mapping;
 using NHibernate.Type;
+using NHibernate.UserTypes;
 
 namespace Infrastructure.NHibernate.Mapping
 {
@@ -16,8 +17,16 @@ namespace Infrastructure.NHibernate.Mapping
                 .Not.Nullable();
 
             Map(x => x.Cost).Not.Nullable();
+            Map(x => x.Images)
+                .CustomType<JsonArrayType<string[]>>()
+                .Not.Nullable();
 
             HasMany(x => x.Employees);
+        }
+
+        public void Kek(IUserType type)
+        {
+            
         }
     }
 }
