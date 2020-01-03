@@ -1,4 +1,5 @@
 using System;
+using System.Threading.Tasks;
 using NHibernate;
 
 namespace Infrastructure.NHibernate
@@ -16,49 +17,25 @@ namespace Infrastructure.NHibernate
             Session = session;
         }
 
-        public TResult Action<TResult>(Func<TResult> function)
+        public async Task ActionAsync(Action action)
         {
             Begin();
 
             try
             {
-                var result = function.Invoke();
+                action();
 
-                Commit();
-
-                return result;
+                await Session.FlushAsync();
+                await Session.Transaction.CommitAsync();
             }
             catch
             {
-                Rollback();
+                await Session.Transaction.RollbackAsync();
                 throw;
             }
-            finally
-            {
-                Dispose();
-            }
+
         }
-
-        public void Action(Action function)
-        {
-            Begin();
-
-            try
-            {
-                function.Invoke();
-                Commit();
-            }
-            catch
-            {
-                Rollback();
-                throw;
-            }
-            finally
-            {
-                Dispose();
-            }
-        }
-
+        
         public void Begin()
         {
             if (Session.Transaction.IsActive)

@@ -1,7 +1,7 @@
 using System;
 using Domain.Entities;
 
-namespace Application.CQS.Profile
+namespace Application.CQS.User.Output
 {
     public class ProfileOutput
     {
