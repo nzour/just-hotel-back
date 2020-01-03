@@ -18,12 +18,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Reference Include="System.IO.FileSystem, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-      <HintPath>..\..\..\..\..\..\usr\share\dotnet\packs\Microsoft.NETCore.App.Ref\3.0.0\ref\netcoreapp3.0\System.IO.FileSystem.dll</HintPath>
-    </Reference>
-  </ItemGroup>
-
-  <ItemGroup>
     <_UnmanagedRegistrationCache Remove="obj\cli.csproj.UnmanagedRegistration.cache" />
     <_UnmanagedRegistrationCache Remove="obj\cli.csproj.UnmanagedRegistration.cache" />
     <_UnmanagedRegistrationCache Remove="obj\cli.csproj.UnmanagedRegistration.cache" />

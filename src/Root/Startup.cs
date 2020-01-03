@@ -54,10 +54,10 @@ namespace Root
                         .AllowAnyOrigin()
                 )
                 .UseMiddleware<ExceptionHandlingMiddleware>()
-                .UseAuthorization()
                 .UseAuthentication()
                 .UseHsts()
                 .UseRouting()
+                .UseAuthorization()
                 .UseEndpoints(endpoints => endpoints.MapControllers());
         }
     }
